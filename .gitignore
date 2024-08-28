@@ -1,0 +1,12 @@
+/.vscode
+/.idea
+/.vs
+/scss
+/images/old
+/markdown
+node_modules
+package-lock.json
+package.json
+source/old
+.prettierrc
+yarn.lock
