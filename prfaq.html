@@ -802,26 +802,16 @@
       <details>
         <summary>Как открывать и импортировать файлы .heic, .heif и .hevc?</summary>
         <p>
-          Открыть файлы в <mark class="copy">.heic</mark>,
+          На Windows 10 и 11 нельзя открыть файлы <mark class="file">.heic</mark>,
+          <mark class="file">.heif</mark> и <mark class="file">.hevc</mark> без
+          установленного кодека. Казалось бы, достаточно их установить с Microsoft Store.
+          К сожалению, один из кодеков платный, поэтому мы будем устанавливать эти пакеты
+          вручную.
+        </p>
+        <p>
+          Также открыть файлы в <mark class="copy">.heic</mark>,
           <mark class="copy">.heif</mark> и <mark class="copy">.hevc</mark> в
-          <mark class="app">Premiere Pro</mark> не получится. Их нужно пересохранить в
-          другой формат, поддерживающий программой. Видеофайлы всегда можно
-          переконвертировать через
-          <a
-            class="weblink"
-            title="Shutter Encoder"
-            href="https://www.shutterencoder.com"
-            >Shutter Encoder</a
-          >
-          в монтажный кодек, а фото - через
-          <a
-            class="weblink"
-            href="https://www.faststone.org/FSIVDownload.htm"
-            title="Скачать FastStone Image Viewer"
-            >FastStone Image Viewer</a
-          >
-          в удобный формат, например <mark class="file">.png</mark> или
-          <mark class="file">.tiff</mark>.
+          <mark class="app">Premiere Pro</mark> также не получится без конвертации.
         </p>
         <figure>
           <img
@@ -833,23 +823,34 @@
           <figcaption>Ошибка импорта HEIC в Premiere Pro</figcaption>
         </figure>
         <p>
-          Для того чтобы открыть такие файлы в вашей системе, вам понадобятся установщики
-          этих кодеков. Кодек для <mark class="file">HEIC</mark> и
-          <mark class="file">HEVC</mark> можно скачать
+          Чтобы открыть эти файлы у себя на компьютере, а затем с ними работать
+          (перекодировать или отредактировать), нужно установить кодеки. Кодек для
+          <mark class="file">HEIF/HEIC</mark> и <mark class="file">HEVC</mark> можно
+          скачать через
           <a
             class="weblink"
-            title="Кодек HEIC и HEIF"
-            href="http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/3f78db48-62c0-4600-b440-690463fe3fe3?P1=1721938979&P2=404&P3=2&P4=NRdclhQYS1iAdOl8PVYnQiyVzubs0Kr4%2fKSQTAfMx5Dzw19quYH55DIUFmrb1myVmFYvKJx0h%2fIhxvqTc83Low%3d%3d"
-            >тут</a
-          >, а для <mark class="file">HEVC</mark>
-          <a
-            class="weblink"
-            href="http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/38775b20-6e63-4c94-9e03-3a26ccb1535f?P1=1721938954&P2=404&P3=2&P4=CjDCHp2VF4uM8BbCG2BVzGg6cXfP25F6KNcQt7UV%2f7PWUqVPBpy%2fVFDqTM32n3DA%2f3ZMF6qYHoAbNg%2bN93TQgA%3d%3d"
-            title="Кодек HEVC"
-            >тут</a
-          >. Чтобы установить <mark class="file">.appxbundle</mark> пакеты, достаточно их
-          открыть двойным кликом. Если ваш браузер жалуется на "вирусы" - проигнорируйте
-          это и продолжите скачивание.
+            href="https://store.rg-adguard.net"
+            title="Онлайн-генератор ссылок для Microsoft Store"
+            >онлайн-генератор ссылок для Microsoft Store</a
+          >. Перейдите по этой ссылке и введите в строку поиска текст ниже и нажмите на
+          галочку для поиска.
+        </p>
+        <figure>
+          <code>https://apps.microsoft.com/9n4wgh0z6vhq</code>
+          <figcaption>Для установки кодека HEVC</figcaption>
+        </figure>
+        <figure>
+          <code>https://apps.microsoft.com/9pmmsr1cgpwg</code>
+          <figcaption>Для установки кодека HEIF</figcaption>
+        </figure>
+        <p>
+          После того как вставили одну из ссылок - скачайте файл формата
+          <mark class="file">.appxbundle</mark>. Если ваш браузер жалуется на "вирусы" -
+          проигнорируйте это и продолжите скачивание.
+        </p>
+        <p>
+          Чтобы установить <mark class="file">.appxbundle</mark> пакеты, достаточно их
+          открыть двойным кликом.
         </p>
         <p>
           Если вам предлагают открыть файл с помощью
@@ -867,7 +868,7 @@
           <figcaption>Окно "Каким образом вы хотите открыть файл?"</figcaption>
         </figure>
         <p>
-          Если после установки с помощью <mark class="copy">Обработчика команд</mark> вы
+          Если после установки с помощью <mark class="app">Обработчика команд</mark> вы
           видите это, то кодеки установились корректно.
         </p>
         <code
@@ -879,7 +880,23 @@
           После установки кодеков вы теперь сможете открывать файлы
           <mark class="file">.heif</mark>, <mark class="file">.heic</mark> и
           <mark class="file">.hevc</mark> на вашем компьютере, чтобы в дальнейшем их
-          просматривать в проигрывателе.
+          просматривать вне <mark class="app">Premiere Pro</mark>. Видеофайлы всегда можно
+          переконвертировать через
+          <a
+            class="weblink"
+            title="Shutter Encoder"
+            href="https://www.shutterencoder.com"
+            >Shutter Encoder</a
+          >
+          в монтажный кодек, а фото - через
+          <a
+            class="weblink"
+            href="https://www.faststone.org/FSIVDownload.htm"
+            title="Скачать FastStone Image Viewer"
+            >FastStone Image Viewer</a
+          >
+          в удобный формат, например <mark class="file">.png</mark> или
+          <mark class="file">.tiff</mark>.
         </p>
       </details>
       <details>
