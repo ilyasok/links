@@ -1317,6 +1317,8 @@ footer {
 
 #commit_info {
   white-space: pre-line;
+  max-width: 200px;
+  margin-inline: auto;
 }
 
 #menu_toggle {
