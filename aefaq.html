@@ -6641,7 +6641,6 @@
       </details>
       <details>
         <summary>Как импортировать файлы .heic, .heif и .hevc?</summary>
-        <!--fixme: переписать-->
         <p>
           На Windows 10 и 11 нельзя открыть файлы <mark class="file">.heic</mark>,
           <mark class="file">.heif</mark> и <mark class="file">.hevc</mark> без
@@ -6650,17 +6649,9 @@
           <mark class="file">HEVC</mark>, а как мы с вами знаем - мы не хотим платить.
         </p>
         <p>
-          After Effects не поддерживает файлы формата
+          After Effects, к сожалению, нативно не поддерживает файлы формата
           <mark class="file">.hevc</mark>, а вот изображения формата
-          <mark class="file">.heic</mark> - поддерживает. Видеофайлы всегда можно
-          переконвертировать через
-          <a
-            class="weblink"
-            title="Shutter Encoder"
-            href="https://www.shutterencoder.com"
-            >Shutter Encoder</a
-          >
-          в монтажный кодек.
+          <mark class="file">.heic</mark> - поддерживает.
         </p>
         <figure>
           <img
@@ -6669,25 +6660,38 @@
             src="source/heic_error.png"
             alt="Ошибка импорта HEIC в After Effects"
           />
-          <figcaption>Ошибка импорта HEIC в After Effects</figcaption>
+          <figcaption>
+            Ошибка импорта HEIC в After Effects без установленных кодеков
+          </figcaption>
         </figure>
         <p>
-          Чтобы открыть эти файлы у себя на компьютере, нужно установить кодеки. Кодек для
-          <mark class="file">HEIC</mark> и <mark class="file">HEVC</mark> можно скачать
+          Чтобы открыть эти файлы у себя на компьютере, а затем с ними работать
+          (перекодировать или отредактировать), нужно установить нужные кодеки. Кодек для
+          <mark class="file">HEIF/HEIC</mark> и <mark class="file">HEVC</mark> можно
+          скачать через
           <a
-            class="weblink"
-            title="Кодек HEIC и HEIF"
-            href="http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/3f78db48-62c0-4600-b440-690463fe3fe3?P1=1721938979&P2=404&P3=2&P4=NRdclhQYS1iAdOl8PVYnQiyVzubs0Kr4%2fKSQTAfMx5Dzw19quYH55DIUFmrb1myVmFYvKJx0h%2fIhxvqTc83Low%3d%3d"
-            >тут</a
-          >, а для <mark class="file">HEVC</mark>
-          <a
-            class="weblink"
-            href="http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/38775b20-6e63-4c94-9e03-3a26ccb1535f?P1=1721938954&P2=404&P3=2&P4=CjDCHp2VF4uM8BbCG2BVzGg6cXfP25F6KNcQt7UV%2f7PWUqVPBpy%2fVFDqTM32n3DA%2f3ZMF6qYHoAbNg%2bN93TQgA%3d%3d"
-            title="Кодек HEVC"
-            >тут</a
-          >. Чтобы установить <mark class="file">.appxbundle</mark> пакеты, достаточно их
-          открыть двойным кликом. Если ваш браузер жалуется на "вирусы" - проигнорируйте
-          это и продолжите скачивание.
+            href="https://store.rg-adguard.net"
+            title="Онлайн-генератор ссылок для Microsoft Store"
+            >онлайн-генератор ссылок для Microsoft Store</a
+          >. Перейдите по этой ссылке и введите в строку поиска текст ниже и нажмите на
+          галочку для поиска.
+        </p>
+        <figure>
+          <code>https://apps.microsoft.com/9n4wgh0z6vhq</code>
+          <figcaption>Для установки кодека HEVC</figcaption>
+        </figure>
+        <figure>
+          <code>https://apps.microsoft.com/9pmmsr1cgpwg</code>
+          <figcaption>Для установки кодека HEIF</figcaption>
+        </figure>
+        <p>
+          После того как вставили одну из ссылок - скачайте файл формата
+          <mark class="file">.appxbundle</mark>. Если ваш браузер жалуется на "вирусы" -
+          проигнорируйте это и продолжите скачивание.
+        </p>
+        <p>
+          Чтобы установить <mark class="file">.appxbundle</mark> пакеты, достаточно их
+          открыть двойным кликом.
         </p>
         <p>
           Если вам предлагают открыть файл с помощью
@@ -6716,8 +6720,17 @@
         <p>
           После установки кодеков вы теперь сможете открывать файлы
           <mark class="file">.heif</mark>, <mark class="file">.heic</mark> и
-          <mark class="file">.hevc</mark> на вашем компьютере с помощью просмотрщиков
-          фото, например <mark class="app">FastStone Image Viewer</mark>.
+          <mark class="file">.hevc</mark> на вашем компьютере с помощью просмотрщиков фото
+          или видео, например <mark class="app">FastStone Image Viewer</mark> или
+          <mark class="app">MPC-HC</mark>, а видеофайлы для работы в
+          <mark class="app">After Effects</mark> всегда можно переконвертировать через
+          <a
+            class="weblink"
+            title="Shutter Encoder"
+            href="https://www.shutterencoder.com"
+            >Shutter Encoder</a
+          >
+          в монтажный кодек.
         </p>
       </details>
       <details>
