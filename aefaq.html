@@ -6924,23 +6924,38 @@
       </details>
       <details>
         <summary>Почему эффект упирается в границы слоя?</summary>
-        <!-- fixme: написать про ограничение области видимости -->
         <p>
-          Для устранения такого неприятного эффекта существует
-          <mark class="plugin">Grow Bounds</mark>. Примените этот эффект на слой и
-          поставьте по иерархии первым и укажите нужное "фиктивное" расширение для слоя.
+          Это случается из-за того, что нужный эффект может работать только в пределах
+          размера вашего слоя, а не размера вашей композиции. То есть если у вас
+          композиция размером <mark>1920 на 1080</mark>, а слой с разрешением
+          <mark>640 на 480</mark>, то эффект будет работать только в пределах второго
+          разрешения. Часто это происходит при применении эффекта на пре-композицию
+          меньшего размера, чем основная.
         </p>
-        <iframe
-          loading="lazy"
-          src="https://www.youtube.com/embed/-JzYpi6Uyb4?si=sNvoslorALwZrfzw"
-          title="Видеоплеер YouTube"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen=""
-        ></iframe>
+        <figure>
+          <img
+            src="source/layer_boundary_problem.png"
+            alt="Проблема ограниченной области"
+            title="Проблема ограниченной области"
+          />
+          <figcaption>Проблема ограниченной области</figcaption>
+        </figure>
+        <p>
+          Поэтому для устранения такого неприятного эффекта существует
+          <mark class="plugin">Grow Bounds</mark>. Примените этот эффект на слой и
+          поставьте по иерархии первым и укажите нужное "фиктивное" расширение для слоя,
+          чтобы уменьшить такой неприятный эффект.
+        </p>
+        <video
+          preload="none"
+          controls=""
+          loop=""
+          muted=""
+          src="source/fix_boundary_problem.mp4"
+        ></video>
         <p>
           Иногда стандартный <mark class="plugin">Grow Bounds</mark> в некоторых ситуациях
-          не работает. Поэтому на помощь приходит
+          может криво работать или не помогает вовсе. Поэтому на помощь приходит
           <mark class="plugin">Grow Bounds</mark> от Red Giant, находящийся в пакете
           <mark class="plugin">Trapcode Suite</mark>. Инструкция по его использованию не
           нужна, он работает аналогично как и встроенный эффект в
