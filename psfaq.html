@@ -358,6 +358,56 @@
         </figure>
       </details>
       <details>
+        <summary>Как скачать нейро-фильтры в Photoshop?</summary>
+        <p>
+          В <mark class="app">Photoshop</mark> без входа в аккаунт не будет доступен пункт
+          Neuro Filters в вкладке Filters.
+        </p>
+        <p>
+          Чтобы пользоваться нейро-фильтрами (не путать с
+          <mark class="app">Adobe Firefly</mark>), нужно залогиниться в аккаунт Adobe. Да,
+          вы не ослышались - на нелегальных версиях можно войти в аккаунт без ущерба
+          "лицензии". Для этого перейдите в <marp class="ui">Help &gt; Sign in</marp> и
+          зарегистрируйте новый аккаунт. Если у вас уже существует аккаунт Adobe, то вы
+          можете войти с помощью него. Аккаунт не обязательно должен иметь лицензию,
+          поэтому постарайтесь не облажаться и не устанавливайте
+          <mark class="app">Creative Cloud</mark> для того чтобы войти в аккаунт.
+        </p>
+        <p>
+          После успешного входа в аккаунт - перейдите в
+          <mark class="ui">Filters &gt; Neural Filters</mark> и начните загрузку нужных
+          вам модулей.
+        </p>
+        <figure>
+          <img
+            src="source/neural_filters_photoshop.png"
+            alt="Раздел Neural Filters"
+            title="Раздел Neural Filters"
+          />
+          <figcaption>Раздел Neural Filters</figcaption>
+        </figure>
+        <p>
+          Если загрузка модулей не начинается и резко сбрасывается, попробуйте ввести
+          строки ниже в файл <mark class="file">hosts</mark> на вашем ПК, перезапустит
+          <mark class="app">Photoshop</mark>
+          и повторить попытку.
+        </p>
+        <code
+          >127.0.0.1 cc-api-data.adobe.io<br />
+          127.0.0.1 ic.adobe.io<br />
+          127.0.0.1 genuine.adobe.com<br />
+          127.0.0.1 prod.adobegenuine.com<br />
+          127.0.0.1 assets.adobedtm.com</code
+        >
+        <p>
+          Нейро-фильтры обычно скачиваются в путь
+          <mark class="path"
+            >%AppData%\Adobe\UXP\PluginsStorage\PHSP\25\Internal\com.adobe.nfp.gallery\PluginData</mark
+          >. Эта информация вам пригодится, если вы хотите удалить все его модули или
+          загрузить файлы нейро-фильтров из интернета.
+        </p>
+      </details>
+      <details>
         <summary>Как найти шрифт по фото?</summary>
         <p>
           Вы можете использовать сервисом
