@@ -737,6 +737,53 @@
       </details>
       <details>
         <summary>
+          Как мне переключить рендер на процессор и зачем это нужно делать?
+        </summary>
+        <p>
+          Использование рендера на процессоре может помочь уменьшить количество возможных
+          артефактов и приколов при монтаже вашего проекта, нежели при использовании
+          ускорения на GPU. При рендере на процессоре ваше время рендера может
+          незначительно измениться в худшую сторону, но зачастую - остается плюс-минус
+          таким же. По сравнению с <mark class="app">After Effects</mark>, при
+          использовании <mark class="app">Premiere Pro</mark> редко требуется такая
+          процедура.
+        </p>
+        <p>
+          Чтобы переключить рендер на процессор, перейдите в
+          <mark class="ui">File &gt; Project Settings &gt; General</mark>. В открышемся
+          окне в разделе <mark class="ui">Video Rendering and Playback</mark> выберите в
+          пункте <mark class="ui">Renderer</mark> значение, которое вам нужно.
+        </p>
+        <figure>
+          <img
+            src="source/project_settings_premiere_pro.png"
+            alt="Настройки проекта в Premiere Pro"
+            title="Настройки проекта в Premiere Pro"
+          />
+          <figcaption>Настройки проекта в Premiere Pro</figcaption>
+        </figure>
+        <ul>
+          <li>
+            Параметр
+            <mark class="ui">Mercury Playback Engine Software Only</mark> позволяет
+            программе рендерить проект преимущественно через процессор. Однако сторонние
+            эффекты, принудительно использующие GPU, например
+            <mark class="plugin">BorisFX Sapphire</mark>, до сих пор могут считаться через
+            видеокарту.
+          </li>
+          <li>
+            Параметр
+            <mark class="ui"
+              >Mercury Playback Engine GPU Acceleration (CUDA или OpenCL)</mark
+            >
+            позволяет <mark class="app">Premiere Pro</mark> использовать видеокарту, но
+            программа не всё будет гарантировано считать все эффекты через неё и могут
+            быть проблемы при использовании программы в долгосрочной перспективе.
+          </li>
+        </ul>
+      </details>
+      <details>
+        <summary>
           Как импортировать исходники, которые не поддерживает Premiere Pro?
         </summary>
         <p>
