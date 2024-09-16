@@ -433,7 +433,7 @@
               class="weblink"
               href="https://www.youtube.com/playlist?list=PLTDgOUcX23hZdwKWhKhWp3H2D5nmWhpvv"
               title="Плейлист на YouTube c абстрактными фонами"
-              >абстрактные фоны на YouTube</a
+              >Абстрактные фоны на YouTube</a
             >
           </li>
         </ul>
@@ -832,8 +832,8 @@
               <li>
                 <mark class="word">CBR</mark> или
                 <mark class="word">Постоянный битрейт</mark>: вариант кодирования
-                потоковых данных, при котором пользователь изначально задаёт необходимый
-                битрейт, который не меняется на протяжении всего файла.
+                потоковых данных, когда пользователь выбирает битрейт и он сохраняется для
+                всего файла, оставаясь неизменным.
               </li>
               <li>
                 <mark class="word">VBR</mark> или
@@ -7412,6 +7412,13 @@
           />
           <figcaption>Пункт Enable_Theme_Colorizing</figcaption>
         </figure>
+        <div class="warning">
+          В After Effects 2025 и выше этот пункт может отсутствовать. Для его активации
+          переключитесь в
+          <mark class="ui">Console View</mark> и введите команду ниже и нажмите на
+          <mark class="key">Enter</mark>.
+          <code>debug.set Enable_Theme_Colorizing=true</code>
+        </div>
         <p>
           После включения этой опции перейдите в
           <mark class="ui">Edit &gt; Preferences &gt; Appearance</mark> и нажмите на
@@ -8572,6 +8579,157 @@
           выполняются команды для добавления адресов в hosts, чтобы программы от
           <mark class="word">Adobe</mark> не лезли в сеть и не показывали окна о
           "недействительной лицензии".
+        </p>
+      </details>
+      <details>
+        <summary>
+          Не доверяю репакам, но установить Adobe хочу. Есть альтернативные варианты?
+        </summary>
+        <p>
+          Если вы являетесь параноиком, не доверяете репакерам или боитесь что в ваш
+          компьютер ворвётся "барабашка" с троянами и прочей бякой, то вы можете
+          активировать программы от Adobe вручную через <mark class="app">GenP</mark>. У
+          этого способа есть плюсы и минусы.
+        </p>
+        <ul>
+          <li>
+            <mark>Плюсы</mark>: вы можете установить и обновлять программы и плагины из
+            местного магазина прямиком из <mark class="app">Adobe Creative Cloud</mark>, а
+            также получить доступ к публичным бета-версиям.
+          </li>
+          <li>
+            <mark>Минусы</mark>: возможны баги с <mark class="ui">Dynamic Link</mark>,
+            после обновления программ от Adobe может не всегда работать патч (для этого
+            нужно периодически обновлять сам <mark class="app">GenP</mark>).
+          </li>
+        </ul>
+        <div class="warning">
+          Если у вас установлены репаки или какие-нибудь установленные программы от Adobe
+          на вашем компьютере, то перед применением этого способа через
+          <mark class="app">GenP</mark> удалите все программы через
+          <a
+            class="weblink"
+            href="https://helpx.adobe.com/ru/creative-cloud/kb/cc-cleaner-tool-installation-problems"
+            title="Adobe Creative Cloud Cleaner"
+            >Adobe Creative Cloud Cleaner</a
+          >.
+        </div>
+        <p>
+          Для начала нам нужно установить
+          <a
+            class="weblink"
+            title="Установка Adobe Creative Cloud"
+            href="https://creativecloud.adobe.com/apps/download/creative-cloud?locale=en"
+            >Creative Cloud</a
+          >
+          с сайта Adobe. После установки
+          <mark class="app">Adobe Creative Cloud</mark> вам нужно зайти в аккаунт Adobe.
+          Если у вас его нет - зарегистрируйтесь, а затем войдите в свежесозданный
+          аккаунт.
+        </p>
+        <figure>
+          <img
+            src="source/creative_cloud_main_menu.png"
+            alt="Главное меню Creative Cloud"
+            title="Главное меню Creative Cloud"
+          />
+          <figcaption>Главное меню Creative Cloud</figcaption>
+        </figure>
+        <p>
+          После успешного входа нажмите на аватарку вашего профиля Adobe в правом верхнем
+          углу и нажмите на <mark class="ui">Установки</mark>. В открывшемся окне
+          выключите три пункта про автозапуск и автообновление Creative Cloud в разделе
+          <mark class="ui">Общие</mark> и отключите автообновления приложений Adobe в
+          разделе <mark class="ui">Приложения</mark>. По желанию в разделе
+          <mark class="ui">Приложения</mark> вы можете изменить язык программ, например на
+          английский.
+        </p>
+        <figure>
+          <img
+            src="source/creative_cloud_settings.png"
+            alt="Настройки Creative Cloud, раздел Общее"
+            title="Настройки Creative Cloud, раздел Общее"
+          />
+          <figcaption>Настроики Creative Cloud, раздел "Общее"</figcaption>
+        </figure>
+        <p>
+          После изменения настроек нажмите на <mark class="key">Ctrl + W</mark>, чтобы
+          закрыть <mark class="app">Creative Cloud</mark>. Этот пункт нужно выполнить
+          обязательно, чтобы пропатчить <mark class="app">Creative Cloud</mark> с помощью
+          <mark class="app">GenP</mark>.
+        </p>
+        <p>
+          Далее нам нужно скачать сам <mark class="app">GenP</mark> и распаковать его в
+          любом удобном месте. Обычно дистрибутивы патчера находятся в Reddit в теме
+          <a
+            class="weblink"
+            href="https://www.reddit.com/r/genP/"
+            title="r/genp"
+            >/r/genp</a
+          >.
+        </p>
+        <div class="warning">
+          Если ссылка для скачивания не работает, то ниже обычно находится ссылка на
+          зеркало. Для скачивания <mark class="app">GenP</mark> иногда может понадобиться
+          использование VPN.
+        </div>
+        <figure>
+          <img
+            src="source/reddit_genp.png"
+            alt="Скачивание GenP из Reddit"
+            title="Скачивание GenP из Reddit"
+          />
+          <figcaption>Скачивание GenP из Reddit</figcaption>
+        </figure>
+        <div class="warning">
+          Перед распаковкой архива с <mark class="app">GenP</mark> и последующим его
+          использованием - отключите антивирус в вашей системе.
+        </div>
+        <p>
+          Если при открытии <mark class="app">GenP</mark> вас спрашивают
+          <mark
+            >Do you wish to elevate GenP to Trustedlnstaller to allow for patching of
+            XD/UWP apps?</mark
+          >, то просто нажмите на <mark class="ui">Нет</mark>.
+        </p>
+        <p>
+          Внизу открытого окна <mark class="app">GenP</mark> есть несколько кнопок для
+          различных действий. Для начала нам нужно нажать на
+          <mark class="ui">Patch CC</mark> и подождать, пока патчинг выполнится. После
+          отображения надписи <mark>All files patched!</mark> вы можете открыть
+          <mark class="app">Adobe Creative Cloud</mark> и скачать нужные вам программы
+          оттуда.
+        </p>
+        <figure>
+          <img
+            src="source/genp_actions.png"
+            alt="Действия в GenP"
+            title="Действия в GenP"
+          />
+          <figcaption>Действия в GenP</figcaption>
+        </figure>
+        <div class="warning">
+          Если в <mark class="app">Creative Cloud</mark> снизу отображается надпись
+          <mark
+            >Произошла ошибка. Чтобы продолжить, обновите приложение Creative Cloud</mark
+          >, то просто проигнорируйте это.
+        </div>
+        <p>
+          После установки программ не надо их сразу открывать, пока не зайдёте в
+          <mark class="app">GenP</mark> снова и пропатчите файлы нужных нам программ.
+          Иначе получите окно с отсутствием лицензии или предложением оформить пробный
+          период для программы.
+        </p>
+        <p>
+          Для этого внизу окна в <mark class="app">GenP</mark> нажимаем
+          <mark class="ui">Search</mark> и ждём, когда нахождение файлов ваших программ
+          закончится. После этого нажимаем на кнопку <mark class="ui">Patch</mark> и ждём
+          до того как нас перенаправят в раздел <mark class="ui">Logs</mark>. После этого
+          закройте <mark class="app">GenP</mark>, если не были выданы ошибки и откройте
+          уже вылеченные программы от Adobe. Если действительно всё запускается без
+          проблем - поздравляю, в противном случае пересмотрите инструкцию, обновите
+          <mark class="app">GenP</mark> или всё-таки поборойте свою паранойю насчёт
+          репаков.
         </p>
       </details>
       <details>
