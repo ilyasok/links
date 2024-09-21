@@ -10,3 +10,4 @@ package.json
 source/old
 .prettierrc
 yarn.lock
+qodana.yaml

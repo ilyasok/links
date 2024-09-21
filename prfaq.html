@@ -428,7 +428,7 @@
               class="weblink"
               href="https://www.youtube.com/playlist?list=PLTDgOUcX23hZdwKWhKhWp3H2D5nmWhpvv"
               title="Плейлист на YouTube c абстрактными фонами"
-              >абстрактные фоны на YouTube</a
+              >Абстрактные фоны на YouTube</a
             >
           </li>
         </ul>
@@ -788,7 +788,7 @@
         </summary>
         <p>
           Изначально <mark class="app">Premiere Pro</mark> не поддерживает большое
-          количество кодеков, такие как VP9, VP8, Flac, AV1. Также не поддерживаются
+          количество кодеков, такие, как VP9, VP8, Flac, AV1. Также не поддерживаются
           форматы <mark class="file">.webm</mark>, <mark class="file">.flv</mark>,<mark
             class="copy"
             >.mkv</mark
@@ -851,9 +851,9 @@
         <p>
           На Windows 10 и 11 нельзя открыть файлы <mark class="file">.heic</mark>,
           <mark class="file">.heif</mark> и <mark class="file">.hevc</mark> без
-          установленного кодека. Казалось бы, достаточно их установить с Microsoft Store.
-          К сожалению, один из кодеков платный, поэтому мы будем устанавливать эти пакеты
-          вручную.
+          установленных кодеков. Казалось бы, достаточно их установить с Microsoft Store,
+          но к сожалению, один из кодеков платный, поэтому мы будем устанавливать эти
+          пакеты вручную.
         </p>
         <p>
           Также открыть файлы в <mark class="copy">.heic</mark>,
@@ -1203,6 +1203,38 @@
           <mark class="app">Premiere Pro</mark> версии <mark>24.4</mark> и наоборот.
         </div>
       </details>
+      <details>
+        <summary>Как изменить акцентный цвет интерфейса?</summary>
+        <p>
+          Для интерфейса <mark class="app">Premiere Pro</mark> разработчики предоставили
+          возможность изменения главного цвета. По умолчанию он синий, но с помощью
+          <mark class="ui">Console</mark> вы можете активировать фукнцию изменения
+          акцентного цвета.
+        </p>
+        <p>
+          Чтобы его активировать, вам нужно открыть сам консоль с помощью комбинации
+          клавиш <mark class="key">Ctrl + F12</mark>, затем нажмите на три полоски в
+          заголовке вкладки. В контекстном меню откройте вид
+          <mark class="ui">Console View</mark>, а затем введите команду ниже в
+          <mark class="ui">Command</mark> и нажмите на <mark class="key">Enter</mark>.
+        </p>
+        <code>debug.set Enable_Theme_Colorizing=true</code>
+        <p>
+          После активации команды перейдите в вид
+          <mark class="ui">Debug Database View</mark>, поищите пункт
+          <mark>Enable_Theme_Colorizing</mark> и поставьте галочку рядом с ним, если она
+          не активирована.
+        </p>
+        <p>
+          Затем перейдите <mark class="ui">Edit &gt; Preferences &gt; Apperance</mark> и
+          нажмите на <mark class="ui">Change Color</mark>, а затем выберите нужный вам
+          цвет и нажмите на <mark class="ui">OK</mark>.
+        </p>
+        <div class="warning">
+          Из-за внедрения нового интерфейса не во всех местах может быть заданный вами
+          цвет.
+        </div>
+      </details>
     </div>
     <section id="errors">Частые ошибки</section>
     <div class="content">
@@ -1269,6 +1301,17 @@
         <p>
           Это баг некоторых версий драйверов Nvidia, попробуйте установить драйвера из
           линейки Studio.
+        </p>
+      </details>
+      <details>
+        <summary>Не могу зайти в аккаунт Adobe</summary>
+        <p>
+          Если вы зачем-то решили войти в аккаунт Adobe и у вас при открытии окна входа
+          белый экран, то попробуйте закрыть программу и удалить папку
+          <mark class="file">NGL</mark> в пути
+          <mark class="path"
+            >C:\Program Files\Common Files\Adobe\Adobe Desktop Common\NGL</mark
+          >.
         </p>
       </details>
       <details>
@@ -1402,6 +1445,13 @@
             общую папку плагинов
             <mark class="path">C:\Program Files\Adobe\Common\Plug-ins\7.0\MediaCore</mark
             >.
+            <div class="warning">
+              Учтите, что не все плагины формата
+              <mark class="file">.aex</mark> поддерживаются в
+              <mark class="app">Premiere Pro</mark>, так как по большей части эти плагины
+              созданы для <mark class="app">After Effects</mark> и не всегда имеют
+              совместимость между двумя программами.
+            </div>
           </li>
         </ul>
       </details>
@@ -1728,164 +1778,20 @@
       <details>
         <summary>Почему Media Encoder не подключается к Premiere Pro?</summary>
         <p>
-          Если у вас стоит разный "год" программ, например <mark class="app">Premiere Pro 2024</mark> и <mark class="app">Media Encoder 2022</mark>, то они и не должны видеть друг друга. Программы должны быть одного года.
+          Если у вас стоит разный "год" программ, например
+          <mark class="app">Premiere Pro 2024</mark> и
+          <mark class="app">Media Encoder 2022</mark>, то они и не должны видеть друг
+          друга. Программы должны быть одного года.
         </p>
-        <p>Также программы не увидят друг друга если они установлены на разных путях. Переустановите все программы в стандартное расположение и не меняйте его при установке.</p>
+        <p>
+          Также программы не увидят друг друга если они установлены на разных путях.
+          Переустановите все программы в стандартное расположение и не меняйте его при
+          установке.
+        </p>
       </details>
     </div>
     <section id="render">Про рендер</section>
     <div class="content">
-      <details>
-        <!-- fixme: дописать!!!! -->
-        <summary>Как правильно выводить видео из Premiere Pro?</summary>
-        <p>
-          В рендере нюансов и технических тонкостей много. Предположим, что ваш заказчик
-          хочет качественное видео с минимальным весом, в цветовом пространстве
-          <mark class="file">Rec.709</mark> и кодеке <mark class="file">H.264</mark> или
-          <mark class="file">H.265</mark>
-        </p>
-        <p>Вы можете вывести видео из Premiere Pro с помощью нативного кодека H.264.</p>
-        <p>
-          Начнём с самого простого: при нажатии на <mark class="key">Ctrl + M</mark>
-          программа по умолчанию предложит вам вывести в
-          <mark class="file">H.264</mark>, с чем мы и соглашаемся, нажав на кнопку
-          экспорта.
-        </p>
-        <p>
-          Если результат от стандартного <mark class="file">H.264</mark> не понравился, то
-          на помощь приходят <mark class="plugin">AfterCodecs</mark> или
-          <mark class="plugin">Voukoder</mark>.
-        </p>
-        <p>
-          <!-- fixme: aftercodecs -->
-        </p>
-        <div class="warning">
-          Если вы выбрали путь рендера с помощью Voukoder, убедитесь, что на компьютере
-          установлен
-          <a
-            class="weblink"
-            href="https://github.com/Vouk/voukoder-connectors/tree/master/premiere"
-            title="Voukoder Connector для Premiere Pro на Github"
-            >коннектор для Premiere Pro</a
-          >. Без него в программе не появится пункт Voukoder!
-        </div>
-        <p>
-          Если вы хотите вывести видео с помощью <mark class="plugin">Voukoder</mark>, то
-          выберите соответствующий пункт при выборе формата. Затем нажмите на...
-          <!-- fixme: voucoder -->
-        </p>
-        <p>
-          Ещё существует интересный способ для вывода с помощью Pre-render для
-          последующего сокращения времени рендера при незначительных правках от заказчика.
-          Для начала откройте настройки секвенции, перейдя в
-          <mark class="ui">Sequence &gt; Sequence Settings</mark>, затем переместитесь в
-          раздел <mark class="ui">Video Previews</mark> и укажите кодек для пре-рендера. В
-          нашем случае мы выберем <mark class="file">Apple Prores 422</mark>, но вы можете
-          указать любой другой.
-        </p>
-        <figure>
-          <img
-            loading="lazy"
-            src="source/sequence_settings_video_previews_premiere_pro.png"
-            alt="Настройка кодека для Video Preview"
-            title="Настройка кодека для Video Preview"
-          />
-          <figcaption>Настройка кодека для Video Preview</figcaption>
-        </figure>
-        <div class="warning">
-          Выбор кодека в Video Previews должен совпадать с кодеком для финального рендера,
-          чтобы фишка с быстрым рендером сработала. То есть если вы выбрали в Video
-          Previews кодек <mark class="file">Apple Prores 4444</mark>, то и в
-          <mark class="key">Ctrl + M</mark> тоже должен стоять кодек
-          <mark class="file">Apple Prores 4444</mark>
-        </div>
-        <p>
-          После того как мы выбрали кодек для пре-рендера, нужно указать точку In в начале
-          вашего таймлайна и точку Out в конце с помощью кнопок
-          <mark class="key">I</mark> и
-          <mark class="key">O</mark>
-          соответственно или очистите выделение с помощью
-          <mark class="key">Ctrl + Shift + X</mark>. Затем перейдите в
-          <mark class="ui">Seuqence</mark> и нажмите на
-          <mark class="ui">Render In to Out</mark>.
-        </p>
-        <figure>
-          <img
-            loading="lazy"
-            src="source/render_in_to_out_premiere_pro.png"
-            alt="Пре-рендер в Premiere Pro"
-            title="Пре-рендер в Premiere Pro"
-          />
-          <figcaption>Кнопка для начала пре-рендера в Premiere Pro</figcaption>
-        </figure>
-        <div class="warning">
-          Учтите, что <mark class="word">пре-рендер</mark> может занимать у вас большое
-          количество памяти на жёстком диске. Если у вас большой проект - позаботьтесь о
-          том, чтобы у вас было достаточно места на жёстком диске.
-        </div>
-        <p>
-          После окончания пре-рендера над вашим таймлайном должна появиться полностью
-          зелёная полоска. Это означает, что вся последовательность закэширована.
-        </p>
-        <p>Чтобы сделать финальный рендер, нужно выполнить ряд действий:</p>
-        <ul>
-          <li>
-            Укажите для вывода такой же кодек, который был установлен в
-            <mark class="ui">Sequence Settings</mark>. В нашем случае это был
-            <mark class="file">Apple Prores 422</mark>.
-            <figure>
-              <img
-                loading="lazy"
-                src="source/change_render_codec_premiere_pro.png"
-                alt="Смена кодека для рендера"
-                title="Смена кодека для рендера"
-              />
-              <figcaption>Смена кодека для рендера</figcaption>
-            </figure>
-          </li>
-          <li>
-            Изменить глубину на <mark>16</mark> бит и установить галочки у пунктов
-            <mark class="ui">Use Maximum Render Quality</mark> и
-            <mark class="ui">Render at maximum depth</mark> в вкладке
-            <mark class="ui">Video</mark>.
-            <figure>
-              <img
-                loading="lazy"
-                src="source/video_maximum_quality_premiere_pro.png"
-                alt="Установка битности цвета и галочек для максимального качества"
-                title="Установка битности цвета и галочек для максимального качества"
-              />
-              <figcaption>Установка битности цвета для максимального качества</figcaption>
-            </figure>
-          </li>
-          <li>
-            Установить галочку у пункта <mark class="ui">Use Previews</mark> в
-            <mark>General</mark>.
-            <figure>
-              <img
-                loading="lazy"
-                src="source/general_use_previews_premiere_pro.png"
-                alt="Установка галочки для использования файлов пре-рендера"
-                title="Установка галочки для использования файлов пре-рендера"
-              />
-              <figcaption>
-                Установка галочки для использования файлов пре-рендера
-              </figcaption>
-            </figure>
-          </li>
-        </ul>
-        <p>
-          После этого нажимаем на кнопку <mark class="ui">Export</mark>. С
-          <mark class="word">пре-рендером</mark> на больших проектах это может занять
-          всего лишь пару минут.
-        </p>
-        <p>
-          Результат всех наших действий мы должны закинуть в
-          <mark class="app">Shutter Encoder</mark>, но на этот раз там не нужно менять
-          цветовое пространство. Он нам нужен, чтобы подогнать ваше видео под требования
-          заказчика или площадки, но об этом - уже другая история.
-        </p>
-      </details>
       <details>
         <summary>Какой битрейт лучше ставить для вывода в социальные сети?</summary>
         <p>
@@ -2160,6 +2066,347 @@
         </p>
       </details>
       <details>
+        <summary>Как правильно вывести видео из Premiere Pro?</summary>
+        <p>
+          Из <mark class="app">Premiere Pro</mark> можно вывести видео в большинство
+          форматов и кодеков, которые обычно требуются заказчиком. В рендере нюансов и
+          технических тонкостей - целая куча, поэтому много заострять внимание на этом не
+          будем. Предположим, что ваш заказчик, как и любой среднестатистический, хочет
+          качественное видео с минимальным весом в кодеке
+          <mark class="file">H.264</mark> или <mark class="file">H.265</mark>, а также в
+          цветовом пространстве <mark>Rec.709</mark>.
+        </p>
+        <p>
+          Начнём с самого простого - будем выводить видео с помощью нативного кодека
+          <mark class="file">H.264</mark> в <mark class="app">Premiere Pro</mark>. Для
+          этого вам достаточно перейти во вкладку <mark class="ui">Export</mark> в верхней
+          панели или нажать <mark class="key">Ctrl + M</mark>. Программа по умолчанию вам
+          предложит вариант <mark class="file">H.264</mark> с пресетом для максимально
+          возможного качества. Затем укажите нужный вам путь для вывода и нажмите на
+          <mark class="ui">Export</mark>.
+        </p>
+        <figure>
+          <img
+            loading="lazy"
+            src="source/export_ui_premierepro.png"
+            alt="Интерфейс экспорта видео в Premiere Pro"
+            title="Интерфейс экспорта видео в Premiere Pro"
+          />
+          <figcaption>Интерфейс экспорта видео в Premiere Pro</figcaption>
+        </figure>
+        <p>
+          Если результат от стандартных настроек вас не устраивает, то можно изменить во
+          вкладках настройки нативного кодека. Из доступных параметров нам доступно
+          изменение битрейта, кадров в секунду, цветового профиля, включение эффектов и
+          переключение между Software- или Hardware-кодированием.
+        </p>
+        <figure>
+          <video
+            controls=""
+            muted=""
+            loop=""
+            src="source/change_settings_premierepro.mp4"
+          ></video>
+          <figcaption>Изменение "заблокированных" параметров вывода</figcaption>
+        </figure>
+        <p>
+          Если вы хотите сократить время рендера при небольших правках от заказчика, то вы
+          можете вывести видео из <mark class="app">Premiere Pro</mark> с файлами от
+          пре-рендера. Для начала нужно подготовить проект под его использование: нужно
+          открыть настройки секвенции, перейдя в
+          <mark class="ui">Sequence &gt; Sequence Settings</mark> и в разделе
+          <mark class="ui">Video Previews</mark> указать нужный нам кодек для пре-рендера.
+          В нашем случае мы укажем <mark class="file">Apple Prores 422</mark>, но вы
+          можете выбрать любой другой.
+        </p>
+        <figure>
+          <img
+            loading="lazy"
+            src="source/sequence_settings_video_previews_premiere_pro.png"
+            alt="Настройка кодека для Video Preview"
+            title="Настройка кодека для Video Preview"
+          />
+          <figcaption>Настройка кодека для Video Preview</figcaption>
+        </figure>
+        <div class="warning">
+          Выбор кодека в Video Previews должен совпадать с выбором кодека для финального
+          рендера, чтобы эта фишка сработала. Если вы выбрали, например, кодек
+          <mark class="file">Apple Prores 4444</mark> для Video Previews, то для
+          финального рендера вы должны также выбрать
+          <mark class="file">Apple Prores 4444</mark>. Если вы забыли, какой кодек вы
+          выбрали для Video Previews, то выберите пресет
+          <mark class="ui">Match Sequence Preview Settings</mark>. Данный пресет будет
+          работать, если вы сделали пре-рендер хотя бы одного клипа или участка таймлайна.
+          <figure>
+            <img
+              loading="lazy"
+              src="source/match_sequence_preview_settings_premierepro.png"
+              alt="Пресет Match Sequence Preview Settings"
+              title="Пресет Match Sequence Preview Settings"
+            />
+            <figcaption>Пресет Match Sequence Preview Settings</figcaption>
+          </figure>
+        </div>
+        <p>
+          Существуют и альтернативы для вывода из <mark class="app">Premiere Pro</mark>:
+          <mark class="plugin">AfterCodecs</mark> и <mark class="plugin">Voukoder</mark>.
+          Расскажем о каждом из них подробно.
+        </p>
+        <p>
+          Плагин <mark class="plugin">Voukoder</mark> бесплатный и его можно установить из
+          <a
+            class="weblink"
+            href="https://github.com/Vouk/voukoder/releases"
+            title="Релизы Voukoder"
+            >официального репозитория на GitHub</a
+          >. Доступен для <mark class="app">After Effects</mark>,
+          <mark class="app">Premiere Pro</mark>,
+          <mark class="app">Davinci Resolve</mark> и <mark class="app">Vegas Pro</mark>. К
+          нему нужно ещё установить
+          <a
+            class="weblink"
+            href="https://github.com/Vouk/voukoder-connectors/tree/master/premiere"
+            title="Коннектор для Premiere Pro"
+            >коннектор для Premiere Pro</a
+          >, чтобы вы могли вывести видео с помощью Voukoder из программы.
+        </p>
+        <div class="warning">
+          Voukoder, к сожалению, недоступен для устройств на macOS.
+        </div>
+        <p>
+          Если вы хотите начать рендер с помощью <mark class="plugin">Voukoder</mark> в
+          <mark class="app">Premiere Pro</mark>, вам нужно перейти в окно для экспорта и
+          выбрать в качестве формата этот плагин.
+        </p>
+        <figure>
+          <img
+            src="source/selecting_voukoder_premierepro.png"
+            alt="Выбор Voukoder в Premiere Pro"
+            title="Выбор Voukoder в Premiere Pro"
+          />
+          <figcaption>Выбор Voukoder в Premiere Pro</figcaption>
+        </figure>
+        <p>
+          После выбора этого плагина, пролистайте до вкладки
+          <mark class="ui">Voukoder</mark>, раскройте его и нажмите на кнопку
+          <mark class="ui">Configure</mark>.
+        </p>
+        <figure>
+          <img
+            src="source/configure_voukoder_premierepro.png"
+            alt="Открытие параметров Voukoder в Premiere Pro"
+            title="Открытие параметров Voukoder в Premiere Pro"
+          />
+          <figcaption>Открытие параметров Voukoder в Premiere Pro</figcaption>
+        </figure>
+        <p>
+          В открытом окне плагина вы можете настроить "куеву хучу" параметров, но нам
+          пригодятся лишь некоторые из них.
+        </p>
+        <figure>
+          <img
+            loading="lazy"
+            src="source/voukoder_settings.png"
+            title="Настройки Voukoder"
+            alt="Настройки Voukoder"
+          />
+          <figcaption>Настройки Voukoder</figcaption>
+        </figure>
+        <p>
+          Для начала нам нужно выбрать кодек. В выпадающем списке есть множество
+          вариантов, но чаще всего пользователи делают выбор между
+          <mark class="file">H.264</mark> или <mark class="file">H.265</mark>. В плагине
+          есть несколько вариантов:
+        </p>
+        <ul>
+          <li>
+            <mark class="file">H.264 (nVidia NVEnc или AMD AMF)</mark> - просчёт видео в
+            кодеке H.264 с использованием видеокарты.
+          </li>
+          <li>
+            <mark class="file">H.264 (x264)</mark> - просчёт видео в кодеке H.264 без
+            использования видеокарты.
+          </li>
+          <li>
+            <mark class="file">HEVC (nVidia NVEnc или AMD AMF)</mark> - просчёт видео в
+            кодеке H.265 с использованием видеокарты.
+          </li>
+          <li>
+            <mark class="file">HEVC (x265)</mark> - просчёт видео в кодеке H.265 без
+            использования видеокарты.
+          </li>
+        </ul>
+        <p>
+          Затем нам нужно перейти на следующую вкладку <mark class="ui">Параметры</mark>,
+          чтобы выбрать режим квантирования <mark>CQP</mark> при использовании
+          <mark class="file">H.264 / H.265</mark> или <mark>CRF</mark> при использовании
+          <mark class="file">x264 / x265</mark>.
+        </p>
+        <figure>
+          <img
+            src="source/voukoder_parameters.png"
+            alt="Вкладка параметров в Voukoder"
+            title="Вкладка параметров в Voukoder"
+          />
+          <figcaption>Вкладка параметров в Voukoder</figcaption>
+        </figure>
+        <p>
+          Затем вам нужно указать число для квантования. Для экпорта в YouTube, VK Видео
+          или подобных площадок можно поставить число <mark>23</mark> или <mark>25</mark>.
+        </p>
+        <p></p>
+        <ul>
+          <li>
+            <mark>CQP</mark> или же <mark>CRF</mark> - это некий эквивалент качества, где
+            чем меньше значение - тем лучше.
+          </li>
+          <li>
+            Если вы хотите получить максимальное качество - вы можете указать число
+            <mark>17</mark>, но тогда вес файла сильно вырастет.
+          </li>
+          <li>
+            Если вы хотите получить видео с максимальным соотношением качество и
+            минимальный вес - попробуйте указать значение <mark>30</mark> и
+            экспериментировать в большую или меньшую сторону.
+          </li>
+        </ul>
+        <p>
+          Далее ничего нам не нужно настраивать, поэтому мы просто нажимаем на
+          <mark class="ui">ОК</mark> и на кнопку <mark class="ui">Export</mark> в
+          <mark class="app">Premiere Pro</mark>.
+        </p>
+        <p>
+          Плагин <mark class="plugin">AfterCodecs</mark> платный, но я думаю, что вы сами
+          в курсе
+          <a
+            class="weblink"
+            href="https://t.me/AEStorage/2705"
+            title="AfterCodecs в AETemp"
+            >откуда</a
+          >
+          можно его схитрить. Плагин доступен для <mark class="app">Premiere Pro</mark>,
+          <mark class="app">After Effects</mark> и <mark class="app">Media Encoder</mark>,
+          доступен на Windows и macOS и устанавливается в общую папку плагинов для Adobe.
+        </p>
+        <p>
+          Если вы хотите выполнить рендер с помощью
+          <mark class="plugin">AfterCodecs</mark> в <mark class="app">Premiere Pro</mark>,
+          вам нужно открыть вкладку <mark class="ui">Export</mark> и выбрать в качестве
+          формата этот плагин.
+        </p>
+        <figure>
+          <img
+            src="source/selecting_aftercodecs_premierepro.png"
+            alt="Выбор AfterCodecs в Premiere Pro"
+            title="Выбор AfterCodecs в Premiere Pro"
+          />
+          <figcaption>Выбор AfterCodecs в Premiere Pro</figcaption>
+        </figure>
+        <p>
+          После выбора <mark class="plugin">AfterCodecs</mark> выберите
+          <mark class="file">MP4</mark> в качестве контейнера файла. При желании вы можете
+          нажать на <mark class="ui">Match Source</mark>, чтобы разрешение и количество
+          кадров в секунду совпало с тем, что у вас стоит в настройках секвенции.
+        </p>
+        <figure>
+          <img
+            src="source/change_aftercodecs_container_premierepro.png"
+            alt="Изменение контейнера файла перед выводом при использовании AfterCodecs"
+            title="Изменение контейнера файла перед выводом при использовании AfterCodecs"
+          />
+          <figcaption>
+            Изменение контейнера файла перед выводом при использовании AfterCodecs
+          </figcaption>
+        </figure>
+        <p>
+          Затем вам нужно перейти в настройки плагина, нажав на кнопку
+          <mark class="ui">AfterCodecs Settings</mark>. После этого у вас откроется окно
+          плагина, по параметрам не уступающее тому, что было при использовании плагина в
+          <mark class="app">After Effects</mark>.
+        </p>
+        <figure>
+          <img
+            loading="lazy"
+            src="source/aftercodecs_settings_premierepro.png"
+            title="Настройки AfterCodecs"
+            alt="Настройки AfterCodecs"
+          />
+          <figcaption>Настройки AfterCodecs</figcaption>
+        </figure>
+        <p>
+          В этом окне вы можете настроить параметры вывода, например качество или скорость
+          кодирования. Ниже описание популярных параметров:
+        </p>
+        <ul>
+          <li>
+            <mark class="ui">Video Codec</mark>: выбор кодека для вывода. Плагин
+            предлагает вывод в <mark class="file">H.264</mark> и
+            <mark class="file">H.264 RGB</mark> для повседневной жизни,
+            <mark class="file">H.264 для YouTube</mark> с более простыми настройками и
+            <mark class="file">H.265</mark> для более эффективного сжатия файла.
+          </li>
+          <li>
+            <mark class="ui">Tradeoff</mark>: выбор, на что ориентироваться при
+            кодировании - на степень качества, на желаемый битрейт или на желаемый размер
+            файла.
+          </li>
+          <li>
+            <mark class="ui">Quality</mark>: фактор качества видео или же
+            <mark class="ui">Constant Rate Factor</mark>. Чем больше значение - тем лучше.
+            <ul style="margin-inline-end: 0">
+              <li>
+                Значение <mark>x = 99</mark> или <mark>x = 100</mark>: почти неизменное
+                качество, но возможен большой вес выходного файла
+              </li>
+              <li>Значение <mark>x &gt; 70</mark>: отличное качество</li>
+              <li>
+                Значение <mark>x &gt; 40</mark> и <mark>x &lt; 70</mark>: хорошее качество
+              </li>
+              <li>Значение <mark>x &lt; 40</mark>: плохое качество</li>
+            </ul>
+          </li>
+          <li><mark class="ui">Bitrate</mark>: выбор фиксированного битрейта</li>
+          <li>
+            <mark class="ui">File Size</mark>: автоматическая подстройка битрейта под
+            размер нужного файла. Иногда размер файла может выйти за пределы заданного
+            значения.
+          </li>
+          <li>
+            <mark class="ui">Speed</mark>: скорость кодирования видео. Чем ниже значение -
+            тем медленнее скорость, но лучше степень сжатия и качество видео
+            <ul style="margin-inline-end: 0">
+              <li>
+                Значение <mark class="copy">x =&gt; 0</mark> и
+                <mark class="copy">x &lt;= 5</mark>: для финального рендера - медленная
+                скорость кодирования, но лучше качество
+              </li>
+              <li>
+                Значение <mark class="copy">x &gt; 5</mark> и
+                <mark class="copy">x &lt;= 8</mark>: для черновых рендеров - быстрая
+                скорость кодирования, но хуже качество
+              </li>
+            </ul>
+          </li>
+          <li>
+            <mark class="copy">Color</mark>: настройка битности цвета (8 или 10 бит),
+            ограничение яркостности цветов под ТВ (0-255 для Full или 16-235 для TV Range)
+            и выбор цветовой модели YUV
+          </li>
+        </ul>
+        <div class="warning">
+          Параметры <mark class="copy">Tuning</mark>,
+          <mark class="copy">H.264 Profiles</mark>, <mark class="copy">GOP</mark>,
+          <mark class="copy">Audio Bitrate</mark>, <mark class="copy">VR Meta</mark> и
+          <mark class="copy">Fast Start</mark> лучше не трогать без острой необходимости!
+        </div>
+        <p>
+          После выбранного нами варианта кодирования нам достаточно просто указать путь
+          для вывода в графе <mark class="ui">Location</mark> и нажать на кнопку
+          <mark class="ui">Export</mark>. После просчёта вы можете проверить файл и
+          отправить его заказчику или в социальные сети.
+        </p>
+      </details>
+      <details>
         <summary>Что делать, если рендер зависает на определённом моменте?</summary>
         <p>
           Если у вас в предпросмотре всё проигрывается отлично, а на выводе сбоит рендер,
@@ -2241,12 +2488,12 @@
         <p>
           После введённой команды откройте окно экспорта через
           <mark class="key">Ctrl + M</mark>, через кнопку экспорта окно не появится. Если
-          после введённой команды всё ещё открывается новое окно, значит что прошлого не
-          вернуть.
+          после введённой команды всё ещё открывается новое окно, это означает, что
+          прошлое уже не вернуть без отката программы на старые версии.
         </p>
       </details>
       <details>
-        <summary>Почему, если я создал субтитры, их не видно после рендера?</summary>
+        <summary>Почему созданные субтитры не отображаются на финальном рендере?</summary>
         <p>
           По умолчанию в Premiere Pro выключен пункт <mark class="ui">Captions</mark> в
           настройках рендера.
@@ -2262,7 +2509,27 @@
         </figure>
         <p>
           Для этого, включите его и повторите рендер снова. Чтобы не забывать его включать
-          в следующий раз - можно создать пресет с настройками для рендера
+          в следующий раз - можно создать пресет с настройками для рендера.
+        </p>
+      </details>
+      <details>
+        <summary>Как создать пресет с настройками для рендера?</summary>
+        <p>
+          Чтобы сохранить настройки рендера для последующего применения, достаточно нажать
+          на три точки возле выбора пресета и нажать на
+          <mark class="ui">Save Preset</mark>.
+        </p>
+        <figure>
+          <img
+            src="source/save_custom_preset_premierepro.png"
+            alt="Сохранение своего пресета для рендера"
+            title="Сохранение своего пресета для рендера"
+          />
+          <figcaption>Сохранение своего пресета для рендера</figcaption>
+        </figure>
+        <p>
+          Затем у вас откроется всплывающее окно для указания имени нового пресета. После
+          ввода нажмите на <mark class="ui">OK</mark> и найдите его в выпадающем списке.
         </p>
       </details>
     </div>

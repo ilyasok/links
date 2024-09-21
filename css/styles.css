@@ -614,7 +614,6 @@ header span:active {
   max-width: -moz-fit-content;
   max-width: fit-content;
   margin-block: 10px;
-  margin-inline: auto;
   border: solid 2px var(--border);
   padding-inline: 10px;
   -webkit-padding-before: 10px;
