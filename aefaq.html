@@ -6177,6 +6177,101 @@
         </div>
       </details>
       <details>
+        <summary>Почему я не могу импортировать .psd по слоям?</summary>
+        <p>
+          Убедитесь в том, что вы сохраняете файл в цветовом пространстве RGB, а не CMYK
+          или аналогичном. Из-за этого <mark class="app">After Effects</mark> не особо
+          понимает с чем ему работать, поэтому программа импортирует
+          <mark class="file">.psd</mark> в проект как один файл без возможности разделения
+          на слои.
+        </p>
+        <p>
+          Чтобы проверить файл вам нужно в <mark class="app">Photoshop</mark> открыть файл
+          и посмотреть на его заголовок.
+        </p>
+        <figure>
+          <img
+            src="source/checking_color_mode_photoshop.png"
+            alt="Проверка цветового режима в заголовке файла"
+            title="Проверка цветового режима в заголовке файла"
+          />
+          <figcaption>Проверка цветового режима в заголовке файла</figcaption>
+        </figure>
+        <p>
+          Если на нём написано CMYK, Градации серого или аналогичное, не являющееся к RGB,
+          то вам нужно преобразовать файл. Для этого в
+          <mark class="app">Photoshop</mark> нужно перейти в
+          <mark class="ui">Image &gt; Mode</mark> и выбрать
+          <mark class="ui">RGB Color</mark>.
+        </p>
+        <figure>
+          <img
+            src="source/change_color_mode_photoshop.png"
+            alt="Изменение цветового режима"
+            title="Изменение цветового режима"
+          />
+          <figcaption>Изменение цветового режима</figcaption>
+        </figure>
+        <p>
+          После этого попробуйте сохранить <mark class="file">.psd</mark> и снова его
+          импортировать в <mark class="app">After Effects</mark>.
+        </p>
+        <p>
+          Если и это вам не поможет - выведите все слои из
+          <mark class="app">Photoshop</mark> отдельными файлами. Чтобы это сделать, вам
+          нужно в <mark class="app">Photoshop</mark> перейти в File &gt; Export и выбрать
+          <mark class="ui">Layers to Files</mark>.
+        </p>
+        <figure>
+          <img
+            src="source/export_layers_to_files_photoshop.png"
+            alt="Экспорт слоёв в файлы"
+            title="Экспорт слоёв в файлы"
+          />
+          <figcaption>Экспорт слоёв в файлы</figcaption>
+        </figure>
+        <p>
+          В открывшемся окне вы можете указать путь, название и тип файла, который вам
+          будет удобен. Затем нажмите на <mark class="ui">ОК</mark> и ваши слои сохранятся
+          как файлы.
+        </p>
+        <figure>
+          <img
+            src="source/export_layers_to_files_settings_photoshop.png"
+            alt="Настройки вывода слоёв в отдельные файлы"
+            title="Настройки вывода слоёв в отдельные файлы"
+          />
+          <figcaption>Настройки вывода слоёв в отдельные файлы</figcaption>
+        </figure>
+        <p>
+          После экспорта вы можете импортировать ваши слои в
+          <mark class="app">After Effects</mark> как обычные картинки.
+        </p>
+      </details>
+      <details>
+        <summary>Как мне "распаковать" пре-композицию?</summary>
+        <p>
+          Чтобы быстро вытащить файлы из прекомпозиции, которую вы создали ранее - можно
+          воспользоваться сторонним решением в виде
+          <mark class="plugin">Un-Precompose</mark>. Плагин доступен бесплатно после
+          указания цены на 0 на
+          <a
+            class="weblink"
+            href="https://aescripts.com/un-precompose/"
+            title="Un-Precompose на aescripts"
+            >aescripts.com</a
+          >
+          после регистрации и устанавливается в общую папку плагинов.
+        </p>
+        <p>
+          После установки плагина откройте <mark class="app">After Effects</mark> и ваш
+          проект, а затем выделите композицию которую вы хотите распаковать и перейдите в
+          <mark class="ui">Layer &gt; Un-Precompose</mark>. После этого ваша прекомпозиция
+          "распакуется" и на родительский таймлайн перенесутся слои из дочернего
+          прекомпоза.
+        </p>
+      </details>
+      <details>
         <summary>Предпросмотр идёт как будто в slow motion, что делать?</summary>
         <p>
           Для начала проверьте настройки вашего окна <mark class="ui">Preview</mark> и
@@ -7608,6 +7703,88 @@
         </figure>
       </details>
       <details>
+        <summary>
+          After Effects has encountered a failure related to GPU-enabled effects от this
+          frame. This is likely because your GPU is out of memory.
+        </summary>
+        <p>
+          Данная ошибка поясняет, что скорее всего у вас закончилась видеопамять на вашей
+          видеокарте и предлагает переключиться на рендер с использованием только
+          процессора. Последуйте всё-таки этому совету.
+        </p>
+        <p>
+          Обычно окно ошибки предлагает зайти в настройки проекта и изменить там один
+          параметр. Но предположим, что окно с ошибкой вы случайно закрыли или уже меняли
+          значения, а потом хотите вернуть всё как было. Для этого нажмите на
+          <mark class="key">Ctrl + Shift + Alt + K</mark> и выберите
+          <mark class="ui">Mercury Software Only</mark>.
+        </p>
+        <figure>
+          <img
+            loading="lazy"
+            src="source/project_manager_mercury.png"
+            title="Окно Project Manager"
+            alt="Окно Project Manager"
+          />
+          <figcaption>Окно Project Manager с выбором типа рендеринга</figcaption>
+        </figure>
+        <p>
+          Пункт <mark class="ui">Mercury Software Only</mark> позволяет программе
+          рендерить проект преимущественно через процессор, но сторонние эффекты,
+          принудительно использующие GPU, например
+          <mark class="plugin">Depth Scanner</mark>, всё также будут считаться через
+          видеокарту.
+        </p>
+        <p>
+          Пункт
+          <mark class="ui">Mercury GPU Acceleration (CUDA или OpenCL)</mark> позволяет
+          After Effects использовать видеокарту, но программа не будет гарантировано
+          считать все эффекты через неё и возможны проблемы при использовании в
+          долгосрочной перспективе.
+        </p>
+      </details>
+      <details>
+        <summary>
+          File is damaged или Unable to import file (...) as project (bad format or not
+          readable)
+        </summary>
+        <p>
+          Если вы при открытии <mark class="file">.aep</mark> файла вы видите эту ошибку -
+          поздравляю, вы каким-то образом сломали файл проекта! Файл может ломаться при
+          различных обстоятельствах, например при использовании жёсткого диска с битыми
+          секторами или резкой перезагрузке ПК во время сохранения проекта.
+        </p>
+        <p>
+          Если у вас были включены авто-сохранения - бегом искать их и продолжать работу
+          от этой отправной точки. В противном случае вам придётся переделывать всю работу
+          заново.
+        </p>
+        <p>
+          Чтобы исключить подобные случаи советую вам сделать на будущее синхронизацию
+          файлов проекта с помощью <mark class="app">Яндекс.Диск</mark>,
+          <mark class="app">Google Диск</mark>
+          или похожими облачными хранилищами с функцией истории файлов.
+        </p>
+        <p>
+          Если у вас нет возможности или желания всё переносить в облако, то
+          воспользуйтесь функциями для возвращения старых версий файлов:
+          <a
+            class="weblink"
+            href="https://www.comss.ru/page.php?id=7733"
+            title="История файлов в Windows"
+            >История файлов</a
+          >
+          в Windows или
+          <a
+            class="weblink"
+            href="https://support.apple.com/ru-ru/guide/mac-help/mh35860/15.0/mac/15.0"
+            title="О Time Machine на сайте поддержки Apple"
+            >Time Machine</a
+          >
+          на macOS.
+        </p>
+      </details>
+      <details>
         <summary>Error: Cached preview needs 2 or more frames for playback</summary>
         <p>
           Первым делом очистите кэш предпросмотра. Для этого перейдите в
@@ -8483,6 +8660,33 @@
       </details>
       <details>
         <summary>
+          After Effects warning: The following plugins have failed to load. Please
+          reinstall these plugins
+        </summary>
+        <p>
+          Причин для появления данного предупреждения несколько: либо у вас слишком старая
+          или новая версия <mark class="app">After Effects</mark>, либо у вас не
+          установлены все пакеты Visual C++.
+        </p>
+        <p>
+          Чтобы проверить первый факт, вам нужно зайти на официальный сайт плагина и
+          посмотреть на системные требования. Там обычно указывается, для каких версий
+          <mark class="app">After Effects</mark> плагин проектировался. Если там не
+          указана ваша версия <mark class="app">After Effects</mark>, то она не
+          поддерживается официально и из-за этого у вас могут быть проблемы с
+          использованием.
+        </p>
+        <p>
+          Если же с требованиям по версии всё хорошо, но плагины до сих пор не работают -
+          попробуйте переустановить пакеты Visual C++ Redistributable. Для этого перейдите
+          на GitHub, чтобы скачать сборку этих самых пакетов и откройте установщик. После
+          успешной установки попробуйте перезайти в
+          <mark class="app">After Effects</mark> и убедиться в том, что плагины
+          загружаются и работают исправно.
+        </p>
+      </details>
+      <details>
+        <summary>
           "Некоторые установочные файлы были повреждены" при попытке открыть репак от
           Kpojluk
         </summary>
@@ -8803,8 +9007,11 @@
           <mark class="file">.zip</mark> и распаковать плагин в
           <mark class="path"
             >C:\Program Files (x86)\Common Files\Adobe\CEP\extensions</mark
-          >.
-          <!-- fixme: написать путь для macos -->
+          >
+          на Windows или в
+
+          <mark class="path">~/Library/Application Support/Adobe/CEP/extensions</mark> на
+          macOS.
         </p>
       </details>
       <details>
@@ -9396,6 +9603,10 @@
           />
           <figcaption>Настройки AfterCodecs</figcaption>
         </figure>
+        <p>
+          В этом окне вы можете настроить параметры вывода, например качество или скорость
+          кодирования. Ниже описание популярных параметров:
+        </p>
         <ul>
           <li>
             <mark class="ui">Video Codec</mark>: выбор кодека для вывода. Плагин
@@ -9459,8 +9670,9 @@
           <mark class="copy">Fast Start</mark> лучше не трогать без острой необходимости!
         </div>
         <p>
-          Если вы установили <mark class="plugin">Voukoder</mark>, то опять перейдите в
-          <mark class="ui">Output Module</mark> и выберите соответствующий пункт.
+          Если вы установили <mark class="plugin">Voukoder Classic</mark>, то опять
+          перейдите в <mark class="ui">Output Module</mark> и выберите соответствующий
+          пункт.
         </p>
         <div class="warning">
           Прежде чем рендерить, убедитесь, что вы установили
@@ -9483,7 +9695,8 @@
         <p>
           После выбора <mark class="plugin">Voukoder</mark> в качестве рендера вы можете
           зайти в <mark class="ui">Format Options</mark>, чтобы настроить параметры
-          вывода.
+          вывода. В новом открытом окне плагина вы можете настроить "куеву хучу"
+          параметров, но нам пригодятся лишь некоторые из них.
         </p>
         <figure>
           <img
@@ -9495,22 +9708,76 @@
           <figcaption>Настройки Voukoder</figcaption>
         </figure>
         <p>
-          В <mark class="plugin">Voukoder</mark> настройки схожи с теми, что в
-          <mark class="plugin">AfterCodecs</mark>, но
-          <mark class="plugin">Voukoder</mark> предлагает больше выбора видео и аудио
-          кодеков, а также поддерживает вывод в четырёх контейнерах:
-          <mark class="file">.avi</mark>, <mark class="file">.mkv</mark>,
-          <mark class="file">.mp4</mark> и <mark class="file">.mov</mark>.
+          Для начала нам нужно выбрать кодек. В выпадающем списке есть множество
+          вариантов, но чаще всего пользователи делают выбор между
+          <mark class="file">H.264</mark> или <mark class="file">H.265</mark>. В плагине
+          есть несколько вариантов:
         </p>
-        <!-- fixme: дописать про вукодер -->
+        <ul>
+          <li>
+            <mark class="file">H.264 (nVidia NVEnc или AMD AMF)</mark> - просчёт видео в
+            кодеке H.264 с использованием видеокарты.
+          </li>
+          <li>
+            <mark class="file">H.264 (x264)</mark> - просчёт видео в кодеке H.264 без
+            использования видеокарты.
+          </li>
+          <li>
+            <mark class="file">HEVC (nVidia NVEnc или AMD AMF)</mark> - просчёт видео в
+            кодеке H.265 с использованием видеокарты.
+          </li>
+          <li>
+            <mark class="file">HEVC (x265)</mark> - просчёт видео в кодеке H.265 без
+            использования видеокарты.
+          </li>
+        </ul>
+        <p>
+          Затем нам нужно перейти на следующую вкладку <mark class="ui">Параметры</mark>,
+          чтобы выбрать режим квантирования <mark>CQP</mark> при использовании
+          <mark class="file">H.264 / H.265</mark> или <mark>CRF</mark> при использовании
+          <mark class="file">x264 / x265</mark>.
+        </p>
+        <figure>
+          <img
+            src="source/voukoder_parameters.png"
+            alt="Вкладка параметров в Voukoder"
+            title="Вкладка параметров в Voukoder"
+          />
+          <figcaption>Вкладка параметров в Voukoder</figcaption>
+        </figure>
+        <p>
+          Затем вам нужно указать число для квантования. Для экпорта в YouTube, VK Видео
+          или подобных площадок можно поставить число <mark>23</mark> или <mark>25</mark>.
+        </p>
+        <p></p>
+        <ul>
+          <li>
+            <mark>CQP</mark> или же <mark>CRF</mark> - это некий эквивалент качества. Чем
+            меньше значение - тем лучше качество.
+          </li>
+          <li>
+            Если вы хотите получить максимальное качество - вы можете указать число
+            <mark>17</mark>, но тогда вес файла сильно вырастет.
+          </li>
+          <li>
+            Если вы хотите получить видео с максимальным соотношением качества и
+            минимального веса - попробуйте указать значение <mark>30</mark> и
+            экспериментировать в большую или меньшую сторону.
+          </li>
+        </ul>
+        <p>
+          Далее ничего нам не нужно настраивать, поэтому мы просто нажимаем на
+          <mark class="ui">ОК</mark> и отправляем нашу композицю на рендер как обычно.
+        </p>
       </details>
       <details>
-        <summary>Как выводить .gif из After Effects?</summary>
+        <summary>Как вывести .gif из After Effects?</summary>
         <p>
           Вывести из After Effects формат <mark class="file">.gif</mark> можно разными
           способами. Если вы собираетесь выводить видео для веб-страниц, советую лучше их
           выводить в формат <mark class="file">.webm</mark>, так как с помощью него можно
-          получить гораздо лучшую картинку с меньшим размером.
+          получить гораздо лучшую картинку с меньшим размером, о нём будет расписано в
+          следующем пункте.
         </p>
         <div class="warning">
           У формата <mark class="file">.gif</mark> есть множество ограничений: формат не
@@ -9767,6 +10034,27 @@
             поздних версиях.
           </li>
         </ul>
+      </details>
+      <details>
+        <summary>Почему у меня изображение после рендера вытянутое?</summary>
+        <p>
+          Скорее всего вы случайно установили неверное соотношение пикселя в настройках
+          вашей композиции.
+        </p>
+        <p>
+          Чтобы это исправить, достаточно открыть настройки композиции с помощью
+          комбинации клавиш <mark class="key">Ctrl + K</mark> и выбрать в
+          <mark class="ui">Pixel Aspect Ratio</mark> пункт
+          <mark class="ui">Square Pixels</mark>.
+        </p>
+        <figure>
+          <img
+            src="source/pixel_aspect_ratio_configure.png"
+            alt="Настройка соотношения пикселя в настройках композиции"
+            title="Настройка соотношения пикселя в настройках композиции"
+          />
+          <figcaption>Настройка соотношения пикселя в настройках композиции</figcaption>
+        </figure>
       </details>
       <details>
         <summary>Почему после рендера всё смещается влево или вправо?</summary>
