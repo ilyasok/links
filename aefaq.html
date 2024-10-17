@@ -7483,6 +7483,10 @@
       </details>
       <details>
         <summary>Как изменить цвет интерфейса в After Effects?</summary>
+        <div class="warning">
+          Для <mark class="app">After Effects 2025 и выше</mark> данная инструкция
+          неактуальна.
+        </div>
         <p>
           Для этого перейдите в консоль с помощью комбинации
           <mark class="key">Ctrl + F12</mark>, затем прожмите три полоски рядом с
@@ -7499,7 +7503,11 @@
         </figure>
         <p>
           Затем найдите пункт <mark class="copy">Enable_Theme_Colorizing</mark> и
-          установите галку рядом с ним.
+          установите галку рядом с ним. Если пункта нет, то активируйте его через
+          <mark class="ui">Console View</mark>. Для этого переключитесь в
+          <mark class="ui">Console View</mark> и введите команду ниже и нажмите на
+          <mark class="key">Enter</mark>.
+          <code>debug.set Enable_Theme_Colorizing=true</code>
         </p>
         <figure>
           <img
@@ -7510,13 +7518,6 @@
           />
           <figcaption>Пункт Enable_Theme_Colorizing</figcaption>
         </figure>
-        <div class="warning">
-          В After Effects 2025 и выше этот пункт может отсутствовать. Для его активации
-          переключитесь в
-          <mark class="ui">Console View</mark> и введите команду ниже и нажмите на
-          <mark class="key">Enter</mark>.
-          <code>debug.set Enable_Theme_Colorizing=true</code>
-        </div>
         <p>
           После включения этой опции перейдите в
           <mark class="ui">Edit &gt; Preferences &gt; Appearance</mark> и нажмите на
