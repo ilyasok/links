@@ -2,9 +2,7 @@ import {Breadcrumb, Divider} from "antd";
 import React from "react";
 import {Link} from "react-router-dom";
 import {Header} from "../components/Header";
-
 import {ThemeModal} from "../components/modal/themeChanger";
-
 import {AEActions} from "./sections/aefaq/Actions";
 import {AEErrors} from "./sections/aefaq/Errors";
 import {AEExport} from "./sections/aefaq/Export";
@@ -17,13 +15,20 @@ import {AEPerfomance} from "./sections/aefaq/Perfomance";
 import {AETips} from "./sections/aefaq/Tips";
 import {AEWhereFind} from "./sections/aefaq/WhereFind";
 import {AdditionWarning} from "../components/Additions";
+import {motion} from "framer-motion";
 
 const AEFaQ = () => {
   return (
     <div className="page">
       <ThemeModal />
       <Header title="aefaq" />
-      <main className="main">
+      <motion.main
+        className="main"
+        initial={{y: 50, opacity: 0}}
+        animate={{y: 0, opacity: 1}}
+        exit={{y: 50, opacity: 0}}
+        transition={{duration: 0.5, ease: [0.075, 0.82, 0.165, 1]}}
+      >
         <div className="faq-container-flex">
           <div className="faq-container">
             <div className="faq-title">
@@ -105,33 +110,9 @@ const AEFaQ = () => {
             ))}
           </div>
         </div>
-        {/* <div className="nav-container">
-          <Anchor
-            replace
-            targetOffset={targetOffset}
-            items={[
-              ...[
-                ["1", "#wherefind", "Ищем полезности"],
-                ["2", "#installproblems", "Проблемы с установкой"],
-                ["3", "#fromnewbies", "Вопросы от новичков"],
-                ["4", "#tips", "(не)Вредные советы"],
-                ["5", "#import", "Про импорт"],
-                ["6", "#interface", "Про интерфейс"],
-                ["7", "#perfomance", "Про производительность"],
-                ["8", "#actions", "Как и чем сделать то или то?"],
-                ["9", "#errors", "Ошибки и предупреждения"],
-                ["10", "#export", "Про экспорт"],
-                ["11", "#exportproblems", "Проблемы при экспорте"],
-              ].map(([key, href, title]) => ({
-                key,
-                href,
-                title,
-              })),
-            ]}
-          />
-        </div> */}
-      </main>
+      </motion.main>
     </div>
   );
 };
+
 export default AEFaQ;
