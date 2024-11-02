@@ -27,6 +27,7 @@ const RedirectHtml = () => {
 };
 
 export const App = () => {
+  const location = useLocation();
   useEffect(() => {
     const path = window.location.pathname;
     if (path.endsWith(".html")) {
@@ -54,20 +55,23 @@ export const App = () => {
         },
       }}
     >
-      <AnimatePresence>
-        <Suspense
-          fallback={
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                height: "100vh",
-              }}
-            >
-              <CircularProgress sx={{color: "var(--accent)"}} />
-            </div>
-          }
+      <Suspense
+        fallback={
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              height: "100vh",
+            }}
+          >
+            <CircularProgress sx={{color: "var(--accent)"}} />
+          </div>
+        }
+      >
+        <AnimatePresence
+          mode="wait"
+          onExitComplete={() => window.scrollTo(0, 0)}
         >
           <Routes
             location={location}
@@ -107,8 +111,8 @@ export const App = () => {
               }
             />
           </Routes>
-        </Suspense>
-      </AnimatePresence>
+        </AnimatePresence>
+      </Suspense>
     </ConfigProvider>
   );
 };
