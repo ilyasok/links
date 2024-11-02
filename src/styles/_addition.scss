@@ -21,6 +21,15 @@
       font-style: italic;
     }
 
+
+    li {
+      list-style-type: decimal;
+      margin-block: 5px;
+      padding-block: 0;
+      padding-inline-start: 2px;
+      margin-inline-start: 20px;
+    }
+
     display: flex;
     flex-direction: row;
     align-items: center;

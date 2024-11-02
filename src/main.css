@@ -642,6 +642,15 @@ textarea {
   border-radius: 10px;
   line-height: 1.75;
 }
+.faq-content h2 {
+  margin-inline: 20px;
+  padding-top: 10px;
+  margin-bottom: -10px;
+  font-weight: 900;
+  font-family: "Mulish", sans-serif;
+  font-size: 24px;
+  color: var(--summary_text);
+}
 .faq-content p {
   margin-inline: 20px;
   margin-block: 15px;
@@ -778,6 +787,17 @@ textarea {
   -webkit-filter: saturate(125%);
           filter: saturate(125%);
   font-style: italic;
+}
+.addition-info li, .addition-warning li, .addition-danger li {
+  list-style-type: decimal;
+  margin-block: 5px;
+  padding-block: 0;
+  -webkit-padding-start: 2px;
+     -moz-padding-start: 2px;
+          padding-inline-start: 2px;
+  -webkit-margin-start: 20px;
+     -moz-margin-start: 20px;
+          margin-inline-start: 20px;
 }
 .addition-info {
   background-color: var(--addition_info);
@@ -934,7 +954,7 @@ textarea {
   --addition_info-text: hsl(200, 75%, 25%);
   --addition_info-mark: hsl(200, 70%, 75%);
   --addition_warning: hsl(50, 100%, 85%);
-  --addition_warning-border: hsl(50, 90%, 65%);
+  --addition_warning-border: hsl(50, 90%, 50%);
   --addition_warning-text: hsl(50, 75%, 20%);
   --addition_warning-mark: hsl(50, 70%, 75%);
   --addition_danger: hsl(0, 100%, 90%);

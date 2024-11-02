@@ -51,18 +51,26 @@
     border-radius: $roundness;
     border-bottom: solid 3px var(--summary_border);
     display: flex;
-
   }
 
   &-section {
     border-radius: $roundness;
     margin-block: 15px;
-
-
     background-color: var(--content-background-color);
   }
 
   &-content {
+    h2 {
+      margin-inline: 20px;
+      padding-top: 10px;
+      margin-bottom: -10px;
+      font-weight: 900;
+      font-family: "Mulish",
+        sans-serif;
+      font-size: 24px;
+      color: var(--summary_text);
+    }
+
     p {
       margin-inline: 20px;
       margin-block: 15px;
@@ -76,10 +84,7 @@
         padding-top: 0;
         padding-bottom: 15px;
       }
-
-
     }
-
 
     @media screen and (max-width: 375px) {
       hyphens: auto;
@@ -140,7 +145,6 @@
       &-links {
         display: flex;
         flex-wrap: wrap;
-
         gap: 5px;
         margin: 0 auto;
         max-width: 800px;
@@ -163,8 +167,6 @@
       font-weight: 700;
       text-decoration: underline;
     }
-
-
 
     li {
       list-style-type: none;
