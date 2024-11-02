@@ -1,0 +1,43 @@
+@import "variables";
+
+.theme {
+  &-modal {
+    background: var(--content-background-color);
+    border: 1px solid var(--accent);
+    border-radius: $roundness;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+
+    .title {
+      font-family: "Mulish", sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
+
+  &-button {
+    padding: 10px;
+
+    svg {
+      fill: var(--text-color);
+    }
+
+    &-selected {
+      background-color: var(--button_background);
+    }
+  }
+
+  &-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+  }
+}
