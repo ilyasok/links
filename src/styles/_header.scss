@@ -21,6 +21,10 @@
     background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1),
     box-shadow 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 
+  svg {
+    fill: var(--accent);
+  }
+
   &-left,
   &-right {
     transition:
@@ -39,10 +43,13 @@
     }
 
     .logo {
-      font-family: "Anta", sans-serif;
+      color: var(--accent);
+      font-family: "Mulish", sans-serif;
       font-size: clamp(24px, 12vw, 28px);
       max-width: fit-content;
       margin-inline: 5px;
+      font-weight: 700;
+      font-style: italic;
     }
   }
 }

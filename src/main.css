@@ -889,6 +889,9 @@ textarea {
   transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), box-shadow 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), box-shadow 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-box-shadow 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+.header svg {
+  fill: var(--accent);
+}
 .header-left, .header-right {
   -webkit-transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), visibility 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-box-shadow 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), visibility 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-box-shadow 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -918,12 +921,15 @@ textarea {
   height: 24px;
 }
 .header-left .logo, .header-right .logo {
-  font-family: "Anta", sans-serif;
+  color: var(--accent);
+  font-family: "Mulish", sans-serif;
   font-size: clamp(24px, 12vw, 28px);
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
   margin-inline: 5px;
+  font-weight: 700;
+  font-style: italic;
 }
 
 :root {
