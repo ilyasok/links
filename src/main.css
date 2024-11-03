@@ -1045,6 +1045,7 @@ textarea {
 
 html,
 body {
+  scroll-padding-top: 80px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;

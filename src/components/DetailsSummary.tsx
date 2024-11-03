@@ -1,4 +1,4 @@
-import React, {ReactNode, useState} from "react";
+import React, {ReactNode, useState, useEffect, useRef} from "react";
 
 interface DetailsSummaryProps {
   title: string;
@@ -7,28 +7,59 @@ interface DetailsSummaryProps {
 
 const DetailsSummary: React.FC<DetailsSummaryProps> = ({title, children}) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [anchorId, setAnchorId] = useState("");
+  const detailsRef = useRef<HTMLDetailsElement>(null);
 
   const handleToggle = () => {
     setIsOpen(!isOpen);
   };
 
   const handleCopyAnchor = () => {
-    const anchor = `#${title.replace(/\s+/g, "-").toLowerCase()}`;
+    const anchor = `${window.location.origin}${window.location.pathname}#${anchorId}`;
     navigator.clipboard.writeText(anchor);
-    alert(`Anchor ${anchor} copied to clipboard!`);
+    alert(`Ссылка на пункт ${anchor} скопирован в буфер обмена`);
   };
 
+  useEffect(() => {
+    const containers = Array.from(document.querySelectorAll(".faq-content"));
+    containers.forEach((container, blockIndex) => {
+      const summaries = Array.from(container.querySelectorAll(".faq-summary"));
+      summaries.forEach((summary, summaryIndex) => {
+        if (summary === detailsRef.current?.querySelector(".faq-summary")) {
+          const generatedAnchor = `${blockIndex + 1}.${summaryIndex + 1}`;
+          setAnchorId(generatedAnchor);
+
+          if (!summary.hasAttribute("id")) {
+            summary.setAttribute("id", generatedAnchor);
+          }
+
+          if (window.location.hash === `#${generatedAnchor}`) {
+            const offset = 130;
+            const elementPosition = summary.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.scrollY - offset;
+
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: "smooth",
+            });
+          }
+        }
+      });
+    });
+  }, []);
+
   return (
-    <details onToggle={handleToggle}>
-      <summary
-        className="faq-summary"
-        id={title.replace(/\s+/g, "-").toLowerCase()}
-      >
+    <details
+      ref={detailsRef}
+      open={isOpen}
+      onToggle={handleToggle}
+    >
+      <summary className="faq-summary">
         <div className="faq-summary-left">
           <span style={{fontFamily: "JetBrains Mono, monospace"}}>
             {isOpen ? "-" : "+"}
           </span>
-          <h3>{title}</h3>
+          <h3>{`${anchorId} ${title}`}</h3>
         </div>
         <button
           onClick={handleCopyAnchor}
