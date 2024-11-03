@@ -1,10 +1,8 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import {ThemeModal} from "../components/modal/themeChanger";
 
 const NotFound = () => (
   <main className="not-found">
-    <ThemeModal />
     <div className="not-found-container">
       <p className="not-found-title">Мы потерялись</p>
       <p className="not-found-description">

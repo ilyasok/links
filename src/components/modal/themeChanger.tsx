@@ -1,12 +1,13 @@
 // ThemeComponents.tsx
+import React, {createContext, useContext, useEffect, useState} from "react";
+import {Button, Modal, Slider} from "antd";
 import {
-  Close,
   DarkModeRounded,
-  FormatColorFillOutlined,
   HideSourceRounded,
   LightModeRounded,
+  RestartAltOutlined,
+  FormatColorFillOutlined,
 } from "@mui/icons-material";
-import React, {createContext, useContext, useEffect, useRef, useState} from "react";
 
 type Theme = "light" | "dark" | "system";
 
@@ -15,9 +16,6 @@ interface ThemeContextProps {
   setTheme: (theme: Theme) => void;
   accentHue: number;
   setAccentHue: (hue: number) => void;
-  isModalOpen: boolean;
-  openModal: () => void;
-  closeModal: () => void;
 }
 
 const ThemeContext = createContext<ThemeContextProps | undefined>(undefined);
@@ -29,7 +27,6 @@ export const ThemeProvider: React.FC<{children: React.ReactNode}> = ({children})
   const [accentHue, setAccentHueState] = useState<number>(() =>
     parseInt(localStorage.getItem("accentHue") || "210", 10)
   );
-  const [isModalOpen, setModalOpen] = useState(false);
 
   const setTheme = (newTheme: Theme) => {
     setThemeState(newTheme);
@@ -61,21 +58,8 @@ export const ThemeProvider: React.FC<{children: React.ReactNode}> = ({children})
     return () => mediaQuery.removeEventListener("change", handleSystemThemeChange);
   }, [theme]);
 
-  const openModal = () => setModalOpen(true);
-  const closeModal = () => setModalOpen(false);
-
   return (
-    <ThemeContext.Provider
-      value={{
-        theme,
-        setTheme,
-        accentHue,
-        setAccentHue,
-        isModalOpen,
-        openModal,
-        closeModal,
-      }}
-    >
+    <ThemeContext.Provider value={{theme, setTheme, accentHue, setAccentHue}}>
       {children}
     </ThemeContext.Provider>
   );
@@ -87,108 +71,85 @@ export const useTheme = (): ThemeContextProps => {
   return context;
 };
 
-// *: кнопка для открытия модалки
 export const ThemeToggleButton: React.FC = () => {
-  const {openModal} = useTheme();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   return (
-    <button onClick={openModal}>
-      <FormatColorFillOutlined />
-    </button>
+    <>
+      <button onClick={openModal}>
+        <FormatColorFillOutlined />
+      </button>
+      <ThemeModal
+        isModalOpen={isModalOpen}
+        closeModal={closeModal}
+      />
+    </>
   );
 };
 
-// *: модальное окно для смены темы
-export const ThemeModal: React.FC = () => {
-  const {theme, setTheme, accentHue, setAccentHue, isModalOpen, closeModal} = useTheme();
-  const modalRef = useRef<HTMLDivElement>(null);
+interface ThemeModalProps {
+  isModalOpen: boolean;
+  closeModal: () => void;
+}
 
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) =>
-      event.key === "Escape" && closeModal();
-    const handleClickOutside = (event: MouseEvent) => {
-      if (modalRef.current && !modalRef.current.contains(event.target as Node))
-        closeModal();
-    };
-
-    if (isModalOpen) {
-      document.addEventListener("keydown", handleKeyDown);
-      document.addEventListener("mousedown", handleClickOutside);
-    }
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [isModalOpen, closeModal]);
-
-  if (!isModalOpen) return null;
+const ThemeModal: React.FC<ThemeModalProps> = ({isModalOpen, closeModal}) => {
+  const {theme, setTheme, accentHue, setAccentHue} = useTheme();
 
   return (
-    <div className="theme-overlay">
+    <Modal
+      title="Менятор темы"
+      open={isModalOpen}
+      footer={null}
+      destroyOnClose
+      onCancel={closeModal}
+      className="theme-modal"
+    >
       <div
-        className="theme-modal"
-        ref={modalRef}
+        style={{
+          marginBlock: "10px",
+          display: "flex",
+          justifyContent: "space-around",
+          alignItems: "center",
+        }}
       >
-        <div
-          style={{display: "flex", justifyContent: "space-between", alignItems: "center"}}
+        <button
+          className={
+            theme === "light" ? "theme-button theme-button-selected" : "theme-button"
+          }
+          onClick={() => setTheme("light")}
         >
-          <p className="title">Менятор темы</p>
-          <button onClick={closeModal}>
-            <Close />
-          </button>
-        </div>
-        <div
-          style={{
-            marginBlock: "10px",
-            display: "flex",
-            justifyContent: "space-around",
-            alignItems: "center",
-          }}
+          <LightModeRounded />
+        </button>
+        <button
+          className={
+            theme === "dark" ? "theme-button theme-button-selected" : "theme-button"
+          }
+          onClick={() => setTheme("dark")}
         >
-          <button
-            className={
-              theme === "light" ? "theme-button theme-button-selected" : "theme-button"
-            }
-            onClick={() => setTheme("light")}
-          >
-            <LightModeRounded />
-          </button>
-          <button
-            className={
-              theme === "dark" ? "theme-button theme-button-selected" : "theme-button"
-            }
-            onClick={() => setTheme("dark")}
-          >
-            <DarkModeRounded />
-          </button>
-          <button
-            className={
-              theme === "system" ? "theme-button theme-button-selected" : "theme-button"
-            }
-            onClick={() => setTheme("system")}
-          >
-            <HideSourceRounded />
-          </button>
-        </div>
-        <h3>Оттенок акцентного цвета</h3>
-        <input
-          type="number"
-          min="0"
-          max="360"
-          value={accentHue}
-          onChange={(e) => setAccentHue(Number(e.target.value))}
-        />
-        <input
-          type="range"
-          min="0"
-          max="360"
-          value={accentHue}
-          onChange={(e) => setAccentHue(Number(e.target.value))}
-        />
-        <button onClick={() => setAccentHue(210)}>Сбросить</button>
-        
+          <DarkModeRounded />
+        </button>
+        <button
+          className={
+            theme === "system" ? "theme-button theme-button-selected" : "theme-button"
+          }
+          onClick={() => setTheme("system")}
+        >
+          <HideSourceRounded />
+        </button>
       </div>
-    </div>
+      <p style={{fontSize: "14px"}}>Изменить оттенок акцентного цвета</p>
+      <Slider
+        min={0}
+        max={360}
+        value={accentHue}
+        onChange={(value) => setAccentHue(value)}
+      />
+  
+    </Modal>
   );
 };
 
-export {ThemeContext};
+export {ThemeModal};
