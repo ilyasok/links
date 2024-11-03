@@ -46,7 +46,8 @@ export const App = () => {
             separatorColor: "var(--accent)",
           },
           Divider: {
-            colorSplit: "var(--accent)",
+            colorSplit: "var(--summary_border)",
+            fontSizeLG: 14,
           },
           Slider: {
             handleColor: "var(--accent)",
@@ -58,9 +59,10 @@ export const App = () => {
             contentBg: "var(--content-background-color)",
             titleColor: "var(--text-color)",
             headerBg: "transparent",
-          }
+          },
         },
         token: {
+          colorBgElevated: "var(--content-background-color)",
           fontFamily: "Inter",
           colorText: "var(--text-color)",
         },
