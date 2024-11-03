@@ -202,6 +202,12 @@ const Links = () => {
               description="Обсуждаем текстурирование в программах Substance"
             />
             <LinkCard
+              href="https://t.me/chat3dsmax"
+              icon={<DomainOutlined />}
+              name="3DSMax (Визуализаторы)"
+              description="Обсуждаем Autodesk 3DS Max и другие продукты компании"
+            />
+            <LinkCard
               href="https://t.me/ue_chat"
               icon={<SportsEsportsRounded />}
               name="Unreal Engine Chat"
