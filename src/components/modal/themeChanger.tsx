@@ -1,11 +1,10 @@
 // ThemeComponents.tsx
 import React, {createContext, useContext, useEffect, useState} from "react";
-import {Button, Modal, Slider} from "antd";
+import {Modal, Slider} from "antd";
 import {
   DarkModeRounded,
   HideSourceRounded,
   LightModeRounded,
-  RestartAltOutlined,
   FormatColorFillOutlined,
 } from "@mui/icons-material";
 
@@ -147,7 +146,6 @@ const ThemeModal: React.FC<ThemeModalProps> = ({isModalOpen, closeModal}) => {
         value={accentHue}
         onChange={(value) => setAccentHue(value)}
       />
-  
     </Modal>
   );
 };
