@@ -4,6 +4,8 @@ import {Header} from "../components/Header";
 import {Breadcrumb} from "antd";
 import {Link} from "react-router-dom";
 import {AdditionDanger, AdditionInfo, AdditionWarning} from "../components/Additions";
+import {motion} from "framer-motion";
+import {Footer} from "../components/Footer";
 const ChatRules = () => (
   <div>
     <Header title="chatRules" />
@@ -166,6 +168,10 @@ const ChatRules = () => (
               <p></p>
             </div>
           </section>
+          <Footer
+            title="aechat"
+            initialYear={2021}
+          />
         </div>
       </div>
     </main>

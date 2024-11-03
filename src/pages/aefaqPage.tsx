@@ -2,7 +2,6 @@ import {Breadcrumb, Divider} from "antd";
 import React from "react";
 import {Link} from "react-router-dom";
 import {Header} from "../components/Header";
-
 import {AEActions} from "./sections/aefaq/Actions";
 import {AEErrors} from "./sections/aefaq/Errors";
 import {AEExport} from "./sections/aefaq/Export";
@@ -16,12 +15,11 @@ import {AETips} from "./sections/aefaq/Tips";
 import {AEWhereFind} from "./sections/aefaq/WhereFind";
 import {AdditionWarning} from "../components/Additions";
 import {motion} from "framer-motion";
-
+import {Footer} from "../components/Footer";
 const AEFaQ = () => {
   return (
     <div className="page">
       <Header title="aefaq" />
-      
       <motion.main
         className="main"
         initial={{y: 50, opacity: 0}}
@@ -108,11 +106,14 @@ const AEFaQ = () => {
                 })()}
               </div>
             ))}
+            <Footer
+              title="aechat"
+              initialYear={2021}
+            />
           </div>
         </div>
       </motion.main>
     </div>
   );
 };
-
 export default AEFaQ;

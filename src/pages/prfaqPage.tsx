@@ -5,11 +5,12 @@ import {Breadcrumb} from "antd";
 import {Link} from "react-router-dom";
 import {AdditionWarning} from "../components/Additions";
 import {motion} from "framer-motion";
+import {Footer} from "../components/Footer";
 
 const PRFaQ = () => (
   <div>
     <Header title="prfaq" />
-    
+
     <motion.main
       className="main"
       initial={{y: 50, opacity: 0}}
@@ -96,6 +97,10 @@ const PRFaQ = () => (
               })()}
             </div>
           ))} */}
+          <Footer
+            title="aechat"
+            initialYear={2021}
+          />
         </div>
       </div>
     </motion.main>

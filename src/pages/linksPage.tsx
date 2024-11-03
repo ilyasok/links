@@ -7,6 +7,7 @@ import {
   BusinessCenterRounded,
   CarRepairRounded,
   DevicesRounded,
+  DomainOutlined,
   ForumRounded,
   HandymanRounded,
   MmsRounded,
@@ -33,12 +34,13 @@ import {Header} from "../components/Header";
 import {LinkCard, LinkCardNoDescription, LinkInAppCard} from "../components/LinkCards";
 
 import {AdditionDanger, AdditionWarning} from "../components/Additions";
+import {Footer} from "../components/Footer";
 
 const Links = () => {
   return (
     <div className="page">
       <Header title="links" />
-      
+
       <motion.main
         className="main"
         initial={{y: 50, opacity: 0}}
@@ -81,7 +83,7 @@ const Links = () => {
               description="Раздел с популярными выражениями в After Effects"
             />
           </div>
-          <Divider>Каналы с полезными материалами</Divider>
+          <Divider>Каналы</Divider>
           <div className="links-grid">
             <LinkCard
               href="https://t.me/s/aetemp"
@@ -347,7 +349,7 @@ const Links = () => {
               name="ИЩУ_ДИЗАЙНЕРА"
             />
           </div>
-          <Divider>Чёрные листы заказчиков и исполнителей</Divider>
+          <Divider>Чёрные списки</Divider>
           <div className="links-grid">
             <LinkCardNoDescription
               href="https://t.me/cgblacklist"
@@ -375,6 +377,10 @@ const Links = () => {
               name="Мошенники в фрилансе"
             />
           </div>
+          <Footer
+            title="aechat"
+            initialYear={2021}
+          />
         </div>
       </motion.main>
     </div>

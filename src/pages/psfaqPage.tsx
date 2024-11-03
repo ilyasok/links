@@ -4,12 +4,13 @@ import {Breadcrumb} from "antd";
 import {Link} from "react-router-dom";
 import {AdditionWarning} from "../components/Additions";
 import {Header} from "../components/Header";
-import { motion } from "framer-motion";
+import {motion} from "framer-motion";
+import {Footer} from "../components/Footer";
 
 const PSFaQ = () => (
   <div>
     <Header title="psfaq" />
-    
+
     <motion.main
       className="main"
       initial={{y: 50, opacity: 0}}
@@ -96,6 +97,10 @@ const PSFaQ = () => (
               })()}
             </div>
           ))} */}
+          <Footer
+            title="aechat & dwchat"
+            initialYear={2021}
+          />
         </div>
       </div>
     </motion.main>

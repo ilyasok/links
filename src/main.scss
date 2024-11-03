@@ -22,10 +22,19 @@ body {
 
 .main {
   margin-top: 64px;
-
+  overflow: hidden;
 
 }
 
+
+.footer {
+  opacity: 0.5;
+  margin-block: 30px;
+  margin-inline: auto;
+  padding-inline: 10px;
+  font-size: 12px;
+  text-align: center;
+}
 
 .hidden {
   opacity: 0;
