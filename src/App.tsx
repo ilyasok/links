@@ -48,6 +48,17 @@ export const App = () => {
           Divider: {
             colorSplit: "var(--accent)",
           },
+          Slider: {
+            handleColor: "var(--accent)",
+            handleActiveColor: "var(--accent)",
+            trackBg: "var(--links_border)",
+            trackHoverBg: "var(--accent)",
+          },
+          Modal: {
+            contentBg: "var(--content-background-color)",
+            titleColor: "var(--text-color)",
+            headerBg: "transparent",
+          }
         },
         token: {
           fontFamily: "Inter",

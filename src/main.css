@@ -1000,15 +1000,6 @@ textarea {
   --addition_danger-mark: hsl(0, 50%, 30%);
 }
 
-.theme-modal {
-  background: var(--content-background-color);
-  border: 1px solid var(--accent);
-  border-radius: 10px;
-  padding: 20px;
-  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 1001;
-}
 .theme-modal .title {
   font-family: "Mulish", sans-serif;
   font-size: 24px;
@@ -1021,7 +1012,11 @@ textarea {
   fill: var(--text-color);
 }
 .theme-button-selected {
-  background-color: var(--button_background);
+  background-color: var(--accent);
+  border-radius: 1000px;
+}
+.theme-button-selected svg {
+  fill: #fff;
 }
 .theme-overlay {
   position: fixed;

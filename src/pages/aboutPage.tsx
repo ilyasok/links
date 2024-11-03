@@ -1,10 +1,10 @@
 import React from "react";
-import { ThemeModal } from "../components/modal/themeChanger";
+
+import {Header} from "../components/Header";
 
 const AboutPage = () => (
   <div>
-    <ThemeModal />
-    123
+    <Header title="about" />
   </div>
 );
 export default AboutPage;

@@ -2,7 +2,7 @@ import {Breadcrumb, Divider} from "antd";
 import React from "react";
 import {Link} from "react-router-dom";
 import {Header} from "../components/Header";
-import {ThemeModal} from "../components/modal/themeChanger";
+
 import {AEActions} from "./sections/aefaq/Actions";
 import {AEErrors} from "./sections/aefaq/Errors";
 import {AEExport} from "./sections/aefaq/Export";
@@ -20,8 +20,8 @@ import {motion} from "framer-motion";
 const AEFaQ = () => {
   return (
     <div className="page">
-      <ThemeModal />
       <Header title="aefaq" />
+      
       <motion.main
         className="main"
         initial={{y: 50, opacity: 0}}

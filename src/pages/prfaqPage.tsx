@@ -1,15 +1,15 @@
 import React from "react";
-import {ThemeModal} from "../components/modal/themeChanger";
+
 import {Header} from "../components/Header";
-import {Breadcrumb, Divider} from "antd";
+import {Breadcrumb} from "antd";
 import {Link} from "react-router-dom";
 import {AdditionWarning} from "../components/Additions";
 import {motion} from "framer-motion";
 
 const PRFaQ = () => (
   <div>
-    <ThemeModal />
     <Header title="prfaq" />
+    
     <motion.main
       className="main"
       initial={{y: 50, opacity: 0}}

@@ -1,5 +1,5 @@
 import React from "react";
-import {ThemeModal} from "../components/modal/themeChanger";
+
 import {Breadcrumb} from "antd";
 import {Link} from "react-router-dom";
 import {AdditionWarning} from "../components/Additions";
@@ -8,8 +8,8 @@ import { motion } from "framer-motion";
 
 const PSFaQ = () => (
   <div>
-    <ThemeModal />
     <Header title="psfaq" />
+    
     <motion.main
       className="main"
       initial={{y: 50, opacity: 0}}

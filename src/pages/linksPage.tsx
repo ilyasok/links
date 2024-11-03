@@ -31,14 +31,14 @@ import {motion} from "framer-motion";
 import React from "react";
 import {Header} from "../components/Header";
 import {LinkCard, LinkCardNoDescription, LinkInAppCard} from "../components/LinkCards";
-import {ThemeModal} from "../components/modal/themeChanger";
+
 import {AdditionDanger, AdditionWarning} from "../components/Additions";
 
 const Links = () => {
   return (
     <div className="page">
-      <ThemeModal />
       <Header title="links" />
+      
       <motion.main
         className="main"
         initial={{y: 50, opacity: 0}}

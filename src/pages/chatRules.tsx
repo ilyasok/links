@@ -1,13 +1,13 @@
 import React from "react";
-import {ThemeModal} from "../components/modal/themeChanger";
+
 import {Header} from "../components/Header";
 import {Breadcrumb} from "antd";
 import {Link} from "react-router-dom";
 import {AdditionDanger, AdditionInfo, AdditionWarning} from "../components/Additions";
 const ChatRules = () => (
   <div>
-    <ThemeModal />
     <Header title="chatRules" />
+    
     <main className="main">
       <div className="faq-container-flex">
         <div className="faq-container">
