@@ -1,3 +1,4 @@
+import {notification} from "antd";
 import React, {ReactNode, useState, useEffect, useRef} from "react";
 
 interface DetailsSummaryProps {
@@ -17,7 +18,11 @@ const DetailsSummary: React.FC<DetailsSummaryProps> = ({title, children}) => {
   const handleCopyAnchor = () => {
     const anchor = `${window.location.origin}${window.location.pathname}#${anchorId}`;
     navigator.clipboard.writeText(anchor);
-    alert(`Ссылка на пункт ${anchor} скопирован в буфер обмена`);
+    notification.open({
+      placement: "bottomRight",
+      message: "Ссылка скопирована в буфер обмена",
+      description: `Теперь вы можете поделиться пунктом ${anchorId} с другими пользователями`,
+    });
   };
 
   useEffect(() => {
@@ -59,7 +64,7 @@ const DetailsSummary: React.FC<DetailsSummaryProps> = ({title, children}) => {
           <span style={{fontFamily: "JetBrains Mono, monospace"}}>
             {isOpen ? "-" : "+"}
           </span>
-          <h3>{`${anchorId} ${title}`}</h3>
+          <h3>{`${anchorId}. ${title}`}</h3>
         </div>
         <button
           onClick={handleCopyAnchor}
