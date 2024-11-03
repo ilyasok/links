@@ -105,6 +105,7 @@ const ThemeModal: React.FC<ThemeModalProps> = ({isModalOpen, closeModal}) => {
       destroyOnClose
       onCancel={closeModal}
       className="theme-modal"
+      width={300}
     >
       <div
         style={{
@@ -139,13 +140,16 @@ const ThemeModal: React.FC<ThemeModalProps> = ({isModalOpen, closeModal}) => {
           <HideSourceRounded />
         </button>
       </div>
-      <p style={{fontSize: "14px"}}>Изменить оттенок акцентного цвета</p>
-      <Slider
-        min={0}
-        max={360}
-        value={accentHue}
-        onChange={(value) => setAccentHue(value)}
-      />
+      <div style={{display: "flex", alignItems: "center", gap: "5px"}}>
+        <p style={{fontSize: "14px"}}>Оттенок:</p>
+        <Slider
+          min={0}
+          max={360}
+          value={accentHue}
+          onChange={(value) => setAccentHue(value)}
+          style={{flex: "1 1 auto", width: "100%"}}
+        />
+      </div>
     </Modal>
   );
 };
