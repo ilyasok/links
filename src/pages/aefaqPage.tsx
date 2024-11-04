@@ -108,7 +108,7 @@ const AEFaQ = () => {
             ))}
             <Footer
               title="aechat"
-              initialYear={2021}
+              initialYear={2023}
             />
           </div>
         </div>

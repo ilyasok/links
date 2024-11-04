@@ -379,7 +379,7 @@ const Links = () => {
           </div>
           <Footer
             title="aechat"
-            initialYear={2021}
+            initialYear={2024}
           />
         </div>
       </motion.main>

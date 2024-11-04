@@ -99,7 +99,7 @@ const PSFaQ = () => (
           ))} */}
           <Footer
             title="aechat & dwchat"
-            initialYear={2021}
+            initialYear={2023}
           />
         </div>
       </div>
