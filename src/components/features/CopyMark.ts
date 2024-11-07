@@ -36,12 +36,9 @@ const copyToClipboard = (event?: MouseEvent) => {
     document.body.appendChild(textArea);
     textArea.focus();
     textArea.select();
-    try {
-      document.execCommand("copy");
-      message.success("Текст успешно скопирован в буфер обмена");
-    } catch (error) {
-      message.error("Ошибка при копировании текста в буфер обмена");
-    }
+    document.execCommand("copy");
+    message.success("Текст успешно скопирован в буфер обмена");
+
     document.body.removeChild(textArea);
   }
 };

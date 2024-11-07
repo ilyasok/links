@@ -1,7 +1,10 @@
 import {Breadcrumb, Divider} from "antd";
-import React from "react";
+import React, {useEffect} from "react";
+import {motion} from "framer-motion";
 import {Link} from "react-router-dom";
 import {Header} from "../components/Header";
+import {Footer} from "../components/Footer";
+// *: разделы aefaq:
 import {AEActions} from "./sections/aefaq/Actions";
 import {AEErrors} from "./sections/aefaq/Errors";
 import {AEExport} from "./sections/aefaq/Export";
@@ -13,10 +16,16 @@ import {AEInterface} from "./sections/aefaq/Interface";
 import {AEPerfomance} from "./sections/aefaq/Perfomance";
 import {AETips} from "./sections/aefaq/Tips";
 import {AEWhereFind} from "./sections/aefaq/WhereFind";
+
 import {AdditionWarning} from "../components/Additions";
-import {motion} from "framer-motion";
-import {Footer} from "../components/Footer";
+import CopyMark from "../components/features/CopyMark";
+
+
+
 const AEFaQ = () => {
+  useEffect(() => {
+    CopyMark.enableAutoCopy();
+  }, []);
   return (
     <div className="page">
       <Header title="aefaq" />

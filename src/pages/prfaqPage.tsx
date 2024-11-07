@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import {Header} from "../components/Header";
 import {Breadcrumb} from "antd";
@@ -6,50 +6,55 @@ import {Link} from "react-router-dom";
 import {AdditionWarning} from "../components/Additions";
 import {motion} from "framer-motion";
 import {Footer} from "../components/Footer";
+import CopyMark from "../components/features/CopyMark";
 
-const PRFaQ = () => (
-  <div>
-    <Header title="prfaq" />
+const PRFaQ = () => {
+  useEffect(() => {
+    CopyMark.enableAutoCopy();
+  }, []);
+  return (
+    <div>
+      <Header title="prfaq" />
 
-    <motion.main
-      className="main"
-      initial={{y: 50, opacity: 0}}
-      animate={{y: 0, opacity: 1}}
-      exit={{y: 50, opacity: 0}}
-      transition={{duration: 0.5, ease: [0.075, 0.82, 0.165, 1]}}
-    >
-      <div className="faq-container-flex">
-        <div className="faq-container">
-          <div className="faq-title">
-            <h1>prfaq</h1>
-            <Breadcrumb
-              items={[
-                {
-                  title: <Link to="/">Главная</Link>,
-                },
-                {
-                  title: <Link to="/prfaq">FaQ по Adobe Premiere Pro</Link>,
-                  menu: {
-                    items: [
-                      {
-                        title: <Link to="/aefaq">FaQ по Adobe After Effects</Link>,
-                      },
-                      {
-                        title: <Link to="/psfaq">FaQ по Adobe Photoshop</Link>,
-                      },
-                    ],
+      <motion.main
+        className="main"
+        initial={{y: 50, opacity: 0}}
+        animate={{y: 0, opacity: 1}}
+        exit={{y: 50, opacity: 0}}
+        transition={{duration: 0.5, ease: [0.075, 0.82, 0.165, 1]}}
+      >
+        <div className="faq-container-flex">
+          <div className="faq-container">
+            <div className="faq-title">
+              <h1>prfaq</h1>
+              <Breadcrumb
+                items={[
+                  {
+                    title: <Link to="/">Главная</Link>,
                   },
-                },
-              ]}
-            />
-          </div>
-          <AdditionWarning>
-            Данный раздел находится в разработке и иногда обновляется, поэтому могут быть
-            неточности в действиях, выводах и тексте. Мнение автора и мнение читателя
-            могут отличаться. Предложения по поводу улучшения материала вы можете
-            отправить на <a href="mailto:m1sh3r@ya.ru">почту автора</a>.
-          </AdditionWarning>
-          {/* {[
+                  {
+                    title: <Link to="/prfaq">FaQ по Adobe Premiere Pro</Link>,
+                    menu: {
+                      items: [
+                        {
+                          title: <Link to="/aefaq">FaQ по Adobe After Effects</Link>,
+                        },
+                        {
+                          title: <Link to="/psfaq">FaQ по Adobe Photoshop</Link>,
+                        },
+                      ],
+                    },
+                  },
+                ]}
+              />
+            </div>
+            <AdditionWarning>
+              Данный раздел находится в разработке и иногда обновляется, поэтому могут
+              быть неточности в действиях, выводах и тексте. Мнение автора и мнение
+              читателя могут отличаться. Предложения по поводу улучшения материала вы
+              можете отправить на <a href="mailto:m1sh3r@ya.ru">почту автора</a>.
+            </AdditionWarning>
+            {/* {[
             ["1", "#wherefind", "Ищем полезности"],
             ["2", "#installproblems", "Проблемы с установкой"],
             ["3", "#fromnewbies", "Вопросы от новичков"],
@@ -97,13 +102,14 @@ const PRFaQ = () => (
               })()}
             </div>
           ))} */}
-          <Footer
-            title="aechat"
-            initialYear={2023}
-          />
+            <Footer
+              title="aechat"
+              initialYear={2023}
+            />
+          </div>
         </div>
-      </div>
-    </motion.main>
-  </div>
-);
+      </motion.main>
+    </div>
+  );
+};
 export default PRFaQ;
