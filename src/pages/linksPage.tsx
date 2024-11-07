@@ -8,7 +8,10 @@ import {
   CarRepairRounded,
   DevicesRounded,
   DomainOutlined,
+  Download,
+  FormatListBulletedOutlined,
   ForumRounded,
+  Gif,
   HandymanRounded,
   MmsRounded,
   MovieFilterRounded,
@@ -21,6 +24,7 @@ import {
   SportsEsportsRounded,
   TerminalRounded,
   TextureRounded,
+  VideoSettingsOutlined,
   ViewInArRounded,
   VolumeUpRounded,
   WebRounded,
@@ -83,7 +87,7 @@ const Links = () => {
               description="Раздел с популярными выражениями в After Effects"
             />
           </div>
-          <Divider>Каналы</Divider>
+          <Divider>Наши каналы</Divider>
           <div className="links-grid">
             <LinkCard
               href="https://t.me/s/aetemp"
@@ -134,8 +138,34 @@ const Links = () => {
               description="как склад стройматериалов, но для macOS"
             />
           </div>
-          <Divider>Полезные сервисы</Divider>
+          <Divider>Сервисы</Divider>
           {/* ezgif, скачивание шаттера, скачивание медиаинфо и аналогичное по списку */}
+          <div className="links-grid">
+            <LinkCard
+              href="https://ezgif.com/"
+              icon={<Gif />}
+              name="Ezgif"
+              description="Популярный онлайн-конвертер видеофайлов в GIF"
+            />
+            <LinkCard
+              href="https://www.shutterencoder.com/"
+              icon={<VideoSettingsOutlined />}
+              name="Shutter Encoder"
+              description="Оффлайн-конвертер видеофайлов в различные кодеки, в том числе монтажные"
+            />
+            <LinkCard
+              href="https://mediaarea.net/MediaInfoOnline"
+              icon={<FormatListBulletedOutlined />}
+              name="MediaInfo Online"
+              description="Онлайн-версия MediaInfo, позволяющая просматривать мета-информацию о файлах"
+            />
+            <LinkCard
+              href="https://cobalt.tools/"
+              icon={<Download />}
+              name="кобальт"
+              description="Сервис для скачивания видео с различных источников, в том числе YouTube"
+            />
+          </div>
           <Divider>Чаты в Telegram</Divider>
           <AdditionWarning>
             Перед вступлением в какой-либо чат - прочитайте его правила, чтобы избежать
