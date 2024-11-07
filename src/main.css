@@ -583,6 +583,10 @@ textarea {
 .faq-summary {
   -webkit-filter: drop-shadow(0 2.5px 5px var(--shadow));
           filter: drop-shadow(0 2.5px 5px var(--shadow));
+  -webkit-transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -o-transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -moz-transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   font-weight: 800;
   margin-block: 10px;
   -webkit-flex-wrap: nowrap;
@@ -608,7 +612,10 @@ textarea {
   color: var(--summary_text);
   background-color: var(--summary_background);
   border-radius: 10px;
-  border-bottom: solid 3px var(--summary_border);
+  border-left: solid 1px var(--summary_border);
+  border-right: solid 1px var(--summary_border);
+  border-top: solid 1px var(--summary_border);
+  border-bottom: solid 4px var(--summary_border);
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -633,10 +640,14 @@ textarea {
 .faq-summary .copy_button {
   fill: var(--accent);
 }
+.faq-summary:hover {
+  background-color: var(--links_hover);
+}
 .faq-section {
   border-radius: 10px;
   margin-block: 15px;
   background-color: var(--content-background-color);
+  border: solid 1px var(--content-background-border);
 }
 .faq-content {
   border-radius: 10px;
@@ -654,14 +665,6 @@ textarea {
 .faq-content p {
   margin-inline: 20px;
   margin-block: 15px;
-}
-.faq-content p:first-child {
-  padding-top: 15px;
-  padding-bottom: 0;
-}
-.faq-content p:last-child {
-  padding-top: 0;
-  padding-bottom: 15px;
 }
 @media screen and (max-width: 375px) {
   .faq-content {
@@ -741,9 +744,45 @@ textarea {
 .faq-content li {
   list-style-type: none;
   padding-inline: 15px;
-  padding-block: 5px;
-  margin-block: 5px;
+  padding-block: 10px;
+  -webkit-padding-start: 30px;
+     -moz-padding-start: 30px;
+          padding-inline-start: 30px;
+  position: relative;
+}
+.faq-content li:not(:last-child) {
+  border-bottom: 1px solid var(--content-background-border);
+}
+.faq-content li::before {
   border-radius: 10px;
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 50%;
+  background-color: var(--accent);
+  position: absolute;
+  left: 15px;
+  opacity: 50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+     -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.faq-content code {
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text;
+  display: block;
+  background-color: #303030;
+  margin-block: 10px;
+  font-family: "JetBrains Mono", monospace;
+  line-height: 1.25;
+  font-size: 14px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: #ffffff;
 }
 .faq-content mark {
   background-color: var(--mark_background);
@@ -778,6 +817,12 @@ textarea {
       -ms-flex-align: center;
           align-items: center;
   gap: 15px;
+}
+.addition-info:first-child, .addition-warning:first-child, .addition-danger:first-child {
+  margin-top: 0;
+}
+.addition-info:last-child, .addition-warning:last-child, .addition-danger:last-child {
+  margin-bottom: 0;
 }
 .addition-info a, .addition-warning a, .addition-danger a {
   font-weight: 700;
@@ -942,6 +987,7 @@ textarea {
   --background-color: hsl(0, 0%, 92.5%);
   --text-color: hsl(0, 0%, 20%);
   --content-background-color: hsl(0, 0%, 100%);
+  --content-background-border: hsl(0, 0%, 95%);
   --header_background: hsla(0, 0%, 100%, 0.5);
   --accent: hsl(var(--accent-hue), 65%, 45%);
   --mark_background: hsl(var(--accent-hue), 75%, 97%);
@@ -972,7 +1018,8 @@ textarea {
 .dark {
   --background-color: hsl(0, 0%, 0%);
   --text-color: hsl(0, 0%, 100%);
-  --content-background-color: hsl(0, 0%, 5%);
+  --content-background-color: hsl(0, 0%, 7.5%);
+  --content-background-border: hsl(0, 0%, 15%);
   --header_background: hsla(0, 0%, 7.5%, 0.75);
   --accent: hsl(var(--accent-hue), 100%, 70%);
   --mark_background: hsl(var(--accent-hue), 25%, 27%);
@@ -1056,6 +1103,10 @@ body {
   background: var(--background-color);
   font-family: "Inter", sans-serif;
   font-weight: 350;
+}
+
+html {
+  scrollbar-width: none;
 }
 
 .main {

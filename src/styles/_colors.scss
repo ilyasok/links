@@ -10,6 +10,7 @@ $light:( // ~: стандартные цвета:
   background-color: hsl(0, 0%, 92.5%),
   text-color: hsl(0, 0%, 20%),
   content-background-color: hsl(0, 0%, 100%),
+  content-background-border: hsl(0, 0%, 95%),
   header_background: hsla(0, 0%, 100%, 0.5),
   // ~: с применением акцентного цвета:
   accent: hsl(var(--accent-hue), 65%, 45%),
@@ -42,7 +43,8 @@ $light:( // ~: стандартные цвета:
 $dark:( // ~: стандартные цвета:  
   background-color: hsl(0, 0%, 0%),
   text-color: hsl(0, 0%, 100%),
-  content-background-color: hsl(0, 0%, 5%),
+  content-background-color: hsl(0, 0%, 7.5%),
+  content-background-border: hsl(0, 0%, 15%),
   header_background: hsla(0, 0%, 7.5%, 0.75),
   // ~: с применением акцентного цвета:
   accent: hsl(var(--accent-hue), 100%, 70%),

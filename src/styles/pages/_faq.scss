@@ -33,6 +33,12 @@
     }
 
     filter: drop-shadow(0 2.5px 5px var(--shadow));
+    transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    &:hover {
+      background-color: var(--links_hover);
+    }
+
     font-weight: 800;
     margin-block: 10px;
     flex-wrap: nowrap;
@@ -49,7 +55,10 @@
     color: var(--summary_text);
     background-color: var(--summary_background);
     border-radius: $roundness;
-    border-bottom: solid 3px var(--summary_border);
+    border-left: solid 1px var(--summary_border);
+    border-right: solid 1px var(--summary_border);
+    border-top: solid 1px var(--summary_border);
+    border-bottom: solid 4px var(--summary_border);
     display: flex;
   }
 
@@ -57,9 +66,11 @@
     border-radius: $roundness;
     margin-block: 15px;
     background-color: var(--content-background-color);
+    border: solid 1px var(--content-background-border);
   }
 
   &-content {
+
     h2 {
       margin-inline: 20px;
       padding-top: 10px;
@@ -75,15 +86,7 @@
       margin-inline: 20px;
       margin-block: 15px;
 
-      &:first-child {
-        padding-top: 15px;
-        padding-bottom: 0;
-      }
 
-      &:last-child {
-        padding-top: 0;
-        padding-bottom: 15px;
-      }
     }
 
     @media screen and (max-width: 375px) {
@@ -171,9 +174,40 @@
     li {
       list-style-type: none;
       padding-inline: 15px;
-      padding-block: 5px;
-      margin-block: 5px;
+      padding-block: 10px;
+      padding-inline-start: 30px;
+      position: relative;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid var(--content-background-border);
+      }
+
+      &::before {
+        border-radius: $roundness;
+        content: "";
+        display: inline-block;
+        width: 3px;
+        height: 50%;
+        background-color: var(--accent);
+        position: absolute;
+        left: 15px;
+        opacity: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    code {
+      user-select: text;
+      display: block;
+      background-color: #303030;
+      margin-block: 10px;
+      font-family: 'JetBrains Mono', monospace;
+      line-height: 1.25;
+      font-size: 14px;
+      padding: 10px 15px;
       border-radius: $roundness;
+      color: #ffffff;
     }
 
     mark {
@@ -193,6 +227,8 @@
       .app {}
 
       .ui {}
+
+      .path {}
     }
   }
 }

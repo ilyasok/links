@@ -9,6 +9,15 @@
     padding: 10px 15px;
     border-radius: $roundness;
     margin-block: 10px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
     line-height: 1.5;
 
     a {

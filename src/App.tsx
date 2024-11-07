@@ -3,7 +3,7 @@ import {ConfigProvider} from "antd";
 import {AnimatePresence} from "framer-motion";
 import React, {lazy, Suspense, useEffect} from "react";
 import {Navigate, Route, Routes, useLocation} from "react-router-dom";
-
+import themeConfig from "./styles/ant_theme";
 const Links = lazy(() => import("./pages/linksPage"));
 const AboutPage = lazy(() => import("./pages/aboutPage"));
 const ChatRules = lazy(() => import("./pages/chatRules"));
@@ -36,38 +36,7 @@ export const App = () => {
   }, []);
 
   return (
-    <ConfigProvider
-      theme={{
-        components: {
-          Breadcrumb: {
-            linkHoverColor: "var(--accent)",
-            linkColor: "var(--text-color)",
-            itemColor: "#707070",
-            separatorColor: "var(--accent)",
-          },
-          Divider: {
-            colorSplit: "var(--summary_border)",
-            fontSizeLG: 14,
-          },
-          Slider: {
-            handleColor: "var(--accent)",
-            handleActiveColor: "var(--accent)",
-            trackBg: "var(--links_border)",
-            trackHoverBg: "var(--accent)",
-          },
-          Modal: {
-            contentBg: "var(--content-background-color)",
-            titleColor: "var(--text-color)",
-            headerBg: "transparent",
-          },
-        },
-        token: {
-          colorBgElevated: "var(--content-background-color)",
-          fontFamily: "Inter",
-          colorText: "var(--text-color)",
-        },
-      }}
-    >
+    <ConfigProvider theme={themeConfig}>
       <Suspense
         fallback={
           <div

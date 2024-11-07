@@ -6,7 +6,6 @@
 @use "styles/header";
 @use "styles/colors";
 @use "styles/themeChanger";
-
 @import "styles/variables";
 
 html,
@@ -21,12 +20,14 @@ body {
   font-weight: 350;
 }
 
+html {
+  scrollbar-width: none;
+}
+
 .main {
   margin-top: 64px;
   overflow: hidden;
-
 }
-
 
 .footer {
   opacity: 0.5;
@@ -47,9 +48,6 @@ body {
   visibility: visible;
 }
 
-
-
-
 .logo {
   &-container {
     margin-block: 15px;
@@ -62,7 +60,6 @@ body {
     margin: 0 auto -10px;
   }
 
-
   &-slogan {
     font-family: "Mulish", sans-serif;
     font-weight: 400;
@@ -72,7 +69,6 @@ body {
     margin-top: 10px;
   }
 }
-
 
 .visual-hidden {
   display: none;
@@ -155,14 +151,12 @@ body {
   }
 
   .chrome {
-
     background-color: #ceead6;
     color: #188038;
   }
 
   .firefox {
     background-color: #25003e;
-
     color: #fff;
   }
 
@@ -170,6 +164,4 @@ body {
     background-color: #f7604a;
     color: #fff;
   }
-
-
 }
