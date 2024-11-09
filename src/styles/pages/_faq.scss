@@ -106,43 +106,95 @@
     border-radius: $roundness;
     line-height: 1.75;
 
-    .fig_windows {
+    .figure {
+      &_windows {
 
-      &-white,
-      &-dark,
-      &-adobe {
-        border-radius: $roundness;
-        background-color: #202020;
-        margin-inline: auto;
-        width: fit-content;
-        max-width: 600px;
-        height: 100%;
-        margin-block: 10px;
+        &-light,
+        &-dark {
+          margin-inline: auto;
+          max-width: 600px;
 
-        img {
+
+
+          img {
+            border-radius: $roundness;
+            width: fit-content;
+            height: 100%;
+          }
+
+          .window {
+            &-header {
+              display: flex;
+              flex-direction: row;
+              padding: 5px 10px;
+              align-items: center;
+              justify-content: space-between;
+
+
+              figcaption {
+                font-size: 14px;
+                font-weight: 500;
+                font-family: "Segoe UI", "Arial", sans-serif;
+              }
+            }
+
+            &-controls {
+              display: flex;
+              flex-direction: row;
+              gap: 15px;
+
+              svg {
+                height: 12px;
+                width: 12px;
+              }
+            }
+          }
+        }
+
+        &-light {
           border-radius: $roundness;
-        }
-
-        figcaption {
-          font-size: 14px;
-          font-family: Arial, Helvetica, sans-serif;
-          padding: 5px 10px;
-        }
-      }
-
-      &-white {
-        border: 1px solid hsl(246, 10%, 75%);
-        background-color: hsl(246, 5%, 95%);
-
-        figcaption {
           color: black;
+          fill: black;
+          background-color: #eeeeee;
+        }
+
+        &-dark {
+          border-radius: $roundness;
+          color: white;
+          fill: white;
+          background-color: #303030;
         }
       }
 
-      &-dark {}
 
-      &-adobe {}
+      &_macos {
+
+        &-light,
+        &-dark {
+          margin-inline: auto;
+
+
+          img {
+            border-radius: $roundness;
+            width: fit-content;
+            max-width: 600px;
+            height: 100%;
+          }
+
+          .window {
+            &-header {}
+
+            &-controls {}
+          }
+
+          &-light {}
+
+          &-dark {}
+        }
+      }
     }
+
+
 
     .flexible {
       &-links {
