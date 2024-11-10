@@ -8,3 +8,7 @@ package.json
 yarn.lock
 qodana.yaml
 TODO.md
+eslint.config.js
+vite.config.ts
+.eslintrc.cjs
+.eslintrc
