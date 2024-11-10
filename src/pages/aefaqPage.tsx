@@ -20,8 +20,6 @@ import {AEWhereFind} from "./sections/aefaq/WhereFind";
 import {AdditionWarning} from "../components/Additions";
 import CopyMark from "../components/features/CopyMark";
 
-
-
 const AEFaQ = () => {
   useEffect(() => {
     CopyMark.enableAutoCopy();
@@ -72,12 +70,12 @@ const AEFaQ = () => {
               ["2", "#installproblems", "Проблемы с установкой"],
               ["3", "#fromnewbies", "Вопросы от новичков"],
               ["4", "#tips", "(не)Вредные советы"],
-              ["5", "#import", "Про импорт"],
-              ["6", "#interface", "Про интерфейс"],
-              ["7", "#perfomance", "Про производительность"],
-              ["8", "#actions", "Как и чем сделать то или то?"],
+              ["5", "#import", "Импорт"],
+              ["6", "#interface", "Интерфейс"],
+              ["7", "#perfomance", "Производительность"],
+              ["8", "#actions", "Как и чем?"],
               ["9", "#errors", "Ошибки и предупреждения"],
-              ["10", "#export", "Про экспорт"],
+              ["10", "#export", "Экспорт"],
               ["11", "#exportproblems", "Проблемы при экспорте"],
             ].map(([key, href, title]) => (
               <div key={key}>
