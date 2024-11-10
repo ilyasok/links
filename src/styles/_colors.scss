@@ -19,6 +19,7 @@ $light:( // ~: стандартные цвета:
   mark_border: hsl(var(--accent-hue), 90%, 85%),
   button_background: hsl(var(--accent-hue), 50%, 95%),
   button_border: hsl(var(--accent-hue), 50%, 85%),
+  header_border: hsla(var(--accent-hue), 35%, 80%, 0.5),
   // *: стили summary
   summary_background: hsl(var(--accent-hue), 41%, 97%),
   summary_border: hsl(var(--accent-hue), 35%, 80%),
@@ -57,6 +58,7 @@ $dark:( // ~: стандартные цвета:
   mark_text: hsl(var(--accent-hue), 72%, 90%),
   button_background: hsl(var(--accent-hue), 25%, 12.5%),
   button_border: hsl(var(--accent-hue), 35%, 25%),
+  header_border: hsla(var(--accent-hue), 30%, 30%, 0.5),
   // *: стили summary
   summary_background: hsl(var(--accent-hue), 50%, 5%),
   summary_border: hsl(var(--accent-hue), 35%, 25%),

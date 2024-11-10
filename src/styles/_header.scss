@@ -1,27 +1,30 @@
 @import "variables";
 
 .header {
-  backdrop-filter: blur(50px);
   z-index: 100;
   background-color: var(--header_background);
-  padding-inline: 20px;
+  margin-top: 10px;
+
+  padding-inline: 15px;
+  padding-block: 10px;
   align-items: center;
   justify-content: space-between;
   display: flex;
   position: fixed;
-  border-bottom-left-radius: $roundness*1.5;
-  border-bottom-right-radius: $roundness*1.5;
+  border-radius: $roundness*1.5;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 100vw;
-  max-width: 1400px;
-  height: 64px;
+  max-width: 1200px;
   transition:
     background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1),
-    box-shadow 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    box-shadow 0.5s cubic-bezier(0.075, 0.82, 0.165, 1),
+    border 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 
   svg {
+    width: 20px;
+    height: 20px;
     fill: var(--accent);
   }
 
@@ -36,19 +39,21 @@
     align-items: center;
     justify-content: center;
     gap: 5px;
+    max-height: max-content;
 
     .icon {
-      width: 24px;
-      height: 24px;
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
     }
 
     .logo {
       color: var(--accent);
-      font-family: "Mulish", sans-serif;
-      font-size: clamp(24px, 12vw, 28px);
+      font-family: "JetBrains Mono", monospace;
+      font-size: clamp(16px, 12vw, 20px);
       max-width: fit-content;
-      margin-inline: 5px;
-      font-weight: 700;
+      margin-inline: 3px;
+      font-weight: 800;
       font-style: italic;
     }
   }
