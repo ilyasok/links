@@ -1036,6 +1036,52 @@ iframe {
   font-style: italic;
 }
 
+table {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: var(--table_background);
+  border-radius: 10px;
+  border-collapse: collapse;
+  font-size: clamp(13px, 1.5vw, 15px);
+}
+
+@media (max-width: 350px) {
+  table {
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+  table td,
+  table th {
+    padding: 5px 3px;
+  }
+}
+td,
+th {
+  padding: 5px 10px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid var(--table_background-border);
+}
+
+td:first-child,
+th:first-child {
+  border-left: none;
+}
+
+td:last-child,
+th:last-child {
+  border-right: none;
+}
+
+tr:first-child th {
+  border-top: none;
+}
+
+tr:last-child td,
+tr:last-child th {
+  border-bottom: none;
+}
+
 :root {
   --accent-hue: 210;
   --header_shadow: hsla(0, 0%, 0%, 0.05);
@@ -1072,6 +1118,8 @@ iframe {
   --addition_danger-border: hsl(0, 80%, 75%);
   --addition_danger-text: hsl(0, 75%, 25%);
   --addition_danger-mark: hsl(0, 70%, 80%);
+  --table_background: hsl(0, 0%, 95%);
+  --table_background-border: hsl(0, 0%, 90%);
 }
 
 .dark {
@@ -1104,6 +1152,8 @@ iframe {
   --addition_danger-border: hsl(0, 70%, 35%);
   --addition_danger-text: hsl(0, 100%, 85%);
   --addition_danger-mark: hsl(0, 50%, 30%);
+  --table_background: hsl(0, 0%, 12.5%);
+  --table_background-border: hsl(0, 0%, 20%);
 }
 
 .theme-modal .title {

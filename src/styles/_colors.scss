@@ -39,7 +39,11 @@ $light:( // ~: стандартные цвета:
   addition_danger: hsl(0, 100%, 90%),
   addition_danger-border: hsl(0, 80%, 75%),
   addition_danger-text: hsl(0, 75%, 25%),
-  addition_danger-mark: hsl(0, 70%, 80%));
+  addition_danger-mark: hsl(0, 70%, 80%),
+  // *: стили таблицы
+  table_background: hsl(0, 0%, 95%),
+  table_background-border: hsl(0, 0%, 90%),
+);
 $dark:( // ~: стандартные цвета:  
   background-color: hsl(0, 0%, 0%),
   text-color: hsl(0, 0%, 100%),
@@ -73,7 +77,11 @@ $dark:( // ~: стандартные цвета:
   addition_danger: hsl(0, 50%, 25%),
   addition_danger-border: hsl(0, 70%, 35%),
   addition_danger-text: hsl(0, 100%, 85%),
-  addition_danger-mark: hsl(0, 50%, 30%));
+  addition_danger-mark: hsl(0, 50%, 30%),
+  // *: стили таблицы
+  table_background: hsl(0, 0%, 12.5%),
+  table_background-border: hsl(0, 0%, 20%),
+);
 
 .light {
 
