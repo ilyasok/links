@@ -3,7 +3,10 @@ import DetailsSummary from "../../../components/DetailsSummary";
 
 export const AETips: React.FC = () => {
   return (
-    <div className="faq-content" id="tips">
+    <div
+      className="faq-content"
+      id="tips"
+    >
       <DetailsSummary
         title="Как мне сделать историю изменений файлов и в случае чего - откатываться до
             предыдущих версий?"

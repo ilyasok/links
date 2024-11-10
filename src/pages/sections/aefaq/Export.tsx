@@ -3,7 +3,10 @@ import DetailsSummary from "../../../components/DetailsSummary";
 
 export const AEExport: React.FC = () => {
   return (
-    <div className="faq-content" id="export">
+    <div
+      className="faq-content"
+      id="export"
+    >
       <DetailsSummary title="Какие настройки рендера стоит установить для вывода в социальные сети?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
@@ -22,10 +25,7 @@ export const AEExport: React.FC = () => {
       <DetailsSummary title="Как я могу сохранить свой пресет для рендера файлов?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
-      <DetailsSummary
-        title="Почему из каждого угла советуют не использовать Media Encoder для рендера
-            композиций из After Effects?"
-      >
+      <DetailsSummary title="Почему из каждого угла советуют не использовать Media Encoder для рендера композиций из After Effects?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Как отрендерить композицию с отображением всех границ и путей движения?">

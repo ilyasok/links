@@ -3,7 +3,10 @@ import DetailsSummary from "../../../components/DetailsSummary";
 
 export const AEPerfomance: React.FC = () => {
   return (
-    <div className="faq-content" id="perfomance">
+    <div
+      className="faq-content"
+      id="perfomance"
+    >
       <DetailsSummary title="Почему у меня, б%@#ь, лагает е&#!%й After Effects, с$%а?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>

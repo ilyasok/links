@@ -3,7 +3,10 @@ import DetailsSummary from "../../../components/DetailsSummary";
 
 export const AEExportProblems: React.FC = () => {
   return (
-    <div className="faq-content" id="export-problems">
+    <div
+      className="faq-content"
+      id="export-problems"
+    >
       <DetailsSummary title="An unexpected error occurred while exporting a composition. Error code: 9988">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>

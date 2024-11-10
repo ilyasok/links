@@ -8,7 +8,10 @@ import DetailsSummary from "../../../components/DetailsSummary";
 import ContentSwitcher from "../../../components/features/OperatingSystemFilter";
 export const AEInstallProblems: React.FC = () => {
   return (
-    <div className="faq-content" id="install-problems">
+    <div
+      className="faq-content"
+      id="install-problems"
+    >
       <DetailsSummary title="Забыли положить инструкцию для установки рядом с файлами, куда что кидать?">
         <AdditionWarning>
           Прежде чем использовать <mark className="file">.aep</mark> и{" "}
@@ -18,25 +21,44 @@ export const AEInstallProblems: React.FC = () => {
           что они полностью распакованы и расположены в пути не длиннее 256 символов без
           кириллицы!
         </AdditionWarning>
-        <li>
-          Если в архиве находится файл <mark className="file">.aep</mark> или{" "}
-          <mark className="file">.mogrt</mark>, то такие файлы просто импортируются в ваш
-          проект с помощью <mark className="ui">File &gt; Import</mark> или{" "}
-          <mark className="key">Ctrl+I</mark> и никуда не устанавливаются.
-        </li>
-        <li>
-          Если в архиве находится <mark className="file">.atom</mark>, то такие файлы
-          устанавливаются путём <mark>drag&apos;n&apos;drop</mark> в окно расширения{" "}
-          <mark className="plugin">AtomX</mark>.
-        </li>
-        <li>
-          Если в архиве находится <mark className="file">.mbr</mark>, то такие файлы
-          устанавливаются путём <mark>drag&apos;n&apos;drop</mark> в окно расширения{" "}
-          <mark className="plugin">Motion Bro</mark>.
-        </li>
+        <ul>
+          <li>
+            Если в архиве находится файл <mark className="file">.aep</mark> или{" "}
+            <mark className="file">.mogrt</mark>, то такие файлы просто импортируются в
+            ваш проект с помощью <mark className="ui">File &gt; Import</mark> или{" "}
+            <mark className="key">Ctrl+I</mark> и никуда не устанавливаются.
+          </li>
+          <li>
+            Если в архиве находится <mark className="file">.atom</mark>, то такие файлы
+            устанавливаются путём <mark>drag&apos;n&apos;drop</mark> в окно расширения{" "}
+            <mark className="plugin">AtomX</mark>.
+          </li>
+          <li>
+            Если в архиве находится <mark className="file">.mbr</mark>, то такие файлы
+            устанавливаются путём <mark>drag&apos;n&apos;drop</mark> в окно расширения{" "}
+            <mark className="plugin">Motion Bro</mark>.
+          </li>
+        </ul>
         <ContentSwitcher
           windowsContent={
             <div>
+              <ul>
+                <li>
+                  Если в архиве или в записи находится файл{" "}
+                  <mark className="file">.exe</mark>, то обычно в нём содержится
+                  установщик. Если в записи указано, что данный установщик является
+                  репаком - в таком случае после его установки плагин будет уже
+                  активирован, никаких лишних телодвижений после установки делать не надо.
+                </li>
+              </ul>
+              <AdditionWarning>
+                При использовании установщиков убедитесь в том, что у вас{" "}
+                <mark className="app">After Effects</mark> установлен в стандартном
+                расположении <mark className="path">C:\Program Files\Adobe\</mark>, не на
+                другом месте или разделе. В противном случае устанавливаемый плагин
+                установится в другом месте и не будет отображаться в вашем{" "}
+                <mark className="app">After Effects</mark>.
+              </AdditionWarning>
               <ul>
                 <li>
                   Если в архиве находится файл <mark className="file">.aex</mark>, то
@@ -60,28 +82,30 @@ export const AEInstallProblems: React.FC = () => {
                     C:\Program Files\Adobe\Adobe After Effects 20XX\Support Files\Presets
                   </mark>
                 </li>
-                <AdditionInfo>
-                  В папке с пресетами вы можете создать свою собственную папку со своим
-                  именем или расположить скачанные пресеты в уже существующие.
-                </AdditionInfo>
               </ul>
+              <AdditionInfo>
+                В папке с пресетами вы можете создать свою собственную папку со своим
+                именем или расположить скачанные пресеты в уже существующие.
+              </AdditionInfo>
               <ul>
                 <li>
                   Если в архиве находится файл <mark className="file">.jsx</mark>, то
-                  такие скрипты распаковываются в стандартную папку скриптов:{" "}
+                  такие скрипты распаковываются в стандартную папку скриптов -{" "}
                   <mark className="path">
                     C:\Program Files\Adobe\Adobe After Effects 20XX\Support Files\Scripts
                   </mark>
-                  .
+                  . После установки скрипты такого формата должны появиться в{" "}
+                  <mark className="ui">File &gt; Scripts</mark>.
                 </li>
                 <li>
                   Если в архиве находится <mark className="file">.jsxbin</mark> файл, то
-                  такие скрипты распаковываются в стандартную папку Script UI Panels:{" "}
+                  такие скрипты распаковываются в стандартную папку Script UI Panels -{" "}
                   <mark className="path">
                     C:\Program Files\Adobe\Adobe After Effects 20XX\Support
                     Files\Scripts\Script UI Panels
                   </mark>
-                  .
+                  . После установки скрипты такого формата должны появиться в{" "}
+                  <mark className="ui">Window</mark> в самом конце списка.
                 </li>
                 <li>
                   Если в архиве находится файл <mark className="file">.zxp</mark>, то
@@ -181,11 +205,11 @@ export const AEInstallProblems: React.FC = () => {
                     ~/Library/Applications/Adobe After Effects 20XX/Presets
                   </mark>
                 </li>
-                <AdditionInfo>
-                  В папке с пресетами вы можете создать свою собственную папку со своим
-                  именем или расположить скачанные пресеты в уже существующие.
-                </AdditionInfo>
               </ul>
+              <AdditionInfo>
+                В папке с пресетами вы можете создать свою собственную папку со своим
+                именем или расположить скачанные пресеты в уже существующие.
+              </AdditionInfo>
               <ul>
                 <li>
                   Если в архиве находится файл <mark className="file">.jsx</mark>, то
@@ -281,6 +305,11 @@ export const AEInstallProblems: React.FC = () => {
             </div>
           }
         />
+        <AdditionInfo>
+          Если у вас остались вопросы или до сих пор сталкиваетесь с проблемами при
+          установке - обратитесь к нам в{" "}
+          <a href="https://t.me/joinchat/F1DdXtG9LephYWUy">AEChat</a>.
+        </AdditionInfo>
       </DetailsSummary>
       <DetailsSummary title="В Telegram-записи лежат файлы .part1, .part2 и дальше по списку. Что это такое и как такие файлы корректно распаковать?">
         <p>
@@ -291,6 +320,10 @@ export const AEInstallProblems: React.FC = () => {
           распаковать нужный архив - нужно загрузить все файлы на ваш компьютер, а затем
           распаковать с помощью программ-архиваторов.
         </p>
+        <AdditionWarning>
+          Если вы не распакуете архив полностью, то у вас могут быть проблемы с установкой
+          или использованием в программах.
+        </AdditionWarning>
         <ContentSwitcher
           windowsContent={
             <div>
@@ -352,7 +385,7 @@ export const AEInstallProblems: React.FC = () => {
                 ниже.
               </p>
               <div style={{display: "flex", flexWrap: "wrap", justifyContent: "center"}}>
-                <figure className="fig_windows-white">
+                <figure className="figure_windows-light">
                   <figcaption>Распаковка с помощью открытого окна keka</figcaption>
                   <img
                     loading="lazy"
@@ -360,7 +393,7 @@ export const AEInstallProblems: React.FC = () => {
                     alt="Распаковка с помощью открытого окна keka"
                   />
                 </figure>
-                <figure className="fig_windows-white">
+                <figure className="figure_windows-light">
                   <figcaption>Распаковка через контекстное меню</figcaption>
                   <img
                     loading="lazy"
@@ -368,7 +401,7 @@ export const AEInstallProblems: React.FC = () => {
                     alt="Распаковка через контекстное меню"
                   />
                 </figure>
-                <figure className="fig_windows-white">
+                <figure className="figure_windows-light">
                   <figcaption>Распаковка через иконку keka в Dock-меню</figcaption>
                   <img
                     loading="lazy"
@@ -395,37 +428,282 @@ export const AEInstallProblems: React.FC = () => {
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Этот проект содержит ошибки выражений или This project contains an expression error">
-        <p>{/* fixme: написать!! */}</p>
+        <p>
+          Чаще всего это происходит из-за двух факторов: язык программы и язык
+          программирования, указываемый в настройках проекта.
+        </p>
+        <p>
+          Если у вас установлен <mark className="app">After Effects</mark> на языке,
+          отличном от английского - попробуйте сменить язык на английский. Делается это
+          достаточно просто.
+        </p>
+        <ContentSwitcher
+          windowsContent={
+            <div>
+              <p>
+                Для быстрой смены языка программы на английский - просто создайте пустой
+                текстовый документ <mark className="file">ae_force_english.txt</mark>. В
+                текстовый файл ничего прописывать не надо. Созданный пустой текстовый
+                документ переместите в папку{" "}
+                <mark className="path">%USERPROFILE%/Documents</mark>, а затем
+                перезапустите <mark className="app">After Effects</mark>. После этого у
+                вас программа станет на английском языке.
+              </p>
+              <p>
+                Создать пустой текстовый документ можно с помощью команды ниже в командной
+                строке Windows. Через <mark className="app">PowerShell</mark> эта команда
+                не будет работать, используйте <mark className="app">cmd</mark>.
+              </p>
+              <code>
+                echo.{">"}&quot;%USERPROFILE%\Documents\ae_force_english.txt&quot;
+              </code>
+              <AdditionDanger>
+                После такого способа смены языка названия стандартных пресетов и рабочих
+                областей останутся на русском языке. Их можно будет переименовать вручную
+                или удалить, а затем поставить поверх дистрибутив{" "}
+                <mark className="app">After Effects</mark> с указанием английского языка в
+                установщике. Ну или просто переустановить программу сразу на русский язык.
+              </AdditionDanger>
+            </div>
+          }
+          macContent={
+            <div>
+              <p>{/* fixme: написать */}</p>
+            </div>
+          }
+        />
+        <p>
+          Если смена языка программы вам не помогло, попробуйте сменить язык
+          программирования для выражений. Для этого откройте ваш проект и откройте{" "}
+          <mark className="ui">Project Manager</mark> с помощью комбинации клавиш{" "}
+          <mark className="key">Ctrl + Alt + Shift + K</mark>.
+        </p>
       </DetailsSummary>
       <DetailsSummary title="Error: Extension Manager init failed, status = -193! A required resource is missing. Please relaunch the Creative Cloud app and try again">
-        <p>{/* fixme: написать!! */}</p>
+        <p>
+          На вашем устройстве отсутствует программа Adobe Creative Cloud, но не спешите
+          его устанавливать, особенно если используете репаки от <mark>KpoJluK</mark> или{" "}
+          <mark>m0nkrus</mark>.
+        </p>
+        <p>
+          Если вы пытаетесь установить расширение с помощью{" "}
+          <a href="https://zxpinstaller.com/">ZXP Installer от ELEMENTS Storage Media</a>,
+          то откажитесь от него в пользу{" "}
+          <a href="https://aescripts.com/learn/zxp-installer/">
+            ZXP Installer от aescripts
+          </a>{" "}
+          или ручной распаковки <mark className="file">.zxp</mark> файла в нужное место.
+        </p>
       </DetailsSummary>
-      <DetailsSummary title=" В названиях установщиков плагинов увидел обозначения. Для каких программ они предназначены?">
-        <p>{/* fixme: написать!! */}</p>
+      <DetailsSummary title="В названиях установщиков плагинов увидел непонятные обозначения. Для каких программ они предназначены?">
+        <p>
+          Обычно в названии установочных файлов указывается для каких программ
+          устанавливается плагин.
+        </p>
+        <ul>
+          <li>
+            <mark>AE</mark>, <mark>PR</mark>, <mark>PS</mark> <mark>Adobe</mark> - такие
+            плагины устанавливаются для программ от Adobe. Иногда, если в названии имеется
+            суффикс <mark>AE</mark>, то он может устанавливаться и для{" "}
+            <mark className="app">After Effects</mark> и для{" "}
+            <mark className="app">Premiere Pro</mark>. Суффикс <mark>PS</mark> означает,
+            что плагин будет установлен для <mark className="app">Photoshop</mark>.
+          </li>
+          <li>
+            <mark>OFX</mark> - такие плагины устанавливаются для программ с поддержкой
+            плагинов формата OpenFX. К ним относятся{" "}
+            <mark className="app">Davinci Resolve</mark>,{" "}
+            <mark className="app">Vegas Pro</mark>, <mark className="app">Nuke</mark> и{" "}
+            <a href="https://ru.wikipedia.org/wiki/OpenFX#%D0%A5%D0%BE%D1%81%D1%82%D1%8B">
+              далее по списку
+            </a>
+            .
+          </li>
+          <li>
+            <mark>Standalone</mark> - плагин ни от кого не зависит и запускается как
+            обычное приложение. Таких плагинов мало, один из таких является{" "}
+            <mark className="plugin">Mocha Pro</mark>.
+          </li>
+          <li>
+            <mark>CE</mark> - маркировка от группы релизеров Team V.R., которая
+            расшифровывается как <mark>Corporate Edition</mark>. Таким образом они
+            помечают, что такие дистрибутивы достаточно просто установить без всяких
+            лишних действий по активации плагинов. То есть это для них как синоним к слову
+            &quot;репак&quot;.
+          </li>
+        </ul>
       </DetailsSummary>
-      <DetailsSummary title="Система Windows защитила ваш компьютер или как отключить Windows Smartscreen?">
-        <p>{/* fixme: написать!! */}</p>
+      <DetailsSummary title='"Система Windows защитила ваш компьютер" или как отключить Windows Smartscreen?'>
+        <p>
+          <mark className="app">Windows Smartscreen</mark> - это некий фильтр программ,
+          скачанных с интернета и часто он помечает экзешники как подозрительные. Поэтому
+          и приостанавливает запуск исполняемых файлов. Чтобы запустить такой файл, вам
+          нужно нажать на <mark className="ui">Подробнее</mark> и на{" "}
+          <mark className="ui">Выполнить в любом случае</mark>.
+        </p>
+        <p>
+          Но бывают такие случаи, что после нажатия на{" "}
+          <mark className="ui">Подробнее</mark> ничего не выводится. В таком случае вам
+          нужно отключить <mark className="app">Windows Smartscreen</mark> в параметрах{" "}
+          <mark className="app">Защитника Windows</mark>.
+        </p>
+        {/* fixme: дописать */}
       </DetailsSummary>
-      <DetailsSummary title='Скачал репак от KpoJluK, а мне выдают "Не удаётся найти helper.exe" или как отключить Windows Defender?'>
-        <p>{/* fixme: написать!! */}</p>
+      <DetailsSummary title='"Не удаётся найти helper.exe", "Обнаружены угрозы" или как отключить Windows Defender?'>
+        <p>
+          Когда вы встаёте на путь пиратства, нередко можно заметить постоянные жалобы на
+          то, что встроенный антивирус в Windows удаляет файлы, мол там вирус. Из-за этого
+          у пользователей возникает паника и фальшивые мнения о том, что в "вот в
+          складе/аетемпе вирусы водятся!!1!" и всякое в таком духе.
+        </p>
+        <p>
+          Для того, чтобы нормально установить программы, плагины или вас бесит ложное срабатывание
+          встроенного антивируса - вам следует отключить{" "}
+          <mark className="app">Windows Defender</mark> на время. Ну или навсегда, если
+          доверяете своей голове и источникам, откуда вы ставите софт.
+        </p>
+        <p></p>
       </DetailsSummary>
       <DetailsSummary title='Скачал репак от KpoJluK, а мне пишут "Некоторые установочные файлы были повреждены"'>
-        <p>{/* fixme: написать!! */}</p>
+        <p>
+          Вы не докачали <mark className="file">.exe</mark> файл до конца или прервали его
+          скачивание. В таком случае перекачайте файл и попробуйте открыть его еще раз.
+          Иногда при скачивании репака или при распаковке архива ваш антивирус может
+          вставить палки в колёса. Поэтому при скачивании, распаковки или открытии репака
+          вам нужно отключить на время ваш антивирус.
+        </p>
+        <AdditionInfo>
+          Если вы полностью скачали файл с канала{" "}
+          <a href="https://t.me/+Qd9xu7A4TeIwNzY6">склад стройматериалов</a> и вы уверены,
+          что проблема не на вашей стороне - сообщите об этом в комментариях под постом.
+        </AdditionInfo>
       </DetailsSummary>
       <DetailsSummary title='Скачал репак от KpoJluK, а мне утверждают, что "rsload.net заблокирован в hosts"'>
-        <p>{/* fixme: написать!! */}</p>
+        <p>
+          Такое бывает, если в вашей системе отсутствует файл{" "}
+          <mark className="file">hosts</mark>. Для этого вам нужно создать пустой
+          текстовый документ с названием <mark className="file">hosts</mark> без
+          расширения <mark className="file">.txt</mark>. Затем нужно открыть этот файл и
+          вписать строки, в зависимости от вашей системы{" "}
+          <a href="https://support.microsoft.com/ru-ru/topic/%D0%BA%D0%B0%D0%BA-%D0%B2%D0%BE%D1%81%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C-%D1%81%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B8%D0%BC%D0%BE%D0%B5-%D1%84%D0%B0%D0%B9%D0%BB%D0%B0-hosts-%D0%BF%D0%BE-%D1%83%D0%BC%D0%BE%D0%BB%D1%87%D0%B0%D0%BD%D0%B8%D1%8E-c2a43f9d-e176-c6f3-e4ef-3500277a6dae">
+            (подробнее на сайте Microsoft)
+          </a>
+          .
+        </p>
+        <p>
+          Как только вы создали файл <mark className="file">hosts</mark> и внесли нужные
+          строки - вам нужно переместить этот файл в путь{" "}
+          <mark className="path">%WinDir%\System32\Drivers\etc</mark>. После перемещения
+          попробуйте открыть репак снова и начать установку. Такая ошибка должна
+          исчезнуть.
+        </p>
       </DetailsSummary>
-      <DetailsSummary title='Перед установой программы с помощью репака от KpoJluK, я забыл убрал галку с "Реклама". Что делать и как её убрать потом?'>
+      <DetailsSummary title='Перед установой программы с помощью репака от KpoJluK, я забыл убрать галку с пункта "Реклама". Что делать и как избавиться от его последствий?'>
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Правда ли, что в репаках Кролика, Монкруса и остальных релизеров водятся вирусы?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>
+          Я всё ещё не понимаю, откуда идут байки про вирусы. Наверное от тех людей, кто
+          скачивал из сомнительных источников или попался на фейковый &quot;репак&quot;, в
+          которых вместе с оригиналом добавлялся неприятный бонус.
+        </p>
+        <p>
+          Если у вас включилась паника при виде срабатывания антивируса, мол &quot;в вашей
+          системе нашёлся вирус!&quot; - не спешите орать что в &quot;репаках от
+          кролика/монкруса&quot; реально водятся зловреды. Обычно антивирусы ложно
+          срабатывают на замену оригинальных файлов, чтобы подсунуть псевдо-лицензию и не
+          платить за софт и помечают такое действие как{" "}
+          <mark>HackTool:Win32/Crack!MTB</mark>. Также антивирус может сожрать файл{" "}
+          <mark className="file">helper.exe</mark>, который распаковывает дистрибутивы
+          Adobe из-за того, что в нём находится галочка &quot;реклама&quot; и помечает это
+          как за <mark>Contrebrew.A!ml</mark>.
+        </p>
+        <p>
+          Логичней всего проверять вашу систему на вирусы уже после установки программ, а
+          не во время. И не паниковать лишний раз и не распускать слухи.
+        </p>
+        <AdditionDanger>
+          Используя пиратские версии ПО - вы сами принимаете на себя риск и вы сами
+          выбираете, ставить ли &quot;репаки&quot; или нет.
+        </AdditionDanger>
       </DetailsSummary>
       <DetailsSummary title="Не доверяю Кролику, Монкрусу и впринципе всем репакам, но установить программы от Adobe хочу. Какие есть ещё варианты?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Установил After Effects и Media Encoder, но они не видят друг друга и не подключатся. Как это исправить?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>
+          Функция Dynamic Link позволяет синхронизировать композиции из{" "}
+          <mark className="app">After Effects</mark> и очередь рендера в{" "}
+          <mark className="app">Media Encoder</mark>. Но не всегда их получается
+          подружить.
+        </p>
+        <p>
+          Иногда <mark className="app">After Effects</mark> при попытке отправить
+          композицию на очередь рендера в <mark className="app">Media Encoder</mark>{" "}
+          выдаёт просьбу мол &quot;чувак, установи Media Encoder, а то ты его не
+          установил&quot;, хотя эта программа вроде как установлена. Для того, чтобы
+          программы видели друг друга - вам нужно соблюсти два условия:
+        </p>
+        <ul>
+          <li>
+            Убедитесь в том, что вы установили <mark className="app">After Effects</mark>{" "}
+            и <mark className="app">Media Encoder</mark> одного &quot;года&quot;. Если вы,
+            например, установили <mark className="app">After Effects 2022</mark> и{" "}
+            <mark className="app">Media Encoder 2019</mark> - они никогда не увидят друг
+            друга, так как программы жёстко привязаны к &quot;году&quot;.
+          </li>
+          <li>
+            Если вы установили <mark className="app">After Effects</mark> и{" "}
+            <mark className="app">Media Encoder</mark> одного года, но они всё ещё не
+            видят друг друга - убедитесь в том, что вы установили обе программы в место по
+            умолчанию, не на другом разделе, отличном от <mark className="path">C:\</mark>
+            .
+          </li>
+        </ul>
+        <AdditionInfo>
+          Если у вас мало места на системном диске или вы хотите перенести программы от
+          Adobe на другой раздел - воспользуйтесь функцией символьных ссылок.
+          {/* fixme: объяснить про symlink */}
+        </AdditionInfo>
+        <p>
+          Обычно при соблюдении этих двух условий программы видят друг друга и спокойно
+          отправляются композиции из <mark className="app">After Effects</mark> в{" "}
+          <mark className="app">Media Encoder</mark>.
+        </p>
+        <p>
+          Также в редких случаях при использовании патча GenP функция Dynamic Link может
+          работать криво. Поэтому попробуйте удалить ваши программы Adobe и установить
+          репаки от KpoJluK или m0nkrus.
+        </p>
+      </DetailsSummary>
+      <DetailsSummary title='При установке любого пакета Red Giant выскакивает "This installer application has been moved. It must be run from its original folder containing a packages directory. The installer will now exit."'>
+        <p>
+          Вы пытаетесь установить плагины <mark className="plugin">Red Giant</mark>, не
+          распаковав архив полностью. При использовании стандартного просмотрщика архивов
+          в Windows 10/11 и при открытии любого <mark className="file">.exe</mark> файла -
+          остальные файлы-зависимости не будут распакованы, поэтому и установщик не видит
+          файлы для распаковки.
+        </p>
+        <p>
+          Чтобы установить плагины от Red Giant корректно - вам нужно распаковать
+          полностью архив или использовать{" "}
+          <a
+            href="https://www.rarlab.com/download.htm"
+            title="Официальный сайт WinRAR"
+          >
+            WinRAR
+          </a>
+          .{" "}
+          <a
+            href="https://www.rarlab.com/download.htm"
+            title="Официальный сайт WinRAR"
+          >
+            WinRAR
+          </a>{" "}
+          умеет распаковывать весь архив в временную папку при открытии{" "}
+          <mark className="file">.exe</mark>, <mark className="file">.msi</mark> и
+          подобных установочных файлов.
+        </p>
       </DetailsSummary>
     </div>
   );

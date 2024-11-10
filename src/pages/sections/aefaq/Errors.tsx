@@ -1,7 +1,8 @@
 import React from "react";
 import DetailsSummary from "../../../components/DetailsSummary";
 import {AdditionInfo} from "../../../components/Additions";
-import ImageFigure from "../../../components/ImageFigure";
+import { ImageFigure } from "../../../components/ContentFigure";
+
 export const AEErrors: React.FC = () => (
   <div
     className="faq-content"
@@ -91,19 +92,19 @@ export const AEErrors: React.FC = () => (
           вы можете настроить в настройках 3D-рендера.
           {/* fixme: сделать карусель из картинок!!1! */}
           <ImageFigure
-            styleClass="fig_windows-white"
+            styleClass="figure_windows-light"
             imgSrc="images/aftereffects/composition_settings_3drenderer_cinema4d.png"
             imgTitle="Composition Settings"
             caption="Composition Settings"
           />
           <ImageFigure
-            styleClass="fig_windows-white"
+            styleClass="figure_windows-light"
             imgSrc="images/aftereffects/cinema4d_renderer_options.png"
             imgTitle="Choose CINEMA 4D Installation"
             caption="Choose CINEMA 4D Installation"
           />
           <ImageFigure
-            styleClass="fig_windows-white"
+            styleClass="figure_windows-light"
             imgSrc="images/aftereffects/choose_cinema4d_installation.png"
             imgTitle="Choose CINEMA 4D Installation"
             caption="Choose CINEMA 4D Installation"

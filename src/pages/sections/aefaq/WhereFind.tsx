@@ -6,7 +6,8 @@ import {
 } from "../../../components/Additions";
 import DetailsSummary from "../../../components/DetailsSummary";
 import {FlexibleLinks} from "../../../components/FlexibleLinksFaQ";
-import ImageFigure from "../../../components/ImageFigure";
+import { ImageFigure } from "../../../components/ContentFigure";
+
 
 export const AEWhereFind: React.FC = () => {
   return (
@@ -43,10 +44,12 @@ export const AEWhereFind: React.FC = () => {
             которые в дальнейшем можно использовать в Ваших композициях{" "}
             <mark className="app">After Effects</mark>.
           </li>
-          <AdditionWarning>
-            Контент, предоставленный по ссылкам выше, не должен использоваться в
-            коммерческих целях!
-          </AdditionWarning>
+        </ul>
+        <AdditionWarning>
+          Контент, предоставленный по ссылкам выше, не должен использоваться в
+          коммерческих целях!
+        </AdditionWarning>
+        <ul>
           <li>
             <a
               href="https://t.me/+Qd9xu7A4TeIwNzY6"
@@ -72,8 +75,8 @@ export const AEWhereFind: React.FC = () => {
         </ul>
         <AdditionInfo>
           Если у вас возникли проблемы с установкой программ или плагинов - прочтите
-          раздел <a href="#installproblems">Проблемы с установкой</a> или обратитесь к
-          нам в <a href="https://t.me/joinchat/F1DdXtG9LephYWUy">AEChat</a>.
+          раздел <a href="#installproblems">Проблемы с установкой</a> или обратитесь к нам
+          в <a href="https://t.me/joinchat/F1DdXtG9LephYWUy">AEChat</a>.
         </AdditionInfo>
         <AdditionWarning>
           При установке программ с пометкой <mark>репак от кролика</mark> из{" "}
@@ -445,7 +448,7 @@ export const AEWhereFind: React.FC = () => {
           изображение с помощью проводника или <mark className="key">Ctrl + V</mark>.
         </p>
         <ImageFigure
-          styleClass="fig_windows-white"
+          styleClass="figure_windows-light"
           imgSrc="images/likefont/likefont_mainpage.png"
           imgTitle="Главная страница LikeFont"
           caption="Главная страница LikeFont"
@@ -461,7 +464,7 @@ export const AEWhereFind: React.FC = () => {
           весь контент сливается. Что же делать?
         </p>
         <ImageFigure
-          styleClass="fig_windows-white"
+          styleClass="figure_windows-light"
           imgSrc="images/likefont/aefaq_likefont_example.png"
           imgTitle="Пример плохого исходника"
           caption="Пример плохого исходника"
@@ -474,7 +477,7 @@ export const AEWhereFind: React.FC = () => {
           отзеркаливания и наклона изображения при необходимости.
         </p>
         <ImageFigure
-          styleClass="fig_windows-white"
+          styleClass="figure_windows-light"
           imgSrc="images/likefont/aefaq_likefont_fixed.png"
           imgTitle="Изображение после обработки средствами сайта"
           caption="Изображение после обработки средствами сайта"
@@ -485,7 +488,7 @@ export const AEWhereFind: React.FC = () => {
           точности распознавания.
         </p>
         <ImageFigure
-          styleClass="fig_windows-white"
+          styleClass="figure_windows-light"
           imgSrc="images/likefont/aefaq_likefont_recognition.png"
           imgTitle="Изображения к которым нужно вписать букву"
           caption="Изображения к которым нужно вписать букву"
@@ -500,7 +503,7 @@ export const AEWhereFind: React.FC = () => {
           Чем больше вы впишете букв, тем лучше будет результат распознавания шрифта!
         </AdditionInfo>
         <ImageFigure
-          styleClass="fig_windows-white"
+          styleClass="figure_windows-light"
           imgSrc="images/likefont/aefaq_likefont_result.png"
           imgTitle="Результат распознавания"
           caption="Результат распознавания"
