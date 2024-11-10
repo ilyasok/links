@@ -70,7 +70,6 @@
   }
 
   &-content {
-
     h2 {
       margin-inline: 20px;
       padding-top: 10px;
@@ -85,116 +84,16 @@
     p {
       margin-inline: 20px;
       margin-block: 15px;
-
-
     }
 
     @media screen and (max-width: 375px) {
       hyphens: auto;
     }
 
-    video,
-    iframe {
-      max-width: 1000px;
-      width: 100%;
-      height: calc(100vw * 9 / 16);
-      max-height: 500px;
-      border-radius: $roundness*1.5;
-      border: none;
-    }
+
 
     border-radius: $roundness;
     line-height: 1.75;
-
-    .figure {
-      &_windows {
-
-        &-light,
-        &-dark {
-          margin-inline: auto;
-          max-width: 600px;
-
-
-
-          img {
-            border-radius: $roundness;
-            width: fit-content;
-            height: 100%;
-          }
-
-          .window {
-            &-header {
-              display: flex;
-              flex-direction: row;
-              padding: 5px 10px;
-              align-items: center;
-              justify-content: space-between;
-
-
-              figcaption {
-                font-size: 14px;
-                font-weight: 500;
-                font-family: "Segoe UI", "Arial", sans-serif;
-              }
-            }
-
-            &-controls {
-              display: flex;
-              flex-direction: row;
-              gap: 15px;
-
-              svg {
-                height: 12px;
-                width: 12px;
-              }
-            }
-          }
-        }
-
-        &-light {
-          border-radius: $roundness;
-          color: black;
-          fill: black;
-          background-color: #eeeeee;
-        }
-
-        &-dark {
-          border-radius: $roundness;
-          color: white;
-          fill: white;
-          background-color: #303030;
-        }
-      }
-
-
-      &_macos {
-
-        &-light,
-        &-dark {
-          margin-inline: auto;
-
-
-          img {
-            border-radius: $roundness;
-            width: fit-content;
-            max-width: 600px;
-            height: 100%;
-          }
-
-          .window {
-            &-header {}
-
-            &-controls {}
-          }
-
-          &-light {}
-
-          &-dark {}
-        }
-      }
-    }
-
-
 
     .flexible {
       &-links {

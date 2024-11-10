@@ -674,98 +674,6 @@ textarea {
             hyphens: auto;
   }
 }
-.faq-content video,
-.faq-content iframe {
-  max-width: 1000px;
-  width: 100%;
-  height: 56.25vw;
-  max-height: 500px;
-  border-radius: 15px;
-  border: none;
-}
-.faq-content .figure_windows-light, .faq-content .figure_windows-dark {
-  margin-inline: auto;
-  max-width: 600px;
-}
-.faq-content .figure_windows-light img, .faq-content .figure_windows-dark img {
-  border-radius: 10px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 100%;
-}
-.faq-content .figure_windows-light .window-header, .faq-content .figure_windows-dark .window-header {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-     -moz-box-orient: horizontal;
-     -moz-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  padding: 5px 10px;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-     -moz-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.faq-content .figure_windows-light .window-header figcaption, .faq-content .figure_windows-dark .window-header figcaption {
-  font-size: 14px;
-  font-weight: 500;
-  font-family: "Segoe UI", "Arial", sans-serif;
-}
-.faq-content .figure_windows-light .window-controls, .faq-content .figure_windows-dark .window-controls {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-     -moz-box-orient: horizontal;
-     -moz-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  gap: 15px;
-}
-.faq-content .figure_windows-light .window-controls svg, .faq-content .figure_windows-dark .window-controls svg {
-  height: 12px;
-  width: 12px;
-}
-.faq-content .figure_windows-light {
-  border-radius: 10px;
-  color: black;
-  fill: black;
-  background-color: #eeeeee;
-}
-.faq-content .figure_windows-dark {
-  border-radius: 10px;
-  color: white;
-  fill: white;
-  background-color: #303030;
-}
-.faq-content .figure_macos-light, .faq-content .figure_macos-dark {
-  margin-inline: auto;
-}
-.faq-content .figure_macos-light img, .faq-content .figure_macos-dark img {
-  border-radius: 10px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  max-width: 600px;
-  height: 100%;
-}
 .faq-content .flexible-links {
   display: -webkit-box;
   display: -webkit-flex;
@@ -949,6 +857,100 @@ textarea {
   background-color: var(--addition_danger-mark);
   border: 1px solid var(--addition_danger-border);
   color: var(--addition_danger-text);
+}
+
+.figure_windows-light, .figure_windows-dark {
+  margin-inline: auto;
+  max-width: 600px;
+}
+.figure_windows-light img, .figure_windows-dark img {
+  border-radius: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 100%;
+}
+.figure_windows-light .window-header, .figure_windows-dark .window-header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 5px 10px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.figure_windows-light .window-header figcaption, .figure_windows-dark .window-header figcaption {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Segoe UI", "Arial", sans-serif;
+}
+.figure_windows-light .window-controls, .figure_windows-dark .window-controls {
+  padding-inline: 15px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 20px;
+}
+.figure_windows-light .window-controls svg, .figure_windows-dark .window-controls svg {
+  height: 12px;
+  width: 12px;
+}
+.figure_windows-light {
+  border-radius: 10px;
+  color: black;
+  fill: black;
+  background-color: #eeeeee;
+}
+.figure_windows-dark {
+  border-radius: 10px;
+  color: white;
+  fill: white;
+  background-color: #303030;
+}
+.figure_macos-light, .figure_macos-dark {
+  margin-inline: auto;
+}
+.figure_macos-light img, .figure_macos-dark img {
+  border-radius: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 600px;
+  height: 100%;
+}
+video,
+iframe {
+  max-width: 1000px;
+  width: 100%;
+  height: 56.25vw;
+  max-height: 500px;
+  border-radius: 15px;
+  border: none;
 }
 
 .header {
