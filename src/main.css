@@ -282,13 +282,6 @@ textarea {
 }
 
 @font-face {
-  font-family: "Anta";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("./fonts/ttf/Anta/Anta-Regular.ttf") format("truetype");
-}
-@font-face {
   font-family: "Inter";
   font-style: normal;
   font-weight: 100;
@@ -451,6 +444,114 @@ textarea {
   font-style: italic;
   font-weight: 900;
   src: url("./fonts/ttf/Mulish/static/Mulish-BlackItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 100;
+  src: url("./fonts/ttf/Jetbrains Mono/static/JetBrainsMono-ExtraLight.ttf") format("truetype");
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: italic;
+  font-weight: 100;
+  src: url("./fonts/ttf/Jetbrains Mono/static/JetBrainsMono-ExtraLightItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 200;
+  src: url("./fonts/ttf/Jetbrains Mono/static/JetBrainsMono-Thin.ttf") format("truetype");
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: italic;
+  font-weight: 200;
+  src: url("./fonts/ttf/Jetbrains Mono/static/JetBrainsMono-ThinItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 300;
+  src: url("./fonts/ttf/Jetbrains Mono/static/JetBrainsMono-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: italic;
+  font-weight: 300;
+  src: url("./fonts/ttf/Jetbrains Mono/static/JetBrainsMono-LightItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/ttf/Jetbrains Mono/static/JetBrainsMono-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: italic;
+  font-weight: 400;
+  src: url("./fonts/ttf/Jetbrains Mono/static/JetBrainsMono-Italic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./fonts/ttf/Jetbrains Mono/static/JetBrainsMono-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: italic;
+  font-weight: 500;
+  src: url("./fonts/ttf/Jetbrains Mono/static/JetBrainsMono-MediumItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 600;
+  src: url("./fonts/ttf/Jetbrains Mono/static/JetBrainsMono-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: italic;
+  font-weight: 600;
+  src: url("./fonts/ttf/Jetbrains Mono/static/JetBrainsMono-SemiBoldItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./fonts/ttf/Jetbrains Mono/static/JetBrainsMono-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: italic;
+  font-weight: 700;
+  src: url("./fonts/ttf/Jetbrains Mono/static/JetBrainsMono-BoldItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 800;
+  src: url("./fonts/ttf/Jetbrains Mono/static/JetBrainsMono-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: italic;
+  font-weight: 800;
+  src: url("./fonts/ttf/Jetbrains Mono/static/JetBrainsMono-ExtraBoldItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 100 700;
+  src: url("./fonts/ttf/JetBrains Mono/JetBrainsMono-Variable.ttf") format("truetype-variations");
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: italic;
+  font-weight: 100 700;
+  src: url("./fonts/ttf/JetBrains Mono/JetBrainsMono-VariableItalic.ttf") format("truetype-variations");
 }
 .links {
   margin-top: 32px;
@@ -954,11 +1055,11 @@ iframe {
 }
 
 .header {
-  -webkit-backdrop-filter: blur(50px);
-          backdrop-filter: blur(50px);
   z-index: 100;
   background-color: var(--header_background);
-  padding-inline: 20px;
+  margin-top: 10px;
+  padding-inline: 15px;
+  padding-block: 10px;
   -webkit-box-align: center;
   -webkit-align-items: center;
      -moz-box-align: center;
@@ -975,8 +1076,7 @@ iframe {
   display: -ms-flexbox;
   display: flex;
   position: fixed;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-radius: 15px;
   top: 0;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -984,16 +1084,17 @@ iframe {
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 100vw;
-  max-width: 1400px;
-  height: 64px;
-  -webkit-transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-box-shadow 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-  transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-box-shadow 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-  -o-transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), box-shadow 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-  -moz-transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), box-shadow 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-  transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), box-shadow 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-  transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), box-shadow 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-box-shadow 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  max-width: 1200px;
+  -webkit-transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), border 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-box-shadow 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), border 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-box-shadow 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -o-transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), box-shadow 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), border 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -moz-transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), box-shadow 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), border 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), box-shadow 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), border 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), box-shadow 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), border 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-box-shadow 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .header svg {
+  width: 20px;
+  height: 20px;
   fill: var(--accent);
 }
 .header-left, .header-right {
@@ -1019,20 +1120,24 @@ iframe {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 5px;
+  max-height: -webkit-max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
 }
 .header-left .icon, .header-right .icon {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
 }
 .header-left .logo, .header-right .logo {
   color: var(--accent);
-  font-family: "Mulish", sans-serif;
-  font-size: clamp(24px, 12vw, 28px);
+  font-family: "JetBrains Mono", monospace;
+  font-size: clamp(16px, 12vw, 20px);
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
-  margin-inline: 5px;
-  font-weight: 700;
+  margin-inline: 3px;
+  font-weight: 800;
   font-style: italic;
 }
 
