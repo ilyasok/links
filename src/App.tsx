@@ -4,6 +4,7 @@ import {AnimatePresence} from "framer-motion";
 import React, {lazy, Suspense, useEffect} from "react";
 import {Navigate, Route, Routes, useLocation} from "react-router-dom";
 import themeConfig from "./styles/ant_theme";
+import AEExpressionPage from "./pages/aeexprfaqPage";
 const Links = lazy(() => import("./pages/linksPage"));
 const AboutPage = lazy(() => import("./pages/aboutPage"));
 const ChatRules = lazy(() => import("./pages/chatRules"));
@@ -74,6 +75,10 @@ export const App = () => {
             <Route
               path="/psfaq"
               element={<PSFaQ />}
+            />
+            <Route
+              path="/aeexprfaq"
+              element={<AEExpressionPage />}
             />
             <Route
               path="/rules"

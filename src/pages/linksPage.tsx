@@ -81,10 +81,10 @@ const Links = () => {
               description="Базарим за цвета и обработку изображений в  Photoshop"
             />
             <LinkInAppCard
-              href="/aeexpressions"
+              href="/aeexprfaq"
               icon={<TerminalRounded />}
-              name="aeexpressions"
-              description="Раздел с популярными выражениями в After Effects"
+              name="aeexprfaq (alpha-ver)"
+              description="Шпаргалка по использованию выражений в After Effects"
             />
           </div>
           <Divider>Наши каналы</Divider>
