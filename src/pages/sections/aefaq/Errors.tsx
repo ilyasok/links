@@ -1,7 +1,7 @@
 import React from "react";
 import DetailsSummary from "../../../components/DetailsSummary";
 import {AdditionInfo} from "../../../components/Additions";
-import { ImageFigure } from "../../../components/ContentFigure";
+import {ImageFigure} from "../../../components/ContentFigure";
 
 export const AEErrors: React.FC = () => (
   <div
@@ -167,7 +167,7 @@ export const AEErrors: React.FC = () => (
     <DetailsSummary title="Вылетает Adobe Media Encoder после установки плагинов BorisFX Sapphire">
       <p>{/* fixme: написать!! */}</p>
     </DetailsSummary>
-    <DetailsSummary title="This unlicensed Adobe app has been disabled или что-то похожее с красной полоской при запуске, но на другом языке. Как запустить программу нормально?">
+    <DetailsSummary title='"This unlicensed Adobe app is not genuine and will be disabled soon" или что-то похожее с красной полоской при запуске, но на другом языке. Как запустить программу нормально?'>
       <p>{/* fixme: написать!! */}</p>
     </DetailsSummary>
     <DetailsSummary title="Код ошибки 1 или 501 при установке After Effects">
