@@ -290,7 +290,6 @@ export const AEFromNewbies: React.FC = () => {
                   перекодировать в монтажный кодек, например в{" "}
                   <mark className="file">Apple Prores 422</mark>, чтобы не заработать себе
                   головные боли в дальнейшем. <a href="#5.1">Подробнее...</a>
-                  {/* fixme: написать подробнее с ссылкой на "как работать с чужими исходниками" */}
                 </AdditionDanger>
                 <AdditionInfo>
                   <mark className="word">Проблема зелёного экрана</mark> часто встречается
