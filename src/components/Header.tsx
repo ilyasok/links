@@ -40,11 +40,8 @@ export const Header: React.FC<{title: string}> = ({title}) => {
           <sub>beta</sub>
         </div>
       </div>
-      <div
-        className="header-center"
-        style={{display: window.innerWidth > 500 ? "" : "none"}}
-      ></div>
       <div className="header-right">
+        <SearchModalButton />
         <ThemeToggleButton />
       </div>
     </header>
