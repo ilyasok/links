@@ -676,6 +676,9 @@ export const AEInstallProblems: React.FC = () => {
           репаки от KpoJluK или m0nkrus.
         </p>
       </DetailsSummary>
+      <DetailsSummary title="Как полностью удалить After Effects и остальные продукты от Adobe?">
+        <p>{/* fixme: написать!! */}</p>
+      </DetailsSummary>
       <DetailsSummary title='При установке любого пакета Red Giant выскакивает "This installer application has been moved. It must be run from its original folder containing a packages directory. The installer will now exit."'>
         <p>
           Вы пытаетесь установить плагины <mark className="plugin">Red Giant</mark>, не

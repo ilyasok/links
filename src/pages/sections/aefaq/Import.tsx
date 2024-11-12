@@ -16,6 +16,9 @@ export const AEImport: React.FC = () => {
       <DetailsSummary title="Почему я не могу импортировать .psd по слоям? After Effects не мне предлагает выбор типа импорта!">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
+      <DetailsSummary title="Хочу импортировать секвенцию изображений, но полученная секвенция импортируется короче/длиннее чем нужно или с неверным FPS. Как исправить?">
+        <p>{/* fixme: написать!! */}</p>
+      </DetailsSummary>
       <DetailsSummary title="Импортировал исходник с перменным FPS. Почему длина исходника в After Effects короче, чем в видео-проигрывателе?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
