@@ -863,9 +863,6 @@ export const AEFromNewbies: React.FC = () => {
       <DetailsSummary title="Что за решётка у слоя на таймлайне и для чего нужен Guides Layer?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
-      <DetailsSummary title="">
-        <p>{/* fixme: написать!! */}</p>
-      </DetailsSummary>
     </div>
   );
 };
