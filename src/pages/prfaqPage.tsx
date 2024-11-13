@@ -51,6 +51,11 @@ const PRFaQ = () => {
                           title: <Link to="/aefaq">FaQ по Adobe After Effects</Link>,
                         },
                         {
+                          title: (
+                            <Link to="/aeexprfaq">FaQ по выражениям в After Effects</Link>
+                          ),
+                        },
+                        {
                           title: <Link to="/psfaq">FaQ по Adobe Photoshop</Link>,
                         },
                       ],
