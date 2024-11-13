@@ -22,6 +22,9 @@ export const AEExport: React.FC = () => {
       <DetailsSummary title="Как вывести видео с альфа-каналом?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
+      <DetailsSummary title="Хочу сохранить один кадр как файл изображения. Как это можно сделать?">
+        <p>{/* fixme: написать!! */}</p>
+      </DetailsSummary>
       <DetailsSummary title="Как я могу сохранить свой пресет для рендера файлов?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>

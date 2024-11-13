@@ -424,6 +424,9 @@ export const AEInstallProblems: React.FC = () => {
           }
         />
       </DetailsSummary>
+      <DetailsSummary title="Зачем мне советуют не менять расположение After Effects при установке? А если у меня нет места на жёстком диске?">
+        <p>{/* fixme: написать!! */}</p>
+      </DetailsSummary>
       <DetailsSummary title="Распаковал и установил плагин, а мой антивирус решил его съесть. Действительно ли в нём может быть вирус?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>

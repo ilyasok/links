@@ -7,7 +7,6 @@ import {
 } from "../../../components/Additions";
 import ContentSwitcher from "../../../components/features/OperatingSystemFilter";
 import {YouTubeVideo} from "../../../components/ContentFigure";
-
 export const AEFromNewbies: React.FC = () => {
   return (
     <div
@@ -34,7 +33,6 @@ export const AEFromNewbies: React.FC = () => {
           link="https://www.youtube.com/embed/nogR7eyhYug"
           caption="Видеоплеер YouTube"
         />
-
         <p>
           Если вы уже знакомы с интерфейсом программы, но испытываете трудности с
           насмотренностью - изучите каналы на YouTube ниже.
@@ -844,22 +842,37 @@ export const AEFromNewbies: React.FC = () => {
       <DetailsSummary title="Как найти нужный эффект на английском языке, если у меня стоит русский язык в After Effects?">
         <p>{/* про колхозный способ двойного языка и про таблицу эффектов */}</p>
       </DetailsSummary>
-      <DetailsSummary title="Зачем мне советуют не менять расположение установки After Effects? А если у меня нет места на жёстком диске?">
-        <p>{/* fixme: написать!! */}</p>
-      </DetailsSummary>
       <DetailsSummary title="Почему предпросмотр проигрывается в хреновом качестве, в пикселях?">
-        <p>{/* fixme: написать!! */}</p>
-      </DetailsSummary>
-      <DetailsSummary title="Чем отличается Mocha AE от Mocha Pro?">
-        <p>{/* fixme: написать!! */}</p>
-      </DetailsSummary>
-      <DetailsSummary title="Где-то слышал про секретные настройки, что это такое?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Что такое Null Object и как с ним работать?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Что такое Adjustment Layer и для чего он нужен?">
+        <p>{/* fixme: написать!! */}</p>
+      </DetailsSummary>
+      <DetailsSummary title="Применяю эффект, например Glow, но он обрезается. Как расширить действие эффекта?">
+        <p>{/* fixme: написать!! ПЕРЕМЕСТИТЬ В ДРУГОЙ ПУНКТ */}</p>
+      </DetailsSummary>
+      <DetailsSummary title="Не могу изменить параметры наложения у 3D-слоёв. Что делать?">
+        <p>{/* fixme: написать!! */}</p>
+      </DetailsSummary>
+      <DetailsSummary title="Почему не исчезает фон при использовании режимов наложения?">
+        <p>{/* под слоём с включенным режимом наложения должен быть ещё один слой */}</p>
+      </DetailsSummary>
+      <DetailsSummary title="Продублировал композицию на таймлайне, но копия зависит от оригинала. Как сделать композиции независимыми друг от друга?">
+        <p>{/* fixme: написать!! */}</p>
+      </DetailsSummary>
+      <DetailsSummary title="Переместил слой из одной композиции в другую, но оно ушло за пределы моей композиции. Как его вернуть на своё место?">
+        <p>{/* fixme: написать!! */}</p>
+      </DetailsSummary>
+      <DetailsSummary title="Почему первый кадр в композиции начинается не с нулевой секунды?">
+        <p>{/* fixme: написать!! */}</p>
+      </DetailsSummary>
+      <DetailsSummary title="Чем отличается однонодовая камера от двунодовой?">
+        <p>{/* fixme: написать!! */}</p>
+      </DetailsSummary>
+      <DetailsSummary title="Чем отличается Mocha AE от Mocha Pro?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Что за решётка у слоя на таймлайне и для чего нужен Guides Layer?">

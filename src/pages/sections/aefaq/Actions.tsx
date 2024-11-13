@@ -90,49 +90,47 @@ export const AEActions: React.FC = () => {
         </AdditionInfo>
       </DetailsSummary>
       <DetailsSummary title="Чем можно плавно замедлить видео?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>
+          {/* fixme: twixtor, uwu2uwu, topaz, borisfx retime ml, flowframes, framegui и мб ещё что-то */}
+        </p>
       </DetailsSummary>
       <DetailsSummary title="Чем можно хорошо подавить шумы на видео?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>{/* fixme: topaz или neat video */}</p>
       </DetailsSummary>
       <DetailsSummary title="Какими средствами обычно убирают зелёный или синий фон?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>{/* fixme: primatte keyer, стандартные плагины для кеинга */}</p>
       </DetailsSummary>
       <DetailsSummary title="Чем бы убрать белый или чёрный цвет у слоя?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>{/* fixme: extract, uni.unmult */}</p>
       </DetailsSummary>
       <DetailsSummary title="Как и чем можно прицепить слой к объекту на видео?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>{/* fixme: 3d camera tracking, mocha pro, tracking object */}</p>
       </DetailsSummary>
       <DetailsSummary title="Как мне сделать точки у шейпового слоя управляемыми с помощью 'нулевых слоёв'?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>{/* fixme: встроенный скрипт create path from nulls */}</p>
       </DetailsSummary>
       <DetailsSummary title="Как мне сделать 'прыгучую' анимацию нужного параметра?">
-        {/* fixme: про bouncy текста или положения. можно привести в пример motion tools pro где это есть */}
-        <p>{/* fixme: написать!! */}</p>
+        <p>
+          {/* fixme: про bouncy текста или положения. можно привести в пример motion tools pro где это есть */}
+        </p>
       </DetailsSummary>
       <DetailsSummary title="Как и чем сделать анимацию толщины variable-шрифта?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Чем бы красиво сделать анимацию появления слоя?">
-        {/* fixme: про фрактал нойз или autofill 2 */}
-        <p>{/* fixme: написать!! */}</p>
+        <p>{/* fixme: про фрактал нойз или autofill 2 */}</p>
       </DetailsSummary>
       <DetailsSummary title="Какими средствами и плагинами обычно делают анимацию 2D-персонажей?">
-        {/* fixme: паппет тулс, дюик ангелина и подобные плагины */}
-        <p>{/* fixme: написать!! */}</p>
+        <p>{/* fixme: паппет тулс, дюик ангелина и подобные плагины */}</p>
       </DetailsSummary>
       <DetailsSummary title="Как мне точнее расставить ключи и маркеры под бит?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>{/* fixme: beat edit, sound keys или по вейвформе */}</p>
       </DetailsSummary>
       <DetailsSummary title="Как мне распаковать пре-композицию?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>{/* fixme: сторонний плагин unprecompose */}</p>
       </DetailsSummary>
       <DetailsSummary title="Как сделать так, чтобы мой счётчик не дёргался при анимации числа?">
         <p>{/* fixme: написать про monospace шрифт через поворот */}</p>
-      </DetailsSummary>
-      <DetailsSummary title="Как привязать точки линии или фигуры к нулям?">
-        <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Как изменить параметры сразу нескольких композиций?">
         <p>{/* fixme: rd_compsetter */}</p>
@@ -141,7 +139,7 @@ export const AEActions: React.FC = () => {
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Как применить Adjustment Layer только на конкретные слои?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>{/* fixme: через маску в red giant supercomp */}</p>
       </DetailsSummary>
       <DetailsSummary title="Как сделать прозрачный фон у слоя с эффектом Saber?">
         <p>{/* fixme: написать!! */}</p>
