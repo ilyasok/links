@@ -556,13 +556,16 @@ export const AEFromNewbies: React.FC = () => {
           <li>
             <mark className="word">Редьюс</mark> - функция{" "}
             <mark className="ui">Reduce Project</mark> которая облегчает ваш проект за
-            счёт удаления неиспользованных файлов. Сделать это можно с помощью{" "}
+            счёт удаления всех объектов, кроме выбранной композиции в окне{" "}
+            <mark className="ui">Project</mark>. Сделать это можно с помощью{" "}
             <mark className="ui">File &gt; Dependencies &gt; Reduce Project</mark>.
             <AdditionWarning>
               Если вы первый раз пользуетесь этой функцией - создайте на крайний случай
               копию файла вашего проекта, вдруг эта функция удалит не те файлы, как
               планировалось.
             </AdditionWarning>
+            Также существует пункт <mark className="ui">Remove Unused Footage</mark> для
+            удаления неиспользованных исходников в вашем проекте.
           </li>
           <li>
             <mark className="word">Рендер</mark> - процесс генерации кадров и дальнейшей
