@@ -144,7 +144,7 @@ export const AEInstallProblems: React.FC = () => {
                 <mark className="path">
                   C:\Program Files (x86)\Common Files\Adobe\CEP\extensions
                 </mark>{" "}
-                и после этого применить{" "}
+                (если такой папки нет - создайте) и после этого применить{" "}
                 <a
                   download
                   href="files/Enable Extensions Adobe.reg"
