@@ -19,7 +19,7 @@ const GithubUpdateInfo: React.FC<GithubUpdateInfoProps> = ({filePath}) => {
       const response = await fetch(url);
 
       if (!response.ok) {
-        throw new Error(`API GitHub вернул ${response.status}`);
+        throw new Error(`${response.status}`);
       }
 
       const commits = await response.json();
@@ -37,7 +37,7 @@ const GithubUpdateInfo: React.FC<GithubUpdateInfoProps> = ({filePath}) => {
       );
     } catch (err) {
       setError(
-        `API Github выдал какую-то ошибку, поэтому информация о свежести недоступна: ${err}`
+        `API Github выдал ${err}.\nИнформация о свежести информации временно недоступна`
       );
     }
   };
