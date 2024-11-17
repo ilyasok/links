@@ -1,4 +1,5 @@
 import React from "react";
+import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 
 export const PRPerfomance: React.FC = () => {
   return (
@@ -6,7 +7,7 @@ export const PRPerfomance: React.FC = () => {
       className="faq-content"
       id="perfomance"
     >
-    
+      <GithubUpdateInfo filePath="src/pages/sections/prfaq/Perfomance.tsx" />
     </div>
   );
 };
