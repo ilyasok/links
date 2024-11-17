@@ -25,20 +25,27 @@ const GithubUpdateInfo: React.FC<GithubUpdateInfoProps> = ({filePath}) => {
       const commits = await response.json();
 
       if (commits.length === 0) {
-        setCommitInfo("Информация о свежести информации временно недоступна");
+        setCommitInfo("Информация о свежести временно недоступна");
         return;
       }
 
       const lastCommitDate = new Date(commits[0].commit.author.date);
+      const dateOptions: Intl.DateTimeFormatOptions = {
+        year: "2-digit",
+        month: "2-digit",
+        day: "2-digit",
+      };
+      const clockOptions: Intl.DateTimeFormatOptions = {
+        hour: "2-digit",
+        minute: "2-digit",
+      };
+      const formattedDate = lastCommitDate.toLocaleString("ru-RU", dateOptions);
+      const formattedClock = lastCommitDate.toLocaleString("ru-RU", clockOptions);
       const commitMessage = commits[0].commit.message;
 
-      setCommitInfo(
-        `Дата обновления: ${lastCommitDate.toLocaleString()}\nЧто нового: ${commitMessage}`
-      );
+      setCommitInfo(`Обновлено ${formattedDate}, ${formattedClock}: ${commitMessage}`);
     } catch (err) {
-      setError(
-        `API Github выдал ${err}.\nИнформация о свежести информации временно недоступна`
-      );
+      setError(`${err}, информация о свежести временно недоступна`);
     }
   };
 
