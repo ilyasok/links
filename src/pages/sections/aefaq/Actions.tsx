@@ -91,7 +91,81 @@ export const AEActions: React.FC = () => {
       </DetailsSummary>
       <DetailsSummary title="Чем можно плавно замедлить видео?">
         <p>
-          {/* fixme: twixtor, uwu2uwu, topaz, borisfx retime ml, flowframes, framegui и мб ещё что-то */}
+          Рано или поздно наступает момент, когда монтажёру или композеру нужно замедлить
+          видео так, чтобы оно было плавным, без рывков, имея у себя исходник с маленьким
+          количеством кадров в секунду. С нынешними технологиями выполнить задачу
+          &quot;плавного замедления видео&quot; стало ещё проще.
+        </p>
+        <p>
+          Для этого мы разберём популярные плагины и программы, позволяющие
+          интерполировать кадры между собой. Таким образом вы добавите лишних кадров в
+          секунду и позволите себе растягивать видео без мерзких пропусков кадров.
+        </p>
+        <p>
+          Первым плагином для <mark className="app">After Effects</mark> в этом списке
+          является <mark className="plugin">Twixtor</mark>. Он вышел достаточно давно,
+          хорошо зарекомендовал себя в монтаже и имеет много настроек.
+        </p>
+        <YouTubeVideo
+          styleClass="figure_browser-youtube"
+          link="https://www.youtube.com/embed/EGZCNcQyvrE"
+          caption="Twixtor"
+        />
+        <p>
+          С относительно недавних пор в <mark className="plugin">BorisFX Continuum</mark>{" "}
+          тоже добавили некий аналог <mark className="plugin">Twixtor</mark> на основе ИИ.
+          Называется <mark className="plugin">BCC Retimer ML</mark> и в сравнении с{" "}
+          <mark className="plugin">Twixtor</mark> выдаёт гораздо лучшие результаты.
+        </p>
+        <YouTubeVideo
+          styleClass="figure_browser-youtube"
+          link="https://www.youtube.com/embed/YraSxOpy1Qg"
+          caption="BCC Retimer ML"
+        />
+        <p>
+          Если вы не хотите использовать <mark className="app">After Effects</mark> для
+          замедления видео или если при использовании плагинов у вас всё тормозит, то
+          можно использовать сторонние программы, которые рендерят видео отдельно на ваш
+          диск с увеличенной частотой кадров за счёт интерполяции. Например,{" "}
+          <mark className="app">FlowFrames</mark>.
+        </p>
+        <YouTubeVideo
+          styleClass="figure_browser-youtube"
+          link="https://www.youtube.com/embed/H8ISNjzDULw"
+          caption="FlowFrames"
+        />
+        <p>
+          Или <mark className="app">FrameGUI</mark>.
+        </p>
+        <YouTubeVideo
+          styleClass="figure_browser-youtube"
+          link="https://www.youtube.com/embed/Axz_KwiqNmc"
+          caption="FrameGUI"
+        />
+        <p>
+          Ну или <mark className="app">Topaz Video AI</mark>. В этой программе также можно
+          улучшить качество исходников за счёт искусственного интеллекта.
+        </p>
+        <YouTubeVideo
+          styleClass="figure_browser-youtube"
+          link="https://www.youtube.com/embed/591MqOooDAE"
+          caption="Topaz Video AI"
+        />
+        <AdditionInfo>
+          Действия на видео, приведённые выше, могут отличаться в зависимости от версии
+          программы или плагина. Некоторые плагины или программы вы можете скачать в
+          канале <a href="https://t.me/+Qd9xu7A4TeIwNzY6">склад стройматериалов</a> по
+          хештегам <mark>#twixtor</mark>, <mark>#continuum</mark> или <mark>#topaz</mark>.
+        </AdditionInfo>
+        <p>
+          Стандартными средствами <mark className="app">After Effects</mark> тоже можно
+          замедлить видео, правда результат будет не таким хорошим, как хотелось бы. Для
+          этого вам нужно добавить видео на таймлайн и замедлить его с помощью комбинации
+          клавиш <mark className="key">Ctrl + Alt + T</mark>. Эта комбинация включит
+          функцию <mark className="ui">Enable Time Remapping</mark> для слоя. После
+          изменения длины видео - выделите слой, нажмите на{" "}
+          <mark className="key">ПКМ</mark> и выберите в контекстном меню{" "}
+          <mark className="ui">Frame Blending &gt; Frame Mix или Pixel Motion</mark>.
         </p>
       </DetailsSummary>
       <DetailsSummary title="Чем можно хорошо подавить шумы на видео?">
