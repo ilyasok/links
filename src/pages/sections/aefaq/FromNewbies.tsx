@@ -7,12 +7,15 @@ import {
 } from "../../../components/Additions";
 import ContentSwitcher from "../../../components/features/OperatingSystemFilter";
 import {YouTubeVideo} from "../../../components/ContentFigure";
+import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
+
 export const AEFromNewbies: React.FC = () => {
   return (
     <div
       className="faq-content"
       id="from-newbies"
     >
+      <GithubUpdateInfo filePath="src/pages/sections/aefaq/FromNewbies.tsx" />
       <DetailsSummary title="Первый раз установил After Effects, с чего бы мне начать обучение?">
         {/* fixme: больше курсов: по типу вольницы, видеосмайлов, панковского и тд и тп */}
         <p>

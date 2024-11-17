@@ -2,6 +2,7 @@ import React from "react";
 import DetailsSummary from "../../../components/DetailsSummary";
 import {VideoFigure, YouTubeVideo} from "../../../components/ContentFigure";
 import {AdditionInfo} from "../../../components/Additions";
+import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 
 export const AEActions: React.FC = () => {
   return (
@@ -9,6 +10,7 @@ export const AEActions: React.FC = () => {
       className="faq-content"
       id="actions"
     >
+      <GithubUpdateInfo filePath="src/pages/sections/aefaq/Actions.tsx" />
       <DetailsSummary title="Чем бы мне улучшить качество исходников?">
         <p>
           В настоящее время существует куча различных способов для улучшения качества

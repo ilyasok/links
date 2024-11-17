@@ -1,5 +1,6 @@
 import React from "react";
 import DetailsSummary from "../../../components/DetailsSummary";
+import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 
 export const AEImport: React.FC = () => {
   return (
@@ -7,6 +8,7 @@ export const AEImport: React.FC = () => {
       className="faq-content"
       id="import"
     >
+      <GithubUpdateInfo filePath="src/pages/sections/aefaq/Import.tsx" />
       <DetailsSummary title="Какие действия нужно совершить с чужими исходниками, прежде чем начать работу?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
