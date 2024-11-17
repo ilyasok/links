@@ -1,4 +1,3 @@
-import {link} from "framer-motion/client";
 import React from "react";
 
 interface ImageFigureProps {

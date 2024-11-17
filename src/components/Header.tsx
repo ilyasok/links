@@ -3,6 +3,7 @@ import {HomeRounded} from "@mui/icons-material";
 import React, {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import {ThemeToggleButton} from "./modal/themeChanger";
+import {SearchButton} from "./features/SearchInPage";
 export const Header: React.FC<{title: string}> = ({title}) => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -41,7 +42,10 @@ export const Header: React.FC<{title: string}> = ({title}) => {
         </div>
       </div>
       <div className="header-right">
-        <SearchModalButton />
+        {(location.pathname.includes("aefaq") ||
+          location.pathname.includes("prfaq") ||
+          location.pathname.includes("psfaq") ||
+          location.pathname.includes("aeexprfaq")) && <SearchButton />}
         <ThemeToggleButton />
       </div>
     </header>
