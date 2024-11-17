@@ -1,13 +1,15 @@
 import React from "react";
 import DetailsSummary from "../../../components/DetailsSummary";
 import {AdditionInfo} from "../../../components/Additions";
-import { ImageFigure } from "../../../components/ContentFigure";
+import {ImageFigure} from "../../../components/ContentFigure";
+import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 
 export const AEErrors: React.FC = () => (
   <div
     className="faq-content"
     id="errors"
   >
+    <GithubUpdateInfo filePath="src/pages/sections/aefaq/Errors.tsx" />
     <DetailsSummary title="Почему у меня отсутствует звук в предпросмотре?">
       <p>{/* fixme: написать!! */}</p>
     </DetailsSummary>

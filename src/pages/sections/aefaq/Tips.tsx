@@ -1,5 +1,6 @@
 import React from "react";
 import DetailsSummary from "../../../components/DetailsSummary";
+import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 
 export const AETips: React.FC = () => {
   return (
@@ -7,6 +8,7 @@ export const AETips: React.FC = () => {
       className="faq-content"
       id="tips"
     >
+      <GithubUpdateInfo filePath="src/pages/sections/aefaq/Tips.tsx" />
       <DetailsSummary
         title="Как мне сделать историю изменений файлов и в случае чего - откатываться до
             предыдущих версий?"

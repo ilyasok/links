@@ -1,5 +1,6 @@
 import React from "react";
 import DetailsSummary from "../../../components/DetailsSummary";
+import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 
 export const AEPerfomance: React.FC = () => {
   return (
@@ -7,6 +8,7 @@ export const AEPerfomance: React.FC = () => {
       className="faq-content"
       id="perfomance"
     >
+      <GithubUpdateInfo filePath="src/pages/sections/aefaq/Perfomance.tsx" />
       <DetailsSummary title="Почему у меня, б%@#ь, лагает е&#!%й After Effects, с$%а?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>

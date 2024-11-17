@@ -1,5 +1,6 @@
 import React from "react";
 import DetailsSummary from "../../../components/DetailsSummary";
+import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 
 export const AEInterface: React.FC = () => {
   return (
@@ -7,6 +8,7 @@ export const AEInterface: React.FC = () => {
       className="faq-content"
       id="interface"
     >
+      <GithubUpdateInfo filePath="src/pages/sections/aefaq/Interface.tsx" />
       <DetailsSummary title="Случайно закрыл окно в интерфейсе, как мне его вернуть?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>

@@ -6,12 +6,14 @@ import {
 } from "../../../components/Additions";
 import DetailsSummary from "../../../components/DetailsSummary";
 import ContentSwitcher from "../../../components/features/OperatingSystemFilter";
+import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 export const AEInstallProblems: React.FC = () => {
   return (
     <div
       className="faq-content"
       id="install-problems"
     >
+      <GithubUpdateInfo filePath="src/pages/sections/aefaq/InstallProblems.tsx" />
       <DetailsSummary title="Забыли положить инструкцию для установки рядом с файлами, куда что кидать?">
         <AdditionWarning>
           Прежде чем использовать <mark className="file">.aep</mark> и{" "}

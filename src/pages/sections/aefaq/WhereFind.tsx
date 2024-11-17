@@ -6,8 +6,8 @@ import {
 } from "../../../components/Additions";
 import DetailsSummary from "../../../components/DetailsSummary";
 import {FlexibleLinks} from "../../../components/FlexibleLinksFaQ";
-import { ImageFigure } from "../../../components/ContentFigure";
-
+import {ImageFigure} from "../../../components/ContentFigure";
+import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 
 export const AEWhereFind: React.FC = () => {
   return (
@@ -15,6 +15,7 @@ export const AEWhereFind: React.FC = () => {
       className="faq-content"
       id="where-find"
     >
+      <GithubUpdateInfo filePath="src/pages/sections/aefaq/WhereFind.tsx" />
       <DetailsSummary title="Где найти шаблоны, программы и плагины?">
         <p>
           На <a href="/">главной странице</a>, в закреплённом сообщении в чате{" "}

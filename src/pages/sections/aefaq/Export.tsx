@@ -1,5 +1,6 @@
 import React from "react";
 import DetailsSummary from "../../../components/DetailsSummary";
+import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 
 export const AEExport: React.FC = () => {
   return (
@@ -7,6 +8,7 @@ export const AEExport: React.FC = () => {
       className="faq-content"
       id="export"
     >
+      <GithubUpdateInfo filePath="src/pages/sections/aefaq/Export.tsx" />
       <DetailsSummary title="Какие настройки рендера стоит установить для вывода в социальные сети?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
