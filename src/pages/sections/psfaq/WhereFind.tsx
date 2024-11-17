@@ -1,5 +1,5 @@
 import React from "react";
-
+import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 
 export const PSWhereFind: React.FC = () => {
   return (
@@ -7,7 +7,7 @@ export const PSWhereFind: React.FC = () => {
       className="faq-content"
       id="where-find"
     >
-     
+      <GithubUpdateInfo filePath="src/pages/sections/psfaq/WhereFind.tsx" />
     </div>
   );
 };
