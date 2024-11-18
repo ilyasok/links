@@ -6,6 +6,14 @@ import {Link} from "react-router-dom";
 import {AdditionWarning} from "../components/Additions";
 import {Footer} from "../components/Footer";
 // *: разделы aeexprfaq:
+import {AEExprStart} from "./sections/aeexprfaq/Start";
+import {AEExprFormulas} from "./sections/aeexprfaq/Formulas";
+import {AEExprLinking} from "./sections/aeexprfaq/Linking";
+import {AEExprTechQuestion} from "./sections/aeexprfaq/TechQuestion";
+import {AEExprTips} from "./sections/aeexprfaq/Tips";
+import {AEExprActions} from "./sections/aeexprfaq/Actions";
+import {AEExprErrors} from "./sections/aeexprfaq/Errors";
+import {AEExprBase} from "./sections/aeexprfaq/Base";
 
 const AEExpressionPage = () => {
   return (
@@ -70,21 +78,21 @@ const AEExpressionPage = () => {
                 {(() => {
                   switch (href) {
                     case "#start":
-                      return <div>1</div>;
+                      return <AEExprStart />;
                     case "#base":
-                      return <div>2</div>;
+                      return <AEExprBase />;
                     case "#linking":
-                      return <div>3</div>;
+                      return <AEExprLinking />;
                     case "#formulas":
-                      return <div>4</div>;
+                      return <AEExprFormulas />;
                     case "#tips":
-                      return <div>5</div>;
+                      return <AEExprTips />;
                     case "#tech-question":
-                      return <div>6</div>;
+                      return <AEExprTechQuestion />;
                     case "#actions":
-                      return <div>7</div>;
+                      return <AEExprActions />;
                     case "#errors":
-                      return <div>8</div>;
+                      return <AEExprErrors />;
                   }
                 })()}
               </div>
