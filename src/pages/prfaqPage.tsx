@@ -7,6 +7,7 @@ import {AdditionWarning} from "../components/Additions";
 import {motion} from "framer-motion";
 import {Footer} from "../components/Footer";
 import CopyMark from "../components/features/CopyMark";
+// *: разделы prfaq:
 import {PRActions} from "./sections/prfaq/Actions";
 import {PRErrors} from "./sections/prfaq/Errors";
 import {PRExport} from "./sections/prfaq/Export";

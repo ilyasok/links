@@ -7,6 +7,7 @@ import {Header} from "../components/Header";
 import {motion} from "framer-motion";
 import {Footer} from "../components/Footer";
 import CopyMark from "../components/features/CopyMark";
+// *: разделы psfaq:
 import {PSActions} from "./sections/psfaq/Actions";
 import {PSErrors} from "./sections/psfaq/Errors";
 import {PSExport} from "./sections/psfaq/Export";
