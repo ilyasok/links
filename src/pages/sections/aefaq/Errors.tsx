@@ -148,7 +148,17 @@ export const AEErrors: React.FC = () => {
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="After Effects warning: A rendering plug-in was not found. The default rendering plug-in will be substituted. “Ray-Traced 3D”">
-        <p>{/* fixme: написать!! */}</p>
+        <p>
+          Данное предупреждение появится, когда вы попытаетесь открыть очень старый проект
+          с использованием движка <mark className="plugin">Ray-Traced 3D</mark> в новых
+          версиях <mark className="app">After Effects</mark>. Его вырезали с версии 2020 и
+          выше.
+        </p>
+        <p>
+          Чтобы корректно открыть проект с использованием устаревшего{" "}
+          <mark className="plugin">Ray-Traced 3D</mark> - вам нужно открыть его в любой
+          версии 2019 года или старше, в котором этот движок доживал последние дни.
+        </p>
       </DetailsSummary>
       <DetailsSummary title="Warning: This project uses fonts that are not currently available on this computer. Font substitution will occur until the originals become available">
         <p>{/* fixme: написать!! */}</p>
