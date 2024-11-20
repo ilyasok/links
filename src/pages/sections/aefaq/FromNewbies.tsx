@@ -881,6 +881,12 @@ export const AEFromNewbies: React.FC = () => {
       <DetailsSummary title="Что за решётка у слоя на таймлайне и для чего нужен Guides Layer?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
+      <DetailsSummary title="Делал проект, но я его изначально не сохранял. Вдруг After Effects вылетел. Возможно ли восстановить проект?">
+        <p>{/* fixme: написать!! */}</p>
+      </DetailsSummary>
+      <DetailsSummary title="Почему After Effects иногда сам меняет начертание шрифта?">
+        <p>{/* fixme: написать!! */}</p>
+      </DetailsSummary>
     </div>
   );
 };

@@ -14,12 +14,6 @@ export const AEErrors: React.FC = () => {
       <DetailsSummary title="Почему у меня отсутствует звук в предпросмотре?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
-      <DetailsSummary title="Делал проект, но я его изначально не сохранял. Вдруг After Effects вылетел. Возможно ли восстановить проект?">
-        <p>{/* fixme: написать!! */}</p>
-      </DetailsSummary>
-      <DetailsSummary title="Почему After Effects иногда сам меняет начертание шрифта?">
-        <p>{/* fixme: написать!! */}</p>
-      </DetailsSummary>
       <DetailsSummary title="File is damaged или Unable to import file (...) as project (bad format or not readable)">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
