@@ -171,7 +171,61 @@ export const AEActions: React.FC = () => {
         </p>
       </DetailsSummary>
       <DetailsSummary title="Чем можно хорошо подавить шумы на видео?">
-        <p>{/* fixme: topaz или neat video */}</p>
+        <p>
+          Когда видео-исходник был снят в условиях малой освещенности или с высоким ISO -
+          вы неизбежно столкнётесь с цифровым шумом - дефектом изображения, возникающий
+          при съемке из-за несовершенства технологий сенсоров камер фотоаппаратов,
+          видеокамер и телефонов, а также из-за фотонной природы света. Особенно он
+          заметен на однотонных поверхностях - небо, кожа и в участках теней.
+        </p>
+        <p>
+          Полностью от шума избавиться сложно, но можно его существенно подавить с помощью
+          различных инструментов и плагинов. Одним из эффективных плагинов для уменьшения
+          шума (и мерцаний от искусственного освещения) является{" "}
+          <mark className="plugin">Neat Video</mark>. Плагин гибко настраивается и
+          поддерживает GPU-ускорение.
+        </p>
+        <YouTubeVideo
+          styleClass="figure_browser-youtube"
+          link="https://youtube.com/embed/mwSqzxApy-E"
+          caption="Neat Video"
+        />
+        <p>
+          У Red Giant тоже есть свой де-нойзер под названием{" "}
+          <mark className="plugin">Denoiser III</mark>, который находится в пакете
+          плагинов <mark className="plugin">Magic Bullet Suite</mark>.
+        </p>
+        <YouTubeVideo
+          styleClass="figure_browser-youtube"
+          link="https://www.youtube.com/embed/PXCElU7HcX8"
+          caption="Denoiser III"
+        />
+        <p>
+          И Boris FX тоже не отстаёт от инструментов для подавления шумов. В пакете
+          плагинов <mark className="plugin">Boris FX Continuum</mark> тоже можно найти два
+          де-нойзера - <mark className="plugin">BCC DeNoise OBS</mark> на основе
+          алгоритмов и относительно новый <mark className="plugin">BCC+DeNoise ML</mark>,
+          основанный на машинном обучении.{" "}
+        </p>
+        <YouTubeVideo
+          styleClass="figure_browser-youtube"
+          link="https://youtube.com/embed/L1PeaTa13H4"
+          caption="BCC DeNoise ML"
+        />
+        <p>
+          Ну и куда же без Re:vision Effects с их <mark className="plugin">DE:Noise</mark>
+          .
+        </p>
+        <YouTubeVideo
+          styleClass="figure_browser-youtube"
+          link="https://www.youtube.com/embed/tGIXeddCPQM"
+          caption="DE:Noise"
+        />
+        <p>
+          Если вы не хотите использовать сторонние плагины в своём проекте - вы можете
+          воспользоваться встроенным эффектом <mark className="plugin">Reduce Grain</mark>
+          .
+        </p>
       </DetailsSummary>
       <DetailsSummary title="Какими средствами обычно убирают зелёный или синий фон?">
         <p>{/* fixme: primatte keyer, стандартные плагины для кеинга */}</p>
