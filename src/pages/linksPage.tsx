@@ -115,12 +115,6 @@ const Links = () => {
               description="Приватный канал с различными обучающими курсами"
             />
             <LinkCard
-              href="https://t.me/HiStockBot?start=509060394"
-              icon={<SmartToyRounded />}
-              name="HiStockBot"
-              description="Бот для покупки шаблонов с Envato Element и других сервисов"
-            />
-            <LinkCard
               href="https://t.me/+Qd9xu7A4TeIwNzY6"
               icon={<HandymanRounded />}
               name="склад стройматериалов"
@@ -142,6 +136,12 @@ const Links = () => {
           <Divider>Сервисы</Divider>
           {/* ezgif, скачивание шаттера, скачивание медиаинфо и аналогичное по списку */}
           <div className="links-grid">
+            <LinkCard
+              href="https://t.me/HiStockBot?start=509060394"
+              icon={<SmartToyRounded />}
+              name="HiStockBot"
+              description="Бот для покупки шаблонов с Envato Element и других сервисов"
+            />
             <LinkCard
               href="https://ezgif.com/"
               icon={<Gif />}
