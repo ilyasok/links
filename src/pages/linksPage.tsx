@@ -6,7 +6,8 @@ import {
   BlockRounded,
   BusinessCenterRounded,
   CarRepairRounded,
-  DevicesRounded,
+  DesktopWindowsRounded,
+  DevicesOtherRounded,
   DomainOutlined,
   Download,
   FormatListBulletedOutlined,
@@ -187,9 +188,15 @@ const Links = () => {
             />
             <LinkCard
               href="https://t.me/technicalchat"
-              icon={<DevicesRounded />}
+              icon={<DevicesOtherRounded />}
               name="Technical Chat"
               description="Обсуждаем компьютерные технологии и проблемы"
+            />
+            <LinkCard
+              href="https://t.me/HARD_TALK"
+              icon={<DesktopWindowsRounded />}
+              name="HARD_TALK"
+              description="Обсуждаем компьютерное железо в тяжелых задачах"
             />
             <LinkCard
               href="https://t.me/ru_montage"
