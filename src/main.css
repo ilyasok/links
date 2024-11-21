@@ -824,7 +824,7 @@ textarea {
   content: "";
   display: inline-block;
   width: 3px;
-  height: 50%;
+  height: 65%;
   background-color: var(--accent);
   position: absolute;
   left: 15px;
