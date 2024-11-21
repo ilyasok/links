@@ -134,7 +134,6 @@ const Links = () => {
             />
           </div>
           <Divider>Сервисы</Divider>
-          {/* ezgif, скачивание шаттера, скачивание медиаинфо и аналогичное по списку */}
           <div className="links-grid">
             <LinkCard
               href="https://t.me/HiStockBot?start=509060394"
