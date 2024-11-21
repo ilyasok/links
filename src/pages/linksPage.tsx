@@ -124,7 +124,7 @@ const Links = () => {
               href="https://t.me/+gSmpjWyhd5w3ZGFi"
               icon={<CarRepairRounded />}
               name="купить запчасти на форд фокус"
-              description="невошедшее в основную идею склада стройматериалов"
+              description="невошедшее в стройматериалы на тематику операционных систем"
             />
             <LinkCard
               href="https://t.me/+ZqiaMfQRFgM4YmEy"
