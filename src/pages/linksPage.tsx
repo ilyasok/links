@@ -84,7 +84,7 @@ const Links = () => {
             <LinkInAppCard
               href="/aeexprfaq"
               icon={<TerminalRounded />}
-              name="aeexprfaq (alpha-ver)"
+              name="aeexprfaq (not-ready)"
               description="Шпаргалка по использованию выражений в After Effects"
             />
           </div>
