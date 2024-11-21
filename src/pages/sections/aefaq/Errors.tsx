@@ -18,7 +18,48 @@ export const AEErrors: React.FC = () => {
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Cached preview needs 2 or more frames for playback">
-        <p>{/* fixme: написать!! */}</p>
+        <p>
+          Данная ошибка может выскочить по двум причинам: из-за переполненного кэша и
+          оперативной памяти или из-за банальной невнимательности пользователя программы.
+        </p>
+        <p>
+          В первом случае пользователю надо почистить кэш{" "}
+          <mark className="app">After Effects</mark>. Для этого ему нужно зайти в{" "}
+          <mark className="ui">Edit &gt; Purge &gt; All Memory & Disk Cache</mark> и
+          нажать на <mark className="ui">OK</mark>. После этого попробуйте закэшировать
+          предпросмотр снова.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-light"
+          imgSrc="images/aftereffects/edit_purge_all-memory-and-disk-cache.png"
+          imgTitle="Очистка кэша и освобождение оперативной памяти"
+          caption="Очистка кэша и освобождение оперативной памяти"
+        />
+        <AdditionInfo>
+          Иногда может быть такое, что применяемый эффект может заставить держать ваш
+          компьютер в страхе, поэтому он и не может нормально обработать кадры для
+          предпросмотра. Если у вас есть возможность - найдите эффект, который мешает
+          нормальному рендеру и замените его на похожий.
+        </AdditionInfo>
+        <p>
+          Если очистка кэша не помогла, то проверьте длину вашей рабочей области. Может вы
+          упустили тот факт, что вы случайным образом сократили его до одного кадра,
+          поэтому и отображается эта ошибка.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/aftereffects/low_work-area.png"
+          imgTitle="Маленькая рабочая область"
+          caption="Одна из причин ошибки - маленькая рабочая область"
+        />
+        <p>
+          Чтобы это исправить - перейдите в начало вашей композиции (
+          <mark className="key">Home</mark>) и нажмите на <mark className="key">B</mark>,
+          а затем перейдите в конец вашей композиции (<mark className="key">End</mark>) и
+          нажмите на <mark className="key">N</mark>. Таким образом вы расширите вашу
+          рабочую область от начала до конца вашей композиции и эта ошибка должна
+          исчезнуть.
+        </p>
       </DetailsSummary>
       <DetailsSummary title="Unable to allocate enough memory to render the current frame (XXXX x XXXX @ X bpc). Either decrease the memory requirements for the rendering frame, or install more RAM">
         <p>{/* fixme: написать!! */}</p>
