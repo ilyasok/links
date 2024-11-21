@@ -1350,26 +1350,6 @@ html {
   visibility: visible;
 }
 
-.logo-container {
-  margin-block: 15px;
-}
-.logo-title {
-  font-family: "Anta", sans-serif;
-  font-size: clamp(36px, 12vw, 64px);
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-  margin: 0 auto -10px;
-}
-.logo-slogan {
-  font-family: "Mulish", sans-serif;
-  font-weight: 400;
-  line-height: 1;
-  font-size: clamp(16px, 4vw, 18px);
-  text-align: center;
-  margin-top: 10px;
-}
-
 .visual-hidden {
   display: none;
 }
