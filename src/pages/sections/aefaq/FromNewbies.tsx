@@ -46,6 +46,16 @@ export const AEFromNewbies: React.FC = () => {
           <a href="https://www.youtube.com/@AEPlug">AEPlug</a>{" "}
           <a href="https://www.youtube.com/@JakeInMotion">Jake In Motion</a>
         </div>
+        <p>Могу ещё порекомендовать полноценные курсы от:</p>
+        <div className="flexible-links">
+          <a href="https://cloudlessons.ru/v/410/">Супер After Effects от VideoSmile</a>
+          <a href="https://volnitsa.zenclass.ru/public/course/4b9a6429-5c06-4f91-a73b-312bc57b9e35">
+            Быстрый вход в After Effects от Вольница
+          </a>
+          <a href="https://volnitsa.zenclass.ru/public/course/9221df49-3262-444e-b269-8b3bfd496de2">
+            SUPER SILA FOREVER от Вольница
+          </a>
+        </div>
         <p style={{textAlign: "center"}}>
           Надеюсь что вы найдете для себя что-то полезное. Удачи в начинаниях!
         </p>
