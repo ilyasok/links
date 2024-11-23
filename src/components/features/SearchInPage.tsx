@@ -1,4 +1,5 @@
 import {Search} from "@mui/icons-material";
+import {Modal} from "antd";
 import React, {createContext, useContext, useState} from "react";
 
 interface SearchContextType {
@@ -54,7 +55,7 @@ export const SearchInPage: React.FC = () => {
     details.forEach((detail, index) => {
       const title = detail.querySelector("summary")?.textContent || "";
       const content =
-        Array.from(detail.querySelectorAll<HTMLLIElement | HTMLAnchorElement>("p, li"))
+        Array.from(detail.querySelectorAll<HTMLLIElement | HTMLParagraphElement>("p, li"))
           .map((el) => el.textContent || "")
           .join(" ") || "";
       const id = `detail-${index}`;
@@ -93,85 +94,54 @@ export const SearchInPage: React.FC = () => {
     return text.replace(regex, "<mark>$1</mark>");
   };
 
-  if (!isOpen) return null;
-
   return (
-    <div
-      style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        width: "100%",
-        height: "100%",
-        backgroundColor: "rgba(0, 0, 0, 0.5)",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
+    <Modal
+      open={isOpen}
+      onCancel={closeModal}
+      footer={null}
+      width={800}
     >
-      <div
+      <input
+        type="text"
+        value={query}
+        onChange={(e) => handleSearch(e.target.value)}
+        placeholder="Найти..."
         style={{
-          backgroundColor: "white",
-          padding: "20px",
+          width: "100%",
+          padding: "10px",
+          border: "1px solid #ccc",
           borderRadius: "5px",
-          width: "90%",
-          maxWidth: "600px",
+          marginBottom: "10px",
         }}
-      >
-        <button
-          onClick={closeModal}
-          style={{
-            float: "right",
-            backgroundColor: "transparent",
-            border: "none",
-            fontSize: "16px",
-            cursor: "pointer",
-          }}
-        >
-          ✖
-        </button>
-        <input
-          type="text"
-          value={query}
-          onChange={(e) => handleSearch(e.target.value)}
-          placeholder="Введите что-то для поиска"
-          style={{
-            width: "100%",
-            padding: "10px",
-            border: "1px solid #ccc",
-            borderRadius: "5px",
-            marginBottom: "10px",
-          }}
-        />
-        <div style={{maxHeight: "300px", overflowY: "auto"}}>
-          {results.length > 0 ? (
-            results.map(({title, content, id}) => (
-              <div
-                key={id}
-                style={{borderBottom: "1px solid #ccc", padding: "10px 0"}}
+      />
+      <div style={{maxHeight: "300px", overflowY: "auto"}}>
+        {results.length > 0 ? (
+          results.map(({title, content, id}) => (
+            <div
+              key={id}
+              style={{borderBottom: "1px solid #ccc", padding: "10px 0"}}
+            >
+              <a
+                href={`#${id}`}
+                style={{textDecoration: "none", color: "#007BFF"}}
               >
-                <a
-                  href={`#${id}`}
-                  style={{textDecoration: "none", color: "#007BFF"}}
-                >
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: highlightText(title, query),
-                    }}
-                  ></p>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: highlightText(content, query),
-                    }}
-                  ></p>
-                </a>
-              </div>
-            ))
-          ) : (
-            <p>Результат не найден</p>
-          )}
-        </div>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: highlightText(title, query),
+                  }}
+                ></p>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: highlightText(content, query),
+                  }}
+                ></p>
+              </a>
+            </div>
+          ))
+        ) : (
+          <p>Ничего не найдено.</p>
+        )}
       </div>
-    </div>
+    </Modal>
   );
 };
