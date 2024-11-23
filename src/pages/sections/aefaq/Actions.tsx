@@ -28,7 +28,7 @@ export const AEActions: React.FC = () => {
         </p>
         <YouTubeVideo
           styleClass="figure_browser-youtube"
-          link="https://www.youtube.com/embed/zbX7x8Oo_Uc"
+          link="zbX7x8Oo_Uc"
           caption="Topaz Video AI"
         />
         <p>
@@ -40,7 +40,7 @@ export const AEActions: React.FC = () => {
         </p>
         <YouTubeVideo
           styleClass="figure_browser-youtube"
-          link="https://www.youtube.com/embed/fTYcNP8ZdTE"
+          link="fTYcNP8ZdTE"
           caption="BCC UpRes ML"
         />
         <p>
@@ -55,7 +55,7 @@ export const AEActions: React.FC = () => {
         </p>
         <YouTubeVideo
           styleClass="figure_browser-youtube"
-          link="https://www.youtube.com/embed/VMaYdjWqRRg"
+          link="VMaYdjWqRRg"
           caption="Topaz Gigapixel AI"
         />
         <p>
@@ -79,7 +79,7 @@ export const AEActions: React.FC = () => {
         </p>
         <YouTubeVideo
           styleClass="figure_browser-youtube"
-          link="https://www.youtube.com/embed/woDDQ0xnt84"
+          link="woDDQ0xnt84"
           caption="Benvista Photozoom"
         />
         <AdditionInfo>
@@ -110,7 +110,7 @@ export const AEActions: React.FC = () => {
         </p>
         <YouTubeVideo
           styleClass="figure_browser-youtube"
-          link="https://www.youtube.com/embed/EGZCNcQyvrE"
+          link="EGZCNcQyvrE"
           caption="Twixtor"
         />
         <p>
@@ -121,7 +121,7 @@ export const AEActions: React.FC = () => {
         </p>
         <YouTubeVideo
           styleClass="figure_browser-youtube"
-          link="https://www.youtube.com/embed/YraSxOpy1Qg"
+          link="YraSxOpy1Qg"
           caption="BCC Retimer ML"
         />
         <p>
@@ -133,7 +133,7 @@ export const AEActions: React.FC = () => {
         </p>
         <YouTubeVideo
           styleClass="figure_browser-youtube"
-          link="https://www.youtube.com/embed/H8ISNjzDULw"
+          link="H8ISNjzDULw"
           caption="FlowFrames"
         />
         <p>
@@ -141,7 +141,7 @@ export const AEActions: React.FC = () => {
         </p>
         <YouTubeVideo
           styleClass="figure_browser-youtube"
-          link="https://www.youtube.com/embed/Axz_KwiqNmc"
+          link="Axz_KwiqNmc"
           caption="FrameGUI"
         />
         <p>
@@ -150,7 +150,7 @@ export const AEActions: React.FC = () => {
         </p>
         <YouTubeVideo
           styleClass="figure_browser-youtube"
-          link="https://www.youtube.com/embed/591MqOooDAE"
+          link="591MqOooDAE"
           caption="Topaz Video AI"
         />
         <AdditionInfo>
@@ -197,7 +197,7 @@ export const AEActions: React.FC = () => {
         </p>
         <YouTubeVideo
           styleClass="figure_browser-youtube"
-          link="https://www.youtube.com/embed/PXCElU7HcX8"
+          link="PXCElU7HcX8"
           caption="Denoiser III"
         />
         <p>
@@ -218,7 +218,7 @@ export const AEActions: React.FC = () => {
         </p>
         <YouTubeVideo
           styleClass="figure_browser-youtube"
-          link="https://www.youtube.com/embed/tGIXeddCPQM"
+          link="tGIXeddCPQM"
           caption="DE:Noise"
         />
         <p>
@@ -252,6 +252,9 @@ export const AEActions: React.FC = () => {
       </DetailsSummary>
       <DetailsSummary title="Какими средствами и плагинами обычно делают анимацию 2D-персонажей?">
         <p>{/* fixme: паппет тулс, дюик ангелина и подобные плагины */}</p>
+      </DetailsSummary>
+      <DetailsSummary title="Как сделать слайдер с значением больше миллиона?">
+        <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Как мне точнее расставить ключи и маркеры под бит?">
         <p>{/* fixme: beat edit, sound keys или по вейвформе */}</p>
