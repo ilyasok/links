@@ -6,7 +6,7 @@ import {
   AdditionWarning,
 } from "../../../components/Additions";
 import ContentSwitcher from "../../../components/features/OperatingSystemFilter";
-import {YouTubeVideo} from "../../../components/ContentFigure";
+import {VideoFigure, YouTubeVideo} from "../../../components/ContentFigure";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 
 export const AEFromNewbies: React.FC = () => {
@@ -898,6 +898,33 @@ export const AEFromNewbies: React.FC = () => {
       </DetailsSummary>
       <DetailsSummary title="Почему первый кадр в композиции начинается не с нулевой секунды?">
         <p>{/* fixme: написать!! */}</p>
+      </DetailsSummary>
+      <DetailsSummary title="Почему не все параметры выравнивания текста доступны в окне Paragraph?">
+        {/* fixme: написать */}
+        <p>
+          Если вы создаёте текстовый слой простым нажатием на композицию, то вы создаёте
+          слой без ограничений на высоту и ширину. В таком случае как вы представляете
+          работу выравнивания текста по ширине, если оно не задано явно?
+        </p>
+        <p>
+          Чтобы "активировать" оставшиеся четыре параметра выравнивания текста - вам нужно
+          изначально создать слой в формате <mark className="ui">Paragraph Text</mark>.
+        </p>
+        <VideoFigure
+          styleClass="figure_windows-dark"
+          videoSrc="/images/aftereffects/create_paragraph_text.mp4"
+          caption="Создание Paragraph Text"
+        />
+        <p>
+          Или переконвертировать уже существующий текстовый слой в формат{" "}
+          <mark className="ui">Paragraph Text</mark>.
+        </p>
+        <VideoFigure
+          styleClass="figure_windows-dark"
+          videoSrc={"/images/aftereffects/convert_to_paragraph_text.mp4"}
+          caption="Конвертация текстового слоя в Paragraph Text"
+        />
+        <p></p>
       </DetailsSummary>
       <DetailsSummary title="Чем отличается однонодовая камера от двунодовой?">
         <p>{/* fixme: написать!! */}</p>
