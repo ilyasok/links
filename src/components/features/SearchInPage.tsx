@@ -1,6 +1,7 @@
 import {Search} from "@mui/icons-material";
 import {Modal} from "antd";
 import React, {createContext, useContext, useState} from "react";
+import {AdditionInfo, AdditionWarning} from "../Additions";
 
 interface SearchContextType {
   isOpen: boolean;
@@ -109,37 +110,36 @@ export const SearchInPage: React.FC = () => {
       footer={null}
       width={800}
     >
+      <AdditionWarning>
+        Функция поиска находится в разработке, возможны ошибки в работе.
+      </AdditionWarning>
       <input
+        className="search-input"
         type="text"
         value={query}
         onChange={(e) => handleSearch(e.target.value)}
-        placeholder="Найти..."
-        style={{
-          width: "100%",
-          padding: "10px",
-          border: "1px solid #ccc",
-          borderRadius: "5px",
-          marginBottom: "10px",
-        }}
+        placeholder="Найти контент по странице..."
       />
-      <div style={{maxHeight: "300px", overflowY: "auto"}}>
+      <div
+        className="search-results"
+        style={{maxHeight: "500px", overflowY: "auto"}}
+      >
         {results.length > 0 ? (
           results.map(({title, content, id}) => (
-            <div
-              key={id}
-              style={{borderBottom: "1px solid #ccc", padding: "10px 0"}}
-            >
+            <div key={id}>
               <a
                 href={`#${id}`}
                 onClick={handleLinkClick}
-                style={{textDecoration: "none", color: "#007BFF"}}
+                className="search-link"
               >
                 <p
+                  className="search-title"
                   dangerouslySetInnerHTML={{
-                    __html: highlightText(title, query),
+                    __html: highlightText(title.replace(/^[+-]+/, ""), query),
                   }}
                 ></p>
                 <p
+                  className="search-content"
                   dangerouslySetInnerHTML={{
                     __html: highlightText(content, query),
                   }}
@@ -148,7 +148,7 @@ export const SearchInPage: React.FC = () => {
             </div>
           ))
         ) : (
-          <p>Ничего не найдено.</p>
+          <p>Ничего не нашлось.</p>
         )}
       </div>
     </Modal>
