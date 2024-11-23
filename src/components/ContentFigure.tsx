@@ -105,7 +105,11 @@ const VideoFigure: React.FC<VideoFigureProps> = ({styleClass, videoSrc, caption}
               </div>
             </div>
           </div>
-          <video controls>
+          <video
+            controls
+            loop
+            preload="metadata"
+          >
             <source src={videoSrc} />
           </video>
         </div>
@@ -120,7 +124,11 @@ const VideoFigure: React.FC<VideoFigureProps> = ({styleClass, videoSrc, caption}
             </div>
             <figcaption>{caption}</figcaption>
           </div>
-          <video controls>
+          <video
+            controls
+            loop
+            preload="metadata"
+          >
             <source src={videoSrc} />
           </video>
         </div>
