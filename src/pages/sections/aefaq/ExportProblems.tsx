@@ -1,5 +1,6 @@
 import React from "react";
 import DetailsSummary from "../../../components/DetailsSummary";
+import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 
 export const AEExportProblems: React.FC = () => {
   return (
@@ -7,6 +8,7 @@ export const AEExportProblems: React.FC = () => {
       className="faq-content"
       id="export-problems"
     >
+      <GithubUpdateInfo filePath="src/pages/sections/aefaq/ExportProblems.tsx" />
       <DetailsSummary title="An unexpected error occurred while exporting a composition. Error code: 9988">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>

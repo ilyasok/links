@@ -1,10 +1,10 @@
 *,
 *::before,
 *::after {
-  padding: 0;
+  box-sizing: border-box;
   margin: 0;
   border: none;
-  box-sizing: border-box;
+  padding: 0;
 }
 
 article,
@@ -40,19 +40,19 @@ blockquote,
 dl,
 dd {
   margin: 0;
-  padding: 0;
-  font-size: inherit;
-  font-weight: inherit;
-  line-height: inherit;
-  color: inherit;
   background-color: transparent;
+  padding: 0;
+  color: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
 }
 
 a,
 a:link,
 a:visited {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 
 a:hover {
@@ -64,25 +64,25 @@ svg,
 video,
 canvas,
 audio {
-  max-width: 100%;
-  height: auto;
   display: block;
   vertical-align: middle;
   border: none;
+  max-width: 100%;
+  height: auto;
 }
 
 input,
 textarea,
 button,
 select {
-  font-family: inherit;
-  font-size: inherit;
-  color: inherit;
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  margin: 0;
   box-sizing: border-box;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
 }
 
 input::-ms-clear {
@@ -99,16 +99,16 @@ button:active {
 button,
 input[type="submit"] {
   display: inline-block;
-  background: none;
   cursor: pointer;
-  border: none;
   box-shadow: none;
+  border: none;
+  background: none;
   text-align: inherit;
 }
 
 button::-moz-focus-inner {
-  padding: 0;
   border: 0;
+  padding: 0;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -131,10 +131,10 @@ button,
 input,
 select,
 textarea {
-  font-family: inherit;
-  font-size: inherit;
-  color: inherit;
   background: none;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
 }
 
 legend {
@@ -152,8 +152,8 @@ textarea {
 }
 
 fieldset {
-  border: 0;
   margin: 0;
+  border: 0;
   padding: 0;
 }
 
@@ -166,10 +166,10 @@ table {
 caption,
 th,
 td {
-  text-align: left;
-  font-weight: normal;
   vertical-align: top;
   padding: 0;
+  font-weight: normal;
+  text-align: left;
 }
 
 th {
@@ -230,13 +230,12 @@ template {
   display: none;
 }
 
-
 sub,
 sup {
   position: relative;
+  vertical-align: baseline;
   font-size: 75%;
   line-height: 0;
-  vertical-align: baseline;
 }
 
 sub {
@@ -266,10 +265,10 @@ optgroup,
 select,
 textarea {
   margin: 0;
-  padding: 0;
   outline: none;
-  background-color: transparent;
-  color: inherit;
-  border: none;
   box-shadow: none;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  color: inherit;
 }

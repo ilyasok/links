@@ -1,13 +1,26 @@
 import React, {useEffect} from "react";
+import React, {useEffect} from "react";
 
 import {Header} from "../components/Header";
-import {Breadcrumb} from "antd";
+import {Breadcrumb, Divider} from "antd";
 import {Link} from "react-router-dom";
 import {AdditionWarning} from "../components/Additions";
 import {motion} from "framer-motion";
 import {Footer} from "../components/Footer";
 import CopyMark from "../components/features/CopyMark";
 import {SearchInPage, SearchProvider} from "../components/features/SearchInPage";
+// *: разделы prfaq:
+import {PRActions} from "./sections/prfaq/Actions";
+import {PRErrors} from "./sections/prfaq/Errors";
+import {PRExport} from "./sections/prfaq/Export";
+import {PRExportProblems} from "./sections/prfaq/ExportProblems";
+import {PRFromNewbies} from "./sections/prfaq/FromNewbies";
+import {PRImport} from "./sections/prfaq/Import";
+import {PRInstallProblems} from "./sections/prfaq/InstallProblems";
+import {PRInterface} from "./sections/prfaq/Interface";
+import {PRPerfomance} from "./sections/prfaq/Perfomance";
+import {PRTips} from "./sections/prfaq/Tips";
+import {PRWhereFind} from "./sections/prfaq/WhereFind";
 
 const PRFaQ = () => {
   useEffect(() => {

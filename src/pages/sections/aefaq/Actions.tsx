@@ -2,6 +2,7 @@ import React from "react";
 import DetailsSummary from "../../../components/DetailsSummary";
 import {VideoFigure, YouTubeVideo} from "../../../components/ContentFigure";
 import {AdditionInfo} from "../../../components/Additions";
+import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 
 export const AEActions: React.FC = () => {
   return (
@@ -9,6 +10,7 @@ export const AEActions: React.FC = () => {
       className="faq-content"
       id="actions"
     >
+      <GithubUpdateInfo filePath="src/pages/sections/aefaq/Actions.tsx" />
       <DetailsSummary title="Чем бы мне улучшить качество исходников?">
         <p>
           В настоящее время существует куча различных способов для улучшения качества
@@ -26,7 +28,7 @@ export const AEActions: React.FC = () => {
         </p>
         <YouTubeVideo
           styleClass="figure_browser-youtube"
-          link="https://www.youtube.com/embed/zbX7x8Oo_Uc"
+          link="zbX7x8Oo_Uc"
           caption="Topaz Video AI"
         />
         <p>
@@ -38,7 +40,7 @@ export const AEActions: React.FC = () => {
         </p>
         <YouTubeVideo
           styleClass="figure_browser-youtube"
-          link="https://www.youtube.com/embed/fTYcNP8ZdTE"
+          link="fTYcNP8ZdTE"
           caption="BCC UpRes ML"
         />
         <p>
@@ -53,7 +55,7 @@ export const AEActions: React.FC = () => {
         </p>
         <YouTubeVideo
           styleClass="figure_browser-youtube"
-          link="https://www.youtube.com/embed/VMaYdjWqRRg"
+          link="VMaYdjWqRRg"
           caption="Topaz Gigapixel AI"
         />
         <p>
@@ -77,7 +79,7 @@ export const AEActions: React.FC = () => {
         </p>
         <YouTubeVideo
           styleClass="figure_browser-youtube"
-          link="https://www.youtube.com/embed/woDDQ0xnt84"
+          link="woDDQ0xnt84"
           caption="Benvista Photozoom"
         />
         <AdditionInfo>
@@ -90,49 +92,178 @@ export const AEActions: React.FC = () => {
         </AdditionInfo>
       </DetailsSummary>
       <DetailsSummary title="Чем можно плавно замедлить видео?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>
+          Рано или поздно наступает момент, когда монтажёру или композеру нужно замедлить
+          видео так, чтобы оно было плавным, без рывков, имея у себя исходник с маленьким
+          количеством кадров в секунду. С нынешними технологиями выполнить задачу
+          &quot;плавного замедления видео&quot; стало ещё проще.
+        </p>
+        <p>
+          Для этого мы разберём популярные плагины и программы, позволяющие
+          интерполировать кадры между собой. Таким образом вы добавите лишних кадров в
+          секунду и позволите себе растягивать видео без мерзких пропусков кадров.
+        </p>
+        <p>
+          Первым плагином для <mark className="app">After Effects</mark> в этом списке
+          является <mark className="plugin">Twixtor</mark>. Он вышел достаточно давно,
+          хорошо зарекомендовал себя в монтаже и имеет много настроек.
+        </p>
+        <YouTubeVideo
+          styleClass="figure_browser-youtube"
+          link="EGZCNcQyvrE"
+          caption="Twixtor"
+        />
+        <p>
+          С относительно недавних пор в <mark className="plugin">BorisFX Continuum</mark>{" "}
+          тоже добавили некий аналог <mark className="plugin">Twixtor</mark> на основе ИИ.
+          Называется <mark className="plugin">BCC Retimer ML</mark> и в сравнении с{" "}
+          <mark className="plugin">Twixtor</mark> выдаёт гораздо лучшие результаты.
+        </p>
+        <YouTubeVideo
+          styleClass="figure_browser-youtube"
+          link="YraSxOpy1Qg"
+          caption="BCC Retimer ML"
+        />
+        <p>
+          Если вы не хотите использовать <mark className="app">After Effects</mark> для
+          замедления видео или если при использовании плагинов у вас всё тормозит, то
+          можно использовать сторонние программы, которые рендерят видео отдельно на ваш
+          диск с увеличенной частотой кадров за счёт интерполяции. Например,{" "}
+          <mark className="app">FlowFrames</mark>.
+        </p>
+        <YouTubeVideo
+          styleClass="figure_browser-youtube"
+          link="H8ISNjzDULw"
+          caption="FlowFrames"
+        />
+        <p>
+          Или <mark className="app">FrameGUI</mark>.
+        </p>
+        <YouTubeVideo
+          styleClass="figure_browser-youtube"
+          link="Axz_KwiqNmc"
+          caption="FrameGUI"
+        />
+        <p>
+          Ну или <mark className="app">Topaz Video AI</mark>. В этой программе также можно
+          улучшить качество исходников за счёт искусственного интеллекта.
+        </p>
+        <YouTubeVideo
+          styleClass="figure_browser-youtube"
+          link="591MqOooDAE"
+          caption="Topaz Video AI"
+        />
+        <AdditionInfo>
+          Действия на видео, приведённые выше, могут отличаться в зависимости от версии
+          программы или плагина. Некоторые плагины или программы вы можете скачать в
+          канале <a href="https://t.me/+Qd9xu7A4TeIwNzY6">склад стройматериалов</a> по
+          хештегам <mark>#twixtor</mark>, <mark>#continuum</mark> или <mark>#topaz</mark>.
+        </AdditionInfo>
+        <p>
+          Стандартными средствами <mark className="app">After Effects</mark> тоже можно
+          замедлить видео, правда результат будет не таким хорошим, как хотелось бы. Для
+          этого вам нужно добавить видео на таймлайн и замедлить его с помощью комбинации
+          клавиш <mark className="key">Ctrl + Alt + T</mark>. Эта комбинация включит
+          функцию <mark className="ui">Enable Time Remapping</mark> для слоя. После
+          изменения длины видео - выделите слой, нажмите на{" "}
+          <mark className="key">ПКМ</mark> и выберите в контекстном меню{" "}
+          <mark className="ui">Frame Blending &gt; Frame Mix или Pixel Motion</mark>.
+        </p>
       </DetailsSummary>
       <DetailsSummary title="Чем можно хорошо подавить шумы на видео?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>
+          Когда видео-исходник был снят в условиях малой освещенности или с высоким ISO -
+          вы неизбежно столкнётесь с цифровым шумом - дефектом изображения, возникающий
+          при съемке из-за несовершенства технологий сенсоров камер фотоаппаратов,
+          видеокамер и телефонов, а также из-за фотонной природы света. Особенно он
+          заметен на однотонных поверхностях - небо, кожа и в участках теней.
+        </p>
+        <p>
+          Полностью от шума избавиться сложно, но можно его существенно подавить с помощью
+          различных инструментов и плагинов. Одним из эффективных плагинов для уменьшения
+          шума (и мерцаний от искусственного освещения) является{" "}
+          <mark className="plugin">Neat Video</mark>. Плагин гибко настраивается и
+          поддерживает GPU-ускорение.
+        </p>
+        <YouTubeVideo
+          styleClass="figure_browser-youtube"
+          link="https://youtube.com/embed/mwSqzxApy-E"
+          caption="Neat Video"
+        />
+        <p>
+          У Red Giant тоже есть свой де-нойзер под названием{" "}
+          <mark className="plugin">Denoiser III</mark>, который находится в пакете
+          плагинов <mark className="plugin">Magic Bullet Suite</mark>.
+        </p>
+        <YouTubeVideo
+          styleClass="figure_browser-youtube"
+          link="PXCElU7HcX8"
+          caption="Denoiser III"
+        />
+        <p>
+          И Boris FX тоже не отстаёт от инструментов для подавления шумов. В пакете
+          плагинов <mark className="plugin">Boris FX Continuum</mark> тоже можно найти два
+          де-нойзера - <mark className="plugin">BCC DeNoise OBS</mark> на основе
+          алгоритмов и относительно новый <mark className="plugin">BCC+DeNoise ML</mark>,
+          основанный на машинном обучении.{" "}
+        </p>
+        <YouTubeVideo
+          styleClass="figure_browser-youtube"
+          link="https://youtube.com/embed/L1PeaTa13H4"
+          caption="BCC DeNoise ML"
+        />
+        <p>
+          Ну и куда же без Re:vision Effects с их <mark className="plugin">DE:Noise</mark>
+          .
+        </p>
+        <YouTubeVideo
+          styleClass="figure_browser-youtube"
+          link="tGIXeddCPQM"
+          caption="DE:Noise"
+        />
+        <p>
+          Если вы не хотите использовать сторонние плагины в своём проекте - вы можете
+          воспользоваться встроенным эффектом <mark className="plugin">Reduce Grain</mark>
+          .
+        </p>
       </DetailsSummary>
       <DetailsSummary title="Какими средствами обычно убирают зелёный или синий фон?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>{/* fixme: primatte keyer, стандартные плагины для кеинга */}</p>
       </DetailsSummary>
       <DetailsSummary title="Чем бы убрать белый или чёрный цвет у слоя?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>{/* fixme: extract, uni.unmult */}</p>
       </DetailsSummary>
       <DetailsSummary title="Как и чем можно прицепить слой к объекту на видео?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>{/* fixme: 3d camera tracking, mocha pro, tracking object */}</p>
       </DetailsSummary>
       <DetailsSummary title="Как мне сделать точки у шейпового слоя управляемыми с помощью 'нулевых слоёв'?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>{/* fixme: встроенный скрипт create path from nulls */}</p>
       </DetailsSummary>
       <DetailsSummary title="Как мне сделать 'прыгучую' анимацию нужного параметра?">
-        {/* fixme: про bouncy текста или положения. можно привести в пример motion tools pro где это есть */}
-        <p>{/* fixme: написать!! */}</p>
+        <p>
+          {/* fixme: про bouncy текста или положения. можно привести в пример motion tools pro где это есть */}
+        </p>
       </DetailsSummary>
       <DetailsSummary title="Как и чем сделать анимацию толщины variable-шрифта?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Чем бы красиво сделать анимацию появления слоя?">
-        {/* fixme: про фрактал нойз или autofill 2 */}
-        <p>{/* fixme: написать!! */}</p>
+        <p>{/* fixme: про фрактал нойз или autofill 2 */}</p>
       </DetailsSummary>
       <DetailsSummary title="Какими средствами и плагинами обычно делают анимацию 2D-персонажей?">
-        {/* fixme: паппет тулс, дюик ангелина и подобные плагины */}
+        <p>{/* fixme: паппет тулс, дюик ангелина и подобные плагины */}</p>
+      </DetailsSummary>
+      <DetailsSummary title="Как сделать слайдер с значением больше миллиона?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Как мне точнее расставить ключи и маркеры под бит?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>{/* fixme: beat edit, sound keys или по вейвформе */}</p>
       </DetailsSummary>
       <DetailsSummary title="Как мне распаковать пре-композицию?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>{/* fixme: сторонний плагин unprecompose */}</p>
       </DetailsSummary>
       <DetailsSummary title="Как сделать так, чтобы мой счётчик не дёргался при анимации числа?">
         <p>{/* fixme: написать про monospace шрифт через поворот */}</p>
-      </DetailsSummary>
-      <DetailsSummary title="Как привязать точки линии или фигуры к нулям?">
-        <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Как изменить параметры сразу нескольких композиций?">
         <p>{/* fixme: rd_compsetter */}</p>
@@ -141,7 +272,7 @@ export const AEActions: React.FC = () => {
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Как применить Adjustment Layer только на конкретные слои?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>{/* fixme: через маску в red giant supercomp */}</p>
       </DetailsSummary>
       <DetailsSummary title="Как сделать прозрачный фон у слоя с эффектом Saber?">
         <p>{/* fixme: написать!! */}</p>

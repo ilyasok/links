@@ -2,11 +2,10 @@
 
 .theme {
   &-modal {
-
     .title {
-      font-family: "Mulish", sans-serif;
-      font-size: 24px;
       font-weight: 700;
+      font-size: 24px;
+      font-family: "Mulish", sans-serif;
     }
   }
 
@@ -18,26 +17,25 @@
     }
 
     &-selected {
+      border-radius: 1000px;
       background-color: var(--accent);
 
       svg {
         fill: #fff;
       }
-
-      border-radius: 1000px;
     }
   }
 
   &-overlay {
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.5);
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 100;
   }
 }

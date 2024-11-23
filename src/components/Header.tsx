@@ -1,4 +1,3 @@
-// Header.tsx
 import {HomeRounded} from "@mui/icons-material";
 import React, {useEffect, useState} from "react";
 import {Link} from "react-router-dom";

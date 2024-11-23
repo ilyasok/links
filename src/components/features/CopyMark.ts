@@ -18,7 +18,6 @@ const copyToClipboard = (event?: MouseEvent) => {
         message.error("Ошибка при копировании текста в буфер обмена: " + error.message);
       });
   } else {
-    // Fallback for mobile devices or browsers that do not support the Clipboard API
     const textArea = document.createElement("textarea");
     textArea.value = textContent;
     Object.assign(textArea.style, {

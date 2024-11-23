@@ -6,7 +6,8 @@ import {
   AdditionWarning,
 } from "../../../components/Additions";
 import ContentSwitcher from "../../../components/features/OperatingSystemFilter";
-import {YouTubeVideo} from "../../../components/ContentFigure";
+import {VideoFigure, YouTubeVideo} from "../../../components/ContentFigure";
+import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 
 export const AEFromNewbies: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ export const AEFromNewbies: React.FC = () => {
       className="faq-content"
       id="from-newbies"
     >
+      <GithubUpdateInfo filePath="src/pages/sections/aefaq/FromNewbies.tsx" />
       <DetailsSummary title="Первый раз установил After Effects, с чего бы мне начать обучение?">
         {/* fixme: больше курсов: по типу вольницы, видеосмайлов, панковского и тд и тп */}
         <p>
@@ -34,7 +36,6 @@ export const AEFromNewbies: React.FC = () => {
           link="https://www.youtube.com/embed/nogR7eyhYug"
           caption="Видеоплеер YouTube"
         />
-
         <p>
           Если вы уже знакомы с интерфейсом программы, но испытываете трудности с
           насмотренностью - изучите каналы на YouTube ниже.
@@ -44,6 +45,16 @@ export const AEFromNewbies: React.FC = () => {
           <a href="https://www.youtube.com/@BenMarriott">Ben Marriott</a>{" "}
           <a href="https://www.youtube.com/@AEPlug">AEPlug</a>{" "}
           <a href="https://www.youtube.com/@JakeInMotion">Jake In Motion</a>
+        </div>
+        <p>Могу ещё порекомендовать полноценные курсы от:</p>
+        <div className="flexible-links">
+          <a href="https://cloudlessons.ru/v/410/">Супер After Effects от VideoSmile</a>
+          <a href="https://volnitsa.zenclass.ru/public/course/4b9a6429-5c06-4f91-a73b-312bc57b9e35">
+            Быстрый вход в After Effects от Вольница
+          </a>
+          <a href="https://volnitsa.zenclass.ru/public/course/9221df49-3262-444e-b269-8b3bfd496de2">
+            SUPER SILA FOREVER от Вольница
+          </a>
         </div>
         <p style={{textAlign: "center"}}>
           Надеюсь что вы найдете для себя что-то полезное. Удачи в начинаниях!
@@ -556,13 +567,16 @@ export const AEFromNewbies: React.FC = () => {
           <li>
             <mark className="word">Редьюс</mark> - функция{" "}
             <mark className="ui">Reduce Project</mark> которая облегчает ваш проект за
-            счёт удаления неиспользованных файлов. Сделать это можно с помощью{" "}
+            счёт удаления всех объектов, кроме выбранной композиции в окне{" "}
+            <mark className="ui">Project</mark>. Сделать это можно с помощью{" "}
             <mark className="ui">File &gt; Dependencies &gt; Reduce Project</mark>.
             <AdditionWarning>
               Если вы первый раз пользуетесь этой функцией - создайте на крайний случай
               копию файла вашего проекта, вдруг эта функция удалит не те файлы, как
               планировалось.
             </AdditionWarning>
+            Также существует пункт <mark className="ui">Remove Unused Footage</mark> для
+            удаления неиспользованных исходников в вашем проекте.
           </li>
           <li>
             <mark className="word">Рендер</mark> - процесс генерации кадров и дальнейшей
@@ -841,16 +855,7 @@ export const AEFromNewbies: React.FC = () => {
       <DetailsSummary title="Как найти нужный эффект на английском языке, если у меня стоит русский язык в After Effects?">
         <p>{/* про колхозный способ двойного языка и про таблицу эффектов */}</p>
       </DetailsSummary>
-      <DetailsSummary title="Зачем мне советуют не менять расположение установки After Effects? А если у меня нет места на жёстком диске?">
-        <p>{/* fixme: написать!! */}</p>
-      </DetailsSummary>
       <DetailsSummary title="Почему предпросмотр проигрывается в хреновом качестве, в пикселях?">
-        <p>{/* fixme: написать!! */}</p>
-      </DetailsSummary>
-      <DetailsSummary title="Чем отличается Mocha AE от Mocha Pro?">
-        <p>{/* fixme: написать!! */}</p>
-      </DetailsSummary>
-      <DetailsSummary title="Где-то слышал про секретные настройки, что это такое?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Что такое Null Object и как с ним работать?">
@@ -859,7 +864,94 @@ export const AEFromNewbies: React.FC = () => {
       <DetailsSummary title="Что такое Adjustment Layer и для чего он нужен?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
+      <DetailsSummary title="Почему у меня отсутствует звук в предпросмотре?">
+        <p>{/* fixme: написать!! */}</p>
+      </DetailsSummary>
+      <DetailsSummary title="Применяю эффект, например Glow, но он обрезается. Как расширить действие эффекта?">
+        <p>{/* fixme: написать!! ПЕРЕМЕСТИТЬ В ДРУГОЙ ПУНКТ */}</p>
+      </DetailsSummary>
+      <DetailsSummary title="Не могу изменить параметры наложения у 3D-слоёв. Что делать?">
+        <p>{/* fixme: написать!! */}</p>
+      </DetailsSummary>
+      <DetailsSummary title="Почему не исчезает фон при использовании режимов наложения?">
+        <p>{/* под слоём с включенным режимом наложения должен быть ещё один слой */}</p>
+      </DetailsSummary>
+      <DetailsSummary title="Продублировал композицию на таймлайне, но копия зависит от оригинала. Как сделать композиции независимыми друг от друга?">
+        <p>
+          Копируя композицию с помощью комбинации клавиш{" "}
+          <mark className="key">Ctrl + D</mark> на таймлайне - вы клонируете ссылку на
+          одну и ту же композицию, а не создаёте новую. Таким образом изменения в
+          "продублированной композиции" будут отражаться и в оригинале.
+        </p>
+        <p>
+          Для того, чтобы сделать композиции независимыми - достаточно нужную композицию
+          клонировать в окне <mark className="ui">Project</mark>.
+        </p>
+        <VideoFigure
+          styleClass="figure_windows-dark"
+          videoSrc={"/images/aftereffects/duplicate_composition.mp4"}
+          caption="Правильное клонирование композиции"
+        />
+        <p>
+          Если вам нужно клонировать одну и ту же композицию с указанием нужного
+          количества копий, обновлением выражений, дублированием футажей или группировкой
+          в одну папку - воспользуйтесь бесплатным<sup>*</sup> скриптом{" "}
+          <a href="https://aescripts.com/true-comp-duplicator/">True Comp Duplicator</a>{" "}
+          на aescripts.
+        </p>
+        <AdditionInfo>
+          <sup>*</sup>Чтобы скачать скрипт бесплатно - зарегистрируйтесь на сайте,
+          вернитесь на страницу с плагином, установите цену 0 в{" "}
+          <mark className="ui">Name Your Own Price</mark>, добавьте его в корзину и
+          подтвердите заказ. Нужный плагин появится в вашем профиле.
+        </AdditionInfo>
+      </DetailsSummary>
+      <DetailsSummary title="Переместил слой из одной композиции в другую, но оно ушло за пределы моей композиции. Как его вернуть на своё место?">
+        <p>{/* fixme: написать!! */}</p>
+      </DetailsSummary>
+      <DetailsSummary title="Почему первый кадр в композиции начинается не с нулевой секунды?">
+        <p>{/* fixme: написать!! */}</p>
+      </DetailsSummary>
+      <DetailsSummary title="Почему не все параметры выравнивания текста доступны в окне Paragraph?">
+        {/* fixme: написать */}
+        <p>
+          Если вы создаёте текстовый слой простым нажатием на композицию, то вы создаёте
+          слой без ограничений на высоту и ширину. В таком случае как вы представляете
+          работу выравнивания текста по ширине, если оно не задано явно?
+        </p>
+        <p>
+          Чтобы "активировать" оставшиеся четыре параметра выравнивания текста - вам нужно
+          изначально создать слой в формате <mark className="ui">Paragraph Text</mark>.
+        </p>
+        <VideoFigure
+          styleClass="figure_windows-dark"
+          videoSrc="/images/aftereffects/create_paragraph_text.mp4"
+          caption="Создание Paragraph Text"
+        />
+        <p>
+          Или переконвертировать уже существующий текстовый слой в формат{" "}
+          <mark className="ui">Paragraph Text</mark>.
+        </p>
+        <VideoFigure
+          styleClass="figure_windows-dark"
+          videoSrc={"/images/aftereffects/convert_to_paragraph_text.mp4"}
+          caption="Конвертация текстового слоя в Paragraph Text"
+        />
+        <p></p>
+      </DetailsSummary>
+      <DetailsSummary title="Чем отличается однонодовая камера от двунодовой?">
+        <p>{/* fixme: написать!! */}</p>
+      </DetailsSummary>
+      <DetailsSummary title="Чем отличается Mocha AE от Mocha Pro?">
+        <p>{/* fixme: написать!! */}</p>
+      </DetailsSummary>
       <DetailsSummary title="Что за решётка у слоя на таймлайне и для чего нужен Guides Layer?">
+        <p>{/* fixme: написать!! */}</p>
+      </DetailsSummary>
+      <DetailsSummary title="Делал проект, но я его изначально не сохранял. Вдруг After Effects вылетел. Возможно ли восстановить проект?">
+        <p>{/* fixme: написать!! */}</p>
+      </DetailsSummary>
+      <DetailsSummary title="Почему After Effects иногда сам меняет начертание шрифта?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
     </div>

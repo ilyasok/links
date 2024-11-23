@@ -1,5 +1,6 @@
 import React from "react";
 import DetailsSummary from "../../../components/DetailsSummary";
+import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 
 export const AEPerfomance: React.FC = () => {
   return (
@@ -7,6 +8,7 @@ export const AEPerfomance: React.FC = () => {
       className="faq-content"
       id="perfomance"
     >
+      <GithubUpdateInfo filePath="src/pages/sections/aefaq/Perfomance.tsx" />
       <DetailsSummary title="Почему у меня, б%@#ь, лагает е&#!%й After Effects, с$%а?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
@@ -18,12 +20,6 @@ export const AEPerfomance: React.FC = () => {
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Предпросмотр идёт как-будто в slow-motion, что делать?">
-        <p>{/* fixme: написать!! */}</p>
-      </DetailsSummary>
-      <DetailsSummary title='Часто появляется ошибка 23::40 или окно "Out of Memory", "After Effects has unexpectedly run out of memory and cannot complete this export" или "Low memory warning. RAM use has been extended for previews"'>
-        <p>{/* fixme: написать!! */}</p>
-      </DetailsSummary>
-      <DetailsSummary title="After Effects has encountered a failure related to GPU-enabled effects from this frame. This is likely because your GPU is out of memory.">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
     </div>

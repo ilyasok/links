@@ -6,6 +6,7 @@ import {
   HideSourceRounded,
   LightModeRounded,
   FormatColorFillOutlined,
+  RestartAlt,
 } from "@mui/icons-material";
 
 type Theme = "light" | "dark" | "system";
@@ -149,6 +150,19 @@ const ThemeModal: React.FC<ThemeModalProps> = ({isModalOpen, closeModal}) => {
           onChange={(value) => setAccentHue(value)}
           style={{flex: "1 1 auto", width: "100%"}}
         />
+        <button
+          onClick={() => setAccentHue(210)}
+          style={{
+            width: "28px",
+            height: "28px",
+            backgroundColor: "transparent",
+            border: "none",
+            padding: 0,
+            cursor: "pointer",
+          }}
+        >
+          <RestartAlt />
+        </button>
       </div>
     </Modal>
   );

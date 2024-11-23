@@ -11,6 +11,7 @@ const NotFound = lazy(() => import("./pages/notFound"));
 const AEFaQ = lazy(() => import("./pages/aefaqPage"));
 const PRFaQ = lazy(() => import("./pages/prfaqPage"));
 const PSFaQ = lazy(() => import("./pages/psfaqPage"));
+const AEExpressionPage = lazy(() => import("./pages/aeexprfaqPage"));
 
 const RedirectHtml = () => {
   const location = useLocation();
@@ -74,6 +75,10 @@ export const App = () => {
             <Route
               path="/psfaq"
               element={<PSFaQ />}
+            />
+            <Route
+              path="/aeexprfaq"
+              element={<AEExpressionPage />}
             />
             <Route
               path="/rules"

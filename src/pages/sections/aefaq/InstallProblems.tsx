@@ -6,12 +6,15 @@ import {
 } from "../../../components/Additions";
 import DetailsSummary from "../../../components/DetailsSummary";
 import ContentSwitcher from "../../../components/features/OperatingSystemFilter";
+import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
+import {ImageFigure, YouTubeVideo} from "../../../components/ContentFigure";
 export const AEInstallProblems: React.FC = () => {
   return (
     <div
       className="faq-content"
       id="install-problems"
     >
+      <GithubUpdateInfo filePath="src/pages/sections/aefaq/InstallProblems.tsx" />
       <DetailsSummary title="Забыли положить инструкцию для установки рядом с файлами, куда что кидать?">
         <AdditionWarning>
           Прежде чем использовать <mark className="file">.aep</mark> и{" "}
@@ -144,7 +147,7 @@ export const AEInstallProblems: React.FC = () => {
                 <mark className="path">
                   C:\Program Files (x86)\Common Files\Adobe\CEP\extensions
                 </mark>{" "}
-                и после этого применить{" "}
+                (если такой папки нет - создайте) и после этого применить{" "}
                 <a
                   download
                   href="files/Enable Extensions Adobe.reg"
@@ -354,14 +357,11 @@ export const AEInstallProblems: React.FC = () => {
                 и начать распаковку, например с помощью <mark>drag&apos;n&apos;drop</mark>{" "}
                 в нужное место или кнопки <mark className="ui">Распаковать</mark>.
               </p>
-              <iframe
-                loading="lazy"
-                src="https://www.youtube.com/embed/z7n6fUMYX9Y?si=uTH_JKjLCHFNpmMb"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              ></iframe>
+              <YouTubeVideo
+                styleClass="figure_browser-youtube"
+                link="z7n6fUMYX9Y"
+                caption="WinRAR"
+              />
             </div>
           }
           macContent={
@@ -374,7 +374,7 @@ export const AEInstallProblems: React.FC = () => {
                 >
                   keka
                 </a>
-                . Он поддерживает кучу различных форматов для распаковки, например{" "}
+                . Он поддерживает кучу различных форматов архивов для распаковки, например{" "}
                 <mark className="file">.zip</mark> <mark className="file">.7z</mark>,{" "}
                 <mark className="file">.rar</mark>, <mark className="file">.tar</mark> и{" "}
                 <mark className="file">.iso</mark>. После установки этой программы вы
@@ -384,31 +384,33 @@ export const AEInstallProblems: React.FC = () => {
                 </a>{" "}
                 ниже.
               </p>
-              <div style={{display: "flex", flexWrap: "wrap", justifyContent: "center"}}>
-                <figure className="figure_windows-light">
-                  <figcaption>Распаковка с помощью открытого окна keka</figcaption>
-                  <img
-                    loading="lazy"
-                    src="https://github.com/aonez/Keka/raw/master/Wiki/Images/Animated/extract-window.gif"
-                    alt="Распаковка с помощью открытого окна keka"
-                  />
-                </figure>
-                <figure className="figure_windows-light">
-                  <figcaption>Распаковка через контекстное меню</figcaption>
-                  <img
-                    loading="lazy"
-                    src="https://github.com/aonez/Keka/raw/master/Wiki/Images/Animated/extract-context-menu.gif"
-                    alt="Распаковка через контекстное меню"
-                  />
-                </figure>
-                <figure className="figure_windows-light">
-                  <figcaption>Распаковка через иконку keka в Dock-меню</figcaption>
-                  <img
-                    loading="lazy"
-                    src="https://github.com/aonez/Keka/raw/master/Wiki/Images/Animated/extract-dock.gif"
-                    alt="Распаковка через иконку keka в Dock-меню"
-                  />
-                </figure>
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+                  gap: "10px",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <ImageFigure
+                  styleClass="figure_macos-light"
+                  imgSrc="https://github.com/aonez/Keka/raw/master/Wiki/Images/Animated/extract-context-menu.gif"
+                  imgTitle="Распаковка через контекстное меню"
+                  caption="Распаковка через контекстное меню"
+                />
+                <ImageFigure
+                  styleClass="figure_macos-light"
+                  imgSrc="https://github.com/aonez/Keka/raw/master/Wiki/Images/Animated/extract-window.gif"
+                  imgTitle="Распаковка с помощью открытого окна keka"
+                  caption="Распаковка с помощью открытого окна keka"
+                />
+                <ImageFigure
+                  styleClass="figure_macos-light"
+                  imgSrc="https://github.com/aonez/Keka/raw/master/Wiki/Images/Animated/extract-dock.gif"
+                  imgTitle="Распаковка через иконку keka в Dock-меню"
+                  caption="Распаковка через иконку keka в Dock-меню"
+                />
               </div>
               <p>
                 Также вы можете установить данную утилиту как программу для распаковки
@@ -423,6 +425,9 @@ export const AEInstallProblems: React.FC = () => {
             </div>
           }
         />
+      </DetailsSummary>
+      <DetailsSummary title="Зачем мне советуют не менять расположение After Effects при установке? А если у меня нет места на жёстком диске?">
+        <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Распаковал и установил плагин, а мой антивирус решил его съесть. Действительно ли в нём может быть вирус?">
         <p>{/* fixme: написать!! */}</p>
@@ -707,6 +712,12 @@ export const AEInstallProblems: React.FC = () => {
           <mark className="file">.exe</mark>, <mark className="file">.msi</mark> и
           подобных установочных файлов.
         </p>
+      </DetailsSummary>
+      <DetailsSummary title="Установил плагин с помощью установщика, а я его не вижу в After Effects">
+        <p>{/* fixme: написать!! */}</p>
+      </DetailsSummary>
+      <DetailsSummary title="Установил плагин, но при его применении вылазают красные кресты или надписи про отсутствие лицензии">
+        <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
     </div>
   );

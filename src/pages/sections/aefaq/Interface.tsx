@@ -1,5 +1,6 @@
 import React from "react";
 import DetailsSummary from "../../../components/DetailsSummary";
+import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 
 export const AEInterface: React.FC = () => {
   return (
@@ -7,10 +8,23 @@ export const AEInterface: React.FC = () => {
       className="faq-content"
       id="interface"
     >
+      <GithubUpdateInfo filePath="src/pages/sections/aefaq/Interface.tsx" />
       <DetailsSummary title="Случайно закрыл окно в интерфейсе, как мне его вернуть?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
+      <DetailsSummary title="Как мне прикрепить нужное окно в рабочее пространство программы?">
+        <p>{/* fixme: написать */}</p>
+      </DetailsSummary>
+      <DetailsSummary title="Почему я не могу прикрепить окно скрипта?">
+        <p>{/* fixme: написать */}</p>
+      </DetailsSummary>
+      <DetailsSummary title="Как поставить несколько окон во вкладки или расположить их по строкам?">
+        <p>{/* fixme: написать!! */}</p>
+      </DetailsSummary>
       <DetailsSummary title="Пропали нужные переключатели и колонки на таймлайне. Как мне их вернуть?">
+        <p>{/* fixme: написать!! */}</p>
+      </DetailsSummary>
+      <DetailsSummary title="Компьютер во время работы упал в BSOD и испортил мне настройки. Как мне их восстановить?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title='У меня график скорости отличается от того, что у туториала. Как мне сделать "нормальный вид" графика?'>
@@ -50,38 +64,33 @@ export const AEInterface: React.FC = () => {
       <DetailsSummary title="У меня есть два ключа с одинаковым значением, но между ними всё равно идёт какая-то анимация. Как её убрать?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
-      <DetailsSummary title="Применяю эффект, например Glow, но он обрезается. Как расширить действие эффекта?">
-        <p>{/* fixme: написать!! ПЕРЕМЕСТИТЬ В ДРУГОЙ ПУНКТ */}</p>
-      </DetailsSummary>
-      <DetailsSummary title="Не могу изменить параметры наложения у 3D-слоёв. Что делать?">
-        <p>{/* fixme: написать!! */}</p>
-      </DetailsSummary>
-      <DetailsSummary title="Почему не исчезает фон при использовании режимов наложения?">
-        <p>{/* под слоём с включенным режимом наложения должен быть ещё один слой */}</p>
-      </DetailsSummary>
       <DetailsSummary title="Не выделяется объект в Rotobrush. Что делать?">
         <p>{/* fixme: баг кролика в 2019 */}</p>
       </DetailsSummary>
-      <DetailsSummary title="Продублировал композицию на таймлайне, но копия зависит от оригинала. Как сделать композиции независимыми друг от друга?">
-        <p>{/* fixme: написать!! */}</p>
-      </DetailsSummary>
-
-      <DetailsSummary title="Хочу сохранить один кадр как фотографию. Чем это можно сделать?">
-        <p>{/* fixme: написать!! */}</p>
-      </DetailsSummary>
-      <DetailsSummary title="Переместил слой из одной композиции в другую, но оно ушло за пределы моей композиции. Как его вернуть на своё место?">
-        <p>{/* fixme: написать!! */}</p>
-      </DetailsSummary>
-      <DetailsSummary title="Почему первый кадр в композиции начинается не с нулевой секунды?">
-        <p>{/* fixme: написать!! */}</p>
-      </DetailsSummary>
-      <DetailsSummary title="Чем отличается однонодовая камера от двунодовой?">
-        <p>{/* fixme: написать!! */}</p>
-      </DetailsSummary>
+      
       <DetailsSummary title="Как отключить экран со списком недавних проектов при запуске?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>
+          Иногда при открытии <mark className="app">After Effects</mark> открывается
+          домашнее окно с приветствием и списком недавних проектов. На некоторых
+          устройствах открытие данного окна занимает довольно долгое время. За это время
+          пользователь мог бы создать новую композицию и начать работу. К счастью это окно
+          можно отключить.
+        </p>
+        <p>
+          Для отключения стартового окна со списком недавних проектов - откройте настройки{" "}
+          <mark className="app">After Effects</mark> с помощью комбинации клавиш{" "}
+          <mark className="key">Ctrl + Alt + ; (Ж)</mark>, перейдите в раздел{" "}
+          <mark className="ui">Startup & Repair</mark> и выключите пункт{" "}
+          <mark className="ui">Enable Home Screen</mark>.
+        </p>
       </DetailsSummary>
       <DetailsSummary title="Как изменить акцентный цвет интерфейса программы?">
+        <p>{/* fixme: написать!! */}</p>
+      </DetailsSummary>
+      <DetailsSummary title="Как изменить картинку во время запуска программы?">
+        <p>{/* fixme: написать!! */}</p>
+      </DetailsSummary>
+      <DetailsSummary title="Где-то слышал про секретные настройки, что это такое?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
     </div>

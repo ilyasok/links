@@ -6,7 +6,8 @@ import {
   BlockRounded,
   BusinessCenterRounded,
   CarRepairRounded,
-  DevicesRounded,
+  DesktopWindowsRounded,
+  DevicesOtherRounded,
   DomainOutlined,
   Download,
   FormatListBulletedOutlined,
@@ -81,10 +82,10 @@ const Links = () => {
               description="Базарим за цвета и обработку изображений в  Photoshop"
             />
             <LinkInAppCard
-              href="/aeexpressions"
+              href="/aeexprfaq"
               icon={<TerminalRounded />}
-              name="aeexpressions"
-              description="Раздел с популярными выражениями в After Effects"
+              name="aeexprfaq (not-ready)"
+              description="Шпаргалка по использованию выражений в After Effects"
             />
           </div>
           <Divider>Наши каналы</Divider>
@@ -114,12 +115,6 @@ const Links = () => {
               description="Приватный канал с различными обучающими курсами"
             />
             <LinkCard
-              href="https://t.me/HiStockBot?start=509060394"
-              icon={<SmartToyRounded />}
-              name="HiStockBot"
-              description="Бот для покупки шаблонов с Envato Element и других сервисов"
-            />
-            <LinkCard
               href="https://t.me/+Qd9xu7A4TeIwNzY6"
               icon={<HandymanRounded />}
               name="склад стройматериалов"
@@ -129,7 +124,7 @@ const Links = () => {
               href="https://t.me/+gSmpjWyhd5w3ZGFi"
               icon={<CarRepairRounded />}
               name="купить запчасти на форд фокус"
-              description="невошедшее в основную идею склада стройматериалов"
+              description="невошедшее в стройматериалы на тематику операционных систем"
             />
             <LinkCard
               href="https://t.me/+ZqiaMfQRFgM4YmEy"
@@ -139,8 +134,13 @@ const Links = () => {
             />
           </div>
           <Divider>Сервисы</Divider>
-          {/* ezgif, скачивание шаттера, скачивание медиаинфо и аналогичное по списку */}
           <div className="links-grid">
+            <LinkCard
+              href="https://t.me/HiStockBot?start=509060394"
+              icon={<SmartToyRounded />}
+              name="HiStockBot"
+              description="Бот для покупки шаблонов с Envato Element и других сервисов"
+            />
             <LinkCard
               href="https://ezgif.com/"
               icon={<Gif />}
@@ -187,9 +187,15 @@ const Links = () => {
             />
             <LinkCard
               href="https://t.me/technicalchat"
-              icon={<DevicesRounded />}
+              icon={<DevicesOtherRounded />}
               name="Technical Chat"
               description="Обсуждаем компьютерные технологии и проблемы"
+            />
+            <LinkCard
+              href="https://t.me/HARD_TALK"
+              icon={<DesktopWindowsRounded />}
+              name="HARD_TALK"
+              description="Обсуждаем компьютерное железо в тяжелых задачах"
             />
             <LinkCard
               href="https://t.me/ru_montage"
@@ -274,7 +280,9 @@ const Links = () => {
           <AdditionDanger>
             Если вас просят перевести гарантийный взнос, деньги на &quot;площадку для
             фрилансеров&quot; или оформить банковскую карту для &quot;зарплаты&quot; -
-            сразу прекращайте диалог. Остерегайтесь мошенников!{" "}
+            сразу прекращайте диалог. Также проверяйте профиль заказчика или исполнителя,
+            если у него три фото подряд установлены в одно и тоже время - это явный
+            признак бота. Остерегайтесь мошенников!{" "}
             <a
               href="https://www.sberbank.ru/ru/person/kibrary/articles/moshenniki-atakuyut-frilanserov-kak-ne-popast-v-lovushku"
               title={`Памятка от Сбербанка: "Как не попасться в ловушку мошенников на фрилансе"`}

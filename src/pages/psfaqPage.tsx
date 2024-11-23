@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 
-import {Breadcrumb} from "antd";
+import {Breadcrumb, Divider} from "antd";
 import {Link} from "react-router-dom";
 import {AdditionWarning} from "../components/Additions";
 import {Header} from "../components/Header";
@@ -8,6 +8,17 @@ import {motion} from "framer-motion";
 import {Footer} from "../components/Footer";
 import CopyMark from "../components/features/CopyMark";
 import {SearchInPage, SearchProvider} from "../components/features/SearchInPage";
+// *: разделы psfaq:
+import {PSActions} from "./sections/psfaq/Actions";
+import {PSErrors} from "./sections/psfaq/Errors";
+import {PSExport} from "./sections/psfaq/Export";
+import {PSExportProblems} from "./sections/psfaq/ExportProblems";
+import {PSFromNewbies} from "./sections/psfaq/FromNewbies";
+import {PSImport} from "./sections/psfaq/Import";
+import {PSInstallProblems} from "./sections/psfaq/InstallProblems";
+import {PSInterface} from "./sections/psfaq/Interface";
+import {PSPerfomance} from "./sections/psfaq/Perfomance";
+import {PSWhereFind} from "./sections/psfaq/WhereFind";
 const PSFaQ = () => {
   useEffect(() => {
     CopyMark.enableAutoCopy();
