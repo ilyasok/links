@@ -1,15 +1,12 @@
 @import "variables";
 
 table {
-  max-width: 1000px;
   margin: 0 auto;
-  background-color: var(--table_background);
   border-radius: $roundness;
-
   border-collapse: collapse;
+  background-color: var(--table_background);
+  max-width: 1000px;
   font-size: clamp(13px, 1.5vw, 15px);
-
-
 }
 
 @media (max-width: 350px) {
@@ -26,11 +23,10 @@ table {
 
 td,
 th {
+  vertical-align: middle;
+  border: 1px solid var(--table_background-border);
   padding: 5px 10px;
   text-align: center;
-  vertical-align: middle;
-
-  border: 1px solid var(--table_background-border);
 }
 
 td:first-child,

@@ -5,10 +5,15 @@
   &-info,
   &-warning,
   &-danger {
-    font-size: 15px;
-    padding: 10px 15px;
-    border-radius: $roundness;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
     margin-block: 10px;
+    border-radius: $roundness;
+    padding: 10px 15px;
+    font-size: 15px;
+    line-height: 1.5;
 
     &:first-child {
       margin-top: 0;
@@ -17,8 +22,6 @@
     &:last-child {
       margin-bottom: 0;
     }
-
-    line-height: 1.5;
 
     a {
       font-weight: 700;
@@ -30,35 +33,29 @@
       font-style: italic;
     }
 
-
     li {
-      list-style-type: decimal;
-      margin-block: 5px;
-      padding-block: 0;
-      padding-inline-start: 2px;
       margin-inline-start: 20px;
+      margin-block: 5px;
+      padding-inline-start: 2px;
+      padding-block: 0;
+      list-style-type: decimal;
     }
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 15px;
   }
 
   &-info {
-    background-color: var(--addition_info);
     border: 1px solid var(--addition_info-border);
+    background-color: var(--addition_info);
     color: var(--addition_info-text);
 
     .change_os {
-      border-radius: $roundness*0.5;
       margin-inline: 5px;
-      padding: 5px;
-      text-align: center;
-      line-height: 1.25;
-      background-color: var(--addition_info-mark);
       border: 1px solid var(--addition_info-border);
+      border-radius: $roundness*0.5;
+      background-color: var(--addition_info-mark);
+      padding: 5px;
       color: var(--addition_info-text);
+      line-height: 1.25;
+      text-align: center;
     }
 
     a {
@@ -66,15 +63,15 @@
     }
 
     mark {
-      background-color: var(--addition_info-mark);
       border: 1px solid var(--addition_info-border);
+      background-color: var(--addition_info-mark);
       color: var(--addition_info-text);
     }
   }
 
   &-warning {
-    background-color: var(--addition_warning);
     border: 1px solid var(--addition_warning-border);
+    background-color: var(--addition_warning);
     color: var(--addition_warning-text);
 
     a {
@@ -82,15 +79,15 @@
     }
 
     mark {
-      background-color: var(--addition_warning-mark);
       border: 1px solid var(--addition_warning-border);
+      background-color: var(--addition_warning-mark);
       color: var(--addition_warning-text);
     }
   }
 
   &-danger {
-    background-color: var(--addition_danger);
     border: 1px solid var(--addition_danger-border);
+    background-color: var(--addition_danger);
     color: var(--addition_danger-text);
 
     a {
@@ -98,8 +95,8 @@
     }
 
     mark {
-      background-color: var(--addition_danger-mark);
       border: 1px solid var(--addition_danger-border);
+      background-color: var(--addition_danger-mark);
       color: var(--addition_danger-text);
     }
   }

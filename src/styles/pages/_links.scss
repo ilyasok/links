@@ -8,23 +8,23 @@
   max-width: 1400px;
 
   &-button {
-    flex: 1 1 auto;
     display: flex;
+    flex: 1 1 auto;
     flex-direction: column;
-    align-items: left;
     justify-content: center;
-    background-color: var(--links_background);
+    align-items: left;
+    transition: background-color 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    box-shadow: 0 5px 5px 0 var(--shadow);
+    border: 1px solid var(--links_border);
     border-radius: $roundness;
+    background-color: var(--links_background);
     padding-inline: 15px;
     padding-block: 10px;
     height: 100%;
-    box-shadow: 0 5px 5px 0 var(--shadow);
-    border: 1px solid var(--links_border);
-    transition: background-color 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 
     &:hover {
-      cursor: pointer;
       z-index: 15;
+      cursor: pointer;
       background-color: var(--links_hover);
       // transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1)
     }
@@ -36,30 +36,30 @@
       max-height: fit-content;
 
       .icon {
-        path {
-          margin: auto;
-        }
-
+        flex-shrink: 0;
         vertical-align: middle;
         margin-inline-end: 8px;
-        flex-shrink: 0;
         width: 24px;
         height: 24px;
         color: var(--accent);
+
+        path {
+          margin: auto;
+        }
       }
 
       .name {
-        font-size: 18px;
-        font-family: "Mulish", sans-serif;
         color: var(--accent);
         font-weight: 700;
+        font-size: 18px;
+        font-family: "Mulish", sans-serif;
       }
     }
 
     .description {
-      font-size: 14px;
       opacity: 80%;
       margin-block-start: 5px;
+      font-size: 14px;
     }
   }
 
