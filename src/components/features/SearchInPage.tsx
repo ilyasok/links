@@ -52,14 +52,18 @@ export const SearchInPage: React.FC = () => {
     const details = document.querySelectorAll("details");
     const data: {title: string; content: string; id: string}[] = [];
 
-    details.forEach((detail, index) => {
-      const title = detail.querySelector("summary")?.textContent || "";
+    details.forEach((detail) => {
+      const summary = detail.querySelector("summary");
+      if (!summary) return;
+
+      const id = summary.getAttribute("id");
+      if (!id) return;
+
+      const title = summary.textContent || "";
       const content =
         Array.from(detail.querySelectorAll<HTMLLIElement | HTMLParagraphElement>("p, li"))
           .map((el) => el.textContent || "")
           .join(" ") || "";
-      const id = `detail-${index}`;
-      detail.setAttribute("id", id);
 
       if (title || content) {
         data.push({title, content, id});
@@ -94,6 +98,10 @@ export const SearchInPage: React.FC = () => {
     return text.replace(regex, "<mark>$1</mark>");
   };
 
+  const handleLinkClick = () => {
+    closeModal();
+  };
+
   return (
     <Modal
       open={isOpen}
@@ -123,6 +131,7 @@ export const SearchInPage: React.FC = () => {
             >
               <a
                 href={`#${id}`}
+                onClick={handleLinkClick}
                 style={{textDecoration: "none", color: "#007BFF"}}
               >
                 <p
