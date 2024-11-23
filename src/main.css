@@ -1191,6 +1191,9 @@ img {
   font-size: clamp(16px, 12vw, 20px);
   font-family: "JetBrains Mono", monospace;
 }
+.header-right {
+  gap: 15px;
+}
 
 table {
   margin: 0 auto;
@@ -1365,7 +1368,21 @@ tr:last-child th {
   margin-bottom: 20px;
 }
 .search-results {
-  max-height: 500px;
+  max-height: 50vh;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+.search-results::before {
+  content: "";
+  position: absolute;
+  bottom: 20px;
+  width: 95%;
+  height: 75px;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(var(--content-background-color)));
+  background: -moz-linear-gradient(top, transparent, var(--content-background-color));
+  background: -o-linear-gradient(top, transparent, var(--content-background-color));
+  background: linear-gradient(to bottom, transparent, var(--content-background-color));
+  pointer-events: none;
 }
 .search-link {
   display: block;

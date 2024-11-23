@@ -10,7 +10,20 @@
   }
 
   &-results {
-    max-height: 500px;
+    max-height: 50vh;
+    overflow-y: auto;
+    scrollbar-width: none;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 20px;
+      width: 95%;
+      height: 75px;
+      background: linear-gradient(to bottom, transparent, var(--content-background-color));
+      pointer-events: none;
+    }
+
   }
 
   &-link {
