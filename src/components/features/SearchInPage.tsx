@@ -1,7 +1,6 @@
 import {Search} from "@mui/icons-material";
 import {Modal} from "antd";
-import React, {createContext, useContext, useState} from "react";
-import {AdditionInfo, AdditionWarning} from "../Additions";
+import React, {createContext, useContext, useState, useEffect, useRef} from "react";
 
 interface SearchContextType {
   isOpen: boolean;
@@ -48,6 +47,13 @@ export const SearchInPage: React.FC = () => {
   const [results, setResults] = useState<{title: string; content: string; id: string}[]>(
     []
   );
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (isOpen && inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, [isOpen]);
 
   const extractDetailsData = () => {
     const details = document.querySelectorAll("details");
@@ -110,20 +116,15 @@ export const SearchInPage: React.FC = () => {
       footer={null}
       width={800}
     >
-      <AdditionWarning>
-        Функция поиска находится в разработке, возможны ошибки в работе.
-      </AdditionWarning>
       <input
         className="search-input"
         type="text"
         value={query}
         onChange={(e) => handleSearch(e.target.value)}
         placeholder="Найти контент по странице..."
+        ref={inputRef}
       />
-      <div
-        className="search-results"
-        style={{maxHeight: "500px", overflowY: "auto"}}
-      >
+      <div className="search-results">
         {results.length > 0 ? (
           results.map(({title, content, id}) => (
             <div key={id}>
@@ -148,7 +149,12 @@ export const SearchInPage: React.FC = () => {
             </div>
           ))
         ) : (
-          <p>Ничего не нашлось.</p>
+          <p
+            className="search-no-results"
+            style={{padding: "100px", textAlign: "center", fontSize: "36px"}}
+          >
+            ¯\_(ツ)_/¯
+          </p>
         )}
       </div>
     </Modal>
