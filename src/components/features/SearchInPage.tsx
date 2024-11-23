@@ -67,10 +67,11 @@ export const SearchInPage: React.FC = () => {
       if (!id) return;
 
       const title = summary.textContent || "";
-      const content =
-        Array.from(detail.querySelectorAll<HTMLLIElement | HTMLParagraphElement>("p, li"))
-          .map((el) => el.textContent || "")
-          .join(" ") || "";
+      const content = Array.from(
+        detail.querySelectorAll<HTMLLIElement | HTMLParagraphElement>("p, li")
+      )
+        .map((el) => el.textContent || "")
+        .join("\n");
 
       if (title || content) {
         data.push({title, content, id});
@@ -100,12 +101,38 @@ export const SearchInPage: React.FC = () => {
     setResults(filtered);
   };
 
+  const extractMatchingLine = (content: string, query: string) => {
+    const lines = content.split("\n");
+    const lowerQuery = query.toLowerCase();
+
+    for (const line of lines) {
+      if (line.toLowerCase().includes(lowerQuery)) {
+        return line;
+      }
+    }
+
+    return "";
+  };
+
   const highlightText = (text: string, query: string) => {
     const regex = new RegExp(`(${query})`, "gi");
     return text.replace(regex, "<mark>$1</mark>");
   };
 
-  const handleLinkClick = () => {
+  const handleLinkClick = (id: string) => {
+    const summaryElement = document.getElementById(id);
+    if (!summaryElement) return;
+
+    const detailsElement = summaryElement.closest("details");
+    if (detailsElement) {
+      detailsElement.setAttribute("open", "true"); // Открыть <details>
+    }
+
+    summaryElement.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+
     closeModal();
   };
 
@@ -123,15 +150,19 @@ export const SearchInPage: React.FC = () => {
         onChange={(e) => handleSearch(e.target.value)}
         placeholder="Найти контент по странице..."
         ref={inputRef}
+        style={{cursor: "text"}}
       />
       <div className="search-results">
         {results.length > 0 ? (
           results.map(({title, content, id}) => (
             <div key={id}>
               <a
-                href={`#${id}`}
-                onClick={handleLinkClick}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleLinkClick(id);
+                }}
                 className="search-link"
+                style={{color: "inherit"}}
               >
                 <p
                   className="search-title"
@@ -142,7 +173,7 @@ export const SearchInPage: React.FC = () => {
                 <p
                   className="search-content"
                   dangerouslySetInnerHTML={{
-                    __html: highlightText(content, query),
+                    __html: highlightText(extractMatchingLine(content, query), query),
                   }}
                 ></p>
               </a>
@@ -151,7 +182,12 @@ export const SearchInPage: React.FC = () => {
         ) : (
           <p
             className="search-no-results"
-            style={{padding: "100px", textAlign: "center", fontSize: "36px"}}
+            style={{
+              textAlign: "center",
+              fontSize: "36px",
+              height: "250px",
+              marginBlock: "auto",
+            }}
           >
             ¯\_(ツ)_/¯
           </p>
