@@ -249,11 +249,11 @@ export const AEErrors: React.FC = () => {
       </DetailsSummary>
       <DetailsSummary title="Синий экран при использовании Twixtor">
         <p>{/* fixme: написать!! */}</p>
-      </DetailsSummary>
-      <DetailsSummary title='"Не удалось выполнить преобразование символов Unicode" или "Не удалось загрузить псевдоэффекты"'>
+      </DetailsSummary>{" "}
+      <DetailsSummary title="Красный экран при использовании BorisFX Sapphire">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
-      <DetailsSummary title="Красный или синий экран при использовании Twixtor или BorisFX Sapphire">
+      <DetailsSummary title="File is damaged или Unable to import file (НАЗВАНИЕ_ФАЙЛА.XYZ) as project (bad format or not readable)">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="This project must be converted from version XX.X.X (Windows/macOS). The original file will be unchanged">
