@@ -864,6 +864,9 @@ export const AEFromNewbies: React.FC = () => {
       <DetailsSummary title="Что такое Adjustment Layer и для чего он нужен?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
+      <DetailsSummary title="Почему у меня отсутствует звук в предпросмотре?">
+        <p>{/* fixme: написать!! */}</p>
+      </DetailsSummary>
       <DetailsSummary title="Применяю эффект, например Glow, но он обрезается. Как расширить действие эффекта?">
         <p>{/* fixme: написать!! ПЕРЕМЕСТИТЬ В ДРУГОЙ ПУНКТ */}</p>
       </DetailsSummary>

@@ -31,9 +31,11 @@ export const AEImport: React.FC = () => {
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Скинули проект, который нельзя открыть в старой версии After Effects, но я не хочу обновляться. Или мне придётся?">
-        <p>{/* fixme: написать!! */}</p>
+          {/* fixme: написать!! */}
+        <p>
+          </p>
       </DetailsSummary>
-      <DetailsSummary title="Открыл шаблон или чужой проект, а там исходники не подцепились. Как их подключить снова?">
+      <DetailsSummary title='При открытии чужого проекта выскакивает "After Effects warning: X files are missing sience you last saved project" и из-за этого вместо исходников - цветовая палитра, как во время профилактических работ на ТВ. Как мне переподключить исходники?'>
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Пытаюсь импортировать .ai с градиентами, но не получается. Как всё-таки перенести градиенты из Illustrator в After Effects?">

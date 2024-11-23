@@ -713,6 +713,12 @@ export const AEInstallProblems: React.FC = () => {
           подобных установочных файлов.
         </p>
       </DetailsSummary>
+      <DetailsSummary title="Установил плагин с помощью установщика, а я его не вижу в After Effects">
+        <p>{/* fixme: написать!! */}</p>
+      </DetailsSummary>
+      <DetailsSummary title="Установил плагин, но при его применении вылазают красные кресты или надписи про отсутствие лицензии">
+        <p>{/* fixme: написать!! */}</p>
+      </DetailsSummary>
     </div>
   );
 };
