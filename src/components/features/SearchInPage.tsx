@@ -1,6 +1,13 @@
 import {Search} from "@mui/icons-material";
 import {Modal} from "antd";
-import React, {createContext, useContext, useState, useEffect, useRef} from "react";
+import React, {
+  createContext,
+  useContext,
+  useMemo,
+  useState,
+  useEffect,
+  useRef,
+} from "react";
 
 interface SearchContextType {
   isOpen: boolean;
@@ -16,17 +23,17 @@ export const SearchProvider: React.FC<{children: React.ReactNode}> = ({children}
   const openModal = () => setIsOpen(true);
   const closeModal = () => setIsOpen(false);
 
-  return (
-    <SearchContext.Provider value={{isOpen, openModal, closeModal}}>
-      {children}
-    </SearchContext.Provider>
-  );
+  const value = useMemo(() => ({isOpen, openModal, closeModal}), [isOpen]);
+
+  return <SearchContext.Provider value={value}>{children}</SearchContext.Provider>;
 };
 
 export const useSearch = () => {
   const context = useContext(SearchContext);
   if (!context) {
-    throw new Error("useSearch must be used within a SearchProvider");
+    throw new Error(
+      "useSearch должен использоваться с SearchProvider. кто-то забыл обернуть компонент на странице."
+    );
   }
   return context;
 };
@@ -66,11 +73,11 @@ export const SearchInPage: React.FC = () => {
       const id = summary.getAttribute("id");
       if (!id) return;
 
-      const title = summary.textContent || "";
+      const title = summary.textContent ?? "";
       const content = Array.from(
         detail.querySelectorAll<HTMLLIElement | HTMLParagraphElement>("p, li")
       )
-        .map((el) => el.textContent || "")
+        .map((el) => el.textContent ?? "")
         .join("\n");
 
       if (title || content) {
@@ -157,13 +164,12 @@ export const SearchInPage: React.FC = () => {
         {results.length > 0 ? (
           results.map(({title, content, id}) => (
             <div key={id}>
-              <a
+              <button
                 onClick={(e) => {
                   e.preventDefault();
                   handleLinkClick(id);
                 }}
                 className="search-link"
-                style={{color: "inherit"}}
               >
                 <p
                   className="search-title"
@@ -177,7 +183,7 @@ export const SearchInPage: React.FC = () => {
                     __html: highlightText(extractMatchingLine(content, query), query),
                   }}
                 ></p>
-              </a>
+              </button>
             </div>
           ))
         ) : (
