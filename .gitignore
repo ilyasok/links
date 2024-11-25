@@ -33,3 +33,4 @@ vite.config.ts
 pnpm-lock.yaml
 eslint.config.js
 yarn.lock
+.vs
