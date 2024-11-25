@@ -138,6 +138,7 @@ export const SearchInPage: React.FC = () => {
 
   return (
     <Modal
+      closeIcon={null}
       open={isOpen}
       onCancel={closeModal}
       footer={null}

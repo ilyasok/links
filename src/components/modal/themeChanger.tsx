@@ -100,6 +100,7 @@ const ThemeModal: React.FC<ThemeModalProps> = ({isModalOpen, closeModal}) => {
 
   return (
     <Modal
+      closeIcon={null}
       title="Менятор темы"
       open={isModalOpen}
       footer={null}
