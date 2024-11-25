@@ -581,11 +581,11 @@ textarea {
      -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: left;
-  -webkit-align-items: left;
-     -moz-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
+  -webkit-box-align: start;
+  -webkit-align-items: start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
   -webkit-transition: background-color 1s cubic-bezier(0.075, 0.82, 0.165, 1);
   -o-transition: background-color 1s cubic-bezier(0.075, 0.82, 0.165, 1);
   -moz-transition: background-color 1s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -1363,7 +1363,8 @@ tr:last-child th {
 
 .search-input {
   width: 100%;
-  padding: 10px;
+  padding-inline: 10px;
+  padding-block: 5px;
   border: 1px solid var(--content-background-border);
   border-radius: 10px;
   margin-bottom: 20px;

@@ -125,7 +125,7 @@ export const SearchInPage: React.FC = () => {
 
     const detailsElement = summaryElement.closest("details");
     if (detailsElement) {
-      detailsElement.setAttribute("open", "true"); // Открыть <details>
+      detailsElement.setAttribute("open", "true");
     }
 
     summaryElement.scrollIntoView({

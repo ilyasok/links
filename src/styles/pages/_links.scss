@@ -12,7 +12,7 @@
     flex: 1 1 auto;
     flex-direction: column;
     justify-content: center;
-    align-items: left;
+    align-items: start;
     transition: background-color 1s cubic-bezier(0.075, 0.82, 0.165, 1);
     box-shadow: 0 5px 5px 0 var(--shadow);
     border: 1px solid var(--links_border);

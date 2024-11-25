@@ -3,7 +3,8 @@
 .search {
   &-input {
     width: 100%;
-    padding: 10px;
+    padding-inline: 10px;
+    padding-block: 5px;
     border: 1px solid var(--content-background-border);
     border-radius: $roundness;
     margin-bottom: 20px;
