@@ -24,6 +24,9 @@ export const AETips: React.FC = () => {
       >
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
+      <DetailsSummary title="В каком случае лучше использовать After Effects, а в каком - Premiere Pro?">
+        <p>{/* fixme: написать!! */}</p>
+      </DetailsSummary>
       <DetailsSummary title="Какой компьютер или ноутбук стоит взять для работы в After Effects?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
