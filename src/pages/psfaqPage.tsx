@@ -17,7 +17,7 @@ import {PSFromNewbies} from "./sections/psfaq/FromNewbies";
 import {PSImport} from "./sections/psfaq/Import";
 import {PSInstallProblems} from "./sections/psfaq/InstallProblems";
 import {PSInterface} from "./sections/psfaq/Interface";
-import {PSPerfomance} from "./sections/psfaq/Perfomance";
+import {PSPerformance} from "./sections/psfaq/Performance";
 import {PSWhereFind} from "./sections/psfaq/WhereFind";
 const PSFaQ = () => {
   useEffect(() => {
@@ -67,15 +67,15 @@ const PSFaQ = () => {
               </AdditionWarning>
               {[
                 ["1", "#wherefind", "Ищем полезности"],
-                ["2", "#installproblems", "Проблемы с установкой"],
-                ["3", "#fromnewbies", "Вопросы от новичков"],
+                ["2", "#install-problems", "Проблемы с установкой"],
+                ["3", "#from-newbies", "Вопросы от новичков"],
                 ["4", "#import", "Про импорт"],
                 ["5", "#interface", "Про интерфейс"],
-                ["6", "#perfomance", "Про производительность"],
+                ["6", "#performance", "Про производительность"],
                 ["7", "#actions", "Как и чем сделать то или то?"],
                 ["8", "#errors", "Ошибки и предупреждения"],
                 ["9", "#export", "Про экспорт"],
-                ["10", "#exportproblems", "Проблемы при экспорте"],
+                ["10", "#export-problems", "Проблемы при экспорте"],
               ].map(([key, href, title]) => (
                 <div key={key}>
                   <Divider
@@ -88,23 +88,23 @@ const PSFaQ = () => {
                     switch (href) {
                       case "#wherefind":
                         return <PSWhereFind />;
-                      case "#installproblems":
+                      case "#install-problems":
                         return <PSInstallProblems />;
-                      case "#fromnewbies":
+                      case "#from-newbies":
                         return <PSFromNewbies />;
                       case "#import":
                         return <PSImport />;
                       case "#interface":
                         return <PSInterface />;
-                      case "#perfomance":
-                        return <PSPerfomance />;
+                      case "#performance":
+                        return <PSPerformance />;
                       case "#actions":
                         return <PSActions />;
                       case "#errors":
                         return <PSErrors />;
                       case "#export":
                         return <PSExport />;
-                      case "#exportproblems":
+                      case "#export-problems":
                         return <PSExportProblems />;
                     }
                   })()}

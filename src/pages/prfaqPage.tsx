@@ -17,7 +17,7 @@ import {PRFromNewbies} from "./sections/prfaq/FromNewbies";
 import {PRImport} from "./sections/prfaq/Import";
 import {PRInstallProblems} from "./sections/prfaq/InstallProblems";
 import {PRInterface} from "./sections/prfaq/Interface";
-import {PRPerfomance} from "./sections/prfaq/Perfomance";
+import {PRPerformance} from "./sections/prfaq/Performance";
 import {PRTips} from "./sections/prfaq/Tips";
 import {PRWhereFind} from "./sections/prfaq/WhereFind";
 
@@ -69,16 +69,16 @@ const PRFaQ = () => {
               </AdditionWarning>
               {[
                 ["1", "#wherefind", "Ищем полезности"],
-                ["2", "#installproblems", "Проблемы с установкой"],
-                ["3", "#fromnewbies", "Вопросы от новичков"],
+                ["2", "#install-problems", "Проблемы с установкой"],
+                ["3", "#from-newbies", "Вопросы от новичков"],
                 ["4", "#tips", "(не)Вредные советы"],
                 ["5", "#import", "Про импорт"],
                 ["6", "#interface", "Про интерфейс"],
-                ["7", "#perfomance", "Про производительность"],
+                ["7", "#performance", "Про производительность"],
                 ["8", "#actions", "Как и чем сделать то или то?"],
                 ["9", "#errors", "Ошибки и предупреждения"],
                 ["10", "#export", "Про экспорт"],
-                ["11", "#exportproblems", "Проблемы при экспорте"],
+                ["11", "#export-problems", "Проблемы при экспорте"],
               ].map(([key, href, title]) => (
                 <div key={key}>
                   <Divider
@@ -91,9 +91,9 @@ const PRFaQ = () => {
                     switch (href) {
                       case "#wherefind":
                         return <PRWhereFind />;
-                      case "#installproblems":
+                      case "#install-problems":
                         return <PRInstallProblems />;
-                      case "#fromnewbies":
+                      case "#from-newbies":
                         return <PRFromNewbies />;
                       case "#tips":
                         return <PRTips />;
@@ -101,15 +101,15 @@ const PRFaQ = () => {
                         return <PRImport />;
                       case "#interface":
                         return <PRInterface />;
-                      case "#perfomance":
-                        return <PRPerfomance />;
+                      case "#performance":
+                        return <PRPerformance />;
                       case "#actions":
                         return <PRActions />;
                       case "#errors":
                         return <PRErrors />;
                       case "#export":
                         return <PRExport />;
-                      case "#exportproblems":
+                      case "#export-problems":
                         return <PRExportProblems />;
                     }
                   })()}

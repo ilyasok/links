@@ -67,7 +67,7 @@ export const AEInterface: React.FC = () => {
       <DetailsSummary title="Не выделяется объект в Rotobrush. Что делать?">
         <p>{/* fixme: баг кролика в 2019 */}</p>
       </DetailsSummary>
-      
+
       <DetailsSummary title="Как отключить экран со списком недавних проектов при запуске?">
         <p>
           Иногда при открытии <mark className="app">After Effects</mark> открывается

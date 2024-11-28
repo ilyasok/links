@@ -541,9 +541,10 @@ export const AEInstallProblems: React.FC = () => {
       <DetailsSummary title='"Система Windows защитила ваш компьютер" или как отключить Windows Smartscreen?'>
         <p>
           <mark className="app">Windows Smartscreen</mark> - это некий фильтр программ,
-          скачанных с интернета и часто он помечает экзешники как подозрительные. Поэтому
-          и приостанавливает запуск исполняемых файлов. Чтобы запустить такой файл, вам
-          нужно нажать на <mark className="ui">Подробнее</mark> и на{" "}
+          скачанных с интернета и часто он помечает <mark className="file">.exe</mark>{" "}
+          файлы как подозрительные. Поэтому и приостанавливает запуск исполняемых файлов.
+          Чтобы запустить такой файл, вам нужно нажать на{" "}
+          <mark className="ui">Подробнее</mark> и на{" "}
           <mark className="ui">Выполнить в любом случае</mark>.
         </p>
         <p>
@@ -621,7 +622,7 @@ export const AEInstallProblems: React.FC = () => {
           <mark>HackTool:Win32/Crack!MTB</mark>. Также антивирус может сожрать файл{" "}
           <mark className="file">helper.exe</mark>, который распаковывает дистрибутивы
           Adobe из-за того, что в нём находится галочка &quot;реклама&quot; и помечает это
-          как за <mark>Contrebrew.A!ml</mark>.
+          как <mark>Contrebrew.A!ml</mark>.
         </p>
         <p>
           Логичней всего проверять вашу систему на вирусы уже после установки программ, а

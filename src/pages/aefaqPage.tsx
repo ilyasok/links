@@ -13,7 +13,7 @@ import {AEFromNewbies} from "./sections/aefaq/FromNewbies";
 import {AEImport} from "./sections/aefaq/Import";
 import {AEInstallProblems} from "./sections/aefaq/InstallProblems";
 import {AEInterface} from "./sections/aefaq/Interface";
-import {AEPerfomance} from "./sections/aefaq/Perfomance";
+import {AEPerformance} from "./sections/aefaq/Performance";
 import {AETips} from "./sections/aefaq/Tips";
 import {AEWhereFind} from "./sections/aefaq/WhereFind";
 
@@ -78,16 +78,16 @@ const AEFaQ = () => {
               </AdditionWarning>
               {[
                 ["1", "#wherefind", "Ищем полезности"],
-                ["2", "#installproblems", "Проблемы с установкой"],
-                ["3", "#fromnewbies", "Вопросы от новичков"],
+                ["2", "#install-problems", "Проблемы с установкой"],
+                ["3", "#from-newbies", "Вопросы от новичков"],
                 ["4", "#tips", "(не)Вредные советы"],
                 ["5", "#import", "Импорт"],
                 ["6", "#interface", "Интерфейс"],
-                ["7", "#perfomance", "Производительность"],
+                ["7", "#performance", "Производительность"],
                 ["8", "#actions", "Как и чем?"],
                 ["9", "#errors", "Ошибки и предупреждения"],
                 ["10", "#export", "Экспорт"],
-                ["11", "#exportproblems", "Проблемы при экспорте"],
+                ["11", "#export-problems", "Проблемы при экспорте"],
               ].map(([key, href, title]) => (
                 <div key={key}>
                   <Divider
@@ -100,9 +100,9 @@ const AEFaQ = () => {
                     switch (href) {
                       case "#wherefind":
                         return <AEWhereFind />;
-                      case "#installproblems":
+                      case "#install-problems":
                         return <AEInstallProblems />;
-                      case "#fromnewbies":
+                      case "#from-newbies":
                         return <AEFromNewbies />;
                       case "#tips":
                         return <AETips />;
@@ -110,15 +110,15 @@ const AEFaQ = () => {
                         return <AEImport />;
                       case "#interface":
                         return <AEInterface />;
-                      case "#perfomance":
-                        return <AEPerfomance />;
+                      case "#performance":
+                        return <AEPerformance />;
                       case "#actions":
                         return <AEActions />;
                       case "#errors":
                         return <AEErrors />;
                       case "#export":
                         return <AEExport />;
-                      case "#exportproblems":
+                      case "#export-problems":
                         return <AEExportProblems />;
                     }
                   })()}

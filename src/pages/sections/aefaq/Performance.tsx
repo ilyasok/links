@@ -2,13 +2,13 @@ import React from "react";
 import DetailsSummary from "../../../components/DetailsSummary";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 
-export const AEPerfomance: React.FC = () => {
+export const AEPerformance: React.FC = () => {
   return (
     <div
       className="faq-content"
-      id="perfomance"
+      id="performance"
     >
-      <GithubUpdateInfo filePath="src/pages/sections/aefaq/Perfomance.tsx" />
+      <GithubUpdateInfo filePath="src/pages/sections/aefaq/Performance.tsx" />
       <DetailsSummary title="Почему у меня, б%@#ь, лагает е&#!%й After Effects, с$%а?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
