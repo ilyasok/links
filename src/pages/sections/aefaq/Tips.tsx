@@ -24,6 +24,9 @@ export const AETips: React.FC = () => {
       >
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
+      <DetailsSummary title="Как мне закэшировать композиции так, чтобы я в финальном рендере их заново не просчитывал?">
+        <p>{/* fixme: написать!! */}</p>
+      </DetailsSummary>
       <DetailsSummary title="В каком случае лучше использовать After Effects, а в каком - Premiere Pro?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
