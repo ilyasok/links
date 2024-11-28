@@ -20,6 +20,7 @@ import {AEWhereFind} from "./sections/aefaq/WhereFind";
 import {AdditionWarning} from "../components/Additions";
 import CopyMark from "../components/features/CopyMark";
 import {SearchInPage, SearchProvider} from "../components/features/SearchInPage";
+import SupportDonut from "../components/modal/SupportDonut";
 
 const AEFaQ = () => {
   useEffect(() => {
@@ -68,6 +69,7 @@ const AEFaQ = () => {
                   ]}
                 />
               </div>
+              <SupportDonut />
               <AdditionWarning>
                 Данный раздел находится в разработке и иногда обновляется, поэтому могут
                 быть неточности в действиях, выводах и тексте. Мнение автора и мнение
