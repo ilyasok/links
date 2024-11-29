@@ -12,3 +12,6 @@ eslint.config.js
 vite.config.ts
 .eslintrc.cjs
 .eslintrc
+tsconfig.json
+tsconfig.node.json
+dist
