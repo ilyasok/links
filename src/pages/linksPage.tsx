@@ -40,12 +40,16 @@ import {LinkCard, LinkCardNoDescription, LinkInAppCard} from "../components/Link
 
 import {AdditionDanger, AdditionWarning} from "../components/Additions";
 import {Footer} from "../components/Footer";
+import {Helmet} from "react-helmet-async";
 
 const Links = () => {
   return (
     <div className="page">
+      <Helmet>
+        <title>links@aechat</title>
+        {/* fixme: добавить описание */}
+      </Helmet>
       <Header title="links" />
-
       <motion.main
         className="main"
         initial={{y: 50, opacity: 0}}

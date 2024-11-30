@@ -16,11 +16,16 @@ import {AEExprErrors} from "./sections/aeexprfaq/Errors";
 import {AEExprBase} from "./sections/aeexprfaq/Base";
 import {SearchProvider, SearchInPage} from "../components/features/SearchInPage";
 import SupportDonut from "../components/modal/SupportDonut";
+import { Helmet } from "react-helmet-async";
 
 const AEExpressionPage = () => {
   return (
     <div className="page">
       <SearchProvider>
+      <Helmet>
+        <title>aeexprfaq@aechat</title>
+        {/* fixme: добавить описание */}
+      </Helmet>
         <Header title="ae(expr)faq" />
         <motion.main
           className="main"

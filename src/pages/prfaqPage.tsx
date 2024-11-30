@@ -21,6 +21,7 @@ import {PRPerformance} from "./sections/prfaq/Performance";
 import {PRTips} from "./sections/prfaq/Tips";
 import {PRWhereFind} from "./sections/prfaq/WhereFind";
 import SupportDonut from "../components/modal/SupportDonut";
+import { Helmet } from "react-helmet-async";
 
 const PRFaQ = () => {
   useEffect(() => {
@@ -29,6 +30,10 @@ const PRFaQ = () => {
   return (
     <div>
       <SearchProvider>
+      <Helmet>
+        <title>prfaq@aechat</title>
+        {/* fixme: добавить описание */}
+      </Helmet>
         <Header title="prfaq" />
         <motion.main
           className="main"

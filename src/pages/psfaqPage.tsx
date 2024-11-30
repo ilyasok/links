@@ -20,6 +20,7 @@ import {PSInterface} from "./sections/psfaq/Interface";
 import {PSPerformance} from "./sections/psfaq/Performance";
 import {PSWhereFind} from "./sections/psfaq/WhereFind";
 import SupportDonut from "../components/modal/SupportDonut";
+import { Helmet } from "react-helmet-async";
 const PSFaQ = () => {
   useEffect(() => {
     CopyMark.enableAutoCopy();
@@ -27,6 +28,10 @@ const PSFaQ = () => {
   return (
     <div>
       <SearchProvider>
+      <Helmet>
+        <title>psfaq@aechat</title>
+        {/* fixme: добавить описание */}
+      </Helmet>
         <Header title="psfaq" />
         <motion.main
           className="main"

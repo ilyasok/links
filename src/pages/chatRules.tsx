@@ -6,8 +6,13 @@ import {Link} from "react-router-dom";
 import {AdditionDanger, AdditionInfo, AdditionWarning} from "../components/Additions";
 import {motion} from "framer-motion";
 import {Footer} from "../components/Footer";
+import { Helmet } from "react-helmet-async";
 const ChatRules = () => (
   <div>
+    <Helmet>
+        <title>rules@aechat</title>
+        {/* fixme: добавить описание */}
+      </Helmet>
     <Header title="chatRules" />
     <motion.main
       className="main"

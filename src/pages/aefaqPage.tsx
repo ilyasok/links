@@ -21,6 +21,7 @@ import {AdditionWarning} from "../components/Additions";
 import CopyMark from "../components/features/CopyMark";
 import {SearchInPage, SearchProvider} from "../components/features/SearchInPage";
 import SupportDonut from "../components/modal/SupportDonut";
+import { Helmet } from "react-helmet-async";
 
 const AEFaQ = () => {
   useEffect(() => {
@@ -29,6 +30,10 @@ const AEFaQ = () => {
   return (
     <div className="page">
       <SearchProvider>
+      <Helmet>
+        <title>aefaq@aechat</title>
+        {/* fixme: добавить описание */}
+      </Helmet>
         <Header title="aefaq" />
         <motion.main
           className="main"
