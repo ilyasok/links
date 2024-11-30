@@ -56,7 +56,7 @@ export const SearchButton: React.FC = () => {
   const {openModal} = useSearch();
 
   return (
-    <Tooltip title="Поиск по странице">
+    <Tooltip title="Поиск по странице (Ctrl+F)">
       <button onClick={openModal}>
         <Search />
       </button>
