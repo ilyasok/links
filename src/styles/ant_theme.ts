@@ -16,6 +16,11 @@ const themeConfig = {
       trackBg: "var(--links_border)",
       trackHoverBg: "var(--accent)",
     },
+    Tooltip:{
+      colorBgSpotlight: "var(--content-background-color)",
+      colorText: "var(--text-color)",
+      colorTextLightSolid: "var(--text-color)",
+    },
     Modal: {
       contentBg: "var(--content-background-color)",
       titleColor: "var(--text-color)",
