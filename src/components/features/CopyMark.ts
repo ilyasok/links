@@ -1,13 +1,13 @@
 import {message} from "antd";
-
 const copyToClipboard = (event?: MouseEvent) => {
   if (!event || !event.target) {
     return;
   }
-
   const elementToCopy = event.target as HTMLElement;
-  const textContent = elementToCopy.textContent || "";
-
+  if (elementToCopy.tagName === "MARK" && !elementToCopy.classList.length) {
+    return;
+  }
+  const textContent = elementToCopy.textContent ?? "";
   if (navigator.clipboard) {
     navigator.clipboard
       .writeText(textContent)
@@ -37,11 +37,9 @@ const copyToClipboard = (event?: MouseEvent) => {
     textArea.select();
     document.execCommand("copy");
     message.success("Текст успешно скопирован в буфер обмена");
-
     document.body.removeChild(textArea);
   }
 };
-
 const enableAutoCopy = () => {
   document.addEventListener("click", (event) => {
     if (
@@ -52,5 +50,4 @@ const enableAutoCopy = () => {
     }
   });
 };
-
 export default {copyToClipboard, enableAutoCopy};
