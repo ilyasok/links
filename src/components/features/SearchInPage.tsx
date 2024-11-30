@@ -120,7 +120,7 @@ export const SearchInPage: React.FC = () => {
       }
     }
 
-    return "";
+    return content.split("\n")[0] ?? "";
   };
 
   const highlightText = (text: string, query: string) => {
@@ -144,7 +144,7 @@ export const SearchInPage: React.FC = () => {
 
     closeModal();
   };
-
+  // fixme: исправить баг, который выводит символы с пустыми пробелами между символами после сброса
   return (
     <Modal
       closeIcon={null}
@@ -153,17 +153,47 @@ export const SearchInPage: React.FC = () => {
       footer={null}
       width={800}
     >
-      <input
-        className="search-input"
-        type="text"
-        value={query}
-        onChange={(e) => handleSearch(e.target.value)}
-        placeholder="Найти контент по странице..."
-        ref={inputRef}
-        style={{cursor: "text"}}
-      />
+      <div className="search-input-wrapper">
+        <input
+          className="search-input"
+          type="text"
+          value={query}
+          onChange={(e) => handleSearch(e.target.value)}
+          placeholder="Найти контент по странице..."
+          ref={inputRef}
+          style={{cursor: "text"}}
+        />
+        {query.trim() !== "" && (
+          <button
+            onClick={() => setQuery("")}
+            className="search-clear-button"
+            style={{cursor: "pointer"}}
+          >
+            <Tooltip title="Очистить">
+              <BackspaceOutlined
+                opacity={0.5}
+                fontSize="small"
+              />
+            </Tooltip>
+          </button>
+        )}
+      </div>
       <div className="search-results">
-        {results.length > 0 ? (
+        {query.trim() === "" && (
+          <p
+            className="search-no-results"
+            style={{
+              textAlign: "center",
+              fontSize: "36px",
+              height: "250px",
+              marginBlock: "auto",
+            }}
+          >
+            {/* todo: добавить список всех секций вместо этого смайла */}
+            ¯\_(ツ)_/¯
+          </p>
+        )}
+        {results.length > 0 &&
           results.map(({title, content, id}) => (
             <div key={id}>
               <button
@@ -182,23 +212,26 @@ export const SearchInPage: React.FC = () => {
                 <p
                   className="search-content"
                   dangerouslySetInnerHTML={{
-                    __html: highlightText(extractMatchingLine(content, query), query),
+                    __html:
+                      highlightText(extractMatchingLine(content, query), query) ||
+                      highlightText(content, query),
                   }}
                 ></p>
               </button>
             </div>
-          ))
-        ) : (
+          ))}
+        {query.trim() !== "" && results.length === 0 && (
           <p
             className="search-no-results"
             style={{
               textAlign: "center",
-              fontSize: "36px",
+              fontSize: "13px",
+              opacity: "0.75",
               height: "250px",
               marginBlock: "auto",
             }}
           >
-            ¯\_(ツ)_/¯
+            Ничего не нашлось, попробуйте изменить ваш запрос.
           </p>
         )}
       </div>
