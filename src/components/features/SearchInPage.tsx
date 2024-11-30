@@ -1,5 +1,5 @@
-import {Search} from "@mui/icons-material";
-import {Modal} from "antd";
+import {Search, BackspaceOutlined} from "@mui/icons-material";
+import {Modal, Tooltip} from "antd";
 import React, {
   createContext,
   useContext,
@@ -42,9 +42,11 @@ export const SearchButton: React.FC = () => {
   const {openModal} = useSearch();
 
   return (
-    <button onClick={openModal}>
-      <Search />
-    </button>
+    <Tooltip title="Поиск по странице">
+      <button onClick={openModal}>
+        <Search />
+      </button>
+    </Tooltip>
   );
 };
 

@@ -3,6 +3,8 @@ import React, {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import {ThemeToggleButton} from "./modal/ThemeChanger";
 import {SearchButton} from "./features/SearchInPage";
+import {Tooltip} from "antd";
+import {motion} from "framer-motion";
 export const Header: React.FC<{title: string}> = ({title}) => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -18,7 +20,11 @@ export const Header: React.FC<{title: string}> = ({title}) => {
   }, []);
 
   return (
-    <header
+    <motion.header
+      initial={{opacity: 0}}
+      animate={{opacity: 1}}
+      exit={{opacity: 0}}
+      transition={{duration: 0.5, ease: [0.075, 0.82, 0.165, 1]}}
       className={`header ${isVisible ? "" : "header-transparent"}`}
       style={{
         backgroundColor: isVisible ? "var(--header_background)" : "transparent",
@@ -30,9 +36,11 @@ export const Header: React.FC<{title: string}> = ({title}) => {
       <div className={`header-left ${isVisible ? "visible" : "hidden"}`}>
         {location.pathname !== "/" && (
           <div className="icon">
-            <Link to="/">
-              <HomeRounded />
-            </Link>
+            <Tooltip title="На главную">
+              <Link to="/">
+                <HomeRounded />
+              </Link>
+            </Tooltip>
           </div>
         )}
         <div className="logo">
@@ -47,6 +55,6 @@ export const Header: React.FC<{title: string}> = ({title}) => {
           location.pathname.includes("aeexprfaq")) && <SearchButton />}
         <ThemeToggleButton />
       </div>
-    </header>
+    </motion.header>
   );
 };

@@ -1,5 +1,5 @@
 import React, {createContext, useContext, useEffect, useState, useMemo} from "react";
-import {Modal, Slider} from "antd";
+import {Modal, Slider, Tooltip} from "antd";
 import {
   DarkModeRounded,
   HideSourceRounded,
@@ -62,9 +62,11 @@ export const ThemeToggleButton: React.FC = () => {
   const closeModal = () => setIsModalOpen(false);
   return (
     <>
-      <button onClick={openModal}>
-        <FormatColorFillOutlined />
-      </button>
+      <Tooltip title="Менятор темы">
+        <button onClick={openModal}>
+          <FormatColorFillOutlined />
+        </button>
+      </Tooltip>
       <ThemeModal
         isModalOpen={isModalOpen}
         closeModal={closeModal}
@@ -96,30 +98,36 @@ const ThemeModal: React.FC<ThemeModalProps> = ({isModalOpen, closeModal}) => {
           alignItems: "center",
         }}
       >
-        <button
-          className={
-            theme === "light" ? "theme-button theme-button-selected" : "theme-button"
-          }
-          onClick={() => setTheme("light")}
-        >
-          <LightModeRounded />
-        </button>
-        <button
-          className={
-            theme === "dark" ? "theme-button theme-button-selected" : "theme-button"
-          }
-          onClick={() => setTheme("dark")}
-        >
-          <DarkModeRounded />
-        </button>
-        <button
-          className={
-            theme === "system" ? "theme-button theme-button-selected" : "theme-button"
-          }
-          onClick={() => setTheme("system")}
-        >
-          <HideSourceRounded />
-        </button>
+        <Tooltip title="Светлая тема">
+          <button
+            className={
+              theme === "light" ? "theme-button theme-button-selected" : "theme-button"
+            }
+            onClick={() => setTheme("light")}
+          >
+            <LightModeRounded />
+          </button>
+        </Tooltip>
+        <Tooltip title="Темная тема">
+          <button
+            className={
+              theme === "dark" ? "theme-button theme-button-selected" : "theme-button"
+            }
+            onClick={() => setTheme("dark")}
+          >
+            <DarkModeRounded />
+          </button>
+        </Tooltip>
+        <Tooltip title="Системная тема">
+          <button
+            className={
+              theme === "system" ? "theme-button theme-button-selected" : "theme-button"
+            }
+            onClick={() => setTheme("system")}
+          >
+            <HideSourceRounded />
+          </button>
+        </Tooltip>
       </div>
       <div style={{display: "flex", alignItems: "center", gap: "5px"}}>
         <p style={{fontSize: "14px"}}>Оттенок:</p>
@@ -130,19 +138,21 @@ const ThemeModal: React.FC<ThemeModalProps> = ({isModalOpen, closeModal}) => {
           onChange={(value) => setAccentHue(value)}
           style={{flex: "1 1 auto", width: "100%"}}
         />
-        <button
-          onClick={() => setAccentHue(210)}
-          style={{
-            width: "28px",
-            height: "28px",
-            backgroundColor: "transparent",
-            border: "none",
-            padding: 0,
-            cursor: "pointer",
-          }}
-        >
-          <RestartAlt />
-        </button>
+        <Tooltip title="Сбросить оттенок">
+          <button
+            onClick={() => setAccentHue(210)}
+            style={{
+              width: "28px",
+              height: "28px",
+              backgroundColor: "transparent",
+              border: "none",
+              padding: 0,
+              cursor: "pointer",
+            }}
+          >
+            <RestartAlt />
+          </button>
+        </Tooltip>
       </div>
     </Modal>
   );
