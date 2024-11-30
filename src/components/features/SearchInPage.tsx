@@ -23,6 +23,20 @@ export const SearchProvider: React.FC<{children: React.ReactNode}> = ({children}
   const openModal = () => setIsOpen(true);
   const closeModal = () => setIsOpen(false);
 
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if ((event.ctrlKey && event.key === "f") || (event.ctrlKey && event.key === "а")) {
+        event.preventDefault(); // убираем стандартное поведение браузера
+        openModal();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
   const value = useMemo(() => ({isOpen, openModal, closeModal}), [isOpen]);
 
   return <SearchContext.Provider value={value}>{children}</SearchContext.Provider>;
