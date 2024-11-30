@@ -1,9 +1,9 @@
-import CircularProgress from "@mui/material/CircularProgress";
 import {ConfigProvider} from "antd";
-import {AnimatePresence} from "framer-motion";
+import {AnimatePresence, motion} from "framer-motion";
 import React, {lazy, Suspense, useEffect} from "react";
 import {Navigate, Route, Routes, useLocation} from "react-router-dom";
 import themeConfig from "./styles/ant_theme";
+import {LinearProgress} from "@mui/material";
 const Links = lazy(() => import("./pages/linksPage"));
 const AboutPage = lazy(() => import("./pages/aboutPage"));
 const ChatRules = lazy(() => import("./pages/chatRules"));
@@ -27,29 +27,65 @@ const RedirectHtml = () => {
   return null;
 };
 
+const trackPageView = (path: string) => {
+  if (typeof window === "object" && window.ym) {
+    window.ym(96346999, "hit", path);
+  }
+};
+
 export const App = () => {
   const location = useLocation();
+
   useEffect(() => {
     const path = window.location.pathname;
     if (path.endsWith(".html")) {
       window.location.replace(path.replace(/\.html$/, ""));
+    } else {
+      trackPageView(path);
     }
-  }, []);
+  }, [location]);
 
   return (
     <ConfigProvider theme={themeConfig}>
       <Suspense
         fallback={
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              height: "100vh",
-            }}
+          <motion.div
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            transition={{duration: 0.5, ease: [0.075, 0.82, 0.165, 1], delay: 1}}
           >
-            <CircularProgress sx={{color: "var(--accent)"}} />
-          </div>
+            <LinearProgress sx={{color: "var(--accent)"}} />
+            <div style={{marginInline: "auto", maxWidth: "600px"}}>
+              <motion.p
+                initial={{opacity: 0}}
+                animate={{opacity: 0.5}}
+                transition={{duration: 1, ease: [0.075, 0.82, 0.165, 1], delay: 10}}
+                style={{
+                  margin: "10px",
+                  marginTop: "20px",
+                  fontSize: "12px",
+                  marginInline: "20px",
+                }}
+              >
+                Если страница медленно загружается, проверьте скорость вашего
+                интернет-соединения
+              </motion.p>
+              <motion.p
+                initial={{opacity: 0}}
+                animate={{opacity: 0.25}}
+                transition={{duration: 1, ease: [0.075, 0.82, 0.165, 1], delay: 20}}
+                style={{
+                  margin: "10px",
+                  fontSize: "10px",
+
+                  textAlign: "right",
+                  marginInline: "20px",
+                }}
+              >
+                ...или отключите VPN
+              </motion.p>
+            </div>
+          </motion.div>
         }
       >
         <AnimatePresence
