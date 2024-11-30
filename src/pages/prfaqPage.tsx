@@ -20,6 +20,7 @@ import {PRInterface} from "./sections/prfaq/Interface";
 import {PRPerformance} from "./sections/prfaq/Performance";
 import {PRTips} from "./sections/prfaq/Tips";
 import {PRWhereFind} from "./sections/prfaq/WhereFind";
+import SupportDonut from "../components/modal/SupportDonut";
 
 const PRFaQ = () => {
   useEffect(() => {
@@ -61,6 +62,7 @@ const PRFaQ = () => {
                   ]}
                 />
               </div>
+              <SupportDonut />
               <AdditionWarning>
                 Данный раздел находится в разработке и иногда обновляется, поэтому могут
                 быть неточности в действиях, выводах и тексте. Мнение автора и мнение

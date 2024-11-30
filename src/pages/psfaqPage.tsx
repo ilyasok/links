@@ -19,6 +19,7 @@ import {PSInstallProblems} from "./sections/psfaq/InstallProblems";
 import {PSInterface} from "./sections/psfaq/Interface";
 import {PSPerformance} from "./sections/psfaq/Performance";
 import {PSWhereFind} from "./sections/psfaq/WhereFind";
+import SupportDonut from "../components/modal/SupportDonut";
 const PSFaQ = () => {
   useEffect(() => {
     CopyMark.enableAutoCopy();
@@ -59,6 +60,7 @@ const PSFaQ = () => {
                   ]}
                 />
               </div>
+              <SupportDonut />
               <AdditionWarning>
                 Данный раздел находится в разработке и иногда обновляется, поэтому могут
                 быть неточности в действиях, выводах и тексте. Мнение автора и мнение

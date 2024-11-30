@@ -15,6 +15,7 @@ import {AEExprActions} from "./sections/aeexprfaq/Actions";
 import {AEExprErrors} from "./sections/aeexprfaq/Errors";
 import {AEExprBase} from "./sections/aeexprfaq/Base";
 import {SearchProvider, SearchInPage} from "../components/features/SearchInPage";
+import SupportDonut from "../components/modal/SupportDonut";
 
 const AEExpressionPage = () => {
   return (
@@ -56,6 +57,7 @@ const AEExpressionPage = () => {
                   ]}
                 />
               </div>
+              <SupportDonut />
               <AdditionWarning>
                 Данный раздел не является полноценным курсом по написанию выражений в
                 Adobe After Effects и находится в разработке. Мнение автора и мнение
