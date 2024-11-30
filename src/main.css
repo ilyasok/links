@@ -718,9 +718,10 @@ textarea {
   margin-inline: 20px;
   padding-top: 10px;
   color: var(--summary_text);
-  font-weight: 900;
-  font-size: 24px;
+  font-weight: 800;
+  font-size: 22px;
   font-family: "Mulish", sans-serif;
+  text-transform: uppercase;
 }
 .faq-content p {
   margin-inline: 20px;
@@ -732,6 +733,68 @@ textarea {
         -ms-hyphens: auto;
             hyphens: auto;
   }
+}
+.faq-content .message-correct, .faq-content .message-incorrect {
+  max-width: 450px;
+}
+.faq-content .message-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 25px;
+}
+.faq-content .message-left {
+  position: relative;
+  top: 0;
+  left: 0;
+  -webkit-filter: saturate(0%);
+          filter: saturate(0%);
+  margin-right: auto;
+  margin-left: 10px;
+  margin-block: 10px;
+  border: 1px solid var(--mark_border);
+  border-radius: 10px;
+  background-color: var(--mark_background);
+  padding: 10px;
+  max-width: 70%;
+  color: var(--mark_text);
+  font-size: 14px;
+  line-height: 1.15;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  text-align: left;
+}
+.faq-content .message-right {
+  -webkit-filter: saturate(100%);
+          filter: saturate(100%);
+  margin-right: 10px;
+  margin-left: auto;
+  margin-block: 10px;
+  border: 1px solid var(--mark_border);
+  border-radius: 10px;
+  background-color: var(--mark_background);
+  padding: 10px;
+  max-width: 70%;
+  color: var(--mark_text);
+  font-size: 14px;
+  line-height: 1.15;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  text-align: right;
 }
 .faq-content .flexible-links {
   display: -webkit-box;
@@ -852,6 +915,12 @@ textarea {
           padding-inline-start: 2px;
   padding-block: 0;
   list-style-type: decimal;
+}
+.addition-info li:not(:last-child), .addition-warning li:not(:last-child), .addition-danger li:not(:last-child) {
+  border-bottom: none;
+}
+.addition-info li::before, .addition-warning li::before, .addition-danger li::before {
+  display: none;
 }
 .addition-info {
   border: 1px solid var(--addition_info-border);

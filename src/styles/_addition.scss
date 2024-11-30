@@ -39,7 +39,14 @@
       padding-inline-start: 2px;
       padding-block: 0;
       list-style-type: decimal;
+      &:not(:last-child) {
+        border-bottom: none;
+      }
+      &::before {
+        display: none;    
+      }
     }
+
   }
 
   &-info {
