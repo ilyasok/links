@@ -163,7 +163,6 @@ export const SearchInPage: React.FC = () => {
 
     closeModal();
   };
-  // fixme: исправить баг, который выводит символы с пустыми пробелами между символами после сброса
   return (
     <Modal
       closeIcon={null}
@@ -184,7 +183,10 @@ export const SearchInPage: React.FC = () => {
         />
         {query.trim() !== "" && (
           <button
-            onClick={() => setQuery("")}
+            onClick={() => {
+              setQuery("");
+              setResults([]);
+            }}
             className="search-clear-button"
             style={{cursor: "pointer"}}
           >
