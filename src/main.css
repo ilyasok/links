@@ -772,9 +772,6 @@ textarea {
   color: var(--mark_text);
   font-size: 14px;
   line-height: 1.15;
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
   text-align: left;
 }
 .faq-content .message-right {
@@ -791,9 +788,6 @@ textarea {
   color: var(--mark_text);
   font-size: 14px;
   line-height: 1.15;
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
   text-align: right;
 }
 .faq-content .flexible-links {
