@@ -13,7 +13,6 @@ const NotFound = () => (
   >
     <Helmet>
       <title>notfound@aechat</title>
-      {/* fixme: добавить описание */}
     </Helmet>
     <div className="not-found-container">
       <p className="not-found-title">Мы потерялись</p>

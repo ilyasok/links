@@ -16,16 +16,39 @@ import {AEExprErrors} from "./sections/aeexprfaq/Errors";
 import {AEExprBase} from "./sections/aeexprfaq/Base";
 import {SearchProvider, SearchInPage} from "../components/features/SearchInPage";
 import SupportDonut from "../components/modal/SupportDonut";
-import { Helmet } from "react-helmet-async";
+import {Helmet} from "react-helmet-async";
 
 const AEExpressionPage = () => {
   return (
     <div className="page">
       <SearchProvider>
-      <Helmet>
-        <title>aeexprfaq@aechat</title>
-        {/* fixme: добавить описание */}
-      </Helmet>
+        <Helmet>
+          <title>aeexprfaq@aechat</title>
+          <meta
+            name="description"
+            content="Ответы на частые вопросы о выражениях в After Effects"
+          />
+          <meta
+            name="keywords"
+            content="чат, ссылки, After Effects, шаблоны After Effects, AETemp, Adobe, советы After Effects, FAQ After Effects, склад стройматериалов, помощь, видеомонтаж, графический дизайн, видеоэффекты, спецэффекты, анимация, 3D-моделирование, motion graphics, композитинг, цветокоррекция, Adobe Premiere, Photoshop, Illustrator, Media Encoder, плагины After Effects, видеопроизводство, рендеринг, обучение, видеоуроки, монтаж видео, создание видео, редактирование видео, графика, видеоконтент, пост-продакшн, filmmaking, кино, телевидение, спецэффекты для фильмов, видеомаркетинг, визуальные эффекты, мультимедиа, медиа, презентации, видеореклама, обучающие видео, видеокурсы, видеоуроки, курсы по анимации, туториалы по видеомонтажу, уроки по цветокоррекции, советы по ускорению After Effects, оптимизация, исправление ошибок, видеографика, motion design, инфографика, 3D-анимация, видеоклипы, рекламные ролики, видеопрезентации"
+          />
+          <meta
+            property="og:type"
+            content="website"
+          />
+          <meta
+            property="og:url"
+            content="https://aechat.ru/"
+          />
+          <meta
+            property="og:title"
+            content="aeexprfaq@aechat"
+          />
+          <meta
+            property="og:description"
+            content="Ответы на частые вопросы о выражениях в After Effects"
+          />
+        </Helmet>
         <Header title="ae(expr)faq" />
         <motion.main
           className="main"

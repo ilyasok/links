@@ -21,7 +21,7 @@ import {AdditionWarning} from "../components/Additions";
 import CopyMark from "../components/features/CopyMark";
 import {SearchInPage, SearchProvider} from "../components/features/SearchInPage";
 import SupportDonut from "../components/modal/SupportDonut";
-import { Helmet } from "react-helmet-async";
+import {Helmet} from "react-helmet-async";
 
 const AEFaQ = () => {
   useEffect(() => {
@@ -30,10 +30,33 @@ const AEFaQ = () => {
   return (
     <div className="page">
       <SearchProvider>
-      <Helmet>
-        <title>aefaq@aechat</title>
-        {/* fixme: добавить описание */}
-      </Helmet>
+        <Helmet>
+          <title>aefaq@aechat</title>
+          <meta
+            name="description"
+            content="Ответы на частые вопросы от пользователей After Effects"
+          />
+          <meta
+            name="keywords"
+            content="чат, ссылки, After Effects, шаблоны After Effects, AETemp, Adobe, советы After Effects, FAQ After Effects, склад стройматериалов, помощь, видеомонтаж, графический дизайн, видеоэффекты, спецэффекты, анимация, 3D-моделирование, motion graphics, композитинг, цветокоррекция, Adobe Premiere, Photoshop, Illustrator, Media Encoder, плагины After Effects, видеопроизводство, рендеринг, обучение, видеоуроки, монтаж видео, создание видео, редактирование видео, графика, видеоконтент, пост-продакшн, filmmaking, кино, телевидение, спецэффекты для фильмов, видеомаркетинг, визуальные эффекты, мультимедиа, медиа, презентации, видеореклама, обучающие видео, видеокурсы, видеоуроки, курсы по анимации, туториалы по видеомонтажу, уроки по цветокоррекции, советы по ускорению After Effects, оптимизация, исправление ошибок, видеографика, motion design, инфографика, 3D-анимация, видеоклипы, рекламные ролики, видеопрезентации"
+          />
+          <meta
+            property="og:type"
+            content="website"
+          />
+          <meta
+            property="og:url"
+            content="https://aechat.ru/"
+          />
+          <meta
+            property="og:title"
+            content="aefaq@aechat"
+          />
+          <meta
+            property="og:description"
+            content="Ответы на частые вопросы от пользователей After Effects"
+          />
+        </Helmet>
         <Header title="aefaq" />
         <motion.main
           className="main"

@@ -6,13 +6,32 @@ import {Link} from "react-router-dom";
 import {AdditionDanger, AdditionInfo, AdditionWarning} from "../components/Additions";
 import {motion} from "framer-motion";
 import {Footer} from "../components/Footer";
-import { Helmet } from "react-helmet-async";
+import {Helmet} from "react-helmet-async";
 const ChatRules = () => (
   <div>
     <Helmet>
-        <title>rules@aechat</title>
-        {/* fixme: добавить описание */}
-      </Helmet>
+      <title>rules@aechat</title>
+      <meta
+        name="description"
+        content="Правила чатов AEChat и DWChat"
+      />
+      <meta
+        property="og:type"
+        content="website"
+      />
+      <meta
+        property="og:url"
+        content="https://aechat.ru/"
+      />
+      <meta
+        property="og:title"
+        content="aechat&dwchat-rules"
+      />
+      <meta
+        property="og:description"
+        content="Правила чатов AEChat и DWChat"
+      />
+    </Helmet>
     <Header title="chatRules" />
     <motion.main
       className="main"

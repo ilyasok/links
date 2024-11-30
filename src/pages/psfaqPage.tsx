@@ -30,7 +30,30 @@ const PSFaQ = () => {
       <SearchProvider>
       <Helmet>
         <title>psfaq@aechat</title>
-        {/* fixme: добавить описание */}
+        <meta
+            name="description"
+            content="Ответы на частые вопросы от пользователей Photoshop"
+          />
+          <meta
+            name="keywords"
+            content="чат, ссылки, Photoshop, шаблоны Photoshop, AETemp, Adobe, советы Photoshop, FAQ Photoshop, склад стройматериалов, помощь, графический дизайн, редактирование, photo editing, ретушь, фотограф, фотография, дизайн, web design, UI/UX, создание логотипов, создание иконок, создание баннеров, создание визиток, создание буклетов, создание флаеров, создание постеров, создание визуальных эффектов, создание 3D-графики, создание анимации, видеографика, motion design, инфографика, 3D-анимация, видеоклипы, рекламные ролики, видеопрезентации"
+          />
+          <meta
+            property="og:type"
+            content="website"
+          />
+          <meta
+            property="og:url"
+            content="https://aechat.ru/"
+          />
+          <meta
+            property="og:title"
+            content="psfaq@aechat"
+          />
+          <meta
+            property="og:description"
+            content="Ответы на частые вопросы от пользователей Photoshop"
+          />
       </Helmet>
         <Header title="psfaq" />
         <motion.main

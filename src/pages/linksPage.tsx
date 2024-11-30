@@ -47,7 +47,6 @@ const Links = () => {
     <div className="page">
       <Helmet>
         <title>links@aechat</title>
-        {/* fixme: добавить описание */}
       </Helmet>
       <Header title="links" />
       <motion.main

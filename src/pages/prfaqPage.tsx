@@ -21,7 +21,7 @@ import {PRPerformance} from "./sections/prfaq/Performance";
 import {PRTips} from "./sections/prfaq/Tips";
 import {PRWhereFind} from "./sections/prfaq/WhereFind";
 import SupportDonut from "../components/modal/SupportDonut";
-import { Helmet } from "react-helmet-async";
+import {Helmet} from "react-helmet-async";
 
 const PRFaQ = () => {
   useEffect(() => {
@@ -30,10 +30,33 @@ const PRFaQ = () => {
   return (
     <div>
       <SearchProvider>
-      <Helmet>
-        <title>prfaq@aechat</title>
-        {/* fixme: добавить описание */}
-      </Helmet>
+        <Helmet>
+          <title>prfaq@aechat</title>
+          <meta
+            name="description"
+            content="Ответы на частые вопросы от пользователей Premiere Pro"
+          />
+          <meta
+            name="keywords"
+            content="чат, ссылки, Adobe Premiere Pro, шаблоны Adobe Premiere Pro, AETemp, советы Adobe Premiere Pro, FAQ Adobe Premiere Pro, склад стройматериалов, помощь, видеомонтаж, видеоредактирование, видеопроизводство, видеоэффекты, спецэффекты, звукорежировка, звукомонтаж, звуковое оформление, видеоуроки, обучение, видеокурсы, видеоуроки, курсы по видеомонтажу, туториалы по видеоредактированию, уроки по цветокоррекции, советы по ускорению Adobe Premiere Pro, оптимизация, исправление ошибок, видеографика, видеомаркетинг, визуальные эффекты, мультимедиа, медиа, презентации, обучающие видео, видеокурсы, видеоуроки, курс по видеомонтажу, уроки по видеомонтажу"
+          />
+          <meta
+            property="og:type"
+            content="website"
+          />
+          <meta
+            property="og:url"
+            content="https://aechat.ru/"
+          />
+          <meta
+            property="og:title"
+            content="prfaq@aechat"
+          />
+          <meta
+            property="og:description"
+            content="Ответы на частые вопросы от пользователей Premiere Pro"
+          />
+        </Helmet>
         <Header title="prfaq" />
         <motion.main
           className="main"
