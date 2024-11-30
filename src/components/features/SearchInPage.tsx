@@ -64,6 +64,10 @@ export const SearchButton: React.FC = () => {
   );
 };
 
+const escapeRegExp = (string: string) => {
+  return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+};
+
 export const SearchInPage: React.FC = () => {
   const {isOpen, closeModal} = useSearch();
   const [query, setQuery] = useState("");
@@ -138,8 +142,9 @@ export const SearchInPage: React.FC = () => {
   };
 
   const highlightText = (text: string, query: string) => {
-    const regex = new RegExp(`(${query})`, "gi");
-    return text.replace(regex, "<mark>$1</mark>");
+    const escapedQuery = escapeRegExp(query);
+    const regex = new RegExp(`(${escapedQuery})`, "gi");
+    return text.replace(regex, '<mark className="search-marked-text">$1</mark>');
   };
 
   const handleLinkClick = (id: string) => {
