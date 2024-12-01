@@ -15,7 +15,7 @@ export const AEInterface: React.FC = () => {
       <DetailsSummary title="Как мне прикрепить нужное окно в рабочее пространство программы?">
         <p>{/* fixme: написать */}</p>
       </DetailsSummary>
-      <DetailsSummary title="Почему я не могу прикрепить окно скрипта?">
+      <DetailsSummary title="Почему я не могу прикрепить окно скрипта и как мне его в конце концов закрепить?">
         <p>{/* fixme: написать */}</p>
       </DetailsSummary>
       <DetailsSummary title="Как поставить несколько окон во вкладки или расположить их по строкам?">

@@ -687,11 +687,11 @@ export const AEInstallProblems: React.FC = () => {
       </DetailsSummary>
       <DetailsSummary title='При установке любого пакета Red Giant выскакивает "This installer application has been moved. It must be run from its original folder containing a packages directory. The installer will now exit."'>
         <p>
-          Вы пытаетесь установить плагины <mark className="plugin">Red Giant</mark>, не
+          Вы пытаетесь установить плагины от <mark className="plugin">Red Giant</mark>, не
           распаковав архив полностью. При использовании стандартного просмотрщика архивов
-          в Windows 10/11 и при открытии любого <mark className="file">.exe</mark> файла -
-          остальные файлы-зависимости не будут распакованы, поэтому и установщик не видит
-          файлы для распаковки.
+          в Windows 10/11 и при открытии в нём любого <mark className="file">.exe</mark>{" "}
+          файла - остальные файлы-зависимости не будут распакованы, поэтому и установщик
+          не видит файлы для распаковки.
         </p>
         <p>
           Чтобы установить плагины от Red Giant корректно - вам нужно распаковать
@@ -702,14 +702,7 @@ export const AEInstallProblems: React.FC = () => {
           >
             WinRAR
           </a>
-          .{" "}
-          <a
-            href="https://www.rarlab.com/download.htm"
-            title="Официальный сайт WinRAR"
-          >
-            WinRAR
-          </a>{" "}
-          умеет распаковывать весь архив в временную папку при открытии{" "}
+          . Он умеет распаковывать весь архив в временную папку при открытии{" "}
           <mark className="file">.exe</mark>, <mark className="file">.msi</mark> и
           подобных установочных файлов.
         </p>
@@ -718,6 +711,9 @@ export const AEInstallProblems: React.FC = () => {
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Установил плагин, но при его применении вылазают красные кресты или надписи про отсутствие лицензии">
+        <p>{/* fixme: написать!! */}</p>
+      </DetailsSummary>
+      <DetailsSummary title="Чую, что моя программа работает не правильно. Как мне сбросить все настройки After Effects?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
     </div>

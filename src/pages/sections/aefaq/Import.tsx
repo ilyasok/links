@@ -30,10 +30,12 @@ export const AEImport: React.FC = () => {
       <DetailsSummary title="Прислали исходники в формате .heic, .heif или .hevc. Как мне импортировать?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
+      <DetailsSummary title="Как импортировать анимированный стикер из Telegram в формате .tgs?">
+        <p>{/* fixme: написать!! */}</p>
+      </DetailsSummary>
       <DetailsSummary title="Скинули проект, который нельзя открыть в старой версии After Effects, но я не хочу обновляться. Или мне придётся?">
-          {/* fixme: написать!! */}
-        <p>
-          </p>
+        {/* fixme: написать!! */}
+        <p></p>
       </DetailsSummary>
       <DetailsSummary title='При открытии чужого проекта выскакивает "After Effects warning: X files are missing sience you last saved project" и из-за этого вместо исходников - цветовая палитра, как во время профилактических работ на ТВ. Как мне переподключить исходники?'>
         <p>{/* fixme: написать!! */}</p>

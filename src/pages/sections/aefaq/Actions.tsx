@@ -157,7 +157,7 @@ export const AEActions: React.FC = () => {
           Действия на видео, приведённые выше, могут отличаться в зависимости от версии
           программы или плагина. Некоторые плагины или программы вы можете скачать в
           канале <a href="https://t.me/+Qd9xu7A4TeIwNzY6">склад стройматериалов</a> по
-          хештегам <mark>#twixtor</mark>, <mark>#continuum</mark> или <mark>#topaz</mark>.
+          хештегам <mark className="tag">#twixtor</mark>, <mark className="tag">#continuum</mark> или <mark className="tag">#topaz</mark>.
         </AdditionInfo>
         <p>
           Стандартными средствами <mark className="app">After Effects</mark> тоже можно
@@ -228,9 +228,45 @@ export const AEActions: React.FC = () => {
         </p>
       </DetailsSummary>
       <DetailsSummary title="Какими средствами обычно убирают зелёный или синий фон?">
-        <p>{/* fixme: primatte keyer, стандартные плагины для кеинга */}</p>
+        {/* fixme: primatte keyer, стандартные плагины для кеинга */}
+        <p></p>
+      </DetailsSummary>
+      <DetailsSummary title='А если исходник был снят не на "зелёнке", то как отделить объект от фона?"'>
+        {/* fixme: ротобрашик любимый и силуэт со своим повер матте  */}
+        <p>
+          В век технологий существует много различных инструментов для отделения объекта
+          от фона в сложных ситуациях. Например, когда у оператора не было возможности
+          снять объект на однотонном фоне, а вырезать объект на пост-обработке нужно.
+        </p>
+        <p>
+          В базовой поставке <mark className="app">After Effects</mark> давно существует
+          прекрасный инструмент <mark className="plugin">Rotobrush</mark>{" "}
+          <mark className="key">Alt + Win</mark>, который позволяет вырезать объект от
+          фона любой сложности. С относительно недавних пор Adobe обновили этот инструмент
+          до версии 3.0, в которой улучшили работу ротоскопирования объектов с помощью
+          ИИ-моделей и выдаёт довольно хорошие результаты при правильном использовании
+          инструмента.
+          {/* fixme: написать комбинацию клавиш для вызова ротобраша */}
+        </p>
+        <YouTubeVideo
+          styleClass="figure_browser-youtube"
+          link="eoOIrdb_0ko"
+          caption="Rotobrush"
+        />
+        <p>
+          Если результат от <mark className="plugin">Rotobrush</mark> вам не нравится - вы
+          можете воспользоваться сторонним плагином{" "}
+          <mark className="plugin">BorisFX Silhouette</mark> в котором есть инструмент{" "}
+          <mark className="plugin">Power Matte</mark>.
+        </p>
+        <YouTubeVideo
+          styleClass="figure_browser-youtube"
+          link="3pdkJ1BPEg0"
+          caption="Power Matte in Silhouette"
+        />
       </DetailsSummary>
       <DetailsSummary title="Чем бы убрать белый или чёрный цвет у слоя?">
+
         <p>{/* fixme: extract, uni.unmult */}</p>
       </DetailsSummary>
       <DetailsSummary title="Как и чем можно прицепить слой к объекту на видео?">
