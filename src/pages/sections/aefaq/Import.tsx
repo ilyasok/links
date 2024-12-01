@@ -24,6 +24,9 @@ export const AEImport: React.FC = () => {
       <DetailsSummary title="Импортировал исходник с перменным FPS. Почему длина исходника в After Effects короче, чем в видео-проигрывателе?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
+      <DetailsSummary title="Как импортировать 3D-объекты формата .obj, .fbx или .glb?">
+        <p>{/* fixme: написать!! */}</p>
+      </DetailsSummary>
       <DetailsSummary title="Прислали исходники в формате .mkv, .flv или что-то не поддерживаемое программой. Как мне их импортировать?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
