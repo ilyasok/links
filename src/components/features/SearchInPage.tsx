@@ -147,7 +147,7 @@ export const SearchInPage: React.FC = () => {
   const highlightText = (text: string, query: string) => {
     const escapedQuery = escapeRegExp(query);
     const regex = new RegExp(`(${escapedQuery})`, "gi");
-    return text.replace(regex, '<mark className="search-marked-text">$1</mark>');
+    return text.replace(regex, "<mark>$1</mark>");
   };
 
   const handleLinkClick = (id: string) => {
