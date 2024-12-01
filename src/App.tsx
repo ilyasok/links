@@ -52,7 +52,7 @@ export const App = () => {
           <motion.div
             initial={{opacity: 0}}
             animate={{opacity: 1}}
-            transition={{duration: 0.5, ease: [0.075, 0.82, 0.165, 1], delay: 1}}
+            transition={{duration: 0.5, ease: [0.075, 0.82, 0.165, 1], delay: 2}}
           >
             <LinearProgress sx={{color: "var(--accent)"}} />
             <div style={{marginInline: "auto", maxWidth: "600px"}}>
