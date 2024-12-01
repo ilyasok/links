@@ -1,4 +1,4 @@
-import {notification} from "antd";
+import {message} from "antd";
 import React, {ReactNode, useState, useEffect, useRef} from "react";
 
 interface DetailsSummaryProps {
@@ -18,11 +18,9 @@ const DetailsSummary: React.FC<DetailsSummaryProps> = ({title, children}) => {
   const handleCopyAnchor = () => {
     const anchor = `${window.location.origin}${window.location.pathname}#${anchorId}`;
     navigator.clipboard.writeText(anchor);
-    notification.open({
-      placement: "bottomRight",
-      message: "Ссылка скопирована в буфер обмена",
-      description: `Теперь вы можете поделиться пунктом ${anchorId} с другими пользователями`,
-    });
+    message.success(
+      `Теперь вы можете поделиться пунктом ${anchorId} с другими пользователями`
+    );
   };
 
   useEffect(() => {
