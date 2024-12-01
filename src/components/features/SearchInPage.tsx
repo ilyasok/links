@@ -77,8 +77,11 @@ export const SearchInPage: React.FC = () => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    if (isOpen && inputRef.current) {
-      inputRef.current.focus();
+    if (isOpen) {
+      const timeout = setTimeout(() => {
+        inputRef.current?.focus();
+      }, 0);
+      return () => clearTimeout(timeout);
     }
   }, [isOpen]);
 
@@ -170,6 +173,8 @@ export const SearchInPage: React.FC = () => {
       onCancel={closeModal}
       footer={null}
       width={800}
+      forceRender={true}
+      getContainer={false}
     >
       <div className="search-input-wrapper">
         <input
