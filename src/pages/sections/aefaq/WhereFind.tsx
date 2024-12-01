@@ -300,8 +300,8 @@ export const AEWhereFind: React.FC = () => {
           </a>{" "}
           в Telegram с полезными материалами для графических редакторов, как Photoshop и
           Illustrator. В данном канале есть навигация по каналу для нахождения всякой
-          всячины, например: <mark>#текстуры</mark>, <mark>#шрифты</mark>,{" "}
-          <mark>#кисти</mark>, <mark>#паттерны</mark>.
+          всячины, например: <mark className="tag">#текстуры</mark>, <mark className="tag">#шрифты</mark>,{" "}
+          <mark className="tag">#кисти</mark>, <mark className="tag">#паттерны</mark>.
         </p>
         <p>
           Если вам не хватает контента из{" "}
