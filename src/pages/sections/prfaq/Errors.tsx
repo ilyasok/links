@@ -1,7 +1,7 @@
 import React from "react";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 
-export const PRErrors: React.FC = () => {
+const PRErrors: React.FC = () => {
   return (
     <div
       className="faq-content"
@@ -11,3 +11,4 @@ export const PRErrors: React.FC = () => {
     </div>
   );
 };
+export default PRErrors;

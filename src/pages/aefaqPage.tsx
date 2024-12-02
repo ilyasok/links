@@ -1,32 +1,62 @@
+import React, {useEffect, useState, Suspense, lazy} from "react";
 import {Breadcrumb, Divider} from "antd";
-import React, {useEffect} from "react";
 import {motion} from "framer-motion";
 import {Link} from "react-router-dom";
 import {Header} from "../components/Header";
 import {Footer} from "../components/Footer";
-// *: разделы aefaq:
-import {AEActions} from "./sections/aefaq/Actions";
-import {AEErrors} from "./sections/aefaq/Errors";
-import {AEExport} from "./sections/aefaq/Export";
-import {AEExportProblems} from "./sections/aefaq/ExportProblems";
-import {AEFromNewbies} from "./sections/aefaq/FromNewbies";
-import {AEImport} from "./sections/aefaq/Import";
-import {AEInstallProblems} from "./sections/aefaq/InstallProblems";
-import {AEInterface} from "./sections/aefaq/Interface";
-import {AEPerformance} from "./sections/aefaq/Performance";
-import {AETips} from "./sections/aefaq/Tips";
-import {AEWhereFind} from "./sections/aefaq/WhereFind";
-
-import {AdditionWarning} from "../components/Additions";
-import CopyMark from "../components/features/CopyMark";
-import {SearchInPage, SearchProvider} from "../components/features/SearchInPage";
-import SupportDonut from "../components/modal/SupportDonut";
 import {Helmet} from "react-helmet-async";
+import {SearchInPage, SearchProvider} from "../components/features/SearchInPage";
+import {AdditionWarning} from "../components/Additions";
+import SupportDonut from "../components/modal/SupportDonut";
+import CopyMark from "../components/features/CopyMark";
+import {CircularProgress} from "@mui/material";
+
+const AEWhereFind = lazy(() => import("./sections/aefaq/WhereFind"));
+const AEInstallProblems = lazy(() => import("./sections/aefaq/InstallProblems"));
+const AEFromNewbies = lazy(() => import("./sections/aefaq/FromNewbies"));
+const AETips = lazy(() => import("./sections/aefaq/Tips"));
+const AEImport = lazy(() => import("./sections/aefaq/Import"));
+const AEInterface = lazy(() => import("./sections/aefaq/Interface"));
+const AEPerformance = lazy(() => import("./sections/aefaq/Performance"));
+const AEActions = lazy(() => import("./sections/aefaq/Actions"));
+const AEErrors = lazy(() => import("./sections/aefaq/Errors"));
+const AEExport = lazy(() => import("./sections/aefaq/Export"));
+const AEExportProblems = lazy(() => import("./sections/aefaq/ExportProblems"));
 
 const AEFaQ = () => {
   useEffect(() => {
     CopyMark.enableAutoCopy();
   }, []);
+
+  const sections = [
+    {key: "1", title: "Ищем полезности", component: AEWhereFind},
+    {key: "2", title: "Проблемы с установкой", component: AEInstallProblems},
+    {key: "3", title: "Вопросы от новичков", component: AEFromNewbies},
+    {key: "4", title: "(не)Вредные советы", component: AETips},
+    {key: "5", title: "Импорт", component: AEImport},
+    {key: "6", title: "Интерфейс", component: AEInterface},
+    {key: "7", title: "Производительность", component: AEPerformance},
+    {key: "8", title: "Как и чем?", component: AEActions},
+    {key: "9", title: "Ошибки и предупреждения", component: AEErrors},
+    {key: "10", title: "Экспорт", component: AEExport},
+    {key: "11", title: "Проблемы при экспорте", component: AEExportProblems},
+  ];
+
+  const [visibleSections, setVisibleSections] = useState<string[]>([]);
+
+  useEffect(() => {
+    setVisibleSections([sections[0].key]);
+    const loadSections = async () => {
+      for (let i = 1; i < sections.length; i++) {
+        await new Promise<void>((resolve) => {
+          setVisibleSections((prev) => [...prev, sections[i].key]);
+          setTimeout(resolve, 200);
+        });
+      }
+    };
+    loadSections();
+  }, []);
+
   return (
     <div className="page">
       <SearchProvider>
@@ -104,54 +134,85 @@ const AEFaQ = () => {
                 читателя могут отличаться. Предложения по поводу улучшения материала вы
                 можете отправить на <a href="mailto:me@m1sh3r.ru">почту автора</a>.
               </AdditionWarning>
-              {[
-                ["1", "#wherefind", "Ищем полезности"],
-                ["2", "#install-problems", "Проблемы с установкой"],
-                ["3", "#from-newbies", "Вопросы от новичков"],
-                ["4", "#tips", "(не)Вредные советы"],
-                ["5", "#import", "Импорт"],
-                ["6", "#interface", "Интерфейс"],
-                ["7", "#performance", "Производительность"],
-                ["8", "#actions", "Как и чем?"],
-                ["9", "#errors", "Ошибки и предупреждения"],
-                ["10", "#export", "Экспорт"],
-                ["11", "#export-problems", "Проблемы при экспорте"],
-              ].map(([key, href, title]) => (
-                <div key={key}>
-                  <Divider
-                    style={{fontSize: "clamp(12px, 2vw, 14px)"}}
-                    orientation="right"
-                  >
-                    {title}
-                  </Divider>
-                  {(() => {
-                    switch (href) {
-                      case "#wherefind":
-                        return <AEWhereFind />;
-                      case "#install-problems":
-                        return <AEInstallProblems />;
-                      case "#from-newbies":
-                        return <AEFromNewbies />;
-                      case "#tips":
-                        return <AETips />;
-                      case "#import":
-                        return <AEImport />;
-                      case "#interface":
-                        return <AEInterface />;
-                      case "#performance":
-                        return <AEPerformance />;
-                      case "#actions":
-                        return <AEActions />;
-                      case "#errors":
-                        return <AEErrors />;
-                      case "#export":
-                        return <AEExport />;
-                      case "#export-problems":
-                        return <AEExportProblems />;
-                    }
-                  })()}
-                </div>
-              ))}
+              {sections.map(({key, title, component: Component}) =>
+                visibleSections.includes(key) ? (
+                  <div key={key}>
+                    <Suspense
+                      fallback={
+                        <motion.div
+                          initial={{opacity: 0}}
+                          animate={{opacity: 1}}
+                          style={{
+                            height: "70vh",
+                            display: "flex",
+
+                            flexDirection: "column",
+                            alignItems: "center",
+                            justifyContent: "center",
+                          }}
+                          transition={{
+                            duration: 0.5,
+                            ease: [0.075, 0.82, 0.165, 1],
+                            delay: 1,
+                          }}
+                        >
+                          <CircularProgress sx={{color: "var(--accent)"}} />
+                          <div style={{marginInline: "auto", maxWidth: "800px"}}>
+                            <motion.p
+                              initial={{opacity: 0}}
+                              animate={{opacity: 0.5}}
+                              transition={{
+                                duration: 1,
+                                ease: [0.075, 0.82, 0.165, 1],
+                                delay: 10,
+                              }}
+                              style={{
+                                margin: "10px",
+                                marginTop: "20px",
+                                fontSize: "12px",
+                                marginInline: "20px",
+                              }}
+                            >
+                              {
+                                [
+                                  "Всё ещё грузим полезную информацию",
+                                  "Интересный факт: в After Effects можно выполнять арифметические операции с помощью знаков сложения и вычитания, умножения и деления",
+                                  "Убедитесь в том, что на ваше устройство подключено к Интернету",
+                                  "Секция всё ещё грузится, наберитесь терпения",
+                                  "Надеемся, что код сайта не поломался",
+                                  "Попробуйте перезагрузить страницу, если секция всё ещё грузится",
+                                  "Интересный факт: в After Effects имеется ограничение размера в 30 тысяч пикселей на каждую ось",
+                                  "Пока секции грузятся, дам совет: в любой непонятной ситуации - делай прекомпоз",
+                                  "Прочтите заклинание 'фастус информейтус лоадинг', если секция слишком долго грузится",
+                                  "Когда-нибудь секция загрузится и все будут жить счастливо...",
+                                ][Math.floor(Math.random() * 10)]
+                              }
+                            </motion.p>
+                          </div>
+                        </motion.div>
+                      }
+                    >
+                      <motion.div
+                        initial={{opacity: 0}}
+                        animate={{opacity: 1}}
+                        transition={{
+                          duration: 0.75,
+                          ease: [0.075, 0.82, 0.165, 1],
+                          delay: 0.1,
+                        }}
+                      >
+                        <Divider
+                          style={{fontSize: "clamp(12px, 2vw, 14px)"}}
+                          orientation="right"
+                        >
+                          {title}
+                        </Divider>
+                        <Component />
+                      </motion.div>
+                    </Suspense>
+                  </div>
+                ) : null
+              )}
               <Footer
                 title="aechat"
                 initialYear={2023}
@@ -164,4 +225,5 @@ const AEFaQ = () => {
     </div>
   );
 };
+
 export default AEFaQ;

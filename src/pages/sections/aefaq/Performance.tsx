@@ -2,7 +2,7 @@ import React from "react";
 import DetailsSummary from "../../../components/DetailsSummary";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 
-export const AEPerformance: React.FC = () => {
+const AEPerformance: React.FC = () => {
   return (
     <div
       className="faq-content"
@@ -25,3 +25,4 @@ export const AEPerformance: React.FC = () => {
     </div>
   );
 };
+export default AEPerformance;

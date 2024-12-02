@@ -9,7 +9,7 @@ import {
 import {FlexibleLinks} from "../../../components/FlexibleLinksFaQ";
 import {ImageFigure} from "../../../components/ContentFigure";
 
-export const PRWhereFind: React.FC = () => {
+const PRWhereFind: React.FC = () => {
   return (
     <div
       className="faq-content"
@@ -442,3 +442,4 @@ export const PRWhereFind: React.FC = () => {
     </div>
   );
 };
+export default PRWhereFind;

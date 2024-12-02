@@ -1,7 +1,7 @@
 import React from "react";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 
-export const PSExportProblems: React.FC = () => {
+const PSExportProblems: React.FC = () => {
   return (
     <div
       className="faq-content"
@@ -11,3 +11,4 @@ export const PSExportProblems: React.FC = () => {
     </div>
   );
 };
+export default PSExportProblems;

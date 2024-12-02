@@ -2,7 +2,7 @@ import React from "react";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 import DetailsSummary from "../../../components/DetailsSummary";
 
-export const PRFromNewbies: React.FC = () => {
+const PRFromNewbies: React.FC = () => {
   return (
     <div
       className="faq-content"
@@ -32,3 +32,4 @@ export const PRFromNewbies: React.FC = () => {
     </div>
   );
 };
+export default PRFromNewbies;

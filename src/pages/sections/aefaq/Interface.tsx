@@ -2,7 +2,7 @@ import React from "react";
 import DetailsSummary from "../../../components/DetailsSummary";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 
-export const AEInterface: React.FC = () => {
+const AEInterface: React.FC = () => {
   return (
     <div
       className="faq-content"
@@ -96,3 +96,4 @@ export const AEInterface: React.FC = () => {
     </div>
   );
 };
+export default AEInterface;

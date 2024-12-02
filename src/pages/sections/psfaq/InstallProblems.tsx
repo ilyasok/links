@@ -1,6 +1,6 @@
 import React from "react";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
-export const PSInstallProblems: React.FC = () => {
+const PSInstallProblems: React.FC = () => {
   return (
     <div
       className="faq-content"
@@ -10,3 +10,4 @@ export const PSInstallProblems: React.FC = () => {
     </div>
   );
 };
+export default PSInstallProblems;

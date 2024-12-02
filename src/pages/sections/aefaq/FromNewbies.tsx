@@ -9,7 +9,7 @@ import ContentSwitcher from "../../../components/features/OperatingSystemFilter"
 import {VideoFigure, YouTubeVideo} from "../../../components/ContentFigure";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 
-export const AEFromNewbies: React.FC = () => {
+const AEFromNewbies: React.FC = () => {
   return (
     <div
       className="faq-content"
@@ -740,9 +740,7 @@ export const AEFromNewbies: React.FC = () => {
         </ul>
       </DetailsSummary>
       <DetailsSummary title="А есть список популярных комбинаций клавиш для работы в After Effects?">
-        <p>
-          {/* fixme: написать */}
-        </p>
+        <p>{/* fixme: написать */}</p>
       </DetailsSummary>
       <DetailsSummary title="Где я могу узнать об нововведениях в обновлениях After Effects?">
         <p>
@@ -856,7 +854,9 @@ export const AEFromNewbies: React.FC = () => {
         />
       </DetailsSummary>
       <DetailsSummary title="Как найти нужный эффект на английском языке, если у меня стоит русский язык в After Effects?">
-        <p>{/* предположим что пользователь не хочет менять язык. про колхозный способ двойного языка и про таблицу эффектов */}</p>
+        <p>
+          {/* предположим что пользователь не хочет менять язык. про колхозный способ двойного языка и про таблицу эффектов */}
+        </p>
       </DetailsSummary>
       <DetailsSummary title="Почему предпросмотр проигрывается в хреновом качестве, в пикселях?">
         <p>{/* fixme: написать!! */}</p>
@@ -961,3 +961,4 @@ export const AEFromNewbies: React.FC = () => {
     </div>
   );
 };
+export default AEFromNewbies;

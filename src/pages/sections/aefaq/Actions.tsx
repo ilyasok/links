@@ -4,7 +4,7 @@ import {VideoFigure, YouTubeVideo} from "../../../components/ContentFigure";
 import {AdditionInfo} from "../../../components/Additions";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 
-export const AEActions: React.FC = () => {
+const AEActions: React.FC = () => {
   return (
     <div
       className="faq-content"
@@ -319,3 +319,4 @@ export const AEActions: React.FC = () => {
     </div>
   );
 };
+export default AEActions;

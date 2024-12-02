@@ -1,7 +1,7 @@
 import React from "react";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 
-export const AEExprLinking: React.FC = () => {
+const AEExprLinking: React.FC = () => {
   return (
     <div
       className="faq-content"
@@ -11,3 +11,4 @@ export const AEExprLinking: React.FC = () => {
     </div>
   );
 };
+export default AEExprLinking;

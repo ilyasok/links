@@ -1,7 +1,7 @@
 import React from "react";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 
-export const PSActions: React.FC = () => {
+const PSActions: React.FC = () => {
   return (
     <div
       className="faq-content"
@@ -11,3 +11,4 @@ export const PSActions: React.FC = () => {
     </div>
   );
 };
+export default PSActions;

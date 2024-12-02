@@ -9,7 +9,7 @@ import {FlexibleLinks} from "../../../components/FlexibleLinksFaQ";
 import {ImageFigure} from "../../../components/ContentFigure";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 
-export const AEWhereFind: React.FC = () => {
+const AEWhereFind: React.FC = () => {
   return (
     <div
       className="faq-content"
@@ -300,8 +300,9 @@ export const AEWhereFind: React.FC = () => {
           </a>{" "}
           в Telegram с полезными материалами для графических редакторов, как Photoshop и
           Illustrator. В данном канале есть навигация по каналу для нахождения всякой
-          всячины, например: <mark className="tag">#текстуры</mark>, <mark className="tag">#шрифты</mark>,{" "}
-          <mark className="tag">#кисти</mark>, <mark className="tag">#паттерны</mark>.
+          всячины, например: <mark className="tag">#текстуры</mark>,{" "}
+          <mark className="tag">#шрифты</mark>, <mark className="tag">#кисти</mark>,{" "}
+          <mark className="tag">#паттерны</mark>.
         </p>
         <p>
           Если вам не хватает контента из{" "}
@@ -3997,3 +3998,4 @@ export const AEWhereFind: React.FC = () => {
     </div>
   );
 };
+export default AEWhereFind;

@@ -8,7 +8,7 @@ import DetailsSummary from "../../../components/DetailsSummary";
 import ContentSwitcher from "../../../components/features/OperatingSystemFilter";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 import {ImageFigure, YouTubeVideo} from "../../../components/ContentFigure";
-export const AEInstallProblems: React.FC = () => {
+const AEInstallProblems: React.FC = () => {
   return (
     <div
       className="faq-content"
@@ -719,3 +719,4 @@ export const AEInstallProblems: React.FC = () => {
     </div>
   );
 };
+export default AEInstallProblems;

@@ -1,5 +1,4 @@
-import React, {useEffect} from "react";
-
+import React, {lazy, Suspense, useEffect, useState} from "react";
 import {Breadcrumb, Divider} from "antd";
 import {Link} from "react-router-dom";
 import {AdditionWarning} from "../components/Additions";
@@ -8,29 +7,83 @@ import {motion} from "framer-motion";
 import {Footer} from "../components/Footer";
 import CopyMark from "../components/features/CopyMark";
 import {SearchInPage, SearchProvider} from "../components/features/SearchInPage";
-// *: разделы psfaq:
-import {PSActions} from "./sections/psfaq/Actions";
-import {PSErrors} from "./sections/psfaq/Errors";
-import {PSExport} from "./sections/psfaq/Export";
-import {PSExportProblems} from "./sections/psfaq/ExportProblems";
-import {PSFromNewbies} from "./sections/psfaq/FromNewbies";
-import {PSImport} from "./sections/psfaq/Import";
-import {PSInstallProblems} from "./sections/psfaq/InstallProblems";
-import {PSInterface} from "./sections/psfaq/Interface";
-import {PSPerformance} from "./sections/psfaq/Performance";
-import {PSWhereFind} from "./sections/psfaq/WhereFind";
 import SupportDonut from "../components/modal/SupportDonut";
-import { Helmet } from "react-helmet-async";
+import {Helmet} from "react-helmet-async";
+import {CircularProgress} from "@mui/material";
+
+const PSActions = lazy(() => import("./sections/psfaq/Actions"));
+const PSErrors = lazy(() => import("./sections/psfaq/Errors"));
+const PSEXport = lazy(() => import("./sections/psfaq/Export"));
+const PSEXportProblems = lazy(() => import("./sections/psfaq/ExportProblems"));
+const PSFromNewbies = lazy(() => import("./sections/psfaq/FromNewbies"));
+const PSImport = lazy(() => import("./sections/psfaq/Import"));
+const PSInstallProblems = lazy(() => import("./sections/psfaq/InstallProblems"));
+const PSInterface = lazy(() => import("./sections/psfaq/Interface"));
+const PSPerformance = lazy(() => import("./sections/psfaq/Performance"));
+const PSWhereFind = lazy(() => import("./sections/psfaq/WhereFind"));
+
 const PSFaQ = () => {
   useEffect(() => {
     CopyMark.enableAutoCopy();
   }, []);
+  
+  const sections = [
+    {key: "1", id: "#wherefind", title: "Ищем полезности", component: PSWhereFind},
+    {
+      key: "2",
+      id: "#install-problems",
+      title: "Проблемы с установкой",
+      component: PSInstallProblems,
+    },
+    {
+      key: "3",
+      id: "#from-newbies",
+      title: "Вопросы от новичков",
+      component: PSFromNewbies,
+    },
+    {key: "4", id: "#import", title: "Про импорт", component: PSImport},
+    {key: "5", id: "#interface", title: "Про интерфейс", component: PSInterface},
+    {
+      key: "6",
+      id: "#performance",
+      title: "Про производительность",
+      component: PSPerformance,
+    },
+    {
+      key: "7",
+      id: "#actions",
+      title: "Как и чем сделать то или то?",
+      component: PSActions,
+    },
+    {key: "8", id: "#errors", title: "Ошибки и предупреждения", component: PSErrors},
+    {key: "9", id: "#export", title: "Про экспорт", component: PSEXport},
+    {
+      key: "10",
+      id: "#export-problems",
+      title: "Проблемы при экспорте",
+      component: PSEXportProblems,
+    },
+  ];
+  const [visibleSections, setVisibleSections] = useState<string[]>([]);
+
+  useEffect(() => {
+    setVisibleSections([sections[0].key]);
+    const loadSections = async () => {
+      for (let i = 1; i < sections.length; i++) {
+        await new Promise<void>((resolve) => {
+          setVisibleSections((prev) => [...prev, sections[i].key]);
+          setTimeout(resolve, 200);
+        });
+      }
+    };
+    loadSections();
+  }, []);
   return (
-    <div>
+    <div className="page">
       <SearchProvider>
-      <Helmet>
-        <title>psfaq@aechat</title>
-        <meta
+        <Helmet>
+          <title>psfaq@aechat</title>
+          <meta
             name="description"
             content="Ответы на частые вопросы от пользователей Photoshop"
           />
@@ -54,7 +107,7 @@ const PSFaQ = () => {
             property="og:description"
             content="Ответы на частые вопросы от пользователей Photoshop"
           />
-      </Helmet>
+        </Helmet>
         <Header title="psfaq" />
         <motion.main
           className="main"
@@ -69,19 +122,13 @@ const PSFaQ = () => {
                 <h1>psfaq</h1>
                 <Breadcrumb
                   items={[
+                    {title: <Link to="/">Главная</Link>},
                     {
-                      title: <Link to="/">Главная</Link>,
-                    },
-                    {
-                      title: <Link to="/psfaq">FaQ по Adobe Photoshop</Link>,
+                      title: <Link to="/psfaq">FAQ по Adobe Photoshop</Link>,
                       menu: {
                         items: [
-                          {
-                            title: <Link to="/aefaq">FaQ по Adobe After Effects</Link>,
-                          },
-                          {
-                            title: <Link to="/prfaq">FaQ по Adobe Premiere Pro</Link>,
-                          },
+                          {title: <Link to="/aefaq">FAQ по Adobe After Effects</Link>},
+                          {title: <Link to="/prfaq">FAQ по Adobe Premiere Pro</Link>},
                         ],
                       },
                     },
@@ -95,51 +142,86 @@ const PSFaQ = () => {
                 читателя могут отличаться. Предложения по поводу улучшения материала вы
                 можете отправить на <a href="mailto:me@m1sh3r.ru">почту автора</a>.
               </AdditionWarning>
-              {[
-                ["1", "#wherefind", "Ищем полезности"],
-                ["2", "#install-problems", "Проблемы с установкой"],
-                ["3", "#from-newbies", "Вопросы от новичков"],
-                ["4", "#import", "Про импорт"],
-                ["5", "#interface", "Про интерфейс"],
-                ["6", "#performance", "Про производительность"],
-                ["7", "#actions", "Как и чем сделать то или то?"],
-                ["8", "#errors", "Ошибки и предупреждения"],
-                ["9", "#export", "Про экспорт"],
-                ["10", "#export-problems", "Проблемы при экспорте"],
-              ].map(([key, href, title]) => (
-                <div key={key}>
-                  <Divider
-                    style={{fontSize: "clamp(12px, 2vw, 14px)"}}
-                    orientation="right"
-                  >
-                    {title}
-                  </Divider>
-                  {(() => {
-                    switch (href) {
-                      case "#wherefind":
-                        return <PSWhereFind />;
-                      case "#install-problems":
-                        return <PSInstallProblems />;
-                      case "#from-newbies":
-                        return <PSFromNewbies />;
-                      case "#import":
-                        return <PSImport />;
-                      case "#interface":
-                        return <PSInterface />;
-                      case "#performance":
-                        return <PSPerformance />;
-                      case "#actions":
-                        return <PSActions />;
-                      case "#errors":
-                        return <PSErrors />;
-                      case "#export":
-                        return <PSExport />;
-                      case "#export-problems":
-                        return <PSExportProblems />;
-                    }
-                  })()}
-                </div>
-              ))}
+              {sections.map(({key, title, component: Component}) =>
+                visibleSections.includes(key) ? (
+                  <div key={key}>
+                    <Suspense
+                      fallback={
+                        <motion.div
+                          initial={{opacity: 0}}
+                          animate={{opacity: 1}}
+                          style={{
+                            height: "70vh",
+                            display: "flex",
+
+                            flexDirection: "column",
+                            alignItems: "center",
+                            justifyContent: "center",
+                          }}
+                          transition={{
+                            duration: 0.5,
+                            ease: [0.075, 0.82, 0.165, 1],
+                            delay: 1,
+                          }}
+                        >
+                          <CircularProgress sx={{color: "var(--accent)"}} />
+                          <div style={{marginInline: "auto", maxWidth: "800px"}}>
+                            <motion.p
+                              initial={{opacity: 0}}
+                              animate={{opacity: 0.5}}
+                              transition={{
+                                duration: 1,
+                                ease: [0.075, 0.82, 0.165, 1],
+                                delay: 10,
+                              }}
+                              style={{
+                                margin: "10px",
+                                marginTop: "20px",
+                                fontSize: "12px",
+                                marginInline: "20px",
+                              }}
+                            >
+                              {
+                                [
+                                  // fixme: переписать факты по фотошопу
+                                  "Всё ещё грузим полезную информацию",
+                                  "Интересный факт: в After Effects можно выполнять арифметические операции с помощью знаков сложения и вычитания, умножения и деления",
+                                  "Убедитесь в том, что на ваше устройство подключено к Интернету",
+                                  "Секция всё ещё грузится, наберитесь терпения",
+                                  "Надеемся, что код сайта не поломался",
+                                  "Попробуйте перезагрузить страницу, если секция всё ещё грузится",
+                                  "Интересный факт: в After Effects имеется ограничение размера в 30 тысяч пикселей на каждую ось",
+                                  "Пока секции грузятся, дам совет: в любой непонятной ситуации - делай прекомпоз",
+                                  "Прочтите заклинание 'фастус информейтус лоадинг', если секция слишком долго грузится",
+                                  "Когда-нибудь секция загрузится и все будут жить счастливо...",
+                                ][Math.floor(Math.random() * 10)]
+                              }
+                            </motion.p>
+                          </div>
+                        </motion.div>
+                      }
+                    >
+                      <motion.div
+                        initial={{opacity: 0}}
+                        animate={{opacity: 1}}
+                        transition={{
+                          duration: 0.75,
+                          ease: [0.075, 0.82, 0.165, 1],
+                          delay: 0.1,
+                        }}
+                      >
+                        <Divider
+                          style={{fontSize: "clamp(12px, 2vw, 14px)"}}
+                          orientation="right"
+                        >
+                          {title}
+                        </Divider>
+                        <Component />
+                      </motion.div>
+                    </Suspense>
+                  </div>
+                ) : null
+              )}
               <Footer
                 title="aechat & dwchat"
                 initialYear={2023}
@@ -152,4 +234,5 @@ const PSFaQ = () => {
     </div>
   );
 };
+
 export default PSFaQ;

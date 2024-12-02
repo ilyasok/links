@@ -1,7 +1,7 @@
 import React from "react";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 
-export const AEExprBase: React.FC = () => {
+const AEExprBase: React.FC = () => {
   return (
     <div
       className="faq-content"
@@ -11,3 +11,4 @@ export const AEExprBase: React.FC = () => {
     </div>
   );
 };
+export default AEExprBase;

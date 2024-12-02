@@ -2,7 +2,7 @@ import React from "react";
 import DetailsSummary from "../../../components/DetailsSummary";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 
-export const AEExport: React.FC = () => {
+const AEExport: React.FC = () => {
   return (
     <div
       className="faq-content"
@@ -48,3 +48,4 @@ export const AEExport: React.FC = () => {
     </div>
   );
 };
+export default AEExport;

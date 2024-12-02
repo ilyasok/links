@@ -8,7 +8,7 @@ import {
 import {ImageFigure} from "../../../components/ContentFigure";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 
-export const AEErrors: React.FC = () => {
+const AEErrors: React.FC = () => {
   return (
     <div
       className="faq-content"
@@ -470,3 +470,4 @@ export const AEErrors: React.FC = () => {
     </div>
   );
 };
+export default AEErrors;

@@ -2,7 +2,7 @@ import React from "react";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 import DetailsSummary from "../../../components/DetailsSummary";
 
-export const PRPerformance: React.FC = () => {
+const PRPerformance: React.FC = () => {
   return (
     <div
       className="faq-content"
@@ -25,3 +25,4 @@ export const PRPerformance: React.FC = () => {
     </div>
   );
 };
+export default PRPerformance;

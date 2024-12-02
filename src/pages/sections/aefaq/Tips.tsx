@@ -2,7 +2,7 @@ import React from "react";
 import DetailsSummary from "../../../components/DetailsSummary";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 
-export const AETips: React.FC = () => {
+const AETips: React.FC = () => {
   return (
     <div
       className="faq-content"
@@ -39,3 +39,4 @@ export const AETips: React.FC = () => {
     </div>
   );
 };
+export default AETips;
