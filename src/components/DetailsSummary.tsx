@@ -38,14 +38,7 @@ const DetailsSummary: React.FC<DetailsSummaryProps> = ({title, children}) => {
 
           if (window.location.hash === `#${generatedAnchor}`) {
             detailsRef.current?.setAttribute("open", "true");
-            const offset = 130;
-            const elementPosition = summary.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.scrollY - offset;
-
-            window.scrollTo({
-              top: offsetPosition,
-              behavior: "smooth",
-            });
+            summary.scrollIntoView({behavior: "smooth", block: "start"});
           }
         }
       });
