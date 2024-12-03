@@ -5,7 +5,7 @@ import {ThemeToggleButton} from "./modal/ThemeChanger";
 import {SearchButton} from "./features/SearchInPage";
 import {Tooltip} from "antd";
 import {motion} from "framer-motion";
-export const Header: React.FC<{title: string}> = ({title}) => {
+const Header: React.FC<{title: string}> = ({title}) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const checkScrollPosition = () => {
@@ -58,3 +58,4 @@ export const Header: React.FC<{title: string}> = ({title}) => {
     </motion.header>
   );
 };
+export default Header;

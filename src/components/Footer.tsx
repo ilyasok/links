@@ -5,7 +5,7 @@ interface FooterProps {
   initialYear: number;
 }
 
-export const Footer: React.FC<FooterProps> = ({title, initialYear}) => {
+const Footer: React.FC<FooterProps> = ({title, initialYear}) => {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -17,3 +17,4 @@ export const Footer: React.FC<FooterProps> = ({title, initialYear}) => {
     </footer>
   );
 };
+export default Footer;

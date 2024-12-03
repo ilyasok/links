@@ -1,10 +1,10 @@
 import React, {lazy, Suspense, useState, useEffect} from "react";
 import {motion} from "framer-motion";
-import {Header} from "../components/Header";
+import Header from "../components/Header";
 import {Breadcrumb, Divider} from "antd";
 import {Link} from "react-router-dom";
 import {AdditionWarning} from "../components/Additions";
-import {Footer} from "../components/Footer";
+import Footer from "../components/Footer";
 import {SearchProvider, SearchInPage} from "../components/features/SearchInPage";
 import SupportDonut from "../components/modal/SupportDonut";
 import {Helmet} from "react-helmet-async";

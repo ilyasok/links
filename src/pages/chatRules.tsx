@@ -1,11 +1,11 @@
 import React from "react";
 
-import {Header} from "../components/Header";
+import Header from "../components/Header";
 import {Breadcrumb} from "antd";
 import {Link} from "react-router-dom";
 import {AdditionDanger, AdditionInfo, AdditionWarning} from "../components/Additions";
 import {motion} from "framer-motion";
-import {Footer} from "../components/Footer";
+import Footer from "../components/Footer";
 import {Helmet} from "react-helmet-async";
 const ChatRules = () => (
   <div>

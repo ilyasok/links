@@ -2,9 +2,9 @@ import React, {lazy, Suspense, useEffect, useState} from "react";
 import {Breadcrumb, Divider} from "antd";
 import {Link} from "react-router-dom";
 import {AdditionWarning} from "../components/Additions";
-import {Header} from "../components/Header";
+import Header from "../components/Header";
 import {motion} from "framer-motion";
-import {Footer} from "../components/Footer";
+import Footer from "../components/Footer";
 import CopyMark from "../components/features/CopyMark";
 import {SearchInPage, SearchProvider} from "../components/features/SearchInPage";
 import SupportDonut from "../components/modal/SupportDonut";
@@ -26,7 +26,7 @@ const PSFaQ = () => {
   useEffect(() => {
     CopyMark.enableAutoCopy();
   }, []);
-  
+
   const sections = [
     {key: "1", id: "#wherefind", title: "Ищем полезности", component: PSWhereFind},
     {
