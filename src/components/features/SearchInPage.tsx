@@ -78,6 +78,8 @@ export const SearchInPage: React.FC = () => {
 
   useEffect(() => {
     if (isOpen) {
+      setQuery("");
+      setResults([]);
       const timeout = setTimeout(() => {
         inputRef.current?.focus();
       }, 0);
