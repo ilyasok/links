@@ -26,7 +26,7 @@ export const SearchProvider: React.FC<{children: React.ReactNode}> = ({children}
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if ((event.ctrlKey && event.key === "f") || (event.ctrlKey && event.key === "а")) {
-        event.preventDefault(); // убираем стандартное поведение браузера
+        event.preventDefault();
         openModal();
       }
     };
