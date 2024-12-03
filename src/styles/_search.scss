@@ -42,10 +42,6 @@
     display: block;
     border-radius: $roundness;
 
-    &:hover {
-      background-color: var(--button_hover);
-    }
-
     &:last-child {
       border-bottom: none;
     }
