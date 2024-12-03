@@ -27,6 +27,12 @@ const RedirectHtml = () => {
   return null;
 };
 
+declare global {
+  interface Window {
+    ym: (counterId: number, method: string, ...args: unknown[]) => void;
+  }
+}
+
 const trackPageView = (path: string) => {
   if (typeof window === "object" && window.ym) {
     window.ym(96346999, "hit", path);
