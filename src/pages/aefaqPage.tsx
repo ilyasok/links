@@ -43,23 +43,24 @@ const AEFaQ = () => {
   ];
 
   const [visibleSections, setVisibleSections] = useState<string[]>([]);
+  const [isPageLoaded, setIsPageLoaded] = useState(false);
 
   useEffect(() => {
-    setVisibleSections([sections[0].key]);
     const loadSections = async () => {
-      for (let i = 1; i < sections.length; i++) {
+      for (let i = 0; i < sections.length; i++) {
         await new Promise<void>((resolve) => {
           setVisibleSections((prev) => [...prev, sections[i].key]);
-          setTimeout(resolve, 200);
+          setTimeout(resolve, 50);
         });
       }
+      setIsPageLoaded(true);
     };
     loadSections();
   }, []);
 
   return (
     <div className="page">
-      <SearchProvider>
+      <SearchProvider isPageLoaded={isPageLoaded}>
         <Helmet>
           <title>aefaq@aechat</title>
           <meta
