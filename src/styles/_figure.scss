@@ -1,6 +1,10 @@
 @import "variables";
 
 .figure {
+  &_browser{
+
+    &-youtube{}
+  }
   &_windows {
 
     &-light,

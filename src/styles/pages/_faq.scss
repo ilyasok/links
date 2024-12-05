@@ -4,6 +4,7 @@
   &-container {
     margin-inline: auto;
     max-width: 1000px;
+    width: 97.5%;
 
     &-flex {
       display: flex;
@@ -27,7 +28,8 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    filter: drop-shadow(0 2.5px 5px var(--shadow));
+    filter: drop-shadow(0 3px 5px var(--shadow));
+    background-image: linear-gradient(to bottom, var(--summary_background), transparent);
     transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     cursor: pointer;
     margin-block: 10px;
@@ -151,6 +153,7 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 5px;
+        padding-inline: 10px;
         margin: 0 auto;
         max-width: 800px;
 

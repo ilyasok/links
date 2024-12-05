@@ -52,10 +52,12 @@ html {
   visibility: visible;
 }
 
+//noinspection CssUnusedSymbol
 .visual-hidden {
   display: none;
 }
 
+//noinspection CssUnusedSymbol
 .no-javascript,
 .not-found {
   color: var(--text-color);
