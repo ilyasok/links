@@ -1,5 +1,5 @@
 import {Search, BackspaceOutlined} from "@mui/icons-material";
-import {Modal, Tooltip} from "antd";
+import {message, Modal, Tooltip} from "antd";
 import React, {
   createContext,
   useContext,
@@ -34,7 +34,11 @@ export const SearchProvider: React.FC<{
     const handleKeyDown = (event: KeyboardEvent) => {
       if ((event.ctrlKey && event.key === "f") || (event.ctrlKey && event.key === "а")) {
         event.preventDefault();
-        openModal();
+        if (isPageLoaded) {
+          openModal();
+        } else {
+          message.error("Поиск временно недоступен, дождитесь полной загрузки страницы");
+        }
       }
     };
 
@@ -66,16 +70,19 @@ export const SearchButton: React.FC = () => {
   const {openModal, isPageLoaded} = useSearch();
 
   return (
-    <Tooltip
-      title={
-        isPageLoaded
-          ? "Поиск по странице (Ctrl+F)"
-          : "Поиск недоступен до полной загрузки страницы"
-      }
-    >
+    <Tooltip title={"Поиск по странице (Ctrl+F)"}>
       <button
-        onClick={openModal}
-        disabled={!isPageLoaded}
+        style={{
+          opacity: isPageLoaded ? 1 : 0.5,
+          filter: isPageLoaded ? "saturate(100%)" : "saturate(0%)",
+        }}
+        onClick={() => {
+          if (!isPageLoaded) {
+            message.error("Поиск недоступен, пока страница полностью не загружена");
+          } else {
+            openModal();
+          }
+        }}
       >
         <Search />
       </button>
