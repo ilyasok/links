@@ -44,16 +44,22 @@ const AEFaQ = () => {
 
   const [visibleSections, setVisibleSections] = useState<string[]>([]);
   const [isPageLoaded, setIsPageLoaded] = useState(false);
+  const [loadedCount, setLoadedCount] = useState(0);
+
+  useEffect(() => {
+    if (loadedCount === sections.length) {
+      setIsPageLoaded(true);
+    }
+  }, [loadedCount, sections.length]);
 
   useEffect(() => {
     const loadSections = async () => {
-      for (let i = 0; i < sections.length; i++) {
+      for (const section of sections) {
         await new Promise<void>((resolve) => {
-          setVisibleSections((prev) => [...prev, sections[i].key]);
-          setTimeout(resolve, 50);
+          setVisibleSections((prev) => [...prev, section.key]);
+          setTimeout(resolve, 200);
         });
       }
-      setIsPageLoaded(true);
     };
     loadSections();
   }, []);
@@ -146,7 +152,6 @@ const AEFaQ = () => {
                           style={{
                             height: "70vh",
                             display: "flex",
-
                             flexDirection: "column",
                             alignItems: "center",
                             justifyContent: "center",
@@ -201,6 +206,7 @@ const AEFaQ = () => {
                           ease: [0.075, 0.82, 0.165, 1],
                           delay: 0.1,
                         }}
+                        onAnimationComplete={() => setLoadedCount((prev) => prev + 1)}
                       >
                         <Divider
                           style={{fontSize: "clamp(12px, 2vw, 14px)"}}
