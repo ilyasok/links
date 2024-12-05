@@ -13,14 +13,21 @@ interface SearchContextType {
   isOpen: boolean;
   openModal: () => void;
   closeModal: () => void;
+  isPageLoaded: boolean;
 }
 
 const SearchContext = createContext<SearchContextType | undefined>(undefined);
 
-export const SearchProvider: React.FC<{children: React.ReactNode}> = ({children}) => {
+export const SearchProvider: React.FC<{
+  children: React.ReactNode;
+  isPageLoaded: boolean;
+}> = ({children, isPageLoaded}) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const openModal = () => setIsOpen(true);
+  const openModal = () => {
+    if (isPageLoaded) setIsOpen(true);
+  };
+
   const closeModal = () => setIsOpen(false);
 
   useEffect(() => {
@@ -35,9 +42,12 @@ export const SearchProvider: React.FC<{children: React.ReactNode}> = ({children}
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, []);
+  }, [isPageLoaded]);
 
-  const value = useMemo(() => ({isOpen, openModal, closeModal}), [isOpen]);
+  const value = useMemo(
+    () => ({isOpen, openModal, closeModal, isPageLoaded}),
+    [isOpen, isPageLoaded]
+  );
 
   return <SearchContext.Provider value={value}>{children}</SearchContext.Provider>;
 };
@@ -53,11 +63,20 @@ export const useSearch = () => {
 };
 
 export const SearchButton: React.FC = () => {
-  const {openModal} = useSearch();
+  const {openModal, isPageLoaded} = useSearch();
 
   return (
-    <Tooltip title="Поиск по странице (Ctrl+F)">
-      <button onClick={openModal}>
+    <Tooltip
+      title={
+        isPageLoaded
+          ? "Поиск по странице (Ctrl+F)"
+          : "Поиск недоступен до полной загрузки страницы"
+      }
+    >
+      <button
+        onClick={openModal}
+        disabled={!isPageLoaded}
+      >
         <Search />
       </button>
     </Tooltip>
@@ -69,7 +88,7 @@ const escapeRegExp = (string: string) => {
 };
 
 export const SearchInPage: React.FC = () => {
-  const {isOpen, closeModal} = useSearch();
+  const {isOpen, closeModal, isPageLoaded} = useSearch();
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<{title: string; content: string; id: string}[]>(
     []
@@ -116,7 +135,7 @@ export const SearchInPage: React.FC = () => {
   const handleSearch = (text: string) => {
     setQuery(text);
 
-    if (!text.trim()) {
+    if (!isPageLoaded || !text.trim()) {
       setResults([]);
       return;
     }
@@ -168,6 +187,26 @@ export const SearchInPage: React.FC = () => {
 
     closeModal();
   };
+
+  // const renderSectionsList = () => {
+  //   const sections = extractDetailsData();
+
+  //   return (
+  //     <ul>
+  //       {sections.map(({id, title}) => (
+  //         <li key={id}>
+  //           <a
+  //             href={`#${id}`}
+  //             onClick={(e) => handleLinkClick(id)}
+  //           >
+  //             {title}
+  //           </a>
+  //         </li>
+  //       ))}
+  //     </ul>
+  //   );
+  // };
+
   return (
     <Modal
       closeIcon={null}
@@ -207,21 +246,12 @@ export const SearchInPage: React.FC = () => {
         )}
       </div>
       <div className="search-results">
-        {query.trim() === "" && (
-          <p
-            className="search-no-results"
-            style={{
-              textAlign: "center",
-              fontSize: "36px",
-              height: "250px",
-              marginBlock: "auto",
-            }}
-          >
-            {/* todo: добавить список всех секций вместо этого смайла */}
-            ¯\_(ツ)_/¯
-          </p>
-        )}
-        {results.length > 0 &&
+        {
+          query.trim() === "" && isPageLoaded
+          // && renderSectionsList()
+        }
+        {query.trim() !== "" &&
+          results.length > 0 &&
           results.map(({title, content, id}) => (
             <div key={id}>
               <button
@@ -260,6 +290,11 @@ export const SearchInPage: React.FC = () => {
             }}
           >
             Ничего не нашлось, попробуйте изменить ваш запрос.
+          </p>
+        )}
+        {!isPageLoaded && (
+          <p style={{textAlign: "center", fontSize: "16px", margin: "20px"}}>
+            Страница ещё загружается, а поиск всё ещё недоступен. Пожалуйста, подождите...
           </p>
         )}
       </div>
