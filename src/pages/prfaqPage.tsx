@@ -10,6 +10,7 @@ import {AdditionWarning} from "../components/Additions";
 import SupportDonut from "../components/modal/SupportDonut";
 import CopyMark from "../components/features/CopyMark";
 import {CircularProgress} from "@mui/material";
+import { generateAnchorId } from "../components/DetailsSummary";
 
 const PRActions = lazy(() => import("./sections/prfaq/Actions"));
 const PRErrors = lazy(() => import("./sections/prfaq/Errors"));
@@ -67,14 +68,22 @@ const PRFaQ = () => {
     },
   ];
   const [visibleSections, setVisibleSections] = useState<string[]>([]);
+  const [isPageLoaded, setIsPageLoaded] = useState(false);
+  const [loadedCount, setLoadedCount] = useState(0);
 
   useEffect(() => {
-    setVisibleSections([sections[0].key]);
+    if (loadedCount === sections.length) {
+      setIsPageLoaded(true);
+      generateAnchorId();
+    }
+  }, [loadedCount, sections.length]);
+
+  useEffect(() => {
     const loadSections = async () => {
-      for (let i = 1; i < sections.length; i++) {
+      for (const section of sections) {
         await new Promise<void>((resolve) => {
-          setVisibleSections((prev) => [...prev, sections[i].key]);
-          setTimeout(resolve, 200);
+          setVisibleSections((prev) => [...prev, section.key]);
+          setTimeout(resolve, 50);
         });
       }
     };
@@ -83,7 +92,7 @@ const PRFaQ = () => {
 
   return (
     <div className="page">
-      <SearchProvider>
+      <SearchProvider isPageLoaded={isPageLoaded}>
         <Helmet>
           <title>prfaq@aechat</title>
           <meta
@@ -212,6 +221,7 @@ const PRFaQ = () => {
                           ease: [0.075, 0.82, 0.165, 1],
                           delay: 0.1,
                         }}
+                        onAnimationComplete={() => setLoadedCount((prev) => prev + 1)}
                       >
                         <Divider
                           style={{fontSize: "clamp(12px, 2vw, 14px)"}}

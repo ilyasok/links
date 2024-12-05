@@ -10,11 +10,12 @@ import {SearchInPage, SearchProvider} from "../components/features/SearchInPage"
 import SupportDonut from "../components/modal/SupportDonut";
 import {Helmet} from "react-helmet-async";
 import {CircularProgress} from "@mui/material";
+import {generateAnchorId} from "../components/DetailsSummary";
 
 const PSActions = lazy(() => import("./sections/psfaq/Actions"));
 const PSErrors = lazy(() => import("./sections/psfaq/Errors"));
-const PSEXport = lazy(() => import("./sections/psfaq/Export"));
-const PSEXportProblems = lazy(() => import("./sections/psfaq/ExportProblems"));
+const PSExport = lazy(() => import("./sections/psfaq/Export"));
+const PSExportProblems = lazy(() => import("./sections/psfaq/ExportProblems"));
 const PSFromNewbies = lazy(() => import("./sections/psfaq/FromNewbies"));
 const PSImport = lazy(() => import("./sections/psfaq/Import"));
 const PSInstallProblems = lazy(() => import("./sections/psfaq/InstallProblems"));
@@ -56,31 +57,41 @@ const PSFaQ = () => {
       component: PSActions,
     },
     {key: "8", id: "#errors", title: "Ошибки и предупреждения", component: PSErrors},
-    {key: "9", id: "#export", title: "Про экспорт", component: PSEXport},
+    {key: "9", id: "#export", title: "Про экспорт", component: PSExport},
     {
       key: "10",
       id: "#export-problems",
       title: "Проблемы при экспорте",
-      component: PSEXportProblems,
+      component: PSExportProblems,
     },
   ];
+
   const [visibleSections, setVisibleSections] = useState<string[]>([]);
+  const [isPageLoaded, setIsPageLoaded] = useState(false);
+  const [loadedCount, setLoadedCount] = useState(0);
 
   useEffect(() => {
-    setVisibleSections([sections[0].key]);
+    if (loadedCount === sections.length) {
+      setIsPageLoaded(true);
+      generateAnchorId();
+    }
+  }, [loadedCount, sections.length]);
+
+  useEffect(() => {
     const loadSections = async () => {
-      for (let i = 1; i < sections.length; i++) {
+      for (const section of sections) {
         await new Promise<void>((resolve) => {
-          setVisibleSections((prev) => [...prev, sections[i].key]);
-          setTimeout(resolve, 200);
+          setVisibleSections((prev) => [...prev, section.key]);
+          setTimeout(resolve, 50);
         });
       }
     };
     loadSections();
   }, []);
+
   return (
     <div className="page">
-      <SearchProvider>
+      <SearchProvider isPageLoaded={isPageLoaded}>
         <Helmet>
           <title>psfaq@aechat</title>
           <meta
@@ -209,6 +220,7 @@ const PSFaQ = () => {
                           ease: [0.075, 0.82, 0.165, 1],
                           delay: 0.1,
                         }}
+                        onAnimationComplete={() => setLoadedCount((prev) => prev + 1)}
                       >
                         <Divider
                           style={{fontSize: "clamp(12px, 2vw, 14px)"}}
