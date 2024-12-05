@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState, Suspense, lazy} from "react";
 import {Breadcrumb, Divider} from "antd";
 import {motion} from "framer-motion";
 import {Link} from "react-router-dom";
@@ -9,18 +9,19 @@ import {SearchInPage, SearchProvider} from "../components/features/SearchInPage"
 import {AdditionWarning} from "../components/Additions";
 import SupportDonut from "../components/modal/SupportDonut";
 import CopyMark from "../components/features/CopyMark";
+import {CircularProgress} from "@mui/material";
 
-import AEActions from "./sections/aefaq/Actions";
-import AEErrors from "./sections/aefaq/Errors";
-import AEExport from "./sections/aefaq/Export";
-import AEExportProblems from "./sections/aefaq/ExportProblems";
-import AEFromNewbies from "./sections/aefaq/FromNewbies";
-import AEImport from "./sections/aefaq/Import";
-import AEInstallProblems from "./sections/aefaq/InstallProblems";
-import AEInterface from "./sections/aefaq/Interface";
-import AEPerformance from "./sections/aefaq/Performance";
-import AETips from "./sections/aefaq/Tips";
-import AEWhereFind from "./sections/aefaq/WhereFind";
+const AEWhereFind = lazy(() => import("./sections/aefaq/WhereFind"));
+const AEInstallProblems = lazy(() => import("./sections/aefaq/InstallProblems"));
+const AEFromNewbies = lazy(() => import("./sections/aefaq/FromNewbies"));
+const AETips = lazy(() => import("./sections/aefaq/Tips"));
+const AEImport = lazy(() => import("./sections/aefaq/Import"));
+const AEInterface = lazy(() => import("./sections/aefaq/Interface"));
+const AEPerformance = lazy(() => import("./sections/aefaq/Performance"));
+const AEActions = lazy(() => import("./sections/aefaq/Actions"));
+const AEErrors = lazy(() => import("./sections/aefaq/Errors"));
+const AEExport = lazy(() => import("./sections/aefaq/Export"));
+const AEExportProblems = lazy(() => import("./sections/aefaq/ExportProblems"));
 
 const AEFaQ = () => {
   useEffect(() => {
@@ -40,25 +41,25 @@ const AEFaQ = () => {
     {key: "10", title: "Экспорт", component: AEExport},
     {key: "11", title: "Проблемы при экспорте", component: AEExportProblems},
   ];
+
   const [visibleSections, setVisibleSections] = useState<string[]>([]);
-  const [isPageLoaded, setIsPageLoaded] = useState(false);
 
   useEffect(() => {
+    setVisibleSections([sections[0].key]);
     const loadSections = async () => {
-      for (let i = 0; i < sections.length; i++) {
+      for (let i = 1; i < sections.length; i++) {
         await new Promise<void>((resolve) => {
           setVisibleSections((prev) => [...prev, sections[i].key]);
           setTimeout(resolve, 200);
         });
       }
-      setIsPageLoaded(true);
     };
     loadSections();
   }, []);
 
   return (
     <div className="page">
-      <SearchProvider isPageLoaded={isPageLoaded}>
+      <SearchProvider>
         <Helmet>
           <title>aefaq@aechat</title>
           <meta
@@ -136,23 +137,79 @@ const AEFaQ = () => {
               {sections.map(({key, title, component: Component}) =>
                 visibleSections.includes(key) ? (
                   <div key={key}>
-                    <motion.div
-                      initial={{opacity: 0}}
-                      animate={{opacity: 1}}
-                      transition={{
-                        duration: 0.75,
-                        ease: [0.075, 0.82, 0.165, 1],
-                        delay: 0.1,
-                      }}
+                    <Suspense
+                      fallback={
+                        <motion.div
+                          initial={{opacity: 0}}
+                          animate={{opacity: 1}}
+                          style={{
+                            height: "70vh",
+                            display: "flex",
+
+                            flexDirection: "column",
+                            alignItems: "center",
+                            justifyContent: "center",
+                          }}
+                          transition={{
+                            duration: 0.5,
+                            ease: [0.075, 0.82, 0.165, 1],
+                            delay: 1,
+                          }}
+                        >
+                          <CircularProgress sx={{color: "var(--accent)"}} />
+                          <div style={{marginInline: "auto", maxWidth: "800px"}}>
+                            <motion.p
+                              initial={{opacity: 0}}
+                              animate={{opacity: 0.5}}
+                              transition={{
+                                duration: 1,
+                                ease: [0.075, 0.82, 0.165, 1],
+                                delay: 10,
+                              }}
+                              style={{
+                                margin: "10px",
+                                marginTop: "20px",
+                                fontSize: "12px",
+                                marginInline: "20px",
+                              }}
+                            >
+                              {
+                                [
+                                  "Всё ещё грузим полезную информацию",
+                                  "Интересный факт: в After Effects можно выполнять арифметические операции с помощью знаков сложения и вычитания, умножения и деления",
+                                  "Убедитесь в том, что на ваше устройство подключено к Интернету",
+                                  "Секция всё ещё грузится, наберитесь терпения",
+                                  "Надеемся, что код сайта не поломался",
+                                  "Попробуйте перезагрузить страницу, если секция всё ещё грузится",
+                                  "Интересный факт: в After Effects имеется ограничение размера в 30 тысяч пикселей на каждую ось",
+                                  "Пока секции грузятся, дам совет: в любой непонятной ситуации - делай прекомпоз",
+                                  "Прочтите заклинание 'фастус информейтус лоадинг', если секция слишком долго грузится",
+                                  "Когда-нибудь секция загрузится и все будут жить счастливо...",
+                                ][Math.floor(Math.random() * 10)]
+                              }
+                            </motion.p>
+                          </div>
+                        </motion.div>
+                      }
                     >
-                      <Divider
-                        style={{fontSize: "clamp(12px, 2vw, 14px)"}}
-                        orientation="right"
+                      <motion.div
+                        initial={{opacity: 0}}
+                        animate={{opacity: 1}}
+                        transition={{
+                          duration: 0.75,
+                          ease: [0.075, 0.82, 0.165, 1],
+                          delay: 0.1,
+                        }}
                       >
-                        {title}
-                      </Divider>
-                      <Component />
-                    </motion.div>
+                        <Divider
+                          style={{fontSize: "clamp(12px, 2vw, 14px)"}}
+                          orientation="right"
+                        >
+                          {title}
+                        </Divider>
+                        <Component />
+                      </motion.div>
+                    </Suspense>
                   </div>
                 ) : null
               )}
