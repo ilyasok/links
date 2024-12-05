@@ -10,6 +10,7 @@ import {AdditionWarning} from "../components/Additions";
 import SupportDonut from "../components/modal/SupportDonut";
 import CopyMark from "../components/features/CopyMark";
 import {CircularProgress} from "@mui/material";
+import {generateAnchorId} from "../components/DetailsSummary";
 
 const AEWhereFind = lazy(() => import("./sections/aefaq/WhereFind"));
 const AEInstallProblems = lazy(() => import("./sections/aefaq/InstallProblems"));
@@ -49,6 +50,7 @@ const AEFaQ = () => {
   useEffect(() => {
     if (loadedCount === sections.length) {
       setIsPageLoaded(true);
+      generateAnchorId();
     }
   }, [loadedCount, sections.length]);
 
@@ -57,7 +59,7 @@ const AEFaQ = () => {
       for (const section of sections) {
         await new Promise<void>((resolve) => {
           setVisibleSections((prev) => [...prev, section.key]);
-          setTimeout(resolve, 200);
+          setTimeout(resolve, 50);
         });
       }
     };

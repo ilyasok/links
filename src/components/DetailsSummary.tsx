@@ -1,14 +1,36 @@
 import {message} from "antd";
-import React, {ReactNode, useState, useEffect, useRef} from "react";
+import React, {ReactNode, useState, useRef} from "react";
 
 interface DetailsSummaryProps {
   title: string;
   children: ReactNode;
 }
 
+export const generateAnchorId = () => {
+  const containers = Array.from(document.querySelectorAll(".faq-content"));
+  let generatedAnchor = "";
+
+  containers.forEach((container, blockIndex) => {
+    const summaries = Array.from(container.querySelectorAll(".faq-summary"));
+    summaries.forEach((summary, summaryIndex) => {
+      generatedAnchor = `${blockIndex + 1}.${summaryIndex + 1}`;
+
+      if (!summary.hasAttribute("id")) {
+        summary.setAttribute("id", generatedAnchor);
+      }
+
+      if (window.location.hash === `#${generatedAnchor}`) {
+        summary.closest("details")?.setAttribute("open", "true");
+        summary.scrollIntoView({behavior: "smooth", block: "start"});
+      }
+    });
+  });
+
+  return generatedAnchor;
+};
+
 const DetailsSummary: React.FC<DetailsSummaryProps> = ({title, children}) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [anchorId, setAnchorId] = useState("");
   const detailsRef = useRef<HTMLDetailsElement>(null);
 
   const handleToggle = () => {
@@ -16,6 +38,7 @@ const DetailsSummary: React.FC<DetailsSummaryProps> = ({title, children}) => {
   };
 
   const handleCopyAnchor = () => {
+    const anchorId = detailsRef.current?.querySelector(".faq-summary")?.id ?? "";
     const anchor = `${window.location.origin}${window.location.pathname}#${anchorId}`;
     navigator.clipboard.writeText(anchor);
     message.success(
@@ -23,27 +46,7 @@ const DetailsSummary: React.FC<DetailsSummaryProps> = ({title, children}) => {
     );
   };
 
-  useEffect(() => {
-    const containers = Array.from(document.querySelectorAll(".faq-content"));
-    containers.forEach((container, blockIndex) => {
-      const summaries = Array.from(container.querySelectorAll(".faq-summary"));
-      summaries.forEach((summary, summaryIndex) => {
-        if (summary === detailsRef.current?.querySelector(".faq-summary")) {
-          const generatedAnchor = `${blockIndex + 1}.${summaryIndex + 1}`;
-          setAnchorId(generatedAnchor);
-
-          if (!summary.hasAttribute("id")) {
-            summary.setAttribute("id", generatedAnchor);
-          }
-
-          if (window.location.hash === `#${generatedAnchor}`) {
-            detailsRef.current?.setAttribute("open", "true");
-            summary.scrollIntoView({behavior: "smooth", block: "start"});
-          }
-        }
-      });
-    });
-  }, []);
+  const anchorId = detailsRef.current?.querySelector(".faq-summary")?.id ?? "";
 
   return (
     <details
@@ -56,7 +59,7 @@ const DetailsSummary: React.FC<DetailsSummaryProps> = ({title, children}) => {
           <span style={{fontFamily: "JetBrains Mono, monospace"}}>
             {isOpen ? "-" : "+"}
           </span>
-          <h3>{`${anchorId}. ${title}`}</h3>
+          <h3>{`${anchorId ? `${anchorId}. ` : ""}${title}`}</h3>
         </div>
         <button
           onClick={handleCopyAnchor}
