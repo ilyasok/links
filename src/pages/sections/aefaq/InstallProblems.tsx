@@ -682,9 +682,6 @@ const AEInstallProblems: React.FC = () => {
           репаки от KpoJluK или m0nkrus.
         </p>
       </DetailsSummary>
-      <DetailsSummary title="Как полностью удалить After Effects и остальные продукты от Adobe?">
-        <p>{/* fixme: написать!! */}</p>
-      </DetailsSummary>
       <DetailsSummary title='При установке любого пакета Red Giant выскакивает "This installer application has been moved. It must be run from its original folder containing a packages directory. The installer will now exit."'>
         <p>
           Вы пытаетесь установить плагины от <mark className="plugin">Red Giant</mark>, не
@@ -713,7 +710,10 @@ const AEInstallProblems: React.FC = () => {
       <DetailsSummary title="Установил плагин, но при его применении вылазают красные кресты или надписи про отсутствие лицензии">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
-      <DetailsSummary title="Чую, что моя программа работает не правильно. Как мне сбросить все настройки After Effects?">
+      <DetailsSummary title="Чую, что у меня программа работает неправильно, но переустанавливать программу я не хочу. Как сбросить все настройки After Effects?">
+        <p>{/* fixme: написать!! */}</p>
+      </DetailsSummary>
+      <DetailsSummary title="Настало время переустановки. Как мне полностью удалить After Effects и остальные продукты от Adobe?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
     </div>
