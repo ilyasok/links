@@ -18,16 +18,10 @@ const AETips: React.FC = () => {
       <DetailsSummary title="Какие плагины мне стоит поставить для упрощения работы?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
-      <DetailsSummary
-        title="Хочу обновиться до более новой версии. Как мне перенести плагины без танцев с
-            бубнами?"
-      >
+      <DetailsSummary title="Хочу обновиться до более новой версии. Как мне перенести плагины без танцев с бубнами?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Как мне закэшировать композиции так, чтобы я в финальном рендере их заново не просчитывал?">
-        <p>{/* fixme: написать!! */}</p>
-      </DetailsSummary>
-      <DetailsSummary title="В каком случае лучше использовать After Effects, а в каком - Premiere Pro?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Какой компьютер или ноутбук стоит взять для работы в After Effects?">
