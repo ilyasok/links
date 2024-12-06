@@ -19,18 +19,18 @@ const NotFound = () => (
       <p className="not-found-description">
         Вы попали на несуществующую страницу. Пожалуйста, вернитесь на главную.
       </p>
-      <a
-        href="/"
+      <Link
+        to="/"
         className="not-found-button to-main"
       >
         На главную
-      </a>
-      <Link
-        to="/"
+      </Link>
+      <a
+        href="mailto:me@m1sh3r.ru"
         className="not-found-small-description"
       >
         Если вы столкнулись с проблемой, пожалуйста, напишите об этом на почту.
-      </Link>
+      </a>
     </div>
   </motion.main>
 );
