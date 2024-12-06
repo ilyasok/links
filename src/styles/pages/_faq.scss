@@ -147,27 +147,6 @@
       }
     }
 
-    .flexible {
-      &-links {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 5px;
-        padding-inline: 10px;
-        margin: 0 auto;
-        max-width: 800px;
-
-        a {
-          margin-block: 0;
-          border: 2px solid var(--button_border);
-          border-radius: $roundness;
-          background-color: var(--button_background);
-          padding-inline: 10px;
-          padding-block: 5px;
-          text-decoration: none;
-        }
-      }
-    }
 
     a {
       color: var(--accent);
@@ -235,5 +214,30 @@
     .ui {}
 
     .path {}
+  }
+}
+
+.flexible {
+  &-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    padding-inline: 10px;
+    margin: 0 auto;
+    max-width: 800px;
+
+    a {
+      margin-block: 0;
+      font-weight: 700;
+      color: var(--accent);
+      border: 2px solid var(--button_border);
+      border-radius: $roundness;
+      background-color: var(--button_background);
+      padding-inline: 10px;
+      padding-block: 5px;
+      font-size: 16px;
+      text-decoration: none;
+    }
   }
 }
