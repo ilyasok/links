@@ -405,7 +405,25 @@ const AEActions: React.FC = () => {
         </AdditionInfo>
       </DetailsSummary>
       <DetailsSummary title="Как мне сделать точки у шейпового слоя управляемыми с помощью 'нулевых слоёв'?">
-        <p>{/* fixme: встроенный скрипт create path from nulls */}</p>
+        <p>
+          Предположим, что вы создали некий шейповый слой или маску и вы хотите
+          анимировать этот слой через Path. Но через некоторое время вы понимаете, что
+          дёргание Path порой бывает неудобным и муторным.
+        </p>
+        <p>
+          Для упрощения анимации масок и фигурных слоёв в базовой поставке{" "}
+          <mark className="app">After Effects</mark> добавлен разработчиками скрипт{" "}
+          <mark className="file">Create Nulls From Path.jsx</mark>, который создаёт нули
+          для контроля точек фигуры. Его можно открыть с помощью{" "}
+          <mark className="ui">Window &gt; Create Nulls From Path.jsx</mark> в конце
+          выпадающего меню.
+        </p>
+        <YouTubeVideo
+          styleClass="figure_browser-youtube"
+          link="Unnvx0alhyw"
+          caption="Animating with Create Nulls From Path"
+        />
+      </DetailsSummary>
       <DetailsSummary title="Как мне сделать обводку слоя?">
         <p>
           Есть два быстрых способа для создания обводки: через{" "}
