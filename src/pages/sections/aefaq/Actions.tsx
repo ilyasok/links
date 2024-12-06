@@ -228,9 +228,56 @@ const AEActions: React.FC = () => {
           .
         </p>
       </DetailsSummary>
-      <DetailsSummary title="Какими средствами обычно убирают зелёный или синий фон?">
-        {/* fixme: primatte keyer, стандартные плагины для кеинга */}
-        <p></p>
+      <DetailsSummary title="Какими средствами обычно удаляют зелёный или синий фон?">
+        <p>
+          Предположим, что заказчик предоставил вам исходники объекта или персонажа на
+          зелёном фоне. Можно конечно воспользоваться инструментом{" "}
+          <mark className="plugin">Rotobrush</mark>, но он нам не нужен, так как есть
+          более простые и эффективные решения.
+        </p>
+        <AdditionInfo>
+          Если вы хотите потренироваться с кеингом зелёного фона - скачайте любое видео из{" "}
+          <a href="https://www.youtube.com/playlist?list=PLB62ktMZylCyHxubuonbeZ5VWIYPJMY9J">
+            этого плейлиста
+          </a>{" "}
+          и экспериментируйте.
+        </AdditionInfo>
+        <p>
+          В стандартной поставке <mark className="app">After Effects</mark> есть пресет{" "}
+          <mark className="file">Keylight + Key Cleaner + Advanced Spill Suppressor</mark>
+          , который закрывает большинство задач по быстрому удалению фона.
+        </p>
+        <YouTubeVideo
+          link="tK_Z1dYgtxs"
+          caption="Keylight + Key Cleaner + Advanced Spill Suppressor"
+        />
+        <p>
+          Если у вас действительно полностью однотонный фон, то вы можете воспользоваться
+          эффектом <mark className="plugin">Linear Color Key</mark>, если результат не
+          сильно важен в угоду производительности сцены.
+        </p>
+        <YouTubeVideo
+          link="8RjOe6cO-cY"
+          caption="Linear Color Key"
+        />
+        <p>
+          Из сторонних инструментов для удаления цветного фона любой сложности можно
+          выделить <mark className="plugin">Primatte Keyer</mark>, поставляющийся в пакет
+          плагинов <mark className="plugin">Red Giant VFX Suite</mark>.
+        </p>
+        <YouTubeVideo
+          link="zYARqiWTArU"
+          caption="Getting Started with Primatte Keyer"
+        />
+        <p>
+          Если результат от работы плагины выше не нравится - есть{" "}
+          <mark className="plugin">BCC Primatte Studio</mark>, поставляющийся в пакете{" "}
+          <mark className="plugin">BorisFX Continuum</mark>.
+        </p>
+        <YouTubeVideo
+          link="AaKTHKspAkQ"
+          caption="BCC Primatte Studio"
+        />
       </DetailsSummary>
       <DetailsSummary title='А если исходник был снят не на "зелёнке", то как отделить объект от фона?"'>
         <p>
