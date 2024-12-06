@@ -157,7 +157,8 @@ const AEActions: React.FC = () => {
           Действия на видео, приведённые выше, могут отличаться в зависимости от версии
           программы или плагина. Некоторые плагины или программы вы можете скачать в
           канале <a href="https://t.me/+Qd9xu7A4TeIwNzY6">склад стройматериалов</a> по
-          хештегам <mark className="tag">#twixtor</mark>, <mark className="tag">#continuum</mark> или <mark className="tag">#topaz</mark>.
+          хештегам <mark className="tag">#twixtor</mark>,{" "}
+          <mark className="tag">#continuum</mark> или <mark className="tag">#topaz</mark>.
         </AdditionInfo>
         <p>
           Стандартными средствами <mark className="app">After Effects</mark> тоже можно
