@@ -10,7 +10,7 @@ import {AdditionWarning} from "../components/Additions";
 import SupportDonut from "../components/modal/SupportDonut";
 import CopyMark from "../components/features/CopyMark";
 import {CircularProgress} from "@mui/material";
-import { generateAnchorId } from "../components/DetailsSummary";
+import {generateAnchorId} from "../components/DetailsSummary";
 
 const PRActions = lazy(() => import("./sections/prfaq/Actions"));
 const PRErrors = lazy(() => import("./sections/prfaq/Errors"));
@@ -30,42 +30,17 @@ const PRFaQ = () => {
   }, []);
 
   const sections = [
-    {key: "1", id: "#wherefind", title: "Ищем полезности", component: PRWhereFind},
-    {
-      key: "2",
-      id: "#install-problems",
-      title: "Проблемы с установкой",
-      component: PRInstallProblems,
-    },
-    {
-      key: "3",
-      id: "#from-newbies",
-      title: "Вопросы от новичков",
-      component: PRFromNewbies,
-    },
-    {key: "4", id: "#tips", title: "(не)Вредные советы", component: PRTips},
-    {key: "5", id: "#import", title: "Про импорт", component: PRImport},
-    {key: "6", id: "#interface", title: "Про интерфейс", component: PRInterface},
-    {
-      key: "7",
-      id: "#performance",
-      title: "Про производительность",
-      component: PRPerformance,
-    },
-    {
-      key: "8",
-      id: "#actions",
-      title: "Как и чем сделать то или то?",
-      component: PRActions,
-    },
-    {key: "9", id: "#errors", title: "Ошибки и предупреждения", component: PRErrors},
-    {key: "10", id: "#export", title: "Про экспорт", component: PRExport},
-    {
-      key: "11",
-      id: "#export-problems",
-      title: "Проблемы при экспорте",
-      component: PRExportProblems,
-    },
+    {key: "1", title: "Ищем полезности", component: PRWhereFind},
+    {key: "2", title: "Проблемы с установкой", component: PRInstallProblems},
+    {key: "3", title: "Вопросы от новичков", component: PRFromNewbies},
+    {key: "4", title: "(не)Вредные советы", component: PRTips},
+    {key: "5", title: "Импорт", component: PRImport},
+    {key: "6", title: "Интерфейс", component: PRInterface},
+    {key: "7", title: "Производительность", component: PRPerformance},
+    {key: "8", title: "Как и чем?", component: PRActions},
+    {key: "9", title: "Ошибки и предупреждения", component: PRErrors},
+    {key: "10", title: "Экспорт", component: PRExport},
+    {key: "11", title: "Проблемы при экспорте", component: PRExportProblems},
   ];
   const [visibleSections, setVisibleSections] = useState<string[]>([]);
   const [isPageLoaded, setIsPageLoaded] = useState(false);

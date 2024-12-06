@@ -29,41 +29,16 @@ const PSFaQ = () => {
   }, []);
 
   const sections = [
-    {key: "1", id: "#wherefind", title: "Ищем полезности", component: PSWhereFind},
-    {
-      key: "2",
-      id: "#install-problems",
-      title: "Проблемы с установкой",
-      component: PSInstallProblems,
-    },
-    {
-      key: "3",
-      id: "#from-newbies",
-      title: "Вопросы от новичков",
-      component: PSFromNewbies,
-    },
-    {key: "4", id: "#import", title: "Про импорт", component: PSImport},
-    {key: "5", id: "#interface", title: "Про интерфейс", component: PSInterface},
-    {
-      key: "6",
-      id: "#performance",
-      title: "Про производительность",
-      component: PSPerformance,
-    },
-    {
-      key: "7",
-      id: "#actions",
-      title: "Как и чем сделать то или то?",
-      component: PSActions,
-    },
-    {key: "8", id: "#errors", title: "Ошибки и предупреждения", component: PSErrors},
-    {key: "9", id: "#export", title: "Про экспорт", component: PSExport},
-    {
-      key: "10",
-      id: "#export-problems",
-      title: "Проблемы при экспорте",
-      component: PSExportProblems,
-    },
+    {key: "1", title: "Ищем полезности", component: PSWhereFind},
+    {key: "2", title: "Проблемы с установкой", component: PSInstallProblems},
+    {key: "3", title: "Вопросы от новичков", component: PSFromNewbies},
+    {key: "4", title: "Импорт", component: PSImport},
+    {key: "5", title: "Интерфейс", component: PSInterface},
+    {key: "6", title: "Производительность", component: PSPerformance},
+    {key: "7", title: "Как и чем сделать то или то?", component: PSActions},
+    {key: "8", title: "Ошибки и предупреждения", component: PSErrors},
+    {key: "9", title: "Экспорт", component: PSExport},
+    {key: "10", title: "Проблемы при экспорте", component: PSExportProblems},
   ];
 
   const [visibleSections, setVisibleSections] = useState<string[]>([]);
