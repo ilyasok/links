@@ -853,6 +853,9 @@ const AEFromNewbies: React.FC = () => {
           }
         />
       </DetailsSummary>
+      <DetailsSummary title="В каком случае нужно использовать After Effects, а в каком - Premiere Pro?">
+        <p>{/* fixme: написать!! */}</p>
+      </DetailsSummary>
       <DetailsSummary title="Как найти нужный эффект на английском языке, если у меня стоит русский язык в After Effects?">
         <p>
           {/* предположим что пользователь не хочет менять язык. про колхозный способ двойного языка и про таблицу эффектов */}
