@@ -406,6 +406,53 @@ const AEActions: React.FC = () => {
       </DetailsSummary>
       <DetailsSummary title="Как мне сделать точки у шейпового слоя управляемыми с помощью 'нулевых слоёв'?">
         <p>{/* fixme: встроенный скрипт create path from nulls */}</p>
+      <DetailsSummary title="Как мне сделать обводку слоя?">
+        <p>
+          Есть два быстрых способа для создания обводки: через{" "}
+          <mark className="ui">Auto-trace</mark> и через{" "}
+          <mark className="ui">Layer Style</mark>.
+        </p>
+        <p>
+          Начнём с первого способа - через <mark className="ui">Layer Style</mark>. Для
+          этого вам нужно выделить ваш слой в окне предпросмотра или в таймлайне, нажать{" "}
+          <mark className="key">ПКМ</mark> и выбрать в контекстном меню{" "}
+          <mark className="ui">Layer Style &gt; Stroke</mark>. После этого вы можете
+          раскрыть свойства обводки и изменить ему цвет, прозрачность или размер.
+        </p>
+        <VideoFigure
+          styleClass="figure_windows-dark"
+          videoSrc="images/aftereffects/stroke_layer-style.mp4"
+          caption="Создание обводки через Layer Style"
+        />
+        <p>
+          Второй способ, через <mark className="ui">Auto-Trace</mark>, будет чуть
+          посложнее. Вам нужно будет создать маску с помощью функции авто-трассировки. Для
+          этого вам нужно выделить слой, перейти в{" "}
+          <mark className="ui">Layer &gt; Auto-Trace</mark>. В новом окне вы можете
+          выбрать диапазон работы авто-трассировки: создать маску только с текущего кадра
+          или с с рабочей области. Затем у нас сгенерируется маска на новом слое. Также
+          можно выбрать на основе чего создавать трассировку: из альфа-канала, яркости или
+          определённого цвета. Вы можете применить маску сразу на выделенный слой, убрав в
+          окне галочку с пункта <mark className="ui">Apply to new layer</mark>. После
+          настройки просто нажмите на кнопку <mark className="ui">OK</mark> и примените
+          эффект <mark className="plugin">Stroke</mark> на слой с созданной маской.
+        </p>
+        <VideoFigure
+          styleClass="figure_windows-dark"
+          videoSrc="images/aftereffects/stroke_auto-trace.mp4"
+          caption="Создание обводки через Auto-Trace и эффекта Stroke"
+        />
+        <AdditionInfo>
+          Эффект <mark className="plugin">Stroke</mark> автоматически сделает обводку из
+          созданной маски. Если на вашем слое есть несколько масок - эффект выберет первую
+          по списку. При желании можно изменить параметр &quot;из какой маски делать
+          обводку&quot;.
+        </AdditionInfo>
+        <p>
+          Второй способ прекрасно подходит к многим сторонним эффектам для создания
+          обводки, например <mark className="plugin">Saber</mark> или{" "}
+          <mark className="plugin">Thicc Stroke</mark>.
+        </p>
       </DetailsSummary>
       <DetailsSummary title="Как мне сделать 'прыгучую' анимацию нужного параметра?">
         <p>
