@@ -15,19 +15,19 @@ const AEExportProblems: React.FC = () => {
       <DetailsSummary title="Почему при экспорте в .mp4 через встроенный кодек H.264 сохраняется файл с памятью 1 Кб?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
-      <DetailsSummary title="Почему цвета после экспорта отличаются от тех, что в программе?">
+      <DetailsSummary title="После экспорта у меня изменились цвета. Как избежать изменения цветов?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
-      <DetailsSummary title="Почему изображение после экспорта вытянутое или искажённое?">
-        <p>{/* fixme: написать!! */}</p>
+      <DetailsSummary title="Почему в предпросмотре Media Encoder и после экспорта видео смещается влево или вправо?">
+        <p>{/* fixme: написать!!  баг 23.1-23.5 */}</p>
+      </DetailsSummary>
+      <DetailsSummary title="Почему моё видео сплющилось после экспорта?">
+        <p>{/* fixme: написать!! про квадратный пиксель */}</p>
       </DetailsSummary>
       <DetailsSummary title="Почему композиция с Element 3D экспортируется с мерцаниями?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Экспортировал композицию и вижу в результате ужасный ступенчатый градиент. Как мне от него избавиться?">
-        <p>{/* fixme: написать!! */}</p>
-      </DetailsSummary>
-      <DetailsSummary title="Почему в предпросмотре Media Encoder и после рендера видео смещается влево или вправо?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Почему я не могу экспортировать видео в H.264 с нечётным разрешением?">
