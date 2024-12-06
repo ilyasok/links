@@ -138,14 +138,13 @@ const VideoFigure: React.FC<VideoFigureProps> = ({styleClass, videoSrc, caption}
 };
 
 const YouTubeVideo: React.FC<{
-  styleClass: string;
   link: string;
   caption: string;
-}> = ({styleClass, link, caption}) => {
+}> = ({link, caption}) => {
   const id = link.split("/").pop();
 
   return (
-    <figure className={styleClass}>
+    <figure className="figure_browser-youtube">
       <figcaption>{caption}</figcaption>
       <iframe
         src={`https://www.youtube.com/embed/${id}`}
