@@ -1,7 +1,7 @@
 import React from "react";
 import DetailsSummary from "../../../components/DetailsSummary";
 import {VideoFigure, YouTubeVideo} from "../../../components/ContentFigure";
-import {AdditionInfo} from "../../../components/Additions";
+import {AdditionInfo, AdditionWarning} from "../../../components/Additions";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 
 const AEActions: React.FC = () => {
@@ -270,7 +270,90 @@ const AEActions: React.FC = () => {
         <p>{/* fixme: extract, uni.unmult */}</p>
       </DetailsSummary>
       <DetailsSummary title="Как и чем можно прицепить слой к объекту на видео?">
-        <p>{/* fixme: 3d camera tracking, mocha pro, tracking object */}</p>
+        <p>
+          Предположим, что у вас есть видео в котором вы хотите прицепить слой к объекту с
+          небольшими движениями. Для этого вам нужно открыть окно{" "}
+          <mark className="plugin">Tracker</mark>, которое можно вызвать из меню{" "}
+          <mark className="ui">Window</mark> в верхней части интерфейса программы. В этом
+          же окне вы можете выбрать четыре действия:
+        </p>
+        <ul>
+          <li>
+            <mark className="ui">Track Camera</mark> - применяет эффект{" "}
+            <mark className="plugin">3D Camera Tracking</mark>. Полезен если вам нужно
+            прицепить объект к поворачивающейся плоскости.
+          </li>
+          <li>
+            <mark className="ui">Warp Stabilizer</mark> - применяет эффект{" "}
+            <mark className="plugin">Warp Stabilizer</mark>. Нужен для стабилизации
+            дёрганной камеры и устранения эффекта &quot;пьяного оператора&quot; с его
+            трясущимися руками и может помочь улучшить качество трекинга. В эффекте есть
+            несколько методов для стабилизации камеры на случай, если стандартный не
+            нравится.{" "}
+            <AdditionWarning>
+              Эффект стабилизации может обрезать вашу картинку, для устранения этого -
+              раскройте Auto-Scale и установите приемлемое для вас значение Maximum Scale.
+              Слишком большие значения в Smoothness могут превратить вашу картинку в
+              непонятное желе. Экспериментируйте с умом!
+            </AdditionWarning>
+          </li>
+          <li>
+            <mark className="ui">Track Motion</mark> - то, что нам нужно для трекинга
+            движения объекта. Благодаря этому мы сможем прицепить любой слой к движущемуся
+            объекту.
+          </li>
+          <li>
+            <mark className="ui">Stabilize Motion</mark> - функция, которая перемещает
+            исходное видео под движение трекаемого объекта. Может быть полезно, когда
+            нужно зафиксировать взгляд на нужный объект.
+          </li>
+        </ul>
+        <YouTubeVideo
+          styleClass="figure_browser-youtube"
+          link="tqWWhChc8RA"
+          caption="Motion Tracking"
+        />
+        <AdditionInfo>
+          Если ваш объект движется слишком быстро - увеличьте область действия работы
+          трекинга, так как за пределы области действия трекер не увидит объект. Если же
+          наоборот, медленно, но точку уводит непонятно куда - уменьшите область трекинга
+          и постарайтесь улучшить контраст любым способом у исходного видео.
+        </AdditionInfo>
+        <p>
+          Если же вам надо оттречить плоскость, которая движется под разными углами
+          стандартными способами - сделайте это через{" "}
+          <mark className="plugin">3D Camera Tracker</mark>.
+        </p>
+        <YouTubeVideo
+          styleClass="figure_browser-youtube"
+          link="yaT3YwIK-BI"
+          caption="3D Camera Tracker"
+        />
+        <p>
+          Если результат от способов выше не понравился, то не время унывать. В
+          стандартной поставке <mark className="app">After Effects</mark> есть прекрасный
+          инструмент для планарного трекинга под названием{" "}
+          <mark className="plugin">Mocha AE</mark>. Он будет несколько урезанней, нежели
+          его полноценная версия под названием <mark className="plugin">Mocha Pro</mark>,
+          которую надо устанавливать отдельно, но базовые вещи для наложения слоя с
+          движением на исходное видео выполнить может.
+        </p>
+        <YouTubeVideo
+          styleClass="figure_browser-youtube"
+          link="be_8uRcyiEs"
+          caption="Mocha AE For Beginners"
+        />
+        <AdditionInfo>
+          Если у вас слой после переноса трекинга из <mark className="plugin">Mocha</mark>{" "}
+          куда то улетает - проверьте разрешение слоя, который вы собираетесь разместить и
+          сравните его с разрешением вашей композиции. Если они отличаются - слой так и
+          будет улетать. Для исправления этого недочёта - примените{" "}
+          <a href="files/Mocha_data_rescale_import.ffx">пресет по этой ссылке</a> от{" "}
+          <a href="https://t.me/Pavelusha">@Pavelusha</a> на слой, на котором добавлен{" "}
+          <mark className="plugin">Corner Pin</mark>. В применённом пресете вам нужно
+          выбрать в Source Layer тот слой, на котором тречили данные. При правильном
+          использовании ваша вставляемая картинка переместится куда надо.
+        </AdditionInfo>
       </DetailsSummary>
       <DetailsSummary title="Как мне сделать точки у шейпового слоя управляемыми с помощью 'нулевых слоёв'?">
         <p>{/* fixme: встроенный скрипт create path from nulls */}</p>
