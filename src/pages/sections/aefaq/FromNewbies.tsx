@@ -32,7 +32,6 @@ const AEFromNewbies: React.FC = () => {
           глупых вопросов уже в начале своего пути.
         </p>
         <YouTubeVideo
-          styleClass="figure_browser-youtube"
           link="https://www.youtube.com/embed/nogR7eyhYug"
           caption="Видеоплеер YouTube"
         />

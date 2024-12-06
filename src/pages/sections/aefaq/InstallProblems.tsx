@@ -358,7 +358,6 @@ const AEInstallProblems: React.FC = () => {
                 в нужное место или кнопки <mark className="ui">Распаковать</mark>.
               </p>
               <YouTubeVideo
-                styleClass="figure_browser-youtube"
                 link="z7n6fUMYX9Y"
                 caption="WinRAR"
               />

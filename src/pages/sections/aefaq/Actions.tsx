@@ -27,7 +27,6 @@ const AEActions: React.FC = () => {
           дальнейшем.
         </p>
         <YouTubeVideo
-          styleClass="figure_browser-youtube"
           link="zbX7x8Oo_Uc"
           caption="Topaz Video AI"
         />
@@ -39,7 +38,6 @@ const AEActions: React.FC = () => {
           <mark className="plugin">BorisFX Continuum</mark>.
         </p>
         <YouTubeVideo
-          styleClass="figure_browser-youtube"
           link="fTYcNP8ZdTE"
           caption="BCC UpRes ML"
         />
@@ -54,7 +52,6 @@ const AEActions: React.FC = () => {
           учитываются будущие обновления.
         </p>
         <YouTubeVideo
-          styleClass="figure_browser-youtube"
           link="VMaYdjWqRRg"
           caption="Topaz Gigapixel AI"
         />
@@ -78,7 +75,6 @@ const AEActions: React.FC = () => {
           на жёстком диске.
         </p>
         <YouTubeVideo
-          styleClass="figure_browser-youtube"
           link="woDDQ0xnt84"
           caption="Benvista Photozoom"
         />
@@ -109,7 +105,6 @@ const AEActions: React.FC = () => {
           хорошо зарекомендовал себя в монтаже и имеет много настроек.
         </p>
         <YouTubeVideo
-          styleClass="figure_browser-youtube"
           link="EGZCNcQyvrE"
           caption="Twixtor"
         />
@@ -120,7 +115,6 @@ const AEActions: React.FC = () => {
           <mark className="plugin">Twixtor</mark> выдаёт гораздо лучшие результаты.
         </p>
         <YouTubeVideo
-          styleClass="figure_browser-youtube"
           link="YraSxOpy1Qg"
           caption="BCC Retimer ML"
         />
@@ -132,7 +126,6 @@ const AEActions: React.FC = () => {
           <mark className="app">FlowFrames</mark>.
         </p>
         <YouTubeVideo
-          styleClass="figure_browser-youtube"
           link="H8ISNjzDULw"
           caption="FlowFrames"
         />
@@ -140,7 +133,6 @@ const AEActions: React.FC = () => {
           Или <mark className="app">FrameGUI</mark>.
         </p>
         <YouTubeVideo
-          styleClass="figure_browser-youtube"
           link="Axz_KwiqNmc"
           caption="FrameGUI"
         />
@@ -149,7 +141,6 @@ const AEActions: React.FC = () => {
           улучшить качество исходников за счёт искусственного интеллекта.
         </p>
         <YouTubeVideo
-          styleClass="figure_browser-youtube"
           link="591MqOooDAE"
           caption="Topaz Video AI"
         />
@@ -187,7 +178,6 @@ const AEActions: React.FC = () => {
           поддерживает GPU-ускорение.
         </p>
         <YouTubeVideo
-          styleClass="figure_browser-youtube"
           link="https://youtube.com/embed/mwSqzxApy-E"
           caption="Neat Video"
         />
@@ -197,7 +187,6 @@ const AEActions: React.FC = () => {
           плагинов <mark className="plugin">Magic Bullet Suite</mark>.
         </p>
         <YouTubeVideo
-          styleClass="figure_browser-youtube"
           link="PXCElU7HcX8"
           caption="Denoiser III"
         />
@@ -209,7 +198,6 @@ const AEActions: React.FC = () => {
           основанный на машинном обучении.{" "}
         </p>
         <YouTubeVideo
-          styleClass="figure_browser-youtube"
           link="https://youtube.com/embed/L1PeaTa13H4"
           caption="BCC DeNoise ML"
         />
@@ -218,7 +206,6 @@ const AEActions: React.FC = () => {
           .
         </p>
         <YouTubeVideo
-          styleClass="figure_browser-youtube"
           link="tGIXeddCPQM"
           caption="DE:Noise"
         />
@@ -295,7 +282,6 @@ const AEActions: React.FC = () => {
           инструмента.
         </p>
         <YouTubeVideo
-          styleClass="figure_browser-youtube"
           link="eoOIrdb_0ko"
           caption="Rotobrush"
         />
@@ -306,7 +292,6 @@ const AEActions: React.FC = () => {
           <mark className="plugin">Power Matte</mark>.
         </p>
         <YouTubeVideo
-          styleClass="figure_browser-youtube"
           link="3pdkJ1BPEg0"
           caption="Power Matte in Silhouette"
         />
@@ -322,7 +307,6 @@ const AEActions: React.FC = () => {
           неприятную кашу.
         </p>
         <YouTubeVideo
-          styleClass="figure_browser-youtube"
           link="v7pqZ9gtn8I"
           caption="Extract"
         />
@@ -341,7 +325,6 @@ const AEActions: React.FC = () => {
           слой с применённым эффектом и привязать их друг к другу, если необходимо.
         </AdditionWarning>
         <YouTubeVideo
-          styleClass="figure_browser-youtube"
           link="GGjIu0CZ1M4"
           caption="Red Giant Universe Unmult"
         />
@@ -358,7 +341,6 @@ const AEActions: React.FC = () => {
           маску с помощью функции Track Matte.
         </p>
         <YouTubeVideo
-          styleClass="figure_browser-youtube"
           link="ltrGC0kDFic"
           caption="How to Use Luma Mattes"
         />
@@ -403,7 +385,6 @@ const AEActions: React.FC = () => {
           </li>
         </ul>
         <YouTubeVideo
-          styleClass="figure_browser-youtube"
           link="tqWWhChc8RA"
           caption="Motion Tracking"
         />
@@ -419,7 +400,6 @@ const AEActions: React.FC = () => {
           <mark className="plugin">3D Camera Tracker</mark>.
         </p>
         <YouTubeVideo
-          styleClass="figure_browser-youtube"
           link="yaT3YwIK-BI"
           caption="3D Camera Tracker"
         />
@@ -433,7 +413,6 @@ const AEActions: React.FC = () => {
           движением на исходное видео выполнить может.
         </p>
         <YouTubeVideo
-          styleClass="figure_browser-youtube"
           link="be_8uRcyiEs"
           caption="Mocha AE For Beginners"
         />
@@ -464,7 +443,6 @@ const AEActions: React.FC = () => {
           выпадающего меню.
         </p>
         <YouTubeVideo
-          styleClass="figure_browser-youtube"
           link="Unnvx0alhyw"
           caption="Animating with Create Nulls From Path"
         />
