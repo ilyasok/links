@@ -35,11 +35,10 @@ import {
 import {Divider} from "antd";
 import {motion} from "framer-motion";
 import React from "react";
-import {Header} from "../components/Header";
+import Header from "../components/Header";
 import {LinkCard, LinkCardNoDescription, LinkInAppCard} from "../components/LinkCards";
-
 import {AdditionDanger, AdditionWarning} from "../components/Additions";
-import {Footer} from "../components/Footer";
+import Footer from "../components/Footer";
 import {Helmet} from "react-helmet-async";
 
 const Links = () => {
