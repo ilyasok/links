@@ -734,24 +734,6 @@ textarea {
   line-height: 1.15;
   text-align: right;
 }
-.faq-content .flexible-links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 5px;
-  padding-inline: 10px;
-  margin: 0 auto;
-  max-width: 800px;
-}
-.faq-content .flexible-links a {
-  margin-block: 0;
-  border: 2px solid var(--button_border);
-  border-radius: 10px;
-  background-color: var(--button_background);
-  padding-inline: 10px;
-  padding-block: 5px;
-  text-decoration: none;
-}
 .faq-content a {
   color: var(--accent);
   font-weight: 700;
@@ -803,6 +785,28 @@ textarea {
   padding: 2px 3px;
   color: var(--mark_text);
 }
+.flexible-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  padding-inline: 10px;
+  margin: 0 auto;
+  max-width: 800px;
+}
+.flexible-links a {
+  margin-block: 0;
+  font-weight: 700;
+  color: var(--accent);
+  border: 2px solid var(--button_border);
+  border-radius: 10px;
+  background-color: var(--button_background);
+  padding-inline: 10px;
+  padding-block: 5px;
+  font-size: 16px;
+  text-decoration: none;
+}
+
 .addition-info, .addition-warning, .addition-danger {
   display: flex;
   flex-direction: row;
@@ -1147,12 +1151,12 @@ tr:last-child th {
   --button_background: hsl(var(--accent-hue), 25%, 12.5%);
   --button_border: hsl(var(--accent-hue), 35%, 25%);
   --header_border: hsla(var(--accent-hue), 30%, 30%, 0.5);
-  --summary_background: hsl(var(--accent-hue), 50%, 5%);
+  --summary_background: hsl(var(--accent-hue), 25%, 8%);
   --summary_border: hsl(var(--accent-hue), 35%, 25%);
   --summary_text: var(--accent);
   --links_background: hsl(var(--accent-hue), 35%, 7.5%);
   --links_border: hsl(var(--accent-hue), 75%, 20%);
-  --links_hover: hsl(var(--accent-hue), 50%, 10%);
+  --links_hover: hsl(var(--accent-hue), 50%, 15%);
   --addition_info: hsl(200, 70%, 15%);
   --addition_info-border: hsl(200, 60%, 25%);
   --addition_info-text: hsl(200, 75%, 85%);

@@ -70,13 +70,13 @@ $dark:( // ~: стандартные цвета:
   button_border: hsl(var(--accent-hue), 35%, 25%),
   header_border: hsla(var(--accent-hue), 30%, 30%, 0.5),
   // *: стили summary
-  summary_background: hsl(var(--accent-hue), 50%, 5%),
+  summary_background: hsl(var(--accent-hue), 25%, 8%),
   summary_border: hsl(var(--accent-hue), 35%, 25%),
   summary_text: var(--accent),
   // *: стили кнопок главной страницы
   links_background:hsl(var(--accent-hue), 35%, 7.5%),
   links_border: hsl(var(--accent-hue), 75%, 20%),
-  links_hover:hsl(var(--accent-hue), 50%, 10%),
+  links_hover:hsl(var(--accent-hue), 50%, 15%),
   // ~: информационные блоки:
   addition_info: hsl(200, 70%, 15%),
   addition_info-border: hsl(200, 60%, 25%),
