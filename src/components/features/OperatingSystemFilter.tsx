@@ -36,7 +36,13 @@ const ContentSwitcher: React.FC<ContentSwitcherProps> = ({
   return (
     <div>
       <div
-        style={{display: "flex", alignItems: "center", justifyContent: "space-between"}}
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          opacity: 0.8,
+          filter: "saturate(0%) brightness(1.1)",
+        }}
         className="addition-info"
       >
         {isWindows
