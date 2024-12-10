@@ -896,6 +896,27 @@ textarea {
   color: var(--addition_danger-text);
 }
 
+.figure_browser-youtube {
+  background: #303030;
+  border-radius: 10px;
+}
+.figure_browser-youtube .window-header {
+  display: flex;
+}
+.figure_browser-youtube .window-header figcaption {
+  background: #454545;
+  margin-block: 5px;
+  margin-inline: auto;
+  color: #eeeeee;
+  padding: 3px 8px;
+  border: 1px solid #606060;
+  border-radius: 5px;
+  font-size: 13px;
+  display: block;
+  max-width: 75%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .figure_windows-light, .figure_windows-dark {
   margin-inline: auto;
   max-width: -moz-max-content;

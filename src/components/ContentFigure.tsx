@@ -145,7 +145,9 @@ const YouTubeVideo: React.FC<{
 
   return (
     <figure className="figure_browser-youtube">
-      <figcaption>{caption}</figcaption>
+      <div className="window-header">
+        <figcaption>YouTube - {caption}</figcaption>
+      </div>
       <iframe
         src={`https://www.youtube.com/embed/${id}`}
         title={caption}
