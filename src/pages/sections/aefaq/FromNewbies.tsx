@@ -927,6 +927,24 @@ const AEFromNewbies: React.FC = () => {
       </DetailsSummary>
       <DetailsSummary title="Почему After Effects иногда сам меняет начертание шрифта?">
         <p>{/* fixme: написать!! */}</p>
+      <DetailsSummary title="Как сделать прозрачный фон у слоя с эффектом Saber?">
+        <p>
+          Для этого в настройках эффекта <mark className="plugin">Saber</mark> раскройте
+          пункт <mark className="ui">Render Settings</mark>. В этом же подпункте найдите
+          пункт <mark className="ui">Composite Settings</mark> и установите значение{" "}
+          <mark className="ui">Transparent</mark>.
+        </p>
+        <ImageFigure
+          imgSrc="images/aftereffects/transparent_saber.png"
+          styleClass="figure_windows-dark"
+          imgTitle="Включение прозрачности в Saber"
+          caption="Включение прозрачности в Saber"
+        />
+        <p>
+          Теперь слой с <mark className="plugin">Saber</mark> будет прозрачный и вы
+          сможете применять его поверх своей композиции.
+        </p>
+      </DetailsSummary>
       </DetailsSummary>
     </div>
   );
