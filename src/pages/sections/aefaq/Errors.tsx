@@ -57,8 +57,9 @@ const AEErrors: React.FC = () => {
               Настройте файл подкачки
             </a>
             , если у вас устройство на Windows. Советую установить значение от 4096 до
-            65536 (будет создаваться файл подкачки с изначальным размером в 4 Гб, который
-            динамически может расширяться до 64 Гб), в большинстве случаев этого хватает.
+            65536 или 131072 (будет создаваться файл подкачки с изначальным размером в 4
+            Гб, который динамически может расширяться до 64 Гб или 128 Гб), в большинстве
+            случаев этого хватает.
           </li>
           <li>
             Установите программу{" "}
@@ -68,16 +69,20 @@ const AEErrors: React.FC = () => {
           </li>
           <li>
             Если у вас включена функция Multi-Frame Render - попробуйте его отключить на
-            время.
-            {/* fixme: как его отключить */}
+            время. Для этого вам нужно перейти в{" "}
+            <mark className="ui">Edit &gt; Preferences &gt; Memory & Performance</mark> и
+            убрать галочку с <mark className="ui">Enable Multi-frame Render</mark>.
           </li>
           <li>
             Проверьте настройки в{" "}
             <mark className="ui">Edit &gt; Preferences &gt; Memory & Performance</mark>.
             Если вы туда лезли и что-то настраивали, то есть шанс, что вы неправильно
             прочитали описание настройки и оставили программам Adobe 1 Гб ОЗУ, а
-            оставшуюся часть памяти - на другие программы.
-            {/* fixme: показать как правильно */}
+            оставшуюся часть памяти - на другие программы. Для того чтобы выделить всю
+            возможную память для программ Adobe, установите значение <mark>0</mark> в
+            пункте <mark className="ui">RAM reserved for other applications</mark>. После
+            нажатия на <mark className="key">Enter</mark> программа сама установит нужное
+            значение.
           </li>
           <li>
             Если вы используете несколько композиций с различными эффектами - попробуйте
@@ -222,8 +227,16 @@ const AEErrors: React.FC = () => {
           Если эта ошибка вас раздражает или у вас нет возможности/желания обновлять
           используемый плагин - вы можете отключить предупреждение, отключив функцию
           многокадрового рендера в настройках <mark className="app">After Effects</mark>.
+          Для этого вам нужно перейти в{" "}
+          <mark className="ui">Edit &gt; Preferences &gt; Memory & Performance</mark> и
+          убрать галочку с <mark className="ui">Enable Multi-frame Render</mark>.
         </p>
-        {/* fixme: показать как отключить */}
+        <ImageFigure
+          imgSrc="images/aftereffects/checkbox_multiframe-render.png"
+          imgTitle="Переключение работы функции Multi-Frame Render"
+          styleClass="figure_windows-dark"
+          caption="Preferences"
+        />
       </DetailsSummary>
       <DetailsSummary title="Иногда появляются тонкие полосы в композициях при использовании видео-исходников">
         {/* fixme: написать!! */}
@@ -249,7 +262,7 @@ const AEErrors: React.FC = () => {
       </DetailsSummary>
       <DetailsSummary title="Синий экран при использовании Twixtor">
         <p>{/* fixme: написать!! */}</p>
-      </DetailsSummary>{" "}
+      </DetailsSummary>
       <DetailsSummary title="Красный экран при использовании BorisFX Sapphire">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
