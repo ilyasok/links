@@ -495,11 +495,7 @@ const AEActions: React.FC = () => {
           <mark className="plugin">Thicc Stroke</mark>.
         </p>
       </DetailsSummary>
-      <DetailsSummary title="Как мне сделать 'прыгучую' анимацию нужного параметра?">
-        <p>
-          {/* fixme: про bouncy текста или положения. можно привести в пример motion tools pro где это есть */}
-        </p>
-      </DetailsSummary>
+
       <DetailsSummary title="Как и чем сделать анимацию толщины variable-шрифта?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
@@ -509,32 +505,20 @@ const AEActions: React.FC = () => {
       <DetailsSummary title="Какими средствами и плагинами обычно делают анимацию 2D-персонажей?">
         <p>{/* fixme: паппет тулс, дюик ангелина и подобные плагины */}</p>
       </DetailsSummary>
-      <DetailsSummary title="Как сделать слайдер с значением больше миллиона?">
-        <p>{/* fixme: написать!! */}</p>
-      </DetailsSummary>
+
       <DetailsSummary title="Как мне точнее расставить ключи и маркеры под бит?">
         <p>{/* fixme: beat edit, sound keys или по вейвформе */}</p>
       </DetailsSummary>
       <DetailsSummary title="Как мне распаковать пре-композицию?">
         <p>{/* fixme: сторонний плагин unprecompose */}</p>
       </DetailsSummary>
-      <DetailsSummary title="Как сделать так, чтобы мой счётчик не дёргался при анимации числа?">
-        <p>{/* fixme: написать про monospace шрифт через поворот */}</p>
-      </DetailsSummary>
+
       <DetailsSummary title="Как изменить параметры сразу нескольких композиций?">
         <p>{/* fixme: rd_compsetter */}</p>
       </DetailsSummary>
-      <DetailsSummary title="Как удалить выражения сразу в нескольких слоях?">
-        <p>{/* fixme: написать!! */}</p>
-      </DetailsSummary>
+
       <DetailsSummary title="Как применить Adjustment Layer только на конкретные слои?">
         <p>{/* fixme: через маску в red giant supercomp */}</p>
-      </DetailsSummary>
-      <DetailsSummary title="Как сделать прозрачный фон у слоя с эффектом Saber?">
-        <p>{/* fixme: написать!! */}</p>
-      </DetailsSummary>
-      <DetailsSummary title="Применил Saber, но он обрезается в пределах слоя. Grow Bounds не помогает. Как расширить эффект?">
-        <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
     </div>
   );
