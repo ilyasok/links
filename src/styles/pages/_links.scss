@@ -1,0 +1,72 @@
+@import "../variables";
+
+// *: главная страница сайта
+
+.links {
+  margin-top: 32px;
+  margin-inline: auto;
+  max-width: 1400px;
+  width: 95%;
+
+  &-button {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    transition: background-color 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    box-shadow: 0 5px 5px 0 var(--shadow);
+    border: 1px solid var(--links_border);
+    border-radius: $roundness;
+    background-color: var(--links_background);
+    padding-inline: 15px;
+    padding-block: 10px;
+    height: 100%;
+
+    &:hover {
+      z-index: 15;
+      cursor: pointer;
+      background-color: var(--links_hover);
+      // transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1)
+    }
+
+    .name_container {
+      display: flex;
+      align-items: center;
+      max-width: fit-content;
+      max-height: fit-content;
+
+      .icon {
+        flex-shrink: 0;
+        vertical-align: middle;
+        margin-inline-end: 8px;
+        width: 24px;
+        height: 24px;
+        color: var(--accent);
+
+        path {
+          margin: auto;
+        }
+      }
+
+      .name {
+        color: var(--accent);
+        font-weight: 700;
+        font-size: 18px;
+        font-family: "Mulish", sans-serif;
+      }
+    }
+
+    .description {
+      opacity: 80%;
+      margin-block-start: 5px;
+      font-size: 14px;
+    }
+  }
+
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+  }
+}

@@ -1,0 +1,94 @@
+@import "variables";
+
+.support {
+  display: flex;
+  justify-content: flex-end;
+
+  &-modal {
+    li {
+      position: relative;
+      padding-inline: 15px;
+      padding-inline-start: 30px;
+      padding-block: 10px;
+      list-style-type: none;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid var(--content-background-border);
+      }
+
+      &::before {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        transform: translateY(-50%);
+        opacity: 50%;
+        border-radius: $roundness;
+        background-color: var(--accent);
+        width: 3px;
+        height: 65%;
+        content: "";
+      }
+    }
+  }
+
+  &-button {
+    border-radius: $roundness;
+    padding: 10px;
+    font-size: 13px;
+
+    &-donut {
+      border: 1px solid hsl(45, 90%, 75%);
+      border-radius: $roundness;
+      background-color: hsl(45, 75%, 90%);
+      padding-inline:  10px;
+      padding-block: 5px;
+      color: black;
+      font-weight: 700;
+    }
+
+    &-share {
+      color: var(--accent);
+    }
+  }
+}
+
+.copy-cardnumber {
+  display: block;
+  filter: saturate(75%);
+  transition:
+    background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1),
+    filter 0.35s cubic-bezier(0.075, 0.82, 0.165, 1);
+  margin-block: 10px;
+  border-radius: $roundness*0.5;
+  padding: 5px 10px;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+
+  &:active {
+    filter: brightness(0.85);
+  }
+
+  &-sber {
+    border: solid 1px var(--sber-border);
+    background-color: var(--sber-background);
+    color: var(--sber-text);
+    text-align: center;
+
+    &:hover {
+      background-color: var(--sber-hover);
+    }
+  }
+
+  &-yoomoney {
+    border: solid 1px var(--yoomoney-border);
+    background-color: var(--yoomoney-background);
+    color: var(--yoomoney-text);
+    text-align: center;
+
+    &:hover {
+      background-color: var(--yoomoney-hover);
+    }
+  }
+}

@@ -1,0 +1,151 @@
+@use "styles/reset";
+@use "styles/fonts";
+@use "styles/pages/links";
+@use "styles/pages/faq";
+@use "styles/addition";
+@use "styles/figure";
+@use "styles/header";
+@use "styles/table";
+@use "styles/colors";
+@use "styles/themeChanger";
+@use "styles/search";
+@use "styles/support";
+@import "styles/variables";
+
+html,
+body {
+  scroll-padding-top: 80px;
+  user-select: none;
+  padding: 0;
+  margin: 0;
+  color: var(--text-color);
+  background: var(--background-color);
+  font-family: "Inter", sans-serif;
+  font-weight: 350;
+}
+
+html {
+  scrollbar-width: none;
+}
+
+.main {
+  margin-top: 64px;
+  overflow: hidden;
+}
+
+.footer {
+  opacity: 0.5;
+  margin-block: 30px;
+  margin-inline: auto;
+  padding-inline: 10px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+//noinspection CssUnusedSymbol
+.visual-hidden {
+  display: none;
+}
+
+//noinspection CssUnusedSymbol
+.no-javascript,
+.not-found {
+  color: var(--text-color);
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  line-height: 1.5;
+
+  &-container {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    background-color: var(--content-background-color);
+    padding: 15px;
+    border-radius: $roundness*1.5;
+    box-shadow: 0 10px 25px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  &-title {
+    color: var(--accent);
+    font-family: "Mulish", sans-serif;
+    font-weight: 800;
+    text-align: left;
+    font-size: 32px;
+    text-transform: uppercase;
+    hyphens: auto;
+    margin-inline: 10px;
+  }
+
+  &-description {
+    hyphens: auto;
+    font-size: 15px;
+    margin-inline: 5px;
+  }
+
+  &-small-description {
+    hyphens: auto;
+    font-size: 12px;
+    margin-inline: 5px;
+    opacity: 0.5;
+  }
+
+  &-button {
+    font-weight: 500;
+    border-radius: $roundness;
+    display: inline-flex;
+    gap: 10px;
+    padding: 10px 15px;
+
+    &:hover {
+      opacity: 0.75;
+    }
+
+    &:active {
+      filter: brightness(90%);
+      opacity: 1;
+    }
+
+    img {
+      height: 24px;
+      width: 24px;
+    }
+
+    p {
+      margin-inline-start: 5px;
+    }
+  }
+
+  .to-main {
+    background-color: var(--accent);
+    color: #fff;
+  }
+
+  .chrome {
+    background-color: #ceead6;
+    color: #188038;
+  }
+
+  .firefox {
+    background-color: #25003e;
+    color: #fff;
+  }
+
+  .yandex {
+    background-color: #f7604a;
+    color: #fff;
+  }
+}

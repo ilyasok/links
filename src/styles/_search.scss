@@ -1,0 +1,98 @@
+@import "variables";
+
+.search {
+  &-input {
+    padding-inline-start: 16px;
+    padding-block: 8px;
+    width: 100%;
+
+    &-wrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 20px;
+      border: 1px solid var(--content-background-border);
+      border-radius: $roundness;
+      padding-inline-end: 16px;
+      width: 100%;
+    }
+  }
+
+  &-results {
+    max-height: 70vh;
+    overflow-y: auto;
+    scrollbar-width: none;
+
+    &::before {
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      z-index: 5;
+      background: linear-gradient(to bottom, transparent, var(--content-background-color));
+      width: 100%;
+      height: 15%;
+      pointer-events: none;
+      content: '';
+    }
+  }
+
+  &-link {
+    display: block;
+    border-radius: $roundness;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &-title {
+    transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    cursor: pointer;
+    margin-block: 10px;
+    border-top: solid 1px var(--summary_border);
+    border-right: solid 1px var(--summary_border);
+    border-bottom: solid 4px var(--summary_border);
+    border-left: solid 1px var(--summary_border);
+    border-radius: $roundness;
+    background-color: var(--summary_background);
+    padding: 10px 15px;
+    color: var(--summary_text);
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 1.25;
+    font-family: "Mulish",
+      sans-serif;
+    text-transform: uppercase;
+
+    mark {
+      filter: saturate(75%);
+      border: 1px solid var(--mark_border);
+      border-radius: $roundness*0.5;
+      background-color: var(--mark_background);
+      padding: 0 1px;
+      color: var(--mark_text);
+    }
+
+    &:hover {
+      background-color: var(--links_hover);
+    }
+  }
+
+  &-content {
+    line-clamp: 3;
+    padding: 10px;
+    overflow: hidden;
+    font-size: 16px;
+
+    mark {
+      filter: saturate(75%);
+      border: 1px solid var(--mark_border);
+      border-radius: $roundness*0.5;
+      background-color: var(--mark_background);
+      padding: 0 1px;
+      color: var(--mark_text);
+    }
+  }
+}
