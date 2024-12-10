@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 
 const OWNER = "aechat";
 const REPO = "links";
-const BRANCH = "dev";
+const BRANCH = "main";
 
 interface GithubUpdateInfoProps {
   filePath: string;
