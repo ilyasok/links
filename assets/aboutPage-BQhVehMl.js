@@ -1,1 +1,0 @@
-import{j as t,H as e}from"./index-X92rss1n.js";import{H as s}from"./Header-BrPMitMe.js";const r=()=>t.jsxs("div",{children:[t.jsx(e,{children:t.jsx("title",{children:"about@aechat"})}),t.jsx(s,{title:"about"})]});export{r as default};
