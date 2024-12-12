@@ -93,9 +93,9 @@ const AEExpressionPage = () => {
         <Header title="ae(expr)faq" />
         <motion.main
           className="main"
-          initial={{y: 50, opacity: 0}}
-          animate={{y: 0, opacity: 1}}
-          exit={{y: 50, opacity: 0}}
+          initial={{x: 100, opacity: 0}}
+          animate={{x: 0, opacity: 1}}
+          exit={{x: -50, opacity: 0}}
           transition={{duration: 0.5, ease: [0.075, 0.82, 0.165, 1]}}
         >
           <div className="faq-container-flex">
