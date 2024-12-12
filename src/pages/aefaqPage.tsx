@@ -71,6 +71,11 @@ const AEFaQ = () => {
       <SearchProvider isPageLoaded={isPageLoaded}>
         <Helmet>
           <title>aefaq@aechat</title>
+          <link
+            rel="icon"
+            type="image/svg+xml"
+            href="aefaq.svg"
+          />
           <meta
             name="description"
             content="Ответы на частые вопросы от пользователей After Effects"

@@ -46,6 +46,11 @@ const Links = () => {
     <div className="page">
       <Helmet>
         <title>links@aechat</title>
+        <link
+          rel="icon"
+          type="image/svg+xml"
+          href="main_icon.svg"
+        />
       </Helmet>
       <Header title="links" />
       <motion.main
