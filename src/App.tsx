@@ -83,7 +83,6 @@ export const App = () => {
                 style={{
                   margin: "10px",
                   fontSize: "10px",
-
                   textAlign: "right",
                   marginInline: "20px",
                 }}
@@ -96,7 +95,14 @@ export const App = () => {
       >
         <AnimatePresence
           mode="wait"
-          onExitComplete={() => window.scrollTo(0, 0)}
+          onExitComplete={() => {
+            setTimeout(() => {
+              window.scrollTo({
+                top: 0,
+                behavior: "instant",
+              });
+            }, 50);
+          }}
         >
           <Routes
             location={location}
