@@ -187,9 +187,18 @@ export const SearchInPage: React.FC = () => {
       detailsElement.setAttribute("open", "true");
     }
 
-    summaryElement.scrollIntoView({
+    const headerHeight = document.querySelector("header")?.offsetHeight ?? 0;
+    const padding = 24;
+
+    const y =
+      summaryElement.getBoundingClientRect().top +
+      window.pageYOffset -
+      headerHeight -
+      padding;
+
+    window.scrollTo({
+      top: y,
       behavior: "smooth",
-      block: "start",
     });
 
     closeModal();

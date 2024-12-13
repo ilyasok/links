@@ -20,8 +20,20 @@ export const generateAnchorId = () => {
       }
 
       if (window.location.hash === `#${generatedAnchor}`) {
-        summary.closest("details")?.setAttribute("open", "true");
-        summary.scrollIntoView({behavior: "smooth", block: "start"});
+        const details = summary.closest("details");
+        if (details) {
+          details.setAttribute("open", "true");
+          setTimeout(() => {
+            const headerHeight = document.querySelector("header")?.offsetHeight ?? 0;
+            const padding = 24;
+            const y =
+              summary.getBoundingClientRect().top +
+              window.pageYOffset -
+              headerHeight -
+              padding;
+            window.scrollTo({top: y, behavior: "smooth"});
+          }, 100);
+        }
       }
     });
   });
