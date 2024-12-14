@@ -147,24 +147,34 @@ export const SearchInPage: React.FC = () => {
       return;
     }
 
-    const lowerCaseText = text.toLowerCase();
+    const searchWords = text
+      .toLowerCase()
+      .split(/\s+/)
+      .filter((word) => word.length > 0);
     const detailsData = extractDetailsData();
 
-    const filtered = detailsData.filter(
-      ({title, content}) =>
-        title.toLowerCase().includes(lowerCaseText) ||
-        content.toLowerCase().includes(lowerCaseText)
-    );
+    const filtered = detailsData.filter(({title, content}) => {
+      const titleLower = title.toLowerCase();
+      const contentLower = content.toLowerCase();
+
+      return searchWords.every(
+        (word) => titleLower.includes(word) || contentLower.includes(word)
+      );
+    });
 
     setResults(filtered);
   };
 
   const extractMatchingLine = (content: string, query: string) => {
     const lines = content.split("\n");
-    const lowerQuery = query.toLowerCase();
+    const searchWords = query
+      .toLowerCase()
+      .split(/\s+/)
+      .filter((word) => word.length > 0);
 
     for (const line of lines) {
-      if (line.toLowerCase().includes(lowerQuery)) {
+      const lineLower = line.toLowerCase();
+      if (searchWords.every((word) => lineLower.includes(word))) {
         return line;
       }
     }
@@ -173,9 +183,16 @@ export const SearchInPage: React.FC = () => {
   };
 
   const highlightText = (text: string, query: string) => {
-    const escapedQuery = escapeRegExp(query);
-    const regex = new RegExp(`(${escapedQuery})`, "gi");
-    return text.replace(regex, "<mark>$1</mark>");
+    const searchWords = query.split(/\s+/).filter((word) => word.length > 0);
+    let highlightedText = text;
+
+    searchWords.forEach((word) => {
+      const escapedWord = escapeRegExp(word);
+      const regex = new RegExp(`(${escapedWord})`, "gi");
+      highlightedText = highlightedText.replace(regex, "<mark>$1</mark>");
+    });
+
+    return highlightedText;
   };
 
   const handleLinkClick = (id: string) => {
