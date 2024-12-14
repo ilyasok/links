@@ -90,10 +90,6 @@ export const SearchButton: React.FC = () => {
   );
 };
 
-const escapeRegExp = (string: string) => {
-  return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-};
-
 export const SearchInPage: React.FC = () => {
   const {isOpen, closeModal, isPageLoaded} = useSearch();
   const [query, setQuery] = useState("");
@@ -166,41 +162,31 @@ export const SearchInPage: React.FC = () => {
   };
 
   const extractMatchingLine = (content: string, query: string) => {
-    const lines = content.split("\n");
+    if (!content || !query.trim()) return "";
+
+    const lines = content.split("\n").filter((line) => line.trim().length > 0);
     const searchWords = query
       .toLowerCase()
       .split(/\s+/)
       .filter((word) => word.length > 0);
 
-    for (const line of lines) {
+    const cleanLines = lines.map((line) => line.trim());
+
+    for (const line of cleanLines) {
       const lineLower = line.toLowerCase();
       if (searchWords.every((word) => lineLower.includes(word))) {
         return line;
       }
     }
 
-    return content.split("\n")[0] ?? "";
-  };
-
-  const highlightText = (text: string, query: string) => {
-    if (!query.trim()) return text;
-
-    const searchWords = query
-      .toLowerCase()
-      .split(/\s+/)
-      .filter((word) => word.length > 0);
-
-    let highlightedText = text;
-
-    searchWords.forEach((word) => {
-      if (word.trim()) {
-        const escapedWord = escapeRegExp(word);
-        const regex = new RegExp(`(?![^<]*>)(${escapedWord})`, "gi");
-        highlightedText = highlightedText.replace(regex, "<mark>$1</mark>");
+    for (const line of cleanLines) {
+      const lineLower = line.toLowerCase();
+      if (searchWords.some((word) => lineLower.includes(word))) {
+        return line;
       }
-    });
+    }
 
-    return highlightedText;
+    return cleanLines[0] ?? "";
   };
 
   const handleLinkClick = (id: string) => {
@@ -396,20 +382,12 @@ export const SearchInPage: React.FC = () => {
                 }}
                 className="search-link"
               >
-                <p
-                  className="search-title"
-                  dangerouslySetInnerHTML={{
-                    __html: highlightText(title.replace(/^[+-]+/, ""), query.trim()),
-                  }}
-                ></p>
-                <p
-                  className="search-content"
-                  dangerouslySetInnerHTML={{
-                    __html:
-                      highlightText(extractMatchingLine(content, query), query.trim()) ||
-                      highlightText(content, query.trim()),
-                  }}
-                ></p>
+                <p className="search-title">{title.replace(/^[+-]+/, "").trim()}</p>
+                <p className="search-content">
+                  {extractMatchingLine(content, query) ||
+                    content.split("\n")[0]?.trim() ||
+                    ""}
+                </p>
               </button>
             </div>
           ))}

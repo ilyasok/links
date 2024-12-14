@@ -66,14 +66,14 @@
       sans-serif;
     text-transform: uppercase;
 
-    mark {
-      filter: saturate(75%);
-      border: 1px solid var(--mark_border);
-      border-radius: $roundness*0.5;
-      background-color: var(--mark_background);
-      padding: 0 1px;
-      color: var(--mark_text);
-    }
+    // .highlight {
+    //   filter: saturate(75%);
+    //   border: 1px solid var(--mark_border);
+    //   border-radius: $roundness*0.5;
+    //   background-color: var(--mark_background);
+    //   padding: 0 1px;
+    //   color: var(--mark_text);
+    // }
 
     &:hover {
       background-color: var(--links_hover);
@@ -86,13 +86,13 @@
     overflow: hidden;
     font-size: 16px;
 
-    mark {
-      filter: saturate(75%);
-      border: 1px solid var(--mark_border);
-      border-radius: $roundness*0.5;
-      background-color: var(--mark_background);
-      padding: 0 1px;
-      color: var(--mark_text);
-    }
+    // .highlight {
+    //   filter: saturate(75%);
+    //   border: 1px solid var(--mark_border);
+    //   border-radius: $roundness*0.5;
+    //   background-color: var(--mark_background);
+    //   padding: 0 1px;
+    //   color: var(--mark_text);
+    // }
   }
 }

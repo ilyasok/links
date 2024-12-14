@@ -1330,14 +1330,6 @@ tr:last-child th {
   font-family: "Mulish", sans-serif;
   text-transform: uppercase;
 }
-.search-title mark {
-  filter: saturate(75%);
-  border: 1px solid var(--mark_border);
-  border-radius: 5px;
-  background-color: var(--mark_background);
-  padding: 0 1px;
-  color: var(--mark_text);
-}
 .search-title:hover {
   background-color: var(--links_hover);
 }
@@ -1346,14 +1338,6 @@ tr:last-child th {
   padding: 10px;
   overflow: hidden;
   font-size: 16px;
-}
-.search-content mark {
-  filter: saturate(75%);
-  border: 1px solid var(--mark_border);
-  border-radius: 5px;
-  background-color: var(--mark_background);
-  padding: 0 1px;
-  color: var(--mark_text);
 }
 
 .support {
