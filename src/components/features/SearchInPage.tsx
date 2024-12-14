@@ -183,13 +183,21 @@ export const SearchInPage: React.FC = () => {
   };
 
   const highlightText = (text: string, query: string) => {
-    const searchWords = query.split(/\s+/).filter((word) => word.length > 0);
+    if (!query.trim()) return text;
+
+    const searchWords = query
+      .toLowerCase()
+      .split(/\s+/)
+      .filter((word) => word.length > 0);
+
     let highlightedText = text;
 
     searchWords.forEach((word) => {
-      const escapedWord = escapeRegExp(word);
-      const regex = new RegExp(`(${escapedWord})`, "gi");
-      highlightedText = highlightedText.replace(regex, "<mark>$1</mark>");
+      if (word.trim()) {
+        const escapedWord = escapeRegExp(word);
+        const regex = new RegExp(`(?![^<]*>)(${escapedWord})`, "gi");
+        highlightedText = highlightedText.replace(regex, "<mark>$1</mark>");
+      }
     });
 
     return highlightedText;
@@ -391,15 +399,15 @@ export const SearchInPage: React.FC = () => {
                 <p
                   className="search-title"
                   dangerouslySetInnerHTML={{
-                    __html: highlightText(title.replace(/^[+-]+/, ""), query),
+                    __html: highlightText(title.replace(/^[+-]+/, ""), query.trim()),
                   }}
                 ></p>
                 <p
                   className="search-content"
                   dangerouslySetInnerHTML={{
                     __html:
-                      highlightText(extractMatchingLine(content, query), query) ||
-                      highlightText(content, query),
+                      highlightText(extractMatchingLine(content, query), query.trim()) ||
+                      highlightText(content, query.trim()),
                   }}
                 ></p>
               </button>
