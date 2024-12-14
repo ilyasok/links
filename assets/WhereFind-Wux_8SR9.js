@@ -1,0 +1,1 @@
+import{j as e}from"./index-CaMEm9ZF.js";import{G as s}from"./GithubUpdateInfo-BXOr6o0T.js";const i=()=>e.jsx("div",{className:"faq-content",id:"where-find",children:e.jsx(s,{filePath:"src/pages/sections/psfaq/WhereFind.tsx"})});export{i as default};
