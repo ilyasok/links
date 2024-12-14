@@ -3,8 +3,8 @@
 .faq {
   &-container {
     margin-inline: auto;
-    max-width: 1000px;
     width: 97.5%;
+    max-width: 1000px;
 
     &-flex {
       display: flex;
@@ -29,7 +29,6 @@
     justify-content: space-between;
     align-items: center;
     filter: drop-shadow(0 3px 5px var(--shadow));
-    background-image: linear-gradient(to bottom, var(--summary_background), transparent);
     transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     cursor: pointer;
     margin-block: 10px;
@@ -38,6 +37,7 @@
     border-bottom: solid 4px var(--summary_border);
     border-left: solid 1px var(--summary_border);
     border-radius: $roundness;
+    background-image: linear-gradient(to bottom, var(--summary_background), transparent);
     background-color: var(--summary_background);
     padding: 10px 15px;
     color: var(--summary_text);
@@ -149,11 +149,11 @@
 
 
     a {
+      transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
       color: var(--accent);
       font-weight: 700;
       text-decoration: underline;
-      transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-
+ы
       &:hover {
         opacity: 0.5;
       }
@@ -204,15 +204,15 @@
     }
 
     mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
       filter: saturate(75%);
       border: 1px solid var(--mark_border);
       border-radius: $roundness*0.5;
       background-color: var(--mark_background);
       padding: 0 4px;
       color: var(--mark_text);
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
 
       &.file,
       &.key,
@@ -231,12 +231,12 @@
 
         &::before {
           display: inline-block;
-          width: 14px;
-          height: 14px;
-          margin-block: auto;
           vertical-align: text-bottom;
+          margin-block: auto;
           background-size: contain;
           background-repeat: no-repeat;
+          width: 14px;
+          height: 14px;
           content: '';
         }
       }
@@ -284,23 +284,23 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 5px;
-    padding-inline: 10px;
     margin: 0 auto;
+    padding-inline: 10px;
     max-width: 800px;
 
     button,
     a {
+      transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
       margin-block: 0;
-      font-weight: 700;
-      color: var(--accent);
       border: 2px solid var(--button_border);
       border-radius: $roundness;
       background-color: var(--button_background);
       padding-inline: 10px;
       padding-block: 5px;
+      color: var(--accent);
+      font-weight: 700;
       font-size: 16px;
       text-decoration: none;
-      transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 
       &:hover {
         opacity: 0.75;

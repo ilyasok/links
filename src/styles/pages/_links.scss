@@ -5,8 +5,8 @@
 .links {
   margin-top: 32px;
   margin-inline: auto;
-  max-width: 1400px;
   width: 95%;
+  max-width: 1400px;
 
   &-button {
     display: flex;
@@ -27,7 +27,6 @@
       z-index: 15;
       cursor: pointer;
       background-color: var(--links_hover);
-      // transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1)
     }
 
     .name_container {

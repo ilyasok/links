@@ -4,25 +4,25 @@
   &_browser {
 
     &-youtube {
-      background: #303030;
       border-radius: $roundness;
+      background: #303030;
 
       .window {
         &-header {
           display: flex;
 
           figcaption {
-            background: #454545;
-            margin-block: 5px;
+            display: block;
             margin-inline: auto;
-            color: #eeeeee;
-            padding: 3px 8px;
+            margin-block: 5px;
             border: 1px solid #606060;
             border-radius: $roundness*0.5;
-            font-size: 13px;
-            display: block;
+            background: #454545;
+            padding: 3px 8px;
             max-width: 75%;
             overflow: hidden;
+            color: #eeeeee;
+            font-size: 13px;
             text-overflow: ellipsis;
           }
         }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -548,8 +549,8 @@ textarea {
 .links {
   margin-top: 32px;
   margin-inline: auto;
-  max-width: 1400px;
   width: 95%;
+  max-width: 1400px;
 }
 .links-button {
   display: flex;
@@ -609,8 +610,8 @@ textarea {
 
 .faq-container {
   margin-inline: auto;
-  max-width: 1000px;
   width: 97.5%;
+  max-width: 1000px;
 }
 .faq-container-flex {
   display: flex;
@@ -631,7 +632,6 @@ textarea {
   justify-content: space-between;
   align-items: center;
   filter: drop-shadow(0 3px 5px var(--shadow));
-  background-image: linear-gradient(to bottom, var(--summary_background), transparent);
   transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   cursor: pointer;
   margin-block: 10px;
@@ -640,6 +640,7 @@ textarea {
   border-bottom: solid 4px var(--summary_border);
   border-left: solid 1px var(--summary_border);
   border-radius: 10px;
+  background-image: linear-gradient(to bottom, var(--summary_background), transparent);
   background-color: var(--summary_background);
   padding: 10px 15px;
   color: var(--summary_text);
@@ -735,12 +736,12 @@ textarea {
   text-align: right;
 }
 .faq-content a {
+  transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   color: var(--accent);
   font-weight: 700;
   text-decoration: underline;
-  transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-.faq-content a:hover {
+ы .faq-content a:hover {
   opacity: 0.5;
 }
 .faq-content a:visited {
@@ -785,15 +786,15 @@ textarea {
           user-select: text;
 }
 .faq-content mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   filter: saturate(75%);
   border: 1px solid var(--mark_border);
   border-radius: 5px;
   background-color: var(--mark_background);
   padding: 0 4px;
   color: var(--mark_text);
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
 }
 .faq-content mark.file, .faq-content mark.key, .faq-content mark.plugin, .faq-content mark.app, .faq-content mark.ui, .faq-content mark.path, .faq-content mark.code, .faq-content mark.tag {
   transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -804,12 +805,12 @@ textarea {
 }
 .faq-content mark.file::before, .faq-content mark.key::before, .faq-content mark.plugin::before, .faq-content mark.app::before, .faq-content mark.ui::before, .faq-content mark.path::before, .faq-content mark.code::before, .faq-content mark.tag::before {
   display: inline-block;
-  width: 14px;
-  height: 14px;
-  margin-block: auto;
   vertical-align: text-bottom;
+  margin-block: auto;
   background-size: contain;
   background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
   content: "";
 }
 .faq-content mark.file::before {
@@ -842,23 +843,23 @@ textarea {
   flex-wrap: wrap;
   justify-content: center;
   gap: 5px;
-  padding-inline: 10px;
   margin: 0 auto;
+  padding-inline: 10px;
   max-width: 800px;
 }
 .flexible-links button,
 .flexible-links a {
+  transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   margin-block: 0;
-  font-weight: 700;
-  color: var(--accent);
   border: 2px solid var(--button_border);
   border-radius: 10px;
   background-color: var(--button_background);
   padding-inline: 10px;
   padding-block: 5px;
+  color: var(--accent);
+  font-weight: 700;
   font-size: 16px;
   text-decoration: none;
-  transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .flexible-links button:hover,
 .flexible-links a:hover {
@@ -954,24 +955,24 @@ textarea {
 }
 
 .figure_browser-youtube {
-  background: #303030;
   border-radius: 10px;
+  background: #303030;
 }
 .figure_browser-youtube .window-header {
   display: flex;
 }
 .figure_browser-youtube .window-header figcaption {
-  background: #454545;
-  margin-block: 5px;
+  display: block;
   margin-inline: auto;
-  color: #eeeeee;
-  padding: 3px 8px;
+  margin-block: 5px;
   border: 1px solid #606060;
   border-radius: 5px;
-  font-size: 13px;
-  display: block;
+  background: #454545;
+  padding: 3px 8px;
   max-width: 75%;
   overflow: hidden;
+  color: #eeeeee;
+  font-size: 13px;
   text-overflow: ellipsis;
 }
 .figure_windows-light, .figure_windows-dark {
