@@ -4,22 +4,21 @@
   --shadow: hsla(0, 0%, 0%, 0.1);
 }
 
-
-
-$light:( // ~: стандартные цвета:
+$light: (
+  // ~: стандартные цвета:
   background-color: hsl(0, 0%, 92.5%),
   text-color: hsl(0, 0%, 20%),
   content-background-color: hsl(0, 0%, 100%),
   content-background-border: hsl(0, 0%, 95%),
   header_background: hsla(0, 0%, 100%, 0.5),
   // ~: банковские цвета:
-  sber-background:hsl(148, 75%, 97%),
-  sber-text:hsl(148, 50%, 25%),
-  sber-hover:hsl(148, 50%, 85%),
+  sber-background: hsl(148, 75%, 97%),
+  sber-text: hsl(148, 50%, 25%),
+  sber-hover: hsl(148, 50%, 85%),
   sber-border: hsl(148, 90%, 85%),
-  yoomoney-background:hsl(257, 75%, 97%),
-  yoomoney-text:hsl(257, 50%, 25%),
-  yoomoney-hover:hsl(257, 50%, 85%),
+  yoomoney-background: hsl(257, 75%, 97%),
+  yoomoney-text: hsl(257, 50%, 25%),
+  yoomoney-hover: hsl(257, 50%, 85%),
   yoomoney-border: hsl(257, 90%, 85%),
   // ~: с применением акцентного цвета:
   accent: hsl(var(--accent-hue), 65%, 45%),
@@ -34,9 +33,9 @@ $light:( // ~: стандартные цвета:
   summary_border: hsl(var(--accent-hue), 35%, 80%),
   summary_text: var(--accent),
   // *: стили кнопок главной страницы
-  links_background:hsl(var(--accent-hue), 35%, 97.5%),
+  links_background: hsl(var(--accent-hue), 35%, 97.5%),
   links_border: hsl(var(--accent-hue), 75%, 75%),
-  links_hover:hsl(var(--accent-hue), 50%, 90%),
+  links_hover: hsl(var(--accent-hue), 50%, 90%),
   // ~: информационные блоки:
   addition_info: hsl(200, 100%, 85%),
   addition_info-border: hsl(200, 90%, 75%),
@@ -52,15 +51,15 @@ $light:( // ~: стандартные цвета:
   addition_danger-mark: hsl(0, 70%, 80%),
   // *: стили таблицы
   table_background: hsl(0, 0%, 95%),
-  table_background-border: hsl(0, 0%, 90%),
+  table_background-border: hsl(0, 0%, 90%)
 );
-$dark:( // ~: стандартные цвета:  
+$dark: (
+  // ~: стандартные цвета:
   background-color: hsl(0, 0%, 0%),
   text-color: hsl(0, 0%, 100%),
   content-background-color: hsl(0, 0%, 7.5%),
   content-background-border: hsl(0, 0%, 15%),
   header_background: hsla(0, 0%, 7.5%, 0.75),
-
   // ~: с применением акцентного цвета:
   accent: hsl(var(--accent-hue), 100%, 70%),
   mark_background: hsl(var(--accent-hue), 25%, 27%),
@@ -74,9 +73,9 @@ $dark:( // ~: стандартные цвета:
   summary_border: hsl(var(--accent-hue), 35%, 25%),
   summary_text: var(--accent),
   // *: стили кнопок главной страницы
-  links_background:hsl(var(--accent-hue), 35%, 7.5%),
+  links_background: hsl(var(--accent-hue), 35%, 7.5%),
   links_border: hsl(var(--accent-hue), 75%, 20%),
-  links_hover:hsl(var(--accent-hue), 50%, 15%),
+  links_hover: hsl(var(--accent-hue), 50%, 15%),
   // ~: информационные блоки:
   addition_info: hsl(200, 70%, 15%),
   addition_info-border: hsl(200, 60%, 25%),
@@ -92,21 +91,17 @@ $dark:( // ~: стандартные цвета:
   addition_danger-mark: hsl(0, 50%, 30%),
   // *: стили таблицы
   table_background: hsl(0, 0%, 12.5%),
-  table_background-border: hsl(0, 0%, 20%),
+  table_background-border: hsl(0, 0%, 20%)
 );
 
 .light {
-
-  @each $key,
-  $value in $light {
+  @each $key, $value in $light {
     --#{$key}: #{$value};
   }
 }
 
 .dark {
-
-  @each $key,
-  $value in $dark {
+  @each $key, $value in $dark {
     --#{$key}: #{$value};
   }
 }

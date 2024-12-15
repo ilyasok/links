@@ -44,8 +44,7 @@
     font-weight: 800;
     font-size: 20px;
     line-height: 1.25;
-    font-family: "Mulish",
-      sans-serif;
+    font-family: "Mulish", sans-serif;
     text-transform: uppercase;
 
     &-left {
@@ -78,8 +77,7 @@
       color: var(--summary_text);
       font-weight: 800;
       font-size: 22px;
-      font-family: "Mulish",
-        sans-serif;
+      font-family: "Mulish", sans-serif;
       text-transform: uppercase;
     }
 
@@ -96,7 +94,6 @@
     line-height: 1.75;
 
     .message {
-
       &-correct,
       &-incorrect {
         max-width: 450px;
@@ -147,14 +144,13 @@
       }
     }
 
-
     a {
       transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
       color: var(--accent);
       font-weight: 700;
       text-decoration: underline;
-ы
-      &:hover {
+
+      ы &:hover {
         opacity: 0.5;
       }
 
@@ -209,7 +205,7 @@
       gap: 4px;
       filter: saturate(75%);
       border: 1px solid var(--mark_border);
-      border-radius: $roundness*0.5;
+      border-radius: $roundness * 0.5;
       background-color: var(--mark_background);
       padding: 0 4px;
       color: var(--mark_text);
@@ -237,7 +233,7 @@
           background-repeat: no-repeat;
           width: 14px;
           height: 14px;
-          content: '';
+          content: "";
         }
       }
 

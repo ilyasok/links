@@ -2,7 +2,6 @@
 
 .figure {
   &_browser {
-
     &-youtube {
       border-radius: $roundness;
       background: #303030;
@@ -16,7 +15,7 @@
             margin-inline: auto;
             margin-block: 5px;
             border: 1px solid #606060;
-            border-radius: $roundness*0.5;
+            border-radius: $roundness * 0.5;
             background: #454545;
             padding: 3px 8px;
             max-width: 75%;
@@ -31,7 +30,6 @@
   }
 
   &_windows {
-
     &-light,
     &-dark {
       margin-inline: auto;
@@ -86,7 +84,6 @@
   }
 
   &_macos {
-
     &-light,
     &-dark {
       margin-inline: auto;
@@ -97,7 +94,7 @@
         overflow: hidden;
         font-weight: 500;
         font-size: 14px;
-        font-family: 'Helvetica', sans-serif;
+        font-family: "Helvetica", sans-serif;
         text-align: center;
         text-overflow: ellipsis;
         white-space: nowrap;

@@ -41,7 +41,7 @@
       border: 1px solid hsl(45, 90%, 75%);
       border-radius: $roundness;
       background-color: hsl(45, 75%, 90%);
-      padding-inline:  10px;
+      padding-inline: 10px;
       padding-block: 5px;
       color: black;
       font-weight: 700;
@@ -60,7 +60,7 @@
     background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1),
     filter 0.35s cubic-bezier(0.075, 0.82, 0.165, 1);
   margin-block: 10px;
-  border-radius: $roundness*0.5;
+  border-radius: $roundness * 0.5;
   padding: 5px 10px;
   font-weight: 700;
   font-size: 18px;

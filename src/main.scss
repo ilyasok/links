@@ -18,19 +18,19 @@
 
 html,
 body {
-  scroll-padding-top: var(--header-height);
-  user-select: none;
-  padding: 0;
   margin: 0;
-  color: var(--text-color);
   background: var(--background-color);
-  font-family: "Inter", sans-serif;
+  padding: 0;
+  scroll-padding-top: var(--header-height);
+  color: var(--text-color);
   font-weight: 350;
+  font-family: "Inter", sans-serif;
+  user-select: none;
 }
 
 html {
-  scrollbar-width: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  scrollbar-width: none;
 }
 
 .main {
@@ -40,93 +40,91 @@ html {
 
 .footer {
   opacity: 0.5;
-  margin-block: 30px;
   margin-inline: auto;
+  margin-block: 30px;
   padding-inline: 10px;
   font-size: 12px;
   text-align: center;
 }
 
 .hidden {
-  opacity: 0;
   visibility: hidden;
+  opacity: 0;
 }
 
 .visible {
-  opacity: 1;
   visibility: visible;
+  opacity: 1;
 }
 
-//noinspection CssUnusedSymbol
 .visual-hidden {
   display: none;
 }
 
-//noinspection CssUnusedSymbol
 .no-javascript,
 .not-found {
-  color: var(--text-color);
-  background-color: var(--background-color);
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--background-color);
   height: 100vh;
+  color: var(--text-color);
   line-height: 1.5;
 
   &-container {
     display: inline-flex;
     flex-direction: column;
     gap: 10px;
-    max-width: 400px;
+    box-shadow: 0 10px 25px 10px rgba(0, 0, 0, 0.15);
+    border-radius: $roundness * 1.5;
     background-color: var(--content-background-color);
     padding: 15px;
-    border-radius: $roundness*1.5;
-    box-shadow: 0 10px 25px 10px rgba(0, 0, 0, 0.15);
+    max-width: 400px;
   }
 
   &-title {
-    color: var(--accent);
-    font-family: "Mulish", sans-serif;
-    font-weight: 800;
-    text-align: left;
-    font-size: 32px;
-    text-transform: uppercase;
-    hyphens: auto;
     margin-inline: 10px;
+    color: var(--accent);
+    font-weight: 800;
+    font-size: 32px;
+    font-family: "Mulish", sans-serif;
+    hyphens: auto;
+    text-align: left;
+    text-transform: uppercase;
   }
 
   &-description {
-    hyphens: auto;
-    font-size: 15px;
     margin-inline: 5px;
+    font-size: 15px;
+    hyphens: auto;
   }
 
   &-small-description {
-    hyphens: auto;
-    font-size: 12px;
-    margin-inline: 5px;
     opacity: 0.5;
+    margin-inline: 5px;
+    font-size: 12px;
+    hyphens: auto;
   }
 
   &-button {
-    font-weight: 500;
-    border-radius: $roundness;
     display: inline-flex;
     gap: 10px;
+    border-radius: $roundness;
     padding: 10px 15px;
+    font-weight: 500;
 
     &:hover {
       opacity: 0.75;
     }
 
     &:active {
-      filter: brightness(90%);
       opacity: 1;
+      filter: brightness(90%);
     }
 
     img {
-      height: 24px;
       width: 24px;
+      height: 24px;
     }
 
     p {
