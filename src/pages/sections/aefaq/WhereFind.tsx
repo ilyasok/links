@@ -16,7 +16,7 @@ const AEWhereFind: React.FC = () => {
       id="where-find"
     >
       <GithubUpdateInfo filePath="src/pages/sections/aefaq/WhereFind.tsx" />
-      <DetailsSummary title="Где найти шаблоны, программы и плагины?">
+      <DetailsSummary title="Где можно найти и скачать шаблоны, программы и плагины?">
         <p>
           На <a href="/">главной странице</a>, в закреплённом сообщении в чате{" "}
           <a
@@ -161,7 +161,7 @@ const AEWhereFind: React.FC = () => {
           подписочную модель распространения файлов, не поддерживаются ботом.
         </AdditionWarning>
       </DetailsSummary>
-      <DetailsSummary title="Где найти бесплатные стоковые видео для своих проектов?">
+      <DetailsSummary title="Где можно найти и скачать бесплатные стоковые видео для своих проектов?">
         <p>
           Существует множество бесплатных видео-стоков онлайн, среди которых многие
           предоставляют материалы с лицензией <mark>Creative Commons Zero (CC0)</mark>,
@@ -288,7 +288,7 @@ const AEWhereFind: React.FC = () => {
           используйте VPN для доступа на данные ресурсы.
         </AdditionWarning>
       </DetailsSummary>
-      <DetailsSummary title="Где найти бесплатную статичную графику для своих проектов?">
+      <DetailsSummary title="Где можно найти и скачать бесплатную статичную графику для своих проектов?">
         {" "}
         <p>
           У нас есть канал{" "}
@@ -370,7 +370,7 @@ const AEWhereFind: React.FC = () => {
           использования и лицензии, чтобы не попасть в неприятную ситуацию.
         </AdditionWarning>
       </DetailsSummary>
-      <DetailsSummary title="Где найти бесплатные звуки и звуковые эффекты для своих видео?">
+      <DetailsSummary title="Где можно найти и скачать бесплатные звуки и звуковые эффекты для своих видео?">
         <p>
           В канале <a href="https://t.me/s/aetemp">AETemp</a> вы можете найти звуковые
           эффекты в поиске по хештегу <mark className="tag">#звуки</mark>. Если же вам не
@@ -432,8 +432,7 @@ const AEWhereFind: React.FC = () => {
           использования и лицензии, чтобы не попасть в неприятную ситуацию.
         </AdditionWarning>
       </DetailsSummary>
-      <DetailsSummary title="Где найти шрифт по имеющемуся фото?">
-        {/* fixme: исправить пути у фото и стили figure */}
+      <DetailsSummary title="Где я могу найти шрифт по имеющемуся фото?">
         <p>
           Вы можете использовать сервисом{" "}
           <a
@@ -515,10 +514,7 @@ const AEWhereFind: React.FC = () => {
           нахождением сервис справился прекрасно.
         </p>
       </DetailsSummary>
-      <DetailsSummary
-        title="Где найти таблицу перевода стандартных эффектов с русского интерфейса на
-            английский?"
-      >
+      <DetailsSummary title="Где найти таблицу перевода стандартных эффектов с русского интерфейса на английский?">
         <AdditionInfo>
           Перевод и наличие эффектов, а также способ их работы может отличаться в
           зависимости от версии <mark className="app">After Effects</mark>. Также
