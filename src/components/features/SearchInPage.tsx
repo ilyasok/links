@@ -121,6 +121,7 @@ export const SearchInPage: React.FC = () => {
       if (!id) return;
 
       const title = summary.textContent ?? "";
+
       const content = Array.from(detail.querySelectorAll<HTMLParagraphElement>("p"))
         .map((el) => el.textContent?.trim() ?? "")
         .filter(Boolean)
@@ -129,14 +130,54 @@ export const SearchInPage: React.FC = () => {
       const listItems = Array.from(detail.querySelectorAll<HTMLLIElement>("li"))
         .map((el) => {
           const directChildUl = el.querySelector("ul");
+
+          const parentText = Array.from(el.childNodes)
+            .map((node) => {
+              if (node.nodeType === Node.TEXT_NODE) {
+                return node.textContent?.trim() ?? "";
+              } else if (
+                node.nodeType === Node.ELEMENT_NODE &&
+                (node as HTMLElement).tagName !== "UL"
+              ) {
+                const element = node as HTMLElement;
+                if (element.tagName === "MARK" || element.tagName === "A") {
+                  return element.innerHTML?.trim() ?? "";
+                }
+                return element.textContent?.trim() ?? "";
+              }
+              return "";
+            })
+            .filter(Boolean)
+            .join(" ")
+            .trim();
+
           if (!directChildUl) {
-            return el.textContent?.trim() ?? "";
+            return parentText;
           }
 
-          return Array.from(directChildUl.querySelectorAll("li"))
-            .map((child) => child.textContent?.trim() ?? "")
+          const childItems = Array.from(directChildUl.querySelectorAll("li"))
+            .map((child) => {
+              const text = Array.from(child.childNodes)
+                .map((node) => {
+                  if (node.nodeType === Node.TEXT_NODE) {
+                    return node.textContent?.trim() ?? "";
+                  } else if (node.nodeType === Node.ELEMENT_NODE) {
+                    const element = node as HTMLElement;
+                    if (element.tagName === "MARK" || element.tagName === "A") {
+                      return element.innerHTML?.trim() ?? "";
+                    }
+                    return element.textContent?.trim() ?? "";
+                  }
+                  return "";
+                })
+                .filter(Boolean)
+                .join(" ");
+              return text.trim();
+            })
             .filter(Boolean)
             .join("\n");
+
+          return `${parentText}\n${childItems}`;
         })
         .filter(Boolean)
         .join("\n");
