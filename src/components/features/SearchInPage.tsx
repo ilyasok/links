@@ -121,14 +121,30 @@ export const SearchInPage: React.FC = () => {
       if (!id) return;
 
       const title = summary.textContent ?? "";
-      const content = Array.from(
-        detail.querySelectorAll<HTMLLIElement | HTMLParagraphElement>("p, li")
-      )
-        .map((el) => el.textContent ?? "")
+      const content = Array.from(detail.querySelectorAll<HTMLParagraphElement>("p"))
+        .map((el) => el.textContent?.trim() ?? "")
+        .filter(Boolean)
         .join("\n");
 
-      if (title || content) {
-        data.push({title, content, id});
+      const listItems = Array.from(detail.querySelectorAll<HTMLLIElement>("li"))
+        .map((el) => {
+          const directChildUl = el.querySelector("ul");
+          if (!directChildUl) {
+            return el.textContent?.trim() ?? "";
+          }
+
+          return Array.from(directChildUl.querySelectorAll("li"))
+            .map((child) => child.textContent?.trim() ?? "")
+            .filter(Boolean)
+            .join("\n");
+        })
+        .filter(Boolean)
+        .join("\n");
+
+      const text = [content, listItems].join("\n");
+
+      if (title || text) {
+        data.push({title, content: text, id});
       }
     });
 
