@@ -1,9 +1,8 @@
 import React from "react";
 import DetailsSummary from "../../../components/DetailsSummary";
-import {VideoFigure, YouTubeVideo} from "../../../components/ContentFigure";
+import {ImageFigure, VideoFigure, YouTubeVideo} from "../../../components/ContentFigure";
 import {AdditionInfo, AdditionWarning} from "../../../components/Additions";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
-
 const AEActions: React.FC = () => {
   return (
     <div
@@ -495,30 +494,217 @@ const AEActions: React.FC = () => {
           <mark className="plugin">Thicc Stroke</mark>.
         </p>
       </DetailsSummary>
-
       <DetailsSummary title="Как и чем сделать анимацию толщины variable-шрифта?">
-        <p>{/* fixme: написать!! */}</p>
-      </DetailsSummary>
-      <DetailsSummary title="Чем бы красиво сделать анимацию появления слоя?">
-        <p>{/* fixme: про фрактал нойз или autofill 2 */}</p>
+        <p>
+          Для анимации шрифта от тонкого начертания до жирного используется техника
+          морфинга фигур. В видео ниже создаются два текстовых слоя, расположенных друг на
+          друге, из которых создают шейповый слой и делают анимацию движения Path. За счёт
+          этого получается красивая и быстрая анимация смены толщины текста.
+        </p>
+        <YouTubeVideo
+          link="yyDAFSC2qDo"
+          caption="Smooth Typo Transition from Bold Text to Thin Text"
+        />
       </DetailsSummary>
       <DetailsSummary title="Какими средствами и плагинами обычно делают анимацию 2D-персонажей?">
-        <p>{/* fixme: паппет тулс, дюик ангелина и подобные плагины */}</p>
+        <p>
+          Существуют множество способов для создания персонажной анимаций. Каждый
+          инструмент выполняет определённую или общую задачу по анимации персонажей
+          разного качества.
+        </p>
+        <ul>
+          <li>
+            Через <mark className="plugin">Puppet Tool</mark>. Просто, встроенно и
+            сердито. С помощью него можно двигать слой как марионетку, на что отсылает
+            название инструмента.{" "}
+            <a href="https://www.youtube.com/watch?v=Vu3RHRnoRM4">Как?</a>
+          </li>
+          <li>
+            Через сторонний плагин <mark className="plugin">Duik</mark>. Он поставляется{" "}
+            <a href="https://rxlaboratory.org/duik-angela-download/">
+              бесплатно на официальном сайте
+            </a>
+            .
+          </li>
+          <li>
+            Через кучу тематических плагинов, например{" "}
+            <mark className="plugin">Rubberhose</mark>,{" "}
+            <mark className="plugin">Limber</mark>,{" "}
+            <mark className="plugin">Character Tool</mark> и подобные.
+          </li>
+        </ul>
+        <YouTubeVideo
+          link="AcEIT03Mrzk"
+          caption="Сравнение популярных плагинов для персонажной анимации"
+        />
       </DetailsSummary>
-
-      <DetailsSummary title="Как мне точнее расставить ключи и маркеры под бит?">
-        <p>{/* fixme: beat edit, sound keys или по вейвформе */}</p>
+      <DetailsSummary title="Как мне быстро расставить ключи и маркеры под бит, желательно автоматически?">
+        <p>
+          Если у вас имеется аудиофайл, особенно с чётко выраженными битами - вам будет
+          довольно легко сгенерировать ключи на основе звуковой волны.
+        </p>
+        <AdditionInfo>
+          Если вам нужно вытащить биты и отделить их от остальной музыки - воспользуйтесь
+          программой{" "}
+          <a href="https://github.com/stemrollerapp/stemroller/releases">StemRoller</a>.
+        </AdditionInfo>
+        <p>
+          В <mark className="app">After Effects</mark> вы можете сгенерировать ключи с
+          помощью нажатия <mark className="key">ПКМ</mark> по слою с аудиофайлом и выбрав{" "}
+          <mark className="ui">Keyframe Assistant &gt; Convert Audio to Keyframes</mark>.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/aftereffects/convert_audio_to_keyframes.png"
+          imgTitle="Генерация ключей из аудиодорожки"
+          caption="Генерация ключей из аудиодорожки"
+        />
+        <p>
+          Минус этого способа заключается в том, что вы не можете настроить интерполяцию
+          между ключами, не удаляя лишние ключевые кадры. Да и впринципе чистить такое -
+          будет не очень удобно.
+        </p>
+        <p>
+          Но никто не запрещал использовать сторонние методы для расставновки ключевых
+          кадров. Например, через <mark className="plugin">Sound Keys</mark>, поставляемый
+          в пакет плагинов <mark className="plugin">Red Giant Trapcode Suite</mark>.
+        </p>
+        <YouTubeVideo
+          link="uqKFsIHu-DA"
+          caption="Как пользоваться Sound Keys в After Effects"
+        />
+        <p>
+          Хоть <mark className="plugin">Sound Keys</mark> и даёт хороший результат за счёт
+          возможности гибкой настройки, но с помощью него нельзя автоматически поставить
+          маркеры на композиции под биты. На помощь приходит ещё один сторонний плагин -{" "}
+          <mark className="plugin">Beat Edit</mark>, который как раз и выполняет эту
+          задачу.
+        </p>
+        <YouTubeVideo
+          link="JGVLRcjp7ss"
+          caption="Как создавать маркеры с помощью Beat Edit"
+        />
+        <AdditionInfo>
+          Плагины, приведённые в этом пункте можно скачать из канала{" "}
+          <a href="https://t.me/+Qd9xu7A4TeIwNzY6">склад стройматериалов</a> или из канала{" "}
+          <a href="https://t.me/s/aetemp">AETemp</a>.
+        </AdditionInfo>
       </DetailsSummary>
       <DetailsSummary title="Как мне распаковать пре-композицию?">
-        <p>{/* fixme: сторонний плагин unprecompose */}</p>
+        <p>
+          Бывают случаи, когда пользователь сделал несколько прекомпозиций, а потом
+          внезапно ему понадобилось их распаковать. И порой не хочется заходить в каждую
+          композицию, прожимать <mark className="key">Ctrl + A</mark> для выделения всех
+          слоёв, <mark className="key">Ctrl + C</mark> для копирования слоёв, переходить в
+          родительскую композицию и нажимать на <mark className="key">Ctrl + V</mark>,
+          особенно когда надо сделать так с большой кучей композиций.
+        </p>
+        <p>
+          Для решения этой нудной проблемы был создан бесплатный<sup>*</sup> плагин{" "}
+          <a href="https://aescripts.com/un-precompose/">Un-precompose</a>. После его
+          установки он появится в <mark className="ui">Layer &gt; Un-precompose</mark>.
+          Чтобы эта кнопка работала - нужно выделить композиции, которые вы хотите
+          распаковать.
+        </p>
+        <AdditionInfo>
+          <sup>*</sup>Чтобы скачать скрипт - зарегистрируйтесь на сайте{" "}
+          <a href="https://aescripts.com">aescripts</a>, вернитесь на страницу с плагином,
+          установите цену 0 в <mark className="ui">Name Your Own Price</mark>, добавьте
+          его в корзину и подтвердите заказ. Нужный плагин появится{" "}
+          <a href="https://aescripts.com/downloadable/customer/products/">
+            в вашем профиле
+          </a>{" "}
+          и вы можете его скачать абсолютно бесплатно.
+        </AdditionInfo>
+        <VideoFigure
+          styleClass="figure_windows-light"
+          videoSrc="images/aftereffects/unprecompose_demonstration.mp4"
+          caption="Распаковка нескольких прекомпозиций с помощью Un-precompose"
+        />
+        <AdditionWarning>
+          Имейте ввиду, что ссылки внутри эффектов (например указание слоя в Displacement
+          Map) и внутри выражений при распаковке прекомпозиций могут слететь.
+        </AdditionWarning>
       </DetailsSummary>
-
+      <DetailsSummary title="Как разбить текстовый слой на отдельные слои с буквами, словами или строками?">
+        <p>
+          Для быстрого разделения текстового слоя на буквы или строки существует сторонний
+          скрипт <a href="https://aescripts.com/decomposetext/">DecomposeText</a>
+          <sup>*</sup>. С помощью него можно сгенерировать из одного текстового слоя сразу
+          несколько слоёв с отдельными буквами для более точной анимации текста.
+        </p>
+        <AdditionInfo>
+          <sup>*</sup>Чтобы скачать скрипт - зарегистрируйтесь на сайте{" "}
+          <a href="https://aescripts.com">aescripts</a>, вернитесь на страницу с плагином,
+          установите цену 0 в <mark className="ui">Name Your Own Price</mark>, добавьте
+          его в корзину и подтвердите заказ. Нужный плагин появится{" "}
+          <a href="https://aescripts.com/downloadable/customer/products/">
+            в вашем профиле
+          </a>{" "}
+          и вы можете его скачать абсолютно бесплатно.
+        </AdditionInfo>
+        <VideoFigure
+          styleClass="figure_windows-dark"
+          videoSrc="images/aftereffects/decomposetext.mp4"
+          caption="Разделяем текстовый слой на слова с помощью DecomposeText"
+        />
+        <AdditionWarning>
+          Скрипт не поддерживает текст, созданный как Paragraph Text. Для этого вам нужно
+          будет его сконвертировать в Point Text, выбрав инструмент Text и нажав на{" "}
+          <mark className="key">ПКМ</mark> по текстовому слою в предпросмотре. В
+          открывшемся контекстном меню нужно выбрать{" "}
+          <mark className="ui">Convert to Point Text</mark>.
+        </AdditionWarning>
+      </DetailsSummary>
       <DetailsSummary title="Как изменить параметры сразу нескольких композиций?">
-        <p>{/* fixme: rd_compsetter */}</p>
+        <p>
+          Изменить разрешение, частоту кадров или другие параметры сразу в нескольких
+          композициях стандартными способами программы не получится - вам нужно
+          воспользоваться сторонним плагином{" "}
+          <a href="https://aescripts.com/rd-compsetter/">rd: Comp Setter</a>.
+        </p>
+        <p>
+          Для этого достаточно выделить нужные вам композиции в окне{" "}
+          <mark className="ui">Project</mark>, указать нужные настройки в скрипте и нажать
+          на <mark className="ui">Apply</mark>.
+        </p>
+        <VideoFigure
+          styleClass="figure_windows-dark"
+          videoSrc="images/aftereffects/rd_compsetter_demonstration.mp4"
+          caption="Демонстрация работы rd: Comp Setter"
+        />
+        <p>Вот и всё, теперь ваши выделенные композиции приведены к общему виду.</p>
       </DetailsSummary>
-
       <DetailsSummary title="Как применить Adjustment Layer только на конкретные слои?">
-        <p>{/* fixme: через маску в red giant supercomp */}</p>
+        <p>
+          Изначально в <mark className="app">After Effects</mark> нет возможности
+          применить корректирующий слой только на определённые слои под ним. Либо надо
+          переносить по иерархии, либо городить костыли в виде масок.
+        </p>
+        <p>
+          В этом пункте мы сделаем второе. Для этого нам понадобится сторонний эффект{" "}
+          <mark className="plugin">Supercomp</mark>, поставляемый в пакете плагинов{" "}
+          <mark className="plugin">VFX Suite</mark> от Red Giant. В нём нам нужно
+          обесцветить наши слои и сделать их супер яркими, чтобы сделать из них маску.
+        </p>
+        <VideoFigure
+          styleClass="figure_windows-dark"
+          videoSrc="images/aftereffects/supercomp_demonstration.mp4"
+          caption="Демонстрация работы Supercomp для создания маски"
+        />
+        <p>
+          Если вы не хотите ставить <mark className="plugin">VFX Suite</mark>, то вы
+          можете создать маску просто создав прекомпозицию из нужных слоёв и накинуть на
+          них <mark className="plugin">Fill</mark>.
+        </p>
+        <VideoFigure
+          styleClass="figure_windows-dark"
+          videoSrc="images/aftereffects/supercomp_without_plugins.mp4"
+          caption="Демонстрация работы Supercomp для создания маски"
+        />
+        <AdditionWarning>
+          Со сложными слоями такой способ может не прокатить, экспериментируйте с умом.
+        </AdditionWarning>
       </DetailsSummary>
     </div>
   );
