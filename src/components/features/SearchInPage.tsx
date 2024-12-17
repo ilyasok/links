@@ -109,6 +109,12 @@ export const SearchInPage: React.FC = () => {
     }
   }, [isOpen]);
 
+  const decodeHtmlEntities = (text: string) => {
+    const textArea = document.createElement("textarea");
+    textArea.innerHTML = text;
+    return textArea.value;
+  };
+
   const extractDetailsData = () => {
     const details = document.querySelectorAll("details");
     const data: {title: string; content: string; id: string}[] = [];
@@ -123,7 +129,7 @@ export const SearchInPage: React.FC = () => {
       const title = summary.textContent ?? "";
 
       const content = Array.from(detail.querySelectorAll<HTMLParagraphElement>("p"))
-        .map((el) => el.textContent?.trim() ?? "")
+        .map((el) => decodeHtmlEntities(el.textContent?.trim() ?? ""))
         .filter(Boolean)
         .join("\n");
 
@@ -134,16 +140,16 @@ export const SearchInPage: React.FC = () => {
           const parentText = Array.from(el.childNodes)
             .map((node) => {
               if (node.nodeType === Node.TEXT_NODE) {
-                return node.textContent?.trim() ?? "";
+                return decodeHtmlEntities(node.textContent?.trim() ?? "");
               } else if (
                 node.nodeType === Node.ELEMENT_NODE &&
                 (node as HTMLElement).tagName !== "UL"
               ) {
                 const element = node as HTMLElement;
                 if (element.tagName === "MARK" || element.tagName === "A") {
-                  return element.innerHTML?.trim() ?? "";
+                  return decodeHtmlEntities(element.innerHTML?.trim() ?? "");
                 }
-                return element.textContent?.trim() ?? "";
+                return decodeHtmlEntities(element.textContent?.trim() ?? "");
               }
               return "";
             })
@@ -160,13 +166,13 @@ export const SearchInPage: React.FC = () => {
               const text = Array.from(child.childNodes)
                 .map((node) => {
                   if (node.nodeType === Node.TEXT_NODE) {
-                    return node.textContent?.trim() ?? "";
+                    return decodeHtmlEntities(node.textContent?.trim() ?? "");
                   } else if (node.nodeType === Node.ELEMENT_NODE) {
                     const element = node as HTMLElement;
                     if (element.tagName === "MARK" || element.tagName === "A") {
-                      return element.innerHTML?.trim() ?? "";
+                      return decodeHtmlEntities(element.innerHTML?.trim() ?? "");
                     }
-                    return element.textContent?.trim() ?? "";
+                    return decodeHtmlEntities(element.textContent?.trim() ?? "");
                   }
                   return "";
                 })
