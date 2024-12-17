@@ -1,4 +1,5 @@
 import {message} from "antd";
+
 const copyToClipboard = (event?: MouseEvent) => {
   if (!event || !event.target) {
     return;
@@ -7,7 +8,10 @@ const copyToClipboard = (event?: MouseEvent) => {
   if (elementToCopy.tagName === "MARK" && !elementToCopy.classList.length) {
     return;
   }
-  const textContent = elementToCopy.textContent ?? "";
+  const textContent = elementToCopy.innerHTML
+    .replace(/<br\s*\/?>/gi, "\n")
+    .replace(/<\/?[^>]+(>|$)/g, "");
+
   if (navigator.clipboard) {
     navigator.clipboard
       .writeText(textContent)
@@ -40,6 +44,7 @@ const copyToClipboard = (event?: MouseEvent) => {
     document.body.removeChild(textArea);
   }
 };
+
 const enableAutoCopy = () => {
   document.addEventListener("click", (event) => {
     if (
@@ -50,4 +55,5 @@ const enableAutoCopy = () => {
     }
   });
 };
+
 export default {copyToClipboard, enableAutoCopy};
