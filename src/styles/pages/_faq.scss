@@ -150,13 +150,17 @@
       font-weight: 700;
       text-decoration: underline;
 
-      ы &:hover {
+      &:hover {
         opacity: 0.5;
       }
 
       &:visited {
         filter: saturate(0.5);
       }
+    }
+
+    ul {
+      margin-block: 10px;
     }
 
     li {
@@ -187,9 +191,12 @@
 
     code {
       display: block;
+      transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+      margin: 10px;
       margin-block: 10px;
+      border: 1px solid hsl(225, 20%, 20%);
       border-radius: $roundness;
-      background-color: #303030;
+      background-color: hsl(225, 15%, 13%);
       padding: 10px 15px;
       color: #ffffff;
       font-weight: 400;
@@ -197,6 +204,15 @@
       line-height: 1.25;
       font-family: "JetBrains Mono", monospace;
       user-select: text;
+
+      &:hover {
+        opacity: 0.75;
+        cursor: pointer;
+      }
+
+      &:active {
+        opacity: 0.5;
+      }
     }
 
     mark {
@@ -216,13 +232,17 @@
       &.app,
       &.ui,
       &.path,
-      &.code,
+      &.copy,
       &.tag {
         transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 
         &:hover {
           opacity: 0.75;
           cursor: pointer;
+        }
+
+        &:active {
+          opacity: 0.5;
         }
 
         &::before {
