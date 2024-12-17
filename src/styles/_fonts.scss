@@ -328,3 +328,11 @@
   font-weight: 700;
   font-style: normal;
 }
+
+// *: static Segoe UI
+@font-face {
+  font-family: "Segoe UI";
+  src: url("/src/fonts/ttf/SegoeUI/Segoe UI.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
