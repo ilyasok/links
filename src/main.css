@@ -1151,6 +1151,7 @@ textarea {
 }
 .figure_windows-light img,
 .figure_windows-light video {
+  cursor: pointer;
   outline: 1px solid hsl(0, 0%, 93%);
   box-shadow: 0 5 10px 0 hsl(0, 0%, 80%);
 }
@@ -1163,6 +1164,7 @@ textarea {
 }
 .figure_windows-dark img,
 .figure_windows-dark video {
+  cursor: pointer;
   outline: 1px solid hsl(0, 0%, 15%);
   box-shadow: 0 5 10px 0 hsl(0, 0%, 20%);
 }
@@ -1235,21 +1237,25 @@ textarea {
   background: hsl(5, 100%, 65%);
 }
 .figure_macos-light {
-  background-color: #eeeeee;
+  box-shadow: inset 0 0 50px 0 hsl(0, 0%, 85%);
+  background: hsl(0, 0%, 95%);
   color: hsl(0, 0%, 20%);
 }
 .figure_macos-light img,
 .figure_macos-light video {
-  outline: 1px solid hsl(0, 0%, 93%);
+  cursor: pointer;
+  outline: 1px solid hsl(0, 0%, 90%);
   box-shadow: 0 5 10px 0 hsl(0, 0%, 80%);
 }
 .figure_macos-dark {
-  background-color: #303030;
+  box-shadow: inset 0 0 50px 0 hsl(0, 0%, 25%);
+  background-image: linear-gradient(to bottom, hsl(0, 0%, 15%), hsl(0, 0%, 5%));
   color: hsl(0, 0%, 80%);
 }
 .figure_macos-dark img,
 .figure_macos-dark video {
-  outline: 1px solid hsl(0, 0%, 15%);
+  cursor: pointer;
+  outline: 1px solid hsl(0, 0%, 25%);
   box-shadow: 0 5 10px 0 hsl(0, 0%, 20%);
 }
 
@@ -1277,6 +1283,87 @@ img {
   max-height: 70vh;
 }
 
+.fullscreen-overlay {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  z-index: 1000;
+  animation: fadeIn 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+}
+.fullscreen-overlay.closing {
+  animation: fadeOut 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.fullscreen-content {
+  position: relative;
+  transform: scale(0.75);
+  transform-origin: center center;
+  opacity: 0;
+  animation: scaleUp 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+  max-width: 95vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-height: 90vh;
+  overflow: hidden;
+}
+.fullscreen-content.closing {
+  animation: scaleDown 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+}
+.fullscreen-content img {
+  max-width: 100%;
+  max-height: calc(90vh - 40px);
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+.fullscreen-content .window-header {
+  position: sticky;
+  top: 0;
+  z-index: 1001;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.75);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes scaleDown {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.75);
+    opacity: 0;
+  }
+}
 .header {
   display: flex;
   position: fixed;
