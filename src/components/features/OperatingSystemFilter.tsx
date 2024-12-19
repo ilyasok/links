@@ -36,16 +36,7 @@ const ContentSwitcher: React.FC<ContentSwitcherProps> = ({
 
   return (
     <div>
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          opacity: 0.8,
-          filter: "saturate(0%) brightness(1.1)",
-        }}
-        className="addition-info"
-      >
+      <div className="change_os">
         {isWindows ? (
           <div style={{display: "flex", gap: "10px", alignItems: "center"}}>
             <WindowSharp />
@@ -69,10 +60,7 @@ const ContentSwitcher: React.FC<ContentSwitcherProps> = ({
             </div>
           </div>
         )}
-        <button
-          className="change_os"
-          onClick={toggleContent}
-        >
+        <button onClick={toggleContent}>
           {isWindows ? "Показать для macOS" : "Показать для Windows"}
         </button>
       </div>
