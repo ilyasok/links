@@ -45,7 +45,7 @@ const Header: React.FC<{title: string}> = ({title}) => {
         )}
         <div className="logo">
           {title}
-          <sub>pre-release</sub>
+          <sub>@aechat</sub>
         </div>
       </div>
       <div className="header-right">
