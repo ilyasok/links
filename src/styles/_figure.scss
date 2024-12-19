@@ -307,16 +307,18 @@ img {
   transform-origin: center center;
   opacity: 0;
   animation: scaleUp 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+  width: 100%;
   max-width: 95vw;
   height: fit-content;
-  max-height: 90vh;
+  max-height: 95vh;
   overflow: hidden;
 
   &.closing {
     animation: scaleDown 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
   }
 
-  img {
+  img,
+  video {
     max-width: 100%;
     max-height: calc(90vh - 40px);
     object-fit: contain;
