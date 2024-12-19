@@ -97,6 +97,16 @@
       &-correct,
       &-incorrect {
         max-width: 450px;
+        border-radius: $roundness;
+        padding-bottom: 10px;
+      }
+      &-incorrect {
+        background: hsla(0, 100, 50, 0.1);
+        border: 1px solid hsla(0, 100, 50, 0.25);
+      }
+      &-correct {
+        background: hsla(120, 100, 50, 0.1);
+        border: 1px solid hsla(120, 100, 50, 0.25);
       }
 
       &-flex {

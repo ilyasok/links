@@ -704,6 +704,16 @@ textarea {
 }
 .faq-content .message-correct, .faq-content .message-incorrect {
   max-width: 450px;
+  border-radius: 10px;
+  padding-bottom: 10px;
+}
+.faq-content .message-incorrect {
+  background: hsla(0, 100%, 50%, 0.1);
+  border: 1px solid hsla(0, 100%, 50%, 0.25);
+}
+.faq-content .message-correct {
+  background: hsla(120, 100%, 50%, 0.1);
+  border: 1px solid hsla(120, 100%, 50%, 0.25);
 }
 .faq-content .message-flex {
   display: flex;
