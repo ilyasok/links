@@ -954,6 +954,9 @@ textarea {
 .addition-info li:not(:last-child), .addition-warning li:not(:last-child), .addition-danger li:not(:last-child) {
   border-bottom: none;
 }
+.addition-info li::before, .addition-warning li::before, .addition-danger li::before {
+  display: none;
+}
 .addition-info {
   outline: 1px solid var(--addition_info-border);
   background-color: var(--addition_info);

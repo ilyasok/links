@@ -42,6 +42,10 @@
       &:not(:last-child) {
         border-bottom: none;
       }
+
+      &::before {
+        display: none;
+      }
     }
   }
 
