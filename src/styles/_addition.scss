@@ -42,10 +42,6 @@
       &:not(:last-child) {
         border-bottom: none;
       }
-
-      &::before {
-        display: none;
-      }
     }
   }
 
@@ -73,6 +69,10 @@
       border: 1px solid var(--addition_info-border);
       background-color: var(--addition_info-mark);
       color: var(--addition_info-text);
+
+      &::before {
+        background-color: var(--addition_info-text) !important;
+      }
     }
   }
 
@@ -89,6 +89,10 @@
       border: 1px solid var(--addition_warning-border);
       background-color: var(--addition_warning-mark);
       color: var(--addition_warning-text);
+
+      &::before {
+        background-color: var(--addition_warning-text) !important;
+      }
     }
   }
 
@@ -105,6 +109,10 @@
       border: 1px solid var(--addition_danger-border);
       background-color: var(--addition_danger-mark);
       color: var(--addition_danger-text);
+
+      &::before {
+        background-color: var(--addition_danger-text) !important;
+      }
     }
   }
 }
