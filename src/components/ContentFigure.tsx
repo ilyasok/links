@@ -34,10 +34,10 @@ const ImageFigure: React.FC<ImageFigureProps> = ({
     setTimeout(() => {
       setIsFullscreen(false);
       setIsClosing(false);
-    }, 500);
+    });
   }, []);
 
-  const handleDoubleClick = useCallback(() => {
+  const handleClick = useCallback(() => {
     if (isFullscreen) {
       handleClose();
     } else {
@@ -71,7 +71,7 @@ const ImageFigure: React.FC<ImageFigureProps> = ({
   }, [isFullscreen, handleClose]);
 
   const content = isWindowsStyle ? (
-    <div onDoubleClick={handleDoubleClick}>
+    <div onClick={handleClick}>
       <div className="window-header">
         <figcaption>{caption}</figcaption>
         <div className="window-controls">
@@ -134,7 +134,7 @@ const ImageFigure: React.FC<ImageFigureProps> = ({
       />
     </div>
   ) : (
-    <div onDoubleClick={handleDoubleClick}>
+    <div onClick={handleClick}>
       <div className="window-header">
         <div className="window-controls">
           <button
@@ -199,10 +199,10 @@ const VideoFigure: React.FC<VideoFigureProps> = ({styleClass, videoSrc, caption}
     setTimeout(() => {
       setIsFullscreen(false);
       setIsClosing(false);
-    }, 500);
+    });
   }, []);
 
-  const handleDoubleClick = useCallback(() => {
+  const handleClick = useCallback(() => {
     if (isFullscreen) {
       handleClose();
     } else {
@@ -236,7 +236,7 @@ const VideoFigure: React.FC<VideoFigureProps> = ({styleClass, videoSrc, caption}
   }, [isFullscreen, handleClose]);
 
   const content = isWindowsStyle ? (
-    <div onDoubleClick={handleDoubleClick}>
+    <div onClick={handleClick}>
       <div className="window-header">
         <figcaption>{caption}</figcaption>
         <div className="window-controls">
@@ -302,7 +302,7 @@ const VideoFigure: React.FC<VideoFigureProps> = ({styleClass, videoSrc, caption}
       </video>
     </div>
   ) : (
-    <div onDoubleClick={handleDoubleClick}>
+    <div onClick={handleClick}>
       <div className="window-header">
         <div className="window-controls">
           <button
