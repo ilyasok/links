@@ -23,8 +23,9 @@
   &-results {
     max-height: 70vh;
     overflow-y: auto;
-    scrollbar-width: none;
-
+    scrollbar-color: var(--accent) var(--content-background-color);
+    scrollbar-width: thin;
+    
     &::before {
       position: absolute;
       bottom: 20px;
