@@ -71,8 +71,11 @@ const ImageFigure: React.FC<ImageFigureProps> = ({
   }, [isFullscreen, handleClose]);
 
   const content = isWindowsStyle ? (
-    <div onClick={handleClick}>
-      <div className="window-header">
+    <div>
+      <div
+        onDoubleClick={handleClick}
+        className="window-header"
+      >
         <figcaption>{caption}</figcaption>
         <div className="window-controls">
           <button
@@ -129,13 +132,17 @@ const ImageFigure: React.FC<ImageFigureProps> = ({
         </div>
       </div>
       <img
+        onClick={handleClick}
         src={imgSrc}
         alt={imgTitle}
       />
     </div>
   ) : (
-    <div onClick={handleClick}>
-      <div className="window-header">
+    <div>
+      <div
+        onDoubleClick={handleClick}
+        className="window-header"
+      >
         <div className="window-controls">
           <button
             className="close"
@@ -156,6 +163,7 @@ const ImageFigure: React.FC<ImageFigureProps> = ({
         <figcaption>{caption}</figcaption>
       </div>
       <img
+        onClick={handleClick}
         src={imgSrc}
         alt={imgTitle}
       />
@@ -236,8 +244,11 @@ const VideoFigure: React.FC<VideoFigureProps> = ({styleClass, videoSrc, caption}
   }, [isFullscreen, handleClose]);
 
   const content = isWindowsStyle ? (
-    <div onClick={handleClick}>
-      <div className="window-header">
+    <div>
+      <div
+        onDoubleClick={handleClick}
+        className="window-header"
+      >
         <figcaption>{caption}</figcaption>
         <div className="window-controls">
           <button
@@ -294,6 +305,7 @@ const VideoFigure: React.FC<VideoFigureProps> = ({styleClass, videoSrc, caption}
         </div>
       </div>
       <video
+        onClick={handleClick}
         controls
         loop
         preload="metadata"
@@ -302,8 +314,11 @@ const VideoFigure: React.FC<VideoFigureProps> = ({styleClass, videoSrc, caption}
       </video>
     </div>
   ) : (
-    <div onClick={handleClick}>
-      <div className="window-header">
+    <div>
+      <div
+        onDoubleClick={handleClick}
+        className="window-header"
+      >
         <div className="window-controls">
           <button
             className="close"
@@ -324,6 +339,7 @@ const VideoFigure: React.FC<VideoFigureProps> = ({styleClass, videoSrc, caption}
         <figcaption>{caption}</figcaption>
       </div>
       <video
+        onClick={handleClick}
         controls
         loop
         preload="metadata"
