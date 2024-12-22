@@ -49,12 +49,12 @@ const SupportDonut: React.FC = () => {
         footer={null}
       >
         <p className="support-modal-text">
-          Если вам понравился этот сайт и вы хотели бы, чтобы я продолжал развивать его,
+          Если вам понравился этот сайт и вы хотели бы, чтобы я продолжил развивать его,
           то вы можете поддержать меня любой суммой и любым удобным вам способом.
         </p>
         <div style={{display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px"}}>
           <motion.button
-            className="support-button"
+            className="support-button support-button-sber"
             onClick={() => setIsModalOpen3(true)}
             whileHover={{
               scale: 1.075,
@@ -96,7 +96,7 @@ const SupportDonut: React.FC = () => {
             </p>
           </Modal>
           <motion.button
-            className="support-button"
+            className="support-button support-button-yoomoney"
             onClick={() => setIsModalOpen4(true)}
             whileHover={{
               scale: 1.075,
@@ -171,7 +171,10 @@ const SupportDonut: React.FC = () => {
         onCancel={handleCancel2}
         footer={null}
       >
-        <div>123</div>
+        <div>
+          Модуль &quot;поделиться&quot; пока ещё не разработан
+          {/* fixme: сделать */}
+        </div>
       </Modal>
     </>
   );

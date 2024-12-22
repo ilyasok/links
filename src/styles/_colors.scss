@@ -60,6 +60,15 @@ $dark: (
   content-background-color: hsl(0, 0%, 7.5%),
   content-background-border: hsl(0, 0%, 15%),
   header_background: hsla(0, 0%, 7.5%, 0.75),
+  // ~: банковские цвета:
+  sber-background: hsl(148, 75%, 10%),
+  sber-text: hsl(148, 50%, 85%),
+  sber-hover: hsl(148, 50%, 20%),
+  sber-border: hsl(148, 90%, 50%),
+  yoomoney-background: hsl(257, 50%, 15%),
+  yoomoney-text: hsl(257, 50%, 90%),
+  yoomoney-hover: hsl(257, 50%, 20%),
+  yoomoney-border: hsl(257, 90%, 50%),
   // ~: с применением акцентного цвета:
   accent: hsl(var(--accent-hue), 100%, 70%),
   mark_background: hsl(var(--accent-hue), 25%, 27%),

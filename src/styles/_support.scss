@@ -36,6 +36,31 @@
     border-radius: $roundness;
     padding: 10px;
     font-size: 13px;
+    font-weight: 700;
+
+    &-sber {
+      font-size: 17px;
+      border: solid 1px var(--sber-border);
+      background-color: var(--sber-background);
+      color: var(--sber-text);
+      text-align: center;
+
+      &:hover {
+        background-color: var(--sber-hover);
+      }
+    }
+
+    &-yoomoney {
+      font-size: 17px;
+      border: solid 1px var(--yoomoney-border);
+      background-color: var(--yoomoney-background);
+      color: var(--yoomoney-text);
+      text-align: center;
+
+      &:hover {
+        background-color: var(--yoomoney-hover);
+      }
+    }
 
     &-donut {
       border: 1px solid hsl(45, 90%, 75%);
