@@ -43,3 +43,4 @@ tsconfig.json
 tsconfig.node.json
 dist
 .vs
+src/main.css
