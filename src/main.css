@@ -831,17 +831,17 @@ textarea {
   padding: 0 4px;
   color: var(--mark_text);
 }
-.faq-content mark.file, .faq-content mark.key, .faq-content mark.plugin, .faq-content mark.app, .faq-content mark.ui, .faq-content mark.path, .faq-content mark.copy, .faq-content mark.tag {
+.faq-content mark.file, .faq-content mark.key, .faq-content mark.plugin, .faq-content mark.app, .faq-content mark.ui, .faq-content mark.path, .faq-content mark.copy, .faq-content mark.tag, .faq-content mark.video, .faq-content mark.image {
   transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-.faq-content mark.file:hover, .faq-content mark.key:hover, .faq-content mark.plugin:hover, .faq-content mark.app:hover, .faq-content mark.ui:hover, .faq-content mark.path:hover, .faq-content mark.copy:hover, .faq-content mark.tag:hover {
+.faq-content mark.file:hover, .faq-content mark.key:hover, .faq-content mark.plugin:hover, .faq-content mark.app:hover, .faq-content mark.ui:hover, .faq-content mark.path:hover, .faq-content mark.copy:hover, .faq-content mark.tag:hover, .faq-content mark.video:hover, .faq-content mark.image:hover {
   opacity: 0.75;
   cursor: pointer;
 }
-.faq-content mark.file:active, .faq-content mark.key:active, .faq-content mark.plugin:active, .faq-content mark.app:active, .faq-content mark.ui:active, .faq-content mark.path:active, .faq-content mark.copy:active, .faq-content mark.tag:active {
+.faq-content mark.file:active, .faq-content mark.key:active, .faq-content mark.plugin:active, .faq-content mark.app:active, .faq-content mark.ui:active, .faq-content mark.path:active, .faq-content mark.copy:active, .faq-content mark.tag:active, .faq-content mark.video:active, .faq-content mark.image:active {
   opacity: 0.5;
 }
-.faq-content mark.file::before, .faq-content mark.key::before, .faq-content mark.plugin::before, .faq-content mark.app::before, .faq-content mark.ui::before, .faq-content mark.path::before, .faq-content mark.copy::before, .faq-content mark.tag::before {
+.faq-content mark.file::before, .faq-content mark.key::before, .faq-content mark.plugin::before, .faq-content mark.app::before, .faq-content mark.ui::before, .faq-content mark.path::before, .faq-content mark.copy::before, .faq-content mark.tag::before, .faq-content mark.video::before, .faq-content mark.image::before {
   display: inline-block;
   vertical-align: text-bottom;
   margin-block: auto;
