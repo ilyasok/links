@@ -13,7 +13,7 @@
 
 На карту **Сбербанк**: `2202202357342488`
 
-На элекронный кошелёк **ЮМани**: `410016763684808`
+На электронный кошелёк **ЮМани**: `410016763684808`
 
 ## Документация по написанию секций в \*\*faq
 
@@ -87,13 +87,16 @@ import DetailsSummary from "../../../components/DetailsSummary";
 
 Классы для `mark`:
 
+- Иконка файла: `className="file"`
+- Иконка кнопки: `className="key"`
 - Иконка плагина: `className="plugin"`
 - Иконка программы: `className="app"`
-- Иконка файла: `className="file"`
-- Иконка видеофайла: `className="video"`
-- Иконка изображения: `className="photo"`
+- Иконка пути до файла: `className="path"`
 - Иконка копирования текста: `className="copy"`
 - Иконка кнопки интерфейса: `className="ui"`
+- Иконка метки или же тега: `className="tag"`
+- Иконка видеофайла: `className="video"`
+- Иконка изображения: `className="image"`
 
 ```typescript
 import DetailsSummary from "../../../components/DetailsSummary";
