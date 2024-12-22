@@ -1,1 +1,0 @@
-import{j as t}from"./index-woC0TEBz.js";import{G as e}from"./GithubUpdateInfo-BZGFst-4.js";const r=()=>t.jsx("div",{className:"faq-content",id:"interface",children:t.jsx(e,{filePath:"src/pages/sections/psfaq/Interface.tsx"})});export{r as default};
