@@ -129,7 +129,7 @@ const PRFaQ = () => {
               </div>
               <SupportDonut />
               <AdditionDanger>
-                На данный момент не все секции пересены. Если вам нужен доступ к старой
+                На данный момент не все секции перенесены. Если вам нужен доступ к старой
                 версии сайта, перейдите на{" "}
                 <a href="legacy/prfaq.html">aechat.ru/legacy/prfaq</a>.
               </AdditionDanger>
