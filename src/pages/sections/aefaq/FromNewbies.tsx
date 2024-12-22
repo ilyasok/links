@@ -832,7 +832,26 @@ const AEFromNewbies: React.FC = () => {
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Что такое Null Object и как с ним работать?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>
+          <mark>Нулевой слой</mark> или же <mark>Null Object</mark> - это невидимый
+          манипулятор для объектов, слоёв или параметров эффекта. Он часто применяется для
+          создания &quot;рига&quot;, то есть для создания зависимости между управляющими и
+          управляемыми элементами.
+        </p>
+        <p>
+          К нулевому объекту можно прилинковать сразу несколько слоёв, например, для их
+          вращения по определённой оси. Для этого можно воспользоваться лассо в столбце{" "}
+          <mark className="ui">Parent & Link</mark>.
+        </p>
+        <AdditionInfo>
+          Если вы скрыли отображение столбца на таймлайне, нажмите{" "}
+          <mark className="key">F4</mark> или <mark className="key">ПКМ</mark> по
+          столбцам, и выбрать <mark className="ui">Coluumns &gt; Parent & Link</mark>.
+        </AdditionInfo>
+        <YouTubeVideo
+          link="8ei_cj6A2Gg"
+          caption="Тебе НУЖНО использовать нулевые слои в After Effects"
+        />
       </DetailsSummary>
       <DetailsSummary title="Что такое Adjustment Layer и для чего он нужен?">
         <p>{/* fixme: написать!! */}</p>
