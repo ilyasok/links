@@ -34,7 +34,9 @@
   filter: drop-shadow(0px 10px 25px var(--header_shadow));
   max-width: 800px;
   opacity: 0;
-  transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), visibility 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition:
+    opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1),
+    visibility 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   visibility: hidden;
 
   a {
@@ -119,7 +121,8 @@
   backdrop-filter: blur(25px) saturate(50%);
   filter: drop-shadow(0px 10px 25px var(--header_shadow));
   opacity: 0;
-  transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1),
+  transition:
+    opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1),
     visibility 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   visibility: hidden;
 

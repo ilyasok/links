@@ -30,12 +30,12 @@
       opacity: 75%;
     }
   }
-.category_list{
-  font-weight: 700;
-  font-size: 20px;
-  color: var(--primary);
-  text-align: center;
-}
+  .category_list {
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--primary);
+    text-align: center;
+  }
   a.weblink {
     &:before {
       content: "travel_explore";
@@ -47,8 +47,6 @@
       content: "videocam";
     }
   }
-
-
 
   summary {
     border: solid 2px var(--primary_transparent);
@@ -95,7 +93,6 @@
   video {
     height: fit-content !important;
   }
-
 
   code {
     display: block;
@@ -159,8 +156,6 @@
       border-bottom-right-radius: 15px;
     }
   }
-
-
 
   mark {
     background-color: var(--mark_background);
@@ -234,7 +229,6 @@
   }
 
   mark.file {
-
     &:before {
       content: "file_present";
       color: var(--primary);
@@ -262,7 +256,6 @@
   }
 
   mark.ui {
-
     &:before {
       content: "touch_app";
       color: var(--primary);
