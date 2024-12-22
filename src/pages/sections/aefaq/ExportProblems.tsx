@@ -92,7 +92,26 @@ const AEExportProblems: React.FC = () => {
           <mark className="ui">Square Pixel</mark> в разделе{" "}
           <mark className="ui">Pixel Aspect Ratio</mark>.
         </p>
-        {/* todo: приложить изображение, дописать про вывод для телевидения из афтера */}
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/aftereffects/change_pixel_aspect_ratio.png"
+          imgTitle="Изменение соотношения пикселей"
+          caption="Composition Settings"
+        />
+        <p>
+          Если вы хотите использовать неквадратный пиксель для композиции, которую
+          собираетесь выгнать под формат для телевидения, то лучше включите коррекцию
+          предпросмотра под размер пикселя, включив пункт{" "}
+          <mark className="ui">Pixel Aspect Ration Correction</mark>. Это позволит
+          отобразить предпросмотр корректно, как задумано в настройках соотношения пикселя
+          в композиции и не столкнуться с неожиданными результатами после вывода.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/aftereffects/enable_pixel_ratio_correction.png"
+          imgTitle="Включение коррекции предпросмотра под размер пикселя"
+          caption="Composition"
+        />
       </DetailsSummary>
       <DetailsSummary title="Почему композиция с Element 3D экспортируется с мерцаниями?">
         <p>
