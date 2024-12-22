@@ -1,7 +1,7 @@
 import React, {lazy, Suspense, useEffect, useState} from "react";
 import {Breadcrumb, Divider} from "antd";
 import {Link} from "react-router-dom";
-import {AdditionWarning} from "../components/Additions";
+import {AdditionDanger, AdditionWarning} from "../components/Additions";
 import Header from "../components/Header";
 import {motion} from "framer-motion";
 import Footer from "../components/Footer";
@@ -127,6 +127,11 @@ const PSFaQ = () => {
                 />
               </div>
               <SupportDonut />
+              <AdditionDanger>
+                На данный момент не все секции пересены. Если вам нужен доступ к старой
+                версии сайта, перейдите на{" "}
+                <a href="legacy/psfaq.html">aechat.ru/legacy/psfaq</a>.
+              </AdditionDanger>
               <AdditionWarning>
                 Данный раздел находится в разработке и иногда обновляется, поэтому могут
                 быть неточности в действиях, выводах и тексте. Мнение автора и мнение

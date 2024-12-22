@@ -6,7 +6,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import {Helmet} from "react-helmet-async";
 import {SearchInPage, SearchProvider} from "../components/features/SearchInPage";
-import {AdditionWarning} from "../components/Additions";
+import {AdditionDanger, AdditionWarning} from "../components/Additions";
 import SupportDonut from "../components/modal/SupportDonut";
 import CopyMark from "../components/features/CopyMark";
 import {CircularProgress} from "@mui/material";
@@ -128,6 +128,11 @@ const PRFaQ = () => {
                 />
               </div>
               <SupportDonut />
+              <AdditionDanger>
+                На данный момент не все секции пересены. Если вам нужен доступ к старой
+                версии сайта, перейдите на{" "}
+                <a href="legacy/prfaq.html">aechat.ru/legacy/prfaq</a>.
+              </AdditionDanger>
               <AdditionWarning>
                 Данный раздел находится в разработке и иногда обновляется, поэтому могут
                 быть неточности в действиях, выводах и тексте. Мнение автора и мнение
