@@ -1,0 +1,1 @@
+import{j as s}from"./index-woC0TEBz.js";import{G as t}from"./GithubUpdateInfo-BZGFst-4.js";const l=()=>s.jsx("div",{className:"faq-content",id:"install-problems",children:s.jsx(t,{filePath:"src/pages/sections/psfaq/InstallProblems.tsx"})});export{l as default};
