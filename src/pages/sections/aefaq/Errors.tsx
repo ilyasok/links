@@ -856,7 +856,7 @@ const AEErrors: React.FC = () => {
           Иногда многие спрашивают, что за эффекты с приставкой <mark>S_</mark> и{" "}
           <mark>BCC</mark>? Эффекты с такой приставкой поставляются компанией{" "}
           <mark>BorisFX</mark> в пакетах <mark className="plugin">Sapphire</mark> и{" "}
-          <mark className="plugin">Continuum</mark>. Большинство плагинов
+          <mark className="plugin">Continuum</mark>.
         </AdditionInfo>
       </DetailsSummary>
       <DetailsSummary title="After Effects warning: The following plugins have failed to load. Please reinstall these plugins">
