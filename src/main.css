@@ -572,7 +572,7 @@ textarea {
 @font-face {
   font-style: normal;
   font-weight: 400;
-  src: url("/src/fonts/ttf/SegoeUI/Segoe UI.ttf") format("truetype");
+  src: url("/src/fonts/ttf/Segoe UI/Segoe UI.ttf") format("truetype");
   font-family: "Segoe UI";
 }
 .links {
