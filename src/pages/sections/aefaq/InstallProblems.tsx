@@ -803,7 +803,7 @@ const AEInstallProblems: React.FC = () => {
       <DetailsSummary title="Не доверяю Кролику, Монкрусу и впринципе всем репакам, но установить программы от Adobe хочу. Какие есть ещё варианты?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
-      <DetailsSummary title="Установил After Effects и Media Encoder, но они не видят друг друга и не подключатся. Как это исправить?">
+      <DetailsSummary title="Установил After Effects и Media Encoder, но они не видят друг друга и не подключаются. Как это исправить?">
         <p>
           Функция Dynamic Link позволяет синхронизировать композиции из{" "}
           <mark className="app">After Effects</mark> и очередь рендера в{" "}
@@ -870,9 +870,6 @@ const AEInstallProblems: React.FC = () => {
           <mark className="file">.exe</mark>, <mark className="file">.msi</mark> и
           подобных установочных файлов.
         </p>
-      </DetailsSummary>
-      <DetailsSummary title="Установил плагин с помощью установщика, а я его не вижу в After Effects">
-        <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Установил плагин, но при его применении вылазают красные кресты или надписи про отсутствие лицензии">
         <p>{/* fixme: написать!! */}</p>
