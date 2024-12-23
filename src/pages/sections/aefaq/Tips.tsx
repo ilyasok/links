@@ -7,7 +7,7 @@ import {
   AdditionWarning,
 } from "../../../components/Additions";
 import ContentSwitcher from "../../../components/features/OperatingSystemFilter";
-import {YouTubeVideo} from "../../../components/ContentFigure";
+import {VideoFigure, YouTubeVideo} from "../../../components/ContentFigure";
 import {FlexibleLinks} from "../../../components/FlexibleLinksFaQ";
 
 const AETips: React.FC = () => {
@@ -278,7 +278,47 @@ const AETips: React.FC = () => {
         </p>
       </DetailsSummary>
       <DetailsSummary title="Как мне закэшировать композиции так, чтобы я в финальном рендере их заново не просчитывал?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>
+          В <mark className="app">After Effects</mark> можно создавать прокси для
+          композиций, чтобы не пересчитывать сложные композиции заново, если вы не
+          планируете его дальше редактировать. Бывает очень полезно, когда из-за сложных
+          композиций вы сталкиваетесь с трудностями при экспорте.
+        </p>
+        <p>
+          Для создания прокси нужно перейти в окно <mark className="ui">Project</mark>,
+          выбрать композицию с которым вы испытываете проблемы, нажать{" "}
+          <mark className="key">ПКМ</mark> и выбрать{" "}
+          <mark className="ui">Create Proxy &gt; Movie</mark>. После нажатия вам отправят
+          в очередь экспорта. Далее в нём нужно открыть пункт{" "}
+          <mark className="ui">Render Settings &gt; Custom</mark> и поставить везде
+          наивысшие настройки (или выбрать пресет{" "}
+          <mark className="ui">Best Settings</mark>), чтобы после создания прокси ничего
+          не пропало и не ухудшилось. Если прокси автоматически не установилось для
+          композиции - сделайте это вручную через{" "}
+          <mark className="ui">Set Proxy &gt; File</mark>.
+        </p>
+        <VideoFigure
+          styleClass="figure_windows-dark"
+          videoSrc="images/aftereffects/create_comp_proxy.mp4"
+          caption="Создание прокси для композиций"
+        />
+        <AdditionInfo>
+          Для создания прокси лучше указать формат QuickTime в кодеке{" "}
+          <mark className="file">Apple Prores 422</mark> или{" "}
+          <mark className="file">Apple Prores 4444</mark>, если композиция содержит
+          альфа-канал.
+        </AdditionInfo>
+        <p>
+          В финальном экспорте не забудьте указать{" "}
+          <mark className="ui">Use All Proxies</mark> в{" "}
+          <mark className="ui">Render Settings</mark>. После этого попробуйте
+          экспортировать композицию заново с использованием прокси.
+        </p>
+        <VideoFigure
+          styleClass="figure_windows-dark"
+          videoSrc="images/aftereffects/use_all_proxies.mp4"
+          caption="Настройка использования прокси в финальном рендере"
+        />
       </DetailsSummary>
       <DetailsSummary title="Какой компьютер или ноутбук стоит взять для работы в After Effects?">
         <AdditionInfo>
