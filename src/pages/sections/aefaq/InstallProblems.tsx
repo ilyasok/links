@@ -320,7 +320,6 @@ const AEInstallProblems: React.FC = () => {
       </DetailsSummary>
       <DetailsSummary title="В Telegram-записи лежат файлы .part1, .part2 и дальше по списку. Что это такое и как такие файлы корректно распаковать?">
         <p>
-          {/* fixme: дописать до конца */}
           Данные файлы с пометкой <mark>.part1</mark>, <mark>.part2</mark> и далее по
           списку - это лишь части одного и того же архива. Архивы поделены на 2 или на 4
           Гб из-за ограничений Telegram на размер загружаемых файлов. Чтобы корректно
@@ -361,10 +360,7 @@ const AEInstallProblems: React.FC = () => {
                 и начать распаковку, например с помощью <mark>drag&apos;n&apos;drop</mark>{" "}
                 в нужное место или кнопки <mark className="ui">Распаковать</mark>.
               </p>
-              <YouTubeVideo
-                link="z7n6fUMYX9Y"
-                caption="WinRAR"
-              />
+              {/* todo: добавить видео по распаковке многотомных архивов через винрар */}
             </div>
           }
           macContent={
@@ -389,10 +385,10 @@ const AEInstallProblems: React.FC = () => {
               </p>
               <div
                 style={{
-                  display: "grid",
-                  gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-                  gap: "10px",
+                  display: "flex",
+                  flexDirection: "row",
                   justifyContent: "center",
+                  flexWrap: "wrap",
                   alignItems: "center",
                 }}
               >
