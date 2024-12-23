@@ -158,9 +158,15 @@ const AETips: React.FC = () => {
           работу за счёт автоматизации рутинных задач. Вот мой личный топ плагинов,
           которые я ставлю при каждой установке.
         </p>
-        <p style={{fontWeight: "bold"}}>
-          Для совместимости с чужими проектами и не только я ставлю:
-        </p>
+        <div
+          style={{
+            textAlign: "center",
+            fontWeight: "bold",
+            color: "var(--accent)",
+          }}
+        >
+          Для совместимости с чужими проектами
+        </div>
         <ul>
           <li>
             <mark className="plugin">BorisFX Sapphire</mark> и{" "}
@@ -192,7 +198,15 @@ const AETips: React.FC = () => {
             замените его на более простые решения.
           </li>
         </ul>
-        <p style={{fontWeight: "bold"}}>Из инструментов можно поставить:</p>
+        <div
+          style={{
+            textAlign: "center",
+            fontWeight: "bold",
+            color: "var(--accent)",
+          }}
+        >
+          Полезные инструменты
+        </div>
         <ul>
           <li>
             <mark className="plugin">FXConsole от VideoCopilot</mark> - всплывающая
