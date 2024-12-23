@@ -17,7 +17,6 @@ const AEFromNewbies: React.FC = () => {
     >
       <GithubUpdateInfo filePath="src/pages/sections/aefaq/FromNewbies.tsx" />
       <DetailsSummary title="Первый раз установил After Effects, с чего бы мне начать обучение?">
-        {/* fixme: больше курсов: по типу вольницы, видеосмайлов, Панковского и тд и тп */}
         <p>
           Если вы ранее не работали в программах для композитинга, в том числе и{" "}
           <mark className="app">After Effects</mark>, то вы можете начать проходить курс
@@ -33,28 +32,36 @@ const AEFromNewbies: React.FC = () => {
         </p>
         <YouTubeVideo
           link="https://www.youtube.com/embed/nogR7eyhYug"
-          caption="Видеоплеер YouTube"
+          caption="Основы After Effects от Ильи Зернова"
         />
         <p>
           Если вы уже знакомы с интерфейсом программы, но испытываете трудности с
           насмотренностью - изучите каналы на YouTube ниже.
         </p>
-        <div className="flexible-links">
-          <a href="https://www.youtube.com/@TutoView">Tutorial View+</a>{" "}
-          <a href="https://www.youtube.com/@BenMarriott">Ben Marriott</a>{" "}
-          <a href="https://www.youtube.com/@AEPlug">AEPlug</a>{" "}
+        <FlexibleLinks>
+          <a href="https://www.youtube.com/@TutoView">Tutorial View+</a>
+          <a href="https://www.youtube.com/@BenMarriott">Ben Marriott</a>
+          <a href="https://www.youtube.com/@AEPlug">AEPlug</a>
           <a href="https://www.youtube.com/@JakeInMotion">Jake In Motion</a>
-        </div>
-        <p>Могу ещё порекомендовать полноценные курсы от:</p>
-        <div className="flexible-links">
-          <a href="https://cloudlessons.ru/v/410/">Супер After Effects от VideoSmile</a>
+        </FlexibleLinks>
+        <p>Могу ещё порекомендовать бесплатные и платные полноценные курсы:</p>
+        <FlexibleLinks>
+          <a href="https://cloudlessons.ru/v/410/">
+            &quot;Супер After Effects&quot; от VideoSmile
+          </a>
           <a href="https://volnitsa.zenclass.ru/public/course/4b9a6429-5c06-4f91-a73b-312bc57b9e35">
-            Быстрый вход в After Effects от Вольница
+            &quot;Быстрый вход в After Effects&quot; от Вольница
           </a>
           <a href="https://volnitsa.zenclass.ru/public/course/9221df49-3262-444e-b269-8b3bfd496de2">
-            SUPER SILA FOREVER от Вольница
+            &quot;SUPER SILA FOREVER&quot; от Вольница
           </a>
-        </div>
+          <a href="https://sabatovsky.com/after">
+            &quot;After Effects от новичка до специалиста&quot; от Сабатовского
+          </a>
+          <a href="https://www.profileschool.ru/category/video/course_adobe_after_effects_base">
+            &quot;After Effects базового уровня&quot; от Никиты Чеснкова
+          </a>
+        </FlexibleLinks>
         <p style={{textAlign: "center"}}>
           Надеюсь что вы найдете для себя что-то полезное. Удачи в начинаниях!
         </p>
