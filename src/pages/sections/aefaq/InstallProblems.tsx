@@ -360,7 +360,10 @@ const AEInstallProblems: React.FC = () => {
                 и начать распаковку, например с помощью <mark>drag&apos;n&apos;drop</mark>{" "}
                 в нужное место или кнопки <mark className="ui">Распаковать</mark>.
               </p>
-              {/* todo: добавить видео по распаковке многотомных архивов через винрар */}
+              <YouTubeVideo
+                link="1OVwQS0uHhk"
+                caption="Распаковка многотомного архива"
+              />
             </div>
           }
           macContent={
