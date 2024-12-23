@@ -241,7 +241,6 @@ const AEExportProblems: React.FC = () => {
           <mark className="file">Apple Prores 4444</mark>, если композиция содержит
           альфа-канал.
         </AdditionInfo>
-
         <p>
           В финальном экспорте не забудьте указать{" "}
           <mark className="ui">Use All Proxies</mark> в{" "}
@@ -298,7 +297,7 @@ const AEExportProblems: React.FC = () => {
           хочется, так как занимает слишком много время. Для таких случаев придумали
           конвертацию видео через <mark className="app">FFmpeg</mark>. Но так как{" "}
           <mark className="app">FFmpeg</mark> является консольной утилитой и не все могут
-          внятно разобраться как с енй работать - для них давно изобрели GUI-клиенты,
+          внятно разобраться как с ней работать - для них давно изобрели GUI-клиенты,
           например <a href="https://www.shutterencoder.com/">Shutter Encoder</a>.
         </p>
         {/* todo: дописать!! */}
