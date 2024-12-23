@@ -6,9 +6,9 @@ import {
   AdditionWarning,
 } from "../../../components/Additions";
 import ContentSwitcher from "../../../components/features/OperatingSystemFilter";
-import {VideoFigure, YouTubeVideo} from "../../../components/ContentFigure";
+import {ImageFigure, VideoFigure, YouTubeVideo} from "../../../components/ContentFigure";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
-
+import {FlexibleLinks} from "../../../components/FlexibleLinksFaQ";
 const AEFromNewbies: React.FC = () => {
   return (
     <div
