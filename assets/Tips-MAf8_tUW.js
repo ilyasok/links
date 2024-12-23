@@ -1,1 +1,0 @@
-import{j as s}from"./index-CHVZ3F-t.js";import{G as t}from"./GithubUpdateInfo-ClV_CpX2.js";const e=()=>s.jsx("div",{className:"faq-content",id:"tips",children:s.jsx(t,{filePath:"src/pages/sections/prfaq/Tips.tsx"})});export{e as default};
