@@ -611,7 +611,7 @@ const AEErrors: React.FC = () => {
         <p>
           Если вы не хотите или не можете изменить трансформацию и размер слоя, то
           сделайте прекомпозицию через комбинацию клавиш{" "}
-          <mark className="key">Ctrl + Shift + C</mark>с переносом аттрибутов на новую
+          <mark className="key">Ctrl + Shift + C</mark> с переносом аттрибутов на новую
           композицию, выбрав{" "}
           <mark className="ui">Move all attributes into the new composition</mark>, а
           затем на нём сделайте трекинг.
