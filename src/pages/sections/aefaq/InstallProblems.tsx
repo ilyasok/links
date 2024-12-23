@@ -242,6 +242,10 @@ const AEInstallProblems: React.FC = () => {
                   выдал никакие ошибки, то вы можете спокойно открыть{" "}
                   <mark className="app">After Effects</mark> и проверить работоспособность
                   установленного расширения.
+                  <AdditionInfo>
+                    Эти команды достаточно ввести один раз, в дальнейшем при установке
+                    подобных расширений команды для терминала вводить не нужно.
+                  </AdditionInfo>
                   <code>
                     defaults write com.adobe.CSXS.5 PlayerDebugMode 1<br />
                     defaults write com.adobe.CSXS.6 PlayerDebugMode 1<br />
