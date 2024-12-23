@@ -720,7 +720,10 @@ const AEInstallProblems: React.FC = () => {
           нужно отключить <mark className="app">Windows Smartscreen</mark> в параметрах{" "}
           <mark className="app">Защитника Windows</mark>.
         </p>
-        {/* fixme: дописать */}
+        <YouTubeVideo
+          link="HxlxS1Mdyp0"
+          caption="Как отключить Windows Smartscreen"
+        />
       </DetailsSummary>
       <DetailsSummary title='"Не удаётся найти helper.exe", "Обнаружены угрозы" или как отключить Windows Defender?'>
         <p>
