@@ -240,11 +240,15 @@ const AEFromNewbies: React.FC = () => {
             <mark className="word">не монтажные (delivery) кодеки</mark>. Видео с не
             монтажными кодеками для монтажа вашего видео использовать не рекомендуется.
             <ul>
-              <p
-                style={{textAlign: "center", fontWeight: "bold", color: "var(--accent)"}}
+              <div
+                style={{
+                  textAlign: "center",
+                  fontWeight: "bold",
+                  color: "var(--accent)",
+                }}
               >
                 Монтажные кодеки
-              </p>
+              </div>
               <li>
                 <mark className="file">Apple Prores</mark> - высококачественный кодек,
                 который широко используется в качестве формата получения, производства и
@@ -281,11 +285,15 @@ const AEFromNewbies: React.FC = () => {
               </li>
             </ul>
             <ul>
-              <p
-                style={{textAlign: "center", fontWeight: "bold", color: "var(--accent)"}}
+              <div
+                style={{
+                  textAlign: "center",
+                  fontWeight: "bold",
+                  color: "var(--accent)",
+                }}
               >
                 Не монтажные (delivery) кодеки
-              </p>
+              </div>
               <li>
                 <mark className="file">H.264</mark>, <mark className="file">H.265</mark>{" "}
                 или <mark className="file">HEVC</mark> - популярный кодек для
