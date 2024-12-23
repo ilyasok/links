@@ -415,10 +415,10 @@ const AEFromNewbies: React.FC = () => {
           </li>
           <li>
             <mark className="word">Стесняшка</mark>, <mark className="word">шляпка</mark>{" "}
-            или
-            <mark className="word">медуза</mark> - функция <mark className="ui">Shy</mark>
-            . Если у слоя помечен такой аттрибут, то такие слои можно легко скрыть на
-            таймлайне, при этом такие слои будут видимыми в предпросмотре композиции.
+            или <mark className="word">медуза</mark> - функция{" "}
+            <mark className="ui">Shy</mark>. Если у слоя помечен такой аттрибут, то такие
+            слои можно легко скрыть на таймлайне, при этом такие слои будут видимыми в
+            предпросмотре композиции.
           </li>
           <li>
             <mark className="word">Решётка</mark> - индикация у слоя{" "}
@@ -746,7 +746,7 @@ const AEFromNewbies: React.FC = () => {
                 download
                 href="files/Enable Extensions Adobe.reg"
               >
-                -патч
+                REG-патч
               </a>{" "}
               (Windows) или ввели нужные команды для их активации в терминале (macOS).
             </AdditionInfo>
@@ -760,25 +760,21 @@ const AEFromNewbies: React.FC = () => {
         <p>
           Обычно на сайте Adobe в день выхода публичной стабильной версии выкладываются
           основные нововведения. Это сделано для того, чтобы каждый прохожий не спрашивал
-          из каждого угла <mark>&quot;А что обновилось то?&quot;</mark>
+          из каждого угла <mark>&quot;А что обновилось то?&quot;</mark>. Ещё время от
+          времени Adobe выкладывает на сайт список выявленных неполадок и старается
+          приложить к ним временное решение.
         </p>
-        <div className="flexible-links">
+        <FlexibleLinks>
           <a href="https://helpx.adobe.com/ru/after-effects/using/whats-new.html">
             Что нового в After Effects последних выпусков
           </a>
           <a href="https://helpx.adobe.com/ru/after-effects/kb/fixed-issues.html">
             Список исправленных ошибок
           </a>
-        </div>
-        <p>
-          Время от времени Adobe также выкладывает на сайт список выявленных неполадок и
-          старается приложить к ним временное решение.
-        </p>
-        <div className="flexible-links">
           <a href="https://helpx.adobe.com/ru/after-effects/kb/known-issues-after-effects.html">
             Выявленные неполадки в After Effects
           </a>
-        </div>
+        </FlexibleLinks>
         <p>
           Мы советуем время от времени обновлять{" "}
           <mark className="app">After Effects</mark>, а также сторонние плагины, чтобы
@@ -813,24 +809,100 @@ const AEFromNewbies: React.FC = () => {
               </p>
               <p>
                 Создать пустой текстовый документ можно с помощью команды ниже в командной
-                строке Windows. Через <mark className="app">PowerShell</mark> эта команда
-                не будет работать, используйте <mark className="app">cmd</mark>.
+                строке Windows.
               </p>
+              <AdditionWarning>
+                Через <mark className="app">PowerShell</mark> эта команда не будет
+                работать, используйте <mark className="app">cmd</mark>.
+              </AdditionWarning>
               <code>
                 echo.{">"}&quot;%USERPROFILE%\Documents\ae_force_english.txt&quot;
               </code>
+              <AdditionWarning>
+                Альтернативный способ ниже работает только с версиями программы 24.x и
+                новее, зато универсален для обеих систем.
+              </AdditionWarning>
+              <p>
+                В новых версиях <mark className="app">After Effects</mark> разработчики
+                добавили возможность быстро поменять язык через консоль. Для этого нажмите
+                на комбинацию клавиш <mark className="key">Ctrl + F12</mark>. В
+                открывшемся окне у заголовка нажимаем три полоски и переключаемся в режим{" "}
+                <mark className="ui">Debug Database View</mark>.
+              </p>
+              <ImageFigure
+                styleClass="figure_windows-dark"
+                imgSrc="images/aftereffects/console_debug-database-view.png"
+                imgTitle="Включение вида Debug Database View"
+                caption="Включение вида Debug Database View"
+              />
+              <p>
+                Затем в строке поиска нам нужно писать{" "}
+                <mark className="copy">ApplicationLanguage</mark>. В строке с одноимённым
+                параметром пишем <mark className="copy">en_US</mark>. После ввода значения
+                - перезапускаем <mark className="app">After Effects</mark>.
+              </p>
+              <ImageFigure
+                styleClass="figure_windows-dark"
+                imgSrc="images/aftereffects/set_language_console.png"
+                imgTitle="Установка английского языка в консоли"
+                caption="Установка английского языка в консоли"
+              />
+              <AdditionInfo>
+                Чтобы вернуть язык, который был установлен по умолчанию - достаточно
+                убрать значение из этого параметра и снова перезапустить{" "}
+                <mark className="app">After Effects</mark>.
+              </AdditionInfo>
               <AdditionDanger>
-                После такого способа смены языка названия стандартных пресетов и рабочих
+                После таких способов смены языка названия стандартных пресетов и рабочих
                 областей останутся на русском языке. Их можно будет переименовать вручную
                 или удалить, а затем поставить поверх дистрибутив{" "}
                 <mark className="app">After Effects</mark> с указанием английского языка в
-                установщике. Ну или просто переустановить программу сразу на русский язык.
+                установщике. Ну или просто переустановите программу сразу на русский язык.
               </AdditionDanger>
             </div>
           }
           macContent={
             <div>
-              <p>{/* fixme: написать */}</p>
+              <AdditionWarning>
+                Приведённый ниже способ работает только с версиями программы 24.x и новее.
+              </AdditionWarning>
+              <p>
+                В новых версиях <mark className="app">After Effects</mark> разработчики
+                добавили возможность быстро поменять язык через консоль. Для этого нажмите
+                на комбинацию клавиш <mark className="key">Ctrl + F12</mark>. В
+                открывшемся окне у заголовка нажимаем три полоски и переключаемся в режим{" "}
+                <mark className="ui">Debug Database View</mark>.
+              </p>
+              <ImageFigure
+                styleClass="figure_macos-dark"
+                imgSrc="images/aftereffects/console_debug-database-view.png"
+                imgTitle="Включение вида Debug Database View"
+                caption="Включение вида Debug Database View"
+              />
+              <p>
+                Затем в строке поиска нам нужно писать{" "}
+                <mark className="copy">ApplicationLanguage</mark>. В строке с одноимённым
+                параметром пишем <mark className="copy">en_US</mark>. После ввода значения
+                - перезапускаем <mark className="app">After Effects</mark>.
+              </p>
+              <ImageFigure
+                styleClass="figure_macos-dark"
+                imgSrc="images/aftereffects/set_language_console.png"
+                imgTitle="Установка английского языка в консоли"
+                caption="Установка английского языка в консоли"
+              />
+              <AdditionInfo>
+                Чтобы вернуть язык, который был установлен по умолчанию - достаточно
+                убрать значение из этого параметра и снова перезапустить{" "}
+                <mark className="app">After Effects</mark>.
+              </AdditionInfo>
+              <AdditionDanger>
+                После таких способов смены языка названия стандартных пресетов и рабочих
+                областей останутся на русском языке. Их можно будет переименовать вручную
+                или удалить, а затем поставить поверх дистрибутив{" "}
+                <mark className="app">After Effects</mark> с указанием английского языка в
+                установщике. Ну или просто переустановите программу сразу на русский язык.
+              </AdditionDanger>
             </div>
           }
         />
