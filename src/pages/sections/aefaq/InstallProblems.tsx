@@ -520,6 +520,10 @@ const AEInstallProblems: React.FC = () => {
           отличном от английского - попробуйте сменить язык на английский. Делается это
           достаточно просто.
         </p>
+        <AdditionDanger>
+          При смене языка программы программа сбрасывает настройки пользователя (плагины
+          останутся, не переживайте), так как они привязаны к используемому вами языку.
+        </AdditionDanger>
         <ContentSwitcher
           windowsContent={
             <div>
@@ -534,33 +538,118 @@ const AEInstallProblems: React.FC = () => {
               </p>
               <p>
                 Создать пустой текстовый документ можно с помощью команды ниже в командной
-                строке Windows. Через <mark className="app">PowerShell</mark> эта команда
-                не будет работать, используйте <mark className="app">cmd</mark>.
+                строке Windows.
               </p>
+              <AdditionWarning>
+                Через <mark className="app">PowerShell</mark> эта команда не будет
+                работать, используйте <mark className="app">cmd</mark>.
+              </AdditionWarning>
               <code>
                 echo.{">"}&quot;%USERPROFILE%\Documents\ae_force_english.txt&quot;
               </code>
+              <AdditionWarning>
+                Альтернативный способ ниже работает только с версиями программы 24.x и
+                новее, зато универсален для обеих систем.
+              </AdditionWarning>
+              <p>
+                В новых версиях <mark className="app">After Effects</mark> разработчики
+                добавили возможность быстро поменять язык через консоль. Для этого нажмите
+                на комбинацию клавиш <mark className="key">Ctrl + F12</mark>. В
+                открывшемся окне у заголовка нажимаем три полоски и переключаемся в режим{" "}
+                <mark className="ui">Debug Database View</mark>.
+              </p>
+              <ImageFigure
+                styleClass="figure_windows-dark"
+                imgSrc="images/aftereffects/console_debug-database-view.png"
+                imgTitle="Включение вида Debug Database View"
+                caption="Включение вида Debug Database View"
+              />
+              <p>
+                Затем в строке поиска нам нужно писать{" "}
+                <mark className="copy">ApplicationLanguage</mark>. В строке с одноимённым
+                параметром пишем <mark className="copy">en_US</mark>. После ввода значения
+                - перезапускаем <mark className="app">After Effects</mark>.
+              </p>
+              <ImageFigure
+                styleClass="figure_windows-dark"
+                imgSrc="images/aftereffects/set_language_console.png"
+                imgTitle="Установка английского языка в консоли"
+                caption="Установка английского языка в консоли"
+              />
+              <AdditionInfo>
+                Чтобы вернуть язык, который был установлен по умолчанию - достаточно
+                убрать значение из этого параметра и снова перезапустить{" "}
+                <mark className="app">After Effects</mark>.
+              </AdditionInfo>
               <AdditionDanger>
-                После такого способа смены языка названия стандартных пресетов и рабочих
+                После таких способов смены языка названия стандартных пресетов и рабочих
                 областей останутся на русском языке. Их можно будет переименовать вручную
                 или удалить, а затем поставить поверх дистрибутив{" "}
                 <mark className="app">After Effects</mark> с указанием английского языка в
-                установщике. Ну или просто переустановить программу сразу на русский язык.
+                установщике. Ну или просто переустановите программу сразу на русский язык.
               </AdditionDanger>
             </div>
           }
           macContent={
             <div>
-              <p>{/* fixme: написать */}</p>
+              <AdditionWarning>
+                Приведённый ниже способ работает только с версиями программы 24.x и новее.
+              </AdditionWarning>
+              <p>
+                В новых версиях <mark className="app">After Effects</mark> разработчики
+                добавили возможность быстро поменять язык через консоль. Для этого нажмите
+                на комбинацию клавиш <mark className="key">Ctrl + F12</mark>. В
+                открывшемся окне у заголовка нажимаем три полоски и переключаемся в режим{" "}
+                <mark className="ui">Debug Database View</mark>.
+              </p>
+              <ImageFigure
+                styleClass="figure_macos-dark"
+                imgSrc="images/aftereffects/console_debug-database-view.png"
+                imgTitle="Включение вида Debug Database View"
+                caption="Включение вида Debug Database View"
+              />
+              <p>
+                Затем в строке поиска нам нужно писать{" "}
+                <mark className="copy">ApplicationLanguage</mark>. В строке с одноимённым
+                параметром пишем <mark className="copy">en_US</mark>. После ввода значения
+                - перезапускаем <mark className="app">After Effects</mark>.
+              </p>
+              <ImageFigure
+                styleClass="figure_macos-dark"
+                imgSrc="images/aftereffects/set_language_console.png"
+                imgTitle="Установка английского языка в консоли"
+                caption="Установка английского языка в консоли"
+              />
+              <AdditionInfo>
+                Чтобы вернуть язык, который был установлен по умолчанию - достаточно
+                убрать значение из этого параметра и снова перезапустить{" "}
+                <mark className="app">After Effects</mark>.
+              </AdditionInfo>
+              <AdditionDanger>
+                После таких способов смены языка названия стандартных пресетов и рабочих
+                областей останутся на русском языке. Их можно будет переименовать вручную
+                или удалить, а затем поставить поверх дистрибутив{" "}
+                <mark className="app">After Effects</mark> с указанием английского языка в
+                установщике. Ну или просто переустановите программу сразу на русский язык.
+              </AdditionDanger>
             </div>
           }
         />
         <p>
-          Если смена языка программы вам не помогло, попробуйте сменить язык
+          Если смена языка программы вам не помогла, попробуйте сменить язык
           программирования для выражений. Для этого откройте ваш проект и откройте{" "}
           <mark className="ui">Project Manager</mark> с помощью комбинации клавиш{" "}
-          <mark className="key">Ctrl + Alt + Shift + K</mark>.
+          <mark className="key">Ctrl + Alt + Shift + K</mark>. Затем перейдите во вкладку{" "}
+          <mark className="ui">Expressions</mark> и выберите в пункте{" "}
+          <mark className="ui">Expressions Engine</mark> другой движок, отличный от
+          текущего.
         </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/aftereffects/change_expression_language.png"
+          imgTitle="Изменяем движок выражений"
+          caption="Project Settings"
+        />
       </DetailsSummary>
       <DetailsSummary title="Error: Extension Manager init failed, status = -193! A required resource is missing. Please relaunch the Creative Cloud app and try again">
         <p>
