@@ -738,7 +738,10 @@ const AEInstallProblems: React.FC = () => {
           <mark className="app">Windows Defender</mark> на время. Ну или навсегда, если
           доверяете своей голове и источникам, откуда вы ставите софт.
         </p>
-        <p></p>
+        <YouTubeVideo
+          link="blwRAOQUjsM"
+          caption="Как отключить Защитник Windows 11"
+        />
       </DetailsSummary>
       <DetailsSummary title='Скачал репак от KpoJluK, а мне пишут "Некоторые установочные файлы были повреждены"'>
         <p>
