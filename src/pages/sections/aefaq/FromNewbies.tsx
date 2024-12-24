@@ -1373,7 +1373,87 @@ const AEFromNewbies: React.FC = () => {
         />
       </DetailsSummary>
       <DetailsSummary title="В каком случае нужно использовать After Effects, а в каком - Premiere Pro?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>
+          Начнём сразу с того, что эти две программы используются для совершенно разных
+          целей. В <mark className="app">After Effects</mark> конечно можно смонтировать
+          двухчасовой ролик, а в <mark className="app">Premiere Pro</mark> - сделать всю
+          работу по композингу... Но это всё звучит как полнейшний бред до такой степени,
+          что некоторые пользователи до сих пор почему-то используют программы не для
+          того, для чего они созданы.
+        </p>
+        <p>
+          Давайте разъясним, для чего нужно использовать{" "}
+          <mark className="app">After Effects</mark>, а для чего{" "}
+          <mark className="app">Premiere Pro</mark>:
+        </p>
+        <ul>
+          <li>
+            В <mark className="app">After Effects</mark> и{" "}
+            <mark className="app">Premiere Pro</mark> можно делать короткие видеоролики до
+            одной минуты, а также вешать на них различные эффекты. Обе программы отлично
+            подойдут для создания &quot;рилсов&quot; и &quot;тиктоков&quot;, а также
+            создания различных анонсов, анимированных афиш, баннеров и коротких
+            &quot;эдитов&quot;.
+          </li>
+          <li>
+            В <mark className="app">Premiere Pro</mark> можно создавать видеоролики с
+            использованием моушен-дизайна с нуля, но работа с анимацией в этой программе
+            реализована настолько неудобно, что уж проще сделать моушен-дизайн в{" "}
+            <mark className="app">After Effects</mark>, а затем вывести оттуда композиции
+            и импортировать их в <mark className="app">Premiere Pro</mark>.
+          </li>
+          <li>
+            <mark className="app">After Effects</mark> - программа не для создания очень
+            длинных видеороликов, так как работает с памятью и исходниками совершенно по
+            другому, в отличие от <mark className="app">Premiere Pro</mark>. Даже если вы
+            и выполните всю работу по созданию длинного видеоролика в{" "}
+            <mark className="app">After Effects</mark> (представлю, сколько нервов уйдет
+            из-за <mark>Out of Memory</mark>), то время и скорость рендера вас явно не
+            впечатлит. Лучше соберите проект изначально в{" "}
+            <mark className="app">Premiere Pro</mark> и выдёргивайте только нужные кусочки
+            для дальнейшего редактирования в <mark className="app">After Effects</mark>{" "}
+            или создавайте короткие композиции и выводите их частями, а потом склеивайте
+            их в <mark className="app">Premiere Pro</mark>.
+            <AdditionDanger>
+              В <mark className="app">After Effects</mark> можно делать композиции длиной
+              максмиум до трёх часов, но крайне не рекомендуется делать их с такой длиной.
+            </AdditionDanger>
+          </li>
+          <li>
+            <mark className="app">After Effects</mark> не годится для обработки звука и
+            голоса, несмотря на наличие нескольких встроенных эффектов, например{" "}
+            <mark className="plugin">Echo</mark> или
+            <mark className="plugin">Reverb</mark>. Для этого хорошо подходит{" "}
+            <mark className="app">Premiere Pro</mark> или{" "}
+            <mark className="app">Audition</mark> за счёт удобной работы с несколькими
+            аудиодорожками и поддержкой VST-плагинов.
+          </li>
+          <li>
+            В <mark className="app">Premiere Pro</mark> можно и нужно делать длинные
+            видеоролики, например подкасты, фильмы, короткометражки или сериалы. Если вы
+            хотите использовать <mark className="app">After Effects</mark> в длинном видео
+            - импортируйте кусочек вашего видео, например с помощью{" "}
+            <mark className="ui">Replace with After Effects Composition</mark> и после
+            редактирования экспортируйте оттуда композиции в монтажный кодек, например в{" "}
+            <mark className="file">Apple Prores 4444</mark>. Затем замените нужный кусок
+            на то, что вы экспортировали из <mark className="app">After Effects</mark> и
+            продолжайте работу дальше в <mark className="app">Premiere Pro</mark>.
+            <AdditionWarning>
+              Не рекомендуется частое использование функции <mark>Dynamic Link</mark>, так
+              как на больших проектах его работа может быть крайне нестабильна и может
+              вызывать проблемы при финальном экспорте.
+            </AdditionWarning>
+          </li>
+          <li>
+            <mark className="app">Premiere Pro</mark> не очень подходит для композитинга и
+            создания эффектов уровня фильмов от Marvel.{" "}
+            <mark className="app">After Effects</mark> лучше подходит для редактирования
+            сложных сцен и применения различных спецэффектов, так как он даёт гораздо
+            больший простор воорбражению для создания 3D-сцен и поддерживает больше
+            сторонних эффектов и плагинов для генерации эффектов с нуля, например{" "}
+            <mark className="plugin">Trapcode Particular</mark>.
+          </li>
+        </ul>
       </DetailsSummary>
       <DetailsSummary title="Как очистить кэш предпросмотра и зачем это надо делать?">
         <p>
