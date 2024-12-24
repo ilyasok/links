@@ -1687,7 +1687,12 @@ const AEFromNewbies: React.FC = () => {
           перейти в вкладку <mark className="ui">3D Renderer</mark> и установить там{" "}
           <mark className="plugin">Classic 3D</mark>.
         </p>
-        {/* todo: показать как на изображении */}
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/aftereffects/change_3d_renderer.png"
+          imgTitle="Изменяем движок для рендера 3D-слоёв"
+          caption="Composition Settings"
+        />
       </DetailsSummary>
       <DetailsSummary title="Почему не исчезает фон при использовании режимов наложения?">
         <p>
