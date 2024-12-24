@@ -1560,6 +1560,54 @@ const AEFromNewbies: React.FC = () => {
           caption="Preview"
         />
       </DetailsSummary>
+      <DetailsSummary title='У меня график скорости отличается от того, что у туториала. Как мне сделать "нормальный вид" графика?'>
+        <p>
+          Вы пытаетесь отредактировать график скорости в виде отличный от того, который вы
+          привыкли видеть. Измените вид на <mark className="ui">Value Graph</mark> или на{" "}
+          <mark className="ui">Speed Graph</mark>, в зависимости от того, что вам нужно.
+          Для этого откройте <mark className="ui">Graph Editor</mark> с помощью комбинации
+          клавиш <mark className="key">Shift + F3</mark> или соответствующей кнопки на
+          таймлайне, открыть контекстное меню и выбрать то, что нам нужно.
+        </p>
+        <VideoFigure
+          styleClass="figure_windows-dark"
+          videoSrc="images/aftereffects/change_graph_view.mp4"
+          caption="Изменение вида графика скорости"
+        />
+      </DetailsSummary>
+      <DetailsSummary title='Почему я не могу изменить график скорости с помощью "усиков"?'>
+        <p>
+          Вы пытаетесь отредактировать график значения у аттрибута, имеющий более одного
+          значения в массиве, например <mark className="ui">Position</mark> или{" "}
+          <mark className="ui">Anchor Point</mark>. В таком случае в режиме графика{" "}
+          <mark className="ui">Value Graph</mark> вы не можете отредактировать скорость.
+          Вам нужно либо разделить значения через{" "}
+          <mark className="ui">Separate Dimensions</mark>, если это вомзожно, либо
+          переключиться на вид графика скорости <mark className="ui">Speed Graph</mark>.
+        </p>
+        <p>
+          Для того, чтобы разделить значения, например положения, вам нужно нажать правой
+          кнопкой мыши по аттрибуту и нажать на{" "}
+          <mark className="ui">Separate Dimensions</mark>. Если разделить значения не
+          получается, то вам нужно переключиться на другой вид графика.
+        </p>
+        <VideoFigure
+          styleClass="figure_windows-dark"
+          videoSrc="images/aftereffects/separate_dimensions.mp4"
+          caption="Разделение аттрибутов положения на X и Y"
+        />
+        <p>
+          Для того, чтобы изменить вид графика с <mark className="ui">Value Graph</mark>{" "}
+          на <mark className="ui">Speed Graph</mark>, вам нужно открыть{" "}
+          <mark className="ui">Graph Editor</mark> с помощью комбинации клавиш{" "}
+          <mark className="key">Shift + F3</mark> или соответствующей кнопки на таймлайне,
+          открыть контекстное меню и выбрать то, что нам нужно.
+        </p>
+        <VideoFigure
+          styleClass="figure_windows-dark"
+          videoSrc="images/aftereffects/change_graph_view.mp4"
+          caption="Изменение вида графика скорости"
+        />
       </DetailsSummary>
       <DetailsSummary title="Что такое Null Object и как с ним работать?">
         <p>
