@@ -1,0 +1,1 @@
+import{j as t}from"./index-DSCJ1MoQ.js";import{G as s}from"./GithubUpdateInfo-CiAN-kdW.js";const e=()=>t.jsx("div",{className:"faq-content",id:"export",children:t.jsx(s,{filePath:"src/pages/sections/prfaq/Export.tsx"})});export{e as default};
