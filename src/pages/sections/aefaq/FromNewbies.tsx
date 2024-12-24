@@ -1479,7 +1479,87 @@ const AEFromNewbies: React.FC = () => {
         </AdditionInfo>
       </DetailsSummary>
       <DetailsSummary title="Почему предпросмотр проигрывается в хреновом качестве, в пикселях?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>
+          Скорее всего вы забыли переключить качество предпросомтра в окне{" "}
+          <mark className="ui">Preview</mark>. Для изменения качества выставьте значение{" "}
+          <mark className="ui">Resolution</mark> на <mark className="ui">Full</mark> или
+          на удобное вам значение.
+        </p>
+        <AdditionInfo>
+          Если в <mark className="ui">Resolution</mark> стоит значение{" "}
+          <mark className="ui">Auto</mark>, то предпросмотр будет проигрываться в том
+          разрешении, которое вы указали там, где отображается ваша композиция.
+        </AdditionInfo>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/aftereffects/change_resolution_preview.png"
+          imgTitle="Изменение предпросмотра в окне Preview"
+          caption="Preview"
+        />
+        <p>
+          Ещё проверьте разрешение в окне <mark className="ui">Composition</mark>. Список
+          с выбором разрешения предпросмотра отображается в нижней границе окна.
+        </p>
+        <VideoFigure
+          styleClass="figure_windows-dark"
+          videoSrc="images/aftereffects/change_resolution_comppreview.mp4"
+          caption="After Effects"
+        />
+        <p>
+          А вообще, часто бывают случаи, когда пользователь сам устанавливает в настройках
+          композиции низкое разрешение, например <mark>256x128</mark>, а потом удивляется,
+          почему он видит пиксели, особенно когда пытается увеличить предпросмотр более,
+          чем на 100%.
+        </p>
+        <p>
+          Есть ещё отдельная категория лиц, которая считает, что{" "}
+          <mark className="app">After Effects</mark> имеет возможность отображения
+          предпросмотра с функцией увеличения без потери качества, как в{" "}
+          <mark className="app">Adobe Illustrator</mark>. Спешу огорчить,{" "}
+          <mark className="app">After Effects</mark> не работает так и не может отобразить
+          больше пикселей, чем то, что указано в настройках композиции.
+        </p>
+        <AdditionInfo>
+          Исключение, где вы можете увеличить предпросмотр без потери качества больше чем
+          на 100% является функция <mark className="plugin">Draft 3D</mark> с включенной
+          опцией <mark className="ui">Extented Preview</mark>. Работать будет только
+          тогда, когда у вас есть векторные слои или 3D-модели. При экспорте вы получите
+          файл с разрешением, указанная в настройках композиции.
+        </AdditionInfo>
+        <p>
+          Если вы импортировали векторный файл, например <mark className="file">.ai</mark>{" "}
+          из <mark className="app">Adobe Illustrator</mark>, то вам нужно включить{" "}
+          <mark className="ui">Continuously Rasterize</mark>. Это позволит программе при
+          любом взаимодействии с слоем уменьшить эффект пикселизации за счёт того, что
+          программа будет каждый раз растрировать этот слой до нужного разрешения.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/aftereffects/enable_continuously_rasterize.png"
+          imgTitle="Включаем Continuously Rasterize"
+          caption="Timeline"
+        />
+        <AdditionWarning>
+          При включенной опции <mark className="ui">Continuously Rasterize</mark> могут
+          быть побочные явления, например разрывы слоя при использовании{" "}
+          <mark className="plugin">Puppet Tool</mark>.
+        </AdditionWarning>
+      </DetailsSummary>
+      <DetailsSummary title="Почему у меня предпросмотр проигрывается ускоренно или замедленно?">
+        <p>
+          Проверьте окно <mark className="ui">Preview</mark>. Вполне вероятно, что вы
+          установили там значение FPS, отличное от того, что у вас установлено в
+          композиции. Для этого откройте окно Preview с помощью{" "}
+          <mark className="ui">Window &gt; Preview</mark> и укажите в FPS значение{" "}
+          <mark className="ui">Auto</mark>.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/aftereffects/change_preview_fps.png"
+          imgTitle="Изменение предпросмотра в окне Preview"
+          caption="Preview"
+        />
+      </DetailsSummary>
       </DetailsSummary>
       <DetailsSummary title="Что такое Null Object и как с ним работать?">
         <p>
