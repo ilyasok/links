@@ -1632,7 +1632,15 @@ const AEFromNewbies: React.FC = () => {
         />
       </DetailsSummary>
       <DetailsSummary title="Что такое Adjustment Layer и для чего он нужен?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>
+          <mark>Корректирующий слой</mark> или же <mark>Adjustment Layer</mark> - довольно
+          мощный инструмент. С помощью него можно сделать цветокоррекцию, заставить
+          трястись весь экран или просто добавить искажения от линзы.
+        </p>
+        <YouTubeVideo
+          link="rgMKGFWWqjA"
+          caption="Используем корректирующие слои в After Effects"
+        />
       </DetailsSummary>
       <DetailsSummary title="Почему у меня отсутствует звук в предпросмотре?">
         <p>{/* fixme: написать!! */}</p>
