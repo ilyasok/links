@@ -1040,7 +1040,32 @@ const AEInstallProblems: React.FC = () => {
         </p>
       </DetailsSummary>
       <DetailsSummary title="Чую, что у меня программа работает неправильно, но переустанавливать программу я не хочу. Как сбросить все настройки After Effects?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>
+          Перед запуском программы из ярлыка, зажмите модификаторы{" "}
+          <mark className="key">Ctrl + Alt + Shift</mark> на клавиатуре одновременно и не
+          отпуская клавиши, откройте ярлык запуска программы левой кнопкой мыши. После
+          этого у вас должно открыться окно{" "}
+          <mark className="ui">Startup Repair Options</mark>, где вы можете запустить
+          программу в безопасном режиме, отключить плагины или сбросить настройки
+          программы.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="/images/aftereffects/startup_repair_options.png"
+          imgTitle="Окно для решения проблем при запуске программы"
+          caption="After Effects"
+        />
+        <p>
+          Для сброса всех настроек нужно нажать на прекрасную кнопочку{" "}
+          <mark className="ui">Reset Preferences</mark>. Диалога подтверждения удаления
+          настроек не будет, поэтому заранее сохраните ваши настройки. Обычно они
+          находятся в <mark className="path">%APPDATA%\Adobe\After Effects\XX.X</mark>.
+        </p>
+        <p>
+          Если вы все ещё сталкиваетесь с какими-то трудностями при работе с программой -
+          попробуйте накатить ту же версию, что у вас установлена поверх. Либо просто
+          переустановите <mark className="app">After Effects</mark> с нуля.
+        </p>
       </DetailsSummary>
       <DetailsSummary title="Настало время переустановки. Как мне полностью удалить After Effects и остальные продукты от Adobe?">
         <p>{/* fixme: написать!! */}</p>
