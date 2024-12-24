@@ -1624,7 +1624,7 @@ const AEFromNewbies: React.FC = () => {
         <AdditionInfo>
           Если вы скрыли отображение столбца на таймлайне, нажмите{" "}
           <mark className="key">F4</mark> или <mark className="key">ПКМ</mark> по
-          столбцам, и выбрать <mark className="ui">Coluumns &gt; Parent & Link</mark>.
+          столбцам, и выбрать <mark className="ui">Columns &gt; Parent & Link</mark>.
         </AdditionInfo>
         <YouTubeVideo
           link="8ei_cj6A2Gg"
