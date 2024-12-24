@@ -42,8 +42,11 @@ const GithubUpdateInfo: React.FC<GithubUpdateInfoProps> = ({filePath}) => {
       const formattedDate = lastCommitDate.toLocaleString("ru-RU", dateOptions);
       const formattedClock = lastCommitDate.toLocaleString("ru-RU", clockOptions);
       const commitMessage = commits[0].commit.message;
+      const commitUrl = commits[0].html_url;
 
-      setCommitInfo(`Обновлено ${formattedDate}, ${formattedClock}: ${commitMessage}`);
+      setCommitInfo(
+        `Обновлено ${formattedDate}, ${formattedClock}: <a href="${commitUrl}" target="_blank">${commitMessage}</a>`
+      );
     } catch (err) {
       setError(`${err}, информация о свежести временно недоступна`);
     }
@@ -76,10 +79,10 @@ const GithubUpdateInfo: React.FC<GithubUpdateInfoProps> = ({filePath}) => {
         fontSize: "12px",
         whiteSpace: "pre-wrap",
         opacity: "0.5",
+        filter: "saturate(0)",
       }}
-    >
-      {commitInfo}
-    </p>
+      dangerouslySetInnerHTML={{__html: commitInfo}}
+    />
   );
 };
 
