@@ -1643,7 +1643,32 @@ const AEFromNewbies: React.FC = () => {
         />
       </DetailsSummary>
       <DetailsSummary title="Почему у меня отсутствует звук в предпросмотре?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>
+          Если вы недавно меняли аудиовыход, например подключили беспроводные наушники или
+          внешний монитор с колонками, то вполне вероятно что у вас сбились настройки
+          звука. Вам следует проверить настройки аудиовыхода в настройках программы, для
+          этого нужно перейти в{" "}
+          <mark className="ui">Edit &gt; Preferences &gt; Audio Hardware</mark> и указать
+          в пункте <mark className="ui">Default Output</mark> нужный вам аудиовыход.
+        </p>
+        <p>
+          Если вы проигрываете видео не в реальном времени и звук отсутствует (даже если
+          он вам и нужен запинающийся и растянутый), то возможно вы в настройках{" "}
+          <mark className="app">After Effects</mark> включили галочку{" "}
+          <mark className="ui">Mute Audio When Preview Is Not Real-time</mark> в{" "}
+          <mark className="ui">Edit &gt; Preferences &gt; Previews</mark>.
+        </p>
+        <p>
+          Если советы выше не помогли - проверьте окно <mark className="ui">Preview</mark>
+          , включен ли там вывод звука? Если нет, то включите и проиграйте предпросмотр
+          снова.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/aftereffects/toggle_audio_preview.png"
+          imgTitle="Включение звука в окне Preview"
+          caption="Preview"
+        />
       </DetailsSummary>
       <DetailsSummary title="Применяю эффект, например Glow, но он обрезается. Как расширить действие эффекта?">
         <p>{/* fixme: написать!! ПЕРЕМЕСТИТЬ В ДРУГОЙ ПУНКТ */}</p>
