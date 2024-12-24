@@ -822,8 +822,143 @@ const AEInstallProblems: React.FC = () => {
           выбираете, ставить ли &quot;репаки&quot; или нет.
         </AdditionDanger>
       </DetailsSummary>
-      <DetailsSummary title="Не доверяю Кролику, Монкрусу и впринципе всем репакам, но установить программы от Adobe хочу. Какие есть ещё варианты?">
-        <p>{/* fixme: написать!! */}</p>
+      <DetailsSummary title="Не доверяю репакам Adobe, в частности от KpoJluk и m0nkrus, но установить программы от Adobe хочу. Какие есть ещё варианты?">
+        <p>
+          Если вы параноик и боитесь, что при установке репаков в ваш компьютер ворвётся
+          &quot;барабашка&quot; с троянами и прочей бякой, то вы можете активировать
+          программы от Adobe вручную через <mark className="app">GenP</mark>.
+        </p>
+        <ul>
+          <li>
+            Из плюсов этого способа: активируя Adobe через{" "}
+            <mark className="app">GenP</mark>, вы можете устанавливать, обновлять
+            программы, а также устанавливать бесплатные плагины напрямую из Creative
+            Cloud. Также вы можете устанавливать бета-версии, если вы хотите потыкать
+            нововведения, которые ещё не выкатили в публичный релиз.
+          </li>
+          <li>
+            Из минусов: пользователи часто жалуются на проблемы при использовании{" "}
+            <mark className="plugin">Dynamic Link</mark>, то есть{" "}
+            <mark className="app">After Effects</mark> и{" "}
+            <mark className="app">Premiere Pro</mark> могут не увидеть друг друга. После
+            обновления программ от Adobe может не всегда работать патч, для этого нужно
+            периодически обновлять сам <mark className="app">GenP</mark>.
+          </li>
+        </ul>
+        <AdditionDanger>
+          Если вы хотите &quot;переехать&quot; с репаков или у вас уже установлены
+          какие-то приложения от Adobe на вашем устройстве, то перед активацией через{" "}
+          <mark className="app">GenP</mark> лучше удалите все приложения от Adobe во
+          избежание различных проблем при активации. Удалить приложения от Adobe вы можете
+          через{" "}
+          <a href="https://helpx.adobe.com/ru/creative-cloud/kb/cc-cleaner-tool-installation-problems">
+            Adobe Creative Cloud Cleaner Tool
+          </a>
+          .
+        </AdditionDanger>
+        <p>
+          Предположим, что ваша система уже чиста от Adobe или вы только-только
+          переустановили Windows. Для начала вам нужно загрузить{" "}
+          <a href="https://creativecloud.adobe.com/apps/download/creative-cloud?locale=en">
+            Adobe Creative Cloud
+          </a>{" "}
+          с официального сайта и установить его как обычную программу. Далее нам требуется
+          войти в аккаунт: вы можете создать новый или войти в уже существующий.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-light"
+          imgSrc="images/creative_cloud_main_menu.png"
+          imgTitle="Главное окно Creative Cloud"
+          caption="Adobe Creative Cloud"
+        />
+        <p>
+          После успешного входа нам нужно отключить автоматические обновления и автозапуск{" "}
+          <mark className="app">Creative Cloud</mark> во избежание различных &quot;детских
+          неожиданностей&quot;. Для этого вам нужно нажать на изображение вашего профиля в
+          правом верхнем углу и в меню выбрать <mark className="ui">Установки</mark>.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-light"
+          imgSrc="images/creative_cloud_open_settings.png"
+          imgTitle="Открытие настроек Creative Cloud"
+          caption="Adobe Creative Cloud"
+        />
+        <p>
+          В открывшемся окне отключаем три пункта про автозапуск и автообновление
+          приложений в разделе <mark className="ui">Общие</mark>.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-light"
+          imgSrc="images/creative_cloud_settings.png"
+          imgTitle="Пункты для отключения обновлений и автозапуска Creative Cloud"
+          caption="Adobe Creative Cloud"
+        />
+        <AdditionInfo>
+          По вашему желанию вы можете выбрать английский язык для новых приложений по
+          умолчанию в разделе <mark className="ui">Приложения</mark> или изменить язык{" "}
+          <mark className="app">After Effects</mark> вручную после установки.
+        </AdditionInfo>
+        <p>
+          После изменения настроек и перед применением патча обязательно закрываем
+          приложение <mark className="app">Creative Cloud</mark>. Далее нам нужно скачать
+          сам <mark className="app">GenP</mark> с темы{" "}
+          <a href="https://www.reddit.com/r/genP/">/r/genp</a> на Reddit.
+        </p>
+        <AdditionWarning>
+          Если ссылка на скачивание не работает, то обычно ниже прикладываются ссылки на
+          зеркало скачивания. Перед скачиванием, распаковкой и дальнейшем использованием{" "}
+          <mark className="app">GenP</mark>, отключите ваш антивирус на время.
+        </AdditionWarning>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/reddit_genp.png"
+          imgTitle="Скачиваем GenP из Reddit"
+          caption="Браузер"
+        />
+        <p>
+          После успешной загрузки архива нам нужно распаковать его в любом удобном месте,
+          а затем открыть <mark className="app">AdobeGenP.exe</mark> в папке{" "}
+          <mark className="path">Source</mark>. Если вас при первом открытии спросят{" "}
+          <mark>
+            Do you wish to elevate GenP to Trustedlnstaller to allow for patching of
+            XD/UWP apps?
+          </mark>
+          , на что мы любезно отвечаем <mark className="ui">No</mark>.
+        </p>
+        <p>
+          Внизу интерфейса <mark className="app">GenP</mark> есть несколько кнопок. Нам
+          нужно нажать на кнопку <mark className="ui">Search</mark> и подождать до
+          повяления двух файлов для <mark className="app">Creative Cloud</mark>.{" "}
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-light"
+          imgSrc="images/patching_creative_cloud.png"
+          imgTitle="Патчим Creative Cloud"
+          caption="Adobe GenP"
+        />
+        <p>
+          Их мы выделяем и нажимаем на кнопку <mark className="ui">Patch</mark> и ждём
+          успешного патча.
+        </p>
+        <p>
+          После патча <mark className="app">Creative Cloud</mark>, нам нужно в него зайти
+          и начать скачивать оттуда программы. После установки{" "}
+          <mark className="app">After Effects</mark> и остального софта -{" "}
+          <u>не спешите</u> их открывать.
+        </p>
+        <p>
+          После установки нужного софта снова открываем <mark className="app">GenP</mark>{" "}
+          и снова нажимаем на кнопку <mark className="ui">Search</mark>. Но уже теперь мы
+          выделяем галочки на всех установленных нами приложениях и снова нажимаем на
+          кнопку <mark className="ui">Patch</mark>.
+        </p>
+        <p>
+          Если в <mark className="ui">Logs</mark> ничего не указывает на ошибки при
+          патчинге, то поздравляю, вы можете теперь запустить свежеустановленные программы
+          от Adobe и работать в них. В противном случае пересмотрите инструкцию, обновите{" "}
+          <mark className="app">GenP</mark> или всё-таки поборойте свою паранойю насчёт
+          репаков.
+        </p>
       </DetailsSummary>
       <DetailsSummary title="Установил After Effects и Media Encoder, но они не видят друг друга и не подключаются. Как это исправить?">
         <p>
