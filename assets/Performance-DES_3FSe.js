@@ -1,0 +1,1 @@
+import{j as e}from"./index-Cnt4-S-5.js";import{G as r}from"./GithubUpdateInfo-BUzdPKz6.js";const a=()=>e.jsx("div",{className:"faq-content",id:"performance",children:e.jsx(r,{filePath:"src/pages/sections/psfaq/Performance.tsx"})});export{a as default};
