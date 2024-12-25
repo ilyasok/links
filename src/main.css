@@ -1436,8 +1436,7 @@ img {
 }
 
 table {
-  margin: 0 auto;
-  border-radius: 10px;
+  margin: 15px auto;
   border-collapse: collapse;
   background-color: var(--table_background);
   max-width: 1000px;
@@ -1460,25 +1459,6 @@ th {
   border: 1px solid var(--table_background-border);
   padding: 5px 10px;
   text-align: center;
-}
-
-td:first-child,
-th:first-child {
-  border-left: none;
-}
-
-td:last-child,
-th:last-child {
-  border-right: none;
-}
-
-tr:first-child th {
-  border-top: none;
-}
-
-tr:last-child td,
-tr:last-child th {
-  border-bottom: none;
 }
 
 :root {
