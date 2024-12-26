@@ -1,0 +1,1 @@
+import{j as s}from"./index-2R-po2q1.js";import{G as t}from"./GithubUpdateInfo-BEHq89Q-.js";const l=()=>s.jsx("div",{className:"faq-content",id:"install-problems",children:s.jsx(t,{filePath:"src/pages/sections/psfaq/InstallProblems.tsx"})});export{l as default};
