@@ -1957,6 +1957,24 @@ const AEFromNewbies: React.FC = () => {
           сможете применять его поверх своей композиции.
         </p>
       </DetailsSummary>
+      <DetailsSummary title="Применил Saber, но он обрезается в пределах слоя. Grow Bounds не помогает. Как расширить эффект?">
+        <p>
+          Это происходит из-за того, что эффект работает только в пределах размера слоя. А
+          вы зачем-то применили этот эффект на слой, размер которого отличается от размера
+          композиции.
+        </p>
+        <p>
+          Вам нужно создать Solid и применить <mark className="plugin">Saber</mark> на
+          него. А затем нужно синхронизировать маски: из слоя, из которого вы хотели
+          изначально сделать обводку маской нужно прилинковать маску в Solid, на котором
+          применён <mark className="plugin">Saber</mark> нужного размера.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="/images/aftereffects/linking_masks_for_saber.png"
+          imgTitle="Соединяем маски для Saber"
+          caption="Timeline"
+        />
       </DetailsSummary>
     </div>
   );
