@@ -1832,7 +1832,26 @@ const AEFromNewbies: React.FC = () => {
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Чем отличается Mocha AE от Mocha Pro?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>
+          В стандартную поставку <mark className="app">After Effects</mark> входит
+          встроенный плагин для трекинга различных объектов{" "}
+          <mark className="plugin">Mocha AE</mark>. Но у него функционал, по сравнению с
+          Pro-версией, несколько урезан.
+        </p>
+        <p>
+          В встроенной <mark className="plugin">Mocha AE</mark> вы не сможете
+          стабилизировать видео, делать клин-ап (удалять объекты), использовать магнитное
+          лассо и прочее. <mark className="plugin">Mocha Pro</mark> же лишена этих
+          ограничений, а также можно вставить в <mark className="app">Premiere Pro</mark>{" "}
+          и другие программы.
+        </p>
+        <AdditionInfo>
+          Подробнее о различиях между этими версиями вы можете прочитать на{" "}
+          <a href="https://support.borisfx.com/hc/en-us/articles/10232625711117-I-use-Mocha-AE-what-is-the-difference-between-Mocha-AE-and-Mocha-Pro-Do-I-need-Mocha-Pro">
+            официальном сайте BorisFX
+          </a>
+          .
+        </AdditionInfo>
       </DetailsSummary>
       <DetailsSummary title="Что за решётка у слоя на таймлайне и для чего нужен Guides Layer?">
         <p>{/* fixme: написать!! */}</p>
