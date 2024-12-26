@@ -1732,20 +1732,76 @@ const AEFromNewbies: React.FC = () => {
           на aescripts.
         </p>
         <AdditionInfo>
-          <sup>*</sup>Чтобы скачать скрипт бесплатно - зарегистрируйтесь на сайте,
-          вернитесь на страницу с плагином, установите цену 0 в{" "}
-          <mark className="ui">Name Your Own Price</mark>, добавьте его в корзину и
-          подтвердите заказ. Нужный плагин появится в вашем профиле.
+          <sup>*</sup>Чтобы скачать скрипт - зарегистрируйтесь на сайте{" "}
+          <a href="https://aescripts.com">aescripts</a>, вернитесь на страницу с плагином,
+          установите цену 0 в <mark className="ui">Name Your Own Price</mark>, добавьте
+          его в корзину и подтвердите заказ. Нужный плагин появится{" "}
+          <a href="https://aescripts.com/downloadable/customer/products/">
+            в вашем профиле
+          </a>{" "}
+          и вы можете его скачать абсолютно бесплатно.
         </AdditionInfo>
       </DetailsSummary>
       <DetailsSummary title="Переместил слой из одной композиции в другую, но оно ушло за пределы моей композиции. Как его вернуть на своё место?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>
+          Чтобы вернуть слой на место после временной метки, нажмите на{" "}
+          <mark className="key">[</mark>. Если нужно расположить слой до временной метки -
+          нажмите на <mark className="key">]</mark>.
+        </p>
       </DetailsSummary>
       <DetailsSummary title="Почему первый кадр в композиции начинается не с нулевой секунды?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>
+          Скорее всего вы при создании прекомпозиции указали галочку в пункте{" "}
+          <mark className="ui">
+            Adjust composition duration to the time span of the selected layers
+          </mark>
+          . Данная опция делает отсчёт кадров с времени начала самого раннего слоя в
+          родительской композиции. То есть, если вы выделили три слоя, первый из них
+          начинающийся на второй секунде, а последний на седьмой. А родительская
+          композиция длится 10 секунд. Соответственно новая композиция начнёт отсчёт в
+          первом кадре со второй секунды.
+        </p>
+        <p>
+          Для установки верного стартового таймкода вам нужно открыть настройки композиции
+          с помощью комбинации клавиш <mark className="key">Ctrl + K</mark> и в поле{" "}
+          <mark className="ui">Start Timecode</mark> указать нужное значение, например{" "}
+          <mark>00:00:00:00</mark>, чтобы отсчёт вёлся с нуля.
+        </p>
+        <VideoFigure
+          styleClass="figure_windows-dark"
+          videoSrc="/images/aftereffects/change_start_timecode.mp4"
+          caption="Composition Settings"
+        />
+      </DetailsSummary>
+      <DetailsSummary title="Почему точки для того чтобы прицепить объект не отображаются в 3D Camera Tracker?">
+        <p>
+          Вы скрыли отображение границ слоёв и их манипуляторов в окне предпросмотра. Для
+          того чтобы их вернуть, нажмите на комбинацию клавиш{" "}
+          <mark className="key">Ctrl + Shift + H</mark> или нажмите на соответствующую
+          иконку в окне предпросмотра и продолжайте работу.
+        </p>
+        <AdditionInfo>
+          Точки будут отображаться если выделен сам эффект{" "}
+          <mark className="plugin">3D Camera Tracker</mark>
+        </AdditionInfo>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="/images/aftereffects/view_layer_bounds.png"
+          imgTitle="Включение отображение границ масок и слоёв"
+          caption="Composition"
+        />
+        <p>
+          Если вам нужно принудительно отобразить точки трекинга, то включите функцию{" "}
+          <mark className="ui">Render Track Points</mark>.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="/images/aftereffects/render_track_points.png"
+          imgTitle="Включение точек трекинга"
+          caption="Effects Controls"
+        />
       </DetailsSummary>
       <DetailsSummary title="Почему не все параметры выравнивания текста доступны в окне Paragraph?">
-        {/* fixme: написать */}
         <p>
           Если вы создаёте текстовый слой простым нажатием на композицию, то вы создаёте
           слой без ограничений на высоту и ширину. В таком случае как вы представляете
@@ -1763,14 +1819,14 @@ const AEFromNewbies: React.FC = () => {
         />
         <p>
           Или переконвертировать уже существующий текстовый слой в формат{" "}
-          <mark className="ui">Paragraph Text</mark>.
+          <mark className="ui">Paragraph Text</mark>, предварительно выбрав инструмент
+          Text.
         </p>
         <VideoFigure
           styleClass="figure_windows-dark"
           videoSrc={"/images/aftereffects/convert_to_paragraph_text.mp4"}
           caption="Конвертация текстового слоя в Paragraph Text"
         />
-        <p></p>
       </DetailsSummary>
       <DetailsSummary title="Чем отличается однонодовая камера от двунодовой?">
         <p>{/* fixme: написать!! */}</p>
@@ -1782,7 +1838,15 @@ const AEFromNewbies: React.FC = () => {
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Делал проект, но я его изначально не сохранял. Вдруг After Effects вылетел. Возможно ли восстановить проект?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>
+          Нет, примите мои соболезнования. В следующий раз перед началом работы - сразу
+          сохраняйте файл проекта и периодически прожимайте{" "}
+          <mark className="key">Ctrl + S</mark>.
+        </p>
+        <p>
+          <mark className="app">After Effects</mark> не создаёт авто-сохранения или
+          какие-нибудь файлы проекта, если изначально проект не был сохранён.
+        </p>
       </DetailsSummary>
       <DetailsSummary title="Почему After Effects иногда сам меняет начертание шрифта?">
         <p>{/* fixme: написать!! */}</p>
