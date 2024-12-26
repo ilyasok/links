@@ -1829,7 +1829,27 @@ const AEFromNewbies: React.FC = () => {
         />
       </DetailsSummary>
       <DetailsSummary title="Чем отличается однонодовая камера от двунодовой?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>
+          При создании камеры в <mark className="app">After Effects</mark> можно
+          наткнуться на настройку типа камеры: <mark>One-Node</mark> и{" "}
+          <mark>Two-Node</mark>. Да, они действительно отличаются в плане способов
+          перемещения и поворота камеры.
+        </p>
+        <ul>
+          <li>
+            <mark>One-Node</mark> работает как физическая камера, которая перемещается
+            независимо от выбранной точки.
+          </li>
+          <li>
+            <mark>Two-Node</mark> смотрит на заданную точку и сама камера будет
+            поворачивать в сторону <mark>Point of Interest</mark>. Данный тип камер
+            полезен для создания параллакс-эффекта.
+          </li>
+        </ul>
+        <YouTubeVideo
+          link="zgMHWFolli8"
+          caption="Техники с 3D камерами в After Effects"
+        />
       </DetailsSummary>
       <DetailsSummary title="Чем отличается Mocha AE от Mocha Pro?">
         <p>
