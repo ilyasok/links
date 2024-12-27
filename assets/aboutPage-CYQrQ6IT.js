@@ -1,0 +1,1 @@
+import{j as t,H as e}from"./index-DVCs8jVz.js";import{H as s}from"./Header-Bb0wHU4w.js";const r=()=>t.jsxs("div",{children:[t.jsx(e,{children:t.jsx("title",{children:"about@aechat"})}),t.jsx(s,{title:"about"})]});export{r as default};
