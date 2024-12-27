@@ -1068,7 +1068,28 @@ const AEInstallProblems: React.FC = () => {
         </p>
       </DetailsSummary>
       <DetailsSummary title="Настало время переустановки. Как мне полностью удалить After Effects и остальные продукты от Adobe?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>
+          Если вы хотите переустановить или забыть о программах Adobe раз и навсегда, то
+          можно сделать это двумя способами, а лучше объединить их.
+        </p>
+        <ul>
+          <li>
+            Через <mark className="app">Adobe Creative Cloud Cleaner Tool</mark>, который
+            можно скачать{" "}
+            <a href="https://helpx.adobe.com/ru/creative-cloud/kb/cc-cleaner-tool-installation-problems.html">
+              по этой ссылке
+            </a>
+            . Это консольная утилита, не требующая установки. Инструкция по использованию
+            указана как раз на странице рядом с кнопкой загрузки.
+          </li>
+          <li>
+            Через <mark className="app">Revo Uninstaller</mark> или подобный софт, который
+            чистит хвосты после удаления. Не все подобные программы могут полностью
+            удалить Adobe, но смогут удалить большую часть зависимостей. По желанию можно
+            почистить реестр после удаления, например с помощью{" "}
+            <mark className="app">Vit Registry Fix</mark>.
+          </li>
+        </ul>
       </DetailsSummary>
     </div>
   );
