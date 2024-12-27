@@ -59,7 +59,7 @@ const AEFromNewbies: React.FC = () => {
             &quot;After Effects от новичка до специалиста&quot; от Сабатовского
           </a>
           <a href="https://www.profileschool.ru/category/video/course_adobe_after_effects_base">
-            &quot;After Effects базового уровня&quot; от Никиты Чеснкова
+            &quot;After Effects базового уровня&quot; от Никиты Чеснокова
           </a>
         </FlexibleLinks>
         <p style={{textAlign: "center"}}>
@@ -1377,7 +1377,7 @@ const AEFromNewbies: React.FC = () => {
           Начнём сразу с того, что эти две программы используются для совершенно разных
           целей. В <mark className="app">After Effects</mark> конечно можно смонтировать
           двухчасовой ролик, а в <mark className="app">Premiere Pro</mark> - сделать всю
-          работу по композингу... Но это всё звучит как полнейшний бред до такой степени,
+          работу по композингу... Но это всё звучит как полнейший бред до такой степени,
           что некоторые пользователи до сих пор почему-то используют программы не для
           того, для чего они созданы.
         </p>
@@ -1416,7 +1416,7 @@ const AEFromNewbies: React.FC = () => {
             их в <mark className="app">Premiere Pro</mark>.
             <AdditionDanger>
               В <mark className="app">After Effects</mark> можно делать композиции длиной
-              максмиум до трёх часов, но крайне не рекомендуется делать их с такой длиной.
+              максимум до трёх часов, но крайне не рекомендуется делать их с такой длиной.
             </AdditionDanger>
           </li>
           <li>
@@ -1582,7 +1582,7 @@ const AEFromNewbies: React.FC = () => {
           <mark className="ui">Anchor Point</mark>. В таком случае в режиме графика{" "}
           <mark className="ui">Value Graph</mark> вы не можете отредактировать скорость.
           Вам нужно либо разделить значения через{" "}
-          <mark className="ui">Separate Dimensions</mark>, если это вомзожно, либо
+          <mark className="ui">Separate Dimensions</mark>, если это возможно, либо
           переключиться на вид графика скорости <mark className="ui">Speed Graph</mark>.
         </p>
         <p>

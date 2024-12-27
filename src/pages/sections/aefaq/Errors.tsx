@@ -953,7 +953,7 @@ const AEErrors: React.FC = () => {
               </p>
               <p>
                 Если вы не используете VPN на устройстве с Windows, то попробуйте
-                отредактровать файл <mark className="file">hosts</mark>. Для этого вам
+                отредактировать файл <mark className="file">hosts</mark>. Для этого вам
                 нужно перейти в{" "}
                 <mark className="path">C:\Windows\System32\drivers\etc</mark>, скопировать
                 файл <mark className="path">hosts</mark> в любое удобное место, открыть
@@ -1483,8 +1483,9 @@ const AEErrors: React.FC = () => {
           и повторите попытку установки заново.
         </p>
         <p>
-          Если очистка с помощью <mark className="app">ACCR</mark> не помогла, почистите
-          папку <mark className="path">C:\Program Files (x86)\Common Files\Adobe</mark> и{" "}
+          Если очистка с помощью <mark className="app">Adobe Creative Cleaner Tool</mark>{" "}
+          не помогла, почистите папку{" "}
+          <mark className="path">C:\Program Files (x86)\Common Files\Adobe</mark> и{" "}
           <mark className="path">C:\Program Files\Adobe</mark> от лишних хвостов.
         </p>
       </DetailsSummary>

@@ -884,7 +884,7 @@ const AEInstallProblems: React.FC = () => {
           caption="Adobe Creative Cloud"
         />
         <p>
-          В открывшемся окне отключаем три пункта про автозапуск и автообновление
+          В открывшемся окне отключаем три пункта про автозапуск и авто обновление
           приложений в разделе <mark className="ui">Общие</mark>.
         </p>
         <ImageFigure
@@ -928,7 +928,7 @@ const AEInstallProblems: React.FC = () => {
         <p>
           Внизу интерфейса <mark className="app">GenP</mark> есть несколько кнопок. Нам
           нужно нажать на кнопку <mark className="ui">Search</mark> и подождать до
-          повяления двух файлов для <mark className="app">Creative Cloud</mark>.{" "}
+          появления двух файлов для <mark className="app">Creative Cloud</mark>.{" "}
         </p>
         <ImageFigure
           styleClass="figure_windows-light"
