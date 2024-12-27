@@ -6,7 +6,7 @@ import {
   AdditionInfo,
   AdditionWarning,
 } from "../../../components/Additions";
-import {ImageFigure, YouTubeVideo} from "../../../components/ContentFigure";
+import {ImageFigure, VideoFigure, YouTubeVideo} from "../../../components/ContentFigure";
 const AEExport: React.FC = () => {
   return (
     <div
@@ -638,7 +638,84 @@ const AEExport: React.FC = () => {
         </p>
       </DetailsSummary>
       <DetailsSummary title="Как вывести композицию в .webm и VP9?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>
+          Нативно из <mark className="app">After Effects</mark> и{" "}
+          <mark className="app">Media Encoder</mark> нельзя вывести композицию в{" "}
+          <mark className="file">.webm</mark>, поэтому мы пойдем таким путём: сначала
+          выведем композицию в <mark className="file">Apple Prores 422</mark>, если вам не
+          нужно выводить с альфа-каналом или в{" "}
+          <mark className="file">Apple Prores 4444</mark>, если вам нужно вывести с
+          альфа-каналом.
+        </p>
+        <AdditionDanger>
+          Крайне не рекомендуем использовать плагин{" "}
+          <a href="http://fnord.com/">WebM от fnord</a> для экспорта из Media Encoder, так
+          как он часто выводит видео на прозрачном фоне с жуткими артефактами.
+        </AdditionDanger>
+        <p>
+          Для начала нам нужно вывести видео как обычно: в{" "}
+          <mark className="video">Apple Prores 4444</mark>, если вы хотите видео с
+          альфа-каналом или в <mark className="video">Apple Prores 422</mark>, если вы
+          хотите видео без альфа-канала. Для этого мы переходим в очередь рендера,
+          открываем <mark className="ui">Output Module</mark>. В пункте{" "}
+          <mark className="ui">Format</mark> выбираем{" "}
+          <mark className="ui">Quicktime</mark>, а в{" "}
+          <mark className="ui">Format Options</mark> нужный нам кодек.
+        </p>
+        <AdditionWarning>
+          Не забудьте поставить в <mark className="ui">Channels</mark> параметр{" "}
+          <mark className="ui">RGB + Alpha</mark>, если вы собираетесь выводить видео с
+          альфа-каналом.
+        </AdditionWarning>
+        <VideoFigure
+          styleClass="figure_windows-dark"
+          videoSrc="images/aftereffects/export_to_prores.mp4"
+          caption="Выводим видео в Apple Prores"
+        />
+        <p>
+          Затем не забудьте указать путь, куда вы хотите вывести видео, и нажмите на{" "}
+          <mark className="ui">Render</mark> или на клавишу{" "}
+          <mark className="key">Enter</mark>. Затем открываем{" "}
+          <mark className="app">Shutter Encoder</mark> и вставляем в него выведенное видео
+          из <mark className="app">After Effects</mark>. В пункте{" "}
+          <mark className="ui">Choose Function</mark> выбираем{" "}
+          <mark className="video">VP9</mark>
+        </p>
+        <AdditionInfo>
+          Если у вас не установлен <mark className="app">Shutter Encoder</mark>, то его
+          можно скачать <a href="https://www.shutterencoder.com/">по этой ссылке</a>.
+        </AdditionInfo>
+        <ImageFigure
+          styleClass="figure_macos-dark"
+          imgSrc="images/select_vp9_shutter_encoder.png"
+          imgTitle="Выбор VP9 в Shutter Encoder"
+          caption="Shutter Encoder"
+        />
+        <p>
+          Затем включаем в дополнительных опциях{" "}
+          <mark className="ui">Enable alpha channel</mark>, если вы хотите вывести видео с
+          альфа-каналом.
+        </p>
+        <ImageFigure
+          styleClass="figure_macos-dark"
+          imgSrc="images/enable_alpha_shutter_encoder.png"
+          imgTitle="Включение альфа-канала в Shutter Encoder"
+          caption="Shutter Encoder"
+        />
+        <p>
+          В программе можно также выставить путь для файла (по умолчанию видео кодируется
+          в папку, где был исходник) и остальные параметры, если вам это нужно. После
+          настроек нажимаем на кнопку <mark className="ui">Start function</mark> или на
+          комбинацию клавиш <mark className="key">Ctrl + Enter</mark>.
+        </p>
+        <p>
+          После экспорта вы получите видео в кодеке <mark className="video">VP9</mark> и
+          контейнере <mark className="file">.webm</mark>, которое можно использовать в
+          веб-проектах или где-нибудь ещё. Учтите: поддержка{" "}
+          <mark className="video">WebM</mark> на прозрачном фоне в{" "}
+          <mark className="app">Safari</mark> для устройств на iOS и macOS отсутствует,
+          там будет отображаться чёрный фон вместо прозрачности.
+        </p>
       </DetailsSummary>
       <DetailsSummary title="Как вывести композицию в .gif?">
         <p>{/* fixme: написать!! */}</p>
