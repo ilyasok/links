@@ -288,7 +288,7 @@ const AETips: React.FC = () => {
           Для создания прокси нужно перейти в окно <mark className="ui">Project</mark>,
           выбрать композицию с которым вы испытываете проблемы, нажать{" "}
           <mark className="key">ПКМ</mark> и выбрать{" "}
-          <mark className="ui">Create Proxy &gt; Movie</mark>. После нажатия вам отправят
+          <mark className="ui">Create Proxy &gt; Movie</mark>. После нажатия вас отправят
           в очередь экспорта. Далее в нём нужно открыть пункт{" "}
           <mark className="ui">Render Settings &gt; Custom</mark> и поставить везде
           наивысшие настройки (или выбрать пресет{" "}
