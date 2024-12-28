@@ -718,7 +718,172 @@ const AEExport: React.FC = () => {
         </p>
       </DetailsSummary>
       <DetailsSummary title="Как вывести композицию в .gif?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>
+          В базовой комплектации <mark className="app">After Effects</mark> вывести
+          композицию в формат <mark className="image">GIF</mark> не получится, но никто не
+          запрещал воспользоваться альтернативными способами.
+        </p>
+        <AdditionInfo>
+          Если вы собираетесь выводить композицию в <mark className="image">GIF</mark> для
+          веб-страницы, то советую лучше вывести в формат{" "}
+          <mark className="image">WebM</mark>. Он лучше подходит для получения
+          качественного изображения с маленьким размером.
+        </AdditionInfo>
+        <ul>
+          <li>
+            Из самого <mark className="app">After Effects</mark> можно вывести{" "}
+            <mark className="file">.gif</mark> с помощью расширения{" "}
+            <mark className="plugin">GifGun</mark>.
+          </li>
+          <li>
+            Либо вывести <mark className="file">.gif</mark> через{" "}
+            <del style={{opacity: 0.5}}>упаси боже</del>{" "}
+            <mark className="plugin">Media Encoder</mark>.
+          </li>
+          <li>
+            С помощью конвертации вашего видео через онлайн-сервис{" "}
+            <a href="https://ezgif.com/video-to-gif">Ezgif</a>. Он даёт самый адекватный
+            результат по соотношению <mark>качество/размер файла</mark>.
+          </li>
+        </ul>
+        <AdditionWarning>
+          У формата <mark className="image">GIF</mark> есть множество ограничений и
+          нюансов.
+          <ul>
+            <li>
+              Данный формат не поддерживает полупрозрачность: только два цвета
+              <mark>#FFFFFF</mark> и <mark>#000000</mark> для альфа-канала.
+            </li>
+            <li>
+              <mark className="image">GIF</mark> вмещает в себя только 256 цветов, поэтому
+              забудьте о плавных градиентах и качественном цвете.
+            </li>
+            <li>
+              Полученный файл может быть огромным по весу, если указать большое разрешение
+              или FPS. Максимально рекомендуемо использовать разрешение{" "}
+              <mark>1024x576</mark> и <mark>15 FPS</mark> для композиций с соотношением
+              сторон <mark>16:9</mark>.
+            </li>
+          </ul>
+        </AdditionWarning>
+        <p>
+          Предположим, что вы уже установили расширение{" "}
+          <mark className="plugin">GifGun</mark>. Он должен появиться в{" "}
+          <mark className="ui">Window &gt; Extensions</mark>.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-light"
+          imgSrc="images/aftereffects/open_gifgun.png"
+          imgTitle="Открытие расширения GifGun"
+          caption="After Effects"
+        />
+        <p>
+          После открытия расширения вы увидите простое окно с двумя кнопками:{" "}
+          <mark className="ui">Make GIF</mark> для начала экспорта в{" "}
+          <mark className="file">.gif</mark> и кнопку с шестерёнкой. Нажав на вторую
+          кнопку вы откроете настройки, где сможете указать размер, FPS или путь к
+          выходному файлу.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/aftereffects/gifgun_settings.png"
+          imgTitle="Настройки расширения GifGun"
+          caption="GifGun"
+        />
+        <p>
+          <mark className="image">GIF</mark> можно ещё получить с помощью{" "}
+          <mark className="app">Media Encoder</mark>. Хоть мы и отговариваем от его
+          использования, но в выборе различных форматов для экспорта он занимает более
+          выигрышную позицию по сравнению с выводом напрямую из{" "}
+          <mark className="app">After Effects</mark>.
+        </p>
+        <p>
+          Для того чтобы начать экспорт через <mark className="app">Media Encoder</mark>,
+          перейдите в <mark className="ui">File &gt; Export</mark> и нажмите на{" "}
+          <mark className="ui">Add to Adobe Media Encoder Queue</mark> и подождите, когда
+          откроется вторая программа.
+        </p>
+        <AdditionInfo>
+          Композиция из <mark className="app">After Effects</mark> корректно отправится в{" "}
+          <mark className="app">Media Encoder</mark> в том случае, если у вас установлен
+          одинаковый год программ и на стандартном расположении программ. В противном
+          случае вам выбьют ошибку о том, что <mark className="app">Media Encoder</mark>{" "}
+          не установлен.
+        </AdditionInfo>
+        <p>
+          После открытия <mark className="app">Media Encoder</mark> укажите формат{" "}
+          <mark className="image">GIF</mark> в очереди экспорта. Там же вы можете указать
+          пресет и путь к выходному файлу.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-light"
+          imgSrc="images/aftereffects/selecting_gif_media_encoder.png"
+          imgTitle="Выбираем формат GIF для экспорта через Media Encoder"
+          caption="Media Encoder"
+        />
+        <p>
+          Для детальной настройки вы можете открыть{" "}
+          <mark className="ui">Export Settings</mark>, нажав по названию стандартного
+          пресета. Там же вы можете указать разрешение, FPS и другие параметры.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-light"
+          imgSrc="images/aftereffects/export_settings_media_encoder.png"
+          imgTitle="Настройки экспорта через Media Encoder"
+          caption="Export Settings"
+        />
+        <p>
+          После настройки просто нажмите на кнопку <mark className="ui">OK</mark> и
+          нажмите на зелёную стрелочку для начала экспорта. После этого в месте, куда вы
+          указали путь, появится файл формата <mark className="image">GIF</mark>.
+        </p>{" "}
+        <ImageFigure
+          styleClass="figure_windows-light"
+          imgSrc="images/aftereffects/start_export_media_encoder.png"
+          imgTitle="Начинаем экспорт через Media Encoder"
+          caption="Media Encoder"
+        />
+        <p>
+          Если вы не хотите возиться с экспортом или у вас уже есть готовое видео, которое
+          надо лишь перегнать в формат <mark className="image">GIF</mark>, то советую
+          онлайн-сервис <a href="https://ezgif.com/video-to-gif">Ezgif</a>. При
+          конвертации через этот сервис вы получите <mark className="image">GIF</mark> с
+          отличным соотношением качества и размера файла.
+        </p>
+        <p>
+          Для начала конвертации просто загрузите ваше видео в сервис, а затем нажмите на
+          кнопку <mark className="ui">Upload Video</mark>.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-light"
+          imgSrc="images/ezgif_main.png"
+          imgTitle="Главная страница Ezgif"
+          caption="Ezgif"
+        />
+        <AdditionWarning>
+          Максимальный размер файла, который можно загрузить в сервис, не должен превышать
+          200 Мб. Максимальная длина не должна превышать 60 секунд для конвертации в 5 FPS
+          или 15 секунд для конвертации в 20 FPS.
+        </AdditionWarning>
+        <p>
+          После загрузки видео вы сможете настроить FPS и нужное разрешение. Выбор из
+          настроек мягко говоря не очень широкий, но для простой конвертации хватает. Если
+          вы настроили всё, что вам нужно, то просто нажмите на кнопку{" "}
+          <mark className="ui">Convert to GIF!</mark>.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-light"
+          imgSrc="images/ezgif_settings.png"
+          imgTitle="Настройки конвертации в Ezgif"
+          caption="Ezgif"
+        />
+        <p>
+          Далее после успешной конвертации вы получите ваше видео в формате{" "}
+          <mark className="image">GIF</mark> чуть ниже, в разделе{" "}
+          <mark className="ui">Output GIF Animation</mark>, которое можно сохранить по
+          нажатию <mark className="key">ПКМ</mark> &gt;{" "}
+          <mark className="ui">Сохранить изображение как...</mark>.
+        </p>
       </DetailsSummary>
       <DetailsSummary title="Как вывести композицию с альфа-каналом, то есть с прозрачностью?">
         <p>{/* FIXME: написать!! */}</p>
