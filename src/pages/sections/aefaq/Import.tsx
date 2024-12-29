@@ -1,6 +1,12 @@
 import React from "react";
 import DetailsSummary from "../../../components/DetailsSummary";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
+import {
+  AdditionDanger,
+  AdditionInfo,
+  AdditionWarning,
+} from "../../../components/Additions";
+import {ImageFigure, VideoFigure} from "../../../components/ContentFigure";
 
 const AEImport: React.FC = () => {
   return (
@@ -60,10 +66,16 @@ const AEImport: React.FC = () => {
             <code>https://apps.microsoft.com/9n4wgh0z6vhq</code>
           </li>
           <li>
-            Для скачивания кодека <mark className="video">HEIF</mark>.
+            Для скачивания кодека <mark className="video">HEIF/HEIC</mark>.
             <code>https://apps.microsoft.com/9pmmsr1cgpwg</code>
           </li>
         </ul>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/link_generator_msstore.png"
+          imgTitle="Генератор ссылок из Microsoft Store"
+          caption="Браузер"
+        />
         <p>
           После вставки ссылки и нажатия на кнопку <mark className="ui">OK</mark>, нажмите
           на файл с форматом <mark className="file">.appxbundle</mark> для его скачивания.
@@ -72,12 +84,6 @@ const AEImport: React.FC = () => {
           Если браузер жалуется, мол вы скачиваете редкий файл или некий вирус, то
           проигнорируйте это и продолжите скачивание дальше.
         </AdditionWarning>
-        <ImageFigure
-          styleClass="figure_windows-dark"
-          imgSrc="images/link_generator_msstore.png"
-          imgTitle="Генератор ссылок из Microsoft Store"
-          caption="Браузер"
-        />
         <p>
           Чтобы установить пакеты с расширением <mark className="file">.appxbundle</mark>,
           достаточно их открыть двойным кликом. Если вам предлагают открыть файл с помощью{" "}
