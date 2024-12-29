@@ -886,7 +886,56 @@ const AEExport: React.FC = () => {
         </p>
       </DetailsSummary>
       <DetailsSummary title="Как вывести композицию с альфа-каналом, то есть с прозрачностью?">
-        <p>{/* FIXME: написать!! */}</p>
+        <AdditionWarning>
+          Сразу скажу, в <mark className="video">H.264</mark> и{" "}
+          <mark className="file">.mp4</mark> нельзя вывести композицию с альфа-каналом.
+          Это можно сделать только на устройствах с macOS и при использовании кодека{" "}
+          <mark className="video">HEVC / H.265</mark>.
+        </AdditionWarning>
+        <p>
+          Прежде чем начать выводить композицию с альфа-каналом, убедитесь в том, что в
+          вашей композиции есть сам альфа-канал. Без этого никак. Чтобы проверить это,
+          можно воспользоваться кнопкой{" "}
+          <mark className="ui">Toggle Transparency Grid</mark>, которая подставляет сетку
+          в виде шахматной доски для отображения прозрачных частей в композиции.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/aftereffects/toggle_transparency_grid.png"
+          imgTitle="Включение сетки для отображения прозрачных частей"
+          caption="Composition"
+        />
+        <p>
+          Если всё с этим в порядке, то пора переходить в{" "}
+          <mark className="ui">Render Queue</mark>, нажав на комбинацию клавиш{" "}
+          <mark className="key">Ctrl + M</mark>. После перехода в очередь рендера откройте{" "}
+          <mark className="ui">Output Module</mark> и выберите в пункте{" "}
+          <mark className="ui">Format</mark> параметр{" "}
+          <mark className="plugin">Quicktime</mark>. Потом откройте{" "}
+          <mark className="ui">Format Options</mark> и выберите там параметр{" "}
+          <mark className="video">Apple ProRes 4444</mark> или{" "}
+          <mark className="video">GoPro Cineform</mark> в разделе Video Codec. Затем не
+          забудьте указать в <mark className="ui">Channels</mark> параметр{" "}
+          <mark className="ui">RGB + Alpha</mark>, чтобы вывести видео с прозрачностью.
+        </p>
+        <VideoFigure
+          styleClass="figure_windows-dark"
+          videoSrc="images/aftereffects/export_prores4444_rgb-alpha.mp4"
+          caption="After Effects"
+        />
+        <p>
+          Затем укажите путь для вывода файла и нажмите на кнопку{" "}
+          <mark className="ui">Render</mark> или на клавишу{" "}
+          <mark className="key">Enter</mark>. После экспорта вы сможете воспользоваться
+          этим видео в последующем монтаже видео или где-нибудь ещё.
+        </p>
+        <AdditionInfo>
+          Если вы хотите посмотреть такое видео, но у вас оно не открывается стандартным
+          плеером, то вам нужно установить сторонний видеоплеер, например{" "}
+          <mark className="app">VLC</mark> или <mark className="app">MPC-HC</mark>.
+          Учтите, что не все видеопроигрыватели корректно отображают видео с
+          альфа-каналом.
+        </AdditionInfo>
       </DetailsSummary>
       <DetailsSummary title="Как вывести один кадр из композиции как один файл изображения?">
         <p>{/* FIXME: написать!! */}</p>
