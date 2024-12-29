@@ -943,11 +943,57 @@ const AEExport: React.FC = () => {
       <DetailsSummary title="Как вывести все кадры из композиций как отдельные изображения?">
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
-      <DetailsSummary title="Как вывести композицию с отображением всех границ и путей движения?">
-        <p>{/* FIXME: написать!! */}</p>
+      <DetailsSummary title="Как вывести композицию файлом с отображением всех границ и путей движения?">
+        <p>
+          Для этого существует сторонний плагин <mark className="plugin">Cyclops</mark>. С
+          помощью него можно вывести вашу композицию вместе с границами и путями движения
+          в формате видео.
+        </p>
+        <YouTubeVideo
+          link="vNH3d9YqLo4"
+          caption="Cyclops Tutorial"
+        />
       </DetailsSummary>
       <DetailsSummary title="Как сохранить свой шаблон с настройками для экспорта композиций?">
-        <p>{/* FIXME: написать!! */}</p>
+        <p>
+          У каждого пользователя <mark className="app">After Effects</mark> может
+          возникнуть желание сохранить настройки для экспорта, чтобы каждый раз не
+          настраивать его. Для создания своих предустановок нужно открыть очередь экспорта
+          с помощью комбинации клавиш <mark className="key">Ctrl + M</mark> и нажать на
+          стрелочку возле <mark className="ui">Output Module</mark>. В открывшемся меню
+          нужно выбрать <mark className="key">Make Template</mark> для перехода на окно
+          создания и настроек пресетов.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/aftereffects/render_queue_make_template.png"
+          imgTitle="Создаём шаблон экспорта"
+          caption="Make Template"
+        />
+        <p>
+          В открывшемся окне у нас уже будет создан пресет под названием{" "}
+          <mark>Untitled</mark>, название которого можно заменить на какое угодно. В этом
+          же окне можно задать пресеты и для других типов файлов по умолчанию, если
+          необходимо.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/aftereffects/output_module_templates.png"
+          imgTitle="Настраиваем шаблоны для экспорта"
+          caption="Output Module Templates"
+        />
+        <p>
+          Для редактирования нового шаблона нужно нажать на{" "}
+          <mark className="ui">Edit</mark>, которое открывает уже привычное нам окно{" "}
+          <mark className="key">Output Module Settings</mark>. Окно редактирования шаблона
+          экспорта буквально ничем не отличается от обычной настройки типа вывода.
+        </p>
+        <p>
+          После создания пресета - проверьте его на работоспособность и поставьте новый
+          шаблон по умолчанию для определённого типа экспорта по вашему желанию.
+          Аналогичным образом можно создать пресеты и для{" "}
+          <mark className="ui">Render Settings</mark>.
+        </p>
       </DetailsSummary>
       <DetailsSummary title="Я сделал работу в After Effects, но мне нужно передать .aep файл вместе с исходниками другому человеку. Возможно ли это сделать без танцев с бубном?">
         <p>
