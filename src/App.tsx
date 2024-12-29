@@ -5,7 +5,6 @@ import {Navigate, Route, Routes, useLocation} from "react-router-dom";
 import themeConfig from "./styles/ant_theme";
 import {LinearProgress} from "@mui/material";
 const Links = lazy(() => import("./pages/linksPage"));
-const AboutPage = lazy(() => import("./pages/aboutPage"));
 const ChatRules = lazy(() => import("./pages/chatRules"));
 const NotFound = lazy(() => import("./pages/notFound"));
 const AEFaQ = lazy(() => import("./pages/aefaqPage"));
@@ -132,10 +131,6 @@ export const App = () => {
             <Route
               path="/rules"
               element={<ChatRules />}
-            />
-            <Route
-              path="/about"
-              element={<AboutPage />}
             />
             <Route
               path="*"
