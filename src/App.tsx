@@ -41,10 +41,11 @@ const trackPageView = (path: string) => {
 
 export const App = () => {
   const location = useLocation();
-
   useEffect(() => {
     const path = window.location.pathname;
-    if (path.endsWith(".html")) {
+    if (path.endsWith("/index.html")) {
+      window.location.replace("/");
+    } else if (path.endsWith(".html")) {
       window.location.replace(path.replace(/\.html$/, ""));
     } else {
       trackPageView(path);
