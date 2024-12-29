@@ -5,15 +5,16 @@ import {ThemeToggleButton} from "./modal/ThemeChanger";
 import {SearchButton} from "./features/SearchInPage";
 import {Tooltip} from "antd";
 import {motion} from "framer-motion";
+
 const Header: React.FC<{title: string}> = ({title}) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const checkScrollPosition = () => {
     setIsVisible(window.scrollY > 150);
   };
-
   useEffect(() => {
     window.addEventListener("scroll", checkScrollPosition);
+
     return () => {
       window.removeEventListener("scroll", checkScrollPosition);
     };

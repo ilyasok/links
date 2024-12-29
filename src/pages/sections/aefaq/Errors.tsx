@@ -8,12 +8,10 @@ import {
 import {ImageFigure, VideoFigure} from "../../../components/ContentFigure";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 import ContentSwitcher from "../../../components/features/OperatingSystemFilter";
+
 const AEErrors: React.FC = () => {
   return (
-    <div
-      className="faq-content"
-      id="errors"
-    >
+    <div className="faq-content">
       <AdditionDanger>
         Пожалуйста, не ленитесь и внимательно прочтите ошибку, которую выдаёт программа. В
         большинстве случаев в описании ошибки уже содержится причина и возможное решение
@@ -456,7 +454,7 @@ const AEErrors: React.FC = () => {
           <a href="https://www.shutterencoder.com/">Shutter Encoder</a>, если
           сталкиваетесь с данной проблемой при импорте какого-нибудь исходника.
         </p>
-        {/* todo: дописать, если найдутся ещё варианты решения */}
+        {/* TODO: дописать, если найдутся ещё варианты решения */}
       </DetailsSummary>
       <DetailsSummary title='"Cinema 4D must be installed in order to use the Cinema 4D renderer" или "Cineware Server Suite failed to acquire renderer port and path. Server commands not available" или "Cinema 4D: Render Failed"'>
         <p>
@@ -638,7 +636,7 @@ const AEErrors: React.FC = () => {
           imgTitle="Включение детального анализа исходника"
           caption="Effect Controls"
         />
-        {/* todo: дописать по возможности */}
+        {/* TODO: дописать по возможности */}
       </DetailsSummary>
       <DetailsSummary title='Вылезло "System Compatibility Report" при запуске After Effects'>
         <AdditionInfo>

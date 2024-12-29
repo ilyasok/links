@@ -4,8 +4,11 @@ import {motion} from "framer-motion";
 
 const SupportDonut: React.FC = () => {
   const [isModalOpen1, setIsModalOpen1] = useState(false);
+
   const [isModalOpen2, setIsModalOpen2] = useState(false);
+
   const [isModalOpen3, setIsModalOpen3] = useState(false);
+
   const [isModalOpen4, setIsModalOpen4] = useState(false);
 
   const showModal1 = () => {
@@ -173,11 +176,10 @@ const SupportDonut: React.FC = () => {
       >
         <div>
           Модуль &quot;поделиться&quot; пока ещё не разработан
-          {/* fixme: сделать */}
+          {/* FIXME: сделать */}
         </div>
       </Modal>
     </>
   );
 };
-
 export default SupportDonut;

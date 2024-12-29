@@ -4,10 +4,7 @@ import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 
 const AEImport: React.FC = () => {
   return (
-    <div
-      className="faq-content"
-      id="import"
-    >
+    <div className="faq-content">
       <GithubUpdateInfo filePath="src/pages/sections/aefaq/Import.tsx" />
       <DetailsSummary title="Какие действия нужно совершить с чужими исходниками, прежде чем начать работу?">
         <p>{/* fixme: написать!! */}</p>

@@ -1,6 +1,5 @@
 import {Apple, WindowSharp} from "@mui/icons-material";
 import React, {ReactNode, useEffect, useState} from "react";
-
 interface ContentSwitcherProps {
   windowsContent: ReactNode; // контент для Windows
   macContent: ReactNode; // контент для macOS
@@ -25,7 +24,6 @@ const ContentSwitcher: React.FC<ContentSwitcherProps> = ({
       setIsWindows(true);
     }
   };
-
   useEffect(() => {
     detectOperatingSystem();
   }, []);
@@ -64,10 +62,8 @@ const ContentSwitcher: React.FC<ContentSwitcherProps> = ({
           {isWindows ? "Показать для macOS" : "Показать для Windows"}
         </button>
       </div>
-
       {isWindows ? windowsContent : macContent}
     </div>
   );
 };
-
 export default ContentSwitcher;

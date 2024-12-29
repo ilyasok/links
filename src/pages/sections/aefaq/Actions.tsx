@@ -3,12 +3,10 @@ import DetailsSummary from "../../../components/DetailsSummary";
 import {ImageFigure, VideoFigure, YouTubeVideo} from "../../../components/ContentFigure";
 import {AdditionInfo, AdditionWarning} from "../../../components/Additions";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
+
 const AEActions: React.FC = () => {
   return (
-    <div
-      className="faq-content"
-      id="actions"
-    >
+    <div className="faq-content">
       <GithubUpdateInfo filePath="src/pages/sections/aefaq/Actions.tsx" />
       <DetailsSummary title="Чем бы мне улучшить качество исходников?">
         <p>

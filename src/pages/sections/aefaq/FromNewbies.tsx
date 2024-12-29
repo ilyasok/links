@@ -9,12 +9,10 @@ import ContentSwitcher from "../../../components/features/OperatingSystemFilter"
 import {ImageFigure, VideoFigure, YouTubeVideo} from "../../../components/ContentFigure";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 import {FlexibleLinks} from "../../../components/FlexibleLinksFaQ";
+
 const AEFromNewbies: React.FC = () => {
   return (
-    <div
-      className="faq-content"
-      id="from-newbies"
-    >
+    <div className="faq-content">
       <GithubUpdateInfo filePath="src/pages/sections/aefaq/FromNewbies.tsx" />
       <DetailsSummary title="Первый раз установил After Effects, с чего бы мне начать обучение?">
         <p>
@@ -1219,7 +1217,7 @@ const AEFromNewbies: React.FC = () => {
             <mark className="key"></mark>
           </li>
         </ul>
-        {/* todo: дополнить комбинации по возможности */}
+        {/* TODO: дополнить комбинации по возможности */}
       </DetailsSummary>
       <DetailsSummary title="Где я могу узнать об нововведениях в обновлениях After Effects?">
         <p>

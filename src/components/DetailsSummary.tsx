@@ -1,20 +1,16 @@
-import {message, Tooltip} from "antd";
-import React, {ReactNode, useState, useRef} from "react";
-
+import {Tooltip, message} from "antd";
+import React, {ReactNode, useRef, useState} from "react";
 interface DetailsSummaryProps {
   title: string;
   children: ReactNode;
 }
-
 export const generateAnchorId = () => {
   const containers = Array.from(document.querySelectorAll(".faq-content"));
   let generatedAnchor = "";
-
   containers.forEach((container, blockIndex) => {
     const summaries = Array.from(container.querySelectorAll(".faq-summary"));
     summaries.forEach((summary, summaryIndex) => {
       generatedAnchor = `${blockIndex + 1}.${summaryIndex + 1}`;
-
       if (!summary.hasAttribute("id")) {
         summary.setAttribute("id", generatedAnchor);
       }
@@ -25,7 +21,9 @@ export const generateAnchorId = () => {
           details.setAttribute("open", "true");
           setTimeout(() => {
             const headerHeight = document.querySelector("header")?.offsetHeight ?? 0;
+
             const padding = 24;
+
             const y =
               summary.getBoundingClientRect().top +
               window.pageYOffset -
@@ -43,6 +41,7 @@ export const generateAnchorId = () => {
 
 const DetailsSummary: React.FC<DetailsSummaryProps> = ({title, children}) => {
   const [isOpen, setIsOpen] = useState(false);
+
   const detailsRef = useRef<HTMLDetailsElement>(null);
 
   const handleToggle = () => {
@@ -51,6 +50,7 @@ const DetailsSummary: React.FC<DetailsSummaryProps> = ({title, children}) => {
 
   const handleCopyAnchor = () => {
     const anchorId = detailsRef.current?.querySelector(".faq-summary")?.id ?? "";
+
     const anchor = `${window.location.origin}${window.location.pathname}#${anchorId}`;
     navigator.clipboard.writeText(anchor);
     message.success(
@@ -94,5 +94,4 @@ const DetailsSummary: React.FC<DetailsSummaryProps> = ({title, children}) => {
     </details>
   );
 };
-
 export default DetailsSummary;

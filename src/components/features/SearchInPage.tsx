@@ -1,14 +1,13 @@
-import {Search, BackspaceOutlined} from "@mui/icons-material";
-import {message, Modal, Tooltip} from "antd";
+import {BackspaceOutlined, Search} from "@mui/icons-material";
+import {Modal, Tooltip, message} from "antd";
 import React, {
   createContext,
   useContext,
-  useMemo,
-  useState,
   useEffect,
+  useMemo,
   useRef,
+  useState,
 } from "react";
-
 interface SearchContextType {
   isOpen: boolean;
   openModal: () => void;
@@ -17,7 +16,6 @@ interface SearchContextType {
 }
 
 const SearchContext = createContext<SearchContextType | undefined>(undefined);
-
 export const SearchProvider: React.FC<{
   children: React.ReactNode;
   isPageLoaded: boolean;
@@ -25,11 +23,12 @@ export const SearchProvider: React.FC<{
   const [isOpen, setIsOpen] = useState(false);
 
   const openModal = () => {
-    if (isPageLoaded) setIsOpen(true);
+    if (isPageLoaded) {
+      setIsOpen(true);
+    }
   };
 
   const closeModal = () => setIsOpen(false);
-
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if ((event.ctrlKey && event.key === "f") || (event.ctrlKey && event.key === "а")) {
@@ -41,8 +40,8 @@ export const SearchProvider: React.FC<{
         }
       }
     };
-
     window.addEventListener("keydown", handleKeyDown);
+
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
@@ -63,6 +62,7 @@ export const useSearch = () => {
       "useSearch должен использоваться с SearchProvider. кто-то забыл обернуть компонент на странице."
     );
   }
+
   return context;
 };
 
@@ -92,19 +92,23 @@ export const SearchButton: React.FC = () => {
 
 export const SearchInPage: React.FC = () => {
   const {isOpen, closeModal, isPageLoaded} = useSearch();
+
   const [query, setQuery] = useState("");
+
   const [results, setResults] = useState<{title: string; content: string; id: string}[]>(
     []
   );
-  const inputRef = useRef<HTMLInputElement>(null);
 
+  const inputRef = useRef<HTMLInputElement>(null);
   useEffect(() => {
     if (isOpen) {
       setQuery("");
       setResults([]);
+
       const timeout = setTimeout(() => {
         inputRef.current?.focus();
       }, 0);
+
       return () => clearTimeout(timeout);
     }
   }, [isOpen]);
@@ -112,19 +116,24 @@ export const SearchInPage: React.FC = () => {
   const decodeHtmlEntities = (text: string) => {
     const textArea = document.createElement("textarea");
     textArea.innerHTML = text;
+
     return textArea.value;
   };
 
   const extractDetailsData = () => {
     const details = document.querySelectorAll("details");
-    const data: {title: string; content: string; id: string}[] = [];
 
+    const data: {title: string; content: string; id: string}[] = [];
     details.forEach((detail) => {
       const summary = detail.querySelector("summary");
-      if (!summary) return;
+      if (!summary) {
+        return;
+      }
 
       const id = summary.getAttribute("id");
-      if (!id) return;
+      if (!id) {
+        return;
+      }
 
       const title = summary.textContent ?? "";
 
@@ -149,14 +158,15 @@ export const SearchInPage: React.FC = () => {
                 if (element.tagName === "MARK" || element.tagName === "A") {
                   return decodeHtmlEntities(element.innerHTML?.trim() ?? "");
                 }
+
                 return decodeHtmlEntities(element.textContent?.trim() ?? "");
               }
+
               return "";
             })
             .filter(Boolean)
             .join(" ")
             .trim();
-
           if (!directChildUl) {
             return parentText;
           }
@@ -172,12 +182,15 @@ export const SearchInPage: React.FC = () => {
                     if (element.tagName === "MARK" || element.tagName === "A") {
                       return decodeHtmlEntities(element.innerHTML?.trim() ?? "");
                     }
+
                     return decodeHtmlEntities(element.textContent?.trim() ?? "");
                   }
+
                   return "";
                 })
                 .filter(Boolean)
                 .join(" ");
+
               return text.trim();
             })
             .filter(Boolean)
@@ -189,7 +202,6 @@ export const SearchInPage: React.FC = () => {
         .join("\n");
 
       const text = [content, listItems].join("\n");
-
       if (title || text) {
         data.push({title, content: text, id});
       }
@@ -200,9 +212,9 @@ export const SearchInPage: React.FC = () => {
 
   const handleSearch = (text: string) => {
     setQuery(text);
-
     if (!isPageLoaded || !text.trim()) {
       setResults([]);
+
       return;
     }
 
@@ -210,31 +222,34 @@ export const SearchInPage: React.FC = () => {
       .toLowerCase()
       .split(/\s+/)
       .filter((word) => word.length > 0);
+
     const detailsData = extractDetailsData();
 
     const filtered = detailsData.filter(({title, content}) => {
       const titleLower = title.toLowerCase();
+
       const contentLower = content.toLowerCase();
 
       return searchWords.every(
         (word) => titleLower.includes(word) || contentLower.includes(word)
       );
     });
-
     setResults(filtered);
   };
 
   const extractMatchingLine = (content: string, query: string) => {
-    if (!content || !query.trim()) return "";
+    if (!content || !query.trim()) {
+      return "";
+    }
 
     const lines = content.split("\n").filter((line) => line.trim().length > 0);
+
     const searchWords = query
       .toLowerCase()
       .split(/\s+/)
       .filter((word) => word.length > 0);
 
     const cleanLines = lines.map((line) => line.trim());
-
     for (const line of cleanLines) {
       const lineLower = line.toLowerCase();
       if (searchWords.every((word) => lineLower.includes(word))) {
@@ -254,7 +269,9 @@ export const SearchInPage: React.FC = () => {
 
   const handleLinkClick = (id: string) => {
     const summaryElement = document.getElementById(id);
-    if (!summaryElement) return;
+    if (!summaryElement) {
+      return;
+    }
 
     const detailsElement = summaryElement.closest("details");
     if (detailsElement) {
@@ -262,6 +279,7 @@ export const SearchInPage: React.FC = () => {
     }
 
     const headerHeight = document.querySelector("header")?.offsetHeight ?? 0;
+
     const padding = 24;
 
     const y =
@@ -269,12 +287,10 @@ export const SearchInPage: React.FC = () => {
       window.pageYOffset -
       headerHeight -
       padding;
-
     window.scrollTo({
       top: y,
       behavior: "smooth",
     });
-
     closeModal();
   };
 
@@ -388,7 +404,7 @@ export const SearchInPage: React.FC = () => {
               )}
               {location.pathname === "/psfaq" && (
                 <div className="flexible-links">
-                  <button onClick={() => handleLinkClick("wherefind")}>
+                  <button onClick={() => handleLinkClick("where-find")}>
                     Ищем полезности
                   </button>
                   <button onClick={() => handleLinkClick("install-problems")}>

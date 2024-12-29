@@ -6,18 +6,15 @@ import {VideoFigure} from "../../../components/ContentFigure";
 
 const AEExprActions: React.FC = () => {
   return (
-    <div
-      className="faq-content"
-      id="actions"
-    >
+    <div className="faq-content">
       <GithubUpdateInfo filePath="src/pages/sections/aeexprfaq/Actions.tsx" />
       <DetailsSummary title="Как мне сделать 'прыгучую' анимацию нужного параметра?">
         <p>
-          {/* fixme: про bouncy текста или положения. можно привести в пример motion tools pro где это есть */}
+          {/* FIXME: про bouncy текста или положения. можно привести в пример motion tools pro где это есть */}
         </p>
       </DetailsSummary>
       <DetailsSummary title="Как сделать слайдер с значением больше миллиона?">
-        {/* fixme: написать!! */}
+        {/* FIXME: написать!! */}
         <p>
           В <mark className="app">After Effects</mark> нет возможности поставить значение
           в <mark className="plugin">Slider Control</mark> больше чем{" "}
@@ -36,10 +33,10 @@ const AEExprActions: React.FC = () => {
         </AdditionInfo>
       </DetailsSummary>
       <DetailsSummary title="Как сделать так, чтобы мой счётчик не дёргался при анимации числа?">
-        <p>{/* fixme: написать про monospace шрифт через поворот */}</p>
+        <p>{/* FIXME: написать про monospace шрифт через поворот */}</p>
       </DetailsSummary>
       <DetailsSummary title="Как удалить выражения сразу в нескольких слоях?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
     </div>
   );

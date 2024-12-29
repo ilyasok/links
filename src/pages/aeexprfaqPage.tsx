@@ -1,48 +1,60 @@
-import React, {lazy, Suspense, useState, useEffect} from "react";
+import React, {Suspense, lazy, useEffect, useState} from "react";
 import {motion} from "framer-motion";
 import Header from "../components/Header";
 import {Breadcrumb, Divider} from "antd";
 import {Link} from "react-router-dom";
 import {AdditionWarning} from "../components/Additions";
 import Footer from "../components/Footer";
-import {SearchProvider, SearchInPage} from "../components/features/SearchInPage";
+import {SearchInPage, SearchProvider} from "../components/features/SearchInPage";
 import SupportDonut from "../components/modal/SupportDonut";
 import {Helmet} from "react-helmet-async";
 import {CircularProgress} from "@mui/material";
 import {generateAnchorId} from "../components/DetailsSummary";
 
 const AEExprStart = lazy(() => import("./sections/aeexprfaq/Start"));
+
 const AEExprBase = lazy(() => import("./sections/aeexprfaq/Base"));
+
 const AEExprLinking = lazy(() => import("./sections/aeexprfaq/Linking"));
+
 const AEExprFormulas = lazy(() => import("./sections/aeexprfaq/Formulas"));
+
 const AEExprTips = lazy(() => import("./sections/aeexprfaq/Tips"));
+
 const AEExprTechQuestion = lazy(() => import("./sections/aeexprfaq/TechQuestion"));
+
 const AEExprActions = lazy(() => import("./sections/aeexprfaq/Actions"));
+
 const AEExprErrors = lazy(() => import("./sections/aeexprfaq/Errors"));
 
 const AEExpressionPage = () => {
   const sections = [
-    {key: "1", title: "С чего начать?", component: AEExprStart},
-    {key: "2", title: "База всех баз", component: AEExprBase},
-    {key: "3", title: "Ссылки и привязки", component: AEExprLinking},
-    {key: "4", title: "Формулы", component: AEExprFormulas},
-    {key: "5", title: "(не)Вредные советы", component: AEExprTips},
-    {key: "6", title: "Технические вопросы", component: AEExprTechQuestion},
-    {key: "7", title: "Как и чем?", component: AEExprActions},
-    {key: "8", title: "Ошибки и предупреждения", component: AEExprErrors},
+    {key: "1", title: "С чего начать?", id: "start", component: AEExprStart},
+    {key: "2", title: "База всех баз", id: "base", component: AEExprBase},
+    {key: "3", title: "Ссылки и привязки", id: "linking", component: AEExprLinking},
+    {key: "4", title: "Формулы", id: "formulas", component: AEExprFormulas},
+    {key: "5", title: "(не)Вредные советы", id: "tips", component: AEExprTips},
+    {
+      key: "6",
+      title: "Технические вопросы",
+      id: "tech-question",
+      component: AEExprTechQuestion,
+    },
+    {key: "7", title: "Как и чем?", id: "actions", component: AEExprActions},
+    {key: "8", title: "Ошибки и предупреждения", id: "errors", component: AEExprErrors},
   ];
 
   const [visibleSections, setVisibleSections] = useState<string[]>([]);
-  const [isPageLoaded, setIsPageLoaded] = useState(false);
-  const [loadedCount, setLoadedCount] = useState(0);
 
+  const [isPageLoaded, setIsPageLoaded] = useState(false);
+
+  const [loadedCount, setLoadedCount] = useState(0);
   useEffect(() => {
     if (loadedCount === sections.length) {
       setIsPageLoaded(true);
       generateAnchorId();
     }
   }, [loadedCount, sections.length]);
-
   useEffect(() => {
     const loadSections = async () => {
       for (const section of sections) {
@@ -133,9 +145,12 @@ const AEExpressionPage = () => {
                 читателя могут отличаться. Предложения по поводу улучшения материала вы
                 можете отправить на <a href="mailto:me@m1sh3r.ru">почту автора</a>.
               </AdditionWarning>
-              {sections.map(({key, title, component: Component}) =>
+              {sections.map(({key, title, component: Component, id}) =>
                 visibleSections.includes(key) ? (
-                  <div key={key}>
+                  <div
+                    key={key}
+                    id={id}
+                  >
                     <Suspense
                       fallback={
                         <motion.div
@@ -173,7 +188,6 @@ const AEExpressionPage = () => {
                             >
                               {
                                 [
-                                  // fixme: переписать факты
                                   "Всё ещё грузим полезную информацию",
                                   "Интересный факт: в After Effects можно выполнять арифметические операции с помощью знаков сложения и вычитания, умножения и деления",
                                   "Убедитесь в том, что на ваше устройство подключено к Интернету",
@@ -225,5 +239,4 @@ const AEExpressionPage = () => {
     </div>
   );
 };
-
 export default AEExpressionPage;

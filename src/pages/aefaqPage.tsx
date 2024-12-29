@@ -1,4 +1,4 @@
-import React, {useEffect, useState, Suspense, lazy} from "react";
+import React, {Suspense, lazy, useEffect, useState} from "react";
 import {Breadcrumb, Divider} from "antd";
 import {motion} from "framer-motion";
 import {Link} from "react-router-dom";
@@ -13,15 +13,25 @@ import {CircularProgress} from "@mui/material";
 import {generateAnchorId} from "../components/DetailsSummary";
 
 const AEWhereFind = lazy(() => import("./sections/aefaq/WhereFind"));
+
 const AEInstallProblems = lazy(() => import("./sections/aefaq/InstallProblems"));
+
 const AEFromNewbies = lazy(() => import("./sections/aefaq/FromNewbies"));
+
 const AETips = lazy(() => import("./sections/aefaq/Tips"));
+
 const AEImport = lazy(() => import("./sections/aefaq/Import"));
+
 const AEInterface = lazy(() => import("./sections/aefaq/Interface"));
+
 const AEPerformance = lazy(() => import("./sections/aefaq/Performance"));
+
 const AEActions = lazy(() => import("./sections/aefaq/Actions"));
+
 const AEErrors = lazy(() => import("./sections/aefaq/Errors"));
+
 const AEExport = lazy(() => import("./sections/aefaq/Export"));
+
 const AEExportProblems = lazy(() => import("./sections/aefaq/ExportProblems"));
 
 const AEFaQ = () => {
@@ -30,30 +40,50 @@ const AEFaQ = () => {
   }, []);
 
   const sections = [
-    {key: "1", title: "Ищем полезности", component: AEWhereFind},
-    {key: "2", title: "Проблемы с установкой", component: AEInstallProblems},
-    {key: "3", title: "Вопросы от новичков", component: AEFromNewbies},
-    {key: "4", title: "(не)Вредные советы", component: AETips},
-    {key: "5", title: "Импорт", component: AEImport},
-    {key: "6", title: "Интерфейс", component: AEInterface},
-    {key: "7", title: "Производительность", component: AEPerformance},
-    {key: "8", title: "Как и чем?", component: AEActions},
-    {key: "9", title: "Ошибки и предупреждения", component: AEErrors},
-    {key: "10", title: "Экспорт", component: AEExport},
-    {key: "11", title: "Проблемы при экспорте", component: AEExportProblems},
+    {key: "1", title: "Ищем полезности", id: "where-find", component: AEWhereFind},
+    {
+      key: "2",
+      title: "Проблемы с установкой",
+      id: "install-problems",
+      component: AEInstallProblems,
+    },
+    {
+      key: "3",
+      title: "Вопросы от новичков",
+      id: "from-newbies",
+      component: AEFromNewbies,
+    },
+    {key: "4", title: "(не)Вредные советы", id: "tips", component: AETips},
+    {key: "5", title: "Импорт", id: "import", component: AEImport},
+    {key: "6", title: "Интерфейс", id: "interface", component: AEInterface},
+    {
+      key: "7",
+      title: "Производительность",
+      id: "performance",
+      component: AEPerformance,
+    },
+    {key: "8", title: "Как и чем?", id: "actions", component: AEActions},
+    {key: "9", title: "Ошибки и предупреждения", id: "errors", component: AEErrors},
+    {key: "10", title: "Экспорт", id: "export", component: AEExport},
+    {
+      key: "11",
+      title: "Проблемы при экспорте",
+      id: "export-problems",
+      component: AEExportProblems,
+    },
   ];
 
   const [visibleSections, setVisibleSections] = useState<string[]>([]);
-  const [isPageLoaded, setIsPageLoaded] = useState(false);
-  const [loadedCount, setLoadedCount] = useState(0);
 
+  const [isPageLoaded, setIsPageLoaded] = useState(false);
+
+  const [loadedCount, setLoadedCount] = useState(0);
   useEffect(() => {
     if (loadedCount === sections.length) {
       setIsPageLoaded(true);
       generateAnchorId();
     }
   }, [loadedCount, sections.length]);
-
   useEffect(() => {
     const loadSections = async () => {
       for (const section of sections) {
@@ -153,9 +183,12 @@ const AEFaQ = () => {
                 читателя могут отличаться. Предложения по поводу улучшения материала вы
                 можете отправить на <a href="mailto:me@m1sh3r.ru">почту автора</a>.
               </AdditionWarning>
-              {sections.map(({key, title, component: Component}) =>
+              {sections.map(({key, title, component: Component, id}) =>
                 visibleSections.includes(key) ? (
-                  <div key={key}>
+                  <div
+                    key={key}
+                    id={id}
+                  >
                     <Suspense
                       fallback={
                         <motion.div
@@ -244,5 +277,4 @@ const AEFaQ = () => {
     </div>
   );
 };
-
 export default AEFaQ;

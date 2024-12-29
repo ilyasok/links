@@ -1,22 +1,18 @@
 import {motion} from "framer-motion";
 import React from "react";
 import {Link} from "react-router-dom";
-
 interface LinkCardProps {
   href: string;
   icon: JSX.Element;
   name: string;
   description: string;
 }
-
 interface LinkCardPropsNoDescription {
   href: string;
   icon: JSX.Element;
   name: string;
 }
-
 // *: компонент для анимированной ссылки, которая принимает на себя ссылку идущая за пределы приложения, иконку, имя и описание
-
 export const LinkCard: React.FC<LinkCardProps> = ({href, icon, name, description}) => {
   return (
     <motion.a
@@ -38,7 +34,6 @@ export const LinkCard: React.FC<LinkCardProps> = ({href, icon, name, description
 };
 
 // *: компонент для анимированной ссылки, которая принимает на себя ссылку идущая за пределы приложения, иконку и имя, без описания
-
 export const LinkCardNoDescription: React.FC<LinkCardPropsNoDescription> = ({
   href,
   icon,
@@ -63,7 +58,6 @@ export const LinkCardNoDescription: React.FC<LinkCardPropsNoDescription> = ({
 };
 
 // *: компонент для анимированной ссылки внутри приложения, которая принимает на себя ссылку, иконку, имя и описание
-
 export const LinkInAppCard: React.FC<LinkCardProps> = ({
   href,
   icon,
@@ -89,9 +83,7 @@ export const LinkInAppCard: React.FC<LinkCardProps> = ({
     </Link>
   );
 };
-
 // info: пример использования
-
 // <LinkInAppCard
 //   href="/some-link" // URL, на который ведет ссылка
 //   icon={<YourIconComponent />} // Иконка, отображаемая в карточке

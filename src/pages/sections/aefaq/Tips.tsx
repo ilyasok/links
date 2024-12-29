@@ -12,10 +12,7 @@ import {FlexibleLinks} from "../../../components/FlexibleLinksFaQ";
 
 const AETips: React.FC = () => {
   return (
-    <div
-      className="faq-content"
-      id="tips"
-    >
+    <div className="faq-content">
       <GithubUpdateInfo filePath="src/pages/sections/aefaq/Tips.tsx" />
       <DetailsSummary title="Как мне сделать историю изменений файлов и в случае чего - откатываться до предыдущих версий проекта?">
         <p>
@@ -137,7 +134,7 @@ const AETips: React.FC = () => {
           - это работа с <mark className="app">Git</mark>. Для новичков этот инструмент
           будет сложновато использовать, но я не могу о нём не рассказать.
         </p>
-        {/* todo: написать!! */}
+        {/* TODO: написать!! */}
         <AdditionInfo>
           Если вы хотите просто сохранить быстро проект под другим названием - используйте
           комбинацию клавиш <mark className="key">Ctrl + Alt + Shift + S</mark>. Данная

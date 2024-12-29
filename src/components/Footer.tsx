@@ -2,7 +2,6 @@ import {Modal} from "antd";
 import React from "react";
 import {FlexibleLinks} from "./FlexibleLinksFaQ";
 import {GitHub, Mail} from "@mui/icons-material";
-
 interface FooterProps {
   title: string;
   initialYear: number;
@@ -10,6 +9,7 @@ interface FooterProps {
 
 const Footer: React.FC<FooterProps> = ({title, initialYear}) => {
   const currentYear = new Date().getFullYear();
+
   const [isModalOpen, setIsModalOpen] = React.useState(false);
 
   const showModal = () => {

@@ -1,13 +1,12 @@
 import React from "react";
 import DetailsSummary from "../../../components/DetailsSummary";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
+import {AdditionInfo} from "../../../components/Additions";
+import {ImageFigure, YouTubeVideo} from "../../../components/ContentFigure";
 
 const AEInterface: React.FC = () => {
   return (
-    <div
-      className="faq-content"
-      id="interface"
-    >
+    <div className="faq-content">
       <GithubUpdateInfo filePath="src/pages/sections/aefaq/Interface.tsx" />
       <DetailsSummary title="Как включить отображение границ слоёв?">
         <p>
@@ -35,22 +34,22 @@ const AEInterface: React.FC = () => {
         />
       </DetailsSummary>
       <DetailsSummary title="Случайно закрыл окно в интерфейсе, как мне его вернуть?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Как мне прикрепить нужное окно в рабочее пространство программы?">
-        <p>{/* fixme: написать */}</p>
+        <p>{/* FIXME: написать */}</p>
       </DetailsSummary>
       <DetailsSummary title="Почему я не могу прикрепить окно скрипта и как мне его в конце концов закрепить?">
-        <p>{/* fixme: написать */}</p>
+        <p>{/* FIXME: написать */}</p>
       </DetailsSummary>
-      <DetailsSummary title="Как поставить несколько окон во вкладки или расположить их по строкам?">
-        <p>{/* fixme: написать!! */}</p>
+      <DetailsSummary title="Как поставить несколько окон во вкладки или расположить их по списку?">
+        <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Пропали нужные переключатели и колонки на таймлайне. Как мне их вернуть?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Компьютер во время работы упал в BSOD и испортил мне настройки. Как мне их восстановить?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Установил After Effects 2023 или новее и не могу понять, что стало с Track Matte?">
         <p>
@@ -71,7 +70,7 @@ const AEInterface: React.FC = () => {
         </AdditionInfo>
       </DetailsSummary>
       <DetailsSummary title='Бесит окно "Properties", как отключить его автоматическое открытие?'>
-        <p>{/* fixme: написать!! */}</p>
+        <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Как включить всплывающую панель для применения эффектов, которая открывается с помощью Ctrl+Space?">
         <p>
@@ -79,29 +78,29 @@ const AEInterface: React.FC = () => {
           <mark className="app">After Effects</mark>. Здесь идёт речь об стороннем плагине{" "}
           <a href="https://www.videocopilot.net/blog/?s=fx%20console">FX Console</a>.
         </p>
+        {/* todo: дописать! */}
       </DetailsSummary>
       <DetailsSummary title="Как мне установить свой процент масштабирования предпросмотра?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>{/* FIXME: написать!! aezoom */}</p>
       </DetailsSummary>
       <DetailsSummary title="Как убрать пикселизацию предпросмотра при перемещении плейхеда?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Где найти Front View, Current Camera и прочие варианты отображения камеры?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Как отключить автоматическое кэширование предпросмотра при бездействии?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Почему я не могу поставить плейхед в самый конец композиции?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="У меня есть два ключа с одинаковым значением, но между ними всё равно идёт какая-то анимация. Как её убрать?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Не выделяется объект в Rotobrush. Что делать?">
-        <p>{/* fixme: баг кролика в 2019 */}</p>
+        <p>{/* FIXME: баг кролика в 2019 */}</p>
       </DetailsSummary>
-
       <DetailsSummary title="Как отключить экран со списком недавних проектов при запуске?">
         <p>
           Иногда при открытии <mark className="app">After Effects</mark> открывается
@@ -132,13 +131,13 @@ const AEInterface: React.FC = () => {
         </AdditionInfo>
       </DetailsSummary>
       <DetailsSummary title="Как изменить акцентный цвет интерфейса программы?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Как изменить картинку во время запуска программы?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Где-то слышал про секретные настройки, что это такое?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
     </div>
   );

@@ -11,10 +11,7 @@ import {ImageFigure} from "../../../components/ContentFigure";
 
 const PRWhereFind: React.FC = () => {
   return (
-    <div
-      className="faq-content"
-      id="where-find"
-    >
+    <div className="faq-content">
       <GithubUpdateInfo filePath="src/pages/sections/prfaq/WhereFind.tsx" />
       <DetailsSummary title="Где найти шаблоны, программы и плагины?">
         <p>
@@ -69,7 +66,6 @@ const PRWhereFind: React.FC = () => {
           </li>
           <li>
             <a
-              className="weblink"
               href="https://t.me/+ZqiaMfQRFgM4YmEy"
               title="Яблоневый сад в Telegram"
             >
@@ -107,7 +103,6 @@ const PRWhereFind: React.FC = () => {
           </a>{" "}
           или{" "}
           <a
-            className="weblink"
             href="https://t.me/+ZqiaMfQRFgM4YmEy"
             title="Яблоневый сад в Telegram"
           >
@@ -182,105 +177,90 @@ const PRWhereFind: React.FC = () => {
           >
             Pexels
           </a>
-
           <a
             href="https://pixabay.com/videos/"
             title="Pixabay"
           >
             Pixabay
           </a>
-
           <a
             href="https://www.videvo.net/"
             title="Videvo"
           >
             Videvo
           </a>
-
           <a
             href="https://coverr.co/"
             title="Coverr"
           >
             Coverr
           </a>
-
           <a
             href="https://www.splitshire.com"
             title="SplitShire"
           >
             SplitShire
           </a>
-
           <a
             href="https://mazwai.com/"
             title="Mazvai"
           >
             Mazvai
           </a>
-
           <a
             href="https://www.videezy.com/"
             title="Videezy"
           >
             Videezy
           </a>
-
           <a
             href="https://www.vidsplay.com/"
             title="Vidsplay"
           >
             Vidsplay
           </a>
-
           <a
             href="https://cutestockfootage.com/"
             title="CuteStockFootage"
           >
             CuteStockFootage
           </a>
-
           <a
             href="https://mitchmartinez.com/free-4k-red-epic-stock-footage/"
             title="Mitch Martinez"
           >
             Mitch Martinez
           </a>
-
           <a
             href="https://mixkit.co/"
             title="Mixkit"
           >
             Mixkit
           </a>
-
           <a
             href="https://www.xstockvideo.com/"
             title="XStockVideos"
           >
             XStockVideos
           </a>
-
           <a
             href="https://www.clipstill.com/"
             title="Clipstill"
           >
             Clipstill
           </a>
-
           <a
             href="https://vimeo.com/groups/freehd/"
             title="Пользователь Phil Fred на Vimeo"
           >
             Phil Fred на Vimeo
           </a>
-
           <a
             href="https://www.ignitemotion.com/"
             title="IgniteMotion"
           >
             IgniteMotion
           </a>
-
           <a
             href="https://www.youtube.com/playlist?list=PLTDgOUcX23hZdwKWhKhWp3H2D5nmWhpvv"
             title="Плейлист на YouTube c абстрактными фонами"
@@ -307,42 +287,36 @@ const PRWhereFind: React.FC = () => {
           >
             Audiomicro
           </a>
-
           <a
             href="https://www.zapsplat.com/"
             title="Zapsplat"
           >
             Zapsplat
           </a>
-
           <a
             href="https://www.freesfx.co.uk/"
             title="FreeSFX"
           >
             FreeSFX
           </a>
-
           <a
             href="https://www.freesoundslibrary.com/"
             title="FreeSoundLibrary"
           >
             FreeSoundLibrary
           </a>
-
           <a
             href="https://soundbible.com/"
             title="SoundBible"
           >
             SoundBible
           </a>
-
           <a
             href="https://www.soundeffectsplus.com/"
             title="soundeffects+"
           >
             soundeffects+
           </a>
-
           <a
             href="https://freesound.org/"
             title="freesound"
@@ -356,7 +330,6 @@ const PRWhereFind: React.FC = () => {
         </AdditionWarning>
       </DetailsSummary>
       <DetailsSummary title="Где найти шрифт по имеющемуся фото?">
-        {/* fixme: исправить пути у фото и стили figure, заменить иконки для прфака */}
         <p>
           Вы можете использовать сервисом{" "}
           <a
@@ -442,4 +415,5 @@ const PRWhereFind: React.FC = () => {
     </div>
   );
 };
+
 export default PRWhereFind;

@@ -1,4 +1,4 @@
-import React, {useEffect, Suspense, lazy, useState} from "react";
+import React, {Suspense, lazy, useEffect, useState} from "react";
 import {Breadcrumb, Divider} from "antd";
 import {motion} from "framer-motion";
 import {Link} from "react-router-dom";
@@ -13,15 +13,25 @@ import {CircularProgress} from "@mui/material";
 import {generateAnchorId} from "../components/DetailsSummary";
 
 const PRActions = lazy(() => import("./sections/prfaq/Actions"));
+
 const PRErrors = lazy(() => import("./sections/prfaq/Errors"));
+
 const PRExport = lazy(() => import("./sections/prfaq/Export"));
+
 const PRExportProblems = lazy(() => import("./sections/prfaq/ExportProblems"));
+
 const PRFromNewbies = lazy(() => import("./sections/prfaq/FromNewbies"));
+
 const PRImport = lazy(() => import("./sections/prfaq/Import"));
+
 const PRInstallProblems = lazy(() => import("./sections/prfaq/InstallProblems"));
+
 const PRInterface = lazy(() => import("./sections/prfaq/Interface"));
+
 const PRPerformance = lazy(() => import("./sections/prfaq/Performance"));
+
 const PRTips = lazy(() => import("./sections/prfaq/Tips"));
+
 const PRWhereFind = lazy(() => import("./sections/prfaq/WhereFind"));
 
 const PRFaQ = () => {
@@ -30,29 +40,50 @@ const PRFaQ = () => {
   }, []);
 
   const sections = [
-    {key: "1", title: "Ищем полезности", component: PRWhereFind},
-    {key: "2", title: "Проблемы с установкой", component: PRInstallProblems},
-    {key: "3", title: "Вопросы от новичков", component: PRFromNewbies},
-    {key: "4", title: "(не)Вредные советы", component: PRTips},
-    {key: "5", title: "Импорт", component: PRImport},
-    {key: "6", title: "Интерфейс", component: PRInterface},
-    {key: "7", title: "Производительность", component: PRPerformance},
-    {key: "8", title: "Как и чем?", component: PRActions},
-    {key: "9", title: "Ошибки и предупреждения", component: PRErrors},
-    {key: "10", title: "Экспорт", component: PRExport},
-    {key: "11", title: "Проблемы при экспорте", component: PRExportProblems},
+    {key: "1", title: "Ищем полезности", id: "where-find", component: PRWhereFind},
+    {
+      key: "2",
+      title: "Проблемы с установкой",
+      id: "install-problems",
+      component: PRInstallProblems,
+    },
+    {
+      key: "3",
+      title: "Вопросы от новичков",
+      id: "from-newbies",
+      component: PRFromNewbies,
+    },
+    {key: "4", title: "(не)Вредные советы", id: "tips", component: PRTips},
+    {key: "5", title: "Импорт", id: "import", component: PRImport},
+    {key: "6", title: "Интерфейс", id: "interface", component: PRInterface},
+    {
+      key: "7",
+      title: "Производительность",
+      id: "performance",
+      component: PRPerformance,
+    },
+    {key: "8", title: "Как и чем?", id: "actions", component: PRActions},
+    {key: "9", title: "Ошибки и предупреждения", id: "errors", component: PRErrors},
+    {key: "10", title: "Экспорт", id: "export", component: PRExport},
+    {
+      key: "11",
+      title: "Проблемы при экспорте",
+      id: "export-problems",
+      component: PRExportProblems,
+    },
   ];
-  const [visibleSections, setVisibleSections] = useState<string[]>([]);
-  const [isPageLoaded, setIsPageLoaded] = useState(false);
-  const [loadedCount, setLoadedCount] = useState(0);
 
+  const [visibleSections, setVisibleSections] = useState<string[]>([]);
+
+  const [isPageLoaded, setIsPageLoaded] = useState(false);
+
+  const [loadedCount, setLoadedCount] = useState(0);
   useEffect(() => {
     if (loadedCount === sections.length) {
       setIsPageLoaded(true);
       generateAnchorId();
     }
   }, [loadedCount, sections.length]);
-
   useEffect(() => {
     const loadSections = async () => {
       for (const section of sections) {
@@ -139,9 +170,12 @@ const PRFaQ = () => {
                 читателя могут отличаться. Предложения по поводу улучшения материала вы
                 можете отправить на <a href="mailto:me@m1sh3r.ru">почту автора</a>.
               </AdditionWarning>
-              {sections.map(({key, title, component: Component}) =>
+              {sections.map(({key, title, component: Component, id}) =>
                 visibleSections.includes(key) ? (
-                  <div key={key}>
+                  <div
+                    key={key}
+                    id={id}
+                  >
                     <Suspense
                       fallback={
                         <motion.div
@@ -150,7 +184,6 @@ const PRFaQ = () => {
                           style={{
                             height: "70vh",
                             display: "flex",
-
                             flexDirection: "column",
                             alignItems: "center",
                             justifyContent: "center",
@@ -230,5 +263,4 @@ const PRFaQ = () => {
     </div>
   );
 };
-
 export default PRFaQ;

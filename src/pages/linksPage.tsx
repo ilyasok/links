@@ -292,7 +292,9 @@ const Links = () => {
             признак бота. Остерегайтесь мошенников!{" "}
             <a
               href="https://www.sberbank.ru/ru/person/kibrary/articles/moshenniki-atakuyut-frilanserov-kak-ne-popast-v-lovushku"
-              title={`Памятка от Сбербанка: "Как не попасться в ловушку мошенников на фрилансе"`}
+              title={
+                'Памятка от Сбербанка: "Как не попасться в ловушку мошенников на фрилансе"'
+              }
             >
               Подробнее...
             </a>

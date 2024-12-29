@@ -1,12 +1,10 @@
-import React, {useState, useEffect, useCallback} from "react";
-
+import React, {useCallback, useEffect, useState} from "react";
 interface ImageFigureProps {
   styleClass: string;
   imgSrc: string;
   imgTitle: string;
   caption: string;
 }
-
 interface VideoFigureProps {
   styleClass: string;
   videoSrc: string;
@@ -20,7 +18,9 @@ const ImageFigure: React.FC<ImageFigureProps> = ({
   caption,
 }) => {
   const [isFullscreen, setIsFullscreen] = useState(false);
+
   const [isClosing, setIsClosing] = useState(false);
+
   const isWindowsStyle =
     styleClass === "figure_windows-light" || styleClass === "figure_windows-dark";
 
@@ -53,7 +53,6 @@ const ImageFigure: React.FC<ImageFigureProps> = ({
     },
     [handleClose]
   );
-
   useEffect(() => {
     const handleEscKey = (e: KeyboardEvent) => {
       if (e.key === "Escape" && isFullscreen) {
@@ -193,7 +192,9 @@ const ImageFigure: React.FC<ImageFigureProps> = ({
 
 const VideoFigure: React.FC<VideoFigureProps> = ({styleClass, videoSrc, caption}) => {
   const [isFullscreen, setIsFullscreen] = useState(false);
+
   const [isClosing, setIsClosing] = useState(false);
+
   const isWindowsStyle =
     styleClass === "figure_windows-light" || styleClass === "figure_windows-dark";
 
@@ -226,7 +227,6 @@ const VideoFigure: React.FC<VideoFigureProps> = ({styleClass, videoSrc, caption}
     },
     [handleClose]
   );
-
   useEffect(() => {
     const handleEscKey = (e: KeyboardEvent) => {
       if (e.key === "Escape" && isFullscreen) {

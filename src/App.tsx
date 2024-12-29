@@ -1,20 +1,29 @@
 import {ConfigProvider} from "antd";
 import {AnimatePresence, motion} from "framer-motion";
-import React, {lazy, Suspense, useEffect} from "react";
+import React, {Suspense, lazy, useEffect} from "react";
 import {Navigate, Route, Routes, useLocation} from "react-router-dom";
 import themeConfig from "./styles/ant_theme";
 import {LinearProgress} from "@mui/material";
+
 const Links = lazy(() => import("./pages/linksPage"));
+
 const ChatRules = lazy(() => import("./pages/chatRules"));
+
 const NotFound = lazy(() => import("./pages/notFound"));
+
 const AEFaQ = lazy(() => import("./pages/aefaqPage"));
+
 const PRFaQ = lazy(() => import("./pages/prfaqPage"));
+
 const PSFaQ = lazy(() => import("./pages/psfaqPage"));
+
 const AEExpressionPage = lazy(() => import("./pages/aeexprfaqPage"));
 
 const RedirectHtml = () => {
   const location = useLocation();
+
   const path = location.pathname;
+
   if (path.endsWith(".html")) {
     return (
       <Navigate
@@ -23,6 +32,7 @@ const RedirectHtml = () => {
       />
     );
   }
+
   return null;
 };
 
@@ -40,8 +50,10 @@ const trackPageView = (path: string) => {
 
 export const App = () => {
   const location = useLocation();
+
   useEffect(() => {
     const path = window.location.pathname;
+
     if (path.endsWith("/index.html")) {
       window.location.replace("/");
     } else if (path.endsWith(".html")) {

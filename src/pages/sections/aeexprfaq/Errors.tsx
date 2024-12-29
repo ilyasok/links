@@ -3,10 +3,7 @@ import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 
 const AEExprErrors: React.FC = () => {
   return (
-    <div
-      className="faq-content"
-      id="errors"
-    >
+    <div className="faq-content">
       <GithubUpdateInfo filePath="src/pages/sections/aeexprfaq/Errors.tsx" />
     </div>
   );

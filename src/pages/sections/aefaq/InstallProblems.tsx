@@ -8,12 +8,10 @@ import DetailsSummary from "../../../components/DetailsSummary";
 import ContentSwitcher from "../../../components/features/OperatingSystemFilter";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 import {ImageFigure, YouTubeVideo} from "../../../components/ContentFigure";
+
 const AEInstallProblems: React.FC = () => {
   return (
-    <div
-      className="faq-content"
-      id="install-problems"
-    >
+    <div className="faq-content">
       <GithubUpdateInfo filePath="src/pages/sections/aefaq/InstallProblems.tsx" />
       <DetailsSummary title="Забыли положить инструкцию для установки рядом с файлами, куда что кидать?">
         <AdditionWarning>

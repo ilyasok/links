@@ -10,10 +10,7 @@ import {
 
 const AEExportProblems: React.FC = () => {
   return (
-    <div
-      className="faq-content"
-      id="export-problems"
-    >
+    <div className="faq-content">
       <GithubUpdateInfo filePath="src/pages/sections/aefaq/ExportProblems.tsx" />
       <DetailsSummary title="Почему при экспорте в .mp4 через встроенный кодек H.264 сохраняется файл с размером в 1 Кб?">
         <p>
@@ -57,7 +54,7 @@ const AEExportProblems: React.FC = () => {
           кроме как экспортом в другой кодек, например{" "}
           <mark className="file">Apple Prores 422</mark>.
         </AdditionWarning>
-        {/* todo: дописать!! */}
+        {/* TODO: дописать!! */}
         <p>
           Иногда при использовании исходников с мобильных телефонов, например{" "}
           <mark>iPhone 13</mark> или новее, возникают проблемы с пересветом. Это
@@ -300,7 +297,7 @@ const AEExportProblems: React.FC = () => {
           внятно разобраться как с ней работать - для них давно изобрели GUI-клиенты,
           например <a href="https://www.shutterencoder.com/">Shutter Encoder</a>.
         </p>
-        {/* todo: дописать!! */}
+        {/* TODO: дописать!! */}
       </DetailsSummary>
       <DetailsSummary title='"Rendering error while writting to file (...). Unable to delete existing file" или "An unexpected error occurred while exporting a composition. Error code: 9988"'>
         <p>

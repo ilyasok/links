@@ -7,12 +7,10 @@ import {
   AdditionWarning,
 } from "../../../components/Additions";
 import {ImageFigure, VideoFigure, YouTubeVideo} from "../../../components/ContentFigure";
+
 const AEExport: React.FC = () => {
   return (
-    <div
-      className="faq-content"
-      id="export"
-    >
+    <div className="faq-content">
       <GithubUpdateInfo filePath="src/pages/sections/aefaq/Export.tsx" />
       <DetailsSummary title="Какие настройки экспорта стоит установить для вывода в социальные сети?">
         <p>
@@ -933,7 +931,7 @@ const AEExport: React.FC = () => {
           Если вы хотите посмотреть такое видео, но у вас оно не открывается стандартным
           плеером, то вам нужно установить сторонний видеоплеер, например{" "}
           <mark className="app">VLC</mark> или <mark className="app">MPC-HC</mark>.
-          Учтите, что не все видеопроигрыватели корректно отображают видео с
+          Учтите, что не все видео-проигрыватели корректно отображают видео с
           альфа-каналом.
         </AdditionInfo>
       </DetailsSummary>

@@ -1,5 +1,4 @@
 import React from "react";
-
 import Header from "../components/Header";
 import {Breadcrumb} from "antd";
 import {Link} from "react-router-dom";
@@ -7,6 +6,7 @@ import {AdditionDanger, AdditionInfo, AdditionWarning} from "../components/Addit
 import {motion} from "framer-motion";
 import Footer from "../components/Footer";
 import {Helmet} from "react-helmet-async";
+
 const ChatRules = () => (
   <div>
     <Helmet>
@@ -214,7 +214,6 @@ const ChatRules = () => (
                   <div style={{opacity: 0.5, fontSize: "10px", textAlign: "center"}}>
                     Прошло 30 секунд
                   </div>
-
                   <div className="message-left">алё, все спят что-ли бл&?????</div>
                   <div className="message-right">
                     Привет, здесь не техподдержка Adobe. Если у тебя есть вопрос - задай

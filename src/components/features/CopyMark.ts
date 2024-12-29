@@ -4,14 +4,15 @@ const copyToClipboard = (event?: MouseEvent) => {
   if (!event || !event.target) {
     return;
   }
+
   const elementToCopy = event.target as HTMLElement;
   if (elementToCopy.tagName === "MARK" && !elementToCopy.classList.length) {
     return;
   }
+
   const textContent = elementToCopy.innerHTML
     .replace(/<br\s*\/?>/gi, "\n")
     .replace(/<\/?[^>]+(>|$)/g, "");
-
   if (navigator.clipboard) {
     navigator.clipboard
       .writeText(textContent)
@@ -55,5 +56,4 @@ const enableAutoCopy = () => {
     }
   });
 };
-
 export default {copyToClipboard, enableAutoCopy};
