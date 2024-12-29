@@ -1038,7 +1038,16 @@ const AEExport: React.FC = () => {
         </p>
       </DetailsSummary>
       <DetailsSummary title="Какие эффекты можно использовать в Lottie для успешного вывода?">
-        <p>{/* FIXME: написать!! */}</p>
+        <p>
+          Изначально <mark className="file">Lottie</mark> не поддерживает все функции,
+          например сторонние плагины или эффекты, поэтому на сайте Lottiefiles есть целая{" "}
+          <a href="https://lottiefiles.com/supported-features">
+            таблица совместимости эффектов
+          </a>{" "}
+          вашей анимации с браузерами и платформами. Чтобы проверить вашу анимацию, вы
+          можете её загрузить в{" "}
+          <a href="https://app.lottiefiles.com/preview">предпросмотр от Lottie</a>.
+        </p>
       </DetailsSummary>
     </div>
   );
