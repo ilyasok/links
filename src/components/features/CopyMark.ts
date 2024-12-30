@@ -46,6 +46,12 @@ const copyToClipboard = (event?: MouseEvent) => {
   }
 };
 
+message.config({
+  top: 75,
+  duration: 3,
+  maxCount: 3,
+});
+
 const enableAutoCopy = () => {
   document.addEventListener("click", (event) => {
     if (
