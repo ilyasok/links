@@ -101,8 +101,34 @@ const AEImport: React.FC = () => {
       <DetailsSummary title="Хочу импортировать секвенцию изображений, но полученная секвенция импортируется короче/длиннее чем нужно или с неверным FPS. Как исправить?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
-      <DetailsSummary title="Импортировал исходник с перменным FPS. Почему длина исходника в After Effects короче, чем в видео-проигрывателе?">
-        <p>{/* fixme: написать!! */}</p>
+      <DetailsSummary title="Импортировал исходник с переменным FPS. Почему длина исходника в After Effects короче, чем в видео-проигрывателе?">
+        <p>
+          <mark className="app">After Effects</mark> при импорте преобразует все кадры у
+          видео без учёта пропусков от переменного или дробного FPS. Поэтому и получается
+          так, что при импорте такого исходника некоторые дублирующие кадры пропускаются и
+          длина исходника в <mark className="app">After Effects</mark> становится короче,
+          чем в видео-проигрывателе.
+        </p>
+        <p>
+          Чтобы исправить эту проблему измените FPS с помощью интерпретации. Для этого
+          выделите ваш исходник в окне <mark className="ui">Project</mark> и нажмите на
+          комбинацию клавиш <mark className="key">Ctrl + Alt + G</mark>. В открывшемся
+          окне в разделе <mark className="ui">Frame Rate</mark> укажите пункт{" "}
+          <mark className="ui">Conform to frame rate</mark> и установите ожидаемое
+          количество кадров в секунду.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/aftereffects/interpret_footage_main.png"
+          imgTitle="Интерпретация футажа"
+          caption="Interpret Footage"
+        />
+        <p>
+          Если это не помогло, то перекодируйте ваш исходник с постоянным FPS через{" "}
+          <mark className="app">Media Encoder</mark>,{" "}
+          <mark className="app">Shutter Encoder</mark> или{" "}
+          <mark className="app">Handbrake</mark>.
+        </p>
       </DetailsSummary>
       <DetailsSummary title="Как импортировать 3D-объекты формата .obj, .fbx или .glb?">
         <p>{/* fixme: написать!! */}</p>
