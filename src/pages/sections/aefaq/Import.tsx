@@ -137,8 +137,34 @@ const AEImport: React.FC = () => {
       <DetailsSummary title="Как импортировать 3D-объекты формата .obj, .fbx или .glb?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
-      <DetailsSummary title="Прислали исходники в формате .mkv, .flv или что-то не поддерживаемое программой. Как мне их импортировать?">
-        <p>{/* fixme: написать!! */}</p>
+      <DetailsSummary title="Прислали исходники в формате .mkv, .flv или что-то не поддерживаемое программой, но перекодировать я их не хочу. Как мне их импортировать?">
+        <p>
+          <mark className="app">After Effects</mark> изначально не поддерживает большое
+          количество кодеков, например <mark className="video">VP9</mark>,{" "}
+          <mark className="video">Flac</mark>, <mark className="video">AV1</mark>, а также
+          контейнеры <mark className="file">.webm</mark>,{" "}
+          <mark className="file">.flv</mark>, <mark className="file">.mkv</mark> и прочие.
+        </p>
+        <p>
+          Любая программа для монтажа и композитинга чего-угодно была изначально
+          предназначена работать только с монтажным кодеком. Но в последнее время для
+          упрощения работы Adobe постепенно добавляет поддержку различных форматов, но всё
+          ещё не всех. Если у вас небольшой проект и нет желания заниматься
+          перекодированием исходников, то вы можете попробовать плагин{" "}
+          <a href="https://www.autokroma.com/Influx">Autokroma Influx</a>. Он облегчает
+          импорт некоторых файлов которые не поддерживаются в{" "}
+          <mark className="app">After Effects</mark>,{" "}
+          <mark className="app">Premiere Pro</mark> и{" "}
+          <mark className="app">Media Encoder</mark>.
+        </p>
+        <AdditionWarning>
+          Поскольку декодирование из немонтажных кодеков, а также через{" "}
+          <mark className="plugin">Autokroma Influx</mark> работает не так, как хотелось
+          бы, то вы можете столкнуться с некоторыми проблемами, например появление
+          различных артефактов, дёрганные кадры, искажённые цвета или долгий рендер.
+          Поэтому рекомендуется в следующий раз всё-таки перекодировать ваши исходники в
+          монтажный кодек, например через <mark className="app">Shutter Encoder</mark>.
+        </AdditionWarning>
       </DetailsSummary>
       <DetailsSummary title="Прислали исходники в формате .heic, .heif или .hevc, но выбивает ошибку. Как их мне импортировать в проект?">
         <AdditionInfo>
