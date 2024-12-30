@@ -72,7 +72,7 @@ export const App = () => {
             animate={{opacity: 1}}
             transition={{duration: 0.5, ease: [0.075, 0.82, 0.165, 1], delay: 1}}
           >
-            <LinearProgress sx={{color: "var(--accent)"}} />
+            <LinearProgress color="inherit" />
             <div style={{marginInline: "auto", maxWidth: "600px"}}>
               <motion.p
                 initial={{opacity: 0}}
@@ -91,7 +91,7 @@ export const App = () => {
               <motion.p
                 initial={{opacity: 0}}
                 animate={{opacity: 0.25}}
-                transition={{duration: 1, ease: [0.075, 0.82, 0.165, 1], delay: 10}}
+                transition={{duration: 1, ease: [0.075, 0.82, 0.165, 1], delay: 7.5}}
                 style={{
                   margin: "10px",
                   fontSize: "10px",

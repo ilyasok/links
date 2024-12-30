@@ -191,44 +191,45 @@ const AEFaQ = () => {
                   >
                     <Suspense
                       fallback={
-                        <motion.div
-                          initial={{opacity: 0}}
-                          animate={{opacity: 1}}
-                          style={{
-                            height: "70vh",
-                            display: "flex",
-                            flexDirection: "column",
-                            alignItems: "center",
-                            justifyContent: "center",
-                          }}
-                          transition={{
-                            duration: 0.5,
-                            ease: [0.075, 0.82, 0.165, 1],
-                            delay: 1,
-                          }}
-                        >
-                          <CircularProgress sx={{color: "var(--accent)"}} />
-                          <div style={{marginInline: "auto", maxWidth: "800px"}}>
+                        <div style={{height: "75vh"}}>
+                          <motion.div
+                            initial={{opacity: 0}}
+                            animate={{opacity: 1}}
+                            style={{
+                              padding: "20px",
+                              display: "flex",
+                              marginBlock: "20px",
+                              flexDirection: "row",
+                              alignItems: "center",
+                              flexWrap: "wrap",
+                              gap: "15px",
+                              justifyContent: "center",
+                            }}
+                            transition={{
+                              duration: 0.5,
+                              ease: [0.075, 0.82, 0.165, 1],
+                              delay: 1,
+                            }}
+                          >
+                            <CircularProgress sx={{color: "var(--accent)"}} />
                             <motion.p
                               initial={{opacity: 0}}
                               animate={{opacity: 0.5}}
                               transition={{
                                 duration: 1,
                                 ease: [0.075, 0.82, 0.165, 1],
-                                delay: 10,
                               }}
                               style={{
                                 margin: "10px",
-                                marginTop: "20px",
-                                fontSize: "12px",
-                                marginInline: "20px",
+                                fontSize: "14px",
+                                maxWidth: "400px",
                               }}
                             >
                               {
                                 [
                                   "Всё ещё грузим полезную информацию",
                                   "Интересный факт: в After Effects можно выполнять арифметические операции с помощью знаков сложения и вычитания, умножения и деления",
-                                  "Убедитесь в том, что на ваше устройство подключено к Интернету",
+                                  "Убедитесь в том, что ваше устройство подключено к Интернету",
                                   "Секция всё ещё грузится, наберитесь терпения",
                                   "Надеемся, что код сайта не поломался",
                                   "Попробуйте перезагрузить страницу, если секция всё ещё грузится",
@@ -239,8 +240,8 @@ const AEFaQ = () => {
                                 ][Math.floor(Math.random() * 10)]
                               }
                             </motion.p>
-                          </div>
-                        </motion.div>
+                          </motion.div>
+                        </div>
                       }
                     >
                       <motion.div
