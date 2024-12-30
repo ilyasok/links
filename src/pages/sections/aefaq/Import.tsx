@@ -19,7 +19,84 @@ const AEImport: React.FC = () => {
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Почему я не могу импортировать .psd по слоям? After Effects не мне предлагает выбор типа импорта!">
-        <p>{/* fixme: написать!! */}</p>
+        <p>
+          Такое бывает, когда вы сохраняете в <mark className="app">Photoshop</mark> файл
+          в формате <mark className="file">PSD</mark> в цветовом режиме, отличном от{" "}
+          <mark>RGB</mark>. <mark className="app">After Effects</mark> не понимает файлы в{" "}
+          <mark>CMYK</mark> или аналогичных режимах, поэтому импортирует файл как целый
+          холст без возможности разделения по слоям.
+        </p>
+        <p>
+          Чтобы проверить, в каком режиме сохраняется ваш файл, вам нужно открыть его в{" "}
+          <mark className="app">Photoshop</mark> и посмотреть на его заголовок.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-light"
+          imgSrc="images/aftereffects/tab_in_photoshop.png"
+          imgTitle="Проверяем цветовой режим в Photoshop"
+          caption="Photoshop"
+        />
+        <p>
+          Если в заголовке написано <mark>CMYK</mark>, <mark>Grayscale</mark> или что-то
+          другое, отличающееся от <mark>RGB</mark>, то вам нужно будет преобразовать файл
+          в <mark>RGB</mark>. Для этого нужно в{" "}
+          <mark className="ui">Image &gt; Mode</mark> выбрать режим{" "}
+          <mark className="ui">RGB Color</mark>.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-light"
+          imgSrc="images/aftereffects/photoshop_switch_to_rgb.png"
+          imgTitle="Переключаем цветовой режим на RGB в Photoshop"
+          caption="Photoshop"
+        />
+        <AdditionWarning>
+          Если появится окно с вопросом{" "}
+          <mark>
+            Change modes can affect the appearance of layers. Flatten image before mode
+            change?
+          </mark>
+          , то смело нажимаем на кнопку <mark className="ui">Don&apos;t Flatten</mark>.
+          Иначе ваши слои объединятся в один слой, если вы нажмёте на{" "}
+          <mark className="ui">Flatten</mark>.
+          <AdditionDanger>
+            Цвета, возможно, сильно изменятся после смены цветового режима.
+          </AdditionDanger>
+        </AdditionWarning>
+        <p>
+          После изменения цветового режима сохраните <mark className="file">.psd</mark>{" "}
+          файл и попробуйте снова импортировать его в{" "}
+          <mark className="app">After Effects</mark>.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/aftereffects/correct_import_psd.png"
+          imgTitle="Корректный импорт PSD в After Effects"
+          caption="filename.psd"
+        />
+        <p>
+          Если этот способ вам не помог или вас не устраивают цвета после изменения
+          цветового режима, то выведите все слои из <mark className="app">Photoshop</mark>{" "}
+          отдельными файлами. Для этого перейдите в{" "}
+          <mark className="ui">File &gt; Export</mark> и выберите пункт{" "}
+          <mark className="ui">Layers to Files</mark>.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-light"
+          imgSrc="images/aftereffects/photoshop_layers_to_files.png"
+          imgTitle="Пункт для начала экспорта слоёв в файлы"
+          caption="Photoshop"
+        />
+        <p>
+          В открывшемся окне вы можете указать путь для сохранения файлов, название и тип
+          файла, в который вы хотите экспортировать слои. После настроек нажмите на{" "}
+          <mark className="ui">OK</mark> и ваши слои сохранятся как файлы.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-light"
+          imgSrc="images/aftereffects/photoshop_export_layers.png"
+          imgTitle="Экспорт слоёв в файлы"
+          caption="Photoshop"
+        />
       </DetailsSummary>
       <DetailsSummary title="Хочу импортировать секвенцию изображений, но полученная секвенция импортируется короче/длиннее чем нужно или с неверным FPS. Как исправить?">
         <p>{/* fixme: написать!! */}</p>
