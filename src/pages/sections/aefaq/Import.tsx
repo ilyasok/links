@@ -16,7 +16,48 @@ const AEImport: React.FC = () => {
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Использую исходник в контейнере .mp4 или в кодеке H.264. Почему у меня лезут артефакты, зелёный экран и дергается изображение?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>
+          Такое часто бывает при импорте исходников, которые были загружены из интернета,
+          в частности из YouTube. Подобные сервисы перекодируют видео непонятно во что и
+          непонятно по каким алгоритмам, поэтому их не рекомендуется использовать в
+          дальнейшей работе.
+        </p>
+        <VideoFigure
+          styleClass="figure_windows-light"
+          videoSrc="images/h264_artifacts.webm"
+          caption="Артефакты кривых исходников из просторов интернета"
+        />
+        <p>
+          Чтобы с такими видео из интернета можно было спокойно работать - вам нужно
+          перегнать ваши видео в удобоваримый кодек и формат для монтажа, например в{" "}
+          <mark className="video">Apple Prores 422</mark>, а затем заменить их в проекте.
+          Да, это нормальный процесс и желательно так делать каждый раз, когда скачиваете
+          видео с сервисов, которые любят пережимать для себя, но не для монтажёров.
+          Перекодировать видео можно с помощью программ{" "}
+          <mark className="app">Shutter Encoder</mark>,{" "}
+          <mark className="app">Handbrake</mark> или{" "}
+          <mark className="app">Media Encoder</mark>.
+        </p>
+        <ImageFigure
+          styleClass="figure_macos-dark"
+          imgSrc="images/convert_to_prores_shutterencoder.png"
+          imgTitle="Конвертируем в ProRes через Shutter Encoder"
+          caption="Shutter Encoder"
+        />
+        <p>
+          Если вы столкнулись с проблемой, когда вместо исходника появляется зеленая
+          заливка, то попробуйте отключить аппаратное декодирование в настройках
+          программы. Для этого перейдите в{" "}
+          <mark className="ui">Edit &gt; Preferences &gt; Import</mark> и выключите
+          галочку <mark className="ui">Enable hardware accelerated decoding</mark> и
+          перезагрузите программу.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/aftereffects/disable_hardware_accelerated_decoding.png"
+          imgTitle="Отключение аппаратного декодирования в настройках"
+          caption="Preferences"
+        />
       </DetailsSummary>
       <DetailsSummary title="Почему я не могу импортировать .psd по слоям? After Effects не мне предлагает выбор типа импорта!">
         <p>
