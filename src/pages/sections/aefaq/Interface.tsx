@@ -1,8 +1,8 @@
 import React from "react";
 import DetailsSummary from "../../../components/DetailsSummary";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
-import {AdditionInfo} from "../../../components/Additions";
-import {ImageFigure, YouTubeVideo} from "../../../components/ContentFigure";
+import {AdditionInfo, AdditionWarning} from "../../../components/Additions";
+import {ImageFigure, VideoFigure, YouTubeVideo} from "../../../components/ContentFigure";
 
 const AEInterface: React.FC = () => {
   return (
@@ -34,10 +34,42 @@ const AEInterface: React.FC = () => {
         />
       </DetailsSummary>
       <DetailsSummary title="Случайно закрыл окно в интерфейсе, как мне его вернуть?">
-        <p>{/* FIXME: написать!! */}</p>
+        <p>
+          Для восстановления закрытого окна перейдите в <mark className="ui">Window</mark>{" "}
+          и выберите нужное вам окно. Также в этом пункте можно открыть окна расширений
+          или переключаться между рабочими пространствами.
+        </p>
+        <VideoFigure
+          styleClass="figure_windows-light"
+          videoSrc="images/aftereffects/open_window.mp4"
+          caption="Восстановление закрытого окна"
+        />
+        <p>
+          Чтобы закрыть окно, нажмите на три полоски возле заголовка окна и нажмите на{" "}
+          <mark className="ui">Close Panel</mark>. Или нажмите на крестик слева от
+          выбранного заголовка окна.
+        </p>
       </DetailsSummary>
       <DetailsSummary title="Как мне прикрепить нужное окно в рабочее пространство программы?">
-        <p>{/* FIXME: написать */}</p>
+        <p>
+          Для того, чтобы прикрепить окно к рабочему пространству, нужно зажать курсор в
+          районе названия окна и перетащить его в нужное место. Программа предложит вам
+          прицепить его внутрь окна или в сторону.
+        </p>
+        <AdditionWarning>
+          Цепляться нужно именно за название вкладки в интерфейсе самого{" "}
+          <mark className="app">After Effects</mark>, а не за заголовок окна, создаваемый
+          вашей операционной системой.
+        </AdditionWarning>
+        <VideoFigure
+          styleClass="figure_windows-dark"
+          videoSrc="images/aftereffects/attach_window.mp4"
+          caption="Прикрепление окна в рабочее пространство"
+        />
+        <p>
+          Чтобы отцепить окно, нажмите на три полоски возле заголовка окна и нажмите на{" "}
+          <mark className="ui">Undock Panel</mark>.
+        </p>
       </DetailsSummary>
       <DetailsSummary title="Почему я не могу прикрепить окно скрипта и как мне его в конце концов закрепить?">
         <p>{/* FIXME: написать */}</p>
