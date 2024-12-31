@@ -104,8 +104,8 @@ const AEErrors: React.FC = () => {
           </li>
         </ul>
         <p>
-          Обычно эти советы помогают избавиться от типичных проблем с оперативной памятью,
-          но полностью исключить не могут.
+          Обычно эти советы помогают избавиться от типичных проблем с нехваткой
+          оперативной памяти, но полностью исключить не могут, увы.
         </p>
       </DetailsSummary>
       <DetailsSummary title="After Effects has encountered a failure related to GPU-enabled effects from this frame. This is likely because your GPU is out of memory.">
