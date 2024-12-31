@@ -274,7 +274,34 @@ const AEInterface: React.FC = () => {
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="У меня есть два ключа с одинаковым значением, но между ними всё равно идёт какая-то анимация. Как её убрать?">
-        <p>{/* FIXME: написать!! */}</p>
+        <p>
+          Скорее всего вы ни разу не смотрели на график скорости между двумя ключами,
+          особенно когда вы изменили длительность между кадрами. В моем примере у первого
+          и второго ключа одинаковое значение 100%, но между ними всё равно будет идти
+          анимация из-за изменённого графика скорости.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/aftereffects/problematic_interpolation.png"
+          imgTitle="Пример с проблемной интерполяцией"
+          caption="Speed Graph"
+        />
+        <p>
+          Чтобы убрать анимацию между двумя кадрами, вам нужно изменить режим интерполяции
+          ключевых кадров. Для этого нужно выделить все ключи, которые вам нужны и нажмите
+          на комбинацию клавиш <mark className="key">Ctrl + Alt + K</mark>.
+        </p>
+        <p>
+          В открывшемся окне в пункте <mark className="ui">Temporal Interpolation</mark>{" "}
+          выберите <mark className="ui">Linear</mark> или <mark className="ui">Hold</mark>
+          . После этого у вас между выделенными ключами не будет лишней анимации.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/aftereffects/change_keyframe_interpolation.png"
+          imgTitle="Изменение интерполяции ключевых кадров"
+          caption="Keyframe Interpolation"
+        />
       </DetailsSummary>
       <DetailsSummary title="Я использую After Effects 2019 и в нём не выделяется объект в Rotobrush, что делать?">
         <p>
