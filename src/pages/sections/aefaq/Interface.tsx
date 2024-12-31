@@ -1,7 +1,11 @@
 import React from "react";
 import DetailsSummary from "../../../components/DetailsSummary";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
-import {AdditionInfo, AdditionWarning} from "../../../components/Additions";
+import {
+  AdditionDanger,
+  AdditionInfo,
+  AdditionWarning,
+} from "../../../components/Additions";
 import {ImageFigure, VideoFigure, YouTubeVideo} from "../../../components/ContentFigure";
 import ContentSwitcher from "../../../components/features/OperatingSystemFilter";
 
@@ -310,7 +314,58 @@ const AEInterface: React.FC = () => {
         </AdditionInfo>
       </DetailsSummary>
       <DetailsSummary title="Как изменить акцентный цвет интерфейса программы?">
-        <p>{/* FIXME: написать!! */}</p>
+        <AdditionDanger>
+          Для <mark className="app">After Effects</mark> версий 25.X данная инструкция
+          неактуальна, после включения пункта в консоли - в настройках ничего не будет.
+        </AdditionDanger>
+        <p>
+          Вы, наверное, не раз натыкались на различные скриншоты, где у пользователей
+          изменён цветовой акцент в интерфейсе программы. В версиях от 2017 до 2024 можно
+          включить возможность изменения акцента через консоль. Для этого нажмите на
+          комбинацию клавиш <mark className="key">Ctrl + F12</mark>. Затем введите команду
+          ниже в консоль в режиме <mark className="ui">Console View</mark> и нажмите на{" "}
+          <mark className="key">Enter</mark>.
+        </p>
+        <code>debug.set Enable_Theme_Colorizing=true</code>
+        <AdditionInfo>
+          Режимы отображения консоли можно изменить нажав на три полоски в заголовке окна.
+        </AdditionInfo>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="/images/aftereffects/console_theme_colorizing.png"
+          imgTitle="Включение возможности изменения акцента интерфейса"
+          caption="Console"
+        />
+        <p>
+          После успешного включения опции, перейдите в настройки программы:{" "}
+          <mark className="ui">Edit &gt; Preferences &gt; Appearance</mark> и нажмите на
+          кнопку <mark className="ui">Change Color</mark>.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/aftereffects/select_theme_color.png"
+          imgTitle="Выбираем пункт для смены цвета интерфейса"
+          caption="Preferences"
+        />
+        <p>
+          В открывшейся цветовой палитре вы можете указать любой цвет, какой захотите.
+          Желательно выбрать тот цвет, который будет хорошо выделяться на фоне остального
+          интерфейса.
+        </p>
+        <AdditionWarning>
+          Не рекомендую ставить тёмные, а также слишком насыщенные оттенки, ибо вы можете
+          плохо различать некоторые элементы интерфейса.
+        </AdditionWarning>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/aftereffects/theme_colorizing.png"
+          imgTitle="Выбор акцентного цвета для интерфейса"
+          caption="Change Color"
+        />
+        <p>
+          После выбора нужного вам цвета, нажмите на <mark className="ui">OK</mark> и
+          теперь вы можете наслаждаться &quot;афтером не как у всех&quot;.
+        </p>
       </DetailsSummary>
       <DetailsSummary title="Как изменить картинку во время запуска программы?">
         <p>{/* FIXME: написать!! */}</p>
