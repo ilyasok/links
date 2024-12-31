@@ -244,7 +244,27 @@ const AEInterface: React.FC = () => {
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Где найти Front View, Current Camera и прочие варианты отображения камеры?">
-        <p>{/* FIXME: написать!! */}</p>
+        <p>
+          Чтобы &quot;включить&quot; эти кнопки, в вашей композиции должна быть создана
+          камера или хотя бы один слой должен быть переведён в режим 3D.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/aftereffects/toggle_3d_layer.png"
+          imgTitle="Включение режима 3D для слоя"
+          caption="Timeline"
+        />
+        <p>
+          Если одно из условий соблюдено, то вы увидите кнопки для переключения видов в
+          окне предпросмотра. Рядом же вы можете переключить движок 3D-рендера, включить{" "}
+          <mark>Draft 3D</mark> или разделить предпросмотр на несколько видов.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/aftereffects/change_view.png"
+          imgTitle="Переключение видов в окне предпросмотра"
+          caption="Composition"
+        />
       </DetailsSummary>
       <DetailsSummary title="Почему я не могу поставить плейхед в самый конец композиции?">
         <p>{/* FIXME: написать!! */}</p>
