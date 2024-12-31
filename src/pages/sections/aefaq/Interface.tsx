@@ -222,9 +222,6 @@ const AEInterface: React.FC = () => {
       <DetailsSummary title="Где найти Front View, Current Camera и прочие варианты отображения камеры?">
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
-      <DetailsSummary title="Как отключить автоматическое кэширование предпросмотра при бездействии?">
-        <p>{/* FIXME: написать!! */}</p>
-      </DetailsSummary>
       <DetailsSummary title="Почему я не могу поставить плейхед в самый конец композиции?">
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
