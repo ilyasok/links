@@ -211,6 +211,10 @@ const AEActions: React.FC = () => {
           воспользоваться встроенным эффектом <mark className="plugin">Reduce Grain</mark>
           .
         </p>
+        <YouTubeVideo
+          link="FmSTOXu2V6I"
+          caption="Reduce Grain"
+        />
       </DetailsSummary>
       <DetailsSummary title="Какими средствами обычно удаляют зелёный или синий фон?">
         <p>
