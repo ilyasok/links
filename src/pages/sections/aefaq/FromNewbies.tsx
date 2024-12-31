@@ -551,7 +551,9 @@ const AEFromNewbies: React.FC = () => {
             <mark className="app">After Effects</mark> или с помощью сторонних программ,
             например <mark className="app">Media Encoder</mark>,{" "}
             <mark className="app">Shutter Encoder</mark> или{" "}
-            <mark className="app">Handbrake</mark>.
+            <mark className="app">Handbrake</mark>. Также прокси можно создавать и для
+            композиций с целью уменьшения времени повторного рендера, если вы не
+            собираетесь его редактировать дальше.
             <AdditionInfo>
               <ul>
                 <li>
