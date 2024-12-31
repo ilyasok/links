@@ -1,7 +1,7 @@
 import React from "react";
 import DetailsSummary from "../../../components/DetailsSummary";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
-import {AdditionInfo} from "../../../components/Additions";
+import {AdditionInfo, AdditionWarning} from "../../../components/Additions";
 import {ImageFigure} from "../../../components/ContentFigure";
 
 const AEPerformance: React.FC = () => {
@@ -55,8 +55,64 @@ const AEPerformance: React.FC = () => {
           caption="Preferences"
         />
       </DetailsSummary>
-      <DetailsSummary title="Зачем люди переключают рендер на процессор, если есть видеокарта?">
-        <p>{/* FIXME: написать!! */}</p>
+      <DetailsSummary title="Зачем люди переключают рендер на процессор, если есть видеокарта? Как мне переключить рендер на процессор?">
+        <p>
+          Несмотря на то, что в окне менеджера проекта можно включить видеокарту,
+          программа не будет использовать его во многих случаях, особенно когда вы
+          применяете CPU-эффекты вместе с GPU-эффектами. Рендер на процессоре (или же при
+          включенном пункте <mark className="ui">Mercury Software Only</mark>) может
+          уменьшить количество возможных артефактов и багов после экспорта вашего проекта,
+          нежели при использовании псевдо-GPU-ускорения.
+        </p>
+        <p>
+          Для изменения, на чём выполнять рендеринг, нужно перейти в{" "}
+          <mark className="ui">Project Manager</mark>. Его можно открыть комбинацией
+          клавиш <mark className="key">Ctrl + Alt + Shift + K</mark>. В вкладке{" "}
+          <mark className="ui">Video Rendering and Effects</mark> можно выбрать то, что
+          нам нужно, а именно <mark className="ui">Mercury Software Only</mark> для
+          включения рендера на процессоре.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="/images/aftereffects/project_manager_mercury.png"
+          imgTitle="Переключение типа рендера"
+          caption="Project Manager"
+        />
+        <ul>
+          <li>
+            <mark className="ui">Mercury Software Only</mark> позволяет{" "}
+            <mark className="app">After Effects</mark> реже прибегать к использованию
+            видеокарты и использовать в большинстве случаев рендеринг на процессоре.
+            <AdditionInfo>
+              При включенном <mark className="ui">Mercury Software Only</mark>{" "}
+              какой-нибудь сторонний эффект всё же может просчитаться через GPU при
+              необходимости, например <mark className="plugin">Depth Scanner</mark>.
+              Обычно это поведение можно изменить в настройках стороннего плагина.
+            </AdditionInfo>
+          </li>
+          <li>
+            <mark className="ui">Mercury GPU Acceleration (CUDA или OpenCL)</mark>{" "}
+            использует процессор и видеокарту, но видеокарта никогда не будет
+            гарантированна использоваться во всех случаях, она будет использоваться только
+            при необходимости самой программой.
+            <AdditionWarning>
+              На видеокартах с малым объёмом VRAM лучше не использовать этот пункт, ибо
+              будете часто сталкиваться с ошибкой{" "}
+              <mark>
+                After Effects has encountered a failure related to GPU-enabled effects
+                from this frame
+              </mark>
+              .
+            </AdditionWarning>
+          </li>
+        </ul>
+        <p>
+          При включенном пункте <mark className="ui">Mercury Software Only</mark>, то есть
+          при рендере на процессоре, время просчёта композиций может измениться в худшую
+          сторону, но зачастую остаётся неизменным. Иногда при рендеринге на процессоре
+          просчёт может пройти быстрее, чем при использовании{" "}
+          <mark className="ui">Mercury GPU Acceleration</mark>.
+        </p>
       </DetailsSummary>
       <DetailsSummary title="Предпросмотр идёт как-будто в slow-motion, что делать?">
         <p>{/* FIXME: написать!! */}</p>
