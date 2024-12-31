@@ -130,8 +130,13 @@ const AEInterface: React.FC = () => {
       <DetailsSummary title="У меня есть два ключа с одинаковым значением, но между ними всё равно идёт какая-то анимация. Как её убрать?">
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
-      <DetailsSummary title="Не выделяется объект в Rotobrush. Что делать?">
-        <p>{/* FIXME: баг кролика в 2019 */}</p>
+      <DetailsSummary title="Я использую After Effects 2019 и в нём не выделяется объект в Rotobrush, что делать?">
+        <p>
+          Скорее всего вы столкнулись с багом этой версии, если вы используете репак от
+          KpoJluk. Проблема решается откатом до CC 2018, установкой{" "}
+          <mark className="app">After Effects 2019</mark> сборки от m0nkrus или установкой
+          более свежих версий программы.
+        </p>
       </DetailsSummary>
       <DetailsSummary title="Как отключить экран со списком недавних проектов при запуске?">
         <p>
