@@ -1,1 +1,0 @@
-import{j as s}from"./index-Boso86Rk.js";import{G as t}from"./GithubUpdateInfo-DY80PkMc.js";const o=()=>s.jsx("div",{className:"faq-content",children:s.jsx(t,{filePath:"src/pages/sections/psfaq/InstallProblems.tsx"})});export{o as default};
