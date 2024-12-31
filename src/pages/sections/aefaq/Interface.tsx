@@ -3,6 +3,7 @@ import DetailsSummary from "../../../components/DetailsSummary";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 import {AdditionInfo, AdditionWarning} from "../../../components/Additions";
 import {ImageFigure, VideoFigure, YouTubeVideo} from "../../../components/ContentFigure";
+import ContentSwitcher from "../../../components/features/OperatingSystemFilter";
 
 const AEInterface: React.FC = () => {
   return (
@@ -110,10 +111,110 @@ const AEInterface: React.FC = () => {
           <mark className="app">After Effects</mark>. Здесь идёт речь об стороннем плагине{" "}
           <a href="https://www.videocopilot.net/blog/?s=fx%20console">FX Console</a>.
         </p>
-        {/* todo: дописать! */}
+        <p>
+          С помощью этого плагина действительно можно быстро применить эффект на
+          выделенный слой, нажав на комбинацию клавиш{" "}
+          <mark className="key">Ctrl + Space</mark>. Также с помощью него можно быстро
+          создать скриншот текущего кадра в файл или в буфер обмена
+        </p>
+        <AdditionInfo>
+          Для создания скриншотов с полным разрешением - укажите пункт{" "}
+          <mark className="ui">Full Resolution Screenshots</mark> в настройках плагина.
+          Там же можно и переназначить комбинацию клавиш для открытия окна плагина.
+        </AdditionInfo>
+        <VideoFigure
+          styleClass="figure_windows-dark"
+          videoSrc="images/aftereffects/fx_console_demonstration.mp4"
+          caption="Демонстрация плагина FX Console"
+        />
       </DetailsSummary>
       <DetailsSummary title="Как мне установить свой процент масштабирования предпросмотра?">
-        <p>{/* FIXME: написать!! aezoom */}</p>
+        <p>
+          Многих пользователей бесит, что по умолчанию в{" "}
+          <mark className="app">After Effects</mark> в предпросмотре нельзя установить
+          свой процент масштабирования, доступны только жалкие фиксированные значения:{" "}
+          <mark>25%</mark>, <mark>33.3%</mark>, <mark>50%</mark>, <mark>100%</mark> и
+          прочие. К счастью, есть сторонний плагин <mark className="plugin">ae-zoom</mark>
+          , который создаёт окно с регулировкой своего процента масштабирования в
+          предпросмотре и решает проблему. Скачать его можно на{" "}
+          <a href="https://github.com/QuisPic/ae-zoom/releases">
+            странице релизов в GitHub
+          </a>
+          .
+        </p>
+        <VideoFigure
+          styleClass="figure_windows-dark"
+          videoSrc="https://private-user-images.githubusercontent.com/56075863/246931354-811d3433-8170-491e-a2c7-bca56bbf998d.webm?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzU2NTEwMDEsIm5iZiI6MTczNTY1MDcwMSwicGF0aCI6Ii81NjA3NTg2My8yNDY5MzEzNTQtODExZDM0MzMtODE3MC00OTFlLWEyYzctYmNhNTZiYmY5OThkLndlYm0_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMjMxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTIzMVQxMzExNDFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1kNDhkNDQ3M2ZmZTZiZjdlMWRkODcxNGFhOTg0ZTJlZmQ3NGExNTAxOWRhMGI5NWUzY2U0ZWU2ZmMyZTZkY2VjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.9D5_lxHrEFFfZDskkKA7RawakaMB45UojRfQVDsUxjk"
+          caption="Демонстрация плагина ae-zoom"
+        />
+        <ContentSwitcher
+          windowsContent={
+            <div>
+              <ul>
+                <li>
+                  Чтобы установить это расширение для изменения масштабирования
+                  предпросмотра, вам нужно перенести файл{" "}
+                  <mark className="file">Zoom.jsx</mark> из архива в стандартную папку для
+                  скриптов:{" "}
+                  <mark className="path">
+                    C:\Program Files\Adobe\Adobe After Effects 20XX\Support Files\Scripts\
+                  </mark>
+                  .
+                </li>
+                <li>
+                  Затем перенесите <mark className="file">Zoom.aex</mark> из папки архива{" "}
+                  <mark className="path">Plug-in/Windows</mark> в общую папку для
+                  плагинов:{" "}
+                  <mark className="path">
+                    C:\Program Files\Adobe\Common\Plug-ins\7.0\MediaCore
+                  </mark>
+                  .
+                </li>
+              </ul>
+              <p>
+                После установки расширения вы сможете его открыть в{" "}
+                <mark className="ui">File &gt; Scripts</mark> и регулировать
+                масштабирование как вашей душе угодно.
+              </p>
+            </div>
+          }
+          macContent={
+            <div>
+              <ul>
+                <li>
+                  Чтобы установить это расширение для изменения масштабирования
+                  предпросмотра, вам нужно перенести файл{" "}
+                  <mark className="file">Zoom.jsx</mark> из архива в стандартную папку для
+                  скриптов:{" "}
+                  <mark className="path">
+                    ~/Library/Applications/Adobe After Effects 20XX/Scripts/
+                  </mark>
+                  .
+                </li>
+                <li>
+                  Затем перенесите <mark className="file">Zoom.plugin</mark> из папки
+                  архива <mark className="path">Plug-in/macOS</mark> в общую папку для
+                  плагинов:{" "}
+                  <mark className="path">
+                    /Library/Application Support/Adobe/Common/Plug-ins/7.0/MediaCore
+                  </mark>
+                  .
+                </li>
+              </ul>
+              <p>
+                После установки расширения вы сможете его открыть в{" "}
+                <mark className="ui">File &gt; Scripts</mark> и регулировать
+                масштабирование как вашей душе угодно.
+              </p>
+            </div>
+          }
+        />
+        <AdditionInfo>
+          Если вы хотите сделать прикрепляемое окно для масштабирования, то переместите{" "}
+          <mark className="file">Zoom.jsx</mark> в дочернюю папку{" "}
+          <mark className="path">Script UI Panels</mark>. Тогда скрипт будет открываться
+          из пункта <mark className="ui">Window</mark>.
+        </AdditionInfo>
       </DetailsSummary>
       <DetailsSummary title="Как убрать пикселизацию предпросмотра при перемещении плейхеда?">
         <p>{/* FIXME: написать!! */}</p>
