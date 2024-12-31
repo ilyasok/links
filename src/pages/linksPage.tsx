@@ -107,7 +107,7 @@ const Links = () => {
               href="https://t.me/s/premtemp"
               icon={<MovieFilterRounded />}
               name="PremTemp"
-              description="Шаблоны для Premiere Pro"
+              description="Шаблоны и плагины для Premiere Pro со всего интернета"
             />
             <LinkCard
               href="https://t.me/s/designworld"
