@@ -102,8 +102,32 @@ const AEInterface: React.FC = () => {
           .
         </AdditionInfo>
       </DetailsSummary>
-      <DetailsSummary title='Бесит окно "Properties", как отключить его автоматическое открытие?'>
-        <p>{/* FIXME: написать!! */}</p>
+      <DetailsSummary title='Меня бесит окно "Properties", как отключить его автоматическое открытие?'>
+        <p>
+          Новая функция <mark className="ui">Свойства</mark> или же{" "}
+          <mark className="ui">Properties</mark> была добавлена в{" "}
+          <mark className="app">After Effects 23.4</mark> и новее. После выхода этого
+          обновления не все приняли положительно новое окно свойств, а некоторых взбесило,
+          что это окно само открывается при выборе того или иного инструмента.
+        </p>
+        <p>
+          К счастью, автоматическое открытие окна свойств можно отключить, убрав галочку
+          из <mark className="ui">Auto-Open Panel</mark>. Эту процедуру нужно выполнить
+          пару раз, потому что эта галочка не отключает авто-открытие у всех инструментов.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="/images/aftereffects/toggle_auto-open_panel.png"
+          imgTitle="Отключение автоматического открытия окна свойств"
+          caption="After Effects"
+        />
+        <AdditionInfo>
+          Подробнее о работе этой новой функции вы можете{" "}
+          <a href="https://helpx.adobe.com/ru/after-effects/using/properties-panel.html">
+            прочитать на официальном сайте Adobe
+          </a>
+          .
+        </AdditionInfo>
       </DetailsSummary>
       <DetailsSummary title="Как включить всплывающую панель для применения эффектов, которая открывается с помощью Ctrl+Space?">
         <p>
