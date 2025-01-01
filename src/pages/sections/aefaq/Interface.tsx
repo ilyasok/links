@@ -77,7 +77,40 @@ const AEInterface: React.FC = () => {
         </p>
       </DetailsSummary>
       <DetailsSummary title="Почему я не могу прикрепить окно скрипта и как мне его в конце концов закрепить?">
-        <p>{/* FIXME: написать */}</p>
+        <p>
+          Скрипты формата <mark className="file">.jsx</mark> или{" "}
+          <mark className="file">.jsxbin</mark>, имеющие интерфейс, не могут
+          прикрепляться, если вы их расположили в{" "}
+          <mark className="path">...\Adobe After Effects 20XX\Support Files\Scripts</mark>
+          , минуя дочернюю папку <mark className="path">ScriptUI Panels</mark>.
+        </p>
+        <VideoFigure
+          styleClass="figure_windows-light"
+          videoSrc="images/aftereffects/i_cant_attach_script.mp4"
+          caption="After Effects"
+        />
+        <p>
+          Ну и как вы догадались: чтобы у вас появилась возможность прикреплять эти окна в
+          интерфейс, нужно расположить скрипт формата <mark className="file">.jsx</mark>{" "}
+          или <mark className="file">.jsxbin</mark> в дочернюю папку{" "}
+          <mark className="path">ScriptUI Panels</mark>. Нужно перезагрузить{" "}
+          <mark className="app">After Effects</mark>, если у вас она была открыта.
+        </p>
+        <VideoFigure
+          styleClass="figure_windows-dark"
+          videoSrc="images/aftereffects/move_from_scripts_to_scriptuipanels.mp4"
+          caption="Проводник"
+        />
+        <p>
+          Скрипт в таком случае переедет из <mark className="ui">File &gt; Scripts</mark>{" "}
+          в самый конец контекстного меню <mark className="ui">Window</mark> и вы сможете
+          его закрепить в любое место вашего рабочего пространства.
+        </p>
+        <VideoFigure
+          styleClass="figure_windows-light"
+          videoSrc="images/aftereffects/attaching_jsx_script.mp4"
+          caption="Прикрепление скрипта True Comp Duplicator"
+        />
       </DetailsSummary>
       <DetailsSummary title="Как поставить несколько окон во вкладки или расположить их по списку?">
         <p>{/* FIXME: написать!! */}</p>
