@@ -116,7 +116,18 @@ const AEInterface: React.FC = () => {
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Пропали нужные переключатели и колонки на таймлайне. Как мне их вернуть?">
-        <p>{/* FIXME: написать!! */}</p>
+        <p>
+          Если вы случайным образом куда-то нажали так, что у вас нужные параметры на
+          таймлайне пропали, то не время паниковать. В левом нижнем углу окна таймлайна
+          есть 4 кнопки для быстрого переключения отображения некоторых колонок. Также
+          колонки можно включать и выключать, нажав <mark className="key">ПКМ</mark> по
+          столбцам и в <mark className="ui">Columns</mark> выбрать то, что нам нужно.
+        </p>
+        <VideoFigure
+          styleClass="figure_windows-dark"
+          videoSrc="images/aftereffects/enable_timeline_columns.mp4"
+          caption="Включение колонок на таймлайне"
+        />
       </DetailsSummary>
       <DetailsSummary title="Компьютер во время работы упал в BSOD и испортил мне настройки. Как мне их восстановить?">
         <p>{/* FIXME: написать!! */}</p>
