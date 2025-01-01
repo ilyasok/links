@@ -289,7 +289,24 @@ const AEInterface: React.FC = () => {
         </AdditionInfo>
       </DetailsSummary>
       <DetailsSummary title="Как убрать пикселизацию предпросмотра при перемещении плейхеда?">
-        <p>{/* FIXME: написать!! */}</p>
+        <p>
+          То, что вы называете пикселизацией - на самом деле называется адаптивным
+          разрешением, которая включена в <mark className="app">After Effects</mark> по
+          умолчанию. Его можно отключить, нажав на молнию (
+          <mark className="ui">Fast Previews</mark>)в окне предпросмотра и выбрать там
+          пункт <mark className="ui">Off</mark>.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/aftereffects/disable_adaptive_resolution.png"
+          imgTitle="Отключение адаптивного разрешения"
+          caption="Timeline"
+        />
+        <p>
+          После отключения этого параметра, при перемещении временной метки качество не
+          должно ухудшаться и будет соответствовать выбранному параметру разрешения
+          предпросмотра.
+        </p>
       </DetailsSummary>
       <DetailsSummary title="Где найти Front View, Current Camera и прочие варианты отображения камеры?">
         <p>
