@@ -1791,6 +1791,21 @@ const AEFromNewbies: React.FC = () => {
           и вы можете его скачать абсолютно бесплатно.
         </AdditionInfo>
       </DetailsSummary>
+      <DetailsSummary title='Как "перевернуть" очерёдность слоёв на таймлайне?'>
+        <p>
+          Если вы хотите поменять очерёдность слоёв наоборот, чтобы последний слой стал
+          первый, а остальные перевернулись по очерёдности, то вам нужно будет выделить
+          первый слой от нужной точки и выделить с зажатым{" "}
+          <mark className="key">Shift</mark> последний слой до нужной точки. Затем нажать
+          на <mark className="key">Ctrl + X</mark> и потом{" "}
+          <mark className="key">Ctrl + V</mark>.
+        </p>
+        <VideoFigure
+          styleClass="figure_windows-dark"
+          videoSrc="/images/aftereffects/invert_layer_numeration.mp4"
+          caption="Переворачиваем очерёдность слоёв"
+        />
+      </DetailsSummary>
       <DetailsSummary title="Переместил слой из одной композиции в другую, но оно ушло за пределы моей композиции. Как его вернуть на своё место?">
         <p>
           Чтобы вернуть слой на место после временной метки, нажмите на{" "}
