@@ -130,7 +130,33 @@ const AEInterface: React.FC = () => {
         />
       </DetailsSummary>
       <DetailsSummary title="Компьютер во время работы упал в BSOD и испортил мне настройки. Как мне их восстановить?">
-        <p>{/* FIXME: написать!! */}</p>
+        <p>
+          В редких случаях при обычной работе с <mark className="app">After Effects</mark>{" "}
+          ваше устройство может упасть в &quot;синий экран смерти&quot;, и в это время по
+          несчастливому стечению обстоятельств программа перезаписывала файл ваших
+          настроек. И соответственно оно запишется как битый файл.
+        </p>
+        <p>
+          Если вы обновлялись с предыдущих версий{" "}
+          <mark className="app">After Effects</mark>, то вы можете импортировать настройки
+          со старых версий. Для этого перейдите в{" "}
+          <mark className="ui">Edit &gt; Preferences &gt; Startup & Repair</mark> найдите
+          кнопку <mark className="ui">Migrate Previous Version Preferences</mark>.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="/images/aftereffects/migrate_previous_version_preferences.png"
+          imgTitle="Переносим настройки из старых версий программы"
+          caption="Preferences"
+        />
+        <p>
+          Если у вас предыдущих настроек нет, то переименовать файлы настроек, убрав
+          суффикс <mark>-old</mark> особо нет смысла, так как файлы могут быть битыми.
+          Периодически сохраняйте настройки пользователя в отдельную папку или настройте
+          синхронизацию в облачном хранилище. Открыть папку с настройками пользователя
+          можно, нажав на кнопку{" "}
+          <mark className="ui">Reveal Preferences in Explorer</mark>.
+        </p>
       </DetailsSummary>
       <DetailsSummary title="Установил After Effects 2023 или новее и не могу понять, что стало с Track Matte?">
         <p>
