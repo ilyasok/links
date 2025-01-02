@@ -1818,6 +1818,11 @@ const AEFromNewbies: React.FC = () => {
           <mark className="key">[</mark>. Если нужно расположить слой до временной метки -
           нажмите на <mark className="key">]</mark>.
         </p>
+        <VideoFigure
+          styleClass="figure_windows-dark"
+          videoSrc="/images/aftereffects/move_layers_around_playhead.mp4"
+          caption="Перемещаем слои по времени вокруг временной метки"
+        />
       </DetailsSummary>
       <DetailsSummary title="Почему первый кадр в композиции начинается не с нулевой секунды?">
         <p>
