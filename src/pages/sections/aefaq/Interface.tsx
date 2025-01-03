@@ -79,10 +79,10 @@ const AEInterface: React.FC = () => {
       <DetailsSummary title="Почему я не могу прикрепить окно скрипта и как мне его в конце концов закрепить?">
         <p>
           Скрипты формата <mark className="file">.jsx</mark> или{" "}
-          <mark className="file">.jsxbin</mark>, имеющие интерфейс, не могут
-          прикрепляться, если вы их расположили в{" "}
+          <mark className="file">.jsxbin</mark>, которые содержат интерфейс, не могут быть
+          прикреплены, если они находятся в директории
           <mark className="path">...\Adobe After Effects 20XX\Support Files\Scripts</mark>
-          , минуя дочернюю папку <mark className="path">ScriptUI Panels</mark>.
+          , минуя папку <mark className="path">ScriptUI Panels</mark>.
         </p>
         <VideoFigure
           styleClass="figure_windows-light"
@@ -90,11 +90,12 @@ const AEInterface: React.FC = () => {
           caption="After Effects"
         />
         <p>
-          Ну и как вы догадались: чтобы у вас появилась возможность прикреплять эти окна в
-          интерфейс, нужно расположить скрипт формата <mark className="file">.jsx</mark>{" "}
-          или <mark className="file">.jsxbin</mark> в дочернюю папку{" "}
-          <mark className="path">ScriptUI Panels</mark>. Нужно перезагрузить{" "}
-          <mark className="app">After Effects</mark>, если у вас она была открыта.
+          Для возможности прикрепления таких окон в рабочее пространство скрипты формата{" "}
+          <mark className="file">.jsx</mark> или <mark className="file">.jsxbin</mark>{" "}
+          необходимо переместить в папку
+          <mark className="path">ScriptUI Panels</mark>. После этого требуется
+          перезагрузка <mark className="app">After Effects</mark>, если приложение уже
+          было запущено.
         </p>
         <VideoFigure
           styleClass="figure_windows-dark"
@@ -102,9 +103,10 @@ const AEInterface: React.FC = () => {
           caption="Проводник"
         />
         <p>
-          Скрипт в таком случае переедет из <mark className="ui">File &gt; Scripts</mark>{" "}
-          в самый конец контекстного меню <mark className="ui">Window</mark> и вы сможете
-          его закрепить в любое место вашего рабочего пространства.
+          После переноса из одной папки в другую - скрипт переместится из меню{" "}
+          <mark className="ui">File &gt; Scripts</mark> в конец списка меню{" "}
+          <mark className="ui">Window</mark>. После открытия скрипта оттуда, вы сможете
+          прикреплять окно в любой части рабочего пространства.
         </p>
         <VideoFigure
           styleClass="figure_windows-light"
