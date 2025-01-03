@@ -143,8 +143,36 @@ const AEImport: React.FC = () => {
           <mark className="app">After Effects</mark> и работать с ними как обычно.
         </p>
       </DetailsSummary>
-      <DetailsSummary title="Хочу импортировать секвенцию изображений, но полученная секвенция импортируется короче/длиннее чем нужно или с неверным FPS. Как исправить?">
-        <p>{/* fixme: написать!! */}</p>
+      <DetailsSummary title="Импортирую пачку изображений как секвенцию, но она получилась короче/длиннее чем нужно или с неверным FPS. Как исправить?">
+        <p>
+          При импорте картинок, как секвенция, задаётся фреймрейт, который указан в ваших
+          настройках <mark className="app">After Effects</mark>. Для того, чтобы проверить
+          ваши настройки импорта, вам нужно перейти в{" "}
+          <mark className="ui">Edit &gt; Preferences &gt; Import</mark> и выбрать в{" "}
+          <mark className="ui">Sequence Footage</mark> свою частоту кадров. Это значение
+          будет применяться при следующем импорте секвенций из картинок.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/aftereffects/change_fps_sequence_footage.png"
+          imgTitle="Настройки импорта секвенций"
+          caption="Preferences"
+        />
+        <p>
+          Если вам нужно преобразовать из одного фреймрейта в другой уже импортированную
+          секвенцию, то вам нужно воспользоваться интерпретацией футажа. Для этого
+          выделите секвенцию в окне <mark className="ui">Project</mark> и нажмите на
+          комбинацию клавиш <mark className="key">Ctrl + Alt + G</mark>. В открывшемся
+          окне в разделе <mark className="ui">Frame Rate</mark> укажите пункт{" "}
+          <mark className="ui">Conform to frame rate</mark> и установите ожидаемое
+          количество кадров в секунду.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/aftereffects/interpret_footage_main.png"
+          imgTitle="Интерпретация футажа"
+          caption="Interpret Footage"
+        />
       </DetailsSummary>
       <DetailsSummary title="Импортировал исходник с переменным FPS. Почему длина исходника в After Effects короче, чем в видео-проигрывателе?">
         <p>
