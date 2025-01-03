@@ -1,5 +1,6 @@
 import {BackspaceOutlined, Search} from "@mui/icons-material";
 import {Modal, Tooltip, message} from "antd";
+import {motion} from "framer-motion";
 import React, {
   createContext,
   useContext,
@@ -99,7 +100,11 @@ export const SearchInPage: React.FC = () => {
     []
   );
 
+  const [selectedResultIndex, setSelectedResultIndex] = useState(-1);
+
   const inputRef = useRef<HTMLInputElement>(null);
+
+  const resultRefs = useRef<(HTMLButtonElement | null)[]>([]);
   useEffect(() => {
     if (isOpen) {
       setQuery("");
@@ -112,6 +117,9 @@ export const SearchInPage: React.FC = () => {
       return () => clearTimeout(timeout);
     }
   }, [isOpen]);
+  useEffect(() => {
+    setSelectedResultIndex(results.length > 0 ? 0 : -1);
+  }, [results]);
 
   const decodeHtmlEntities = (text: string) => {
     const textArea = document.createElement("textarea");
@@ -293,6 +301,61 @@ export const SearchInPage: React.FC = () => {
     });
     closeModal();
   };
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (!isOpen || results.length === 0) {
+        return;
+      }
+      inputRef.current?.focus();
+      switch (e.key) {
+        case "ArrowDown":
+          e.preventDefault();
+          setSelectedResultIndex((prevIndex) =>
+            prevIndex < results.length - 1 ? prevIndex + 1 : prevIndex
+          );
+          break;
+        case "ArrowUp":
+          e.preventDefault();
+          setSelectedResultIndex((prevIndex) =>
+            prevIndex > 0 ? prevIndex - 1 : prevIndex
+          );
+          break;
+        case "Enter":
+          e.preventDefault();
+          if (selectedResultIndex >= 0 && selectedResultIndex < results.length) {
+            const selectedResult = results[selectedResultIndex];
+            handleLinkClick(selectedResult.id);
+          }
+          break;
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("keydown", handleKeyDown);
+
+      return () => {
+        document.removeEventListener("keydown", handleKeyDown);
+      };
+    }
+  }, [isOpen, results, selectedResultIndex, handleLinkClick]);
+  useEffect(() => {
+    if (selectedResultIndex >= 0) {
+      const resultContainer = document.querySelector(".search-results");
+
+      const selectedResultElements = resultContainer?.querySelectorAll(".search-link");
+      if (selectedResultElements && selectedResultElements[selectedResultIndex]) {
+        (selectedResultElements[selectedResultIndex] as HTMLElement).scrollIntoView({
+          behavior: "smooth",
+          block: "nearest",
+        });
+      }
+    }
+  }, [selectedResultIndex]);
+  useEffect(() => {
+    if (isOpen) {
+      inputRef.current?.focus();
+    }
+  }, [isOpen, results, selectedResultIndex]);
 
   return (
     <Modal
@@ -452,14 +515,34 @@ export const SearchInPage: React.FC = () => {
           </p>
         )}
         {results.length > 0 &&
-          results.map(({title, content, id}) => (
+          results.map(({title, content, id}, index) => (
             <div key={id}>
-              <button
+              <motion.button
+                ref={(el) => {
+                  resultRefs.current[index] = el;
+                }}
+                tabIndex={0}
                 onClick={(e) => {
                   e.preventDefault();
                   handleLinkClick(id);
                 }}
-                className="search-link"
+                className={`search-link ${index === selectedResultIndex ? "selected-result" : ""}`}
+                style={{
+                  backgroundColor:
+                    index === selectedResultIndex
+                      ? "var(--summary_background)"
+                      : "transparent",
+                  width: "100%",
+                  outline:
+                    index === selectedResultIndex
+                      ? "1px solid var(--summary_border)"
+                      : "none",
+                }}
+                initial={{scale: 1}}
+                animate={{
+                  scale: index === selectedResultIndex ? 0.98 : 1,
+                }}
+                transition={{duration: 0.25, ease: [0.075, 0.82, 0.165, 1]}}
               >
                 <p className="search-title">{title.replace(/^[+-]+/, "").trim()}</p>
                 <p className="search-content">
@@ -467,7 +550,7 @@ export const SearchInPage: React.FC = () => {
                     content.split("\n")[0]?.trim() ||
                     ""}
                 </p>
-              </button>
+              </motion.button>
             </div>
           ))}
         {query.trim() !== "" && results.length === 0 && (
