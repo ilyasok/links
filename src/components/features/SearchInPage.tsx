@@ -404,8 +404,8 @@ export const SearchInPage: React.FC = () => {
             style={{
               textAlign: "center",
               fontSize: "36px",
-              height: "200px",
-              marginBlock: "auto",
+              height: "200%",
+              padding: "20px",
             }}
           >
             <div>
@@ -562,7 +562,8 @@ export const SearchInPage: React.FC = () => {
               textAlign: "center",
               fontSize: "13px",
               opacity: "0.75",
-              height: "250px",
+              height: "200%",
+              padding: "20px",
               marginBlock: "auto",
             }}
           >
