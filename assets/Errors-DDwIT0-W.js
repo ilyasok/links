@@ -1,0 +1,1 @@
+import{j as s}from"./index-Bg94Kauz.js";import{G as r}from"./GithubUpdateInfo-DWssNsb5.js";const a=()=>s.jsx("div",{className:"faq-content",children:s.jsx(r,{filePath:"src/pages/sections/psfaq/Errors.tsx"})});export{a as default};

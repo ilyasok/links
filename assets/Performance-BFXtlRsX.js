@@ -1,1 +1,0 @@
-import{j as s}from"./index-BKPGftbK.js";import{G as e}from"./GithubUpdateInfo-DNLArw0l.js";const a=()=>s.jsx("div",{className:"faq-content",children:s.jsx(e,{filePath:"src/pages/sections/psfaq/Performance.tsx"})});export{a as default};
