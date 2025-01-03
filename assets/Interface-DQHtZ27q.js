@@ -1,0 +1,1 @@
+import{j as t}from"./index-BXt-LUKe.js";import{G as s}from"./GithubUpdateInfo-CHUOjJdE.js";const r=()=>t.jsx("div",{className:"faq-content",children:t.jsx(s,{filePath:"src/pages/sections/psfaq/Interface.tsx"})});export{r as default};
