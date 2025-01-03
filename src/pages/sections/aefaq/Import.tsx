@@ -6,7 +6,7 @@ import {
   AdditionInfo,
   AdditionWarning,
 } from "../../../components/Additions";
-import {ImageFigure, VideoFigure} from "../../../components/ContentFigure";
+import {ImageFigure, VideoFigure, YouTubeVideo} from "../../../components/ContentFigure";
 
 const AEImport: React.FC = () => {
   return (
@@ -353,7 +353,30 @@ const AEImport: React.FC = () => {
         </p>
       </DetailsSummary>
       <DetailsSummary title="Как импортировать 3D-объекты формата .obj, .fbx или .glb?">
-        <p>{/* fixme: написать!! */}</p>
+        <p>
+          Нативно в <mark className="app">After Effects</mark> в старых версиях программы
+          нельзя было импортировать 3D-объекты встроенными методами. Поэтому дедам
+          приходилось использовать сторонние плагины, например{" "}
+          <mark className="plugin">VideoCopilot Element 3D</mark>. С помощью него можно
+          импортировать 3D модели форматов <mark className="file">.obj</mark>,{" "}
+          <mark className="file">.fbx</mark> и проекты из{" "}
+          <mark className="app">Cinema 4D</mark>.
+        </p>
+        <YouTubeVideo
+          link="Co9V2u0ZZO8"
+          caption="Базовый курс по возможностям Element 3D"
+        />
+        <p>
+          Потом позднее, в <mark className="app">After Effects</mark> версий 2024 и новее
+          завезли новый физический движок для рендера{" "}
+          <mark className="plugin">Advanced 3D</mark>, где заодно добавили нативный импорт
+          3D моделей. Поддержка форматов, правда, не впечатляет, как и функции
+          взаимодействия с ними.
+        </p>
+        <YouTubeVideo
+          link="Zetbh4p9Z8A"
+          caption="Масштабные нововведения для 3D в After Effects"
+        />
       </DetailsSummary>
       <DetailsSummary title="Прислали исходники в формате .mkv, .flv или что-то не поддерживаемое программой, но перекодировать я их не хочу. Как мне их импортировать?">
         <p>
