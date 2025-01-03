@@ -47,6 +47,11 @@
     font-family: "Mulish", sans-serif;
     text-transform: uppercase;
 
+    h3 {
+      text-wrap: balance;
+      margin-inline-end: 15px;
+    }
+
     &-left {
       display: flex;
       flex-direction: row;
@@ -82,6 +87,7 @@
     }
 
     p {
+      text-wrap: stable;
       margin-inline: 20px;
       margin-block: 15px;
     }
@@ -96,19 +102,19 @@
     .message {
       &-correct,
       &-incorrect {
-        max-width: 450px;
         border-radius: $roundness;
         padding-bottom: 10px;
+        max-width: 450px;
       }
 
       &-incorrect {
-        background: hsla(0, 100, 50, 0.1);
         border: 1px solid hsla(0, 100, 50, 0.25);
+        background: hsla(0, 100, 50, 0.1);
       }
 
       &-correct {
-        background: hsla(120, 100, 50, 0.1);
         border: 1px solid hsla(120, 100, 50, 0.25);
+        background: hsla(120, 100, 50, 0.1);
       }
 
       &-flex {
@@ -176,6 +182,7 @@
     }
 
     li {
+      text-wrap: stable;
       position: relative;
       padding-inline: 15px;
       padding-inline-start: 30px;
@@ -228,15 +235,12 @@
     }
 
     mark {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
       filter: saturate(75%);
       margin-block: 2px;
       border: 1px solid var(--mark_border);
       border-radius: $roundness * 0.5;
       background-color: var(--mark_background);
-      padding: 0 4px;
+      padding: 2px 4px;
       color: var(--mark_text);
 
       &.file,
@@ -262,7 +266,8 @@
 
         &::before {
           display: inline-block;
-          vertical-align: text-bottom;
+          vertical-align: middle;
+          margin-inline-end: 4px;
           margin-block: auto;
           background-size: contain;
           background-repeat: no-repeat;

@@ -5,6 +5,7 @@ import {App} from "./App";
 import {ThemeProvider} from "./components/modal/ThemeChanger";
 import "swiper/css";
 import {HelmetProvider} from "react-helmet-async";
+import "./main.scss";
 
 const rootElement = document.getElementById("root");
 
