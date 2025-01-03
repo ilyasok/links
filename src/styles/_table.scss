@@ -1,3 +1,5 @@
+@use "@/styles/variables" as *;
+
 table {
   margin: 15px auto;
   border-collapse: collapse;
@@ -21,7 +23,7 @@ table {
 td,
 th {
   vertical-align: middle;
-  border: 1px solid var(--table_background-border);
+  outline: 1px solid var(--table_background-border);
   padding: 5px 10px;
   text-align: center;
 }

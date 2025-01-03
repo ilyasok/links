@@ -1,16 +1,16 @@
-@use "styles/reset";
-@use "styles/fonts";
-@use "styles/pages/links";
-@use "styles/pages/faq";
-@use "styles/addition";
-@use "styles/figure";
-@use "styles/header";
-@use "styles/table";
-@use "styles/colors";
-@use "styles/themeChanger";
-@use "styles/search";
-@use "styles/support";
-@import "styles/variables";
+@use "@/styles/variables" as *;
+@use "@/styles/reset";
+@use "@/styles/fonts";
+@use "@/styles/pages/links";
+@use "@/styles/pages/faq";
+@use "@/styles/addition";
+@use "@/styles/figure";
+@use "@/styles/header";
+@use "@/styles/table";
+@use "@/styles/colors";
+@use "@/styles/themeChanger";
+@use "@/styles/search";
+@use "@/styles/support";
 
 :root {
   --header-height: 80px;
