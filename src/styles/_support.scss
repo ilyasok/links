@@ -1,5 +1,3 @@
-@import "variables";
-
 .support {
   display: flex;
   justify-content: flex-end;
@@ -35,14 +33,14 @@
   &-button {
     border-radius: $roundness;
     padding: 10px;
-    font-size: 13px;
     font-weight: 700;
+    font-size: 13px;
 
     &-sber {
-      font-size: 17px;
       border: solid 1px var(--sber-border);
       background-color: var(--sber-background);
       color: var(--sber-text);
+      font-size: 17px;
       text-align: center;
 
       &:hover {
@@ -51,10 +49,10 @@
     }
 
     &-yoomoney {
-      font-size: 17px;
       border: solid 1px var(--yoomoney-border);
       background-color: var(--yoomoney-background);
       color: var(--yoomoney-text);
+      font-size: 17px;
       text-align: center;
 
       &:hover {
