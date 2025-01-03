@@ -147,73 +147,14 @@ export const SearchInPage: React.FC = () => {
 
       const title = summary.textContent ?? "";
 
-      const content = Array.from(detail.querySelectorAll<HTMLParagraphElement>("p"))
+      const contentElements = detail.querySelectorAll("p, li, .addition-info");
+
+      const content = Array.from(contentElements)
         .map((el) => decodeHtmlEntities(el.textContent?.trim() ?? ""))
         .filter(Boolean)
         .join("\n");
-
-      const listItems = Array.from(detail.querySelectorAll<HTMLLIElement>("li"))
-        .map((el) => {
-          const directChildUl = el.querySelector("ul");
-
-          const parentText = Array.from(el.childNodes)
-            .map((node) => {
-              if (node.nodeType === Node.TEXT_NODE) {
-                return decodeHtmlEntities(node.textContent?.trim() ?? "");
-              } else if (
-                node.nodeType === Node.ELEMENT_NODE &&
-                (node as HTMLElement).tagName !== "UL"
-              ) {
-                const element = node as HTMLElement;
-                if (element.tagName === "MARK" || element.tagName === "A") {
-                  return decodeHtmlEntities(element.innerHTML?.trim() ?? "");
-                }
-
-                return decodeHtmlEntities(element.textContent?.trim() ?? "");
-              }
-
-              return "";
-            })
-            .filter(Boolean)
-            .join(" ")
-            .trim();
-          if (!directChildUl) {
-            return parentText;
-          }
-
-          const childItems = Array.from(directChildUl.querySelectorAll("li"))
-            .map((child) => {
-              const text = Array.from(child.childNodes)
-                .map((node) => {
-                  if (node.nodeType === Node.TEXT_NODE) {
-                    return decodeHtmlEntities(node.textContent?.trim() ?? "");
-                  } else if (node.nodeType === Node.ELEMENT_NODE) {
-                    const element = node as HTMLElement;
-                    if (element.tagName === "MARK" || element.tagName === "A") {
-                      return decodeHtmlEntities(element.innerHTML?.trim() ?? "");
-                    }
-
-                    return decodeHtmlEntities(element.textContent?.trim() ?? "");
-                  }
-
-                  return "";
-                })
-                .filter(Boolean)
-                .join(" ");
-
-              return text.trim();
-            })
-            .filter(Boolean)
-            .join("\n");
-
-          return `${parentText}\n${childItems}`;
-        })
-        .filter(Boolean)
-        .join("\n");
-
-      const text = [content, listItems].join("\n");
-      if (title || text) {
-        data.push({title, content: text, id});
+      if (title || content) {
+        data.push({title, content, id});
       }
     });
 
@@ -244,7 +185,12 @@ export const SearchInPage: React.FC = () => {
         (word) => titleLower.includes(word) || contentLower.includes(word)
       );
     });
-    setResults(filtered);
+
+    const highlightedResults = filtered.map((result) => ({
+      ...result,
+      content: extractMatchingLine(result.content, text),
+    }));
+    setResults(highlightedResults);
   };
 
   const extractMatchingLine = (content: string, query: string) => {
@@ -263,18 +209,32 @@ export const SearchInPage: React.FC = () => {
     for (const line of cleanLines) {
       const lineLower = line.toLowerCase();
       if (searchWords.every((word) => lineLower.includes(word))) {
-        return line;
+        return highlightText(line, query);
       }
     }
 
     for (const line of cleanLines) {
       const lineLower = line.toLowerCase();
       if (searchWords.some((word) => lineLower.includes(word))) {
-        return line;
+        return highlightText(line, query);
       }
     }
 
-    return cleanLines[0] ?? "";
+    return highlightText(cleanLines[0] ?? "", query);
+  };
+
+  const highlightText = (text: string, query: string) => {
+    if (!query.trim()) {
+      return text;
+    }
+
+    const escapedQuery = query.replace(/[-/\\^$.*+?()[\]{}|]/g, "\\$&");
+
+    const regex = new RegExp(`(${escapedQuery.split(/\s+/).join("|")})`, "gi");
+
+    return text.replace(regex, (match) => {
+      return match.trim() ? `<mark>${match}</mark>` : match;
+    });
   };
 
   const handleLinkClick = (id: string) => {
@@ -547,11 +507,10 @@ export const SearchInPage: React.FC = () => {
                 transition={{duration: 0.25, ease: [0.075, 0.82, 0.165, 1]}}
               >
                 <p className="search-title">{title.replace(/^[+-]+/, "").trim()}</p>
-                <p className="search-content">
-                  {extractMatchingLine(content, query) ||
-                    content.split("\n")[0]?.trim() ||
-                    ""}
-                </p>
+                <p
+                  className="search-content"
+                  dangerouslySetInnerHTML={{__html: content}}
+                />
               </motion.button>
             </div>
           ))}
