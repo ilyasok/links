@@ -10,7 +10,7 @@ import {AdditionDanger, AdditionWarning} from "../components/Additions";
 import SupportDonut from "../components/modal/SupportDonut";
 import CopyMark from "../components/features/CopyMark";
 import {CircularProgress} from "@mui/material";
-import {generateAnchorId} from "../components/DetailsSummary";
+import {enableCopyAnchors, generateAnchorId} from "../components/DetailsSummary";
 
 const AEWhereFind = lazy(() => import("./sections/aefaq/WhereFind"));
 
@@ -82,6 +82,7 @@ const AEFaQ = () => {
     if (loadedCount === sections.length) {
       setIsPageLoaded(true);
       generateAnchorId();
+      enableCopyAnchors();
     }
   }, [loadedCount, sections.length]);
   useEffect(() => {
