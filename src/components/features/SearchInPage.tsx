@@ -79,7 +79,9 @@ export const SearchButton: React.FC = () => {
         }}
         onClick={() => {
           if (!isPageLoaded) {
-            message.error("Поиск недоступен, пока страница полностью не загружена");
+            message.warning(
+              "Поиск временно недоступен, дождитесь полной загрузки страницы"
+            );
           } else {
             openModal();
           }
