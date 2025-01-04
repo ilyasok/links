@@ -1,4 +1,5 @@
 import React, {useCallback, useEffect, useState} from "react";
+import {useSpoiler} from "./DetailsSummary";
 interface ImageFigureProps {
   styleClass: string;
   imgSrc: string;
@@ -17,6 +18,11 @@ const ImageFigure: React.FC<ImageFigureProps> = ({
   imgTitle,
   caption,
 }) => {
+  const isOpen = useSpoiler();
+  if (!isOpen) {
+    return null;
+  }
+
   const [isFullscreen, setIsFullscreen] = useState(false);
 
   const [isClosing, setIsClosing] = useState(false);
@@ -191,6 +197,11 @@ const ImageFigure: React.FC<ImageFigureProps> = ({
 };
 
 const VideoFigure: React.FC<VideoFigureProps> = ({styleClass, videoSrc, caption}) => {
+  const isOpen = useSpoiler();
+  if (!isOpen) {
+    return null;
+  }
+
   const [isFullscreen, setIsFullscreen] = useState(false);
 
   const [isClosing, setIsClosing] = useState(false);
@@ -370,10 +381,12 @@ const VideoFigure: React.FC<VideoFigureProps> = ({styleClass, videoSrc, caption}
   );
 };
 
-const YouTubeVideo: React.FC<{
-  link: string;
-  caption: string;
-}> = ({link, caption}) => {
+const YouTubeVideo: React.FC<{link: string; caption: string}> = ({link, caption}) => {
+  const isOpen = useSpoiler();
+  if (!isOpen) {
+    return null;
+  }
+
   const id = link.split("/").pop();
 
   return (

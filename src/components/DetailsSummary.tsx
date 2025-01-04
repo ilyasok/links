@@ -1,13 +1,17 @@
 import {Tooltip, message} from "antd";
-import React, {ReactNode, useRef, useState} from "react";
-export let isCopyEnabled = false;
-export const enableCopyAnchors = () => {
-  isCopyEnabled = true;
-};
+import React, {ReactNode, createContext, useContext, useRef, useState} from "react";
 interface DetailsSummaryProps {
   title: string;
   children: ReactNode;
 }
+
+const SpoilerContext = createContext(false);
+export const useSpoiler = () => useContext(SpoilerContext);
+export let isCopyEnabled = false;
+export const enableCopyAnchors = () => {
+  isCopyEnabled = true;
+};
+
 export const generateAnchorId = () => {
   const containers = Array.from(document.querySelectorAll(".faq-content"));
   let generatedAnchor = "";
@@ -106,7 +110,9 @@ const DetailsSummary: React.FC<DetailsSummaryProps> = ({title, children}) => {
           </button>
         </Tooltip>
       </summary>
-      <section className="faq-section">{children}</section>
+      <SpoilerContext.Provider value={isOpen}>
+        <section className="faq-section">{children}</section>
+      </SpoilerContext.Provider>
     </details>
   );
 };
