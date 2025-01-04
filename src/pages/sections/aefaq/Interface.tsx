@@ -178,7 +178,7 @@ const AEInterface: React.FC = () => {
           <mark className="ui">Reveal Preferences in Explorer</mark>.
         </p>
       </DetailsSummary>
-      <DetailsSummary title="Установил After Effects 2023 или новее и не могу понять, что стало с Track Matte?">
+      <DetailsSummary title="Установил After Effects 2023 или новее и не могу понять, что стало с Alpha и Luma Matte?">
         <p>
           С версий 2023 и новее пришла новая эпоха работы с масками. Теперь старые
           обучающие видео будут вводить новичков с новыми версиями в заблуждение, а новые
