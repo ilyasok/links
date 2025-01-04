@@ -46,15 +46,10 @@ export const generateAnchorId = () => {
 const DetailsSummary: React.FC<DetailsSummaryProps> = ({title, children}) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const [hasLoaded, setHasLoaded] = useState(false);
-
   const detailsRef = useRef<HTMLDetailsElement>(null);
 
   const handleToggle = () => {
     setIsOpen(!isOpen);
-    if (!hasLoaded && !isOpen) {
-      setHasLoaded(true);
-    }
   };
 
   const handleCopyAnchor = () => {
@@ -111,7 +106,7 @@ const DetailsSummary: React.FC<DetailsSummaryProps> = ({title, children}) => {
           </button>
         </Tooltip>
       </summary>
-      <section className="faq-section">{hasLoaded && children}</section>
+      <section className="faq-section">{children}</section>
     </details>
   );
 };
