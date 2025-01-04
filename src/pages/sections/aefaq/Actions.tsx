@@ -592,7 +592,7 @@ const AEActions: React.FC = () => {
           <a href="https://t.me/s/aetemp">AETemp</a>.
         </AdditionInfo>
       </DetailsSummary>
-      <DetailsSummary title="Как мне распаковать пре-композицию?">
+      <DetailsSummary title="Как мне распаковать прекомпозицию?">
         <p>
           Бывают случаи, когда пользователь сделал несколько прекомпозиций, а потом
           внезапно ему понадобилось их распаковать. И порой не хочется заходить в каждую
