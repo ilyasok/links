@@ -37,7 +37,9 @@ export const SearchProvider: React.FC<{
         if (isPageLoaded) {
           openModal();
         } else {
-          message.error("Поиск временно недоступен, дождитесь полной загрузки страницы");
+          message.warning(
+            "Поиск временно недоступен, дождитесь полной загрузки страницы"
+          );
         }
       }
     };
