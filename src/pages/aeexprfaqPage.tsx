@@ -61,7 +61,7 @@ const AEExpressionPage = () => {
       for (const section of sections) {
         await new Promise<void>((resolve) => {
           setVisibleSections((prev) => [...prev, section.key]);
-          setTimeout(resolve, 50);
+          setTimeout(resolve, 10);
         });
       }
     };
