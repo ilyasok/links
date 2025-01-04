@@ -36,10 +36,6 @@
       property="og:description"
       content="Полезные ссылки для участников AEChat"
     />
-    <link
-      rel="stylesheet"
-      href="src/main.css"
-    />
     <script>
       (function (m, e, t, r, i, k, a) {
         m[i] =
@@ -77,48 +73,116 @@
       src="/src/main.tsx"
     ></script>
     <noscript>
-      <main class="no-javascript">
-        <div class="no-javascript-container">
-          <p class="no-javascript-title">А где JavaScript?</p>
-          <p class="no-javascript-description">
-            Обнови свой браузер до последней версии или скачай другой по ссылкам ниже.
-          </p>
+      <main
+        style="
+          font-family: &quot;Inter&quot;, Arial, Helvetica, sans-serif;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: var(--background-color);
+          height: 100vh;
+          color: var(--text-color);
+          line-height: 1.5;
+        "
+      >
+        <div
+          style="
+            display: inline-flex;
+            flex-direction: column;
+            gap: 10px;
+            box-shadow: 0 10px 25px 10px rgba(0, 0, 0, 0.15);
+            border-radius: 15px;
+            background-color: var(--content-background-color);
+            padding: 15px;
+            max-width: 400px;
+          "
+        >
+          <p
+            style="
+              margin-inline: 10px;
+              color: var(--accent);
+              font-weight: 800;
+              font-size: 32px;
+              font-family: &quot;Mulish&quot;, sans-serif;
+              hyphens: auto;
+              text-align: left;
+              text-transform: uppercase;
+            "
+            >А где JavaScript?</p
+          >
+          <p style="margin-inline: 5px; font-size: 15px; hyphens: auto"
+            >Обнови свой браузер до последней версии или скачай другой по ссылкам ниже.</p
+          >
           <a
             href="https://www.google.ru/chrome/"
             title="Скачать Google Chrome"
-            class="no-javascript-button chrome"
-            ><img
+            style="
+              display: inline-flex;
+              gap: 10px;
+              border-radius: 10px;
+              padding: 10px 15px;
+              font-weight: 500;
+              background-color: #ceead6;
+              color: #188038;
+              text-decoration: none;
+              align-items: center;
+            "
+          >
+            <img
               src="browser_logo/Google_Chrome.svg"
-              title=""
               alt=""
+              style="width: 24px; height: 24px"
             />
-            <p>Скачать Google Chrome</p></a
-          ><a
-            href="https://www.mozilla.org/ru/firefox/"
-            title="Скачать Firefox"
-            class="no-javascript-button firefox"
-            ><img
-              title=""
-              src="browser_logo/Firefox_logo.svg "
-              alt=""
-            />
-            <p>Скачать Firefox</p>
+            <p style="margin-inline-start: 5px">Скачать Google Chrome</p>
           </a>
           <a
-            title="Скачать Яндекс.Браузер (не реклама)"
+            href="https://www.mozilla.org/ru/firefox/"
+            title="Скачать Firefox"
+            style="
+              display: inline-flex;
+              gap: 10px;
+              border-radius: 10px;
+              padding: 10px 15px;
+              font-weight: 500;
+              background-color: #25003e;
+              color: #fff;
+              text-decoration: none;
+              align-items: center;
+            "
+          >
+            <img
+              src="browser_logo/Firefox_logo.svg"
+              alt=""
+              style="width: 24px; height: 24px"
+            />
+            <p style="margin-inline-start: 5px">Скачать Firefox</p>
+          </a>
+          <a
             href="https://browser.yandex.ru/"
-            class="no-javascript-button yandex"
-            ><img
-              title=""
+            title="Скачать Яндекс.Браузер (не реклама)"
+            style="
+              display: inline-flex;
+              gap: 10px;
+              border-radius: 10px;
+              padding: 10px 15px;
+              font-weight: 500;
+              background-color: #f7604a;
+              color: #fff;
+              text-decoration: none;
+              align-items: center;
+            "
+          >
+            <img
               src="browser_logo/Yandex_Browser.svg"
               alt=""
+              style="width: 24px; height: 24px"
             />
-            <p>Скачать Яндекс.Браузер</p>
+            <p style="margin-inline-start: 5px">Скачать Яндекс.Браузер</p>
           </a>
-          <p class="no-javascript-small-description">
-            Если у тебя уже установлена свежая версия браузера, то включи JavaScript в
-            настройках. Иначе никак.
-          </p>
+          <p style="opacity: 0.5; margin-inline: 5px; font-size: 12px; hyphens: auto"
+            >Если у тебя уже установлена свежая версия браузера, то включи JavaScript в
+            настройках. Иначе никак.</p
+          >
         </div>
       </main>
     </noscript>
