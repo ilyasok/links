@@ -358,7 +358,7 @@ const AEErrors: React.FC = () => {
           автоматического авто-сохранения сбрасывается. Поэтому рекомендуется поставить
           минимальное время для авто-сохранений в настройках программы:{" "}
           <mark className="ui">Edit &gt; Preferences &gt; Auto-Save</mark> и укажите
-          значение от 1 до 3 минуты.
+          значение <mark className="ui">Save every</mark> от 1 до 3 минут.
         </AdditionInfo>
       </DetailsSummary>
       <DetailsSummary title="This project must be converted from version XX.X.X (Windows/macOS). The original file will be unchanged">
