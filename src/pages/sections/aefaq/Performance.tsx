@@ -334,7 +334,86 @@ const AEPerformance: React.FC = () => {
         </p>
       </DetailsSummary>
       <DetailsSummary title="Предпросмотр идёт как-будто в slow-motion, что делать?">
-        <p>{/* FIXME: написать!! */}</p>
+        <p>
+          Скорее всего вы пытаетесь проиграть предпросмотр в реальном времени - эффекты и
+          видео-исходники вряд ли смогут так быстро обрабатывать кадры на лету, чтобы оно
+          игралось спокойно и без запинок. В окне <mark className="ui">Info</mark> обычно
+          отображается текущий FPS предпросмотра и дополнительная информация о рендеринге
+          и проигрывании кадров из памяти.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/aftereffects/info_non-realtime.png"
+          imgTitle="Предпросмотр не в реальном времени"
+          caption="Info"
+        />
+        <p>
+          Чтобы устранить это стандартное поведение программы - вам нужно закэшировать
+          предпросмотр, прежде чем его воспроизводить. Для этого откройте окно{" "}
+          <mark className="ui">Preview</mark> и прожмите две опции:{" "}
+          <mark className="ui">Cache Before Playback</mark> и{" "}
+          <mark className="ui">If caching, play caching frames</mark>.
+        </p>
+        <ul>
+          <li>
+            Включение чекбокса у <mark className="ui">Cache Before Playback</mark>{" "}
+            позволит программе закэшировать предпросмотр, прежде чем воспроизвести его.
+            Повторное нажатие на кнопку воспроизведения остановит кэширование.
+          </li>
+          <li>
+            Включение чекбокса у{" "}
+            <mark className="ui">If caching, play caching frames</mark> позволит
+            остановить кэширование предпросмотра и проиграть те кадры, которые уже
+            закэшировались при повторном нажатии на кнопку воспроизведения.
+          </li>
+        </ul>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="/images/aftereffects/preview_caching.png"
+          imgTitle="Включение кэширования предпросмотра"
+          caption="Preview"
+        />
+        <p>
+          Иногда бывает такое, что пользователь случайно изменил{" "}
+          <mark className="ui">Frame Rate</mark> в окне{" "}
+          <mark className="ui">Preview</mark> и композиция проигрывается либо быстро, либо
+          замедленно. Для этого в пункте <mark className="ui">Frame Rate</mark> установите
+          значение <mark className="ui">Auto</mark>. Это позволит программе воспроизводить
+          предпросмотр в соответствии с частотой кадров в настройках композиции.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="/images/aftereffects/preview_change_fps.png"
+          imgTitle="Изменение частоты кадров предпросмотра"
+          caption="Preview"
+        />
+        <p>
+          Если у вас возникают проблемы с записью кэша на жёсткий диск, то вы можете
+          отключить опцию кэширования на жёсткий диск в{" "}
+          <mark className="ui">Edit &gt; Preferences &gt; Media & Disk Cache</mark>, убрав
+          чекбокс из пункта <mark className="ui">Enable Disk Cache</mark>.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/aftereffects/disable_disk_cache.png"
+          imgTitle="Отключение дискового кэша"
+          caption="Preferences"
+        />
+        <p>
+          В редких случаях бывают ситуации, когда пользователь переключился между
+          звуковыми выходами, например подключил беспроводные наушники, и из-за этого{" "}
+          <mark className="app">After Effects</mark> не может нормально синхронизировать
+          картинку и звук. В таких случаях рекомендуется обновить звуковые драйвера или
+          изменить аудиовыход на другой в <mark className="ui">Default Output</mark> и
+          уменьшить значение <mark className="ui">Latency</mark> до минимального в{" "}
+          <mark className="ui">Edit &gt; Preferences &gt; Audio Hardware</mark>.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="/images/aftereffects/audio_hardware_settings.png"
+          imgTitle="Настройки звукового выхода"
+          caption="Preferences"
+        />
       </DetailsSummary>
     </div>
   );
