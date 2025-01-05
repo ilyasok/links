@@ -72,6 +72,18 @@ const DetailsSummary: React.FC<DetailsSummaryProps> = ({title, children}) => {
 
   const handleToggle = (event: React.SyntheticEvent) => {
     const details = event.currentTarget as HTMLDetailsElement;
+    if (details.open) {
+      setTimeout(() => {
+        if (window.location.hash) {
+          history.replaceState(
+            null,
+            "",
+            window.location.pathname + window.location.search
+          );
+        }
+      }, 5000);
+    }
+
     if (details.hasAttribute("data-anchor-processed")) {
       details.removeAttribute("data-anchor-processed");
     }
