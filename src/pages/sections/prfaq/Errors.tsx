@@ -2,6 +2,7 @@ import React from "react";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 import {AdditionInfo} from "../../../components/Additions";
 import DetailsSummary from "../../../components/DetailsSummary";
+import {ImageFigure} from "../../../components/ContentFigure";
 
 const PRErrors: React.FC = () => {
   return (
@@ -14,10 +15,41 @@ const PRErrors: React.FC = () => {
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title='Вылезло "System Compatibility Report" при запуске Premiere Pro'>
-        <p>{/* FIXME: написать!! */}</p>
+        <AdditionInfo>
+          Когда вы видите это окно при запуске - не надо паниковать. Это не является
+          ошибкой или серьёзной проблемой, но исправлять причину её появления нам в любом
+          случае нужно. Запустить программу можно как обычно, нажав на{" "}
+          <mark className="ui">Continue with known issues</mark>.
+        </AdditionInfo>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/premierepro/system_compatibility_report.png"
+          imgTitle="Предупреждение о несовместимости оборудования с программой"
+          caption="System Compatibility Report"
+        />
+        <p>
+          В данном окне обычно пишутся возможные проблемы с использованием программы,
+          например устаревшие драйвера или плагины с каким-то критическим багом.
+        </p>
+        <p>
+          Если вы в курсе о причинах некой несовместимости и вы согласны работать дальше с
+          некими ограничениями, лишь бы не видеть это окно при запуске - вы можете
+          отключить это окно, программа даёт это сделать.
+        </p>
+        <p>
+          Для отключения этого окна перейдите в настройки программы:{" "}
+          <mark className="ui">Edit &gt; Preferences &gt; General</mark>. Затем в этом
+          разделе отключите галочку с пункта{" "}
+          <mark className="ui">Show System Compatibility Issues</mark>.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/premierepro/show_system_compatibility_issues.png"
+          imgTitle="Отключаем предупреждения о несовместимости оборудования с программой"
+          caption="Preferences"
+        />
       </DetailsSummary>
       <DetailsSummary title="Ошибка при запуске приложения 0xc0000142">
-        {/* FIXME: написать!! */}
         <p>
           Вы пытаетесь запустить приложение на устройстве с процессором без поддержки
           инструкций AVX2. В{" "}
