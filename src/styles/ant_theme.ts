@@ -7,8 +7,9 @@ const themeConfig = {
       separatorColor: "var(--accent)",
     },
     Divider: {
+      colorTextHeading: "var(--accent)",
       colorSplit: "var(--summary_border)",
-      fontSizeLG: 14,
+      fontSizeLG: 18,
     },
     Slider: {
       handleColor: "var(--accent)",

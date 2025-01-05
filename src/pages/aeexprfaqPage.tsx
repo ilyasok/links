@@ -218,7 +218,12 @@ const AEExpressionPage = () => {
                         onAnimationComplete={() => setLoadedCount((prev) => prev + 1)}
                       >
                         <Divider
-                          style={{fontSize: "clamp(12px, 2vw, 14px)"}}
+                          style={{
+                            fontSize: "clamp(12px, 2vw, 14px)",
+                            color: "var(--text-color)",
+                            textTransform: "uppercase",
+                            fontWeight: "800",
+                          }}
                           orientation="right"
                         >
                           {title}

@@ -9,6 +9,7 @@ import {
 import ContentSwitcher from "../../../components/features/OperatingSystemFilter";
 import {VideoFigure, YouTubeVideo} from "../../../components/ContentFigure";
 import {FlexibleLinks} from "../../../components/FlexibleLinksFaQ";
+import {Divider} from "antd";
 
 const AETips: React.FC = () => {
   return (
@@ -167,15 +168,7 @@ const AETips: React.FC = () => {
           работу за счёт автоматизации рутинных задач. Вот мой личный топ плагинов,
           которые я ставлю при каждой установке.
         </p>
-        <div
-          style={{
-            textAlign: "center",
-            fontWeight: "bold",
-            color: "var(--accent)",
-          }}
-        >
-          Для совместимости с чужими проектами
-        </div>
+        <Divider>Для совместимости с чужими проектами</Divider>
         <ul>
           <li>
             <mark className="plugin">BorisFX Sapphire</mark> и{" "}
@@ -211,15 +204,7 @@ const AETips: React.FC = () => {
             объекта за счёт размытия указанного фонового слоя в параметрах плагина.
           </li>
         </ul>
-        <div
-          style={{
-            textAlign: "center",
-            fontWeight: "bold",
-            color: "var(--accent)",
-          }}
-        >
-          Полезные инструменты
-        </div>
+        <Divider>Полезные инструменты</Divider>
         <ul>
           <li>
             <mark className="plugin">FXConsole от VideoCopilot</mark> - всплывающая
@@ -355,15 +340,7 @@ const AETips: React.FC = () => {
           Для начала определитесь, какая операционная система вам лучше подходит, для
           каких целей вы собираетесь брать устройство и на какой бюджет.
         </p>
-        <div
-          style={{
-            textAlign: "center",
-            fontWeight: "bold",
-            color: "var(--accent)",
-          }}
-        >
-          Если вы хотите устройство на Windows
-        </div>
+        <Divider>Если вы хотите устройство на Windows</Divider>
         <ul>
           <li>
             Если у вас относительно небольшой бюджет до 500-1000$ и вы не часто
@@ -432,15 +409,7 @@ const AETips: React.FC = () => {
             </AdditionInfo>
           </li>
         </ul>
-        <div
-          style={{
-            textAlign: "center",
-            fontWeight: "bold",
-            color: "var(--accent)",
-          }}
-        >
-          Если вы хотите устройство на macOS
-        </div>
+        <Divider>Если вы хотите устройство на macOS</Divider>
         <ul>
           <li>
             Если вы хотите взять первый ноутбук от Apple или переехать с MacBook на
