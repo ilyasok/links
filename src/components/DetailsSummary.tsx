@@ -1,5 +1,12 @@
 import {Tooltip, message} from "antd";
-import React, {ReactNode, createContext, useContext, useRef, useState} from "react";
+import React, {
+  ReactNode,
+  createContext,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 interface DetailsSummaryProps {
   title: string;
   children: ReactNode;
@@ -25,8 +32,9 @@ export const generateAnchorId = () => {
 
       if (window.location.hash === `#${generatedAnchor}`) {
         const details = summary.closest("details");
-        if (details) {
+        if (details && !details.hasAttribute("data-anchor-processed")) {
           details.setAttribute("open", "true");
+          details.setAttribute("data-anchor-processed", "true");
           setTimeout(() => {
             const headerHeight = document.querySelector("header")?.offsetHeight ?? 0;
 
@@ -51,9 +59,22 @@ const DetailsSummary: React.FC<DetailsSummaryProps> = ({title, children}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const detailsRef = useRef<HTMLDetailsElement>(null);
+  useEffect(() => {
+    if (detailsRef.current) {
+      const observer = new MutationObserver(() => {
+        setIsOpen(detailsRef.current?.open || false);
+      });
+      observer.observe(detailsRef.current, {attributes: true, attributeFilter: ["open"]});
 
-  const handleToggle = () => {
-    setIsOpen(!isOpen);
+      return () => observer.disconnect();
+    }
+  }, []);
+
+  const handleToggle = (event: React.SyntheticEvent) => {
+    const details = event.currentTarget as HTMLDetailsElement;
+    if (details.hasAttribute("data-anchor-processed")) {
+      details.removeAttribute("data-anchor-processed");
+    }
   };
 
   const handleCopyAnchor = () => {
