@@ -12,7 +12,11 @@ const PRErrors: React.FC = () => {
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Media Offline или медиаданные в автономном режиме">
-        <p>{/* FIXME: написать!! */}</p>
+        <p>
+          Эта ошибка часто возникает, если вы удалили исходники из диска, перенесли их или
+          открыли чужой проект, не распаковав его из архива полностью.
+        </p>
+        {/* TODO: написать!! */}
       </DetailsSummary>
       <DetailsSummary title='Вылезло "System Compatibility Report" при запуске Premiere Pro'>
         <AdditionInfo>
@@ -83,6 +87,9 @@ const PRErrors: React.FC = () => {
           Чтобы снова отключить AVX2, введите команду{" "}
           <mark>bcdedit /set xsavedisable 1</mark> и снова перезагрузите устройство.
         </AdditionInfo>
+      </DetailsSummary>
+      <DetailsSummary title='"This unlicensed Adobe app is not genuine and will be disabled soon" или что-то похожее с красной полоской при запуске, но на другом языке. Как запустить программу нормально?'>
+        <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
     </div>
   );

@@ -143,7 +143,6 @@ const PRInstallProblems: React.FC = () => {
           <mark className="app">Windows Defender</mark> на время. Ну или навсегда, если
           доверяете своей голове и источникам, откуда вы ставите софт.
         </p>
-        <p></p>
       </DetailsSummary>
       <DetailsSummary title='Скачал репак от KpoJluK, а мне пишут "Некоторые установочные файлы были повреждены"'>
         <p>

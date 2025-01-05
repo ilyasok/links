@@ -12,13 +12,19 @@ const PRInterface: React.FC = () => {
       <DetailsSummary title="Есть ли аналог FX Console для Premiere Pro?">
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>{" "}
-      <DetailsSummary title="Как изменить акцентный цвет интерфейса?">
-        <p>{/* FIXME: написать!! */}</p>
-      </DetailsSummary>{" "}
       <DetailsSummary title="Пропала визуализация аудиодорожек на таймлайне, как их вернуть?">
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>{" "}
       <DetailsSummary title="Как отключить выделение объекта на таймлайне при перемещении временной метки?">
+        <p>{/* FIXME: написать!! */}</p>
+      </DetailsSummary>
+      <DetailsSummary title="Куда пропала настройка Timeline в Preferences?">
+        <p>{/* FIXME: написать!! */}</p>
+      </DetailsSummary>
+      <DetailsSummary title="Как изменить акцентный цвет интерфейса?">
+        <p>{/* FIXME: написать!! */}</p>
+      </DetailsSummary>
+      <DetailsSummary title="Как вернуть старый интерфейс окна экспорта?">
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
     </div>
