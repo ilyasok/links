@@ -63,10 +63,11 @@ const GithubUpdateInfo: React.FC<GithubUpdateInfoProps> = ({filePath}) => {
     return (
       <p
         style={{
-          textAlign: "right",
-          fontSize: "12px",
           color: "red",
+          fontSize: "12px",
           opacity: "0.75",
+          textAlign: "right",
+          textWrap: "balance",
           whiteSpace: "pre-wrap",
         }}
       >
@@ -78,11 +79,12 @@ const GithubUpdateInfo: React.FC<GithubUpdateInfoProps> = ({filePath}) => {
   return (
     <p
       style={{
-        textAlign: "right",
-        fontSize: "12px",
-        whiteSpace: "pre-wrap",
-        opacity: "0.5",
         filter: "saturate(0)",
+        fontSize: "12px",
+        opacity: "0.5",
+        textAlign: "right",
+        textWrap: "balance",
+        whiteSpace: "pre-wrap",
       }}
       dangerouslySetInnerHTML={{__html: commitInfo}}
     />
