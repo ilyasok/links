@@ -247,7 +247,9 @@ export const SearchInPage: React.FC = () => {
 
     const detailsElement = summaryElement.closest("details");
     if (detailsElement) {
-      detailsElement.setAttribute("open", "true");
+      if (!detailsElement.hasAttribute("open")) {
+        detailsElement.setAttribute("open", "true");
+      }
     }
 
     const headerHeight = document.querySelector("header")?.offsetHeight ?? 0;
