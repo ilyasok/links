@@ -14,7 +14,6 @@ interface DetailsSummaryProps {
 
 const SpoilerContext = createContext(false);
 export const useSpoiler = () => useContext(SpoilerContext);
-
 export const generateAnchorId = () => {
   const containers = Array.from(document.querySelectorAll(".faq-content"));
   let generatedAnchor = "";
@@ -87,6 +86,13 @@ const DetailsSummary: React.FC<DetailsSummaryProps> = ({title, children}) => {
 
   const handleCopyAnchor = () => {
     const anchorId = detailsRef.current?.querySelector(".faq-summary")?.id ?? "";
+    if (!anchorId) {
+      message.warning(
+        "Копирование ссылок на пункты временно недоступно, дождитесь полной загрузки страницы"
+      );
+
+      return;
+    }
 
     const anchor = `${window.location.origin}${window.location.pathname}#${anchorId}`;
     navigator.clipboard.writeText(anchor);
@@ -114,7 +120,12 @@ const DetailsSummary: React.FC<DetailsSummaryProps> = ({title, children}) => {
           <button
             onClick={handleCopyAnchor}
             className="copy_button"
-            style={{width: "20px", height: "20px", flex: "none"}}
+            style={{
+              width: "20px",
+              height: "20px",
+              flex: "none",
+              filter: anchorId ? "none" : "saturate(0) opacity(0.25)",
+            }}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
