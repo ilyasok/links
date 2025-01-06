@@ -80,7 +80,7 @@ const AEInterface: React.FC = () => {
         <p>
           Скрипты формата <mark className="file">.jsx</mark> или{" "}
           <mark className="file">.jsxbin</mark>, которые содержат интерфейс, не могут быть
-          прикреплены, если они находятся в директории
+          прикреплены, если они находятся в директории{" "}
           <mark className="path">...\Adobe After Effects 20XX\Support Files\Scripts</mark>
           , минуя папку <mark className="path">ScriptUI Panels</mark>.
         </p>
