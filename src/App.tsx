@@ -51,24 +51,43 @@ const ErrorFallback = ({error}: {error: Error}) => (
     <div className="error-modal">
       <p className="error-modal-title">Что-то пошло не так</p>
       <p>Обычно после перезагрузки страницы или очистки кэша браузера всё чинится.</p>
-      <p className="error-modal-message">Выбило ошибку &quot;{error.message}&quot;</p>
       <div style={{display: "flex", gap: "10px"}}>
-        <button
+        <motion.button
           onClick={() => {
             window.location.reload();
             window.location.href = "/";
           }}
           className="error-modal-button"
+          whileHover={{
+            scale: 0.955,
+            transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
+          }}
+          whileTap={{scale: 0.9, opacity: 0.5}}
         >
           На главную
-        </button>
-        <button onClick={() => window.location.reload()}>Обновить страницу</button>
+        </motion.button>
+        <motion.button
+          onClick={() => window.location.reload()}
+          className="error-modal-button"
+          whileHover={{
+            scale: 0.95,
+            transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
+          }}
+          whileTap={{scale: 0.9, opacity: 0.5}}
+        >
+          Обновить страницу
+        </motion.button>
       </div>
       <p className="error-modal-send-report">
-        Если всё ещё сталкиваетесь с трудностями при открытии страницы,{" "}
-        <a href="mailto:me@m1sh3r.ru">напишите об этом на почту</a>, указав браузер и
-        операционную систему.
+        Если вы всё ещё сталкиваетесь с трудностями при открытии страницы -{" "}
+        <a
+          href={`mailto:me@m1sh3r.ru?subject=Ошибка:%20%22${error.message}%22%20на%20странице:%20${location.pathname}&body=%0A%0AЯ%20использую%20браузер%20<span%20style="text-decoration:underline;">${navigator.userAgent}</span>.`}
+        >
+          напишите об этом на почту
+        </a>
+        , указав браузер и операционную систему.
       </p>
+      <p className="error-modal-message">Ошибка: &quot;{error.message}&quot;</p>
     </div>
   </div>
 );

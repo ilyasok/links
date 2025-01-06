@@ -18,11 +18,17 @@ const NotFound = () => (
       <div className="error-modal">
         <p className="error-modal-title">404 / Не найдено</p>
         <p>Вы попали на несуществующую страницу, пожалуйста, перейдите на главную.</p>
-        <Link
-          to="/"
-          className="error-modal-button"
-        >
-          На главную
+        <Link to="/">
+          <motion.div
+            className="error-modal-button"
+            whileHover={{
+              scale: 0.95,
+              transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
+            }}
+            whileTap={{scale: 0.9, opacity: 0.5}}
+          >
+            На главную
+          </motion.div>
         </Link>
       </div>
     </div>

@@ -41,50 +41,19 @@ const Footer: React.FC<FooterProps> = ({title, initialYear}) => {
         footer={null}
         centered
       >
-        <div style={{display: "flex", flexDirection: "column", gap: "15px"}}>
-          <p
-            style={{
-              color: "var(--accent)",
-              fontWeight: 700,
-              fontSize: "20px",
-              fontFamily: '"Mulish", sans-serif',
-              textTransform: "uppercase",
-            }}
-          >
-            О сайте
-          </p>
+        <div className="modal">
+          <p className="modal-title">О сайте</p>
           <p>
-            Привет, я{" "}
-            <a
-              style={{
-                color: "var(--accent)",
-                fontWeight: 700,
-                textDecoration: "underline",
-              }}
-              href="https://t.me/m1sh3r"
-            >
-              Мишер
-            </a>
-            , создатель этой страницы. Идея сайта заключалась в том, чтобы минимизировать
-            надоедливые вопросы по программам Adobe и направить людей на альтернативные
-            чаты, если возникли вопросы по другим программам.{" "}
-            <i>Надеюсь, что с этой задачей я справился.</i>
+            Привет, я <a href="https://t.me/m1sh3r">Мишер</a>, создатель этой страницы.
+            Идея сайта заключалась в том, чтобы минимизировать надоедливые вопросы по
+            программам Adobe и направить людей на альтернативные чаты, если возникли
+            вопросы по другим программам. <i>Надеюсь, что с этой задачей я справился.</i>
           </p>
           <p>
             Контент на сайте наполнялся благодаря команде администраторов и участников{" "}
-            <a
-              style={{
-                color: "var(--accent)",
-                fontWeight: 700,
-                textDecoration: "underline",
-              }}
-              href="https://t.me/joinchat/F1DdXtG9LephYWUy"
-            >
-              AEChat
-            </a>
-            .
+            <a href="https://t.me/joinchat/F1DdXtG9LephYWUy">AEChat</a>.
           </p>
-          <p style={{fontSize: "12px", opacity: "0.5"}}>
+          <p className="modal-message">
             При копировании контента, пожалуйста, ссылайтесь на первоисточник, мы
             старались не просто так. В каждом пункте можно скопировать ссылку, нажав на
             кнопку справа.

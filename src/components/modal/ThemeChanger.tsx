@@ -7,6 +7,7 @@ import {
   LightModeRounded,
   RestartAlt,
 } from "@mui/icons-material";
+import {motion} from "framer-motion";
 type Theme = "light" | "dark" | "system";
 interface ThemeContextProps {
   theme: Theme;
@@ -81,7 +82,7 @@ export const ThemeToggleButton: React.FC = () => {
 
   return (
     <>
-      <Tooltip title="Менятор темы">
+      <Tooltip title="Оформление">
         <button onClick={openModal}>
           <FormatColorFillOutlined />
         </button>
@@ -108,72 +109,79 @@ const ThemeModal: React.FC<ThemeModalProps> = ({isModalOpen, closeModal}) => {
       footer={null}
       destroyOnClose
       onCancel={closeModal}
-      className="theme-modal"
-      width={300}
+      width={450}
     >
-      <div
-        style={{
-          marginBlock: "10px",
-          display: "flex",
-          justifyContent: "space-around",
-          alignItems: "center",
-        }}
-      >
-        <Tooltip title="Светлая тема">
-          <button
+      <div className="theme-modal">
+        <p className="modal-title">Оформление</p>
+        <div className="theme-selector">
+          <motion.button
+            whileHover={{
+              scale: 1.075,
+              transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
+            }}
+            whileTap={{scale: 0.9, opacity: 0.5}}
             className={
               theme === "light" ? "theme-button theme-button-selected" : "theme-button"
             }
             onClick={() => setTheme("light")}
           >
             <LightModeRounded />
-          </button>
-        </Tooltip>
-        <Tooltip title="Темная тема">
-          <button
+            Светлая
+          </motion.button>
+          <motion.button
+            whileHover={{
+              scale: 1.075,
+              transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
+            }}
+            whileTap={{scale: 0.9, opacity: 0.5}}
             className={
               theme === "dark" ? "theme-button theme-button-selected" : "theme-button"
             }
             onClick={() => setTheme("dark")}
           >
             <DarkModeRounded />
-          </button>
-        </Tooltip>
-        <Tooltip title="Системная тема">
-          <button
+            Тёмная
+          </motion.button>
+          <motion.button
+            whileHover={{
+              scale: 1.075,
+              transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
+            }}
+            whileTap={{scale: 0.9, opacity: 0.5}}
             className={
               theme === "system" ? "theme-button theme-button-selected" : "theme-button"
             }
             onClick={() => setTheme("system")}
           >
             <HideSourceRounded />
-          </button>
-        </Tooltip>
-      </div>
-      <div style={{display: "flex", alignItems: "center", gap: "5px"}}>
-        <p style={{fontSize: "14px"}}>Оттенок:</p>
-        <Slider
-          min={0}
-          max={360}
-          value={accentHue}
-          onChange={(value) => setAccentHue(value)}
-          style={{flex: "1 1 auto", width: "100%"}}
-        />
-        <Tooltip title="Сбросить оттенок">
-          <button
-            onClick={() => setAccentHue(210)}
-            style={{
-              width: "28px",
-              height: "28px",
-              backgroundColor: "transparent",
-              border: "none",
-              padding: 0,
-              cursor: "pointer",
-            }}
-          >
-            <RestartAlt />
-          </button>
-        </Tooltip>
+            Системная
+          </motion.button>
+        </div>
+        <div style={{display: "flex", alignItems: "center", gap: "5px"}}>
+          <p style={{fontSize: "14px"}}>Оттенок:</p>
+          <Slider
+            min={0}
+            max={360}
+            value={accentHue}
+            onChange={(value) => setAccentHue(value)}
+            style={{flex: "1 1 auto", width: "100%"}}
+          />
+          <Tooltip title="Сбросить оттенок">
+            <button
+              onClick={() => setAccentHue(210)}
+              style={{
+                width: "28px",
+                height: "28px",
+                backgroundColor: "transparent",
+                border: "none",
+                padding: 0,
+                cursor: "pointer",
+              }}
+            >
+              <RestartAlt />
+            </button>
+          </Tooltip>
+        </div>
       </div>
     </Modal>
   );

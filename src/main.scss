@@ -8,11 +8,8 @@
 @use "@/styles/header";
 @use "@/styles/table";
 @use "@/styles/colors";
-@use "@/styles/themeChanger";
-@use "@/styles/search";
-@use "@/styles/support";
 @use "@/styles/ant";
-@use "@/styles/error";
+@use "@/styles/modal";
 
 :root {
   --header-height: 80px;

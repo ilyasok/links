@@ -7,6 +7,10 @@
   text-transform: uppercase;
 }
 
+.ant-slider:hover .ant-slider-handle::after {
+  box-shadow: 0 0 0 2px var(--accent);
+}
+
 .ant-message {
   color: var(--text-color);
   font-family: "Inter", sans-serif;
@@ -18,6 +22,7 @@
 }
 
 .ant-modal .ant-modal-content {
+  border: 1px solid var(--content-background-border);
   border-radius: $roundness * 1.5;
-  padding: 10px;
+  padding: 0;
 }
