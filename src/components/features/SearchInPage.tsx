@@ -333,211 +333,222 @@ export const SearchInPage: React.FC = () => {
       forceRender={true}
       getContainer={false}
     >
-      <div className="search-input-wrapper">
-        <input
-          className="search-input"
-          type="text"
-          value={query}
-          onChange={(e) => handleSearch(e.target.value)}
-          placeholder="Найти контент по странице..."
-          ref={inputRef}
-          style={{cursor: "text"}}
-        />
-        {query.trim() !== "" && (
-          <button
-            onClick={() => {
-              setQuery("");
-              setResults([]);
-            }}
-            className="search-clear-button"
-            style={{cursor: "pointer"}}
-          >
-            <Tooltip title="Очистить">
-              <BackspaceOutlined
-                opacity={0.5}
-                fontSize="small"
-              />
-            </Tooltip>
-          </button>
-        )}
-      </div>
-      <div className="search-results">
-        {query.trim() === "" && (
-          <p
-            className="search-no-results"
-            style={{
-              textAlign: "center",
-              fontSize: "36px",
-              height: "200%",
-              padding: "20px",
-            }}
-          >
-            <div>
-              {location.pathname === "/aefaq" && (
-                <div className="flexible-links">
-                  <button onClick={() => handleLinkClick("where-find")}>
-                    Ищем полезности
-                  </button>
-                  <button onClick={() => handleLinkClick("install-problems")}>
-                    Проблемы с установкой
-                  </button>
-                  <button onClick={() => handleLinkClick("from-newbies")}>
-                    Вопросы от новичков
-                  </button>
-                  <button onClick={() => handleLinkClick("tips")}>
-                    (не)Вредные советы
-                  </button>
-                  <button onClick={() => handleLinkClick("import")}>Импорт</button>
-                  <button onClick={() => handleLinkClick("interface")}>Интерфейс</button>
-                  <button onClick={() => handleLinkClick("performance")}>
-                    Производительность
-                  </button>
-                  <button onClick={() => handleLinkClick("actions")}>Как и чем?</button>
-                  <button onClick={() => handleLinkClick("errors")}>
-                    Ошибки и предупреждения
-                  </button>
-                  <button onClick={() => handleLinkClick("export")}>Экспорт</button>
-                  <button onClick={() => handleLinkClick("export-problems")}>
-                    Проблемы при экспорте
-                  </button>
-                </div>
-              )}
-              {location.pathname === "/prfaq" && (
-                <div className="flexible-links">
-                  <button onClick={() => handleLinkClick("where-find")}>
-                    Ищем полезности
-                  </button>
-                  <button onClick={() => handleLinkClick("install-problems")}>
-                    Проблемы с установкой
-                  </button>
-                  <button onClick={() => handleLinkClick("from-newbies")}>
-                    Вопросы от новичков
-                  </button>
-                  <button onClick={() => handleLinkClick("tips")}>
-                    (не)Вредные советы
-                  </button>
-                  <button onClick={() => handleLinkClick("import")}>Импорт</button>
-                  <button onClick={() => handleLinkClick("interface")}>Интерфейс</button>
-                  <button onClick={() => handleLinkClick("performance")}>
-                    Производительность
-                  </button>
-                  <button onClick={() => handleLinkClick("actions")}>Как и чем?</button>
-                  <button onClick={() => handleLinkClick("errors")}>
-                    Ошибки и предупреждения
-                  </button>
-                  <button onClick={() => handleLinkClick("export")}>Экспорт</button>
-                  <button onClick={() => handleLinkClick("export-problems")}>
-                    Проблемы при экспорте
-                  </button>
-                </div>
-              )}
-              {location.pathname === "/psfaq" && (
-                <div className="flexible-links">
-                  <button onClick={() => handleLinkClick("where-find")}>
-                    Ищем полезности
-                  </button>
-                  <button onClick={() => handleLinkClick("install-problems")}>
-                    Проблемы с установкой
-                  </button>
-                  <button onClick={() => handleLinkClick("from-newbies")}>
-                    Вопросы от новичков
-                  </button>
-                  <button onClick={() => handleLinkClick("import")}>Импорт</button>
-                  <button onClick={() => handleLinkClick("interface")}>Интерфейс</button>
-                  <button onClick={() => handleLinkClick("performance")}>
-                    Производительность
-                  </button>
-                  <button onClick={() => handleLinkClick("actions")}>Как и чем?</button>
-                  <button onClick={() => handleLinkClick("errors")}>
-                    Ошибки и предупреждения
-                  </button>
-                  <button onClick={() => handleLinkClick("export")}>Экспорт</button>
-                  <button onClick={() => handleLinkClick("export-problems")}>
-                    Проблемы при экспорте
-                  </button>
-                </div>
-              )}
-              {location.pathname === "/aeexprfaq" && (
-                <div className="flexible-links">
-                  <button onClick={() => handleLinkClick("start")}>С чего начать?</button>
-                  <button onClick={() => handleLinkClick("base")}>База всех баз</button>
-                  <button onClick={() => handleLinkClick("linking")}>
-                    Ссылки и привязки
-                  </button>
-                  <button onClick={() => handleLinkClick("formulas")}>Формулы</button>
-                  <button onClick={() => handleLinkClick("tips")}>
-                    (не)Вредные советы
-                  </button>
-                  <button onClick={() => handleLinkClick("tech-question")}>
-                    Технические вопросы
-                  </button>
-                  <button onClick={() => handleLinkClick("actions")}>Как и чем?</button>
-                  <button onClick={() => handleLinkClick("errors")}>
-                    Ошибки и предупреждения
-                  </button>
-                </div>
-              )}
-            </div>
-          </p>
-        )}
-        {results.length > 0 &&
-          results.map(({title, content, id}, index) => (
-            <div key={id}>
-              <motion.button
-                ref={(el) => {
-                  resultRefs.current[index] = el;
-                }}
-                tabIndex={0}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleLinkClick(id);
-                }}
-                className={`search-link ${index === selectedResultIndex ? "selected-result" : ""}`}
-                style={{
-                  backgroundColor:
-                    index === selectedResultIndex
-                      ? "var(--summary_background)"
-                      : "transparent",
-                  width: "100%",
-                  outline:
-                    index === selectedResultIndex
-                      ? "1px solid var(--summary_border)"
-                      : "none",
-                }}
-                initial={{scale: 1}}
-                animate={{
-                  scale: index === selectedResultIndex ? 0.98 : 1,
-                }}
-                transition={{duration: 0.25, ease: [0.075, 0.82, 0.165, 1]}}
-              >
-                <p className="search-title">{title.replace(/^[+-]+/, "").trim()}</p>
-                <p
-                  className="search-content"
-                  dangerouslySetInnerHTML={{__html: content}}
+      <div style={{padding: "10px"}}>
+        <div className="search-input-wrapper">
+          <input
+            className="search-input"
+            type="text"
+            value={query}
+            onChange={(e) => handleSearch(e.target.value)}
+            placeholder="Найти контент по странице..."
+            ref={inputRef}
+            style={{cursor: "text"}}
+          />
+          {query.trim() !== "" && (
+            <button
+              onClick={() => {
+                setQuery("");
+                setResults([]);
+              }}
+              className="search-clear-button"
+              style={{cursor: "pointer"}}
+            >
+              <Tooltip title="Очистить">
+                <BackspaceOutlined
+                  opacity={0.5}
+                  fontSize="small"
                 />
-              </motion.button>
-            </div>
-          ))}
-        {query.trim() !== "" && results.length === 0 && (
-          <p
-            className="search-no-results"
-            style={{
-              textAlign: "center",
-              fontSize: "13px",
-              opacity: "0.75",
-              height: "200%",
-              padding: "20px",
-              marginBlock: "auto",
-            }}
-          >
-            Ничего не нашлось, попробуйте изменить ваш запрос.
-          </p>
-        )}
-        {!isPageLoaded && (
-          <p style={{textAlign: "center", fontSize: "16px", margin: "20px"}}>
-            Страница ещё загружается, а поиск всё ещё недоступен. Пожалуйста, подождите...
-          </p>
-        )}
+              </Tooltip>
+            </button>
+          )}
+        </div>
+        <div className="search-results">
+          {query.trim() === "" && (
+            <p
+              className="search-no-results"
+              style={{
+                textAlign: "center",
+                fontSize: "36px",
+                height: "200%",
+                padding: "20px",
+              }}
+            >
+              <div>
+                {location.pathname === "/aefaq" && (
+                  <div className="flexible-links">
+                    <button onClick={() => handleLinkClick("where-find")}>
+                      Ищем полезности
+                    </button>
+                    <button onClick={() => handleLinkClick("install-problems")}>
+                      Проблемы с установкой
+                    </button>
+                    <button onClick={() => handleLinkClick("from-newbies")}>
+                      Вопросы от новичков
+                    </button>
+                    <button onClick={() => handleLinkClick("tips")}>
+                      (не)Вредные советы
+                    </button>
+                    <button onClick={() => handleLinkClick("import")}>Импорт</button>
+                    <button onClick={() => handleLinkClick("interface")}>
+                      Интерфейс
+                    </button>
+                    <button onClick={() => handleLinkClick("performance")}>
+                      Производительность
+                    </button>
+                    <button onClick={() => handleLinkClick("actions")}>Как и чем?</button>
+                    <button onClick={() => handleLinkClick("errors")}>
+                      Ошибки и предупреждения
+                    </button>
+                    <button onClick={() => handleLinkClick("export")}>Экспорт</button>
+                    <button onClick={() => handleLinkClick("export-problems")}>
+                      Проблемы при экспорте
+                    </button>
+                  </div>
+                )}
+                {location.pathname === "/prfaq" && (
+                  <div className="flexible-links">
+                    <button onClick={() => handleLinkClick("where-find")}>
+                      Ищем полезности
+                    </button>
+                    <button onClick={() => handleLinkClick("install-problems")}>
+                      Проблемы с установкой
+                    </button>
+                    <button onClick={() => handleLinkClick("from-newbies")}>
+                      Вопросы от новичков
+                    </button>
+                    <button onClick={() => handleLinkClick("tips")}>
+                      (не)Вредные советы
+                    </button>
+                    <button onClick={() => handleLinkClick("import")}>Импорт</button>
+                    <button onClick={() => handleLinkClick("interface")}>
+                      Интерфейс
+                    </button>
+                    <button onClick={() => handleLinkClick("performance")}>
+                      Производительность
+                    </button>
+                    <button onClick={() => handleLinkClick("actions")}>Как и чем?</button>
+                    <button onClick={() => handleLinkClick("errors")}>
+                      Ошибки и предупреждения
+                    </button>
+                    <button onClick={() => handleLinkClick("export")}>Экспорт</button>
+                    <button onClick={() => handleLinkClick("export-problems")}>
+                      Проблемы при экспорте
+                    </button>
+                  </div>
+                )}
+                {location.pathname === "/psfaq" && (
+                  <div className="flexible-links">
+                    <button onClick={() => handleLinkClick("where-find")}>
+                      Ищем полезности
+                    </button>
+                    <button onClick={() => handleLinkClick("install-problems")}>
+                      Проблемы с установкой
+                    </button>
+                    <button onClick={() => handleLinkClick("from-newbies")}>
+                      Вопросы от новичков
+                    </button>
+                    <button onClick={() => handleLinkClick("import")}>Импорт</button>
+                    <button onClick={() => handleLinkClick("interface")}>
+                      Интерфейс
+                    </button>
+                    <button onClick={() => handleLinkClick("performance")}>
+                      Производительность
+                    </button>
+                    <button onClick={() => handleLinkClick("actions")}>Как и чем?</button>
+                    <button onClick={() => handleLinkClick("errors")}>
+                      Ошибки и предупреждения
+                    </button>
+                    <button onClick={() => handleLinkClick("export")}>Экспорт</button>
+                    <button onClick={() => handleLinkClick("export-problems")}>
+                      Проблемы при экспорте
+                    </button>
+                  </div>
+                )}
+                {location.pathname === "/aeexprfaq" && (
+                  <div className="flexible-links">
+                    <button onClick={() => handleLinkClick("start")}>
+                      С чего начать?
+                    </button>
+                    <button onClick={() => handleLinkClick("base")}>База всех баз</button>
+                    <button onClick={() => handleLinkClick("linking")}>
+                      Ссылки и привязки
+                    </button>
+                    <button onClick={() => handleLinkClick("formulas")}>Формулы</button>
+                    <button onClick={() => handleLinkClick("tips")}>
+                      (не)Вредные советы
+                    </button>
+                    <button onClick={() => handleLinkClick("tech-question")}>
+                      Технические вопросы
+                    </button>
+                    <button onClick={() => handleLinkClick("actions")}>Как и чем?</button>
+                    <button onClick={() => handleLinkClick("errors")}>
+                      Ошибки и предупреждения
+                    </button>
+                  </div>
+                )}
+              </div>
+            </p>
+          )}
+          {results.length > 0 &&
+            results.map(({title, content, id}, index) => (
+              <div key={id}>
+                <motion.button
+                  ref={(el) => {
+                    resultRefs.current[index] = el;
+                  }}
+                  tabIndex={0}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleLinkClick(id);
+                  }}
+                  className={`search-link ${index === selectedResultIndex ? "selected-result" : ""}`}
+                  style={{
+                    backgroundColor:
+                      index === selectedResultIndex
+                        ? "var(--summary_background)"
+                        : "transparent",
+                    width: "100%",
+                    outline:
+                      index === selectedResultIndex
+                        ? "1px solid var(--summary_border)"
+                        : "none",
+                  }}
+                  initial={{scale: 1}}
+                  animate={{
+                    scale: index === selectedResultIndex ? 0.98 : 1,
+                  }}
+                  transition={{duration: 0.25, ease: [0.075, 0.82, 0.165, 1]}}
+                >
+                  <p className="search-title">{title.replace(/^[+-]+/, "").trim()}</p>
+                  <p
+                    className="search-content"
+                    dangerouslySetInnerHTML={{__html: content}}
+                  />
+                </motion.button>
+              </div>
+            ))}
+          {query.trim() !== "" && results.length === 0 && (
+            <p
+              className="search-no-results"
+              style={{
+                textAlign: "center",
+                fontSize: "13px",
+                opacity: "0.75",
+                height: "200%",
+                padding: "20px",
+                marginBlock: "auto",
+              }}
+            >
+              Ничего не нашлось, попробуйте изменить ваш запрос.
+            </p>
+          )}
+          {!isPageLoaded && (
+            <p style={{textAlign: "center", fontSize: "16px", margin: "20px"}}>
+              Страница ещё загружается, а поиск всё ещё недоступен. Пожалуйста,
+              подождите...
+            </p>
+          )}
+        </div>
       </div>
     </Modal>
   );
