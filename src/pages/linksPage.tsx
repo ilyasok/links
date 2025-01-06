@@ -291,9 +291,9 @@ const Links = () => {
             если у него три фото подряд установлены в одно и тоже время - это явный
             признак бота. Остерегайтесь мошенников!{" "}
             <a
-              href="https://www.sberbank.ru/ru/person/kibrary/articles/moshenniki-atakuyut-frilanserov-kak-ne-popast-v-lovushku"
+              href="https://www.kadrof.ru/articles/45098"
               title={
-                'Памятка от Сбербанка: "Как не попасться в ловушку мошенников на фрилансе"'
+                "Как обманывают на фрилансе? 12 схем, которые нужно знать фрилансерам"
               }
             >
               Подробнее...
