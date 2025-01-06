@@ -939,7 +939,7 @@ const AEErrors: React.FC = () => {
         </p>
       </DetailsSummary>
       <DetailsSummary title='"This unlicensed Adobe app is not genuine and will be disabled soon" или что-то похожее с красной полоской при запуске, но на другом языке. Как запустить программу нормально?'>
-        <p>Программа от Adobe решила достучаться в интернет. Причин может быть две:</p>
+        <p>Программа от Adobe решила достучаться в интернет. Причин может быть три.</p>
         <ul>
           <li>
             Вы забыли отключить VPN. С наплывом блокировок различных ресурсов на
@@ -953,7 +953,19 @@ const AEErrors: React.FC = () => {
             Adobe что-то не прописалось в файл <mark className="file">hosts</mark> или
             кто-то удалил оттуда строки.
           </li>
+          <li>
+            Ваш антивирус съел какие-то файлы для корректной подмены активации, ссылаясь
+            на то, что это якобы вирус. Для устранения этого - отключите антивирус или
+            внесите папку с программами Adobe в белый лист антивируса, а затем
+            переустановите программу.
+          </li>
         </ul>
+        <ImageFigure
+          styleClass="figure_windows-light"
+          imgSrc="images/adobe_the_unlicensed_app.png"
+          imgTitle="Сообщение об отсутствии лицензии"
+          caption="Adobe"
+        />
         <ContentSwitcher
           windowsContent={
             <div>
