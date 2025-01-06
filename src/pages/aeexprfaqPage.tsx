@@ -9,7 +9,7 @@ import {SearchInPage, SearchProvider} from "../components/features/SearchInPage"
 import SupportDonut from "../components/modal/SupportDonut";
 import {Helmet} from "react-helmet-async";
 import {CircularProgress} from "@mui/material";
-import {enableCopyAnchors, generateAnchorId} from "../components/DetailsSummary";
+import {generateAnchorId} from "../components/DetailsSummary";
 
 const AEExprStart = lazy(() => import("./sections/aeexprfaq/Start"));
 
@@ -53,7 +53,6 @@ const AEExpressionPage = () => {
     if (loadedCount === sections.length) {
       setIsPageLoaded(true);
       generateAnchorId();
-      enableCopyAnchors();
     }
   }, [loadedCount, sections.length]);
   useEffect(() => {

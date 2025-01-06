@@ -14,10 +14,6 @@ interface DetailsSummaryProps {
 
 const SpoilerContext = createContext(false);
 export const useSpoiler = () => useContext(SpoilerContext);
-export let isCopyEnabled = false;
-export const enableCopyAnchors = () => {
-  isCopyEnabled = true;
-};
 
 export const generateAnchorId = () => {
   const containers = Array.from(document.querySelectorAll(".faq-content"));
@@ -90,19 +86,13 @@ const DetailsSummary: React.FC<DetailsSummaryProps> = ({title, children}) => {
   };
 
   const handleCopyAnchor = () => {
-    if (!isCopyEnabled) {
-      message.warning(
-        "Копирование ссылок на пункты временно недоступно, дождитесь полной загрузки страницы"
-      );
-
-      return;
-    }
-
     const anchorId = detailsRef.current?.querySelector(".faq-summary")?.id ?? "";
 
     const anchor = `${window.location.origin}${window.location.pathname}#${anchorId}`;
     navigator.clipboard.writeText(anchor);
-    message.success(`Ссылка на пункт ${anchorId} скопирована в буфер обмена`);
+    message.success(
+      `Теперь вы можете поделиться пунктом ${anchorId} с другими пользователями`
+    );
   };
 
   const anchorId = detailsRef.current?.querySelector(".faq-summary")?.id ?? "";
@@ -124,13 +114,7 @@ const DetailsSummary: React.FC<DetailsSummaryProps> = ({title, children}) => {
           <button
             onClick={handleCopyAnchor}
             className="copy_button"
-            style={{
-              width: "20px",
-              height: "20px",
-              flex: "none",
-              filter: !isCopyEnabled ? "saturate(0%)" : "none",
-              opacity: !isCopyEnabled ? 0.5 : 1,
-            }}
+            style={{width: "20px", height: "20px", flex: "none"}}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

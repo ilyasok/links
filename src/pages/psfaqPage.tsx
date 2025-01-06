@@ -10,7 +10,7 @@ import {SearchInPage, SearchProvider} from "../components/features/SearchInPage"
 import SupportDonut from "../components/modal/SupportDonut";
 import {Helmet} from "react-helmet-async";
 import {CircularProgress} from "@mui/material";
-import {enableCopyAnchors, generateAnchorId} from "../components/DetailsSummary";
+import {generateAnchorId} from "../components/DetailsSummary";
 
 const PSActions = lazy(() => import("./sections/psfaq/Actions"));
 
@@ -84,7 +84,6 @@ const PSFaQ = () => {
     if (loadedCount === sections.length) {
       setIsPageLoaded(true);
       generateAnchorId();
-      enableCopyAnchors();
     }
   }, [loadedCount, sections.length]);
   useEffect(() => {
