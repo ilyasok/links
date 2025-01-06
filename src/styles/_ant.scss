@@ -1,0 +1,23 @@
+@use "@/styles/variables" as *;
+
+.ant-divider-inner-text {
+  opacity: 0.8;
+  font-weight: 700;
+  font-size: clamp(12px, 2vw, 15px);
+  text-transform: uppercase;
+}
+
+.ant-message {
+  color: var(--text-color);
+  font-family: "Inter", sans-serif;
+}
+
+.ant-message .ant-message-notice-wrapper .ant-message-notice-content {
+  border: 1px solid var(--content-background-border);
+  background: var(--content-background-color);
+}
+
+.ant-modal .ant-modal-content {
+  border-radius: $roundness * 1.5;
+  padding: 10px;
+}

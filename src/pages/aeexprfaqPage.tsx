@@ -106,10 +106,10 @@ const AEExpressionPage = () => {
         <Header title="ae(expr)faq" />
         <motion.main
           className="main"
-          initial={{x: 100, opacity: 0}}
-          animate={{x: 0, opacity: 1}}
-          exit={{x: -50, opacity: 0}}
-          transition={{duration: 0.5, ease: [0.075, 0.82, 0.165, 1]}}
+          initial={{x: 100, y: 0, opacity: 0}}
+          animate={{x: 0, y: 0, opacity: 1}}
+          exit={{x: 0, y: 50, opacity: 0}}
+          transition={{duration: 0.5, type: "spring", ease: [0.075, 0.82, 0.165, 1]}}
         >
           <div className="faq-container-flex">
             <div className="faq-container">
@@ -208,10 +208,11 @@ const AEExpressionPage = () => {
                       }
                     >
                       <motion.div
-                        initial={{opacity: 0}}
-                        animate={{opacity: 1}}
+                        initial={{opacity: 0, scale: 0.9}}
+                        animate={{opacity: 1, scale: 1}}
                         transition={{
-                          duration: 0.75,
+                          duration: 0.5,
+                          type: "spring",
                           ease: [0.075, 0.82, 0.165, 1],
                           delay: 0.1,
                         }}
@@ -219,7 +220,6 @@ const AEExpressionPage = () => {
                       >
                         <Divider
                           style={{
-                            fontSize: "clamp(12px, 2vw, 14px)",
                             color: "var(--text-color)",
                             textTransform: "uppercase",
                             fontWeight: "800",
