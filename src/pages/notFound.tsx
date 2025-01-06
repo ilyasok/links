@@ -14,23 +14,17 @@ const NotFound = () => (
     <Helmet>
       <title>notfound@aechat</title>
     </Helmet>
-    <div className="not-found-container">
-      <p className="not-found-title">Мы потерялись</p>
-      <p className="not-found-description">
-        Вы попали на несуществующую страницу. Пожалуйста, вернитесь на главную.
-      </p>
-      <Link
-        to="/"
-        className="not-found-button to-main"
-      >
-        На главную
-      </Link>
-      <a
-        href="mailto:me@m1sh3r.ru"
-        className="not-found-small-description"
-      >
-        Если вы столкнулись с проблемой, пожалуйста, напишите об этом на почту.
-      </a>
+    <div className="error-container">
+      <div className="error-modal">
+        <p className="error-modal-title">404 / Не найдено</p>
+        <p>Вы попали на несуществующую страницу, пожалуйста, перейдите на главную.</p>
+        <Link
+          to="/"
+          className="error-modal-button"
+        >
+          На главную
+        </Link>
+      </div>
     </div>
   </motion.main>
 );

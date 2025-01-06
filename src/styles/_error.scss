@@ -1,0 +1,67 @@
+@use "@/styles/variables" as *;
+
+.error {
+  &-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  &-modal {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-inline: 20px;
+    border: 1px solid var(--content-background-border);
+    border-radius: $roundness;
+    background-color: var(--content-background-color);
+    padding: 15px;
+    max-width: 400px;
+    text-align: left;
+
+    &-title {
+      text-wrap: balance;
+      margin-inline: 5px;
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 30px;
+      font-family: "Mulish", sans-serif;
+      text-transform: uppercase;
+    }
+    p {
+      text-wrap: balance;
+      margin-inline: 5px;
+    }
+
+    &-message {
+      opacity: 0.5;
+      margin-inline: 5px;
+      font-weight: 500;
+      font-size: 13px;
+    }
+
+    &-button,
+    button {
+      cursor: pointer;
+      border: 1px solid var(--links_border);
+      border-radius: $roundness;
+      background-color: var(--links_background);
+      padding: 10px 20px;
+      color: var(--accent) !important;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    &-send-report {
+      opacity: 0.5;
+      margin-inline: 5px;
+      font-size: 12px;
+      hyphens: auto;
+
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+}
