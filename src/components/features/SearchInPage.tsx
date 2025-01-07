@@ -149,14 +149,73 @@ export const SearchInPage: React.FC = () => {
 
       const title = summary.textContent ?? "";
 
-      const contentElements = detail.querySelectorAll("p, li, .addition-info");
-
-      const content = Array.from(contentElements)
+      const content = Array.from(detail.querySelectorAll<HTMLParagraphElement>("p"))
         .map((el) => decodeHtmlEntities(el.textContent?.trim() ?? ""))
         .filter(Boolean)
         .join("\n");
-      if (title || content) {
-        data.push({title, content, id});
+
+      const listItems = Array.from(detail.querySelectorAll<HTMLLIElement>("li"))
+        .map((el) => {
+          const directChildUl = el.querySelector("ul");
+
+          const parentText = Array.from(el.childNodes)
+            .map((node) => {
+              if (node.nodeType === Node.TEXT_NODE) {
+                return decodeHtmlEntities(node.textContent?.trim() ?? "");
+              } else if (
+                node.nodeType === Node.ELEMENT_NODE &&
+                (node as HTMLElement).tagName !== "UL"
+              ) {
+                const element = node as HTMLElement;
+                if (element.tagName === "MARK" || element.tagName === "A") {
+                  return decodeHtmlEntities(element.innerHTML?.trim() ?? "");
+                }
+
+                return decodeHtmlEntities(element.textContent?.trim() ?? "");
+              }
+
+              return "";
+            })
+            .filter(Boolean)
+            .join(" ")
+            .trim();
+          if (!directChildUl) {
+            return parentText;
+          }
+
+          const childItems = Array.from(directChildUl.querySelectorAll("li"))
+            .map((child) => {
+              const text = Array.from(child.childNodes)
+                .map((node) => {
+                  if (node.nodeType === Node.TEXT_NODE) {
+                    return decodeHtmlEntities(node.textContent?.trim() ?? "");
+                  } else if (node.nodeType === Node.ELEMENT_NODE) {
+                    const element = node as HTMLElement;
+                    if (element.tagName === "MARK" || element.tagName === "A") {
+                      return decodeHtmlEntities(element.innerHTML?.trim() ?? "");
+                    }
+
+                    return decodeHtmlEntities(element.textContent?.trim() ?? "");
+                  }
+
+                  return "";
+                })
+                .filter(Boolean)
+                .join(" ");
+
+              return text.trim();
+            })
+            .filter(Boolean)
+            .join("\n");
+
+          return `${parentText}\n${childItems}`;
+        })
+        .filter(Boolean)
+        .join("\n");
+
+      const text = [content, listItems].join("\n");
+      if (title || text) {
+        data.push({title, content: text, id});
       }
     });
 
