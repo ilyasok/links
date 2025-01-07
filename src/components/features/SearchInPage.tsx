@@ -247,10 +247,31 @@ export const SearchInPage: React.FC = () => {
       );
     });
 
-    const highlightedResults = filtered.map((result) => ({
-      ...result,
-      content: extractMatchingLine(result.content, text),
-    }));
+    const highlightedResults = filtered
+      .map((result) => {
+        const isSingleParagraphMatch = result.content.split("\n").some((line) => {
+          const lineLower = line.toLowerCase();
+
+          return searchWords.every((word) => lineLower.includes(word));
+        });
+
+        return {
+          ...result,
+          content: extractMatchingLine(result.content, text),
+          isSingleParagraphMatch,
+        };
+      })
+      .sort((a, b) => {
+        if (a.isSingleParagraphMatch && !b.isSingleParagraphMatch) {
+          return -1;
+        }
+
+        if (!a.isSingleParagraphMatch && b.isSingleParagraphMatch) {
+          return 1;
+        }
+
+        return 0;
+      });
     setResults(highlightedResults);
   };
 
