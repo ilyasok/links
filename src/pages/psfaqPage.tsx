@@ -1,7 +1,7 @@
 import React, {Suspense, lazy, useEffect, useState} from "react";
 import {Breadcrumb, Divider} from "antd";
 import {Link} from "react-router-dom";
-import {AdditionDanger, AdditionWarning} from "../components/Additions";
+import {AdditionDanger} from "../components/Additions";
 import Header from "../components/Header";
 import {motion} from "framer-motion";
 import Footer from "../components/Footer";
@@ -166,12 +166,6 @@ const PSFaQ = () => {
                 версии сайта, перейдите на{" "}
                 <a href="legacy/psfaq.html">aechat.ru/legacy/psfaq</a>.
               </AdditionDanger>
-              <AdditionWarning>
-                Данный раздел находится в разработке и иногда обновляется, поэтому могут
-                быть неточности в действиях, выводах и тексте. Мнение автора и мнение
-                читателя могут отличаться. Предложения по поводу улучшения материала вы
-                можете отправить на <a href="mailto:me@m1sh3r.ru">почту автора</a>.
-              </AdditionWarning>
               {sections.map(({key, title, component: Component, id}) =>
                 visibleSections.includes(key) ? (
                   <div

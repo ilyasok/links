@@ -1,6 +1,8 @@
 import React, {useState} from "react";
 import {Modal} from "antd";
 import {motion} from "framer-motion";
+import {CoffeeRounded, SupportRounded} from "@mui/icons-material";
+import {AdditionInfo} from "../Additions";
 
 const SupportDonut: React.FC = () => {
   const [isModalOpen1, setIsModalOpen1] = useState(false);
@@ -32,9 +34,27 @@ const SupportDonut: React.FC = () => {
       <div className="support">
         <motion.button
           className="modal-button"
+          onClick={showModal2}
           style={{
             padding: "10px",
             fontSize: "13px",
+            filter: "saturate(0.5)",
+          }}
+          whileHover={{
+            scale: 1.075,
+            transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
+          }}
+          whileTap={{scale: 0.9, opacity: 0.5}}
+        >
+          <SupportRounded />
+          Сообщить о проблеме
+        </motion.button>
+        <motion.button
+          className="modal-button"
+          style={{
+            padding: "10px",
+            fontSize: "13px",
+            filter: "saturate(1.25)",
           }}
           whileHover={{
             scale: 1.075,
@@ -43,22 +63,8 @@ const SupportDonut: React.FC = () => {
           whileTap={{scale: 0.9, opacity: 0.5}}
           onClick={showModal1}
         >
+          <CoffeeRounded />
           Поддержать сайт
-        </motion.button>
-        <motion.button
-          className="support-button support-button-share"
-          onClick={showModal2}
-          style={{
-            padding: "10px",
-            fontSize: "13px",
-          }}
-          whileHover={{
-            scale: 1.075,
-            transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
-          }}
-          whileTap={{scale: 0.9, opacity: 0.5}}
-        >
-          Поделиться
         </motion.button>
       </div>
       <Modal
@@ -204,9 +210,35 @@ const SupportDonut: React.FC = () => {
         onCancel={handleCancel2}
         footer={null}
       >
-        <div>
-          Модуль &quot;поделиться&quot; пока ещё не разработан
-          {/* FIXME: сделать */}
+        <div className="modal">
+          <div className="modal-title">Сообщить о проблеме</div>
+          <p>
+            Вы можете предложить улучшить материал или сообщить о каком-то баге или
+            странном поведении сайта. Для этого напишите мне на почту и я постараюсь
+            учесть ваши предложения.
+          </p>
+          <motion.a
+            whileHover={{
+              scale: 0.975,
+              transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
+            }}
+            whileTap={{scale: 0.9, opacity: 0.5}}
+            style={{textDecoration: "none", fontSize: "18px", textAlign: "center"}}
+            className="modal-button"
+            href={`mailto:me@m1sh3r.ru?subject=Пишу по поводу ${location.pathname.replace(/\/$/, "")} (${navigator.userAgent.replace(/ /g, " ")})`}
+          >
+            Написать на почту
+          </motion.a>
+          <p className="modal-message">
+            Нажимая на кнопку, вы соглашаетесь с тем, что вы передаёте данные о user-agent
+            браузера. Эти данные можно удалить в заголовке при отправке письма, но лучше
+            оставить, если вы сообщаете о каком-то баге.
+          </p>
+          <AdditionInfo>
+            Разделы с частыми вопросами находятся в разработке и иногда обновляются,
+            поэтому могут быть неточности в действиях, выводах и тексте. Мнение автора и
+            мнение читателя могут отличаться.
+          </AdditionInfo>
         </div>
       </Modal>
     </>

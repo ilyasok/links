@@ -6,7 +6,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import {Helmet} from "react-helmet-async";
 import {SearchInPage, SearchProvider} from "../components/features/SearchInPage";
-import {AdditionDanger, AdditionWarning} from "../components/Additions";
+import {AdditionDanger} from "../components/Additions";
 import SupportDonut from "../components/modal/SupportDonut";
 import CopyMark from "../components/features/CopyMark";
 import {CircularProgress} from "@mui/material";
@@ -177,12 +177,6 @@ const AEFaQ = () => {
                 версии сайта, перейдите на{" "}
                 <a href="legacy/aefaq.html">aechat.ru/legacy/aefaq</a>.
               </AdditionDanger>
-              <AdditionWarning>
-                Данный раздел находится в разработке и иногда обновляется, поэтому могут
-                быть неточности в действиях, выводах и тексте. Мнение автора и мнение
-                читателя могут отличаться. Предложения по поводу улучшения материала вы
-                можете отправить на <a href="mailto:me@m1sh3r.ru">почту автора</a>.
-              </AdditionWarning>
               {sections.map(({key, title, component: Component, id}) =>
                 visibleSections.includes(key) ? (
                   <div

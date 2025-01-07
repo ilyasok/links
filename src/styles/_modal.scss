@@ -110,6 +110,9 @@
 
   &-button,
   button {
+    display: flex;
+    gap: 8px;
+    align-items: center;
     cursor: pointer;
     border: 1px solid var(--links_border);
     border-radius: $roundness;
@@ -286,7 +289,13 @@
 .support {
   display: flex;
   justify-content: flex-end;
+  margin-inline: 10px;
   margin-block: 15px;
+  gap: 8px;
+  svg {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 // *: стили для смены темы
