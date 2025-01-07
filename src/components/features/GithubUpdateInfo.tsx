@@ -69,6 +69,8 @@ const GithubUpdateInfo: React.FC<GithubUpdateInfoProps> = ({filePath}) => {
           textAlign: "right",
           textWrap: "balance",
           whiteSpace: "pre-wrap",
+          lineHeight: "1.25",
+          marginBlockEnd: "20px",
         }}
       >
         {error}
@@ -79,12 +81,14 @@ const GithubUpdateInfo: React.FC<GithubUpdateInfoProps> = ({filePath}) => {
   return (
     <p
       style={{
-        filter: "saturate(0)",
+        filter: "saturate(0.5)",
         fontSize: "12px",
         opacity: "0.5",
         textAlign: "right",
         textWrap: "balance",
         whiteSpace: "pre-wrap",
+        lineHeight: "1.25",
+        marginBlockEnd: "20px",
       }}
       dangerouslySetInnerHTML={{__html: commitInfo}}
     />
