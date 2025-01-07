@@ -81,7 +81,7 @@ const ErrorFallback = ({error}: {error: Error}) => (
       <p className="error-modal-send-report">
         Если вы всё ещё сталкиваетесь с трудностями при открытии страницы -{" "}
         <a
-          href={`mailto:me@m1sh3r.ru?subject=Ошибка:%20%22${error.message}%22%20на%20странице:%20${location.pathname}&body=%0A%0AЯ%20использую%20браузер%20<span%20style="text-decoration:underline;">${navigator.userAgent}</span>.`}
+          href={`mailto:me@m1sh3r.ru?subject=Выбило%20ошибку%20%22${error.message}%22%20на%20странице%20${location.pathname.replace(/\/$/, "")}%20(${navigator.userAgent.replace(/ /g, "%20")})&body=%0A%0A`}
         >
           напишите об этом на почту
         </a>
