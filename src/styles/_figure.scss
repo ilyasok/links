@@ -28,15 +28,17 @@
           display: flex;
 
           figcaption {
+            text-wrap: nowrap;
             display: block;
             margin-inline: auto;
             margin-block: 5px;
             border: 1px solid hsl(0, 0%, 20%);
-            border-radius: $roundness * 0.5;
+            border-radius: $roundness * 0.75;
             background: hsl(0, 0%, 10%);
             padding: 2px 8px;
-            width: 85%;
+            width: 100%;
             overflow: hidden;
+            overflow-x: hidden;
             color: #eeeeee;
             font-size: 13px;
             text-align: center;
