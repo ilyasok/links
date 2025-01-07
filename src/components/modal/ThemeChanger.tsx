@@ -82,11 +82,9 @@ export const ThemeToggleButton: React.FC = () => {
 
   return (
     <>
-      <Tooltip title="Оформление">
-        <button onClick={openModal}>
-          <FormatColorFillOutlined />
-        </button>
-      </Tooltip>
+      <button onClick={openModal}>
+        <FormatColorFillOutlined />
+      </button>
       <ThemeModal
         isModalOpen={isModalOpen}
         closeModal={closeModal}

@@ -3,7 +3,6 @@ import React, {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import {ThemeToggleButton} from "./modal/ThemeChanger";
 import {SearchButton} from "./features/SearchInPage";
-import {Tooltip} from "antd";
 import {motion} from "framer-motion";
 
 const Header: React.FC<{title: string}> = ({title}) => {
@@ -37,11 +36,9 @@ const Header: React.FC<{title: string}> = ({title}) => {
       <div className={`header-left ${isVisible ? "visible" : "hidden"}`}>
         {location.pathname !== "/" && (
           <div className="icon">
-            <Tooltip title="На главную">
-              <Link to="/">
-                <HomeRounded />
-              </Link>
-            </Tooltip>
+            <Link to="/">
+              <HomeRounded />
+            </Link>
           </div>
         )}
         <div className="logo">

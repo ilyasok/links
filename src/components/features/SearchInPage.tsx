@@ -73,25 +73,23 @@ export const SearchButton: React.FC = () => {
   const {openModal, isPageLoaded} = useSearch();
 
   return (
-    <Tooltip title={"Поиск по странице (Ctrl+F)"}>
-      <button
-        style={{
-          opacity: isPageLoaded ? 1 : 0.5,
-          filter: isPageLoaded ? "saturate(100%)" : "saturate(0%)",
-        }}
-        onClick={() => {
-          if (!isPageLoaded) {
-            message.warning(
-              "Поиск временно недоступен, дождитесь полной загрузки страницы"
-            );
-          } else {
-            openModal();
-          }
-        }}
-      >
-        <Search />
-      </button>
-    </Tooltip>
+    <button
+      style={{
+        opacity: isPageLoaded ? 1 : 0.5,
+        filter: isPageLoaded ? "saturate(100%)" : "saturate(0%)",
+      }}
+      onClick={() => {
+        if (!isPageLoaded) {
+          message.warning(
+            "Поиск временно недоступен, дождитесь полной загрузки страницы"
+          );
+        } else {
+          openModal();
+        }
+      }}
+    >
+      <Search />
+    </button>
   );
 };
 
