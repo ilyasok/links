@@ -8,9 +8,9 @@ import {
   CarRepairRounded,
   DesktopWindowsRounded,
   DevicesOtherRounded,
-  DomainOutlined,
+  DomainRounded,
   Download,
-  FormatListBulletedOutlined,
+  FormatListBulletedRounded,
   ForumRounded,
   Gif,
   HandymanRounded,
@@ -25,7 +25,7 @@ import {
   SportsEsportsRounded,
   TerminalRounded,
   TextureRounded,
-  VideoSettingsOutlined,
+  VideoSettingsRounded,
   ViewInArRounded,
   VolumeUpRounded,
   WebRounded,
@@ -156,13 +156,13 @@ const Links = () => {
             />
             <LinkCard
               href="https://www.shutterencoder.com/"
-              icon={<VideoSettingsOutlined />}
+              icon={<VideoSettingsRounded />}
               name="Shutter Encoder"
               description="Оффлайн-конвертер видеофайлов в различные кодеки, в том числе монтажные"
             />
             <LinkCard
               href="https://mediaarea.net/MediaInfoOnline"
-              icon={<FormatListBulletedOutlined />}
+              icon={<FormatListBulletedRounded />}
               name="MediaInfo Online"
               description="Онлайн-версия MediaInfo, позволяющая просматривать мета-информацию о файлах"
             />
@@ -248,7 +248,7 @@ const Links = () => {
             />
             <LinkCard
               href="https://t.me/chat3dsmax"
-              icon={<DomainOutlined />}
+              icon={<DomainRounded />}
               name="3DSMax (Визуализаторы)"
               description="Обсуждаем Autodesk 3DS Max и другие продукты компании"
             />

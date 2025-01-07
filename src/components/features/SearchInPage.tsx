@@ -1,4 +1,4 @@
-import {BackspaceOutlined, Search} from "@mui/icons-material";
+import {BackspaceRounded, Search} from "@mui/icons-material";
 import {Modal, Tooltip, message} from "antd";
 import {motion} from "framer-motion";
 import React, {
@@ -432,7 +432,7 @@ export const SearchInPage: React.FC = () => {
               style={{cursor: "pointer"}}
             >
               <Tooltip title="Очистить">
-                <BackspaceOutlined
+                <BackspaceRounded
                   opacity={0.5}
                   fontSize="small"
                 />
