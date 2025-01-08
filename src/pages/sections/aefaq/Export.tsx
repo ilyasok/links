@@ -910,8 +910,83 @@ const AEExport: React.FC = () => {
           альфа-каналом.
         </AdditionInfo>
       </DetailsSummary>
-      <DetailsSummary title="Как вывести один кадр из композиции как один файл изображения?">
-        <p>{/* FIXME: написать!! */}</p>
+      <DetailsSummary title="Как вывести текущий кадр предпросмотра как файл изображения?">
+        <p>
+          Иногда у пользователя возникает нужда в выводе одного кадра из композиции как
+          файл изображения, желательно в полном качестве, например для создания превью или
+          показать пример чего-либо. Можно сделать это двумя способами.
+        </p>
+        <Divider>Выводим через Render Queue</Divider>
+        <p>
+          Для того, чтобы быстро отправить текущий кадр в очередь рендера, нужно прожать
+          комбинацию клавиш <mark className="key">Ctrl + Alt + S</mark> или перейти в{" "}
+          <mark className="ui">Composition &gt; Save Frame As</mark> и выбрать{" "}
+          <mark className="ui">File</mark>.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/aftereffects/export_one_frame_render_queue.png"
+          imgTitle="Сохранение одного кадра через Render Queue"
+          caption="Render Queue"
+        />
+        <p>
+          После этого у вас откроется <mark className="ui">Render Queue</mark>, который
+          предложит экспортировать <mark className="file">.psd</mark> файл в путь, который
+          вы укажете в графе <mark className="ui">Output To</mark>. Формат можно изменить
+          на свой, нажав на название пресета или на стрелочку рядом с ним.
+        </p>
+        <AdditionInfo>
+          Вы можете создать свой шаблон формата, чтобы не менять тип файла каждый раз,
+          когда вы экспортируете кадр через{" "}
+          <mark className="ui">Composition &gt; Save Frame As &gt; File</mark>.
+        </AdditionInfo>
+        <Divider>Выводим через FX Console</Divider>
+        <p>
+          Если вы считаете способ через <mark className="ui">Save Frame As</mark>{" "}
+          неудобным, то есть альтернатива. Вы можете сохранить текущий кадр через плагин{" "}
+          <mark className="ui">FX Console</mark>, который можно загрузить{" "}
+          <a href="https://www.videocopilot.net/blog/?s=fx%20console">по этой ссылке</a>.
+        </p>
+        <p>
+          После установки плагина, откройте панель эффектов с помощью комбинации клавиш{" "}
+          <mark className="key">Ctrl + Space</mark> и нажмите на иконку шестерёнки. В
+          настройках установите чекбокс у пункта{" "}
+          <mark className="ui">Full Resolution Screenshots</mark>. Это позволит сохранять
+          вам скриншоты в полном разрешении, независимо от того, какое было установлено в
+          окне предпросмотра.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/aftereffects/fx_console_full_resolution_screenshots.png"
+          imgTitle="Устанавливаем полное разрешение скриншотов"
+          caption="FX Console"
+        />
+        <p>
+          Теперь для быстрого сохранения текущего кадра в отдельный файл вам достаточно
+          открыть окно плагина через <mark className="key">Ctrl + Space</mark> и нажать на
+          иконку сохранения. Вам предложат три варианта: сохранить как{" "}
+          <mark className="file">JPG</mark>, <mark className="file">PNG</mark> или
+          сохранить кадр в буфер обмена.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/aftereffects/fx_console_save_frame_as.png"
+          imgTitle="Сохраняем текущий кадр через FX Console"
+          caption="After Effects"
+        />
+        <p>
+          При выборе пунктов <mark className="ui">Save to JPG</mark> или{" "}
+          <mark className="ui">Save to PNG</mark> появится системное окно для выбора места
+          сохранения изображения. После указания местоположения вы сразу же получите файл
+          в нужном месте.
+        </p>
+        <AdditionInfo>
+          Некоторые пользователи ошибочно считают, что иконка фотоаппарата или же кнопка{" "}
+          <mark className="ui">Take Snapshot</mark> в окне предпросмотра композиции
+          сохранит куда-то кадр в какую-то папку. Отчасти это верно, но только этот кадр
+          сохраняется в оперативную память и служит лишь для сравнения снятого кадра с
+          каким-либо другим.
+        </AdditionInfo>
       </DetailsSummary>
       <DetailsSummary title="Как вывести все кадры из композиций как отдельные изображения?">
         <p>{/* FIXME: написать!! */}</p>
