@@ -40,7 +40,7 @@ const ImageFigure: React.FC<ImageFigureProps> = ({
     setTimeout(() => {
       setIsFullscreen(false);
       setIsClosing(false);
-    });
+    }, 250);
   }, []);
 
   const handleClick = useCallback(() => {
@@ -219,7 +219,7 @@ const VideoFigure: React.FC<VideoFigureProps> = ({styleClass, videoSrc, caption}
     setTimeout(() => {
       setIsFullscreen(false);
       setIsClosing(false);
-    });
+    }, 250);
   }, []);
 
   const handleClick = useCallback(() => {
