@@ -4,12 +4,13 @@ import {Link} from "react-router-dom";
 import {ThemeToggleButton} from "./modal/ThemeChanger";
 import {SearchButton} from "./features/SearchInPage";
 import {motion} from "framer-motion";
+import {MoveToTop} from "./features/MoveToTop";
 
 const Header: React.FC<{title: string}> = ({title}) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const checkScrollPosition = () => {
-    setIsVisible(window.scrollY > 150);
+    setIsVisible(window.scrollY > 125);
   };
   useEffect(() => {
     window.addEventListener("scroll", checkScrollPosition);
@@ -47,6 +48,9 @@ const Header: React.FC<{title: string}> = ({title}) => {
         </div>
       </div>
       <div className="header-right">
+        <div className={`header-right ${isVisible ? "visible" : "hidden"}`}>
+          <MoveToTop />
+        </div>
         {(location.pathname.includes("aefaq") ||
           location.pathname.includes("prfaq") ||
           location.pathname.includes("psfaq") ||
