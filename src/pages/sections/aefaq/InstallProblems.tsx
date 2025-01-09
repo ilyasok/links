@@ -670,16 +670,16 @@ const AEInstallProblems: React.FC = () => {
           или ручной распаковки <mark className="file">.zxp</mark> файла в нужное место.
         </p>
       </DetailsSummary>
-      <DetailsSummary title="В названиях установщиков плагинов увидел непонятные обозначения. Для каких программ они предназначены?">
+      <DetailsSummary title="В названиях установщиков плагинов увидел обозначения Adobe, OFX или другое. Так для каких программ предназначены плагины?">
         <p>
           Обычно в названии установочных файлов указывается для каких программ
           устанавливается плагин.
         </p>
         <ul>
           <li>
-            <mark>AE</mark>, <mark>PR</mark>, <mark>PS</mark> <mark>Adobe</mark> - такие
-            плагины устанавливаются для программ от Adobe. Иногда, если в названии имеется
-            суффикс <mark>AE</mark>, то он может устанавливаться и для{" "}
+            <mark>AE</mark>, <mark>PR</mark>, <mark>PS</mark> или <mark>Adobe</mark> -
+            такие плагины устанавливаются в программы от Adobe. Иногда, если в названии
+            имеется суффикс <mark>AE</mark>, то он может устанавливаться и для{" "}
             <mark className="app">After Effects</mark> и для{" "}
             <mark className="app">Premiere Pro</mark>. Суффикс <mark>PS</mark> означает,
             что плагин будет установлен для <mark className="app">Photoshop</mark>.
@@ -692,12 +692,20 @@ const AEInstallProblems: React.FC = () => {
             <a href="https://ru.wikipedia.org/wiki/OpenFX#%D0%A5%D0%BE%D1%81%D1%82%D1%8B">
               далее по списку
             </a>
-            .
+            . Такие плагины не подойдут для <mark className="app">After Effects</mark> и
+            для <mark className="app">Premiere Pro</mark>, так как они не поддерживают
+            стандарт OpenFX.
           </li>
           <li>
             <mark>Standalone</mark> - плагин ни от кого не зависит и запускается как
             обычное приложение. Таких плагинов мало, один из таких является{" "}
             <mark className="plugin">Mocha Pro</mark>.
+          </li>
+          <li>
+            <mark>Репак от ...</mark> или <mark>Repack by ...</mark> - перепакованный
+            установщик плагина, в котором обычно за пользователя уже всё активировано. В
+            некоторых установщиках важно следить за галочками, а то вдруг установите
+            что-то лишнее.
           </li>
           <li>
             <mark>CE</mark> - маркировка от группы релизеров Team V.R., которая
@@ -707,6 +715,12 @@ const AEInstallProblems: React.FC = () => {
             &quot;репак&quot;.
           </li>
         </ul>
+        <AdditionInfo>
+          Плагины, распространяющиеся в установщиках будут устанавливаться в стандартные
+          папки программ. Поэтому лучше не менять путь установки приложений от Adobe или
+          других монтажных программ, чтобы не ныть о том, что плагин не появился в нужной
+          программе.
+        </AdditionInfo>
       </DetailsSummary>
       <DetailsSummary title='"Система Windows защитила ваш компьютер" или как отключить Windows Smartscreen?'>
         <p>
