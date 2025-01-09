@@ -314,7 +314,7 @@ const AEExportProblems: React.FC = () => {
           или для маленького размера в ущерб качеству.
         </p>
       </DetailsSummary>
-      <DetailsSummary title='"Rendering error while writting to file (...). Unable to delete existing file" или "An unexpected error occurred while exporting a composition. Error code: 9988"'>
+      <DetailsSummary title='"Rendering error while writing to file (...). Unable to delete existing file" или "An unexpected error occurred while exporting a composition. Error code: 9988"'>
         <p>
           Вполне вероятно, что вы пытаетесь перезаписать файл, который используется другой
           программой, например открыт в видеоплеере.
