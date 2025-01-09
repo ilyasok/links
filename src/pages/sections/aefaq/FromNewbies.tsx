@@ -781,6 +781,7 @@ const AEFromNewbies: React.FC = () => {
         </ul>
       </DetailsSummary>
       <DetailsSummary title="А есть список популярных комбинаций клавиш или же горячих клавиш для работы в After Effects?">
+        {/* TODO: переписать комбинации по возможности */}
         <p>
           Горячие клавиши могут помочь ускорить ваш рутинный процесс нахождения нужной
           функции программы, поэтому ниже приведены популярные у многих пользователей
@@ -1217,7 +1218,6 @@ const AEFromNewbies: React.FC = () => {
           </li>
         </ul>
         <ul>
-          {" "}
           <div
             style={{
               textAlign: "center",
@@ -1228,25 +1228,25 @@ const AEFromNewbies: React.FC = () => {
             Работа с файлами в проекте
           </div>
           <li>
-            <mark className="key"></mark>
+            <mark className="key">Ctrl + I</mark>: открыть окно системное импорта файлов в
+            ваш проект.
           </li>
           <li>
-            <mark className="key"></mark>
+            <mark className="key">Ctrl + Alt + Shift + P</mark>: открыть{" "}
+            <mark className="file">.aep</mark> проект, с которым вы в последний раз
+            работали.
           </li>
           <li>
-            <mark className="key"></mark>
+            <mark className="key">Ctrl + Ali + Shift + D</mark>: открыть или выполнить
+            недавно использованный скрипт формата <mark className="file">.jsx</mark> или{" "}
+            <mark className="file">.jsxbin</mark>.
           </li>
           <li>
-            <mark className="key"></mark>
-          </li>
-          <li>
-            <mark className="key"></mark>
-          </li>
-          <li>
-            <mark className="key"></mark>
+            <mark className="key">Ctrl + Alt + Shift + F</mark>: применить недавно
+            использованный пресет формата <mark className="file">.ffx</mark> на выделенный
+            слой.
           </li>
         </ul>
-        {/* TODO: дополнить комбинации по возможности */}
       </DetailsSummary>
       <DetailsSummary title="Где я могу узнать об нововведениях в обновлениях After Effects?">
         <p>
