@@ -8,6 +8,7 @@ import {
 } from "../../../components/Additions";
 import {ImageFigure, VideoFigure, YouTubeVideo} from "../../../components/ContentFigure";
 import ContentSwitcher from "../../../components/features/OperatingSystemFilter";
+import {Divider} from "antd";
 
 const AEInterface: React.FC = () => {
   return (
@@ -529,7 +530,110 @@ const AEInterface: React.FC = () => {
         </p>
       </DetailsSummary>
       <DetailsSummary title="Как изменить картинку во время запуска программы?">
-        <p>{/* FIXME: написать!! */}</p>
+        <AdditionDanger>
+          Действия с заменой файлов программы вы делаете на свой страх и риск, а лучше не
+          занимайтесь такой бесполезной х&$%й. После обновления программы ваша картинка
+          перезапишется на исходную. Инструкция действительна только для устройств на
+          Windows.
+        </AdditionDanger>
+        <p>
+          При запуске <mark className="app">After Effects</mark> вы часто видите
+          какую-либо картинку, задуманной Adobe и наверное задумывались, что неплохо бы её
+          заменить на свою. Да, такое можно сделать с помощью махинаций с{" "}
+          <mark className="file">.dll</mark> файлами. Для этого нам пригодится программа{" "}
+          <mark className="app">Resource Hacker</mark>, которую можно загрузить{" "}
+          <a href="https://angusj.com/resourcehacker/#download">по этой ссылке</a>.
+        </p>
+        <Divider>Извлекаем изображения из .dll</Divider>
+        <p>
+          После открытия <mark className="app">Resource Hacker</mark> мы видим такой
+          интерфейс. Что нам от него нужно - просто открыть{" "}
+          <mark className="file">AfterFXLib.dll</mark>, находящийся по пути{" "}
+          <mark className="path">
+            C:\Program Files\Adobe\Adobe After Effects 20XX\Support Files
+          </mark>{" "}
+          в этой программе, нажав на комбинацию клавиш{" "}
+          <mark className="key">Ctrl + O</mark> или нажав на соответствующую иконку.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-light"
+          imgSrc="/images/aftereffects/resource_hacker_open_file.png"
+          imgTitle="Открываем файл в Resource Hacker"
+          caption="Resource Hacker"
+        />
+        <p>
+          После открытия файла, в левой части окна{" "}
+          <mark className="app">Resource Hacker</mark> появятся папки с изображениями и
+          другими файлами. Нам нужно в ней открыть папку <mark className="path">PNG</mark>{" "}
+          и найти изображения с названиями <mark className="image">AE_SPLASH</mark>,{" "}
+          <mark className="image">AE_SPLASH_AT_2X</mark> и{" "}
+          <mark className="image">AE_SPLASH_AT_3TO2X</mark>, а затем извлечь эти
+          изображения, выделив их <mark className="key">ПКМ</mark> и выбрав{" "}
+          <mark className="ui">Save *.png resource</mark>. После открытия системного окна
+          - укажите любое удобное вам место сохранения изображения.
+        </p>
+        <AdditionInfo>
+          Всего есть три изображения, каждое из которых адаптировано под определённый
+          масштаб дисплея. Вы можете заменить один, два или все три файла в зависимости от
+          ваших личных предпочтений, если часто меняете масштабирование системы. По
+          аналогии вы можете изменить плашку для окна <mark className="ui">About</mark>,
+          заменив файлы <mark className="file">AE_ABOUT</mark>,{" "}
+          <mark className="file">AE_ABOUT_AT_2X</mark> и{" "}
+          <mark className="file">AE_ABOUT_AT_3TO2X</mark>
+        </AdditionInfo>
+        <ImageFigure
+          styleClass="figure_windows-light"
+          imgSrc="images/aftereffects/resource_hacker_extract_file.png"
+          imgTitle="Извлекаем изображения из .dll"
+          caption="Resource Hacker"
+        />
+        <p>
+          Отредактировать извлечённый файл вы можете в любом редакторе изображений,
+          например <mark className="app">Photoshop</mark>,{" "}
+          <mark className="app">GIMP</mark>, <mark className="app">Illustrator</mark> и
+          даже в самом <mark className="app">After Effects</mark>. Нужно просто не менять
+          размер изображения и сохранить его также в <mark className="file">.png</mark>.
+        </p>
+        <p>
+          Я же просто заменю в <mark className="app">Photoshop</mark> стандартное
+          изображение на изображение автомобиля Ford Focus и сохраню его в{" "}
+          <mark className="file">.png</mark>.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-light"
+          imgSrc="images/aftereffects/custom_splash_example.png"
+          imgTitle="Изменённое изображение при открытии программы"
+          caption="Пример модификации изображения при загрузке After Effects"
+        />
+        <Divider>Заменяем изображения в .dll</Divider>
+        <p>
+          После изменения изображения, возвращаемся к{" "}
+          <mark className="app">Resource Hacker</mark>, выбираем изображение которое нам
+          нужно заменить, нажав по ней <mark className="key">ЛКМ</mark> и нажимаем
+          комбинацию клавиш <mark className="key">Ctrl + R</mark>. В открывшемся окне
+          нажимаем на кнопку <mark className="ui">Select File</mark>, после которого
+          откроется системное окно для выбора нужного файла, где мы собственно и выбираем
+          изображение. После выбора нажимаем на кнопку <mark className="ui">Replace</mark>{" "}
+          и считай пол дела сделано.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-light"
+          imgSrc="images/aftereffects/resource_hacker_replace.png"
+          imgTitle="Заменяем изображение в .dll"
+          caption="Resource Hacker"
+        />
+        <p>
+          После успешной замены нам достаточно сохранить изменения, нажав на{" "}
+          <mark className="key">Ctrl + S</mark>. Теперь при каждом запуске программы вы
+          будете видеть свой шедевр, который вы сотворили. В теории надпись{" "}
+          <mark>Artwork by Name Surname</mark> тоже можно изменить, но я не вглублялся в
+          такие подробности.
+        </p>
+        <VideoFigure
+          styleClass="figure_windows-light"
+          videoSrc="images/aftereffects/custom_splash_opening.mp4"
+          caption="Пример изменённой плашки при открытии программы"
+        />
       </DetailsSummary>
       <DetailsSummary title="Где-то слышал про секретные настройки, что это такое?">
         <p>
