@@ -54,7 +54,6 @@ const AEExportProblems: React.FC = () => {
           кроме как экспортом в другой кодек, например{" "}
           <mark className="file">Apple Prores 422</mark>.
         </AdditionWarning>
-        {/* TODO: дописать!! */}
         <p>
           Иногда при использовании исходников с мобильных телефонов, например{" "}
           <mark>iPhone 13</mark> или новее, возникают проблемы с пересветом. Это
@@ -63,6 +62,18 @@ const AEExportProblems: React.FC = () => {
           диапазон для дальнейшего монтажа, но для обычного пользователя это всё
           превращается в геморрой.
         </p>
+        <p>
+          Поэтому для того, чтобы с данной проблемой не сталкиваться в дальнейшем -
+          смотрите на параметры вашего исходника и переводите их в <mark>Rec.709</mark> с
+          помощью конвертеров, например, через{" "}
+          <mark className="app">Shutter Encoder</mark>.
+        </p>
+        <ImageFigure
+          styleClass="figure_macos-dark"
+          imgSrc="images/shutter_encoder_interface.png"
+          imgTitle="Интерфейс Shutter Encoder"
+          caption="Shutter Encoder"
+        />
       </DetailsSummary>
       <DetailsSummary title="Почему в предпросмотре Media Encoder и после экспорта видео смещается влево или вправо?">
         <p>
