@@ -991,8 +991,55 @@ const AEExport: React.FC = () => {
           каким-либо другим.
         </AdditionInfo>
       </DetailsSummary>
-      <DetailsSummary title="Как вывести все кадры из композиций как отдельные изображения?">
-        <p>{/* FIXME: написать!! */}</p>
+      <DetailsSummary title="Как вывести все кадры из композиции как отдельные файлы изображений?">
+        <p>
+          Если вы хотите вывести все кадры из композиции в отдельные файлы, то вам
+          достаточно выбрать в качестве способа вывода{" "}
+          <mark className="ui">JPG Sequence</mark>,{" "}
+          <mark className="ui">PNG Sequence</mark> или любой другой формат с названием{" "}
+          <mark>Sequence</mark> в конце.
+        </p>
+        <p>
+          Для начала как всегда отправляем нашу композицию в очередь рендера, указываем
+          путь и открываем <mark className="ui">Output Module</mark> для настройки формата
+          вывода.
+        </p>
+        <AdditionInfo>
+          <mark className="app">After Effects</mark> по умолчанию при выводе секвенции
+          создаст дополнительную папку, чтобы не срать папку, в которую вы хотите вывести.
+          Это поведение можно отключить, убрав чекбокс с{" "}
+          <mark className="ui">Save in subfolder</mark> при выборе расположения вывода.
+        </AdditionInfo>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="/images/aftereffects/render_queue.png"
+          imgTitle="Интерфейс очереди просчёта"
+          caption="Render Queue"
+        />
+        <p>
+          Потом в окне <mark className="ui">Output Module</mark> в пункте{" "}
+          <mark className="ui">Format</mark> выбираем любой формат с названием{" "}
+          <mark>Sequence</mark> в конце. В моем случае - я выберу{" "}
+          <mark className="ui">PNG Sequence</mark>. В{" "}
+          <mark className="ui">Format Options</mark> можно настроить параметры
+          изображения, например качество или сжатие.
+        </p>
+        <AdditionInfo>
+          Если вы хотите вывести кадры с прозрачностью - не забудьте указать параметр{" "}
+          <mark className="ui">RGB + Alpha</mark> в пункте{" "}
+          <mark className="ui">Channels</mark>.
+        </AdditionInfo>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/aftereffects/selecting_png_sequence.png"
+          imgTitle="Выбираем последовательность PNG для вывода"
+          caption="Output Module Settings"
+        />
+        <p>
+          После этого просто нажимаем на кнопку <mark className="ui">Render</mark> или на
+          клавишу <mark className="key">Enter</mark>. Вот и всё, все кадры из вашей
+          композиции сохранятся в нужную папку.
+        </p>
       </DetailsSummary>
       <DetailsSummary title="Как вывести композицию файлом с отображением всех границ и путей движения?">
         <p>
