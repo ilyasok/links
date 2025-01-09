@@ -390,6 +390,7 @@ const AEExport: React.FC = () => {
           imgTitle="Интерфейс очереди просчёта"
           caption="Render Queue"
         />
+        <Divider>Выводим через встроенный H.264</Divider>
         <p>
           Начнём по порядку, с первого и простого способа. После того, как в{" "}
           <mark className="app">After Effects</mark> версии 2023 и новее вернули нативный
@@ -439,6 +440,7 @@ const AEExport: React.FC = () => {
           imgTitle="Кнопка начала рендера"
           caption="Render Queue"
         />
+        <Divider>Выводим через Voukoder</Divider>
         <p>
           Если же вас результат рендера от стандартного H.264 не устраивает, то можно
           воспользоваться плагином <mark className="plugin">Voukoder</mark>. В этом
@@ -558,6 +560,7 @@ const AEExport: React.FC = () => {
           <mark className="ui">ОК</mark> и начинаем рендер композиции в программе как
           обычно, с помощью кнопки <mark className="ui">Render</mark>.
         </p>
+        <Divider>Выводим через AfterCodecs</Divider>
         <p>
           Теперь поговорим и про <mark className="plugin">AfterCodecs</mark>. Для начала
           экспорта через <mark className="plugin">AfterCodecs</mark> нам нужно снова зайти
