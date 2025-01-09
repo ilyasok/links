@@ -308,7 +308,11 @@ const AEExportProblems: React.FC = () => {
           внятно разобраться как с ней работать - для них давно изобрели GUI-клиенты,
           например <a href="https://www.shutterencoder.com/">Shutter Encoder</a>.
         </p>
-        {/* TODO: дописать!! */}
+        <p>
+          В такие конвертеры достаточно расположить вашу экспортированную композицию и
+          указать нужный формат. Обычно в конвертере есть различные пресеты для качества
+          или для маленького размера в ущерб качеству.
+        </p>
       </DetailsSummary>
       <DetailsSummary title='"Rendering error while writting to file (...). Unable to delete existing file" или "An unexpected error occurred while exporting a composition. Error code: 9988"'>
         <p>
