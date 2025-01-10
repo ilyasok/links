@@ -193,7 +193,7 @@ const Links = () => {
               description="Обсуждаем дизайн, Photoshop, Illustrator и Figma"
             />
             <LinkCard
-              href="https://t.me/technicalchat"
+              href="https://t.me/technical_chat"
               icon={<DevicesOtherRounded />}
               name="Technical Chat"
               description="Обсуждаем компьютерные технологии и проблемы"
