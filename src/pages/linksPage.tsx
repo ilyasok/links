@@ -211,7 +211,7 @@ const Links = () => {
               description="Обсуждаем монтаж в любой монтажной программе"
             />
             <LinkCard
-              href="https://t.me/whatthefont"
+              href="https://t.me/whatthefontt"
               icon={<SpellcheckRounded />}
               name="Что за шрифт?"
               description="Угадываем шрифт по фото от других пользователей"
