@@ -257,9 +257,20 @@ export const SearchInPage: React.FC = () => {
           ...result,
           content: extractMatchingLine(result.content, text),
           isSingleParagraphMatch,
+          hasTitleMatch: searchWords.some((word) =>
+            result.title.toLowerCase().includes(word)
+          ),
         };
       })
       .sort((a, b) => {
+        if (a.hasTitleMatch && !b.hasTitleMatch) {
+          return -1;
+        }
+
+        if (!a.hasTitleMatch && b.hasTitleMatch) {
+          return 1;
+        }
+
         if (a.isSingleParagraphMatch && !b.isSingleParagraphMatch) {
           return -1;
         }
