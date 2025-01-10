@@ -44,3 +44,4 @@ tsconfig.node.json
 dist
 .vs
 src/main.css
+public/legacy/css/styles.css
