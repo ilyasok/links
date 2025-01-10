@@ -7,6 +7,7 @@ import {
   AdditionWarning,
 } from "../../../components/Additions";
 import {ImageFigure, VideoFigure, YouTubeVideo} from "../../../components/ContentFigure";
+import TgsToJsonModal from "../../../components/features/TgStickerToJSON";
 
 const AEImport: React.FC = () => {
   return (
@@ -474,8 +475,93 @@ const AEImport: React.FC = () => {
           <mark className="app">FastStone Image Viewer</mark>.
         </p>
       </DetailsSummary>
-      <DetailsSummary title="Как импортировать анимированный стикер из Telegram в формате .tgs?">
-        <p>{/* fixme: написать!! */}</p>
+      <DetailsSummary title="Как импортировать анимированный стикер из Telegram?">
+        <AdditionWarning>
+          При импорте стикеров в формате <mark className="file">.tgs</mark> в некоторых
+          случаях вам нужно будет пересоздать градиенты. Обычно в окне плагина для импорта
+          вам скажут, какие градиенты нужно пересоздать.
+        </AdditionWarning>
+        <p>
+          С ростом популярности различных стикеров в мессенджере{" "}
+          <mark className="app">Telegram</mark> у пользователей возникает желание
+          импортировать анимированные стикеры в <mark className="app">After Effects</mark>{" "}
+          и использовать их в проекте. Особенно это заметно у рилсомейкеров, которые
+          применяют стандартные анимированные эмодзи в своих проектах.
+        </p>
+        <AdditionInfo>
+          Большинство стандартных анимированных эмодзи можно найти в различных
+          стикер-паках, например{" "}
+          <a href="https://t.me/addstickers/AnimatedEmojies">тут</a>.
+        </AdditionInfo>
+        <p>
+          Стикеры можно загрузить на ваше устройство, нажав{" "}
+          <mark className="key">ПКМ</mark> по отправленному стикеру в чат и выбрав{" "}
+          <mark className="ui">Сохранить как</mark>.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="/images/download_tgs_from_telegram.png"
+          imgTitle="Сохранить стикер как .tgs"
+          caption="Telegram"
+        />
+        <p>
+          После того как мы получили <mark className="file">.tgs</mark>, нам нужно его
+          переконвертировать в <mark className="file">.json</mark>. Сделать это вы можете
+          с помощью конвертера по кнопке ниже, предоставив ему файл. После успешной
+          конвертации не забудьте скачать файл.
+        </p>
+        <TgsToJsonModal />
+        <p>
+          После конвертации нам нужно скачать плагин{" "}
+          <mark className="plugin">Bodymovin</mark> из{" "}
+          <a href="https://aescripts.com/bodymovin/">aescripts</a>
+          <sup>*</sup> и установить его в <mark className="app">After Effects</mark>.
+          Найти и открыть плагин можно в{" "}
+          <mark className="ui">Window &gt; Extensions</mark>.
+        </p>
+        <AdditionInfo>
+          <sup>*</sup>Чтобы скачать скрипт - зарегистрируйтесь на сайте{" "}
+          <a href="https://aescripts.com">aescripts</a>, вернитесь на страницу с плагином,
+          установите цену 0 в <mark className="ui">Name Your Own Price</mark>, добавьте
+          его в корзину и подтвердите заказ. Нужный плагин появится{" "}
+          <a href="https://aescripts.com/downloadable/customer/products/">
+            в вашем профиле
+          </a>{" "}
+          и вы можете его скачать абсолютно бесплатно.
+        </AdditionInfo>
+        <p>
+          После открытия плагина <mark className="plugin">Bodymovin</mark> нам нужно
+          перейти во вкладку <mark className="ui">Import Lottie Animation</mark> и нажать
+          на кнопку <mark className="ui">Import Local File</mark>. В открытом системном
+          окне выберите <mark className="file">.json</mark>, который вы уже
+          переконвертировали ранее.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="/images/aftereffects/bodymovin_import_json.png"
+          imgTitle="Импортируем .json в After Effects через Bodymovin"
+          caption="Bodymovin"
+        />
+        <p>
+          Импорт <mark className="file">.json</mark> в{" "}
+          <mark className="app">After Effects</mark> может занять некоторое время. После
+          импорта у вас появится новая композиция в окне{" "}
+          <mark className="ui">Project</mark>. В некоторых случаях импортирование может
+          пройти с некоторыми нюансами, например без корректно импортированных градиентов.
+          Благо плагин даёт информацию что вставлять и какие данные, но вставка занимает
+          довольно долгое время, поэтому увы без этого никуда.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/aftereffects/gradient_data_bodymovin.png"
+          imgTitle="Неперенесенные градиенты в After Effects через Bodymovin"
+          caption="After Effects"
+        />
+        <p>
+          Градиенты можно заменить на обычную заливку, если необходимо, или же всё-таки
+          постарайтесь уделить немного времени на замену градиентов. Количество градиентов
+          будет зависеть от самого стикера.
+        </p>
       </DetailsSummary>
       <DetailsSummary title="Скинули проект, который нельзя открыть в старой версии After Effects, но я не хочу обновляться. Или мне придётся?">
         <p>
