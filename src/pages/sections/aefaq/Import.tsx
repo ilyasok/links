@@ -614,8 +614,85 @@ const AEImport: React.FC = () => {
       <DetailsSummary title="Пытаюсь импортировать .ai с градиентами, но не получается. Как всё-таки перенести градиенты из Illustrator в After Effects?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
-      <DetailsSummary title="Как перенести макет Figma в After Effects?">
-        <p>{/* fixme: написать!! */}</p>
+      <DetailsSummary title="Как перенести макет из Figma в After Effects?">
+        <p>
+          Макет из онлайн-сервиса <mark className="app">Figma</mark> можно перегнать двумя
+          плагинами: <mark className="plugin">AEUX</mark> и{" "}
+          <mark className="plugin">Overlord 2</mark>.
+        </p>
+        <AdditionInfo>
+          Плагин <mark className="plugin">Overlord</mark> второй версии с поддержкой
+          импорта макетов из <mark className="app">Figma</mark> отсутствует у автора по
+          причине жадности, поэтому в этом пункте ограничимся лишь плагином
+          <mark className="plugin">AEUX</mark>, который можно загрузить на странице
+          релизов в <a href="https://github.com/google/AEUX/releases">GitHub</a>. Плагин
+          нужно установить в <mark className="app">After Effects</mark> и в{" "}
+          <b>
+            <u>десктопную версию</u>
+          </b>{" "}
+          <mark className="app">Figma</mark>.
+        </AdditionInfo>
+        <p>
+          Плагин для <mark className="app">After Effects</mark> распространяется в формате{" "}
+          <mark className="file">.zxp</mark>, поэтому можно его установить как через{" "}
+          <a href="https://updates.aescripts.com/zxp-installer/">ZXP Installer</a>, так и
+          через ручную установку.
+        </p>
+        <p>
+          Для установки плагина в десктопную версию <mark className="app">Figma</mark>{" "}
+          нужно распаковать папку <mark className="path">Figma</mark> из архива{" "}
+          <mark className="file">AEUX_0_X_X.zip</mark> и в указать путь к{" "}
+          <mark className="file">manifest.json</mark> в распакованной папке. Это делается
+          через{" "}
+          <mark className="ui">
+            Иконка Figma &gt; Plugins &gt; Development &gt; Import plugin from manifest
+          </mark>
+          .
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/figma_install_plugin.png"
+          imgTitle="Установка стороннего плагина в Figma"
+          caption="Figma"
+        />
+        <p>
+          После успешной установки плагина в <mark className="app">Figma</mark> его можно
+          запустить с помощью{" "}
+          <mark className="ui">Иконка Figma &gt; Plugins &gt; Development &gt; AEUX</mark>
+          .
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/figma_run_aeux.png"
+          imgTitle="Запуск AEUX в Figma"
+          caption="Figma"
+        />
+        <p>
+          Чтобы начать отправку проекта в <mark className="app">After Effects</mark>,
+          нужно выделить нужные слои из макета и нажать на кнопку{" "}
+          <mark className="ui">Send selection to AE</mark>.
+        </p>
+        <AdditionWarning>
+          <mark className="app">After Effects</mark> перед нажатием на кнопку переноса
+          макета из <mark className="app">Figma</mark> должен быть запущен, иначе выбьет
+          ошибку.
+        </AdditionWarning>
+        <VideoFigure
+          styleClass="figure_windows-dark"
+          videoSrc="images/aftereffects/send_figma_to_ae.mp4"
+          caption="Figma"
+        />
+        <p>
+          После нажатия на кнопку переноса - у вас откроется{" "}
+          <mark className="app">After Effects</mark> и предложит куда сохранить
+          изображения для проекта. После выбора папки вы получите новую композицию с
+          макетом из <mark className="app">Figma</mark>.
+        </p>
+        <AdditionWarning>
+          Импорт часто проходит далеко не идеально, поэтому некоторые элементы макета всё
+          же придётся отредактировать в соответствии с оригиналом. Иногда при повторном
+          импорте выделенных слоёв макета перенос проходит лучше.
+        </AdditionWarning>
       </DetailsSummary>
     </div>
   );
