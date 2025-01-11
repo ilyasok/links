@@ -267,9 +267,20 @@ export const SearchInPage: React.FC = () => {
           hasTitleMatch: searchWords.some((word) =>
             result.title.toLowerCase().includes(word)
           ),
+          hasTagMatch: searchWords.some((word) =>
+            result.tag?.toLowerCase().includes(word)
+          ),
         };
       })
       .sort((a, b) => {
+        if (a.hasTagMatch && !b.hasTagMatch) {
+          return -1;
+        }
+
+        if (!a.hasTagMatch && b.hasTagMatch) {
+          return 1;
+        }
+
         if (a.hasTitleMatch && !b.hasTitleMatch) {
           return -1;
         }
