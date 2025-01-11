@@ -13,7 +13,10 @@ const AEImport: React.FC = () => {
   return (
     <div className="faq-content">
       <GithubUpdateInfo filePath="src/pages/sections/aefaq/Import.tsx" />
-      <DetailsSummary title="Какие действия нужно совершить с чужими исходниками, прежде чем начать работу?">
+      <DetailsSummary
+        title="Какие действия нужно совершить с чужими исходниками, прежде чем начать работу?"
+        tag="пайплайн, импорт, конвертация, внятный кодек, шаттер енкодер, видео из айфона"
+      >
         <p>
           Прежде чем начать создавать композиции и импортировать файлы в{" "}
           <mark className="app">After Effects</mark>, вам следует бы расположить все ваши
@@ -606,7 +609,6 @@ const AEImport: React.FC = () => {
           окне проводника вашей операционной системы вы можете указать путь до вашего
           исходника и вы сможете продолжить работу дальше.
         </p>
-
         <AdditionInfo>
           Если вы потеряли 10 исходников, но все они лежали в одной папке, то при
           присоединении одного - подключатся и остальные.
@@ -615,7 +617,10 @@ const AEImport: React.FC = () => {
       <DetailsSummary title="Пытаюсь импортировать .ai с градиентами, но не получается. Как всё-таки перенести градиенты из Illustrator в After Effects?">
         <p>{/* fixme: написать!! */}</p>
       </DetailsSummary>
-      <DetailsSummary title="Как перенести макет из Figma в After Effects?">
+      <DetailsSummary
+        title="Как перенести макет из Figma в After Effects?"
+        tag="импорт из фигмы, фигма"
+      >
         <p>
           Макет из онлайн-сервиса <mark className="app">Figma</mark> можно перегнать двумя
           плагинами: <mark className="plugin">AEUX</mark> и{" "}

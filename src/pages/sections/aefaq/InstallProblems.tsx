@@ -494,7 +494,10 @@ const AEInstallProblems: React.FC = () => {
           расположение или воспользуйтесь функцией символьных ссылок.
         </p>
       </DetailsSummary>
-      <DetailsSummary title="Распаковал и установил плагин, а мой антивирус решил его съесть. Действительно ли в нём может быть вирус?">
+      <DetailsSummary
+        title="Распаковал и установил плагин, а мой антивирус решил его съесть. Действительно ли в нём может быть вирус?"
+        tag="вирусы, дефендер, ложное срабатывание, удалился плагин"
+      >
         <p>
           Когда вы только-только встаёте на путь пиратства, то ложные срабатывания от
           антивирусов, особенного встроенного{" "}
@@ -745,7 +748,10 @@ const AEInstallProblems: React.FC = () => {
           caption="Как отключить Windows Smartscreen"
         />
       </DetailsSummary>
-      <DetailsSummary title='"Не удаётся найти helper.exe", "Обнаружены угрозы" или как отключить Windows Defender?'>
+      <DetailsSummary
+        title='"Не удаётся найти helper.exe", "Обнаружены угрозы" или как отключить Windows Defender?'
+        tag="выключить дефендер, отрубить антивирус, вирусы, ложное срабатывание, хелпер"
+      >
         <p>
           Когда вы встаёте на путь пиратства, нередко можно заметить постоянные жалобы на
           то, что встроенный антивирус в Windows удаляет файлы, мол там вирус. Из-за этого
@@ -839,7 +845,10 @@ const AEInstallProblems: React.FC = () => {
           выбираете, ставить ли &quot;репаки&quot; или нет.
         </AdditionDanger>
       </DetailsSummary>
-      <DetailsSummary title="Не доверяю репакам Adobe, в частности от KpoJluk и m0nkrus, но установить программы от Adobe хочу. Какие есть ещё варианты?">
+      <DetailsSummary
+        title="Я не доверяю репакам, но установить программы от Adobe хочется. Какие есть ещё варианты?"
+        tag="генп, genp, ручная активация"
+      >
         <p>
           Если вы параноик и боитесь, что при установке репаков в ваш компьютер ворвётся
           &quot;барабашка&quot; с троянами и прочей бякой, то вы можете активировать
@@ -1022,7 +1031,10 @@ const AEInstallProblems: React.FC = () => {
           репаки от KpoJluK или m0nkrus.
         </p>
       </DetailsSummary>
-      <DetailsSummary title='При установке любого пакета Red Giant выскакивает "This installer application has been moved. It must be run from its original folder containing a packages directory. The installer will now exit."'>
+      <DetailsSummary
+        title='При установке любого пакета Red Giant выскакивает "This installer application has been moved. It must be run from its original folder containing a packages directory. The installer will now exit."'
+        tag="trapcode, mbl, magic bullet, vfx suite, universe, юниверс, трапкод, партикуляр, мбл"
+      >
         <p>
           Вы пытаетесь установить плагины от <mark className="plugin">Red Giant</mark>, не
           распаковав архив полностью. При использовании стандартного просмотрщика архивов
@@ -1044,7 +1056,10 @@ const AEInstallProblems: React.FC = () => {
           подобных установочных файлов.
         </p>
       </DetailsSummary>
-      <DetailsSummary title="Установил плагин, но при его применении вылазают красные кресты или надписи про отсутствие лицензии">
+      <DetailsSummary
+        title="Установил плагин, но при его применении вылазают красные кресты или надписи про отсутствие лицензии"
+        tag="плагин не активирован, license failed, красный крест"
+      >
         <p>
           Скорее всего вы проигнорировали инструкцию по установке или неправильно ею
           воспользовались. Попробуйте начать установку и активацию плагина с самого
@@ -1056,7 +1071,10 @@ const AEInstallProblems: React.FC = () => {
           самого первого пункта этой страницы.
         </p>
       </DetailsSummary>
-      <DetailsSummary title="Чую, что у меня программа работает неправильно, но переустанавливать программу я не хочу. Как сбросить все настройки After Effects?">
+      <DetailsSummary
+        title="Чую, что у меня программа работает неправильно, но переустанавливать программу я не хочу. Как сбросить все настройки After Effects?"
+        tag="креатив клауд клинер, удаление adobe, очистка от хвостов"
+      >
         <p>
           Перед запуском программы из ярлыка, зажмите модификаторы{" "}
           <mark className="key">Ctrl + Alt + Shift</mark> на клавиатуре одновременно и не
