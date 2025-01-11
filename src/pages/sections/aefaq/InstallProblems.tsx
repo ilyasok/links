@@ -13,7 +13,10 @@ const AEInstallProblems: React.FC = () => {
   return (
     <div className="faq-content">
       <GithubUpdateInfo filePath="src/pages/sections/aefaq/InstallProblems.tsx" />
-      <DetailsSummary title="Забыли положить инструкцию для установки рядом с файлами, куда что кидать?">
+      <DetailsSummary
+        title="Забыли положить инструкцию для установки рядом с файлами, куда что кидать?"
+        tag="как установить, куда устанавливать, установка, распаковка, инструкция, плагины, шаблоны, пресеты, скрипты, расширения, пакеты, плагины, луты"
+      >
         <AdditionWarning>
           Прежде чем использовать <mark className="file">.aep</mark> и{" "}
           <mark className="file">.mogrt</mark> шаблоны или пакеты для{" "}
