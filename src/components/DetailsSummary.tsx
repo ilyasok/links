@@ -141,7 +141,22 @@ const DetailsSummary: React.FC<DetailsSummaryProps> = ({title, children, tag}) =
         </Tooltip>
       </summary>
       <SpoilerContext.Provider value={isOpen}>
-        <section className="faq-section">{children}</section>
+        <section className="faq-section">
+          {children}
+          {tag && (
+            <div className="faq-tags">
+              <span>Дополнительные теги для поиска:</span>
+              {tag.split(", ").map((t, index) => (
+                <mark
+                  className="tag"
+                  key={index}
+                >
+                  {t}
+                </mark>
+              ))}
+            </div>
+          )}
+        </section>
       </SpoilerContext.Provider>
     </details>
   );
