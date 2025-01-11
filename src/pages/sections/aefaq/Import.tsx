@@ -618,7 +618,16 @@ const AEImport: React.FC = () => {
         <p>
           Макет из онлайн-сервиса <mark className="app">Figma</mark> можно перегнать двумя
           плагинами: <mark className="plugin">AEUX</mark> и{" "}
-          <mark className="plugin">Overlord 2</mark>.
+          <mark className="plugin">Overlord 2</mark>. Прежде чем импортировать что-либо,
+          вам нужно сохранить макет локально в <mark className="app">Figma</mark> через{" "}
+          <mark className="ui">Иконка Figma &gt; File &gt; Save local copy</mark> и
+          открыть его в{" "}
+          <b>
+            <u>десктопной версии</u>
+          </b>{" "}
+          <mark className="app">Figma</mark>. Это нужно делать, если вы собираетесь
+          импортировать чужой проект, так как зачастую их нельзя редактировать и
+          использовать с ними плагины.
         </p>
         <AdditionInfo>
           Плагин <mark className="plugin">Overlord</mark> второй версии с поддержкой
