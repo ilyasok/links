@@ -133,7 +133,7 @@ export const SearchInPage: React.FC = () => {
   const extractDetailsData = () => {
     const details = document.querySelectorAll("details");
 
-    const data: {title: string; content: string; id: string}[] = [];
+    const data: {title: string; content: string; id: string; tag?: string}[] = [];
     details.forEach((detail) => {
       const summary = detail.querySelector("summary");
       if (!summary) {
@@ -146,6 +146,8 @@ export const SearchInPage: React.FC = () => {
       }
 
       const title = summary.textContent ?? "";
+
+      const tag = detail.getAttribute("data-tags") ?? "";
 
       const content = Array.from(detail.querySelectorAll<HTMLParagraphElement>("p"))
         .map((el) => decodeHtmlEntities(el.textContent?.trim() ?? ""))
@@ -213,7 +215,7 @@ export const SearchInPage: React.FC = () => {
 
       const text = [content, listItems].join("\n");
       if (title || text) {
-        data.push({title, content: text, id});
+        data.push({title, content: text, id, tag});
       }
     });
 
@@ -235,13 +237,18 @@ export const SearchInPage: React.FC = () => {
 
     const detailsData = extractDetailsData();
 
-    const filtered = detailsData.filter(({title, content}) => {
+    const filtered = detailsData.filter(({title, content, tag}) => {
       const titleLower = title.toLowerCase();
 
-      const contentLower = content.toLowerCase();
+      const contentLower = content?.toLowerCase() || "";
+
+      const tagLower = tag?.toLowerCase() ?? "";
 
       return searchWords.every(
-        (word) => titleLower.includes(word) || contentLower.includes(word)
+        (word) =>
+          titleLower.includes(word) ||
+          contentLower.includes(word) ||
+          tagLower.includes(word)
       );
     });
 

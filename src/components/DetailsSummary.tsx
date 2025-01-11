@@ -10,6 +10,7 @@ import React, {
 interface DetailsSummaryProps {
   title: string;
   children: ReactNode;
+  tag?: string;
 }
 
 const SpoilerContext = createContext(false);
@@ -50,7 +51,7 @@ export const generateAnchorId = () => {
   return generatedAnchor;
 };
 
-const DetailsSummary: React.FC<DetailsSummaryProps> = ({title, children}) => {
+const DetailsSummary: React.FC<DetailsSummaryProps> = ({title, children, tag}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const detailsRef = useRef<HTMLDetailsElement>(null);
@@ -108,6 +109,7 @@ const DetailsSummary: React.FC<DetailsSummaryProps> = ({title, children}) => {
       ref={detailsRef}
       open={isOpen}
       onToggle={handleToggle}
+      data-tags={tag}
     >
       <summary className="faq-summary">
         <div className="faq-summary-left">
