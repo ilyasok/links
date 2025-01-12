@@ -89,7 +89,7 @@ import DetailsSummary from "../../../components/DetailsSummary";
     действия делаются на свой страх и риск или о том, на что нужно обратить внимание в
     первую очередь.
   </AdditionDanger>
-</DetailsSummary>;
+</DetailsSummary>
 ```
 
 Иногда в тексте может встречаться `mark` с каким-нибудь классом. Это делается лишь для добавления уникальной иконки рядом с текстом и позволяет копировать текст в буфер обмена. Если у `mark` не будет класса - при нажатии на него текст не будет копироваться в буфер обмена.
@@ -118,7 +118,7 @@ import DetailsSummary from "../../../components/DetailsSummary";
     <mark className="plugin">Trapcode Particular</mark> вы можете замедлить
     производительность вашего проекта.
   </p>
-</DetailsSummary>;
+</DetailsSummary>
 ```
 
 Изображения добавляются через компонент `ImageFigure`. Видеофайлы добавляются через компонент `VideoFigure`. Этот компонент стилизован компонент нужными классами, которые нужно ввести вручную:
@@ -160,7 +160,7 @@ import DetailsSummary from "../../../components/DetailsSummary";
     Если вы очистите кэш и оперативную память - предпросмотр надо будет просчитывать
     заново.
   </AdditionWarning>
-</DetailsSummary>;
+</DetailsSummary>
 ```
 
 Для добавления видео из сервиса YouTube используется компонент `YouTubeVideo`. Использует два аттрибута: `link` и `caption`. Если надо добавить из другого сервиса, который позволяет ссылаться на сам видеофайл - можно сделать это через компонент `VideoFigure`.
@@ -171,11 +171,11 @@ import DetailsSummary from "../../../components/DetailsSummary";
 <DetailsSummary title="Как легко зарикроллить своего друга?">
   <p>
     Достаточно просто. Вам нужно будет вписать компонент с легендарной ссылкой, убрав всё
-    лишнее и оставив только ID видео
+    лишнее и оставив только ID видео.
   </p>
   <YouTubeVideo
     link="dQw4w9WgXcQ" // из ссылки https://www.youtube.com/watch?v=dQw4w9WgXcQ нам нужно взять значение после знака "равно"
     caption="Rick Astley - Never Gonna Give You Up"
   />
-</DetailsSummary>;
+</DetailsSummary>
 ```
