@@ -156,7 +156,7 @@ const AEFromNewbies: React.FC = () => {
             <mark className="word">Борисовский</mark>,{" "}
             <mark className="word">сапфировский</mark> или{" "}
             <mark className="word">континуумовский</mark> - под этими прилагательными
-            подразумеваются плагины от компании BorisFX, в частности пакеты{" "}
+            подразумеваются плагины от компании Boris FX, в частности пакеты{" "}
             <mark className="plugin">Sapphire</mark> и{" "}
             <mark className="plugin">Continuum</mark>. Прилагательное может употребляться
             вместе с названием эффекта, например{" "}
@@ -404,12 +404,12 @@ const AEFromNewbies: React.FC = () => {
           </li>
           <li>
             <mark className="word">Мокка</mark> или <mark className="word">моча</mark> -
-            плагин <mark className="plugin">BorisFX Mocha</mark>, которая используется для
-            трекинга и привязки объектов. Данный плагин включён в базовую поставку{" "}
+            плагин <mark className="plugin">Boris FX Mocha</mark>, которая используется
+            для трекинга и привязки объектов. Данный плагин включён в базовую поставку{" "}
             <mark className="app">After Effects</mark>, но в урезанном виде. Для
             разблокировки некоторых функций требуется полная версия{" "}
-            <mark className="plugin">BorisFX Mocha Pro</mark>.{" "}
-            <a href="https://support.borisfx.com/hc/en-us/articles/10232625711117-I-use-Mocha-AE-what-is-the-difference-between-Mocha-AE-and-Mocha-Pro-Do-I-need-Mocha-Pro">
+            <mark className="plugin">Boris FX Mocha Pro</mark>.{" "}
+            <a href="https://support.Boris FX.com/hc/en-us/articles/10232625711117-I-use-Mocha-AE-what-is-the-difference-between-Mocha-AE-and-Mocha-Pro-Do-I-need-Mocha-Pro">
               О различиях между AE и Pro...
             </a>
           </li>
@@ -1942,8 +1942,8 @@ const AEFromNewbies: React.FC = () => {
         </p>
         <AdditionInfo>
           Подробнее о различиях между этими версиями вы можете прочитать на{" "}
-          <a href="https://support.borisfx.com/hc/en-us/articles/10232625711117-I-use-Mocha-AE-what-is-the-difference-between-Mocha-AE-and-Mocha-Pro-Do-I-need-Mocha-Pro">
-            официальном сайте BorisFX
+          <a href="https://support.Boris FX.com/hc/en-us/articles/10232625711117-I-use-Mocha-AE-what-is-the-difference-between-Mocha-AE-and-Mocha-Pro-Do-I-need-Mocha-Pro">
+            официальном сайте Boris FX
           </a>
           .
         </AdditionInfo>

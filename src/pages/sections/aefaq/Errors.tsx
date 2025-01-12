@@ -32,7 +32,7 @@ const AEErrors: React.FC = () => {
           При появлении данных ошибок убедитесь в том, что вы не используете исходники с
           большим разрешением (больше, чем 1080p), не установили 16 или 32 бит в
           параметрах проекта и не перегружаете свой проект различными эффектами (например
-          от Red Giant или BorisFX).
+          от Red Giant или Boris FX).
         </AdditionWarning>
         <p>
           Обычно для устранения этой ошибки могут помочь некоторые советы, приведённые
@@ -881,10 +881,10 @@ const AEErrors: React.FC = () => {
           примените <mark className="plugin">Twixtor</mark> на корректирующий слой.
         </p>
       </DetailsSummary>
-      <DetailsSummary title="Красный экран при использовании BorisFX Sapphire">
+      <DetailsSummary title="Красный экран при использовании Boris FX Sapphire">
         <p>
           Это редкий и неприятный баг пиратской{" "}
-          <mark className="plugin">BorisFX Sapphire</mark> версий 2024.5X в виде репаков
+          <mark className="plugin">Boris FX Sapphire</mark> версий 2024.5X в виде репаков
           от KpoJluk. Вместе с этим багом у вас пропадают все переключатели и настройки у
           применённых эффектов.
         </p>
@@ -1422,7 +1422,7 @@ const AEErrors: React.FC = () => {
         <AdditionInfo>
           Иногда многие спрашивают, что за эффекты с приставкой <mark>S_</mark> и{" "}
           <mark>BCC</mark>? Эффекты с такой приставкой не являются встроенными и
-          поставляются компанией <mark>BorisFX</mark> в пакетах{" "}
+          поставляются компанией <mark>Boris FX</mark> в пакетах{" "}
           <mark className="plugin">Sapphire</mark> и{" "}
           <mark className="plugin">Continuum</mark>, их нужно установить отдельно на ваше
           устройство. Аналогично касается и остальных &quot;ненаходов&quot; от{" "}
@@ -1467,11 +1467,11 @@ const AEErrors: React.FC = () => {
           .
         </p>
       </DetailsSummary>
-      <DetailsSummary title="Вылетает Adobe Media Encoder после установки плагинов BorisFX Sapphire">
+      <DetailsSummary title="Вылетает Adobe Media Encoder после установки плагинов Boris FX Sapphire">
         <p>
           Это довольно популярный баг, который мешает нормальному запуску{" "}
           <mark className="app">Media Encoder</mark> при наличии установленных в системе
-          плагинов <mark className="plugin">BorisFX Sapphire</mark>. В более поздних
+          плагинов <mark className="plugin">Boris FX Sapphire</mark>. В более поздних
           версиях плагинов и программ это исправили, но если вы с таким столкнулись - вам
           достаточно просто указать{" "}
           <mark className="ui">режим совместимости с Windows 8</mark> в свойствах ярлыка
@@ -1492,7 +1492,7 @@ const AEErrors: React.FC = () => {
         />
         <p>
           После проделанных действий программа при запуске не должна вылетать. Если всё
-          ещё вылетает, обновите плагины <mark className="plugin">BorisFX Sapphire</mark>{" "}
+          ещё вылетает, обновите плагины <mark className="plugin">Boris FX Sapphire</mark>{" "}
           до последних версий.
         </p>
       </DetailsSummary>

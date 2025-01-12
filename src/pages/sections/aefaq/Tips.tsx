@@ -177,12 +177,12 @@ const AETips: React.FC = () => {
         <Divider>Для совместимости с чужими проектами</Divider>
         <ul>
           <li>
-            <mark className="plugin">BorisFX Sapphire</mark> и{" "}
-            <mark className="plugin">BorisFX Continuum</mark> - база из всех баз. Особенно
-            популярен у <del>мамкиных</del> эдиторов, они без него жить не могут.
+            <mark className="plugin">Boris FX Sapphire</mark> и{" "}
+            <mark className="plugin">Boris FX Continuum</mark> - база из всех баз.
+            Особенно популярен у <del>мамкиных</del> эдиторов, они без него жить не могут.
           </li>
           <li>
-            <mark className="plugin">BorisFX Mocha Pro</mark> - расширенная версия
+            <mark className="plugin">Boris FX Mocha Pro</mark> - расширенная версия
             стандартного плагина <mark className="plugin">Mocha AE</mark>.
           </li>
           <li>
@@ -484,7 +484,7 @@ const AETips: React.FC = () => {
         <AdditionInfo>
           <b>Не забывайте своевременно обновлять и сторонние плагины!</b> Из-за того что
           существуют пользователи, которые сидят на устаревших версиях сторонних плагинов
-          (например <mark className="plugin">BorisFX Sapphire</mark>) на новых версиях{" "}
+          (например <mark className="plugin">Boris FX Sapphire</mark>) на новых версиях{" "}
           <mark className="app">After Effects</mark>, бытуют ложные слухи о том что
           &quot;ой, версия <mark>XX.X</mark> очень логучая и вылитает на маих
           эдитах!!1!&quot; и вводят остальных пользователей в заблуждение.

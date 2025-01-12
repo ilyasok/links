@@ -32,7 +32,7 @@ const AEActions: React.FC = () => {
           исходников довольно много, но нам нужно собрать что-то достойное в этот список.
           В качестве хорошего апскейлера-плагина могу привести{" "}
           <mark className="plugin">BCC UpRes ML</mark> в пакете плагинов{" "}
-          <mark className="plugin">BorisFX Continuum</mark>.
+          <mark className="plugin">Boris FX Continuum</mark>.
         </p>
         <YouTubeVideo
           link="fTYcNP8ZdTE"
@@ -80,7 +80,7 @@ const AEActions: React.FC = () => {
           <mark className="app">Topaz Photo AI</mark>,{" "}
           <mark className="app">Topaz Gigapixel AI</mark> и{" "}
           <mark className="app">Topaz Video AI</mark>, а также пакет плагинов{" "}
-          <mark className="plugin">BorisFX Continuum</mark> можно в канале{" "}
+          <mark className="plugin">Boris FX Continuum</mark> можно в канале{" "}
           <a href="https://t.me/+Qd9xu7A4TeIwNzY6">склад стройматериалов</a>.
         </AdditionInfo>
       </DetailsSummary>
@@ -106,7 +106,7 @@ const AEActions: React.FC = () => {
           caption="Twixtor"
         />
         <p>
-          С относительно недавних пор в <mark className="plugin">BorisFX Continuum</mark>{" "}
+          С относительно недавних пор в <mark className="plugin">Boris FX Continuum</mark>{" "}
           тоже добавили некий аналог <mark className="plugin">Twixtor</mark> на основе ИИ.
           Называется <mark className="plugin">BCC Retimer ML</mark> и в сравнении с{" "}
           <mark className="plugin">Twixtor</mark> выдаёт гораздо лучшие результаты.
@@ -175,7 +175,7 @@ const AEActions: React.FC = () => {
           поддерживает GPU-ускорение.
         </p>
         <YouTubeVideo
-          link="https://youtube.com/embed/mwSqzxApy-E"
+          link="mwSqzxApy-E"
           caption="Neat Video"
         />
         <p>
@@ -195,11 +195,11 @@ const AEActions: React.FC = () => {
           основанный на машинном обучении.{" "}
         </p>
         <YouTubeVideo
-          link="https://youtube.com/embed/L1PeaTa13H4"
+          link="L1PeaTa13H4"
           caption="BCC DeNoise ML"
         />
         <p>
-          Ну и куда же без Re:vision Effects с их <mark className="plugin">DE:Noise</mark>
+          Ну и куда же без Re:Vision Effects с их <mark className="plugin">DE:Noise</mark>
           .
         </p>
         <YouTubeVideo
@@ -260,7 +260,7 @@ const AEActions: React.FC = () => {
         <p>
           Если результат от работы плагины выше не нравится - есть{" "}
           <mark className="plugin">BCC Primatte Studio</mark>, поставляющийся в пакете{" "}
-          <mark className="plugin">BorisFX Continuum</mark>.
+          <mark className="plugin">Boris FX Continuum</mark>.
         </p>
         <YouTubeVideo
           link="AaKTHKspAkQ"
@@ -289,7 +289,7 @@ const AEActions: React.FC = () => {
         <p>
           Если результат от <mark className="plugin">Rotobrush</mark> вам не нравится - вы
           можете воспользоваться сторонним плагином{" "}
-          <mark className="plugin">BorisFX Silhouette</mark> в котором есть инструмент{" "}
+          <mark className="plugin">Boris FX Silhouette</mark> в котором есть инструмент{" "}
           <mark className="plugin">Power Matte</mark>.
         </p>
         <YouTubeVideo
