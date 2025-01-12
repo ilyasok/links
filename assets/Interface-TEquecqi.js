@@ -1,1 +1,0 @@
-import{j as t}from"./index-DN17a02D.js";import{G as s}from"./GithubUpdateInfo-C30DRqBQ.js";const r=()=>t.jsx("div",{className:"faq-content",children:t.jsx(s,{filePath:"src/pages/sections/psfaq/Interface.tsx"})});export{r as default};
