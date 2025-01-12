@@ -14,6 +14,8 @@ const NotFound = () => {
   const [subtitles, setSubtitles] = useState<Subtitle[]>([]);
 
   const [currentSubtitle, setCurrentSubtitle] = useState<string>("404");
+  const [lastSubtitleChangeTime, setLastSubtitleChangeTime] = useState<number>(0);
+
   useEffect(() => {
     audioRef.current = new Audio("/files/404.mp3");
 
@@ -57,6 +59,7 @@ const NotFound = () => {
       const current = subtitles.find(
         (sub) => currentTime >= sub.start && currentTime <= sub.end
       );
+
       if (current && current.text !== currentSubtitle) {
         setCurrentSubtitle(current.text);
       } else if (!current && currentSubtitle !== "404") {
