@@ -18,12 +18,10 @@ import {
   MovieFilterRounded,
   MovieRounded,
   PermMediaRounded,
-  QuestionMarkRounded,
   SlowMotionVideoRounded,
   SmartToyRounded,
   SpellcheckRounded,
   SportsEsportsRounded,
-  TerminalRounded,
   TextureRounded,
   VideoSettingsRounded,
   ViewInArRounded,
@@ -40,6 +38,7 @@ import {LinkCard, LinkCardNoDescription, LinkInAppCard} from "../components/Link
 import {AdditionDanger, AdditionWarning} from "../components/Additions";
 import Footer from "../components/Footer";
 import {Helmet} from "react-helmet-async";
+import {AEExprIcon, AEIcon, PRIcon, PSIcon} from "./faqIcon";
 
 const Links = () => {
   return (
@@ -72,25 +71,25 @@ const Links = () => {
           <div className="links-grid">
             <LinkInAppCard
               href="/aefaq"
-              icon={<QuestionMarkRounded />}
+              icon={<AEIcon />}
               name="aefaq"
               description="Преодолеваем трудности при работе с After Effects"
             />{" "}
             <LinkInAppCard
               href="/prfaq"
-              icon={<QuestionMarkRounded />}
+              icon={<PRIcon />}
               name="prfaq (В РАЗРАБОТКЕ)"
-              description="Поясняем за монтаж и шаблоны в Premiere Pro"
+              description="Поясняем за монтаж и нюансы в Premiere Pro"
             />{" "}
             <LinkInAppCard
               href="/psfaq"
-              icon={<QuestionMarkRounded />}
+              icon={<PSIcon />}
               name="psfaq (В РАЗРАБОТКЕ)"
-              description="Базарим за цвета и обработку изображений в  Photoshop"
+              description="Базарим за обработку изображений в Photoshop"
             />
             <LinkInAppCard
               href="/aeexprfaq"
-              icon={<TerminalRounded />}
+              icon={<AEExprIcon />}
               name="aeexprfaq (В РАЗРАБОТКЕ)"
               description="Шпаргалка по использованию выражений в After Effects"
             />
