@@ -219,7 +219,10 @@ const AEActions: React.FC = () => {
           caption="Reduce Grain"
         />
       </DetailsSummary>
-      <DetailsSummary title="Какими средствами обычно удаляют зелёный или синий фон?">
+      <DetailsSummary
+        title="Какими средствами обычно удаляют зелёный или синий фон?"
+        tag="кеинг, клинап, убрать фон"
+      >
         <p>
           Предположим, что заказчик предоставил вам исходники объекта или персонажа на
           зелёном фоне. Можно конечно воспользоваться инструментом{" "}
@@ -261,7 +264,7 @@ const AEActions: React.FC = () => {
           caption="Getting Started with Primatte Keyer"
         />
         <p>
-          Если результат от работы плагины выше не нравится - есть{" "}
+          Если результат от работы плагина выше не нравится - есть{" "}
           <mark className="plugin">BCC Primatte Studio</mark>, поставляющийся в пакете{" "}
           <mark className="plugin">Boris FX Continuum</mark>.
         </p>

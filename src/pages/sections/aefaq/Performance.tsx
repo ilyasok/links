@@ -8,7 +8,10 @@ const AEPerformance: React.FC = () => {
   return (
     <div className="faq-content">
       <GithubUpdateInfo filePath="src/pages/sections/aefaq/Performance.tsx" />
-      <DetailsSummary title="Почему у меня, б%@#ь, лагает е&#!%й After Effects, с$%а?">
+      <DetailsSummary
+        title="Почему у меня, б%@#ь, лагает е&#!%й After Effects, с$%а?"
+        tag="тормозит, лаги, медленно, скорость работы, оптимизация, производительность"
+      >
         <p>
           Здесь по этому вопросу можно рассуждать долго и бесконечно. Тут нельзя назвать
           конкретную причину этого магического явления, так как всё обычно упирается в

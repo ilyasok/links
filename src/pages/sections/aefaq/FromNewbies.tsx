@@ -14,7 +14,10 @@ const AEFromNewbies: React.FC = () => {
   return (
     <div className="faq-content">
       <GithubUpdateInfo filePath="src/pages/sections/aefaq/FromNewbies.tsx" />
-      <DetailsSummary title="Первый раз установил After Effects, с чего бы мне начать обучение?">
+      <DetailsSummary
+        title="Первый раз установил After Effects, с чего бы мне начать обучение?"
+        tag="для новичка, первый раз, только открыл афтер"
+      >
         <p>
           Если вы ранее не работали в программах для композитинга, в том числе и{" "}
           <mark className="app">After Effects</mark>, то вы можете начать проходить курс
