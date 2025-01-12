@@ -438,6 +438,26 @@ const AEInterface: React.FC = () => {
           caption="Keyframe Interpolation"
         />
       </DetailsSummary>
+      <DetailsSummary
+        title="Как включить отображение звуковой волны у слоя со звуком?"
+        tag="вейвформ, аудио, увидеть волну"
+      >
+        <p>
+          Если вам нужно отобразить звуковую волну у слоя со звуком для того, чтобы
+          расставить маркеры или что-нибудь ещё, то просто выделите нужный слой со звуком
+          и два раза нажмите на кнопку <mark className="key">L</mark>.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/aftereffects/show_waveform.png"
+          imgTitle="Отображение звуковой волны у слоя со звуком"
+          caption="Timeline"
+        />
+        <AdditionInfo>
+          При желании вы можете растянуть звуковую волну по высоте, потянув за нижний край
+          волны.
+        </AdditionInfo>
+      </DetailsSummary>
       <DetailsSummary title="Я использую After Effects 2019 и в нём не выделяется объект в Rotobrush, что делать?">
         <p>
           Скорее всего вы столкнулись с багом этой версии, если вы используете репак от
