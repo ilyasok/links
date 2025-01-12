@@ -48,9 +48,14 @@ const trackPageView = (path: string) => {
 
 const ErrorFallback = ({error}: {error: Error}) => (
   <div className="error-container">
+    <p className="error-backtitle">Error</p>
     <div className="error-modal">
-      <p className="error-modal-title">Что-то пошло не так</p>
-      <p>Обычно после перезагрузки страницы или очистки кэша браузера всё чинится.</p>
+      <p className="error-modal-title">Что-то упало</p>
+      <p>
+        Скорее всего это произошло из-за обновления файлов на сервере. Попробуйте обновить
+        страницу, чтобы загрузить актуальные данные.
+      </p>
+      <p className="error-modal-message">Ошибка: &quot;{error.message}&quot;</p>
       <div style={{display: "flex", gap: "10px"}}>
         <motion.button
           onClick={() => {
@@ -87,7 +92,6 @@ const ErrorFallback = ({error}: {error: Error}) => (
         </a>
         , указав браузер и операционную систему.
       </p>
-      <p className="error-modal-message">Ошибка: &quot;{error.message}&quot;</p>
     </div>
   </div>
 );
