@@ -614,8 +614,83 @@ const AEImport: React.FC = () => {
           присоединении одного - подключатся и остальные.
         </AdditionInfo>
       </DetailsSummary>
-      <DetailsSummary title="Пытаюсь импортировать .ai с градиентами, но не получается. Как всё-таки перенести градиенты из Illustrator в After Effects?">
-        <p>{/* fixme: написать!! */}</p>
+      <DetailsSummary
+        title="Как перенести макет из Illustrator в After Effects по слоям и с градиентами?"
+        tag="импорт из иллюстратора, градиенты"
+      >
+        <p>
+          Предположим, что у вас возникла необходимость перенести файл формата{" "}
+          <mark className="file">.ai</mark>. Да,{" "}
+          <mark className="app">After Effects</mark> предоставляет такую возможность.
+          Однако, стоит отметить, что при работе с большинством проектов, созданных в{" "}
+          <mark className="app">Illustrator</mark>, вы можете столкнуться с тем, что
+          количество доступных слоёв будет ограничено. Это связано с тем, что в процессе
+          создания макета несколько шейпов часто объединяются в один слой.
+        </p>
+        <p>
+          Если вы не собираетесь редактировать импортированные фигуры в{" "}
+          <mark className="app">After Effects</mark> для более детальной анимации, то
+          вручную пересоздавать градиенты не нужно. Но, как сказано ранее - в некоторых
+          проектах из <mark className="app">Illustrator</mark> фигуры могут объединяться.
+          Для этого нам нужно в самом <mark className="app">Illustrator</mark> разбить все
+          или только необходимые фигуры на отдельные слои.
+        </p>
+        <VideoFigure
+          styleClass="figure_windows-light"
+          videoSrc="images/manual_explode_layer_illustrator.mp4"
+          caption="Разбиваем слои в Illustrator"
+        />
+        <p>
+          Затем после разбивки слоёв, сохраните проект в{" "}
+          <mark className="app">Illustrator</mark> как <mark className="file">.ai</mark>.
+          После этого, начните импорт <mark className="file">.ai</mark> файла в{" "}
+          <mark className="app">After Effects</mark> как обычно и выберите тип импорта как
+          композиция. Также вы можете выбрать размер слоёв в{" "}
+          <mark className="ui">Footage Dimensions</mark>:{" "}
+          <mark className="ui">Layer Size</mark> или{" "}
+          <mark className="ui">Document Size</mark>.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/aftereffects/import_ai_file.png"
+          imgTitle="Импортируем файл Illustrator"
+          caption="File.ai"
+        />
+        <p>
+          После импорта вы получите в <mark className="app">After Effects</mark> слои с
+          градиентами. Их вы не сможете редактировать как обычную фигуру, но их можно
+          сделать &quot;как бы векторными&quot;, включив у слоёв{" "}
+          <mark className="ui">Continuously Rasterize</mark>.
+        </p>
+        <VideoFigure
+          styleClass="figure_windows-dark"
+          videoSrc="images/aftereffects/imported_non_editable_shapes.mp4"
+          caption="Импортированые нередактируемые фигуры"
+        />
+        <AdditionWarning>
+          <ul>
+            <li>
+              Есть отдельная категория лиц, которая считает, что при включённом{" "}
+              <mark className="ui">Continuously Rasterize</mark> программа даст
+              пользователю возможность увеличения предпросмотра без потери качества, как в{" "}
+              <mark className="app">Adobe Illustrator</mark>. Спешу огорчить,{" "}
+              <mark className="app">After Effects</mark> не работает так и не может
+              отобразить больше пикселей, чем то, что указано в настройках композиции.
+            </li>
+            <li>
+              При включенной опции <mark className="ui">Continuously Rasterize</mark>{" "}
+              могут быть побочные явления, например разрывы слоя при использовании{" "}
+              <mark className="plugin">Puppet Tool</mark>.
+            </li>
+          </ul>
+        </AdditionWarning>
+        <p>
+          Если вам всё-таки нужно будет слой переконвертировать в редактируемый шейп то
+          увы, придётся попрощаться с градиентами. Градиенты из{" "}
+          <mark className="app">Illustrator</mark> обычно не взаимозаменяемые с
+          градиентами из <mark className="app">After Effects</mark> и их нужно будет
+          пересоздать вручную.
+        </p>
       </DetailsSummary>
       <DetailsSummary
         title="Как перенести макет из Figma в After Effects?"
