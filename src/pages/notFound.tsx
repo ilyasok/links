@@ -1,24 +1,41 @@
 import {motion} from "framer-motion";
-import React, {useEffect, useRef} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import {Helmet} from "react-helmet-async";
 import {Link} from "react-router-dom";
+interface Subtitle {
+  start: number;
+  end: number;
+  text: string;
+}
 
 const NotFound = () => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
+  const [subtitles, setSubtitles] = useState<Subtitle[]>([]);
+
+  const [currentSubtitle, setCurrentSubtitle] = useState<string>("404");
   useEffect(() => {
     audioRef.current = new Audio("/files/404.mp3");
 
-    const handlePlayAudio = () => {
-      setTimeout(() => {
-        if (audioRef.current) {
-          audioRef.current.play().catch((error) => {
-            console.error("Ошибка воспроизведения аудио:", error);
-          });
-        }
-      }, 1000);
-    };
+    const fetchSubtitles = async () => {
+      try {
+        const response = await fetch("/files/404.json");
 
+        const json = await response.json();
+        setSubtitles(json);
+      } catch (error) {
+        console.error("Ошибка загрузки субтитров:", error);
+      }
+    };
+    fetchSubtitles();
+
+    const handlePlayAudio = () => {
+      if (audioRef.current) {
+        audioRef.current.play().catch((error) => {
+          console.error("Ошибка воспроизведения аудио:", error);
+        });
+      }
+    };
     window.addEventListener("click", handlePlayAudio);
 
     return () => {
@@ -29,6 +46,34 @@ const NotFound = () => {
       window.removeEventListener("click", handlePlayAudio);
     };
   }, []);
+  useEffect(() => {
+    const updateSubtitle = () => {
+      if (!audioRef.current) {
+        return;
+      }
+
+      const currentTime = audioRef.current.currentTime;
+
+      const current = subtitles.find(
+        (sub) => currentTime >= sub.start && currentTime <= sub.end
+      );
+      if (current && current.text !== currentSubtitle) {
+        setCurrentSubtitle(current.text);
+      } else if (!current && currentSubtitle !== "404") {
+        setCurrentSubtitle("404");
+      }
+    };
+
+    if (audioRef.current) {
+      audioRef.current.addEventListener("timeupdate", updateSubtitle);
+    }
+
+    return () => {
+      if (audioRef.current) {
+        audioRef.current.removeEventListener("timeupdate", updateSubtitle);
+      }
+    };
+  }, [subtitles, currentSubtitle]);
 
   const handleLinkClick = (event: React.MouseEvent) => {
     event.stopPropagation();
@@ -45,7 +90,7 @@ const NotFound = () => {
       <Helmet>
         <title>notfound@aechat</title>
       </Helmet>
-      <p className="error-backtitle">404</p>
+      <p className="error-backtitle">{currentSubtitle}</p>
       <div className="error-container">
         <div className="error-modal">
           <p className="error-modal-title">Страница не найдена</p>
@@ -69,5 +114,4 @@ const NotFound = () => {
     </motion.main>
   );
 };
-
 export default NotFound;
