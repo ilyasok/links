@@ -79,19 +79,19 @@ const Links = () => {
             <LinkInAppCard
               href="/prfaq"
               icon={<QuestionMarkRounded />}
-              name="prfaq"
+              name="prfaq (В РАЗРАБОТКЕ)"
               description="Поясняем за монтаж и шаблоны в Premiere Pro"
             />{" "}
             <LinkInAppCard
               href="/psfaq"
               icon={<QuestionMarkRounded />}
-              name="psfaq"
+              name="psfaq (В РАЗРАБОТКЕ)"
               description="Базарим за цвета и обработку изображений в  Photoshop"
             />
             <LinkInAppCard
               href="/aeexprfaq"
               icon={<TerminalRounded />}
-              name="aeexprfaq (not-ready)"
+              name="aeexprfaq (В РАЗРАБОТКЕ)"
               description="Шпаргалка по использованию выражений в After Effects"
             />
           </div>
