@@ -14,7 +14,6 @@ const NotFound = () => {
   const [subtitles, setSubtitles] = useState<Subtitle[]>([]);
 
   const [currentSubtitle, setCurrentSubtitle] = useState<string>("404");
-  const [lastSubtitleChangeTime, setLastSubtitleChangeTime] = useState<number>(0);
 
   useEffect(() => {
     audioRef.current = new Audio("/files/404.mp3");
@@ -84,7 +83,7 @@ const NotFound = () => {
 
   return (
     <motion.main
-      className="not-found"
+      className="not-found error"
       initial={{x: 100, opacity: 0}}
       animate={{x: 0, opacity: 1}}
       exit={{x: -50, opacity: 0}}
@@ -93,8 +92,8 @@ const NotFound = () => {
       <Helmet>
         <title>notfound@aechat</title>
       </Helmet>
-      <p className="error-backtitle">{currentSubtitle}</p>
       <div className="error-container">
+        <p className="error-backtitle">{currentSubtitle}</p>
         <div className="error-modal">
           <p className="error-modal-title">Страница не найдена</p>
           <Link
