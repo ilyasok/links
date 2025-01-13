@@ -48,7 +48,7 @@ const trackPageView = (path: string) => {
 
 const ErrorFallback = ({error}: {error: Error}) => (
   <div className="error-container">
-    <p className="error-backtitle">Error</p>
+    <p className="error-backtitle">Ошибка</p>
     <div className="error-modal">
       <p className="error-modal-title">Что-то упало</p>
       <p>
