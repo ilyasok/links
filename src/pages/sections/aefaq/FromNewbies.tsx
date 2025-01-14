@@ -1457,7 +1457,7 @@ const AEFromNewbies: React.FC = () => {
           <li>
             <mark className="app">After Effects</mark> не годится для обработки звука и
             голоса, несмотря на наличие нескольких встроенных эффектов, например{" "}
-            <mark className="plugin">Echo</mark> или
+            <mark className="plugin">Echo</mark> или{" "}
             <mark className="plugin">Reverb</mark>. Для этого хорошо подходит{" "}
             <mark className="app">Premiere Pro</mark> или{" "}
             <mark className="app">Audition</mark> за счёт удобной работы с несколькими
