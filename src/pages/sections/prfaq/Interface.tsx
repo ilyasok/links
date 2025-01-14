@@ -13,12 +13,20 @@ const PRInterface: React.FC = () => {
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>{" "}
       <DetailsSummary title="Пропала визуализация аудиодорожек на таймлайне, как их вернуть?">
-        <p>{/* FIXME: написать!! */}</p>
+        <p>
+          Это довольно частый и неприятный баг, возникающий при использовании{" "}
+          <mark className="app">Premiere Pro</mark>. Обычно это лечится очисткой кэша{" "}
+          <mark className="file">.peak</mark> файлов.
+        </p>
+        {/* FIXME: написать!! */}
       </DetailsSummary>{" "}
       <DetailsSummary title="Как отключить выделение объекта на таймлайне при перемещении временной метки?">
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Куда пропала настройка Timeline в Preferences?">
+        <p>{/* FIXME: написать!! */}</p>
+      </DetailsSummary>
+      <DetailsSummary title="Куда пропал Essential Graphics?">
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Как изменить акцентный цвет интерфейса?">

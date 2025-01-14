@@ -6,7 +6,10 @@ const PRFromNewbies: React.FC = () => {
   return (
     <div className="faq-content">
       <GithubUpdateInfo filePath="src/pages/sections/prfaq/FromNewbies.tsx" />
-      <DetailsSummary title="Первый раз установил Premiere Pro, с чего бы мне начать обучение?">
+      <DetailsSummary
+        title="Первый раз установил Premiere Pro, с чего бы мне начать обучение?"
+        tag="для новичка, первый раз, только открыл премьер"
+      >
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Не понимаю термины от других пользователей Premiere Pro, проясните!">
@@ -18,7 +21,10 @@ const PRFromNewbies: React.FC = () => {
       <DetailsSummary title="Где я могу узнать об нововведениях в Premiere Pro?">
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
-      <DetailsSummary title="Зачем мне с каждого угла советуют поставить английский язык программы и как мне это сделать?">
+      <DetailsSummary
+        title="Зачем мне с каждого угла советуют поставить английский язык программы и как мне это сделать?"
+        tag="изменить язык, смена языка, установка английской версии"
+      >
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Как вернуть звуковую или видео дорожку на таймлайн?">

@@ -5,6 +5,7 @@ import {YouTubeVideo} from "../../../components/ContentFigure";
 import DetailsSummary from "../../../components/DetailsSummary";
 import ContentSwitcher from "../../../components/features/OperatingSystemFilter";
 import {FlexibleLinks} from "../../../components/FlexibleLinksFaQ";
+import {Divider} from "antd";
 
 const PRTips: React.FC = () => {
   return (
