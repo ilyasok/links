@@ -1247,7 +1247,10 @@ const AEErrors: React.FC = () => {
           в разделе <mark className="ui">General</mark>.
         </AdditionInfo>
       </DetailsSummary>
-      <DetailsSummary title="Advanced 3D is not supported by the current software">
+      <DetailsSummary
+        title='"Advanced 3D is not supported by the current software" или "Advanced 3D plug-in generated an unexpected exception"'
+        tag="расширенный 3d, вылетает, адвансед 3д"
+      >
         <p>
           Ваша видеокарта не соответствует требованиям и не поддерживает функцию{" "}
           <mark className="plugin">Advanced 3D</mark>. Проверьте на наличие и соответствие
