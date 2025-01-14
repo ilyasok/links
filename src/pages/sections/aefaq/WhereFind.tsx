@@ -484,7 +484,17 @@ const AEWhereFind: React.FC = () => {
           </thead>
           <tbody>
             <tr>
-              <td colSpan={3}>Эффекты для работы с 3D-каналами (3D Channel Effects)</td>
+              <td
+                colSpan={3}
+                style={{
+                  backgroundColor: "var(--mark_background)",
+                  fontWeight: 700,
+                  outline: "1px solid var(--mark_border)",
+                  color: "var(--mark_text)",
+                }}
+              >
+                Эффекты для работы с 3D-каналами (3D Channel Effects)
+              </td>
             </tr>
             <tr>
               <td>Извлечение 3D-канала</td>
@@ -583,7 +593,17 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td colSpan={3}>Эффекты для работы с аудио (Audio)</td>
+              <td
+                colSpan={3}
+                style={{
+                  backgroundColor: "var(--mark_background)",
+                  fontWeight: 700,
+                  outline: "1px solid var(--mark_border)",
+                  color: "var(--mark_text)",
+                }}
+              >
+                Эффекты для работы с аудио (Audio)
+              </td>
             </tr>
             <tr>
               <td>Назад</td>
@@ -706,7 +726,17 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td colSpan={3}>Эффекты для размытия и резкости (Blur &amp; Sharpen)</td>
+              <td
+                colSpan={3}
+                style={{
+                  backgroundColor: "var(--mark_background)",
+                  fontWeight: 700,
+                  outline: "1px solid var(--mark_border)",
+                  color: "var(--mark_text)",
+                }}
+              >
+                Эффекты для размытия и резкости (Blur &amp; Sharpen)
+              </td>
             </tr>
             <tr>
               <td>Двухстороннее размытие</td>
@@ -901,7 +931,17 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td colSpan={3}>Эффекты для работы с цветовыми каналами (Channel)</td>
+              <td
+                colSpan={3}
+                style={{
+                  backgroundColor: "var(--mark_background)",
+                  fontWeight: 700,
+                  outline: "1px solid var(--mark_border)",
+                  color: "var(--mark_text)",
+                }}
+              >
+                Эффекты для работы с цветовыми каналами (Channel)
+              </td>
             </tr>
             <tr>
               <td>Арифметический</td>
@@ -1060,7 +1100,17 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td colSpan={3}>Эффекты для коррекции цвета (Color Correction)</td>
+              <td
+                colSpan={3}
+                style={{
+                  backgroundColor: "var(--mark_background)",
+                  fontWeight: 700,
+                  outline: "1px solid var(--mark_border)",
+                  color: "var(--mark_text)",
+                }}
+              >
+                Эффекты для коррекции цвета (Color Correction)
+              </td>
             </tr>
             <tr>
               <td>Автоматическая коррекция цвета</td>
@@ -1483,7 +1533,17 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td colSpan={3}>Эффекты для искажения (Distort)</td>
+              <td
+                colSpan={3}
+                style={{
+                  backgroundColor: "var(--mark_background)",
+                  fontWeight: 700,
+                  outline: "1px solid var(--mark_border)",
+                  color: "var(--mark_text)",
+                }}
+              >
+                Эффекты для искажения (Distort)
+              </td>
             </tr>
             <tr>
               <td>Деформация по Безье</td>
@@ -1930,7 +1990,17 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td colSpan={3}>Эффекты для контроля выражений (Expression Controls)</td>
+              <td
+                colSpan={3}
+                style={{
+                  backgroundColor: "var(--mark_background)",
+                  fontWeight: 700,
+                  outline: "1px solid var(--mark_border)",
+                  color: "var(--mark_text)",
+                }}
+              >
+                Эффекты для контроля выражений (Expression Controls)
+              </td>
             </tr>
             <tr>
               <td>Элемент управления 3D-точками</td>
@@ -1973,7 +2043,17 @@ const AEWhereFind: React.FC = () => {
               <td>Slider Control</td>
             </tr>
             <tr>
-              <td colSpan={3}>Генераторы изображения (Generate)</td>
+              <td
+                colSpan={3}
+                style={{
+                  backgroundColor: "var(--mark_background)",
+                  fontWeight: 700,
+                  outline: "1px solid var(--mark_border)",
+                  color: "var(--mark_text)",
+                }}
+              >
+                Генераторы изображения (Generate)
+              </td>
             </tr>
             <tr>
               <td>4-цветный градиент</td>
@@ -2288,7 +2368,17 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td colSpan={3}>Эффекты для VR-видео (Immersive Video)</td>
+              <td
+                colSpan={3}
+                style={{
+                  backgroundColor: "var(--mark_background)",
+                  fontWeight: 700,
+                  outline: "1px solid var(--mark_border)",
+                  color: "var(--mark_text)",
+                }}
+              >
+                Эффекты для VR-видео (Immersive Video)
+              </td>
             </tr>
             <tr>
               <td>Размытие VR</td>
@@ -2435,7 +2525,17 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td colSpan={3}>Эффекты для кеинга (Keying)</td>
+              <td
+                colSpan={3}
+                style={{
+                  backgroundColor: "var(--mark_background)",
+                  fontWeight: 700,
+                  outline: "1px solid var(--mark_border)",
+                  color: "var(--mark_text)",
+                }}
+              >
+                Эффекты для кеинга (Keying)
+              </td>
             </tr>
             <tr>
               <td>Расширенное подавление рассеяния</td>
@@ -2558,7 +2658,17 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td colSpan={3}>Эффекты для изменения подложек (Matte)</td>
+              <td
+                colSpan={3}
+                style={{
+                  backgroundColor: "var(--mark_background)",
+                  fontWeight: 700,
+                  outline: "1px solid var(--mark_border)",
+                  color: "var(--mark_text)",
+                }}
+              >
+                Эффекты для изменения подложек (Matte)
+              </td>
             </tr>
             <tr>
               <td>Подавление подложки</td>
@@ -2621,7 +2731,17 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td colSpan={3}>Эффекты для генерации шума и зерна (Noise &amp; Grain)</td>
+              <td
+                colSpan={3}
+                style={{
+                  backgroundColor: "var(--mark_background)",
+                  fontWeight: 700,
+                  outline: "1px solid var(--mark_border)",
+                  color: "var(--mark_text)",
+                }}
+              >
+                Эффекты для генерации шума и зерна (Noise &amp; Grain)
+              </td>
             </tr>
             <tr>
               <td>Добавить зернистость</td>
@@ -2760,7 +2880,17 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td colSpan={3}>Устаревшие эффекты (Obsolete или Legacy)</td>
+              <td
+                colSpan={3}
+                style={{
+                  backgroundColor: "var(--mark_background)",
+                  fontWeight: 700,
+                  outline: "1px solid var(--mark_border)",
+                  color: "var(--mark_text)",
+                }}
+              >
+                Устаревшие эффекты (Obsolete или Legacy)
+              </td>
             </tr>
             <tr>
               <td>Базовый 3D</td>
@@ -2871,7 +3001,17 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td colSpan={3}>Эффекты для перспективы (Perspective)</td>
+              <td
+                colSpan={3}
+                style={{
+                  backgroundColor: "var(--mark_background)",
+                  fontWeight: 700,
+                  outline: "1px solid var(--mark_border)",
+                  color: "var(--mark_text)",
+                }}
+              >
+                Эффекты для перспективы (Perspective)
+              </td>
             </tr>
             <tr>
               <td>Функция 3D Camera Tracker</td>
@@ -2994,7 +3134,17 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td colSpan={3}>Эффекты для имитации чего-либо (Simulation)</td>
+              <td
+                colSpan={3}
+                style={{
+                  backgroundColor: "var(--mark_background)",
+                  fontWeight: 700,
+                  outline: "1px solid var(--mark_border)",
+                  color: "var(--mark_text)",
+                }}
+              >
+                Эффекты для имитации чего-либо (Simulation)
+              </td>
             </tr>
             <tr>
               <td>Танец карт</td>
@@ -3213,7 +3363,17 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td colSpan={3}>Эффекты для стилизации (Stylize)</td>
+              <td
+                colSpan={3}
+                style={{
+                  backgroundColor: "var(--mark_background)",
+                  fontWeight: 700,
+                  outline: "1px solid var(--mark_border)",
+                  color: "var(--mark_text)",
+                }}
+              >
+                Эффекты для стилизации (Stylize)
+              </td>
             </tr>
             <tr>
               <td>Мазки кисти</td>
@@ -3516,7 +3676,17 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td colSpan={3}>Эффекты для генерации текста (Text)</td>
+              <td
+                colSpan={3}
+                style={{
+                  backgroundColor: "var(--mark_background)",
+                  fontWeight: 700,
+                  outline: "1px solid var(--mark_border)",
+                  color: "var(--mark_text)",
+                }}
+              >
+                Эффекты для генерации текста (Text)
+              </td>
             </tr>
             <tr>
               <td>Нумерация</td>
@@ -3543,7 +3713,17 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td colSpan={3}>Эффекты для манипуляции временем (Time)</td>
+              <td
+                colSpan={3}
+                style={{
+                  backgroundColor: "var(--mark_background)",
+                  fontWeight: 700,
+                  outline: "1px solid var(--mark_border)",
+                  color: "var(--mark_text)",
+                }}
+              >
+                Эффекты для манипуляции временем (Time)
+              </td>
             </tr>
             <tr>
               <td>Эффект СС «Принудительное размытие в движении»</td>
@@ -3642,7 +3822,17 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td colSpan={3}>Эффекты для создания переходов (Transition)</td>
+              <td
+                colSpan={3}
+                style={{
+                  backgroundColor: "var(--mark_background)",
+                  fontWeight: 700,
+                  outline: "1px solid var(--mark_border)",
+                  color: "var(--mark_text)",
+                }}
+              >
+                Эффекты для создания переходов (Transition)
+              </td>
             </tr>
             <tr>
               <td>Растворение блоков</td>
@@ -3849,7 +4039,17 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td colSpan={3}>Технические эффекты (Utility)</td>
+              <td
+                colSpan={3}
+                style={{
+                  backgroundColor: "var(--mark_background)",
+                  fontWeight: 700,
+                  outline: "1px solid var(--mark_border)",
+                  color: "var(--mark_text)",
+                }}
+              >
+                Технические эффекты (Utility)
+              </td>
             </tr>
             <tr>
               <td>Применить цвета LUT</td>
