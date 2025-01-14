@@ -55,17 +55,17 @@ const ChatRules = () => (
               ]}
             />
           </div>
-          <AdditionDanger>
-            Предупреждение для иноязычных пользователей: In{" "}
-            <a href="https://t.me/joinchat/F1DdXtG9LephYWUy">AEChat</a> and{" "}
-            <a href="https://t.me/+3LF_B_VK-Nw4YzYy">DWChat</a> we communicate exclusively
-            in Russian. If you don&apos;t know Russian, we recommend using an{" "}
-            <a href="https://translate.google.com">online-translator</a> or looking for a
-            chat in a language that you understand.
-          </AdditionDanger>
+          <h2 className="faq-title">О принципах в чатах AEChat и DWChat</h2>
           <section className="faq-section">
             <div className="faq-content">
-              <h2>О принципах в чатах AEChat и DWChat</h2>
+              <AdditionDanger>
+                Предупреждение для иноязычных пользователей: In{" "}
+                <a href="https://t.me/joinchat/F1DdXtG9LephYWUy">AEChat</a> and{" "}
+                <a href="https://t.me/+3LF_B_VK-Nw4YzYy">DWChat</a> we communicate
+                exclusively in Russian. If you don&apos;t know Russian, we recommend using
+                an <a href="https://translate.google.com">online-translator</a> or looking
+                for a chat in a language that you understand.
+              </AdditionDanger>
               <p>
                 В наших чатах <a href="https://t.me/joinchat/F1DdXtG9LephYWUy">AEChat</a>{" "}
                 и <a href="https://t.me/+3LF_B_VK-Nw4YzYy">DWChat</a> вы можете обсудить
@@ -132,9 +132,9 @@ const ChatRules = () => (
               </AdditionWarning>
             </div>
           </section>
+          <h2 className="faq-title">Администраторы чата никому и ничего не обязаны!</h2>
           <section className="faq-section">
             <div className="faq-content">
-              <h2>Администраторы чата никому и ничего не обязаны!</h2>
               <p>
                 Администраторы следят за порядком чата и время от времени помогают
                 участникам, но не нужно принимать нас как за единственных спасителей. Мы
@@ -180,9 +180,9 @@ const ChatRules = () => (
               </AdditionInfo>
             </div>
           </section>
+          <h2 className="faq-title">Не гадим в чате и не злимся на других</h2>
           <section className="faq-section">
             <div className="faq-content">
-              <h2>Не гадим в чате и не злимся на других</h2>
               <p>
                 В чате запрещён спам, флуд (отход от темы, вопросы не по продуктам Adobe
                 или много бессмысленных сообщений) и чрезмерное употребление матов. Также
@@ -197,9 +197,14 @@ const ChatRules = () => (
               </AdditionWarning>
             </div>
           </section>
+          <h2
+            className="faq-title"
+            id="nometa"
+          >
+            Ребята, давайте жить без мета-вопросов!
+          </h2>
           <section className="faq-section">
             <div className="faq-content">
-              <h2 id="nometa">Ребята, давайте жить без мета-вопросов!</h2>
               <p>
                 Предположим, что вы только что зашли в чат и у вас явно есть вопрос. Не
                 нужно писать:{" "}
@@ -292,9 +297,11 @@ const ChatRules = () => (
               </AdditionWarning>
             </div>
           </section>
+          <h2 className="faq-title">
+            Никакой порнухи, политики, сомнительного и шокирующего контента
+          </h2>
           <section className="faq-section">
             <div className="faq-content">
-              <h2>Никакой порнухи, политики, сомнительного и шокирующего контента</h2>
               <p>
                 Мы не одобряем политические или около-политически дискуссии в наших чатах.
                 Также в наших чатах нельзя размещать порнографию или любой другой
@@ -307,9 +314,9 @@ const ChatRules = () => (
               </AdditionWarning>
             </div>
           </section>
+          <h2 className="faq-title">Никаких барыг, попрошаек и рекламодателей</h2>
           <section className="faq-section">
             <div className="faq-content">
-              <h2>Никаких барыг, попрошаек и рекламодателей</h2>
               <p>
                 Запрещена купля, продажа и перепродажа товаров, шаблонов, «доступов», а
                 также самопиар своей страницы в соцсетях, реферальные ссылки и реклама без
