@@ -182,6 +182,9 @@ const PSWhereFind: React.FC = () => {
           <mark className="path">C:\Windows\System32\drivers\etc\hosts</mark> с заменой и
           перезагрузите <mark className="app">Photoshop</mark>, если он у вас был открыт.
         </p>
+        <AdditionWarning>
+          Для изменения системных файлов требуются права администратора.
+        </AdditionWarning>
         <code>
           127.0.0.1 cc-api-data.adobe.io
           <br />
