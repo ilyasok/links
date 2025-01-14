@@ -357,6 +357,12 @@ const AEPerformance: React.FC = () => {
           <mark className="ui">Cache Before Playback</mark> и{" "}
           <mark className="ui">If caching, play caching frames</mark>.
         </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="/images/aftereffects/preview_caching.png"
+          imgTitle="Включение кэширования предпросмотра"
+          caption="Preview"
+        />
         <ul>
           <li>
             Включение чекбокса у <mark className="ui">Cache Before Playback</mark>{" "}
@@ -370,12 +376,6 @@ const AEPerformance: React.FC = () => {
             закэшировались при повторном нажатии на кнопку воспроизведения.
           </li>
         </ul>
-        <ImageFigure
-          styleClass="figure_windows-dark"
-          imgSrc="/images/aftereffects/preview_caching.png"
-          imgTitle="Включение кэширования предпросмотра"
-          caption="Preview"
-        />
         <p>
           Иногда бывает такое, что пользователь случайно изменил{" "}
           <mark className="ui">Frame Rate</mark> в окне{" "}
