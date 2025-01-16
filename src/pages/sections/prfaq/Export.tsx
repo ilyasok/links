@@ -7,6 +7,7 @@ import {
   AdditionWarning,
 } from "../../../components/Additions";
 import {ImageFigure, YouTubeVideo} from "../../../components/ContentFigure";
+import {Divider} from "antd";
 
 const PRExport: React.FC = () => {
   return (
@@ -59,15 +60,7 @@ const PRExport: React.FC = () => {
           следует перевести в <mark>1080p30</mark>, то есть 60 чересстрочных полукадров в
           секунду следует заменить 30 прогрессивными кадрами в секунду.
         </p>
-        <div
-          style={{
-            textAlign: "center",
-            fontWeight: "bold",
-            color: "var(--accent)",
-          }}
-        >
-          Экспортируем для YouTube
-        </div>
+        <Divider>Экспортируем для YouTube</Divider>
         <p>
           Для публикации видео на YouTube нужно соблюдать{" "}
           <a href="https://support.google.com/youtube/answer/1722171?hl=ru#zippy=%2C%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE%D0%BA%D0%BE%D0%B4%D0%B5%D0%BA-h%2C%D0%B1%D0%B8%D1%82%D1%80%D0%B5%D0%B9%D1%82">
@@ -196,15 +189,7 @@ const PRExport: React.FC = () => {
             </tr>
           </tbody>
         </table>
-        <div
-          style={{
-            textAlign: "center",
-            fontWeight: "bold",
-            color: "var(--accent)",
-          }}
-        >
-          Экспортируем для TikTok
-        </div>
+        <Divider>Экспортируем для TikTok</Divider>
         <p>
           Данная площадка с вертикальными видео тоже имеет свои ограничения и рекомендации
           по кодированию видео.
@@ -228,15 +213,9 @@ const PRExport: React.FC = () => {
             разрешении <mark>720p</mark>.
           </li>
         </ul>
-        <div
-          style={{
-            textAlign: "center",
-            fontWeight: "bold",
-            color: "var(--accent)",
-          }}
-        >
+        <Divider>
           Экспортируем для Instagram<sup>*</sup>
-        </div>
+        </Divider>
         <AdditionDanger>
           <sup>*</sup>Instagram и Meta всё ещё признаны экстремистскими организациями и
           запрещены на территории Российской Федерации.
@@ -264,15 +243,7 @@ const PRExport: React.FC = () => {
             </AdditionInfo>
           </li>
         </ul>
-        <div
-          style={{
-            textAlign: "center",
-            fontWeight: "bold",
-            color: "var(--accent)",
-          }}
-        >
-          Экспортируем для Telegram
-        </div>
+        <Divider>Экспортируем для Telegram</Divider>
         <p>
           Этот мессенджер более лоялен к видеофайлам. Если выкладывать видео через{" "}
           <mark className="app">Telegram Desktop</mark> в личные чаты или каналы, то он
