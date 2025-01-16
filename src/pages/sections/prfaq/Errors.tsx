@@ -648,6 +648,36 @@ const PRErrors: React.FC = () => {
           }
         />
       </DetailsSummary>
+      <DetailsSummary title="Вылетает Premiere Pro и Media Encoder после установки плагинов Boris FX Sapphire">
+        <p>
+          Это довольно популярный баг, который мешает нормальному запуску{" "}
+          <mark className="app">Premiere Pro</mark> и{" "}
+          <mark className="app">Media Encoder</mark> при наличии установленных в системе
+          плагинов <mark className="plugin">Boris FX Sapphire</mark>. В более поздних
+          версиях плагинов и программ это исправили, но если вы с таким столкнулись - вам
+          достаточно просто указать{" "}
+          <mark className="ui">режим совместимости с Windows 8</mark> в свойствах ярлыка
+          программы.
+        </p>
+        <p>
+          Для этого открываем свойства ярлыка, переходим в вкладку{" "}
+          <mark className="ui">Совместимость</mark> и нажимаем галочку рядом с пунктом{" "}
+          <mark className="ui">
+            Запускать программу в режиме совместимости с Windows 8
+          </mark>
+          .
+        </p>
+        <VideoFigure
+          styleClass="figure_windows-dark"
+          videoSrc="images/compatibility_media_encoder.mp4"
+          caption="Настройка режима совместимости"
+        />
+        <p>
+          После проделанных действий программа при запуске не должна вылетать. Если всё
+          ещё вылетает, обновите плагины <mark className="plugin">Boris FX Sapphire</mark>{" "}
+          до последних версий.
+        </p>
+      </DetailsSummary>
     </div>
   );
 };
