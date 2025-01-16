@@ -1,6 +1,8 @@
 import React from "react";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 import DetailsSummary from "../../../components/DetailsSummary";
+import {VideoFigure} from "../../../components/ContentFigure";
+import {AdditionDanger, AdditionInfo} from "../../../components/Additions";
 
 const PRFromNewbies: React.FC = () => {
   return (
@@ -49,7 +51,14 @@ const PRFromNewbies: React.FC = () => {
           caption="Premiere Pro"
         />
         <p>
-          А чтобы распаковать <mark>Nest</mark> нужно...
+          А чтобы распаковать <mark>Nest</mark> или же наложить на таймлайн
+          &quot;распакованную&quot; секвенцию - найдите нужную секвенцию в окне{" "}
+          <mark className="ui">Project</mark>, отключите функцию{" "}
+          <mark className="ui">
+            Insert and overwrite sequences as nests or individual clips
+          </mark>{" "}
+          и перетяните секвенцию прямо на таймлайн. Если вы хотите - старый{" "}
+          <mark>Nest</mark> можно удалить без всяких проблем.
         </p>
         {/* FIXME: написать!! */}
       </DetailsSummary>
