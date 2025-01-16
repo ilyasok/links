@@ -27,6 +27,32 @@ const PRFromNewbies: React.FC = () => {
       >
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
+      <DetailsSummary
+        title="Что такое Nest, как их создать и распаковывать?"
+        tag="нест, unnest, вложенный таймлайн, вложенные клипы, прекомпоз"
+      >
+        <p>
+          <mark>Nest</mark> - функция объединения нескольких клипов или слоев в одну
+          секвенцию, которая затем может быть использована как единый элемент в таймлайне.
+          Это бывает полезным для организации материала или применения эффектов к группе
+          клипов одновременно.
+        </p>
+        <p>
+          Для создания <mark>Nest</mark> нужно выделить нужные клипы, нажать на{" "}
+          <mark className="key">ПКМ</mark> и выбрать пункт{" "}
+          <mark className="ui">Nest</mark>. После этого откроется окно в которое вы можете
+          вписать название новой секвенции.
+        </p>
+        <VideoFigure
+          styleClass="figure_windows-dark"
+          videoSrc="images/premierepro/creating_nest.mp4"
+          caption="Premiere Pro"
+        />
+        <p>
+          А чтобы распаковать <mark>Nest</mark> нужно...
+        </p>
+        {/* FIXME: написать!! */}
+      </DetailsSummary>
       <DetailsSummary title="Как вернуть звуковую или видео дорожку на таймлайн?">
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
