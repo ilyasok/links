@@ -951,7 +951,7 @@ const AEErrors: React.FC = () => {
           <mark className="ui">Save As</mark> и выбрать минимально возможную версию для
           конвертации.
         </p>
-        <p style={{fontSize: "12px", opacity: "0.5"}}>
+        <p style={{fontSize: "0.75rem", opacity: "0.5"}}>
           Или просто обновите программу до более свежей версии, не мучайте себя
           конвертациями.
         </p>
@@ -982,7 +982,7 @@ const AEErrors: React.FC = () => {
           imgTitle="Настройка дискового кэша"
           caption="Preferences"
         />
-        <p style={{fontSize: "12px", opacity: "0.5"}}>
+        <p style={{fontSize: "0.75rem", opacity: "0.5"}}>
           Или просто отключите дисковый кэш, убрав галочку с{" "}
           <mark className="ui">Enable Disk Cache</mark>.
         </p>
@@ -1007,7 +1007,7 @@ const AEErrors: React.FC = () => {
           imgTitle="Настройка дискового кэша"
           caption="Preferences"
         />
-        <p style={{fontSize: "12px", opacity: "0.5"}}>
+        <p style={{fontSize: "0.75rem", opacity: "0.5"}}>
           Или просто отключите дисковый кэш, убрав галочку с{" "}
           <mark className="ui">Enable Disk Cache</mark>.
         </p>

@@ -1,9 +1,9 @@
-@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
 
 .ant-divider-inner-text {
   opacity: 0.8;
   font-weight: 700;
-  font-size: clamp(12px, 2vw, 15px);
+  font-size: 0.785rem;
   text-transform: uppercase;
 }
 

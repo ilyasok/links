@@ -216,7 +216,7 @@ const ChatRules = () => (
               <div className="message-flex">
                 <div className="message-incorrect">
                   <div className="message-left">всем плотнейший салам</div>
-                  <div style={{opacity: 0.5, fontSize: "10px", textAlign: "center"}}>
+                  <div style={{opacity: 0.5, fontSize: "0.625rem", textAlign: "center"}}>
                     Прошло 30 секунд
                   </div>
                   <div className="message-left">алё, все спят что-ли бл&?????</div>
@@ -237,7 +237,7 @@ const ChatRules = () => (
                     Нет, нельзя. Сформулируйте свой вопрос как есть в этом чате, иначе
                     зачем вы зашли? Просто привлечь своё внимание и тянуть время у других?
                   </div>
-                  <div style={{opacity: 0.5, fontSize: "10px", textAlign: "center"}}>
+                  <div style={{opacity: 0.5, fontSize: "0.625rem", textAlign: "center"}}>
                     Прошло N минут
                   </div>
                   <div className="message-left">
@@ -251,7 +251,7 @@ const ChatRules = () => (
                     оттуда ты можешь открыть окно с нужным скриптом и прикрепить куда тебе
                     удобно.
                   </div>
-                  <div style={{opacity: 0.5, fontSize: "10px", textAlign: "center"}}>
+                  <div style={{opacity: 0.5, fontSize: "0.625rem", textAlign: "center"}}>
                     Время переписки около 5-30 минут
                     <br />
                     (с учётом времени бездействия спрашивающего)
@@ -269,7 +269,7 @@ const ChatRules = () => (
                     скриптом и прикрепить куда тебе удобно.
                   </div>
                   <div className="message-left">Спасибо за оперативный ответ!</div>
-                  <div style={{opacity: 0.5, fontSize: "10px", textAlign: "center"}}>
+                  <div style={{opacity: 0.5, fontSize: "0.625rem", textAlign: "center"}}>
                     Время переписки около 30 секунд
                   </div>
                 </div>

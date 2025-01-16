@@ -89,7 +89,7 @@ const TgsToJsonModal = () => {
             style={{
               opacity: 0.5,
               textAlign: "left",
-              fontSize: "13px",
+              fontSize: "0.8125rem",
               lineHeight: "1.2",
               textWrap: "balance",
             }}

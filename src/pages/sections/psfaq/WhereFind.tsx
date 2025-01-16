@@ -130,7 +130,7 @@ const PSWhereFind: React.FC = () => {
         title="Где скачать Photoshop с рабочим Firefly? Какие есть аналоги?"
         tag="файрфляй, искуственный интеллект, нейросети, нейронная сеть, генерация изображений, стейбл дифьюжен, stable diffusion, sd"
       >
-        <p style={{fontSize: "36px", fontWeight: "bold", lineHeight: "1.2"}}>
+        <p style={{fontSize: "2.25rem", fontWeight: "bold", lineHeight: "1.2"}}>
           Нигде, оформляйте подписку Creative Cloud или активируйте пробную версию на 14
           дней.
         </p>

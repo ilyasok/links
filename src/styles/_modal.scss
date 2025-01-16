@@ -1,19 +1,19 @@
-@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
 
 // *: стили для обычных модальных окон
 
 .modal {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  padding: 15px;
+  gap: 10px;
 
   &-title {
     text-wrap: balance;
-    margin-inline: 5px;
+    margin-top: 10px;
+    margin-inline: 15px;
     color: var(--accent);
     font-weight: 800;
-    font-size: clamp(22px, 5vw, 30px);
+    font-size: 1.85rem;
     line-height: 1.25;
     font-family: "Mulish", sans-serif;
     text-transform: uppercase;
@@ -29,7 +29,7 @@
     padding: 8px;
     color: var(--mark_text);
     font-weight: 700;
-    font-size: 20px;
+    font-size: 1.25rem;
     text-align: center;
 
     &:hover {
@@ -44,7 +44,6 @@
     border: solid 1px var(--sber-border);
     background-color: var(--sber-background);
     color: var(--sber-text) !important;
-
     &:hover {
       background-color: var(--sber-hover);
     }
@@ -57,14 +56,14 @@
     border: solid 1px var(--yoomoney-border);
     background-color: var(--yoomoney-background);
     color: var(--yoomoney-text) !important;
-
     &:hover {
       background-color: var(--yoomoney-hover);
     }
   }
 
   p {
-    margin-inline: 5px;
+    margin-inline: 15px;
+    font-size: 0.95rem;
   }
 
   a {
@@ -106,12 +105,13 @@
     opacity: 0.5;
     margin-inline: 5px;
     font-weight: 500;
-    font-size: 13px;
+    font-size: 0.8125rem !important;
   }
 
   &-button,
   button {
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 8px;
     cursor: pointer;
@@ -121,6 +121,7 @@
     padding: 10px 20px;
     color: var(--accent) !important;
     font-weight: 700;
+    font-size: 0.95rem;
     text-align: center;
   }
 }
@@ -168,7 +169,7 @@
       margin-inline: 5px;
       color: var(--accent);
       font-weight: 800;
-      font-size: clamp(22px, 5vw, 30px);
+      font-size: 2rem;
       line-height: 1.25;
       font-family: "Mulish", sans-serif;
       text-transform: uppercase;
@@ -201,7 +202,7 @@
     &-send-report {
       opacity: 0.5;
       margin-inline: 5px;
-      font-size: 12px;
+      font-size: 0.75rem;
 
       a {
         text-decoration: underline;
@@ -283,7 +284,7 @@
     padding: 10px 15px;
     color: var(--summary_text);
     font-weight: 800;
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.25;
     font-family: "Mulish", sans-serif;
     text-transform: uppercase;
@@ -297,7 +298,7 @@
     line-clamp: 3;
     padding: 10px;
     overflow: hidden;
-    font-size: 15px;
+    font-size: 0.9375rem;
   }
 }
 
@@ -322,7 +323,6 @@
   &-modal {
     align-items: center;
     gap: 15px;
-    padding: 15px;
   }
 
   &-selector {
@@ -345,7 +345,7 @@
     max-width: max-content;
     overflow-y: hidden;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 0.875rem;
 
     svg {
       fill: var(--text-color);

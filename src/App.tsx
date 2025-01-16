@@ -154,7 +154,7 @@ export const App = () => {
                   style={{
                     margin: "10px",
                     marginTop: "20px",
-                    fontSize: "12px",
+                    fontSize: "0.75rem",
                     marginInline: "20px",
                   }}
                 >
@@ -171,7 +171,7 @@ export const App = () => {
                   }}
                   style={{
                     margin: "10px",
-                    fontSize: "10px",
+                    fontSize: "0.625rem",
                     textAlign: "right",
                     marginInline: "20px",
                   }}

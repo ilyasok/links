@@ -1,4 +1,4 @@
-@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
 
 // *: главная страница сайта
 
@@ -51,7 +51,7 @@
       .name {
         color: var(--accent);
         font-weight: 700;
-        font-size: 18px;
+        font-size: 1.125rem;
         font-family: "Mulish", sans-serif;
       }
     }
@@ -59,7 +59,7 @@
     .description {
       opacity: 80%;
       margin-block-start: 5px;
-      font-size: 14px;
+      font-size: 0.875rem;
     }
   }
 

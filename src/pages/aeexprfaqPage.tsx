@@ -183,7 +183,7 @@ const AEExpressionPage = () => {
                               }}
                               style={{
                                 margin: "10px",
-                                fontSize: "14px",
+                                fontSize: "0.875rem",
                                 maxWidth: "400px",
                               }}
                             >

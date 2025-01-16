@@ -1,11 +1,11 @@
-@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
 
 table {
   margin: 15px auto;
   border-collapse: collapse;
   background-color: var(--table_background);
   max-width: 1000px;
-  font-size: clamp(13px, 1.5vw, 15px);
+  font-size: 0.875rem;
 }
 
 @media (max-width: 350px) {

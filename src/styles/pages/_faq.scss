@@ -1,4 +1,4 @@
-@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
 
 .faq {
   &-container {
@@ -19,7 +19,7 @@
     margin-block: 10px;
     color: var(--summary_text);
     font-weight: 800;
-    font-size: 26px;
+    font-size: 1.625rem;
     font-family: "Mulish", sans-serif;
     text-transform: uppercase;
 
@@ -43,7 +43,7 @@
 
     mark {
       font-weight: 700;
-      font-size: 11px;
+      font-size: 0.6875rem;
     }
   }
 
@@ -67,7 +67,7 @@
     padding: 10px 15px;
     color: var(--summary_text);
     font-weight: 800;
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.25;
     font-family: "Mulish", sans-serif;
     text-transform: uppercase;
@@ -110,9 +110,6 @@
       hyphens: auto;
     }
 
-    border-radius: $roundness;
-    line-height: 1.75;
-
     .message {
       &-correct,
       &-incorrect {
@@ -122,13 +119,13 @@
       }
 
       &-incorrect {
-        border: 1px solid hsla(0, 100, 50, 0.25);
-        background: hsla(0, 100, 50, 0.1);
+        border: 1px solid hsla(0, 100%, 50%, 0.25);
+        background: hsla(0, 100%, 50%, 0.1);
       }
 
       &-correct {
-        border: 1px solid hsla(120, 100, 50, 0.25);
-        background: hsla(120, 100, 50, 0.1);
+        border: 1px solid hsla(120, 100%, 50%, 0.25);
+        background: hsla(120, 100%, 50%, 0.1);
       }
 
       &-flex {
@@ -154,7 +151,7 @@
         padding: 10px;
         max-width: 70%;
         color: var(--mark_text);
-        font-size: 14px;
+        font-size: 0.875rem;
         line-height: 1.15;
         text-align: left;
       }
@@ -170,7 +167,7 @@
         padding: 10px;
         max-width: 70%;
         color: var(--mark_text);
-        font-size: 14px;
+        font-size: 0.875rem;
         line-height: 1.15;
         text-align: right;
       }
@@ -234,7 +231,7 @@
       padding: 10px 15px;
       color: #ffffff;
       font-weight: 400;
-      font-size: 14px;
+      font-size: 0.875rem;
       line-height: 1.25;
       font-family: "JetBrains Mono", monospace;
       user-select: text;
@@ -343,6 +340,10 @@
         mask-size: cover;
       }
     }
+    & {
+      border-radius: $roundness;
+      line-height: 1.75;
+    }
   }
 }
 
@@ -367,7 +368,7 @@
       padding-block: 5px;
       color: var(--accent);
       font-weight: 700;
-      font-size: 16px;
+      font-size: 1rem;
       text-decoration: none;
 
       &:hover {

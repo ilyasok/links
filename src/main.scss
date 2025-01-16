@@ -1,4 +1,4 @@
-@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
 @use "@/styles/reset";
 @use "@/styles/fonts";
 @use "@/styles/pages/links";
@@ -22,14 +22,15 @@ body {
   padding: 0;
   scroll-padding-top: var(--header-height);
   color: var(--text-color);
-  font-weight: 350;
-  font-family: "Inter", sans-serif;
   user-select: none;
 }
 
 html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   scrollbar-width: none;
+  font-weight: 350;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
 }
 
 .main {
@@ -42,7 +43,7 @@ html {
   margin-inline: auto;
   margin-block: 30px;
   padding-inline: 10px;
-  font-size: 12px;
+  font-size: 0.75rem;
   text-align: center;
 }
 
@@ -85,7 +86,7 @@ html {
     margin-inline: 10px;
     color: var(--accent);
     font-weight: 800;
-    font-size: 32px;
+    font-size: 2rem;
     font-family: "Mulish", sans-serif;
     hyphens: auto;
     text-align: left;
@@ -94,14 +95,14 @@ html {
 
   &-description {
     margin-inline: 5px;
-    font-size: 15px;
+    font-size: 0.9375rem;
     hyphens: auto;
   }
 
   &-small-description {
     opacity: 0.5;
     margin-inline: 5px;
-    font-size: 12px;
+    font-size: 0.75rem;
     hyphens: auto;
   }
 

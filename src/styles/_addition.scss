@@ -1,4 +1,4 @@
-@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
 
 .addition {
   &-info,
@@ -11,8 +11,7 @@
     margin-block: 10px;
     border-radius: $roundness;
     padding: 10px 15px;
-    font-size: 15px;
-    line-height: 1.7;
+    font-size: 0.9375rem;
 
     &:first-child {
       margin-top: 0;
@@ -133,7 +132,7 @@
   background-color: var(--addition_warning);
   padding: 10px 15px;
   color: var(--addition_warning-text);
-  font-size: 15px;
+  font-size: 0.9375rem;
   line-height: 1.5;
 
   button {

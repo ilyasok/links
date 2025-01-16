@@ -475,7 +475,7 @@ export const SearchInPage: React.FC = () => {
               className="search-no-results"
               style={{
                 textAlign: "center",
-                fontSize: "36px",
+                fontSize: "2.25rem",
                 height: "200%",
                 padding: "20px",
               }}
@@ -639,7 +639,7 @@ export const SearchInPage: React.FC = () => {
               className="search-no-results"
               style={{
                 textAlign: "center",
-                fontSize: "13px",
+                fontSize: "0.8125rem",
                 opacity: "0.75",
                 height: "200%",
                 padding: "20px",
@@ -650,7 +650,7 @@ export const SearchInPage: React.FC = () => {
             </p>
           )}
           {!isPageLoaded && (
-            <p style={{textAlign: "center", fontSize: "16px", margin: "20px"}}>
+            <p style={{textAlign: "center", fontSize: "1rem", margin: "20px"}}>
               Страница ещё загружается, а поиск всё ещё недоступен. Пожалуйста,
               подождите...
             </p>

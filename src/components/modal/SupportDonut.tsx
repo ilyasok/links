@@ -37,7 +37,7 @@ const SupportDonut: React.FC = () => {
           onClick={showModal2}
           style={{
             padding: "10px",
-            fontSize: "13px",
+            fontSize: "0.8125rem",
             filter: "saturate(0.5)",
           }}
           whileHover={{
@@ -53,7 +53,7 @@ const SupportDonut: React.FC = () => {
           className="modal-button"
           style={{
             padding: "10px",
-            fontSize: "13px",
+            fontSize: "0.8125rem",
             filter: "saturate(1.25)",
           }}
           whileHover={{
@@ -80,12 +80,20 @@ const SupportDonut: React.FC = () => {
             Если вам понравился этот сайт и вы хотели бы, чтобы я продолжил развивать его,
             то вы можете поддержать меня любой суммой и любым удобным вам способом.
           </p>
-          <div style={{display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px"}}>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: "10px",
+              marginBlockEnd: "10px",
+              marginInline: "10px",
+            }}
+          >
             <motion.button
               className="sber"
               onClick={() => setIsModalOpen3(true)}
               whileHover={{
-                scale: 1.075,
+                scale: 0.975,
                 transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
               }}
               whileTap={{scale: 0.9, opacity: 0.5}}
@@ -119,8 +127,9 @@ const SupportDonut: React.FC = () => {
                 <p
                   style={{
                     textAlign: "center",
-                    fontSize: "11px",
+                    fontSize: "0.6875rem",
                     opacity: "0.75",
+                    marginBlockEnd: "10px",
                   }}
                 >
                   Нажмите на номер карты, чтобы скопировать его в буфер обмена
@@ -133,7 +142,7 @@ const SupportDonut: React.FC = () => {
               className="yoomoney"
               onClick={() => setIsModalOpen4(true)}
               whileHover={{
-                scale: 1.075,
+                scale: 0.975,
                 transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
               }}
               whileTap={{scale: 0.9, opacity: 0.5}}
@@ -175,14 +184,14 @@ const SupportDonut: React.FC = () => {
                     <p
                       style={{
                         textAlign: "center",
-                        fontSize: "10px",
+                        fontSize: "0.625rem",
                         opacity: "0.75",
                         marginTop: "-5px",
                       }}
                     >
                       Нажмите, чтобы скопировать
                     </p>
-                    <p style={{fontSize: "12px", opacity: "0.75"}}>
+                    <p style={{fontSize: "0.75rem", opacity: "0.75"}}>
                       Или пополните баланс автору с помощью{" "}
                       <a
                         style={{
@@ -223,7 +232,7 @@ const SupportDonut: React.FC = () => {
               transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
             }}
             whileTap={{scale: 0.9, opacity: 0.5}}
-            style={{textDecoration: "none", fontSize: "18px", textAlign: "center"}}
+            style={{textDecoration: "none", fontSize: "1.125rem", textAlign: "center"}}
             className="modal-button"
             href={`mailto:me@m1sh3r.ru?subject=Пишу по поводу ${location.pathname.replace(/\/$/, "")} (${navigator.userAgent.replace(/ /g, " ")})`}
           >

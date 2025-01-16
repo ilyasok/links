@@ -64,7 +64,7 @@ const GithubUpdateInfo: React.FC<GithubUpdateInfoProps> = ({filePath}) => {
       <p
         style={{
           color: "red",
-          fontSize: "12px",
+          fontSize: "0.75rem",
           opacity: "0.75",
           textAlign: "right",
           textWrap: "balance",
@@ -82,7 +82,7 @@ const GithubUpdateInfo: React.FC<GithubUpdateInfoProps> = ({filePath}) => {
     <p
       style={{
         filter: "saturate(0.5)",
-        fontSize: "12px",
+        fontSize: "0.75rem",
         opacity: "0.5",
         textAlign: "right",
         textWrap: "balance",
