@@ -112,7 +112,7 @@ const ThemeModal: React.FC<ThemeModalProps> = ({isModalOpen, closeModal}) => {
       <div className="theme-modal">
         <p className="modal-title">Оформление</p>
         <div className="theme-selector">
-          <motion.button 
+          <motion.button
             whileHover={{
               scale: 1.075,
               transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
