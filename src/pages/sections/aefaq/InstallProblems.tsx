@@ -323,7 +323,10 @@ const AEInstallProblems: React.FC = () => {
           <a href="https://t.me/joinchat/F1DdXtG9LephYWUy">AEChat</a>.
         </AdditionInfo>
       </DetailsSummary>
-      <DetailsSummary title="В Telegram-записи лежат файлы .part1, .part2 и дальше по списку. Что это такое и как такие файлы корректно распаковать?">
+      <DetailsSummary
+        title="В Telegram-записи лежат файлы .part1, .part2 и дальше по списку. Что это такое и как такие файлы корректно распаковать?"
+        tag="части архива, парт, распаковка, rar, zip"
+      >
         <p>
           Данные файлы с пометкой <mark>.part1</mark>, <mark>.part2</mark> и далее по
           списку - это лишь части одного и того же архива. Архивы поделены на 2 или на 4
