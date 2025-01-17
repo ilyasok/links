@@ -1,6 +1,9 @@
 import React from "react";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 import DetailsSummary from "../../../components/DetailsSummary";
+import {AdditionInfo, AdditionWarning} from "../../../components/Additions";
+import {Divider} from "antd";
+import {ImageFigure} from "../../../components/ContentFigure";
 
 const PRImport: React.FC = () => {
   return (
@@ -12,8 +15,133 @@ const PRImport: React.FC = () => {
       <DetailsSummary title="Использую исходник в контейнере .mp4 или в кодеке H.264. Почему у меня лезут артефакты, зелёный экран и дергается изображение?">
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
-      <DetailsSummary title="Импортировал видео, а оно слишком засвеченное. Как сделать нормальную яркость?">
-        <p>{/* FIXME: написать!! */}</p>
+      <DetailsSummary title="Импортировал видео, а оно слишком засвеченное. Как исправить?">
+        <p>
+          Скорее всего вы импортировали видео, записанное на iPhone или на камеру в
+          цветовом пространстве HLG. Для решения цветовых проблем есть два способа.
+        </p>
+        <Divider>Включаем Auto Tone Map Media</Divider>
+        <p>
+          В <mark className="app">Premiere Pro</mark> версии 23.2 и выше появилась
+          возможность активировать коррекцию цвета для исходников с большим цветовым
+          диапазоном. Чтобы его включить - перейдите в настройки нужной секвенции через{" "}
+          <mark className="ui">Sequence &gt; Sequence Settings</mark> и активируйте опцию{" "}
+          <mark className="ui">Auto Tone Map Media</mark> в вкладке{" "}
+          <mark className="ui">Color Management</mark>.
+        </p>
+        <AdditionInfo>
+          При создании новых секвенций эта опция обычно включена по умолчанию.
+        </AdditionInfo>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/premierepro/enable_auto_tone_map.png"
+          imgTitle="Включение Auto Tone Map Media в настройках секвенции"
+          caption="Sequence Settings"
+        />
+        <Divider>Перекодируем в другой цветовой профиль</Divider>
+        <p>
+          Или же, если результат от <mark className="ui">Auto Tone Map Media</mark> не
+          устраивает или этот пункт не помогает, то вам нужно все ваши исходники
+          перекодировать из одного цветового пространства в другой. Какое цветовое
+          пространство у ваших исходников - вы можете об этом узнать через{" "}
+          <mark className="app">MediaInfo</mark>. Обычно через эту утилиту можно извлечь
+          информацию о формате, FPS и цветовом пространстве вашего исходника.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/mediainfo_example.png"
+          imgTitle="Пример открытого в MediaInfo файла"
+          caption="Терминал - MediaInfo-CLI"
+        />
+        <p>
+          Чтобы начать перекодирование ваших исходников, вам нужно установить программу{" "}
+          <a href="https://www.shutterencoder.com/">Shutter Encoder</a>. После установки
+          просто запустите программу и перетащите в него ваши файлы, можно даже целую
+          папку.
+        </p>
+        <AdditionInfo>
+          Чтобы скачать программу бесплатно, просто переместите ползунок из{" "}
+          <mark className="ui">It helps me to pay for the server & the domain</mark> на
+          ноль, а затем нажмите на кнопку скачивания, соответствующую вашей операционной
+          системе.
+        </AdditionInfo>
+        <p>
+          На первый взгляд интерфейс <mark className="app">Shutter Encoder</mark> может
+          показаться сложным, но на самом деле это не так. Для перекодирования исходников
+          вам нужно сделать всего несколько простых шагов.
+        </p>
+        <ImageFigure
+          styleClass="figure_macos-dark"
+          imgSrc="images/shutter_encoder_interface.png"
+          imgTitle="Интерфейс Shutter Encoder"
+          caption="Shutter Encoder"
+        />
+        <ul>
+          <li>
+            Сначала выберите кодек в <mark className="ui">Choose Function</mark>. Обычно
+            выбирают <mark className="video">Apple Prores 422</mark>,{" "}
+            <mark className="video">H.264</mark> или <mark className="video">DNxHR</mark>.
+          </li>
+          <li>
+            После выбора кодека определитесь с режимом кодирования. В правой части, рядом
+            с выбором битрейта, есть кнопка, которая переключает кодировщик между режимами{" "}
+            <mark className="ui">CBR</mark>, <mark className="ui">VBR</mark> или{" "}
+            <mark className="ui">CQ</mark>.
+            <AdditionInfo>
+              <p>
+                При кодировании в некоторые кодеки, например,{" "}
+                <mark className="file">Apple ProRes</mark>, этот пункт можно пропустить,
+                так как там обычно используются стандартные шаблоны для битрейта.
+              </p>
+              <ul>
+                <li>
+                  <mark>CBR</mark> - это постоянный битрейт, который хорошо подходит для
+                  монтажа, но не очень для социальных сетей из-за большого размера файлов
+                  по сравнению с VBR.
+                </li>
+                <li>
+                  <mark>VBR</mark> - это переменный битрейт, который может изменяться в
+                  зависимости от временных промежутков. Он не очень подходит для монтажа
+                  из-за непредсказуемого качества, но отлично подходит для передачи видео
+                  или публикации в соцсетях.
+                </li>
+                <li>
+                  <mark>CQ</mark> - это метод, при котором качество видео регулируется
+                  изменением уровня сжатия. Чем ниже значение, тем выше качество, но и
+                  размер файла больше. Этот подход позволяет достичь оптимального баланса
+                  между качеством и размером.
+                </li>
+              </ul>
+            </AdditionInfo>
+          </li>
+          <li>
+            После выбора режима кодирования укажите рекомендуемое значение битрейта или
+            квантования.
+          </li>
+          <li>
+            Если цветовое пространство вашего исходника отличается от <mark>Rec.709</mark>
+            , то в пункте <mark className="ui">Colorimetry</mark> включите галочку{" "}
+            <mark className="ui">Convert Colorspace</mark>. Затем установите первым
+            значением ваш цветовой профиль, указанный в{" "}
+            <mark className="app">MediaInfo</mark>, а вторым - <mark>Rec.709</mark>.
+          </li>
+          <li>
+            После настройки укажите путь для сохранения перекодированных файлов и нажмите
+            на кнопку <mark className="ui">Start Function</mark>.
+            <AdditionInfo>
+              Если у вас видеокарта от NVIDIA, не забудьте установить галочку в пункте{" "}
+              <mark className="ui">Hardware Acceleration</mark> и выбрать рядом параметр{" "}
+              <mark className="ui">Nvidia NVENC</mark>.
+            </AdditionInfo>
+          </li>
+        </ul>
+        <p>
+          После перекодирования исходников замените каждый в окне{" "}
+          <mark className="ui">Project</mark>, нажав <mark className="key">ПКМ</mark> по
+          нужному исходнику и нажав на <mark className="ui">Replace Footage</mark>. В
+          открывшемся окне укажите путь до нового перекодированного исходника. При
+          необходимости проделайте эти действия с остальными исходниками.
+        </p>
       </DetailsSummary>
       <DetailsSummary title="Прислали исходники в формате .mkv, .flv или что-то не поддерживаемое программой. Как мне их импортировать?">
         <p>
