@@ -1,1 +1,0 @@
-import{j as s}from"./index-BVVsnEDG.js";import{G as t}from"./GithubUpdateInfo-Dr4o7FxO.js";const e=()=>s.jsx("div",{className:"faq-content",children:s.jsx(t,{filePath:"src/pages/sections/aeexprfaq/Formulas.tsx"})});export{e as default};
