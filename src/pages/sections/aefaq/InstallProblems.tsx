@@ -296,7 +296,8 @@ const AEInstallProblems: React.FC = () => {
                 нужно поместить в папку{" "}
                 <mark className="path">
                   ~/Library/Application Support/Adobe/CEP/extensions
-                </mark> и после этого ввести команды, которые были расположены чуть выше в
+                </mark>{" "}
+                и после этого ввести команды, которые были расположены чуть выше в
                 терминал.
               </AdditionInfo>
               <ul>
