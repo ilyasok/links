@@ -38,6 +38,22 @@ const AEInterface: React.FC = () => {
           imgTitle="Настройка отображения параметров слоя"
           caption="View Options"
         />
+        <p>
+          Если вы не видите путь движения анимации вашего объекта или оно слишком короткое
+          - измените область времени отображения пути движения, открыв{" "}
+          <mark className="ui">Edit &gt; Preferences &gt; Display</mark>. В разделе{" "}
+          <mark className="ui">Motion Graph</mark> по умолчанию стоит отображение длины
+          пути движения анимации не более 15 секунд. Если вы хотите включить отображение
+          траектории по всей длине вашей анимации, то установите значение{" "}
+          <mark className="ui">All Keyframes</mark>. Ну или можете вовсе отключить
+          траекторию пути.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="/images/aftereffects/change_motion_path_range.png"
+          imgTitle="Изменение области времени отображения пути движения"
+          caption="Preferences"
+        />
       </DetailsSummary>
       <DetailsSummary title="Случайно закрыл окно в интерфейсе, как мне его вернуть?">
         <p>
