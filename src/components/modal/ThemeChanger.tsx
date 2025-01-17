@@ -14,6 +14,8 @@ interface ThemeContextProps {
   setTheme: (theme: Theme) => void;
   accentHue: number;
   setAccentHue: (hue: number) => void;
+  saturateRatio: number;
+  setSaturateRatio: (ratio: number) => void;
 }
 
 const ThemeContext = createContext<ThemeContextProps | undefined>(undefined);
@@ -26,6 +28,10 @@ export const ThemeProvider: React.FC<{children: React.ReactNode}> = ({children})
     parseInt(localStorage.getItem("accentHue") ?? "210", 10)
   );
 
+  const [saturateRatioState, setSaturateRatioState] = useState<number>(() =>
+    parseFloat(localStorage.getItem("saturateRatio") ?? "1")
+  );
+
   const setTheme = (newTheme: Theme) => {
     setThemeState(newTheme);
     localStorage.setItem("theme", newTheme);
@@ -36,9 +42,15 @@ export const ThemeProvider: React.FC<{children: React.ReactNode}> = ({children})
     localStorage.setItem("accentHue", hue.toString());
   };
 
+  const setSaturateRatio = (ratio: number) => {
+    setSaturateRatioState(ratio);
+    localStorage.setItem("saturateRatio", ratio.toString());
+  };
+
   const updateTheme = () => {
     const root = document.documentElement;
     root.style.setProperty("--accent-hue", accentHueState.toString());
+    root.style.setProperty("--saturate-ratio", saturateRatioState.toString());
 
     const isSystemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
@@ -46,7 +58,7 @@ export const ThemeProvider: React.FC<{children: React.ReactNode}> = ({children})
     root.classList.toggle("dark", isDarkMode);
     root.classList.toggle("light", !isDarkMode);
   };
-  useEffect(() => updateTheme(), [themeState, accentHueState]);
+  useEffect(() => updateTheme(), [themeState, accentHueState, saturateRatioState]);
   useEffect(() => {
     const handleSystemThemeChange = () => themeState === "system" && updateTheme();
 
@@ -57,8 +69,15 @@ export const ThemeProvider: React.FC<{children: React.ReactNode}> = ({children})
   }, [themeState]);
 
   const contextValue = useMemo(
-    () => ({theme: themeState, setTheme, accentHue: accentHueState, setAccentHue}),
-    [themeState, accentHueState]
+    () => ({
+      theme: themeState,
+      setTheme,
+      accentHue: accentHueState,
+      setAccentHue,
+      saturateRatio: saturateRatioState,
+      setSaturateRatio,
+    }),
+    [themeState, accentHueState, saturateRatioState]
   );
 
   return <ThemeContext.Provider value={contextValue}>{children}</ThemeContext.Provider>;
@@ -98,7 +117,8 @@ interface ThemeModalProps {
 }
 
 const ThemeModal: React.FC<ThemeModalProps> = ({isModalOpen, closeModal}) => {
-  const {theme, setTheme, accentHue, setAccentHue} = useTheme();
+  const {theme, setTheme, accentHue, setAccentHue, saturateRatio, setSaturateRatio} =
+    useTheme();
 
   return (
     <Modal
@@ -167,6 +187,32 @@ const ThemeModal: React.FC<ThemeModalProps> = ({isModalOpen, closeModal}) => {
           <Tooltip title="Сбросить оттенок">
             <button
               onClick={() => setAccentHue(210)}
+              style={{
+                width: "28px",
+                height: "28px",
+                backgroundColor: "transparent",
+                border: "none",
+                padding: 0,
+                cursor: "pointer",
+              }}
+            >
+              <RestartAlt />
+            </button>
+          </Tooltip>
+        </div>
+        <div style={{display: "flex", alignItems: "center", gap: "5px"}}>
+          <p style={{fontSize: "0.875rem"}}>Насыщенность:</p>
+          <Slider
+            min={0.25}
+            max={1.25}
+            step={0.025}
+            value={saturateRatio}
+            onChange={(value) => setSaturateRatio(value)}
+            style={{flex: "1 1 auto", width: "100%"}}
+          />
+          <Tooltip title="Сбросить насыщенность">
+            <button
+              onClick={() => setSaturateRatio(1)}
               style={{
                 width: "28px",
                 height: "28px",
