@@ -203,7 +203,7 @@ const ThemeModal: React.FC<ThemeModalProps> = ({isModalOpen, closeModal}) => {
         <div style={{display: "flex", alignItems: "center", gap: "5px"}}>
           <p style={{fontSize: "0.875rem"}}>Насыщенность:</p>
           <Slider
-            min={0.25}
+            min={0}
             max={1.25}
             step={0.025}
             value={saturateRatio}
