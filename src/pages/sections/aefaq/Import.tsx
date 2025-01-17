@@ -386,9 +386,9 @@ const AEImport: React.FC = () => {
         <p>
           <mark className="app">After Effects</mark> изначально не поддерживает большое
           количество кодеков, например <mark className="video">VP9</mark>,{" "}
-          <mark className="video">Flac</mark>, <mark className="video">AV1</mark>, а также
-          контейнеры <mark className="file">.webm</mark>,{" "}
-          <mark className="file">.flv</mark>, <mark className="file">.mkv</mark> и прочие.
+          <mark className="video">AV1</mark>, а также контейнеры{" "}
+          <mark className="file">.webm</mark>, <mark className="file">.flv</mark>,{" "}
+          <mark className="file">.mkv</mark> и прочие.
         </p>
         <p>
           Любая программа для монтажа и композитинга чего-угодно была изначально
