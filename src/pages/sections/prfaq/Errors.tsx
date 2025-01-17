@@ -10,14 +10,63 @@ const PRErrors: React.FC = () => {
     <div className="faq-content">
       <GithubUpdateInfo filePath="src/pages/sections/prfaq/Errors.tsx" />
       <DetailsSummary title="This effect requires GPU Acceleration">
-        <p>{/* FIXME: написать!! */}</p>
+        <p>
+          Скорее всего у вас отключено ускорение на основе видеокарты в настройках
+          проекта. Некоторые эффекты могут напрочь отказывать работать на{" "}
+          <mark className="ui">Mercury Playback Engine Software Only</mark> и требовать
+          ускорение на видеокарте.
+        </p>
+        <p>
+          Для настройки типа рендеринга перейдите в{" "}
+          <mark className="ui">File &gt; Project Settings &gt; General</mark> и в пункте{" "}
+          <mark className="ui">Renderer</mark> установите значение{" "}
+          <mark className="ui">Mercury Playback Engine GPU Acceleration</mark>.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/premierepro/set_render_on_gpu.png"
+          imgTitle="Установка рендеринга на GPU"
+          caption="Premiere Pro"
+        />
+        <p>
+          Если у вас отсутствует какой-либо пункт для ускорения на видеокарте, то
+          попробуйте обновить драйвера на ваш видеочип.
+        </p>
       </DetailsSummary>
       <DetailsSummary title="Media Offline или медиаданные в автономном режиме">
         <p>
           Эта ошибка часто возникает, если вы удалили исходники из диска, перенесли их или
-          открыли чужой проект, не распаковав его из архива полностью.
+          открыли чужой проект, не распаковав его из архива полностью. Оно может
+          появляться в разных воплощениях - в качестве окна о потерянных исходниках при
+          запуске проекта или в качестве плейсхолдера с красной заливкой.
         </p>
-        {/* TODO: написать!! */}
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/premierepro/медиаданные_в_автономном_режиме.png"
+          imgTitle="Медиаданные в авнономном режиме"
+          caption="Premiere Pro"
+        />
+        <p>
+          Чтобы переподключить &quot;потеряшек&quot;, перейдите в{" "}
+          <mark className="ui">File</mark> и выберите пункт{" "}
+          <mark className="ui">Link Media</mark>. В открывшемся окне вы увидите список
+          потерявшихся исходников. Вы можете выделить нужный и указать ему путь, нажав на{" "}
+          <mark className="ui">Locate</mark>.
+        </p>
+        <AdditionInfo>
+          Нажав на кнопку <mark className="ui">Search</mark> в окне для указания пути,
+          программа попытается найти все потерянные файлы во вложенных папках текущего
+          пути. Если вы не помните где потеряли ваши файлы, откройте корень вашего диска,
+          нажмите на кнопку поиска и подождите некоторое время. Также если вы укажете путь
+          только одному файлу, рядом с которым лежат такие же &quot;потеряшки&quot;, то и
+          остальные исходники вместе с ним подключатся автоматически.
+        </AdditionInfo>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/premierepro/missing_media.png"
+          imgTitle="Отсутствующие медиафайлы"
+          caption="Media Offline"
+        />
       </DetailsSummary>
       <DetailsSummary title='Вылезло "System Compatibility Report" при запуске Premiere Pro'>
         <AdditionInfo>
