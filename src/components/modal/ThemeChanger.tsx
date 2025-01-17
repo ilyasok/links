@@ -129,103 +129,102 @@ const ThemeModal: React.FC<ThemeModalProps> = ({isModalOpen, closeModal}) => {
       onCancel={closeModal}
       width={450}
     >
-      <div className="theme-modal">
-        <p className="modal-title">Оформление</p>
-        <div className="theme-selector">
-          <motion.button
-            whileHover={{
-              scale: 1.075,
-              transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
+      <p className="modal-title">Оформление</p>
+      <p className="theme-title">Тема сайта:</p>
+      <div className="theme-selector">
+        <motion.button
+          whileHover={{
+            scale: 1.075,
+            transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
+          }}
+          whileTap={{scale: 0.9, opacity: 0.5}}
+          className={
+            theme === "light" ? "theme-button theme-button-selected" : "theme-button"
+          }
+          onClick={() => setTheme("light")}
+        >
+          <LightModeRounded />
+          Светлая
+        </motion.button>
+        <motion.button
+          whileHover={{
+            scale: 1.075,
+            transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
+          }}
+          whileTap={{scale: 0.9, opacity: 0.5}}
+          className={
+            theme === "dark" ? "theme-button theme-button-selected" : "theme-button"
+          }
+          onClick={() => setTheme("dark")}
+        >
+          <DarkModeRounded />
+          Тёмная
+        </motion.button>
+        <motion.button
+          whileHover={{
+            scale: 1.075,
+            transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
+          }}
+          whileTap={{scale: 0.9, opacity: 0.5}}
+          className={
+            theme === "system" ? "theme-button theme-button-selected" : "theme-button"
+          }
+          onClick={() => setTheme("system")}
+        >
+          <HideSourceRounded />
+          Системная
+        </motion.button>
+      </div>
+      <p className="theme-title">Оттенок акцентного цвета:</p>
+      <div className="theme-slider">
+        <Slider
+          min={0}
+          max={360}
+          value={accentHue}
+          onChange={(value) => setAccentHue(value)}
+          style={{flex: "1 1 auto", width: "100%"}}
+        />
+        <Tooltip title="Сбросить оттенок">
+          <button
+            onClick={() => setAccentHue(210)}
+            style={{
+              width: "28px",
+              height: "28px",
+              backgroundColor: "transparent",
+              border: "none",
+              padding: 0,
+              cursor: "pointer",
             }}
-            whileTap={{scale: 0.9, opacity: 0.5}}
-            className={
-              theme === "light" ? "theme-button theme-button-selected" : "theme-button"
-            }
-            onClick={() => setTheme("light")}
           >
-            <LightModeRounded />
-            Светлая
-          </motion.button>
-          <motion.button
-            whileHover={{
-              scale: 1.075,
-              transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
+            <RestartAlt />
+          </button>
+        </Tooltip>
+      </div>
+      <p className="theme-title">Насыщенность акцентного цвета:</p>
+      <div className="theme-slider">
+        <Slider
+          min={0}
+          max={1.25}
+          step={0.025}
+          value={saturateRatio}
+          onChange={(value) => setSaturateRatio(value)}
+          style={{flex: "1 1 auto", width: "100%"}}
+        />
+        <Tooltip title="Сбросить насыщенность">
+          <button
+            onClick={() => setSaturateRatio(1)}
+            style={{
+              width: "28px",
+              height: "28px",
+              backgroundColor: "transparent",
+              border: "none",
+              padding: 0,
+              cursor: "pointer",
             }}
-            whileTap={{scale: 0.9, opacity: 0.5}}
-            className={
-              theme === "dark" ? "theme-button theme-button-selected" : "theme-button"
-            }
-            onClick={() => setTheme("dark")}
           >
-            <DarkModeRounded />
-            Тёмная
-          </motion.button>
-          <motion.button
-            whileHover={{
-              scale: 1.075,
-              transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
-            }}
-            whileTap={{scale: 0.9, opacity: 0.5}}
-            className={
-              theme === "system" ? "theme-button theme-button-selected" : "theme-button"
-            }
-            onClick={() => setTheme("system")}
-          >
-            <HideSourceRounded />
-            Системная
-          </motion.button>
-        </div>
-        <div style={{display: "flex", alignItems: "center", gap: "5px"}}>
-          <p style={{fontSize: "0.875rem"}}>Оттенок:</p>
-          <Slider
-            min={0}
-            max={360}
-            value={accentHue}
-            onChange={(value) => setAccentHue(value)}
-            style={{flex: "1 1 auto", width: "100%"}}
-          />
-          <Tooltip title="Сбросить оттенок">
-            <button
-              onClick={() => setAccentHue(210)}
-              style={{
-                width: "28px",
-                height: "28px",
-                backgroundColor: "transparent",
-                border: "none",
-                padding: 0,
-                cursor: "pointer",
-              }}
-            >
-              <RestartAlt />
-            </button>
-          </Tooltip>
-        </div>
-        <div style={{display: "flex", alignItems: "center", gap: "5px"}}>
-          <p style={{fontSize: "0.875rem"}}>Насыщенность:</p>
-          <Slider
-            min={0}
-            max={1.25}
-            step={0.025}
-            value={saturateRatio}
-            onChange={(value) => setSaturateRatio(value)}
-            style={{flex: "1 1 auto", width: "100%"}}
-          />
-          <Tooltip title="Сбросить насыщенность">
-            <button
-              onClick={() => setSaturateRatio(1)}
-              style={{
-                width: "28px",
-                height: "28px",
-                backgroundColor: "transparent",
-                border: "none",
-                padding: 0,
-                cursor: "pointer",
-              }}
-            >
-              <RestartAlt />
-            </button>
-          </Tooltip>
-        </div>
+            <RestartAlt />
+          </button>
+        </Tooltip>
       </div>
     </Modal>
   );
