@@ -276,6 +276,18 @@ const AEInstallProblems: React.FC = () => {
                   </code>
                 </li>
               </ul>
+              <AdditionDanger>
+                Пожалуйста, не используйте{" "}
+                <a href="https://zxpinstaller.com/">
+                  ZXP Installer от ELEMENTS Storage Media
+                </a>
+                , если вы используете версии программ от Adobe, отвязанные от приложения{" "}
+                <mark className="app">Creative Cloud</mark>. Данный{" "}
+                <a href="https://zxpinstaller.com/">ZXP Installer</a> будет вам выдавать
+                ошибку <strong>-193</strong> до тех пор, пока вы не установите программу{" "}
+                <mark className="app">Creative Cloud</mark>, а он же может вам поломать
+                уже установленные программы.
+              </AdditionDanger>
               <AdditionInfo>
                 Если вы не хотите устанавливать стороннее ПО для установки{" "}
                 <mark className="file">.zxp</mark>, то вы можете переименовать файл{" "}
@@ -284,8 +296,7 @@ const AEInstallProblems: React.FC = () => {
                 нужно поместить в папку{" "}
                 <mark className="path">
                   ~/Library/Application Support/Adobe/CEP/extensions
-                </mark>
-                и после этого ввести команды, которые были расположены чуть выше в
+                </mark> и после этого ввести команды, которые были расположены чуть выше в
                 терминал.
               </AdditionInfo>
               <ul>
