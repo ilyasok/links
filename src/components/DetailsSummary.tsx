@@ -66,6 +66,24 @@ const DetailsSummary: React.FC<DetailsSummaryProps> = ({title, children, tag}) =
     }
   }, []);
 
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.ctrlKey && event.altKey && event.shiftKey && event.key === "A") {
+        const detailsElements = document.querySelectorAll("details");
+        detailsElements.forEach((details) => {
+          details.setAttribute("open", "true");
+        });
+        message.success("Вжух, и все спойлеры раскрылись!");
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
   const handleToggle = (event: React.SyntheticEvent) => {
     const details = event.currentTarget as HTMLDetailsElement;
     if (details.open) {
