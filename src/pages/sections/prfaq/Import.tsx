@@ -3,7 +3,7 @@ import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 import DetailsSummary from "../../../components/DetailsSummary";
 import {AdditionInfo, AdditionWarning} from "../../../components/Additions";
 import {Divider} from "antd";
-import {ImageFigure} from "../../../components/ContentFigure";
+import {ImageFigure, VideoFigure} from "../../../components/ContentFigure";
 
 const PRImport: React.FC = () => {
   return (
@@ -12,8 +12,38 @@ const PRImport: React.FC = () => {
       <DetailsSummary title="Какие действия нужно совершить с чужими исходниками, прежде чем начать работу?">
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
-      <DetailsSummary title="Использую исходник в контейнере .mp4 или в кодеке H.264. Почему у меня лезут артефакты, зелёный экран и дергается изображение?">
-        <p>{/* FIXME: написать!! */}</p>
+      <DetailsSummary
+        title="Почему у меня появляются различные артефакты при использовании исходников в кодеке H.264"
+        tag="зелёный экран, зелень, дергается изображение, полосы, глитчи, артефакты, глюки, искажения"
+      >
+        <p>
+          Скорее всего вы импортируете исходники, которые были загружены из интернета.
+          Такое часто бывает при загрузке видео из YouTube и последующем импорте в
+          программу. Подобные сервисы перекодируют видео непонятно во что и непонятно по
+          каким алгоритмам, поэтому их не рекомендуется использовать в дальнейшей работе.
+        </p>
+        <VideoFigure
+          styleClass="figure_windows-light"
+          videoSrc="images/h264_artifacts.webm"
+          caption="Артефакты кривых исходников из просторов интернета"
+        />
+        <p>
+          Чтобы с такими видео из интернета можно было спокойно работать - вам нужно
+          перегнать ваши видео в удобоваримый кодек и формат для монтажа, например в{" "}
+          <mark className="video">Apple Prores 422</mark>, а затем заменить их в проекте.
+          Да, это нормальный процесс и желательно так делать каждый раз, когда скачиваете
+          видео с сервисов, которые любят пережимать для себя, но не для монтажёров.
+          Перекодировать видео можно с помощью программ{" "}
+          <mark className="app">Shutter Encoder</mark>,{" "}
+          <mark className="app">Handbrake</mark> или{" "}
+          <mark className="app">Media Encoder</mark>.
+        </p>
+        <ImageFigure
+          styleClass="figure_macos-dark"
+          imgSrc="images/convert_to_prores_shutterencoder.png"
+          imgTitle="Конвертируем в ProRes через Shutter Encoder"
+          caption="Shutter Encoder"
+        />
       </DetailsSummary>
       <DetailsSummary title="Импортировал видео, а оно слишком засвеченное. Как исправить?">
         <p>
