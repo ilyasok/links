@@ -57,17 +57,15 @@ const AEInstallProblems: React.FC = () => {
                   установщик. Если в записи указано, что данный установщик является
                   репаком - в таком случае после его установки плагин будет уже
                   активирован, никаких лишних телодвижений после установки делать не надо.
+                  <AdditionWarning>
+                    При использовании установщиков убедитесь в том, что у вас{" "}
+                    <mark className="app">After Effects</mark> установлен в стандартном
+                    расположении <mark className="path">C:\Program Files\Adobe\</mark>, не
+                    на другом месте или разделе. В противном случае устанавливаемый плагин
+                    установится в другом месте и не будет отображаться в вашем{" "}
+                    <mark className="app">After Effects</mark>.
+                  </AdditionWarning>
                 </li>
-              </ul>
-              <AdditionWarning>
-                При использовании установщиков убедитесь в том, что у вас{" "}
-                <mark className="app">After Effects</mark> установлен в стандартном
-                расположении <mark className="path">C:\Program Files\Adobe\</mark>, не на
-                другом месте или разделе. В противном случае устанавливаемый плагин
-                установится в другом месте и не будет отображаться в вашем{" "}
-                <mark className="app">After Effects</mark>.
-              </AdditionWarning>
-              <ul>
                 <li>
                   Если в архиве находится файл <mark className="file">.aex</mark>, то
                   такие плагины обычно распаковываются в общую папку плагинов:{" "}
@@ -75,27 +73,23 @@ const AEInstallProblems: React.FC = () => {
                     C:\Program Files\Adobe\Common\Plug-ins\7.0\MediaCore
                   </mark>
                   .
+                  <AdditionWarning>
+                    Если вы ищете куда расположить файл{" "}
+                    <mark className="file">.plugin</mark>, то спешу огорчить: данный файл
+                    не является плагином для устройств на Windows.
+                  </AdditionWarning>
                 </li>
-              </ul>
-              <AdditionWarning>
-                Если вы ищете куда расположить файл <mark className="file">.plugin</mark>,
-                то спешу огорчить: данный файл не является плагином для устройств на
-                Windows.
-              </AdditionWarning>
-              <ul>
                 <li>
                   Если в архиве находится файл <mark className="file">.ffx</mark>, то
                   такие пресеты обычно распаковываются в стандартную папку пресетов:{" "}
                   <mark className="path">
                     C:\Program Files\Adobe\Adobe After Effects 20XX\Support Files\Presets
                   </mark>
+                  <AdditionInfo>
+                    В папке с пресетами вы можете создать свою собственную папку со своим
+                    именем или расположить скачанные пресеты в уже существующие.
+                  </AdditionInfo>
                 </li>
-              </ul>
-              <AdditionInfo>
-                В папке с пресетами вы можете создать свою собственную папку со своим
-                именем или расположить скачанные пресеты в уже существующие.
-              </AdditionInfo>
-              <ul>
                 <li>
                   Если в архиве находится файл <mark className="file">.jsx</mark>, то
                   такие скрипты распаковываются в стандартную папку скриптов -{" "}
@@ -121,59 +115,56 @@ const AEInstallProblems: React.FC = () => {
                   <a href="https://aescripts.com/learn/zxp-installer/">
                     ZXP Installer от aescripts
                   </a>
-                  . После установки нужно обязательно применить{" "}
+                  .
+                  <AdditionDanger>
+                    Пожалуйста, не используйте{" "}
+                    <a href="https://zxpinstaller.com/">
+                      ZXP Installer от ELEMENTS Storage Media
+                    </a>
+                    , если вы используете версии программ от Adobe, отвязанные от
+                    приложения <mark className="app">Creative Cloud</mark>. Данный{" "}
+                    <a href="https://zxpinstaller.com/">ZXP Installer</a> будет вам
+                    выдавать ошибку <strong>-193</strong> до тех пор, пока вы не
+                    установите программу <mark className="app">Creative Cloud</mark>, а он
+                    же может вам поломать уже установленные программы.
+                  </AdditionDanger>
+                  Если вы не хотите устанавливать стороннее ПО для установки{" "}
+                  <mark className="file">.zxp</mark>, то вы можете переименовать файл{" "}
+                  <mark className="file">.zxp</mark> в <mark className="file">.zip</mark>{" "}
+                  и распаковать его как обычный архив. Содержимое свежераспакованного
+                  файла нужно поместить в папку{" "}
+                  <mark className="path">
+                    C:\Program Files (x86)\Common Files\Adobe\CEP\extensions
+                  </mark>{" "}
+                  (если такой папки нет - создайте) и после этого нужно применить{" "}
                   <a
                     download
                     href="files/Enable Extensions Adobe.reg"
                   >
                     REG-патч
                   </a>
-                  , чтобы ваше расширение смогло спокойно отобразиться и работать в{" "}
-                  <mark className="app">After Effects</mark>.
+                  , если вы его не применяли.
+                  <AdditionInfo>
+                    <a
+                      download
+                      href="files/Enable Extensions Adobe.reg"
+                    >
+                      REG-патч
+                    </a>{" "}
+                    нужно применить лишь один раз, он универсален. В дальнейшем при
+                    установке подобных расширений файл для внесений записей в реестр
+                    системы не нужно снова открывать.{" "}
+                    <a
+                      download
+                      href="files/Enable Extensions Adobe.reg"
+                    >
+                      REG-патч
+                    </a>{" "}
+                    включает debug-режим в <mark className="app">After Effects</mark> для
+                    корректного открытия и работы сторонних расширений, установленные из
+                    простор интернета и не содержит серьёзной лазейки для вредоносов.
+                  </AdditionInfo>
                 </li>
-              </ul>
-              <AdditionInfo>
-                <a
-                  download
-                  href="files/Enable Extensions Adobe.reg"
-                >
-                  REG-патч
-                </a>{" "}
-                нужно применить лишь один раз, он универсален. В дальнейшем при установке
-                подобных расширений файл для внесений записей в реестр системы не нужно
-                снова открывать.
-              </AdditionInfo>
-              <AdditionInfo>
-                Если вы не хотите устанавливать стороннее ПО для установки{" "}
-                <mark className="file">.zxp</mark>, то вы можете переименовать файл{" "}
-                <mark className="file">.zxp</mark> в <mark className="file">.zip</mark> и
-                распаковать его как обычный архив. Содержимое свежераспакованного файла
-                нужно поместить в папку{" "}
-                <mark className="path">
-                  C:\Program Files (x86)\Common Files\Adobe\CEP\extensions
-                </mark>{" "}
-                (если такой папки нет - создайте) и после этого применить{" "}
-                <a
-                  download
-                  href="files/Enable Extensions Adobe.reg"
-                >
-                  REG-патч
-                </a>
-                , если вы его не применяли.
-              </AdditionInfo>
-              <AdditionDanger>
-                Пожалуйста, не используйте{" "}
-                <a href="https://zxpinstaller.com/">
-                  ZXP Installer от ELEMENTS Storage Media
-                </a>
-                , если вы используете версии программ от Adobe, отвязанные от приложения{" "}
-                <mark className="app">Creative Cloud</mark>. Данный{" "}
-                <a href="https://zxpinstaller.com/">ZXP Installer</a> будет вам выдавать
-                ошибку <strong>-193</strong> до тех пор, пока вы не установите программу{" "}
-                <mark className="app">Creative Cloud</mark>, а он же может вам поломать
-                уже установленные программы.
-              </AdditionDanger>
-              <ul>
                 <li>
                   Если в архиве находится файл <mark className="file">.cube</mark>,{" "}
                   <mark className="file">.itx</mark>, <mark className="file">.look</mark>{" "}
@@ -239,26 +230,23 @@ const AEInstallProblems: React.FC = () => {
                     ~/Library/Application Support/Adobe/Common/Plug-ins/7.0/MediaCore
                   </mark>
                   .
+                  <AdditionWarning>
+                    Если вы ищете куда расположить файл <mark className="file">.aex</mark>
+                    , то спешу вас остановить - этот файл не является плагином для
+                    устройств на macOS, они предназначены для устройств на Windows.
+                  </AdditionWarning>
                 </li>
-              </ul>
-              <AdditionWarning>
-                Если вы ищете куда расположить файл <mark className="file">.aex</mark>, то
-                спешу огорчить: этот файл не является плагином для устройств на macOS.
-              </AdditionWarning>
-              <ul>
                 <li>
                   Если в архиве находится файл <mark className="file">.ffx</mark>, то
                   такие пресеты обычно распаковываются в стандартную папку пресетов:{" "}
                   <mark className="path">
                     ~/Library/Applications/Adobe After Effects 20XX/Presets
                   </mark>
+                  <AdditionInfo>
+                    В папке с пресетами вы можете создать свою собственную папку со своим
+                    именем или расположить скачанные пресеты в уже существующие.
+                  </AdditionInfo>
                 </li>
-              </ul>
-              <AdditionInfo>
-                В папке с пресетами вы можете создать свою собственную папку со своим
-                именем или расположить скачанные пресеты в уже существующие.
-              </AdditionInfo>
-              <ul>
                 <li>
                   Если в архиве находится файл <mark className="file">.jsx</mark>, то
                   такие скрипты распаковываются в стандартную папку скриптов:{" "}
@@ -287,9 +275,35 @@ const AEInstallProblems: React.FC = () => {
                   выдал никакие ошибки, то вы можете спокойно открыть{" "}
                   <mark className="app">After Effects</mark> и проверить работоспособность
                   установленного расширения.
+                  <AdditionDanger>
+                    Пожалуйста, не используйте{" "}
+                    <a href="https://zxpinstaller.com/">
+                      ZXP Installer от ELEMENTS Storage Media
+                    </a>
+                    , если вы используете версии программ от Adobe, отвязанные от
+                    приложения <mark className="app">Creative Cloud</mark>. Данный{" "}
+                    <a href="https://zxpinstaller.com/">ZXP Installer</a> будет вам
+                    выдавать ошибку <strong>-193</strong> до тех пор, пока вы не
+                    установите программу <mark className="app">Creative Cloud</mark>, а он
+                    же может вам поломать уже установленные программы.
+                  </AdditionDanger>
+                  Если вы не хотите устанавливать стороннее ПО для установки{" "}
+                  <mark className="file">.zxp</mark>, то вы можете переименовать файл{" "}
+                  <mark className="file">.zxp</mark> в <mark className="file">.zip</mark>{" "}
+                  и распаковать его как обычный архив. Содержимое свежераспакованного
+                  файла нужно поместить в папку{" "}
+                  <mark className="path">
+                    ~/Library/Application Support/Adobe/CEP/extensions
+                  </mark>{" "}
+                  и после этого ввести команды, которые были расположены чуть ниже в
+                  терминал.
                   <AdditionInfo>
                     Эти команды достаточно ввести один раз, в дальнейшем при установке
-                    подобных расширений команды для терминала вводить не нужно.
+                    подобных расширений команды для терминала вводить не нужно. Эти
+                    команды включают debug-режим в{" "}
+                    <mark className="app">After Effects</mark> для корректного открытия и
+                    работы сторонних расширений, установленные из простор интернета и не
+                    содержит серьёзной лазейки для вредоносов.
                   </AdditionInfo>
                   <code>
                     defaults write com.adobe.CSXS.5 PlayerDebugMode 1<br />
@@ -313,34 +327,13 @@ const AEInstallProblems: React.FC = () => {
                     defaults write com.adobe.CSXS.23 PlayerDebugMode 1<br />
                     defaults write com.adobe.CSXS.24 PlayerDebugMode 1<br />
                     defaults write com.adobe.CSXS.25 PlayerDebugMode 1<br />
+                    defaults write com.adobe.CSXS.26 PlayerDebugMode 1<br />
+                    defaults write com.adobe.CSXS.27 PlayerDebugMode 1<br />
+                    defaults write com.adobe.CSXS.28 PlayerDebugMode 1<br />
+                    defaults write com.adobe.CSXS.29 PlayerDebugMode 1<br />
+                    defaults write com.adobe.CSXS.30 PlayerDebugMode 1<br />
                   </code>
                 </li>
-              </ul>
-              <AdditionDanger>
-                Пожалуйста, не используйте{" "}
-                <a href="https://zxpinstaller.com/">
-                  ZXP Installer от ELEMENTS Storage Media
-                </a>
-                , если вы используете версии программ от Adobe, отвязанные от приложения{" "}
-                <mark className="app">Creative Cloud</mark>. Данный{" "}
-                <a href="https://zxpinstaller.com/">ZXP Installer</a> будет вам выдавать
-                ошибку <strong>-193</strong> до тех пор, пока вы не установите программу{" "}
-                <mark className="app">Creative Cloud</mark>, а он же может вам поломать
-                уже установленные программы.
-              </AdditionDanger>
-              <AdditionInfo>
-                Если вы не хотите устанавливать стороннее ПО для установки{" "}
-                <mark className="file">.zxp</mark>, то вы можете переименовать файл{" "}
-                <mark className="file">.zxp</mark> в <mark className="file">.zip</mark> и
-                распаковать его как обычный архив. Содержимое свежераспакованного файла
-                нужно поместить в папку{" "}
-                <mark className="path">
-                  ~/Library/Application Support/Adobe/CEP/extensions
-                </mark>{" "}
-                и после этого ввести команды, которые были расположены чуть выше в
-                терминал.
-              </AdditionInfo>
-              <ul>
                 <li>
                   Если в архиве находится файл <mark className="file">.cube</mark>,{" "}
                   <mark className="file">.itx</mark>, <mark className="file">.look</mark>{" "}
