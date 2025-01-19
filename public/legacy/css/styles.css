@@ -596,7 +596,7 @@ header span:active {
   border-radius: 10px;
 }
 .content li ul {
-  margin-inline: 0px;
+  margin-inline: 0;
 }
 .content li figure {
   margin-top: 20px;
@@ -913,7 +913,7 @@ header span:active {
   background: none;
 }
 .right_sidemenu .material-icons {
-  padding-inline-end: 0px;
+  padding-inline-end: 0;
   padding-inline-start: 15px;
 }
 .right_sidemenu li {
