@@ -95,13 +95,13 @@ const AEImport: React.FC = () => {
             между режимами <mark className="ui">CBR</mark>,{" "}
             <mark className="ui">VBR</mark> или <mark className="ui">CQ</mark>.
             <AdditionInfo>
+              <p>
+                При кодировании в некоторые кодеки, в частности{" "}
+                <mark className="file">Apple ProRes</mark> этот пункт можно пропустить,
+                из-за отсутствия режимов кодирования, так как там обычно используются
+                стандартные шаблоны для битрейта.
+              </p>
               <ul>
-                <p>
-                  При кодировании в некоторые кодеки, в частности{" "}
-                  <mark className="file">Apple ProRes</mark> этот пункт можно пропустить,
-                  из-за отсутствия режимов кодирования, так как там обычно используются
-                  стандартные шаблоны для битрейта.
-                </p>
                 <li>
                   <mark>CBR</mark> - постоянный битрейт, хорошо подходит для монтажа, но
                   не очень для социальных сетей из-за большого веса по сравнению с
@@ -168,7 +168,10 @@ const AEImport: React.FC = () => {
           недокодировать и мучаться с возможными багами кривых исходников.
         </p>
       </DetailsSummary>
-      <DetailsSummary title="Использую исходник в контейнере .mp4 или в кодеке H.264. Почему у меня лезут артефакты, зелёный экран и дергается изображение?">
+      <DetailsSummary
+        title="Почему у меня появляются различные артефакты при использовании исходников в кодеке H.264"
+        tag="зелёный экран, зелень, дергается изображение, полосы, глитчи, артефакты, глюки, искажения"
+      >
         <p>
           Такое часто бывает при импорте исходников, которые были загружены из интернета,
           в частности из YouTube. Подобные сервисы перекодируют видео непонятно во что и
@@ -203,7 +206,8 @@ const AEImport: React.FC = () => {
           программы. Для этого перейдите в{" "}
           <mark className="ui">Edit &gt; Preferences &gt; Import</mark> и выключите
           галочку <mark className="ui">Enable hardware accelerated decoding</mark> и
-          перезагрузите программу.
+          перезагрузите программу. Такое часто встречается на устройствах с дискретным и
+          встроенным в процессор видеочипом AMD.
         </p>
         <ImageFigure
           styleClass="figure_windows-dark"
@@ -212,7 +216,10 @@ const AEImport: React.FC = () => {
           caption="Preferences"
         />
       </DetailsSummary>
-      <DetailsSummary title="Почему я не могу импортировать .psd по слоям? After Effects не мне предлагает выбор типа импорта!">
+      <DetailsSummary
+        title="Почему я не могу импортировать .psd по слоям? After Effects не мне предлагает выбор типа импорта!"
+        tag="фотошоп, псд, не появляется окно"
+      >
         <p>
           Такое бывает, когда вы сохраняете в <mark className="app">Photoshop</mark> файл
           в формате <mark className="file">PSD</mark> в цветовом режиме, отличном от{" "}
@@ -296,7 +303,10 @@ const AEImport: React.FC = () => {
           <mark className="app">After Effects</mark> и работать с ними как обычно.
         </p>
       </DetailsSummary>
-      <DetailsSummary title="Импортирую пачку изображений как секвенцию, но она получилась короче/длиннее чем нужно или с неверным FPS. Как исправить?">
+      <DetailsSummary
+        title="Импортирую пачку изображений как секвенцию, но она получилась короче/длиннее чем нужно или с неверным FPS. Как исправить?"
+        tag="фпс, частота кадров, интерпретация"
+      >
         <p>
           При импорте картинок, как секвенция, задаётся фреймрейт, который указан в ваших
           настройках <mark className="app">After Effects</mark>. Для того, чтобы проверить
@@ -327,7 +337,10 @@ const AEImport: React.FC = () => {
           caption="Interpret Footage"
         />
       </DetailsSummary>
-      <DetailsSummary title="Импортировал исходник с переменным FPS. Почему длина исходника в After Effects короче, чем в видео-проигрывателе?">
+      <DetailsSummary
+        title="Импортировал исходник с переменным FPS. Почему длина исходника в After Effects короче, чем в видео-проигрывателе?"
+        tag="переменный фпс, пропуски кадров"
+      >
         <p>
           <mark className="app">After Effects</mark> при импорте преобразует все кадры у
           видео без учёта пропусков от переменного или дробного FPS. Поэтому и получается
@@ -356,7 +369,10 @@ const AEImport: React.FC = () => {
           <mark className="app">Handbrake</mark>.
         </p>
       </DetailsSummary>
-      <DetailsSummary title="Как импортировать 3D-объекты формата .obj, .fbx или .glb?">
+      <DetailsSummary
+        title="Как импортировать 3D-объекты формата .obj, .fbx или .glb?"
+        tag="3д, элемент 3д, блендер, объемные модели"
+      >
         <p>
           Нативно в <mark className="app">After Effects</mark> в старых версиях программы
           нельзя было импортировать 3D-объекты встроенными методами. Поэтому дедам
@@ -382,7 +398,10 @@ const AEImport: React.FC = () => {
           caption="Масштабные нововведения для 3D в After Effects"
         />
       </DetailsSummary>
-      <DetailsSummary title="Прислали исходники в формате .mkv, .flv или что-то не поддерживаемое программой, но перекодировать я их не хочу. Как мне их импортировать?">
+      <DetailsSummary
+        title="Прислали исходники в формате .mkv, .flv или что-то не поддерживаемое программой, но перекодировать я их не хочу. Как мне их импортировать?"
+        tag="инфлюкс, без кодирования"
+      >
         <p>
           <mark className="app">After Effects</mark> изначально не поддерживает большое
           количество кодеков, например <mark className="video">VP9</mark>,{" "}
@@ -412,7 +431,10 @@ const AEImport: React.FC = () => {
           <mark className="app">Shutter Encoder</mark>.
         </AdditionWarning>
       </DetailsSummary>
-      <DetailsSummary title="Прислали исходники в формате .heic, .heif или .hevc, но выбивает ошибку. Как их мне импортировать в проект?">
+      <DetailsSummary
+        title="Прислали исходники в формате .heic, .heif или .hevc, но выбивает ошибку. Как их мне импортировать в проект?"
+        tag="исходники видео фото с айфона"
+      >
         <AdditionInfo>
           Пользователям устройств на macOS ничего устанавливать не нужно, данные файлы
           импортируются нормально.
@@ -479,7 +501,10 @@ const AEImport: React.FC = () => {
           <mark className="app">FastStone Image Viewer</mark>.
         </p>
       </DetailsSummary>
-      <DetailsSummary title="Как импортировать анимированный стикер из Telegram?">
+      <DetailsSummary
+        title="Как импортировать анимированный стикер из Telegram?"
+        tag="телеграм, стикеры"
+      >
         <AdditionWarning>
           При импорте стикеров в формате <mark className="file">.tgs</mark> в некоторых
           случаях вам нужно будет пересоздать градиенты. Обычно в окне плагина для импорта
@@ -567,7 +592,10 @@ const AEImport: React.FC = () => {
           будет зависеть от самого стикера.
         </p>
       </DetailsSummary>
-      <DetailsSummary title="Скинули проект, который нельзя открыть в старой версии After Effects, но я не хочу обновляться. Или мне придётся?">
+      <DetailsSummary
+        title="Скинули проект, который нельзя открыть в старой версии After Effects, но я не хочу обновляться. Или мне придётся?"
+        tag="старая версия, не открывается, обновление, ошибка импорта"
+      >
         <p>
           Если вы не хотите обновляться на более свежую версию{" "}
           <mark className="app">After Effects</mark> по религиозным или внутренним
@@ -584,7 +612,10 @@ const AEImport: React.FC = () => {
           проектами.
         </p>
       </DetailsSummary>
-      <DetailsSummary title='При открытии чужого проекта выскакивает "After Effects warning: X files are missing since you last saved project" и вместо исходников - цветовая палитра. Как мне переподключить исходники?'>
+      <DetailsSummary
+        title='При открытии чужого проекта выскакивает "After Effects warning: X files are missing since you last saved project" и вместо исходников - цветовая палитра. Как мне переподключить исходники?'
+        tag="реконнект, потерялись файлы, ошибка импорта"
+      >
         <p>
           Для начала убедитесь в том, что вы{" "}
           <u>

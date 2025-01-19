@@ -8,6 +8,9 @@ import ContentSwitcher from "../../../components/features/OperatingSystemFilter"
 const PSErrors: React.FC = () => (
   <div className="faq-content">
     <GithubUpdateInfo filePath="src/pages/sections/psfaq/Errors.tsx" />
+    <DetailsSummary title="Рабочий диск заполнен или Scratch Disk Full">
+      <p>{/* FIXME: написать!! */}</p>
+    </DetailsSummary>
     <DetailsSummary title='"Для доступа к функциям на базе технологии Firefly в приложениях Adobe у вас должны быть установлены подлинные приложения Adobe", "Проверьте своё подключение к интернету и повторите попытку" или "Could not complete your request because of a program error"'>
       <p>
         Вы пытаетесь использовать функцию генеративной заливки для создания или коррекции

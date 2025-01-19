@@ -145,6 +145,12 @@ const PRTips: React.FC = () => {
           <mark className="app">SourceGit</mark>.
         </p>
       </DetailsSummary>
+      <DetailsSummary
+        title="Какие плагины и инструменты мне стоит поставить в первую очередь для программы?"
+        tag="рекомендация, топ, борисфх, твикстор, рсмб, юниверс, мбл, mbl"
+      >
+        <p>{/* TODO: добавить список */}</p>
+      </DetailsSummary>
     </div>
   );
 };

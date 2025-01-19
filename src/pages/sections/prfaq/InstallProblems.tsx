@@ -1,11 +1,7 @@
 import React from "react";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
-import {
-  AdditionDanger,
-  AdditionInfo,
-  AdditionWarning,
-} from "../../../components/Additions";
-import {ImageFigure} from "../../../components/ContentFigure";
+import {AdditionInfo, AdditionWarning} from "../../../components/Additions";
+import {ImageFigure, YouTubeVideo} from "../../../components/ContentFigure";
 import DetailsSummary from "../../../components/DetailsSummary";
 import ContentSwitcher from "../../../components/features/OperatingSystemFilter";
 
@@ -16,9 +12,11 @@ const PRInstallProblems: React.FC = () => {
       <DetailsSummary title="Забыли положить инструкцию для установки рядом с файлами, куда что кидать?">
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
-      <DetailsSummary title="В Telegram-записи лежат файлы .part1, .part2 и дальше по списку. Что это такое и как такие файлы корректно распаковать?">
+      <DetailsSummary
+        title="В Telegram-записи лежат файлы .part1, .part2 и дальше по списку. Что это такое и как такие файлы корректно распаковать?"
+        tag="части архива, парт, распаковка, rar, zip"
+      >
         <p>
-          {/* FIXME: дописать до конца */}
           Данные файлы с пометкой <mark>.part1</mark>, <mark>.part2</mark> и далее по
           списку - это лишь части одного и того же архива. Архивы поделены на 2 или на 4
           Гб из-за ограничений Telegram на размер загружаемых файлов. Чтобы корректно
@@ -59,7 +57,10 @@ const PRInstallProblems: React.FC = () => {
                 и начать распаковку, например с помощью <mark>drag&apos;n&apos;drop</mark>{" "}
                 в нужное место или кнопки <mark className="ui">Распаковать</mark>.
               </p>
-              {/* TODO: добавить видео по распаковке многотомных архивов через винрар */}
+              <YouTubeVideo
+                link="1OVwQS0uHhk"
+                caption="Распаковка многотомного архива"
+              />
             </div>
           }
           macContent={
@@ -192,7 +193,6 @@ const PRInstallProblems: React.FC = () => {
         <AdditionInfo>
           Если у вас мало места на системном диске или вы хотите перенести программы от
           Adobe на другой раздел - воспользуйтесь функцией символьных ссылок.
-          {/* FIXME: объяснить про symlink */}
         </AdditionInfo>
         <p>
           Обычно при соблюдении этих двух условий программы видят друг друга и спокойно

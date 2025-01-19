@@ -10,17 +10,23 @@ const PRFromNewbies: React.FC = () => {
       <GithubUpdateInfo filePath="src/pages/sections/prfaq/FromNewbies.tsx" />
       <DetailsSummary
         title="Первый раз установил Premiere Pro, с чего бы мне начать обучение?"
-        tag="для новичка, первый раз, только открыл премьер"
+        tag="для новичка, первый раз, только открыл"
       >
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
-      <DetailsSummary title="Не понимаю термины от других пользователей Premiere Pro, проясните!">
+      <DetailsSummary
+        title="Не понимаю термины от других пользователей Premiere Pro, проясните!"
+        tag="сленг, жаргон, сокращения, словосочетания, говор"
+      >
         <p>{/* FIXME: написать!! по аналогии как с терминами в аефаке */}</p>
       </DetailsSummary>
       <DetailsSummary title="А есть список популярных комбинаций клавиш для работы в Premiere Pro?">
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
-      <DetailsSummary title="Где я могу узнать об нововведениях в Premiere Pro?">
+      <DetailsSummary
+        title="Где я могу узнать об нововведениях в обновлениях Premiere Pro?"
+        tag="что нового, фишки, обновления, апдейт"
+      >
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary
