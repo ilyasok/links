@@ -186,6 +186,46 @@ const AEInstallProblems: React.FC = () => {
                   <mark className="plugin">Lumetri Color</mark> в вкладке{" "}
                   <mark className="ui">Creative</mark>.
                 </li>
+                <li>
+                  Если в архиве находятся шрифты формата{" "}
+                  <mark className="file">.ttf</mark> или{" "}
+                  <mark className="file">.otf</mark>, то такие шрифты не распаковываются в
+                  папку с программой. Их нужно установить в саму систему, это можно
+                  сделать тремя способами.
+                  <ul>
+                    <li>
+                      Откройте файл шрифта двойным нажатием и в открывшемся окне нажмите в
+                      левом верхнем углу кнопку <mark className="ui">Установить</mark>.
+                    </li>
+                    <li>
+                      Если у вас есть целый набор шрифтов и вы не хотите открывать каждый
+                      файл по отдельности - просто распакуйте архив с шрифтами в любую
+                      папку. После этого выделите нужные шрифты в распакованной папке,
+                      нажмите <mark className="key">ПКМ</mark> и выберите в контекстном
+                      меню пункт <mark className="ui">Установить</mark> или{" "}
+                      <mark className="ui">Установить для всех пользователей</mark>.
+                    </li>
+                    <li>
+                      Распакуйте файлы шрифтов в{" "}
+                      <mark className="path">C:\Windows\Fonts</mark>. Это позволит
+                      установить шрифты для всех пользователей системы.
+                      <AdditionInfo>
+                        Если у вас нет прав администратора, то вы можете распаковать файлы
+                        шрифтов в папку{" "}
+                        <mark className="path">
+                          %LocalAppData%\Microsoft\Windows\Fonts
+                        </mark>
+                        . В таком случае шрифты будут установлены только для вашей учётной
+                        записи.
+                      </AdditionInfo>
+                    </li>
+                  </ul>
+                  Также при необходимости вы можете воспользоваться шрифтовыми менеджерами
+                  для организации и активации нужных шрифтов только при необходимости,
+                  например <mark className="app">Corel Font Manager</mark>,{" "}
+                  <mark className="app">FontExpert</mark> или{" "}
+                  <mark className="app">FontBase</mark>.
+                </li>
               </ul>
             </div>
           }
@@ -315,6 +355,30 @@ const AEInstallProblems: React.FC = () => {
                   переместите ваши файлы. Затем эти файлы для цветокоррекции вы можете
                   использовать в эффекте <mark className="plugin">Lumetri Color</mark> в
                   вкладке <mark className="ui">Creative</mark>.
+                </li>
+                <li>
+                  Если в архиве находятся шрифты формата{" "}
+                  <mark className="file">.ttf</mark> или{" "}
+                  <mark className="file">.otf</mark>, то такие шрифты не распаковываются в
+                  папку с программой. Их нужно установить в систему, это можно сделать
+                  двумя способами.
+                  <ul>
+                    <li>
+                      Запустите приложение <mark className="app">Шрифты</mark>, затем
+                      выберите нужные файлы шрифтов в <mark className="app">Finder</mark>{" "}
+                      и просто перетащите их в открытое окно программы.
+                    </li>
+                    <li>
+                      Дважды кликните на файл шрифта в <mark className="app">Finder</mark>{" "}
+                      и в появившемся окне нажмите кнопку{" "}
+                      <mark className="ui">Установить</mark>.
+                    </li>
+                  </ul>
+                  Также при необходимости вы можете воспользоваться шрифтовыми менеджерами
+                  для организации и активации нужных шрифтов только при необходимости,
+                  например <mark className="app">FontBase</mark>,{" "}
+                  <mark className="app">Typeface</mark> или{" "}
+                  <mark className="app">RightFont</mark>.
                 </li>
               </ul>
               <AdditionInfo>
