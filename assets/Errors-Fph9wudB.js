@@ -1,1 +1,0 @@
-import{j as r}from"./index-CTUK4b3R.js";import{G as s}from"./GithubUpdateInfo-CHmeqj1k.js";const a=()=>r.jsx("div",{className:"faq-content",children:r.jsx(s,{filePath:"src/pages/sections/aeexprfaq/Errors.tsx"})});export{a as default};
