@@ -369,6 +369,50 @@ const AEImport: React.FC = () => {
           <mark className="app">Handbrake</mark>.
         </p>
       </DetailsSummary>
+      <DetailsSummary title="Как импортировать секвенцию из Premiere Pro в композицию After Effects?">
+        <p>
+          Давайте представим, что вы смонтировали видеоролик в{" "}
+          <mark className="app">Premiere Pro</mark> и теперь хотите перенести его в{" "}
+          <mark className="app">After Effects</mark>. Если вы просто импортируете{" "}
+          <mark className="file">.prproj</mark> с помощью комбинации клавиш{" "}
+          <mark className="key">Ctrl + I</mark>, то получите секвенцию, которую нельзя
+          редактировать в <mark className="app">After Effects</mark>. Но мы же хотим,
+          чтобы её можно было редактировать, как будто мы действительно конвертировали
+          таймлайн из <mark className="app">Premiere Pro</mark> в{" "}
+          <mark className="app">After Effects</mark>, верно?
+        </p>
+        <p>
+          Поэтому для импорта секвенций из <mark className="app">Premiere Pro</mark> в{" "}
+          <mark className="app">After Effects</mark> как полноценные композиции в
+          программе нужно выбрать{" "}
+          <mark className="ui">File &gt; Import &gt; Import Premiere Pro Project</mark> и
+          выбрать нужный файл проекта <mark className="app">Premiere Pro</mark>.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-light"
+          imgSrc="images/aftereffects/import_premiere_pro_project.png"
+          imgTitle="Начало импорта секвенций из Premiere Pro"
+          caption="After Effects"
+        />
+        <p>
+          Далее <mark className="app">After Effects</mark> спросит, какие секвенции нужно
+          импортировать. По умолчанию стоит пункт{" "}
+          <mark className="ui">All Sequences</mark>, но вы можете указать конкретную
+          секвенцию. Также при желании вы можете отключить импорт аудио-файлов.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/aftereffects/premiere_pro_importer.png"
+          imgTitle="Импорт секвенций из Premiere Pro"
+          caption="Premiere Pro Importer"
+        />
+        <p>
+          После этого в окне <mark className="ui">Project</mark> появится новая папка с
+          названием вашего проекта из <mark className="app">Premiere Pro</mark>,
+          импортированные файлы и новые композиции с нарезками. Некоторые эффекты в силу
+          различий двух программ могут не примениться и их нужно будет применить повторно.
+        </p>
+      </DetailsSummary>
       <DetailsSummary
         title="Как импортировать 3D-объекты формата .obj, .fbx или .glb?"
         tag="3д, элемент 3д, блендер, объемные модели"
