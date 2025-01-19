@@ -2,7 +2,7 @@ import React from "react";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 import {AdditionInfo, AdditionWarning} from "../../../components/Additions";
 import DetailsSummary from "../../../components/DetailsSummary";
-import {ImageFigure} from "../../../components/ContentFigure";
+import {ImageFigure, VideoFigure} from "../../../components/ContentFigure";
 import ContentSwitcher from "../../../components/features/OperatingSystemFilter";
 
 const PRErrors: React.FC = () => {
@@ -138,7 +138,10 @@ const PRErrors: React.FC = () => {
           <mark>bcdedit /set xsavedisable 1</mark> и снова перезагрузите устройство.
         </AdditionInfo>
       </DetailsSummary>
-      <DetailsSummary title='"This unlicensed Adobe app is not genuine and will be disabled soon" или что-то похожее с красной полоской при запуске, но на другом языке. Как запустить программу нормально?'>
+      <DetailsSummary
+        title='"This unlicensed Adobe app is not genuine and will be disabled soon" или что-то похожее с красной полоской при запуске, но на другом языке. Как запустить программу нормально?'
+        tag="слетела лицензия, красное окно, не запускается, впн, файл хостс, блокировка доступа в интернет"
+      >
         <p>Программа от Adobe решила достучаться в интернет. Причин может быть три.</p>
         <ul>
           <li>
