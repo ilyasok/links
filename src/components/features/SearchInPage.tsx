@@ -98,9 +98,9 @@ export const SearchInPage: React.FC = () => {
 
   const [query, setQuery] = useState("");
 
-  const [results, setResults] = useState<{title: string; content: string; id: string}[]>(
-    []
-  );
+  const [results, setResults] = useState<
+    {title: string; content: string; id: string; tag?: string}[]
+  >([]);
 
   const [selectedResultIndex, setSelectedResultIndex] = useState(-1);
 
@@ -584,7 +584,7 @@ export const SearchInPage: React.FC = () => {
             </div>
           )}
           {results.length > 0 &&
-            results.map(({title, content, id}, index) => (
+            results.map(({title, content, id, tag}, index) => (
               <div key={id}>
                 <motion.button
                   ref={(el) => {
@@ -606,6 +606,13 @@ export const SearchInPage: React.FC = () => {
                     className={`search-header ${index === selectedResultIndex ? "search-selected" : ""}`}
                   >
                     <p className="search-title">{title.replace(/^[+-]+/, "").trim()}</p>
+                    {tag && tag.trim() !== "" && (
+                      <div className="search-tags">
+                        {tag.split(", ").map((t, index) => (
+                          <mark key={index}>{t}</mark>
+                        ))}
+                      </div>
+                    )}
                   </div>
                   <p
                     className="search-content"

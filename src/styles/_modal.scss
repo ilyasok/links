@@ -20,7 +20,9 @@
 
   mark {
     display: block;
-    transition: opacity background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition:
+      opacity,
+      background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     cursor: pointer;
     border: 1px solid var(--mark_border);
     border-radius: $roundness;
@@ -272,6 +274,9 @@
   }
 
   &-header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
     transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     cursor: pointer;
     border-top: solid 1px var(--summary_border);
@@ -371,6 +376,31 @@
     margin-block: 15px;
     font-weight: 700;
     font-size: 0.85rem;
+  }
+
+  &-tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    opacity: 1;
+    margin: 0;
+    width: 100%;
+    font-size: 13px;
+
+    mark {
+      text-wrap: wrap;
+      filter: saturate(0.5);
+      outline: solid 1px var(--summary_border);
+      background-color: var(--button_background);
+      padding: 2px 5px;
+      color: var(--summary_text);
+      font-weight: 700;
+      font-size: 0.65rem;
+      line-height: 1.25;
+    }
   }
 }
 
