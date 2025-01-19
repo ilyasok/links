@@ -27,3 +27,10 @@ th {
   padding: 5px 10px;
   text-align: center;
 }
+
+.table-colored-title {
+  outline: 1px solid var(--mark_border);
+  background-color: var(--mark_background);
+  color: var(--mark_text);
+  font-weight: 700;
+}
