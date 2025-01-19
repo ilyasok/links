@@ -109,10 +109,9 @@ const AEInterface: React.FC = () => {
         <p>
           Для возможности прикрепления таких окон в рабочее пространство скрипты формата{" "}
           <mark className="file">.jsx</mark> или <mark className="file">.jsxbin</mark>{" "}
-          необходимо переместить в папку
-          <mark className="path">ScriptUI Panels</mark>. После этого требуется
-          перезагрузка <mark className="app">After Effects</mark>, если приложение уже
-          было запущено.
+          необходимо переместить в папку <mark className="path">ScriptUI Panels</mark>.
+          После этого требуется перезагрузка <mark className="app">After Effects</mark>,
+          если приложение уже было запущено.
         </p>
         <VideoFigure
           styleClass="figure_windows-dark"
