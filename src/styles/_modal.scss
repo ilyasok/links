@@ -236,7 +236,7 @@
 
   &-results {
     outline: 1px solid var(--content-background-border);
-    border-radius: $roundness;
+    border-radius: $roundness * 1.5;
     max-height: 65lvh;
     overflow-y: auto;
     scrollbar-color: var(--summary_border) var(--content-background-color);
@@ -353,7 +353,7 @@
       flex: 1;
       transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
       border: 2px solid var(--button_border);
-      border-radius: $roundness * 0.75;
+      border-radius: $roundness;
       background-color: var(--button_background);
       padding-inline: 10px;
       padding-block: 5px;
