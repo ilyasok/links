@@ -441,14 +441,16 @@
 
   &-selector {
     display: flex;
-    flex-wrap: initial;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
     gap: 10px;
+    margin-inline: 10px;
     margin-block: 20px;
   }
 
   &-button {
     display: flex;
+    flex: 1;
     flex-wrap: wrap;
     align-items: center;
     gap: 10px;
@@ -456,7 +458,7 @@
     border-radius: $roundness;
     background-color: var(--links_background);
     padding: 10px;
-    max-width: max-content;
+    max-width: 100%;
     overflow-y: hidden;
     font-weight: 500;
     font-size: 0.875rem;
