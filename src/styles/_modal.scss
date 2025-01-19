@@ -1,7 +1,6 @@
 @use "@/styles/mixins" as *;
 
 // *: стили для обычных модальных окон
-
 .modal {
   display: flex;
   flex-direction: column;
@@ -129,7 +128,6 @@
 }
 
 // *: стили для ошибок
-
 .error {
   &-container {
     display: flex;
@@ -214,7 +212,6 @@
 }
 
 // *: стили для поиска
-
 .search {
   &-input {
     padding-inline-start: 16px;
@@ -227,21 +224,20 @@
       flex-wrap: nowrap;
       justify-content: space-between;
       gap: 10px;
-      margin-bottom: 20px;
-      border: 1px solid var(--content-background-border);
+      margin: 15px;
+      margin-block-end: 0;
+      outline: 1px solid var(--content-background-border);
       border-radius: $roundness;
       padding-inline-end: 16px;
-      width: 100%;
     }
   }
 
   &-results {
-    border: 1px solid var(--content-background-border);
+    outline: 1px solid var(--content-background-border);
     border-radius: $roundness;
-    padding-inline: 10px;
-    max-height: 70vh;
+    max-height: 65lvh;
     overflow-y: auto;
-    scrollbar-color: var(--accent) var(--content-background-color);
+    scrollbar-color: var(--summary_border) var(--content-background-color);
     scrollbar-width: thin;
 
     mark {
@@ -259,7 +255,7 @@
 
     &::-webkit-scrollbar-thumb {
       border-radius: $roundness;
-      background-color: var(--accent);
+      background-color: var(--summary_background);
     }
 
     &::-webkit-scrollbar-track {
@@ -270,11 +266,12 @@
 
   &-link {
     display: block;
+    margin-inline: 10px;
     margin-block: 10px;
     border-radius: $roundness;
   }
 
-  &-title {
+  &-header {
     transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     cursor: pointer;
     border-top: solid 1px var(--summary_border);
@@ -282,30 +279,102 @@
     border-bottom: solid 4px var(--summary_border);
     border-left: solid 1px var(--summary_border);
     border-radius: $roundness;
+    background-image: linear-gradient(to bottom, var(--summary_background), transparent);
     background-color: var(--summary_background);
     padding: 10px 15px;
-    color: var(--summary_text);
-    font-weight: 800;
-    font-size: 1.25rem;
-    line-height: 1.25;
-    font-family: "Mulish", sans-serif;
-    text-transform: uppercase;
 
     &:hover {
       background-color: var(--links_hover);
     }
   }
 
+  &-title {
+    color: var(--summary_text);
+    font-weight: 800;
+    font-size: 1.25rem;
+    line-height: 1.25;
+    font-family: "Mulish", sans-serif;
+    text-transform: uppercase;
+  }
+
   &-content {
-    line-clamp: 3;
-    padding: 10px;
+    margin-block-start: 10px;
+    border: solid 1px var(--content-background-border);
+    border-radius: $roundness;
+    background-color: var(--content-background-color);
+    padding-inline: 10px;
+    padding-block: 8px;
     overflow: hidden;
     font-size: 0.9375rem;
+  }
+
+  &-selected {
+    transition:
+      background-color,
+      outline 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    outline: 1px solid var(--accent);
+
+    .search-header {
+      background-color: var(--links_hover);
+    }
+
+    .search-content {
+      background-color: var(--links_background);
+    }
+  }
+
+  &-no-results {
+    opacity: 0.75;
+    margin-block: auto;
+    padding: 20px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  &-category {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 5px;
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+
+    button,
+    a {
+      text-wrap: wrap;
+      flex: 1;
+      transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+      border: 2px solid var(--button_border);
+      border-radius: $roundness * 0.75;
+      background-color: var(--button_background);
+      padding-inline: 10px;
+      padding-block: 5px;
+      min-width: 165px;
+      color: var(--summary_text);
+      font-weight: 700;
+      font-size: 0.875rem;
+      text-align: center;
+      text-decoration: none;
+
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+  }
+
+  &-modal-title {
+    opacity: 0.75;
+    margin-inline: 20px;
+    margin-block: 15px;
+    font-weight: 700;
+    font-size: 0.85rem;
   }
 }
 
 // *: стили для донатов
-
 .support {
   display: flex;
   justify-content: flex-end;
@@ -320,7 +389,6 @@
 }
 
 // *: стили для смены темы
-
 .theme {
   &-slider {
     display: flex;
