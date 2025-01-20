@@ -1503,46 +1503,6 @@ const AEErrors: React.FC = () => {
           до последних версий.
         </p>
       </DetailsSummary>
-      <DetailsSummary title="Код ошибки 1 или 501 при установке After Effects">
-        <p>
-          У вас было криво установлено в системе приложение{" "}
-          <mark className="app">Adobe Creative Cloud</mark>. Очистите остатки от него с
-          помощью{" "}
-          <a href="https://helpx.adobe.com/ru/creative-cloud/kb/cc-cleaner-tool-installation-problems.html">
-            Adobe Creative Cloud Cleaner
-          </a>{" "}
-          и повторите попытку установки заново.
-        </p>
-        <p>
-          Если очистка с помощью <mark className="app">Adobe Creative Cleaner Tool</mark>{" "}
-          не помогла, почистите папку{" "}
-          <mark className="path">C:\Program Files (x86)\Common Files\Adobe</mark> и{" "}
-          <mark className="path">C:\Program Files\Adobe</mark> от лишних хвостов.
-        </p>
-      </DetailsSummary>
-      <DetailsSummary title="Код ошибки 21 при установке After Effects или 'операционная система не соответствует минимальным требованиям для этой программы установки'">
-        <p>
-          Вы пытаетесь установить <mark className="app">After Effects 2024</mark> или
-          новее на Windows 10 сборки 21H2 или старее. Если у вас стоит сборка LTSC,
-          поздравляю - новее сборки, чем 21H2 для вас нет, переустанавливайте систему на
-          редакцию Home или Pro. Или установите более старые сборки{" "}
-          <mark className="app">After Effects</mark>.
-        </p>
-        <AdditionInfo>
-          Текущую сборку Windows вы можете посмотреть открыв{" "}
-          <mark className="app">winver</mark>.
-        </AdditionInfo>
-        <p>
-          Для решения этой проблемы прочтите{" "}
-          <a href="https://helpx.adobe.com/ru/after-effects/system-requirements.html">
-            системные требования After Effects
-          </a>{" "}
-          и найдите раздел про минимальную требуемую операционную систему. На момент
-          написания этого пункта требуется минимум Windows 10 22H2 или Windows 11 21H2.
-          Затем откройте раздел с обновлениями Windows и обновите систему до максимально
-          возможной версии, или установите 22H2 поверх существующей Windows 10.
-        </p>
-      </DetailsSummary>
     </div>
   );
 };
