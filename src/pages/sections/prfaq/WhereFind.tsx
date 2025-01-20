@@ -380,9 +380,1067 @@ const PRWhereFind: React.FC = () => {
         </p>
       </DetailsSummary>
       <DetailsSummary title="Где найти таблицу перевода стандартных эффектов с русского интерфейса на английский?">
+        <AdditionWarning>
+          Перевод и наличие эффектов, а также способ их работы может отличаться в
+          зависимости от версии <mark className="app">Premiere Pro</mark>. Также
+          рекомендуем переключить интерфейс на английский язык, чтобы не возвращаться к
+          этой таблице снова и снова. Перевод встроенных пресетов в данной таблице
+          отсутствует.
+        </AdditionWarning>
         <p>
-          {/* FIXME: предположим что пользователь не хочет менять язык. про колхозный способ двойного языка и про таблицу эффектов */}
+          Пользователям, использующие русскоязычный интерфейс{" "}
+          <mark className="app">Premiere Pro</mark>, иногда бывает трудно найти эффект,
+          который обозначен на английском языке. В таких случаях можно обратиться к
+          таблице перевода.
         </p>
+        <AdditionInfo>
+          Для открытия функции поиска по странице в самом браузере - нажмите на кнопку{" "}
+          <mark className="key">F3</mark>. Нажатие на{" "}
+          <mark className="key">Ctrl + F</mark> откроет модальное окно поиска по всем
+          пунктам на этой странице и в нём таблицы не индексируются.
+        </AdditionInfo>
+        <table className="table">
+          <thead>
+            <tr>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td
+                colSpan={2}
+                className="table-colored-title"
+                style={{filter: "saturate(0.25)"}}
+              >
+                Аудиоэффекты (Audio Effects)
+              </td>
+            </tr>
+            <tr>
+              <td>Баланс</td>
+              <td>Balance</td>
+            </tr>
+            <tr>
+              <td>Без звука</td>
+              <td>Mute</td>
+            </tr>
+            <tr>
+              <td>Бинауральный - Ambisonics</td>
+              <td>Binauralizer - Ambisonics</td>
+            </tr>
+            <tr>
+              <td>Громкость</td>
+              <td>Volume</td>
+            </tr>
+            <tr>
+              <td>Панорамирование - Ambisonics</td>
+              <td>Panner - Ambisonics</td>
+            </tr>
+            <tr>
+              <td
+                colSpan={2}
+                className="table-colored-title"
+              >
+                Амплитуда и сжатие (Amplitude and Compression)
+              </td>
+            </tr>
+            <tr>
+              <td>-</td>
+              <td>DeEsser</td>
+            </tr>
+            <tr>
+              <td>Громкость канала</td>
+              <td>Channel Volume</td>
+            </tr>
+            <tr>
+              <td>Динамика</td>
+              <td>Dynamics</td>
+            </tr>
+            <tr>
+              <td>Жесткий Ограничитель</td>
+              <td>Hard Limiter</td>
+            </tr>
+            <tr>
+              <td>Компрессор с трубчатым моделированием</td>
+              <td>Tube-modeled Compressor</td>
+            </tr>
+            <tr>
+              <td>Микширование каналов</td>
+              <td>Channel Mixer</td>
+            </tr>
+            <tr>
+              <td>Многополосный компрессор</td>
+              <td>Multiband Compressor</td>
+            </tr>
+            <tr>
+              <td>Обработка динамических характеристик</td>
+              <td>Dynamic Processing</td>
+            </tr>
+            <tr>
+              <td>Однополосый компрессор</td>
+              <td>Single-band Compressor</td>
+            </tr>
+            <tr>
+              <td>Усилить</td>
+              <td>Amplify</td>
+            </tr>
+            <tr>
+              <td
+                colSpan={2}
+                className="table-colored-title"
+              >
+                Задержка и эхо (Delay and Echo)
+              </td>
+            </tr>
+            <tr>
+              <td>Аналоговая задержка</td>
+              <td>Analog Delay</td>
+            </tr>
+            <tr>
+              <td>Задержка</td>
+              <td>Delay</td>
+            </tr>
+            <tr>
+              <td>Многократное эхо</td>
+              <td>Multitap Delay</td>
+            </tr>
+            <tr>
+              <td
+                colSpan={2}
+                className="table-colored-title"
+              >
+                Фильтр и эквалайзер (Filter and EQ)
+              </td>
+            </tr>
+            <tr>
+              <td>Бас</td>
+              <td>Bass</td>
+            </tr>
+            <tr>
+              <td>Верхние частоты</td>
+              <td>Treble</td>
+            </tr>
+            <tr>
+              <td>Графический эквалайзер (10 полос)</td>
+              <td>Graphic Equalizer (10 Bands)</td>
+            </tr>
+            <tr>
+              <td>Графический эквалайзер (20 полос)</td>
+              <td>Graphic Equalizer (20 Bands)</td>
+            </tr>
+            <tr>
+              <td>Графический эквалайзер (30 полос)</td>
+              <td>Graphic Equalizer (30 Bands)</td>
+            </tr>
+            <tr>
+              <td>Научный фильтр</td>
+              <td>Scientific Filter</td>
+            </tr>
+            <tr>
+              <td>Параметрический эквалайзер</td>
+              <td>Parametric Equalizer</td>
+            </tr>
+            <tr>
+              <td>Полоса пропускания</td>
+              <td>Bandpass</td>
+            </tr>
+            <tr>
+              <td>Простой параметрический эквалайзер</td>
+              <td>Simple Parametric EQ</td>
+            </tr>
+            <tr>
+              <td>Простой узкополосный блокирующий фильтр</td>
+              <td>Simple Notch Filter</td>
+            </tr>
+            <tr>
+              <td>Узкополосный блокирующий фильтр</td>
+              <td>Notch Filter</td>
+            </tr>
+            <tr>
+              <td>Фильтр FFT</td>
+              <td>FFT Filter</td>
+            </tr>
+            <tr>
+              <td>Фильтр высоких частот</td>
+              <td>Lowpass</td>
+            </tr>
+            <tr>
+              <td>Фильтр низких частот</td>
+              <td>Highpass</td>
+            </tr>
+            <tr>
+              <td
+                colSpan={2}
+                className="table-colored-title"
+              >
+                Модуляция (Modulation)
+              </td>
+            </tr>
+            <tr>
+              <td>-</td>
+              <td>Phaser</td>
+            </tr>
+            <tr>
+              <td>Флэнжер</td>
+              <td>Flanger</td>
+            </tr>
+            <tr>
+              <td>Хор/флэнжер</td>
+              <td>Chorus/Flanger</td>
+            </tr>
+            <tr>
+              <td
+                colSpan={2}
+                className="table-colored-title"
+              >
+                Снижение шума/восстановление (Noise Reduction/Restoration)
+              </td>
+            </tr>
+            <tr>
+              <td>-</td>
+              <td>DeHummer</td>
+            </tr>
+            <tr>
+              <td>Автоматическое удаление щелчков</td>
+              <td>Automatic Click Remover</td>
+            </tr>
+            <tr>
+              <td>Удалить эхо</td>
+              <td>DeReverb</td>
+            </tr>
+            <tr>
+              <td>Уменьшение шума</td>
+              <td>DeNoise</td>
+            </tr>
+            <tr>
+              <td
+                colSpan={2}
+                className="table-colored-title"
+              >
+                Реверберация (Reverb)
+              </td>
+            </tr>
+            <tr>
+              <td>Реверберация витка</td>
+              <td>Convolution Reverb</td>
+            </tr>
+            <tr>
+              <td>Реверберация окружающего звучания</td>
+              <td>Surround Reverb</td>
+            </tr>
+            <tr>
+              <td>Студийная реверберация</td>
+              <td>Studio Reverb</td>
+            </tr>
+            <tr>
+              <td
+                colSpan={2}
+                className="table-colored-title"
+              >
+                Особый (Special)
+              </td>
+            </tr>
+            <tr>
+              <td>-</td>
+              <td>Loudness Radar</td>
+            </tr>
+            <tr>
+              <td>Заполнить левый правым</td>
+              <td>Fill Left with Right</td>
+            </tr>
+            <tr>
+              <td>Заполнить правый левым</td>
+              <td>Fill Right with Left</td>
+            </tr>
+            <tr>
+              <td>Измеритель громкости</td>
+              <td>Loudness Meter</td>
+            </tr>
+            <tr>
+              <td>Искажение</td>
+              <td>Distortion</td>
+            </tr>
+            <tr>
+              <td>Мастеринг</td>
+              <td>Mastering</td>
+            </tr>
+            <tr>
+              <td>Набор для гитары</td>
+              <td>GuitarSuite</td>
+            </tr>
+            <tr>
+              <td>Обратить</td>
+              <td>Invert</td>
+            </tr>
+            <tr>
+              <td>Поменять каналы</td>
+              <td>Swap Channels</td>
+            </tr>
+            <tr>
+              <td>Расширитель вокала</td>
+              <td>Vocal Enhancer</td>
+            </tr>
+            <tr>
+              <td
+                colSpan={2}
+                className="table-colored-title"
+              >
+                Стереоизображения (Stereo Imagery)
+              </td>
+            </tr>
+            <tr>
+              <td>Расширение стерео</td>
+              <td>Stereo Expander</td>
+            </tr>
+            <tr>
+              <td
+                colSpan={2}
+                className="table-colored-title"
+              >
+                Время и тональность (Time and Pitch)
+              </td>
+            </tr>
+            <tr>
+              <td>Изменение высоты звука</td>
+              <td>Pitch Shifter</td>
+            </tr>
+            <tr>
+              <td
+                colSpan={2}
+                className="table-colored-title"
+                style={{filter: "saturate(0.5)"}}
+              >
+                Аудиопереходы (Audio Transitions)
+              </td>
+            </tr>
+            <tr>
+              <td
+                colSpan={2}
+                className="table-colored-title"
+              >
+                Перекрытие звуков (Crossfade)
+              </td>
+            </tr>
+            <tr>
+              <td>Постоянная мощность</td>
+              <td>Constant Power</td>
+            </tr>
+            <tr>
+              <td>Постоянное усиление</td>
+              <td>Constant Gain</td>
+            </tr>
+            <tr>
+              <td>Экспоненциальное затухание</td>
+              <td>Exponential Fade</td>
+            </tr>
+            <tr>
+              <td
+                colSpan={2}
+                className="table-colored-title"
+                style={{filter: "saturate(0.5)"}}
+              >
+                Видеоэффекты (Video Effects)
+              </td>
+            </tr>
+            <tr>
+              <td
+                colSpan={2}
+                className="table-colored-title"
+              >
+                Видео (Video)
+              </td>
+            </tr>
+            <tr>
+              <td>Метаданные и вставка временного кода</td>
+              <td>Metadata & Timecode Burn-in</td>
+            </tr>
+            <tr>
+              <td>Простой текст</td>
+              <td>Simple Text</td>
+            </tr>
+            <tr>
+              <td>Согласование SDR</td>
+              <td>SDR Conform</td>
+            </tr>
+            <tr>
+              <td
+                colSpan={2}
+                className="table-colored-title"
+              >
+                Видео с погружением (Immersive Video)
+              </td>
+            </tr>
+            <tr>
+              <td>Градиенты цвета VR</td>
+              <td>VR Color Gradients</td>
+            </tr>
+            <tr>
+              <td>Повернуть сферу VR</td>
+              <td>VR Rotate Sphere</td>
+            </tr>
+            <tr>
+              <td>Плоскость в сферу VR</td>
+              <td>VR Plate to Sphere</td>
+            </tr>
+            <tr>
+              <td>Понижение уровня шума VR</td>
+              <td>VR De-Noise</td>
+            </tr>
+            <tr>
+              <td>Проекция VR</td>
+              <td>VR Projection</td>
+            </tr>
+            <tr>
+              <td>Размытие VR</td>
+              <td>VR Blur</td>
+            </tr>
+            <tr>
+              <td>Свечение VR</td>
+              <td>VR Glow</td>
+            </tr>
+            <tr>
+              <td>Увеличить четкость VR</td>
+              <td>VR Sharpen</td>
+            </tr>
+            <tr>
+              <td>Фрактальный шум VR</td>
+              <td>VR Fractal Noise</td>
+            </tr>
+            <tr>
+              <td>Хроматические абберации VR</td>
+              <td>VR Chromatic Aberrations</td>
+            </tr>
+            <tr>
+              <td>Цифровой сбой VR</td>
+              <td>VR Digital Glitch</td>
+            </tr>
+            <tr>
+              <td
+                colSpan={2}
+                className="table-colored-title"
+              >
+                Время (Time)
+              </td>
+            </tr>
+            <tr>
+              <td>Время постеризации</td>
+              <td>Posterize Time</td>
+            </tr>
+            <tr>
+              <td>Эхо</td>
+              <td>Echo</td>
+            </tr>
+            <tr>
+              <td
+                colSpan={2}
+                className="table-colored-title"
+              >
+                Генерировать (Generate)
+              </td>
+            </tr>
+            <tr>
+              <td>4-цветный градиент</td>
+              <td>4-Color Gradient</td>
+            </tr>
+            <tr>
+              <td>Блики</td>
+              <td>Lens Flare</td>
+            </tr>
+            <tr>
+              <td>Градиент</td>
+              <td>Ramp</td>
+            </tr>
+            <tr>
+              <td>Молния</td>
+              <td>Lightning</td>
+            </tr>
+            <tr>
+              <td
+                colSpan={2}
+                className="table-colored-title"
+              >
+                Изменить (Adjust)
+              </td>
+            </tr>
+            <tr>
+              <td>-</td>
+              <td>ProcAmp</td>
+            </tr>
+            <tr>
+              <td>Извлечь</td>
+              <td>Extract</td>
+            </tr>
+            <tr>
+              <td>Уровни</td>
+              <td>Levels</td>
+            </tr>
+            <tr>
+              <td>Эффекты освещения</td>
+              <td>Lighting Effects</td>
+            </tr>
+            <tr>
+              <td
+                colSpan={2}
+                className="table-colored-title"
+              >
+                Искажение
+              </td>
+            </tr>
+            <tr>
+              <td>Вихревое смещение</td>
+              <td>Turbulent Displace</td>
+            </tr>
+            <tr>
+              <td>Волнообразная деформация</td>
+              <td>Wave Warp</td>
+            </tr>
+            <tr>
+              <td>Зеркало</td>
+              <td>Mirror</td>
+            </tr>
+            <tr>
+              <td>Искажение линзы</td>
+              <td>Lens Distortion</td>
+            </tr>
+            <tr>
+              <td>Привязка по углам</td>
+              <td>Corner Pin</td>
+            </tr>
+            <tr>
+              <td>Скручивание</td>
+              <td>Twirl</td>
+            </tr>
+            <tr>
+              <td>Смещение</td>
+              <td>Offset</td>
+            </tr>
+            <tr>
+              <td>Стабилизатор деформации</td>
+              <td>Warp Stabilizer</td>
+            </tr>
+            <tr>
+              <td>Сферизация</td>
+              <td>Spherize</td>
+            </tr>
+            <tr>
+              <td>Увеличение</td>
+              <td>Magnify</td>
+            </tr>
+            <tr>
+              <td>Устранение эффекта плавающего затвора</td>
+              <td>Rolling Shutter Repair</td>
+            </tr>
+            <tr>
+              <td
+                colSpan={2}
+                className="table-colored-title"
+              >
+                Канал (Channel)
+              </td>
+            </tr>
+            <tr>
+              <td>Обратить</td>
+              <td>Invert</td>
+            </tr>
+            <tr>
+              <td
+                colSpan={2}
+                className="table-colored-title"
+              >
+                Контроль изображения (Image Correction)
+              </td>
+            </tr>
+            <tr>
+              <td>Гамма-коррекция</td>
+              <td>Gamma Correction</td>
+            </tr>
+            <tr>
+              <td>Замена цвета</td>
+              <td>Color Replace</td>
+            </tr>
+            <tr>
+              <td>Фильтр цвета</td>
+              <td>Color Pass</td>
+            </tr>
+            <tr>
+              <td>Черное и белое</td>
+              <td>Black & White</td>
+            </tr>
+            <tr>
+              <td
+                colSpan={2}
+                className="table-colored-title"
+              >
+                Коррекция цвета (Color Correction)
+              </td>
+            </tr>
+            <tr>
+              <td>-</td>
+              <td>ASC CDL</td>
+            </tr>
+            <tr>
+              <td>Яркость и контрастность</td>
+              <td>Brightness & Contrast</td>
+            </tr>
+            <tr>
+              <td>Ограничитель видео</td>
+              <td>Video Limiter</td>
+            </tr>
+            <tr>
+              <td>Оттенок</td>
+              <td>Tint</td>
+            </tr>
+            <tr>
+              <td>Цвет Lumetri</td>
+              <td>Lumetri Color</td>
+            </tr>
+            <tr>
+              <td>Цветовой баланс</td>
+              <td>Color Balance</td>
+            </tr>
+            <tr>
+              <td
+                colSpan={2}
+                className="table-colored-title"
+              >
+                Переход (Transition)
+              </td>
+            </tr>
+            <tr>
+              <td>Градиентное вытеснение</td>
+              <td>Gradient Wipe</td>
+            </tr>
+            <tr>
+              <td>Линейное вытеснение</td>
+              <td>Linear Wipe</td>
+            </tr>
+            <tr>
+              <td>Растворение блоков</td>
+              <td>Block Dissolve</td>
+            </tr>
+            <tr>
+              <td
+                colSpan={2}
+                className="table-colored-title"
+              >
+                Перспектива (Perspective)
+              </td>
+            </tr>
+            <tr>
+              <td>Базовый 3D</td>
+              <td>Basic 3D</td>
+            </tr>
+            <tr>
+              <td>Тень</td>
+              <td>Drop Shadow</td>
+            </tr>
+            <tr>
+              <td
+                colSpan={2}
+                className="table-colored-title"
+              >
+                Преобразовать (Transform)
+              </td>
+            </tr>
+            <tr>
+              <td>Автоматическое центрирование</td>
+              <td>Auto Reframe</td>
+            </tr>
+            <tr>
+              <td>Зеркальное отражение по вертикали</td>
+              <td>Vertical Flip</td>
+            </tr>
+            <tr>
+              <td>Зеркальное отражение по горизонтали</td>
+              <td>Horizontal Flip</td>
+            </tr>
+            <tr>
+              <td>Обрезать</td>
+              <td>Crop</td>
+            </tr>
+            <tr>
+              <td>Преобразовать</td>
+              <td>Transform</td>
+            </tr>
+            <tr>
+              <td>Растушевка границ</td>
+              <td>Edge Feather</td>
+            </tr>
+            <tr>
+              <td
+                colSpan={2}
+                className="table-colored-title"
+              >
+                Прозрачное наложение (Keying)
+              </td>
+            </tr>
+            <tr>
+              <td>Изменение альфа-канала</td>
+              <td>Alpha Adjust</td>
+            </tr>
+            <tr>
+              <td>Ключ Ultra</td>
+              <td>Ultra Key</td>
+            </tr>
+            <tr>
+              <td>Ключ маски дорожки</td>
+              <td>Track Matte Key</td>
+            </tr>
+            <tr>
+              <td>Ключ яркости</td>
+              <td>Luma Key</td>
+            </tr>
+            <tr>
+              <td>Цветовой ключ</td>
+              <td>Color Key</td>
+            </tr>
+            <tr>
+              <td
+                colSpan={2}
+                className="table-colored-title"
+              >
+                Размытие и резкость (Blur & Sharpen)
+              </td>
+            </tr>
+            <tr>
+              <td>Контурная резкость</td>
+              <td>Unsharp Mask</td>
+            </tr>
+            <tr>
+              <td>Направленное размытие</td>
+              <td>Directional Blur</td>
+            </tr>
+            <tr>
+              <td>Размытие камеры</td>
+              <td>Camera Blur</td>
+            </tr>
+            <tr>
+              <td>Размытие по Гауссу</td>
+              <td>Gaussian Blur</td>
+            </tr>
+            <tr>
+              <td>Увеличить четкость</td>
+              <td>Sharpen</td>
+            </tr>
+            <tr>
+              <td>Уменьшить мерцание в чересстрочной развертке</td>
+              <td>Reduce Interlace Flicker</td>
+            </tr>
+            <tr>
+              <td
+                colSpan={2}
+                className="table-colored-title"
+              >
+                Стилизация (Stylize)
+              </td>
+            </tr>
+            <tr>
+              <td>Выделение краев</td>
+              <td>Find Edges</td>
+            </tr>
+            <tr>
+              <td>Мазки кистью</td>
+              <td>Brush Strokes</td>
+            </tr>
+            <tr>
+              <td>Мозаика</td>
+              <td>Mosaic</td>
+            </tr>
+            <tr>
+              <td>Постеризация</td>
+              <td>Posterize</td>
+            </tr>
+            <tr>
+              <td>Проблесковый свет</td>
+              <td>Strobe Light</td>
+            </tr>
+            <tr>
+              <td>Репликация</td>
+              <td>Replicate</td>
+            </tr>
+            <tr>
+              <td>Свечение альфа-канала</td>
+              <td>Alpha Glow</td>
+            </tr>
+            <tr>
+              <td>Цветовое тиснение</td>
+              <td>Color Emboss</td>
+            </tr>
+            <tr>
+              <td>Шерховатые края</td>
+              <td>Roughen Edges</td>
+            </tr>
+            <tr>
+              <td
+                colSpan={2}
+                className="table-colored-title"
+              >
+                Утилита (Utility)
+              </td>
+            </tr>
+            <tr>
+              <td>-</td>
+              <td>ToneMapper</td>
+            </tr>
+            <tr>
+              <td>Конвертер Cineon</td>
+              <td>Cineon Converter</td>
+            </tr>
+            <tr>
+              <td
+                colSpan={2}
+                className="table-colored-title"
+              >
+                Шум и зерно (Noise & Grain)
+              </td>
+            </tr>
+            <tr>
+              <td>Шум</td>
+              <td>Noise</td>
+            </tr>
+            <tr>
+              <td
+                colSpan={2}
+                className="table-colored-title"
+                style={{filter: "saturate(0.25)"}}
+              >
+                Видеопереходы (Video Transitions)
+              </td>
+            </tr>
+            <tr>
+              <td
+                colSpan={2}
+                className="table-colored-title"
+              >
+                Видео с погружением (Immersive Video)
+              </td>
+            </tr>
+            <tr>
+              <td>Вытеснение диафрагмы VR</td>
+              <td>VR Iris Wipe</td>
+            </tr>
+            <tr>
+              <td>Градиентное вытеснение VR</td>
+              <td>VR Gradient Wipe</td>
+            </tr>
+            <tr>
+              <td>Масштабирование Мебиуса VR</td>
+              <td>VR Mobius Zoom</td>
+            </tr>
+            <tr>
+              <td>Световые лучи VR</td>
+              <td>VR Light Rays</td>
+            </tr>
+            <tr>
+              <td>Случайные прямоугольники VR</td>
+              <td>VR Random Blocks</td>
+            </tr>
+            <tr>
+              <td>Сферическое размытие VR</td>
+              <td>VR Spherical Blur</td>
+            </tr>
+            <tr>
+              <td>Утечки света VR</td>
+              <td>VR Light Leaks</td>
+            </tr>
+            <tr>
+              <td>Утечки цветности VR</td>
+              <td>VR Chroma Leaks</td>
+            </tr>
+            <tr>
+              <td
+                colSpan={2}
+                className="table-colored-title"
+              >
+                Вытеснение (Wipe)
+              </td>
+            </tr>
+            <tr>
+              <td>-</td>
+              <td>Barn Doors</td>
+            </tr>
+            <tr>
+              <td>-</td>
+              <td>Inset</td>
+            </tr>
+            <tr>
+              <td>Вытеснение</td>
+              <td>Wipe</td>
+            </tr>
+            <tr>
+              <td>Вытеснение в шахматном порядке</td>
+              <td>Checker Wipe</td>
+            </tr>
+            <tr>
+              <td>Вытеснение полосами</td>
+              <td>Band Wipe</td>
+            </tr>
+            <tr>
+              <td>Жалюзи</td>
+              <td>Venetian Blinds</td>
+            </tr>
+            <tr>
+              <td>Зигзагообразные блоки</td>
+              <td>Zig-Zag Blocks</td>
+            </tr>
+            <tr>
+              <td>Квадраты по спирали</td>
+              <td>Spiral Boxes</td>
+            </tr>
+            <tr>
+              <td>Клиновидное вытеснение</td>
+              <td>Wedge Wipe</td>
+            </tr>
+            <tr>
+              <td>Колесо</td>
+              <td>Pinwheel</td>
+            </tr>
+            <tr>
+              <td>Радиальное вытеснение</td>
+              <td>Radial Wipe</td>
+            </tr>
+            <tr>
+              <td>Разбрызгивание краски</td>
+              <td>Paint Splatter</td>
+            </tr>
+            <tr>
+              <td>Случайное вытеснение</td>
+              <td>Random Wipe</td>
+            </tr>
+            <tr>
+              <td>Случайные прямоугольники</td>
+              <td>Random Blocks</td>
+            </tr>
+            <tr>
+              <td>Циферблат</td>
+              <td>Clock Wipe</td>
+            </tr>
+            <tr>
+              <td>Шахматная доска</td>
+              <td>CheckerBoard</td>
+            </tr>
+            <tr>
+              <td
+                colSpan={2}
+                className="table-colored-title"
+              >
+                Диафрагма (Iris)
+              </td>
+            </tr>
+            <tr>
+              <td>Диафрагма в виде квадрата</td>
+              <td>Iris Box</td>
+            </tr>
+            <tr>
+              <td>Диафрагма в виде креста</td>
+              <td>Iris Cross</td>
+            </tr>
+            <tr>
+              <td>Диафрагма в виде круга</td>
+              <td>Iris Round</td>
+            </tr>
+            <tr>
+              <td>Диафрагма в виде ромба</td>
+              <td>Iris Diamond</td>
+            </tr>
+            <tr>
+              <td
+                colSpan={2}
+                className="table-colored-title"
+              >
+                Листание страницы (Page Peel)
+              </td>
+            </tr>
+            <tr>
+              <td>Листание страницы</td>
+              <td>Page Peel</td>
+            </tr>
+            <tr>
+              <td>Переворачивание страницы</td>
+              <td>Page Turn</td>
+            </tr>
+            <tr>
+              <td
+                colSpan={2}
+                className="table-colored-title"
+              >
+                Масштаб (Zoom)
+              </td>
+            </tr>
+            <tr>
+              <td>Взаимное масштабирование</td>
+              <td>Cross Zoom</td>
+            </tr>
+            <tr>
+              <td
+                colSpan={2}
+                className="table-colored-title"
+              >
+                Растворение (Dissolve)
+              </td>
+            </tr>
+            <tr>
+              <td>Аддитивный наплыв</td>
+              <td>Additive Dissolve</td>
+            </tr>
+            <tr>
+              <td>Монтаж морфа</td>
+              <td>Morph Cut</td>
+            </tr>
+            <tr>
+              <td>Неаддитивное растворение</td>
+              <td>Non-Additive Dissolve</td>
+            </tr>
+            <tr>
+              <td>Перекрестный наплыв</td>
+              <td>Cross Dissolve</td>
+            </tr>
+            <tr>
+              <td>Погружение в белый</td>
+              <td>Dip to White</td>
+            </tr>
+            <tr>
+              <td>Погружение в черный</td>
+              <td>Dip to Black</td>
+            </tr>
+            <tr>
+              <td>Растворение пленки</td>
+              <td>Film Dissolve</td>
+            </tr>
+            <tr>
+              <td
+                colSpan={2}
+                className="table-colored-title"
+              >
+                Скольжение (Slide)
+              </td>
+            </tr>
+            <tr>
+              <td>-</td>
+              <td>Center Split</td>
+            </tr>
+            <tr>
+              <td>-</td>
+              <td>Split</td>
+            </tr>
+            <tr>
+              <td>Выталкивание</td>
+              <td>Push</td>
+            </tr>
+            <tr>
+              <td>Лассо</td>
+              <td>Whip</td>
+            </tr>
+            <tr>
+              <td>Скольжение</td>
+              <td>Slide</td>
+            </tr>
+            <tr>
+              <td>Слайд-шоу по полосам</td>
+              <td>Band Slide</td>
+            </tr>
+          </tbody>
+        </table>
       </DetailsSummary>
     </div>
   );
