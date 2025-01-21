@@ -30,6 +30,7 @@ const Header: React.FC<{title: string}> = ({title}) => {
       style={{
         backgroundColor: isVisible ? "var(--header_background)" : "transparent",
         backdropFilter: isVisible ? "blur(15px)" : "none",
+        WebkitBackdropFilter: isVisible ? "blur(15px)" : "none",
         boxShadow: isVisible ? "0 0 15px 0 var(--header_shadow)" : "none",
         border: isVisible ? "1px solid var(--header_border)" : "1px solid transparent",
       }}
