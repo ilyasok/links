@@ -2,7 +2,12 @@ import React from "react";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 import DetailsSummary from "../../../components/DetailsSummary";
 import {ImageFigure, YouTubeVideo} from "../../../components/ContentFigure";
-import {AdditionInfo, AdditionWarning} from "../../../components/Additions";
+import {
+  AdditionDanger,
+  AdditionInfo,
+  AdditionWarning,
+} from "../../../components/Additions";
+import {Divider} from "antd";
 
 const PRActions: React.FC = () => {
   return (
@@ -261,6 +266,192 @@ const PRActions: React.FC = () => {
           Плагин, приведённый в этом пункте можно скачать из канала{" "}
           <a href="https://t.me/s/aetemp">AETemp</a>.
         </AdditionInfo>
+      </DetailsSummary>
+      <DetailsSummary
+        title="Как и чем можно сделать автоматические субтитры?"
+        tag="транскрибация, subtitle, речь в текст"
+      >
+        <p>
+          В <mark className="app">Premiere Pro</mark> с версии 2022 и новее добавили
+          поддержку автоматического перевода текста в речь. Работает как и на лицензионных
+          версиях, так и на &quot;народных&quot;.
+        </p>
+        <AdditionInfo>
+          На &quot;народных&quot; обычно языковые пакеты не поставляются вместе с
+          дистрибутивом, чтобы не раздувать размер установщика. Но их можно загрузить
+          отдельно по запросу <mark className="copy">Speech To Text</mark> именно для
+          вашей версии <mark className="app">Premiere Pro</mark>. Если вы установите
+          языковой пакет, который предназначен для другой версии{" "}
+          <mark className="app">Premiere Pro</mark> - вы просто забьёте ваше устройство
+          лишним весом, а язык не будет установлен и будет постоянно просить его скачать в
+          программе.
+        </AdditionInfo>
+        <AdditionDanger>
+          Также заранее предупреждаю - по умолчанию в настройках вывода выключен пункт{" "}
+          <mark className="ui">Captions</mark>. Включите его, если вы хотите получить
+          видео с наложенными субтитрами.
+        </AdditionDanger>
+        <Divider>Делаем субтитры в Premiere Pro</Divider>
+        <p>
+          Предположим, что вы уже установили языковые пакеты для конкретно вашей версии{" "}
+          <mark className="app">Premiere Pro</mark> и нужно приступить к транскрибации
+          аудио файла и созданию субтитров. Для этого откройте окно{" "}
+          <mark className="ui">Text</mark> через контекстное меню в{" "}
+          <mark className="ui">Window</mark>. Затем в открывшемся окне в вкладке{" "}
+          <mark className="ui">Transcribe</mark> нажмите на три точки в углу и выберите
+          функцию <mark className="ui">Generate static transcript</mark>.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/premierepro/text_generate_static_transcript.png"
+          imgTitle="Начало генерации текста на основе речи"
+          caption="Text"
+        />
+        <p>
+          В открывшемся окне выберите язык, на котором говорит голос из аудио, параметр
+          разделения дикторов (делить или не делить) и дополнительные параметры, которые
+          доступны при некоторых факторах.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/premierepro/generate_transcribe_settings.png"
+          imgTitle="Настройки генерации текста на основе речи"
+          caption="Generate static transcript"
+        />
+        <p>
+          После этого подождите некоторое время и вы получите какую-никакую расшифровку
+          текста для аудио. На основе этих данных вы можете создать субтитры, выбрав в
+          трёх точках <mark className="ui">Create Captions</mark>, подредактировать их или
+          перемещаться в тот промежуток времени, в котором диктор говорит определённую
+          фразу.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/premierepro/create_captions_from_transcribe.png"
+          imgTitle="Создание субтитров на основе генерации текста"
+          caption="Text"
+        />
+        <Divider>Делаем субтитры через Subtitle Edit</Divider>
+        <AdditionWarning>
+          Демонстрируемая версия <mark className="ui">Subtitle Edit</mark> доступна только
+          для устройств на Windows, увы. Пользователи других операционных систем могут
+          воспользоваться любыми другими сервисами и программами, которые работают с
+          технологией Whisper и позволяют выводить субтитры в{" "}
+          <mark className="file">.srt</mark>.
+        </AdditionWarning>
+        <p>
+          Допустим, нам не нравится результат расшифровки средствами{" "}
+          <mark className="app">Premiere Pro</mark>, какие есть альтернативы? А их на
+          самом деле достаточно много, но расскажу об одном универсальном инструменте.
+          Речь пойдет о <mark className="app">Subtitle Edit</mark>, его можно загрузить{" "}
+          <a href="https://github.com/SubtitleEdit/subtitleedit/releases">
+            на странице релизов в GitHub
+          </a>
+          .
+        </p>
+        <p>
+          После того как вы загрузили, установили и открыли программу, давайте откроем
+          видео или аудио файл. Просто перетащите его в правый нижний угол окна программы.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-light"
+          imgSrc="images/subtitle_edit_import.png"
+          imgTitle="Импорт видео или аудио в Subtitle Edit"
+          caption="Subtitle Edit"
+        />
+        <AdditionInfo>
+          Если у вас установлен <mark className="app">MPC-HC</mark> или{" "}
+          <mark className="app">VLC</mark>, то рекомендую установить этот проигрыватель в
+          программе <mark className="app">Subtitle Edit</mark> как стандартный. Это можно
+          сделать в <mark className="ui">Options &gt; Settings &gt; Video Player</mark>.
+        </AdditionInfo>
+        <p>
+          Затем нам нужно перейти в{" "}
+          <mark className="ui">Video &gt; Audio to text (Whisper)</mark>. Нас попросят
+          скачать <mark className="ui">Whisper.cpp</mark>, но мы откажемся от его
+          скачивания, как-то кривовато он у меня работает. Поэтому нам нужно загрузить
+          альтернативный движок Whisper для распознавания речи -
+          <mark>Purfview&apos;s Faster Whisper</mark>. Для этого в окне в пункте{" "}
+          <mark className="ui">Engine</mark> выберите пункт{" "}
+          <mark className="ui">Purfview&apos;s Faster Whisper</mark> и соглашаемся на
+          загрузку.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-light"
+          imgSrc="images/subtitle_edit_change_engine.png"
+          imgTitle="Изменение движка распознавания речи"
+          caption="Subtitle Edit"
+        />
+        <p>
+          Далее нам нужно скачать сам языковой пакет. Для этого рядом с{" "}
+          <mark className="ui">Choose Model</mark> нажмите на три точки. В открывшемся
+          окне вы можете выбрать любую модель, например <mark>large-v3</mark> или{" "}
+          <mark>large-v2</mark>, чтобы вы могли перевести русскоязычную речь в текст с
+          относительно хорошей точностью.
+        </p>
+        <AdditionInfo>
+          Чем меньше весит модель, тем менее точным может быть распознавание, но требует
+          меньше ресурсов вашего устройства для вычисления.
+        </AdditionInfo>
+        <ImageFigure
+          styleClass="figure_windows-light"
+          imgSrc="images/subtitle_edit_download_models.png"
+          imgTitle="Загрузка моделей распознавания речи"
+          caption="Subtitle Edit"
+        />
+        <p>
+          После успешной загрузки модели выберите язык, на котором основан ваш аудио и
+          нажмите на <mark className="ui">Generate</mark>. Начнётся генерация текста из
+          речи.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-light"
+          imgSrc="images/subtitle_edit_change_language_generate.png"
+          imgTitle="Изменение языка и начало генерации текста из речи"
+          caption="Subtitle Edit"
+        />
+        <AdditionInfo>
+          Если результат от Whisper вас не устраивает, то попробуйте выбрать{" "}
+          <mark className="ui">Audio to text (Vosk/Kaldi)</mark> вместо{" "}
+          <mark className="ui">Audio to text (Whisper)</mark> и начать транскрипцию
+          аналогичным образом.
+        </AdditionInfo>
+        <p>
+          После генерации вы можете подредактировать сгенерированные субтитры в самой
+          программе или сразу сохранить их в формате <mark className="file">.srt</mark>.
+          Сохранить можно через комбинацию клавиш <mark className="key">Ctrl + S</mark>. В
+          открывшемся окне укажите название файла и путь для сохранения.
+        </p>
+        <p>
+          Далее переходим в <mark className="app">Premiere Pro</mark>, возвращаемся к окну{" "}
+          <mark className="ui">Text</mark> и нажимаем на три точки в правом верхнем углу.
+          Там нам нужно перейти во вкладку <mark className="ui">Captions</mark> и выбрать
+          пункт <mark className="ui">Import captions from file</mark> и указываем путь до
+          наших недавно сохранённых субтитров.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/premierepro/import_captions_from_file.png"
+          imgTitle="Импорт субтитров в Premiere Pro"
+          caption="Text"
+        />
+        <p>
+          Затем в открывшемся модальном окне вы можете выбрать тип субтитров и вариант, от
+          чего начинать субтитры, и нажмите на <mark className="ui">OK</mark>.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/premierepro/new_caption_track.png"
+          imgTitle="Создание новой дорожки субтитров"
+          caption="New caption track"
+        />
+        <p>
+          После этого сгенерированные субтитры из{" "}
+          <mark className="app">Subtitle Edit</mark> попадут в ваш проект{" "}
+          <mark className="app">Premiere Pro</mark>. Субтитры можно отредактировать в
+          дальнейшем в окне <mark className="ui">Text</mark> во вкладке{" "}
+          <mark className="ui">Captions</mark>.
+        </p>
       </DetailsSummary>
       <DetailsSummary title="Как и чем разделить голос человека от музыки?">
         <p>
