@@ -154,6 +154,22 @@ export const SearchInPage: React.FC = () => {
         .filter(Boolean)
         .join("\n");
 
+      const tableContent = Array.from(detail.querySelectorAll<HTMLTableElement>("table"))
+        .map((table) => {
+          const rows = Array.from(table.querySelectorAll("tr"));
+
+          return rows
+            .map((row) => {
+              const cells = Array.from(row.querySelectorAll("td, th"))
+                .map((cell) => decodeHtmlEntities(cell.textContent?.trim() ?? ""))
+                .join(" | ");
+
+              return cells;
+            })
+            .join("\n");
+        })
+        .join("\n");
+
       const listItems = Array.from(detail.querySelectorAll<HTMLLIElement>("li"))
         .map((el) => {
           const directChildUl = el.querySelector("ul");
@@ -213,7 +229,7 @@ export const SearchInPage: React.FC = () => {
         .filter(Boolean)
         .join("\n");
 
-      const text = [content, listItems].join("\n");
+      const text = [content, tableContent, listItems].join("\n");
       if (title || text) {
         data.push({title, content: text, id, tag});
       }
