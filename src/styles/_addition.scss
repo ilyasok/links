@@ -1,5 +1,21 @@
 @use "@/styles/mixins" as *;
 
+li > .addition-info,
+li > .addition-warning,
+li > .addition-danger,
+.links > .addition-info,
+.links > .addition-warning,
+.links > .addition-danger {
+  margin-inline: 0;
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
 .addition {
   &-info,
   &-warning,
@@ -7,13 +23,14 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
     margin: 10px;
     margin-block: 15px;
-    line-height: 1.65;
     border-radius: $roundness * 0.75;
-    padding: 10px 15px;
+    padding: 10px;
+    padding-left: 15px;
     font-size: 0.9375rem;
+    line-height: 1.65;
 
     &:first-child {
       margin-top: 10px;
@@ -128,7 +145,8 @@
   align-items: center;
   gap: 10px;
   filter: saturate(0.5) contrast(1.2) opacity(0.9);
-  margin-block: 10px;
+  margin: 10px;
+  margin-block: 15px;
   outline: 1px solid var(--addition_warning-border);
   border-radius: $roundness;
   background-color: var(--addition_warning);

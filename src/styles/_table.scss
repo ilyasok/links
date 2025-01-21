@@ -1,11 +1,12 @@
 @use "@/styles/mixins" as *;
 
 table {
-  margin: 15px auto;
   border-collapse: collapse;
   background-color: var(--table_background);
-  max-width: 1000px;
   font-size: 0.875rem;
+  width: calc(100% - 20px);
+  margin: 10px;
+  box-sizing: border-box;
 }
 
 @media (max-width: 350px) {

@@ -60,12 +60,13 @@ const TgsToJsonModal = () => {
         centered
       >
         <div className="modal">
-          <p className="modal-title">Конвертер .tgs в .json</p>
+          <div className="modal-title">Конвертер .tgs в .json</div>
           <Upload.Dragger
             name="file"
             accept=".tgs"
             beforeUpload={handleFileUpload}
             showUploadList={false}
+            style={{margin: "10px", width: "calc(100% - 20px)"}}
           >
             <div style={{display: "flex", gap: "10px"}}>
               <UploadFileRounded />
@@ -92,6 +93,7 @@ const TgsToJsonModal = () => {
               fontSize: "0.8125rem",
               lineHeight: "1.2",
               textWrap: "balance",
+              marginBlockEnd: "15px",
             }}
           >
             Конвертация идёт локально на вашем устройстве. Результат и качество
