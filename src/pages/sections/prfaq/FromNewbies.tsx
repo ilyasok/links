@@ -1,8 +1,9 @@
 import React from "react";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 import DetailsSummary from "../../../components/DetailsSummary";
-import {VideoFigure} from "../../../components/ContentFigure";
+import {VideoFigure, YouTubeVideo} from "../../../components/ContentFigure";
 import {AdditionDanger, AdditionInfo} from "../../../components/Additions";
+import {FlexibleLinks} from "../../../components/FlexibleLinksFaQ";
 
 const PRFromNewbies: React.FC = () => {
   return (
@@ -12,7 +13,54 @@ const PRFromNewbies: React.FC = () => {
         title="Первый раз установил Premiere Pro, с чего бы мне начать обучение?"
         tag="для новичка, первый раз, только открыл"
       >
-        <p>{/* FIXME: написать!! */}</p>
+        <p>
+          Если вы только начинаете свой путь в монтаже или никогда не использовали{" "}
+          <mark className="app">Premiere Pro</mark> как основной инструмент и хотите
+          разобраться в интерфейсе и его возможностях, то посмотрите плейлист{" "}
+          <a href="https://www.youtube.com/watch?v=Wi-AalXwilg&list=PLcN7xY5E2wrmIlv6SNF2xacsryFtGIfXK&pp=iAQB">
+            Азбука Premiere Pro
+          </a>{" "}
+          от{" "}
+          <a href="https://www.youtube.com/channel/UCmLY17yagzLy6GRiI1nVBow">
+            Ильи Зернова
+          </a>
+          .
+        </p>
+        <YouTubeVideo
+          link="Wi-AalXwilg"
+          caption="Азбука Premiere Pro"
+        />
+        <AdditionInfo>
+          Курс был записан в <mark className="app">Premiere Pro</mark> версии 2019.
+          Некоторые функции могут чуть отличаться от вашей текущей версии программы.
+        </AdditionInfo>
+        <p>
+          Также при желании вы можете отдельно посмотреть курс по работе с вкладкой{" "}
+          <mark className="plugin">Lumetri Color</mark> в{" "}
+          <mark className="app">Premiere Pro</mark> для цветокоррекции различных футажей и
+          исходников от <a href="https://www.youtube.com/@Bolharov">Романа Болгарова</a>.
+        </p>
+        <YouTubeVideo
+          link="xqRnW1T_pNk"
+          caption="Цветокоррекция в Lumetri"
+        />
+        <p>
+          Если вы уже уверенно монтируете в <mark className="app">Premiere Pro</mark>, и
+          хотите узнать что-то новое, то рекомендую заглянуть на каналы ниже.
+        </p>
+        <FlexibleLinks>
+          <a href="https://www.youtube.com/@khs_yt">Хохлов Сабатовский</a>
+          <a href="https://www.youtube.com/@egorlistopadov">Егор Листопадов</a>
+          <a href="https://www.youtube.com/@Profileschool/videos">Profileschool</a>
+          <a href="https://www.youtube.com/@pankovskii/playlists">PANKOVSKII</a>
+          <a href="https://www.youtube.com/@DmitryKolotilshikov/videos">
+            Дмитрий Колотильщиков
+          </a>
+          <a href="https://www.youtube.com/@VIDEODIM/videos">Как монтировать видео</a>
+        </FlexibleLinks>
+        <p style={{textAlign: "center"}}>
+          Надеюсь, вы найдёте что-то полезное для себя. Удачи в ваших начинаниях!
+        </p>
       </DetailsSummary>
       <DetailsSummary
         title="Не понимаю термины от других пользователей Premiere Pro, проясните!"
