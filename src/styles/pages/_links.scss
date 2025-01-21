@@ -24,7 +24,7 @@
     height: 100%;
 
     &:hover {
-      z-index: 15;
+      z-index: 25;
       cursor: pointer;
       background-color: var(--links_hover);
     }
@@ -57,6 +57,7 @@
     }
 
     .description {
+      text-wrap: balance;
       opacity: 80%;
       margin-block-start: 5px;
       font-size: 0.875rem;
