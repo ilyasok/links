@@ -42,7 +42,7 @@
     transition:
       opacity,
       background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    border: solid 1px var(--sber-border);
+    border: solid 2px var(--sber-border);
     background-color: var(--sber-background);
     color: var(--sber-text) !important;
 
@@ -55,7 +55,7 @@
     transition:
       opacity,
       background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    border: solid 1px var(--yoomoney-border);
+    border: solid 2px var(--yoomoney-border);
     background-color: var(--yoomoney-background);
     color: var(--yoomoney-text) !important;
 
@@ -118,7 +118,7 @@
     align-items: center;
     gap: 8px;
     cursor: pointer;
-    border: 1px solid var(--links_border);
+    border: 2px solid var(--links_border);
     border-radius: $roundness;
     background-color: var(--links_background);
     padding: 10px 20px;
@@ -127,6 +127,10 @@
     font-size: 0.95rem;
     text-align: center;
   }
+}
+
+.in-page {
+  border: 1px solid var(--links_border) !important;
 }
 
 // *: стили для ошибок
@@ -192,7 +196,7 @@
     &-button,
     button {
       cursor: pointer;
-      border: 1px solid var(--links_border);
+      border: 2px solid var(--links_border);
       border-radius: $roundness;
       background-color: var(--links_background);
       padding: 10px 20px;
@@ -350,17 +354,16 @@
     button,
     a {
       text-wrap: wrap;
-      flex: 1;
+      flex: 1 0 165px;
       transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
       border: 2px solid var(--button_border);
       border-radius: $roundness;
       background-color: var(--button_background);
       padding-inline: 10px;
       padding-block: 5px;
-      min-width: 165px;
       color: var(--summary_text);
       font-weight: 700;
-      font-size: 0.875rem;
+      font-size: 0.9rem;
       text-align: center;
       text-decoration: none;
 
@@ -454,7 +457,7 @@
     flex-wrap: wrap;
     align-items: center;
     gap: 10px;
-    border: 1px solid var(--links_border);
+    border: 2px solid var(--links_border);
     border-radius: $roundness;
     background-color: var(--links_background);
     padding: 10px;

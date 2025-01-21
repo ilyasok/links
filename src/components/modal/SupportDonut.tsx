@@ -33,7 +33,7 @@ const SupportDonut: React.FC = () => {
     <>
       <div className="support">
         <motion.button
-          className="modal-button"
+          className="modal-button in-page"
           onClick={showModal2}
           style={{
             padding: "10px",
@@ -50,7 +50,7 @@ const SupportDonut: React.FC = () => {
           Сообщить о проблеме
         </motion.button>
         <motion.button
-          className="modal-button"
+          className="modal-button in-page"
           style={{
             padding: "10px",
             fontSize: "0.8125rem",

@@ -42,7 +42,7 @@ const Footer: React.FC<FooterProps> = ({title, initialYear}) => {
         centered
       >
         <div className="modal">
-          <p className="modal-title">О сайте</p>
+          <div className="modal-title">О сайте</div>
           <p>
             Привет, я <a href="https://t.me/m1sh3r">Мишер</a>, создатель этой страницы.
             Идея сайта заключалась в том, чтобы минимизировать надоедливые вопросы по
