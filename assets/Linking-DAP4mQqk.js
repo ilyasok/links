@@ -1,1 +1,0 @@
-import{j as s}from"./index-l2y-iHFw.js";import{G as t}from"./GithubUpdateInfo-38TzvCkN.js";const i=()=>s.jsx("div",{className:"faq-content",children:s.jsx(t,{filePath:"src/pages/sections/aeexprfaq/Linking.tsx"})});export{i as default};
