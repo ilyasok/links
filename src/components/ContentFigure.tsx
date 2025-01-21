@@ -390,18 +390,20 @@ const YouTubeVideo: React.FC<{link: string; caption: string}> = ({link, caption}
   const id = link.split("/").pop();
 
   return (
-    <figure className="figure_browser-youtube">
-      <div className="window-header">
-        <figcaption>
-          <b>YouTube</b>: {caption}
-        </figcaption>
-      </div>
-      <iframe
-        src={`https://www.youtube.com/embed/${id}`}
-        title={caption}
-        allowFullScreen
-      />
-    </figure>
+    <div className="figure_container">
+      <figure className="figure_browser-youtube">
+        <div className="window-header">
+          <figcaption>
+            <b>YouTube</b>: {caption}
+          </figcaption>
+        </div>
+        <iframe
+          src={`https://www.youtube.com/embed/${id}`}
+          title={caption}
+          allowFullScreen
+        />
+      </figure>
+    </div>
   );
 };
 export {ImageFigure, VideoFigure, YouTubeVideo};
