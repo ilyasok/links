@@ -1,4 +1,5 @@
 import {Tooltip, message} from "antd";
+import {motion} from "framer-motion";
 import React, {
   ReactNode,
   createContext,
@@ -129,7 +130,17 @@ const DetailsSummary: React.FC<DetailsSummaryProps> = ({title, children, tag}) =
       onToggle={handleToggle}
       data-tags={tag}
     >
-      <summary className="faq-summary">
+      <motion.summary
+        whileHover={{
+          scale: 1.025,
+          transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
+        }}
+        whileTap={{
+          scale: 0.975,
+          opacity: 0.75,
+        }}
+        className="faq-summary"
+      >
         <div className="faq-summary-left">
           <span style={{fontFamily: "JetBrains Mono, monospace"}}>
             {isOpen ? "-" : "+"}
@@ -157,7 +168,7 @@ const DetailsSummary: React.FC<DetailsSummaryProps> = ({title, children, tag}) =
             </svg>
           </button>
         </Tooltip>
-      </summary>
+      </motion.summary>
       <SpoilerContext.Provider value={isOpen}>
         <section className="faq-section">
           {children}
