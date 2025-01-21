@@ -593,6 +593,11 @@ const AEExport: React.FC = () => {
             В разделе <mark className="ui">Colors</mark> можно изменить битность и
             цветовой диапазон. Обычно там значения меняют редко.
           </li>
+          <li>
+            В <mark className="ui">Audio</mark> лучше указать значение <mark>512</mark>,
+            вместо <mark>Auto</mark>, чтобы вывести звук в аудио без сильной потери
+            качества.
+          </li>
           <AdditionWarning>
             Параметры <mark className="ui">Tuning</mark>,{" "}
             <mark className="ui">H.264 Profiles</mark>, <mark className="ui">GOP</mark>,{" "}
