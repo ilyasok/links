@@ -8,17 +8,19 @@
     flex-direction: row;
     align-items: center;
     gap: 15px;
-    margin-block: 10px;
-    border-radius: $roundness;
+    margin: 10px;
+    margin-block: 15px;
+    line-height: 1.65;
+    border-radius: $roundness * 0.75;
     padding: 10px 15px;
     font-size: 0.9375rem;
 
     &:first-child {
-      margin-top: 0;
+      margin-top: 10px;
     }
 
     &:last-child {
-      margin-bottom: 0;
+      margin-bottom: 10px;
     }
 
     a {
