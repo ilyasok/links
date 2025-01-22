@@ -78,11 +78,6 @@ const PRActions: React.FC = () => {
           Называется <mark className="plugin">BCC Retimer ML</mark> и в сравнении с{" "}
           <mark className="plugin">Twixtor</mark> выдаёт гораздо лучшие результаты.
         </p>
-        <AdditionInfo>
-          Плагин демонстрируется в <mark className="app">After Effects</mark>. Не
-          переживайте, порядок действий можно повторить и в{" "}
-          <mark className="app">Premiere Pro</mark>.
-        </AdditionInfo>
         <YouTubeVideo
           link="YraSxOpy1Qg"
           caption="BCC Retimer ML"
