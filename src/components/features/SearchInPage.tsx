@@ -130,7 +130,7 @@ export const SearchInPage: React.FC = () => {
     return textArea.value;
   };
 
-  const extractDetailsData = () => {
+  const extractDetailsData = (searchWords: string[]) => {
     const details = document.querySelectorAll("details");
 
     const data: {title: string; content: string; id: string; tag?: string}[] = [];
@@ -158,16 +158,33 @@ export const SearchInPage: React.FC = () => {
         .map((table) => {
           const rows = Array.from(table.querySelectorAll("tr"));
 
-          return rows
+          const headerRow = rows[0];
+
+          const headerCells = Array.from(headerRow.querySelectorAll("td, th"))
+            .map((cell) => decodeHtmlEntities(cell.textContent?.trim() ?? ""))
+            .filter((cellContent) => !cellContent.toLowerCase().includes("описание"))
+            .join("</th><th>");
+
+          const bodyRows = rows
+            .slice(1)
             .map((row) => {
               const cells = Array.from(row.querySelectorAll("td, th"))
                 .map((cell) => decodeHtmlEntities(cell.textContent?.trim() ?? ""))
-                .join(" | ");
+                .filter((cellContent) => !cellContent.toLowerCase().includes("видео"))
+                .join("</td><td>");
 
-              return cells;
+              return `<tr><td>${cells}</td></tr>`;
             })
+            .filter((row) =>
+              searchWords.every((word) => row.toLowerCase().includes(word))
+            )
             .join("\n");
+
+          return bodyRows
+            ? `<table><thead><tr><th>${headerCells}</th></tr></thead><tbody>${bodyRows}</tbody></table>`
+            : "";
         })
+        .filter(Boolean)
         .join("\n");
 
       const listItems = Array.from(detail.querySelectorAll<HTMLLIElement>("li"))
@@ -251,7 +268,7 @@ export const SearchInPage: React.FC = () => {
       .split(/\s+/)
       .filter((word) => word.length > 0);
 
-    const detailsData = extractDetailsData();
+    const detailsData = extractDetailsData(searchWords);
 
     const filtered = detailsData.filter(({title, content, tag}) => {
       const titleLower = title.toLowerCase();
@@ -348,18 +365,34 @@ export const SearchInPage: React.FC = () => {
     return highlightText(cleanLines[0] ?? "", query);
   };
 
+  const stripHtmlTags = (text: string) => {
+    const div = document.createElement("div");
+    div.innerHTML = text;
+
+    return div.textContent || div.innerText || "";
+  };
+
   const highlightText = (text: string, query: string) => {
     if (!query.trim()) {
       return text;
     }
 
+    const strippedText = stripHtmlTags(text);
+
     const escapedQuery = query.replace(/[-/\\^$.*+?()[\]{}|]/g, "\\$&");
 
     const regex = new RegExp(`(${escapedQuery.split(/\s+/).join("|")})`, "gi");
 
-    return text.replace(regex, (match) => {
+    const highlightedStrippedText = strippedText.replace(regex, (match) => {
       return match.trim() ? `<mark>${match}</mark>` : match;
     });
+
+    const div = document.createElement("div");
+    div.innerHTML = text;
+
+    const originalHtml = div.innerHTML;
+
+    return originalHtml.replace(strippedText, highlightedStrippedText);
   };
 
   const handleLinkClick = (id: string) => {
