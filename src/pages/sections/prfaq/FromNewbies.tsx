@@ -68,8 +68,12 @@ const PRFromNewbies: React.FC = () => {
       >
         <p>{/* FIXME: написать!! по аналогии как с терминами в аефаке */}</p>
       </DetailsSummary>
-      <DetailsSummary title="А есть список популярных комбинаций клавиш для работы в Premiere Pro?">
-        <p>{/* FIXME: написать!! */}</p>
+      <DetailsSummary
+        title="А есть список популярных комбинаций клавиш для работы в Premiere Pro?"
+        tag="хоткеи, горячие клавиши, шорткаты, ускорение работы"
+      >
+        <p></p>
+        {/* TODO: написать!! */}
       </DetailsSummary>
       <DetailsSummary
         title="Где я могу узнать об нововведениях в обновлениях Premiere Pro?"
@@ -111,18 +115,73 @@ const PRFromNewbies: React.FC = () => {
           <mark className="ui">
             Insert and overwrite sequences as nests or individual clips
           </mark>{" "}
-          и перетяните секвенцию прямо на таймлайн. Если вы хотите - старый{" "}
-          <mark>Nest</mark> можно удалить без всяких проблем.
+          и перетяните секвенцию прямо на таймлайн. Старый <mark>Nest</mark> можно удалить
+          без всяких проблем.
         </p>
-        {/* FIXME: написать!! */}
+        <VideoFigure
+          styleClass="figure_windows-dark"
+          videoSrc="images/premierepro/unnesting_nest.mp4"
+          caption="Premiere Pro"
+        />
+      </DetailsSummary>
+      <DetailsSummary
+        title="Для чего нужны A1 и V1 слева от клипов на таймлайне?"
+        tag="выделение, вставка клипов"
+      >
+        <p>
+          Вы, наверное, не раз замечали параметры слева от ваших клипов, но не всегда
+          понимали, для чего они созданы. Это кнопки{" "}
+          <mark className="ui">Source Patching</mark> и{" "}
+          <mark className="ui">Track Targeting</mark>. Самые крайние левые{" "}
+          <mark className="ui">V1</mark> и <mark className="ui">A1</mark>, или же{" "}
+          <mark className="ui">Source Patching</mark> отвечают за импорт футажей. Отключая
+          либо <mark className="ui">A1</mark> либо <mark className="ui">V1</mark> - вы
+          отключаете возможность импорта либо аудиодорожки, либо видеодорожки. Отключая
+          или включая оба пункта - вы сможете импортировать и видео и аудиодорожку на
+          таймлайн.
+        </p>
+        <YouTubeVideo
+          link="BOW2Fr7SKo0"
+          caption="How to add video and audio to the timeline in Premiere Pro"
+        />
+        <p>
+          А вот <mark className="ui">A1</mark>, <mark className="ui">A2</mark>,{" "}
+          <mark className="ui">A3</mark> и <mark className="ui">V1</mark>,{" "}
+          <mark className="ui">V2</mark>, <mark className="ui">V3</mark>, или же{" "}
+          <mark className="ui">Track Targeting</mark> отвечают за выделение клипов и
+          вставку видео и аудиодорожек на таймлайн.
+        </p>
+        <YouTubeVideo
+          link="pzQnzaRm2OY"
+          caption="Shortcuts for the timeline in Premiere Pro - track targeting"
+        />
       </DetailsSummary>
       <DetailsSummary title="Как вернуть звуковую или видео дорожку на таймлайн?">
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Хочу перевести голос в субтитры, но загрузка падает в бесконечность. Почему функция транскрибации не работает?">
-        <p>{/* FIXME: написать!! */}</p>
-      </DetailsSummary>{" "}
-      <DetailsSummary title="Пропал звук при проигрывании предпросмотра">
+        <p>
+          На &quot;народных&quot; версиях <mark className="app">Premiere Pro</mark>{" "}
+          загрузка языковых моделей для транскрибации речи в текст недоступна, поэтому их
+          нужно устанавливать вручную.
+        </p>
+        <AdditionInfo>
+          Языковые пакеты вы можете скачать в канале{" "}
+          <a href="https://t.me/+Qd9xu7A4TeIwNzY6">склад стройматериалов (Windows)</a> по
+          хештегу <mark className="tag">#speechtotext</mark> или в канале{" "}
+          <a href="https://t.me/+ZqiaMfQRFgM4YmEy">Яблоневый сад (macOS)</a> по поиску{" "}
+          <mark className="tag">Speech To Text</mark>.
+        </AdditionInfo>
+        <AdditionDanger>
+          Устанавливая языковой пакет - смотрите, для какой версии{" "}
+          <mark className="app">Premiere Pro</mark> он предназначен! Версию{" "}
+          <mark className="app">Premiere Pro</mark> вы можете узнать в{" "}
+          <mark className="ui">Help &gt; About Premiere Pro</mark>. Если вы установите
+          языковой пакет для другой версии, отличной от вашей - вы не сможете использовать
+          функцию транскрибации речи в текст.
+        </AdditionDanger>
+      </DetailsSummary>
+      <DetailsSummary title="Почему пропал звук при проигрывании предпросмотра?">
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>{" "}
     </div>

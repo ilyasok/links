@@ -101,13 +101,13 @@ const PRExport: React.FC = () => {
           <tbody>
             <tr>
               <td>8K</td>
-              <td>80–160 Мбит/с</td>
-              <td>120–240 Мбит/с</td>
+              <td>80-160 Мбит/с</td>
+              <td>120-240 Мбит/с</td>
             </tr>
             <tr>
               <td>2160p (4К)</td>
-              <td>35–45 Мбит/с</td>
-              <td>53–68 Мбит/с</td>
+              <td>35-45 Мбит/с</td>
+              <td>53-68 Мбит/с</td>
             </tr>
             <tr>
               <td>1440p (2К)</td>
@@ -154,13 +154,13 @@ const PRExport: React.FC = () => {
           <tbody>
             <tr>
               <td>8K</td>
-              <td>100–200 Мбит/с</td>
-              <td>150–300 Мбит/с</td>
+              <td>100-200 Мбит/с</td>
+              <td>150-300 Мбит/с</td>
             </tr>
             <tr>
               <td>2160p (4К)</td>
-              <td>44–56 Мбит/с</td>
-              <td>66–85 Мбит/с</td>
+              <td>44-56 Мбит/с</td>
+              <td>66-85 Мбит/с</td>
             </tr>
             <tr>
               <td>1440p (2К)</td>
@@ -294,6 +294,9 @@ const PRExport: React.FC = () => {
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Как сохранить свой шаблон с настройками для экспорта секвенций?">
+        <p>{/* FIXME: написать!! */}</p>
+      </DetailsSummary>
+      <DetailsSummary title="Как вывести только часть секвенции?">
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Я сделал работу в Premiere Pro, но мне нужно передать .prproj файл вместе с исходниками другому человеку. Возможно ли это сделать без танцев с бубном?">
