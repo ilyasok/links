@@ -1,0 +1,1 @@
+import{j as t}from"./index-9bi1Ds5z.js";import{G as s}from"./GithubUpdateInfo-D7UXSWte.js";const e=()=>t.jsx("div",{className:"faq-content",children:t.jsx(s,{filePath:"src/pages/sections/aeexprfaq/Start.tsx"})});export{e as default};
