@@ -136,7 +136,6 @@ const DetailsSummary: React.FC<DetailsSummaryProps> = ({title, children, tag}) =
           transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
         }}
         whileTap={{
-          scale: 0.975,
           opacity: 0.75,
         }}
         className="faq-summary"
