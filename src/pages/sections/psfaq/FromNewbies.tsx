@@ -19,7 +19,7 @@ const PSFromNewbies: React.FC = () => {
         <p>{/* FIXME: написать!! по аналогии как с терминами в аефаке */}</p>
       </DetailsSummary>
       <DetailsSummary
-        title="Где я могу узнать об нововведениях в обновлениях After Effects?"
+        title="Где я могу узнать об нововведениях в обновлениях Photoshop?"
         tag="что нового, фишки, обновления, апдейт"
       >
         <p>{/* FIXME: написать!! */}</p>
