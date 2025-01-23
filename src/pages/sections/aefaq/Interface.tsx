@@ -262,6 +262,21 @@ const AEInterface: React.FC = () => {
           caption="Демонстрация плагина FX Console"
         />
       </DetailsSummary>
+      <DetailsSummary title="Как изменить вид отсчёта времени на таймлайне?">
+        <p>
+          В <mark className="app">After Effects</mark> доступно два вида отображения
+          текущего времени на таймлайне: в формате <mark>ЧЧ:ММ:СС:КК</mark>, где{" "}
+          <mark>Ч</mark> - часы, <mark>М</mark> - минуты, <mark>С</mark> - секунды и{" "}
+          <mark>К</mark> - кадры или отображение текущего положения по кадрам. Между этими
+          режимами вы можете переключиться, нажав по таймкоду с зажатым{" "}
+          <mark className="ui">Ctrl</mark>.
+        </p>
+        <VideoFigure
+          styleClass="figure_windows-dark"
+          videoSrc="images/aftereffects/alternate_timecode_style.mp4"
+          caption="Изменение вида отображения времени на таймлайне"
+        />
+      </DetailsSummary>
       <DetailsSummary title="Как мне установить свой процент масштабирования предпросмотра?">
         <p>
           Многих пользователей бесит, что по умолчанию в{" "}
