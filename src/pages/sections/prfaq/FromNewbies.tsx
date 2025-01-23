@@ -26,14 +26,14 @@ const PRFromNewbies: React.FC = () => {
           </a>
           .
         </p>
-        <YouTubeVideo
-          link="Wi-AalXwilg"
-          caption="Азбука Premiere Pro"
-        />
         <AdditionInfo>
           Курс был записан в <mark className="app">Premiere Pro</mark> версии 2019.
           Некоторые функции могут чуть отличаться от вашей текущей версии программы.
         </AdditionInfo>
+        <YouTubeVideo
+          link="Wi-AalXwilg"
+          caption="Азбука Premiere Pro"
+        />
         <p>
           Также при желании вы можете отдельно посмотреть курс по работе с вкладкой{" "}
           <mark className="plugin">Lumetri Color</mark> в{" "}
@@ -79,7 +79,29 @@ const PRFromNewbies: React.FC = () => {
         title="Где я могу узнать об нововведениях в обновлениях Premiere Pro?"
         tag="что нового, фишки, обновления, апдейт"
       >
-        <p>{/* FIXME: написать!! */}</p>
+        <p>
+          Обычно на сайте Adobe в день выхода публичной стабильной версии выкладываются
+          основные нововведения. Это сделано для того, чтобы каждый прохожий не спрашивал
+          из каждого угла <mark>&quot;А что обновилось то?&quot;</mark>. Ещё время от
+          времени Adobe выкладывает на сайт список выявленных неполадок и старается
+          приложить к ним временное решение.
+        </p>
+        <FlexibleLinks>
+          <a href="https://helpx.adobe.com/ru/premiere-pro/using/whats-new.html">
+            Что нового в Premiere Pro последних выпусков
+          </a>
+          <a href="https://helpx.adobe.com/ru/premiere-pro/kb/fixed-issues.html">
+            Список исправленных ошибок
+          </a>
+          <a href="https://helpx.adobe.com/ru/premiere-pro/kb/known-issues.html">
+            Выявленные неполадки в Premiere Pro
+          </a>
+        </FlexibleLinks>
+        <p>
+          Мы советуем время от времени обновлять <mark className="app">Premiere Pro</mark>
+          , а также сторонние плагины, чтобы исключить возможные проблемы при дальнейшем
+          использовании программы.
+        </p>
       </DetailsSummary>
       <DetailsSummary
         title="Зачем мне с каждого угла советуют поставить английский язык программы и как мне это сделать?"
