@@ -9,7 +9,7 @@ const AEExprLinking: React.FC = () => {
       <DetailsSummary title="Зачем нужны контроллеры и как их создать?">
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
-      <DetailsSummary title="Как привязать эффект к свойству слоя?">
+      <DetailsSummary title="Как привязать параметры одного слоя к другому?">
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
     </div>

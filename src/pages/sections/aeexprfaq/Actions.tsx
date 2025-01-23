@@ -8,9 +8,6 @@ const AEExprActions: React.FC = () => {
   return (
     <div className="faq-content">
       <GithubUpdateInfo filePath="src/pages/sections/aeexprfaq/Actions.tsx" />
-      <DetailsSummary title="Как привязать параметры одного слоя к другому?">
-        <p>{/* FIXME: написать!! */}</p>
-      </DetailsSummary>
       <DetailsSummary
         title="Как задать тряску у слоя?"
         tag="шейк, покачивание, случайное положение, причина тряски"
