@@ -22,8 +22,7 @@ const AEInstallProblems: React.FC = () => {
           рекомендациям ниже.
         </p>
         <AdditionWarning>
-          Прежде чем использовать <mark className="file">.aep</mark> и{" "}
-          <mark className="file">.mogrt</mark> шаблоны или пакеты для{" "}
+          Прежде чем использовать <mark className="file">.aep</mark> или пакеты для{" "}
           <mark className="plugin">AtomX</mark>,{" "}
           <mark className="plugin">Motion Bro</mark> или подобных расширений - убедитесь,
           что они полностью распакованы и расположены в пути не длиннее 256 символов без
@@ -31,9 +30,9 @@ const AEInstallProblems: React.FC = () => {
         </AdditionWarning>
         <ul>
           <li>
-            Если в архиве находится файл <mark className="file">.aep</mark> или{" "}
-            <mark className="file">.mogrt</mark>, то такие файлы просто импортируются в
-            ваш проект с помощью <mark className="ui">File &gt; Import</mark> или{" "}
+            Если в архиве находится файл <mark className="file">.aep</mark>, то такие
+            файлы просто импортируются в ваш проект с помощью{" "}
+            <mark className="ui">File &gt; Import</mark> или{" "}
             <mark className="key">Ctrl+I</mark> и никуда не устанавливаются.
           </li>
           <li>
@@ -89,6 +88,12 @@ const AEInstallProblems: React.FC = () => {
                     В папке с пресетами вы можете создать свою собственную папку со своим
                     именем или расположить скачанные пресеты в уже существующие.
                   </AdditionInfo>
+                  В качестве альтернативы вы можете распаковать пресеты в папку
+                  пользователя{" "}
+                  <mark className="path">
+                    C:\Users\%UserName%\Documents\Adobe\After Effects 20XX\User Presets
+                  </mark>
+                  .
                 </li>
                 <li>
                   Если в архиве находится файл <mark className="file">.jsx</mark>, то
@@ -162,7 +167,7 @@ const AEInstallProblems: React.FC = () => {
                     </a>{" "}
                     включает debug-режим в <mark className="app">After Effects</mark> для
                     корректного открытия и работы сторонних расширений, установленные из
-                    простор интернета и не содержит серьёзной лазейки для вредоносов.
+                    просторов интернета.
                   </AdditionInfo>
                 </li>
                 <li>
@@ -246,6 +251,12 @@ const AEInstallProblems: React.FC = () => {
                     В папке с пресетами вы можете создать свою собственную папку со своим
                     именем или расположить скачанные пресеты в уже существующие.
                   </AdditionInfo>
+                  В качестве альтернативы вы можете распаковать пресеты в папку
+                  пользователя{" "}
+                  <mark className="path">
+                    ~/Documents/Adobe/After Effects 20XX/User Presets/
+                  </mark>
+                  .
                 </li>
                 <li>
                   Если в архиве находится файл <mark className="file">.jsx</mark>, то
@@ -302,7 +313,7 @@ const AEInstallProblems: React.FC = () => {
                     подобных расширений команды для терминала вводить не нужно. Эти
                     команды включают debug-режим в{" "}
                     <mark className="app">After Effects</mark> для корректного открытия и
-                    работы сторонних расширений, установленные из простор интернета и не
+                    работы сторонних расширений, установленные из просторов интернета и не
                     содержит серьёзной лазейки для вредоносов.
                   </AdditionInfo>
                   <code>
@@ -968,8 +979,9 @@ const AEInstallProblems: React.FC = () => {
           через{" "}
           <a href="https://helpx.adobe.com/ru/creative-cloud/kb/cc-cleaner-tool-installation-problems">
             Adobe Creative Cloud Cleaner Tool
-          </a>
-          .
+          </a>{" "}
+          или с помощью любой другой программы для удаления программ, например{" "}
+          <mark className="app">Revo Uninstaller</mark>. .
         </AdditionDanger>
         <p>
           Предположим, что ваша система уже чиста от Adobe или вы только-только
@@ -1108,7 +1120,9 @@ const AEInstallProblems: React.FC = () => {
           <a href="https://helpx.adobe.com/ru/creative-cloud/kb/cc-cleaner-tool-installation-problems.html">
             Adobe Creative Cloud Cleaner
           </a>{" "}
-          и повторите попытку установки заново.
+          или любой другой программы по удалению программ, например{" "}
+          <mark className="app">Revo Uninstaller</mark> и повторите попытку установки
+          заново.
         </p>
         <p>
           Если очистка с помощью <mark className="app">Adobe Creative Cleaner Tool</mark>{" "}
