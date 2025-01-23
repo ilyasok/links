@@ -54,12 +54,16 @@ const AEExportProblems: React.FC = () => {
           imgTitle="Изменение цветового профиля"
           caption="Project Settings"
         />
-        <AdditionWarning>
-          Некоторые кодеки любят изменять цвета из-за сжатия, например{" "}
-          <mark className="file">H.264</mark>. Поэтому изменить поведение сложновато,
-          кроме как экспортом в другой кодек, например{" "}
-          <mark className="file">Apple Prores 422</mark>.
-        </AdditionWarning>
+        <p>
+          Ещё бывает такое, что некоторые кодеки и варианты экспорта любят изменять цвета
+          из-за сжатия или некоторых особенностей, например{" "}
+          <mark className="file">H.264</mark>. Исправить это поведение сложновато, кроме
+          как экспортом из <mark className="app">After Effects</mark> в другой формат,
+          например <mark className="file">Apple Prores 422</mark>. После экспорта можно
+          переконвертировать в <mark className="file">H.264</mark> через{" "}
+          <mark className="app">Shutter Encoder</mark> и не потерять в цветах.
+        </p>
+        <AdditionWarning>.</AdditionWarning>
         <p>
           Иногда при использовании исходников с мобильных телефонов, например{" "}
           <mark>iPhone 13</mark> или новее, возникают проблемы с пересветом. Это
