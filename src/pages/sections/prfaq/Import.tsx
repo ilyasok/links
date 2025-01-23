@@ -121,11 +121,9 @@ const PRImport: React.FC = () => {
             <mark className="ui">CBR</mark>, <mark className="ui">VBR</mark> или{" "}
             <mark className="ui">CQ</mark>.
             <AdditionInfo>
-              <p>
-                При кодировании в некоторые кодеки, например,{" "}
-                <mark className="file">Apple ProRes</mark>, этот пункт можно пропустить,
-                так как там обычно используются стандартные шаблоны для битрейта.
-              </p>
+              При кодировании в некоторые кодеки, например,{" "}
+              <mark className="file">Apple ProRes</mark>, этот пункт можно пропустить, так
+              как там обычно используются стандартные шаблоны для битрейта.
               <ul>
                 <li>
                   <mark>CBR</mark> - это постоянный битрейт, который хорошо подходит для
@@ -206,6 +204,9 @@ const PRImport: React.FC = () => {
         </AdditionWarning>
       </DetailsSummary>
       <DetailsSummary title="Прислали исходники в формате .heic, .heif или .hevc. Как мне импортировать?">
+        <p>{/* FIXME: написать!! */}</p>
+      </DetailsSummary>
+      <DetailsSummary title="Как импортировать композиции из After Effects в секвенцию Premiere Pro?">
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Откуда-то появились на предпросмотре чёрные полосы, что это может быть?">

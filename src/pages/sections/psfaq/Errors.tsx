@@ -58,6 +58,14 @@ const PSErrors: React.FC = () => (
           кто-то удалил оттуда строки.
         </li>
         <li>
+          Возможно в вашей системе затесалась служба{" "}
+          <mark className="app">Adobe Genuine Software</mark>, которая осталась от
+          установки версии из <mark className="app">Creative Cloud</mark>. Попробуйте
+          отключить службу{" "}
+          <mark className="app">Adobe Genuine Software Monitor Service</mark> через
+          программу <mark className="app">services.msc</mark>.
+        </li>
+        <li>
           Ваш антивирус съел какие-то файлы для корректной подмены активации, ссылаясь на
           то, что это якобы вирус. Для устранения этого - отключите антивирус или внесите
           папку с программами Adobe в белый лист антивируса, а затем переустановите
