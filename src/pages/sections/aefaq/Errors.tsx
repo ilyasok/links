@@ -48,8 +48,8 @@ const AEErrors: React.FC = () => {
             перекодируйте их через программу{" "}
             <a href="https://www.shutterencoder.com/">Shutter Encoder</a> в{" "}
             <mark className="file">ProRes 422</mark> или повторно в{" "}
-            <mark className="file">H.264</mark>. Таким образом вы ещё можете оградить себя
-            от различных багов во время использования подобных исходников.
+            <mark className="video">H.264</mark>. Таким образом вы ещё можете оградить
+            себя от различных багов во время использования подобных исходников.
           </li>
           <li>
             <a href="https://remontka.pro/fail-podkachki-windows/">

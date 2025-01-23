@@ -330,7 +330,7 @@ const AEExport: React.FC = () => {
           <mark className="app">After Effects</mark> и понеслась. Большинство
           пользователей экспортом в этой программе занимались по причине того, что в{" "}
           <mark className="app">After Effects</mark> по стандарту в старых версиях не было
-          возможности экспортировать в кодек <mark className="file">H.264</mark>.
+          возможности экспортировать в кодек <mark className="video">H.264</mark>.
         </p>
         <AdditionInfo>
           Если вам нужно поставить на очередь просчёта сразу несколько композиций -
@@ -370,9 +370,10 @@ const AEExport: React.FC = () => {
           </li>
         </ul>
         <AdditionWarning>
-          В кодеке H.264 нельзя вывести видео с альфа-каналом, то есть с прозрачностью.
-          Для вывода видео на прозрачном фоне воспользуйтесь форматами{" "}
-          <mark className="video">Quicktime - Apple Prores 4444</mark> или{" "}
+          Через кодеки <mark className="video">H.264</mark> и{" "}
+          <mark className="video">H.265</mark> нельзя вывести видео с альфа-каналом, то
+          есть с прозрачностью. Для вывода видео на прозрачном фоне воспользуйтесь
+          форматами <mark className="video">Quicktime - Apple Prores 4444</mark> или{" "}
           <mark className="video">WebM - VP9</mark>.
         </AdditionWarning>
         <p>
@@ -391,12 +392,20 @@ const AEExport: React.FC = () => {
           caption="Render Queue"
         />
         <Divider>Выводим через встроенный H.264</Divider>
+        <AdditionWarning>
+          У стандартного кодека <mark className="plugin">H.264</mark> есть ряд ограничений
+          - нельзя выводить видео с нестандартным FPS, например <mark>20</mark> и может
+          некорректно работать с не-квадратными пикселями в настройках вашей композиции.
+          Программа при необходимости выбьет окно с предупреждением, в котором будет
+          описана определённая ошибка при выборе тех или иных настроек экспорта.
+        </AdditionWarning>
         <p>
-          Начнём по порядку, с первого и простого способа. После того, как в{" "}
-          <mark className="app">After Effects</mark> версии 2023 и новее вернули нативный
-          экспорт в <mark className="file">H.264</mark>, то теперь вместо AVI по умолчанию
-          уже стоит то, что нам нужно. Обычно в большинстве случаев хватает трёх
-          стандартных пресетов: <mark className="video">H.264 - 5 Мбит/c</mark>,{" "}
+          Начнём по порядку, с первого и простого способа. Вывод в{" "}
+          <mark className="video">H.264</mark> стандартными способами вернули в версиях{" "}
+          <mark className="app">After Effects</mark> 2023 и новее. Теперь вместо{" "}
+          <mark className="plugin">AVI</mark> по умолчанию уже стоит то, что нам нужно.
+          Обычно в большинстве случаев хватает трёх стандартных пресетов:{" "}
+          <mark className="video">H.264 - 5 Мбит/c</mark>,{" "}
           <mark className="video">H.264 - 15 Мбит/c</mark> и{" "}
           <mark className="video">H.264 - 40 Мбит/c</mark>.
         </p>
@@ -623,13 +632,13 @@ const AEExport: React.FC = () => {
           Нативно из <mark className="app">After Effects</mark> и{" "}
           <mark className="app">Media Encoder</mark> нельзя вывести композицию в{" "}
           <mark className="file">.webm</mark>, поэтому мы пойдем таким путём: сначала
-          выведем композицию в <mark className="file">Apple Prores 422</mark>, если вам не
-          нужно выводить с альфа-каналом или в{" "}
-          <mark className="file">Apple Prores 4444</mark>, если вам нужно вывести с
+          выведем композицию в <mark className="video">Apple Prores 422</mark>, если вам
+          не нужно выводить с альфа-каналом или в{" "}
+          <mark className="video">Apple Prores 4444</mark>, если вам нужно вывести с
           альфа-каналом.
         </p>
         <AdditionDanger>
-          Крайне не рекомендуем использовать плагин{" "}
+          Крайне не рекомендую использовать плагин{" "}
           <a href="http://fnord.com/">WebM от fnord</a> для экспорта из Media Encoder, так
           как он часто выводит видео на прозрачном фоне с жуткими артефактами.
         </AdditionDanger>

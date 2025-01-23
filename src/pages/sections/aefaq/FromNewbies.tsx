@@ -277,7 +277,7 @@ const AEFromNewbies: React.FC = () => {
                 Монтажные кодеки
               </div>
               <li>
-                <mark className="file">Apple Prores</mark> - высококачественный кодек,
+                <mark className="video">Apple Prores</mark> - высококачественный кодек,
                 который широко используется в качестве формата получения, производства и
                 доставки и имеет различные шаблоны кодирования. Некоторых может расстроить
                 большой вес файлов с таким кодеком.{" "}
@@ -289,7 +289,7 @@ const AEFromNewbies: React.FC = () => {
                 <mark className="file">Quicktime</mark> из списка доступных кодеков для
                 вывода.{" "}
                 <AdditionInfo>
-                  В кодеках <mark className="file">Apple Prores</mark> вы не можете
+                  В кодеках <mark className="video">Apple Prores</mark> вы не можете
                   настроить битрейт, так как у каждого типа, например <mark>422</mark>,{" "}
                   <mark>422 (LT)</mark> или <mark>4444</mark> имеют различные битрейты по
                   умолчанию.{" "}
@@ -299,8 +299,8 @@ const AEFromNewbies: React.FC = () => {
                 </AdditionInfo>
               </li>
               <li>
-                <mark className="file">DNxHD</mark> или{" "}
-                <mark className="file">DNxHR</mark> - монтажные кодеки от Avid, были
+                <mark className="video">DNxHD</mark> или{" "}
+                <mark className="video">DNxHR</mark> - монтажные кодеки от Avid, были
                 создан с акцентом на меньший вес после создания такого файла. По своей
                 сути похожи как ProRes.
               </li>
@@ -308,7 +308,7 @@ const AEFromNewbies: React.FC = () => {
                 <mark className="file">GoPro Cineform</mark> - также популярен в индустрии
                 кино и на телевидении, поддерживает вывод видео с альфа-каналом и также
                 имеет меньший вес по сравнению с{" "}
-                <mark className="file">Apple Prores 4444</mark>.
+                <mark className="video">Apple Prores 4444</mark>.
               </li>
             </ul>
             <ul>
@@ -322,7 +322,7 @@ const AEFromNewbies: React.FC = () => {
                 Не монтажные (delivery) кодеки
               </div>
               <li>
-                <mark className="file">H.264</mark>, <mark className="file">H.265</mark>{" "}
+                <mark className="video">H.264</mark>, <mark className="video">H.265</mark>{" "}
                 или <mark className="file">HEVC</mark> - популярный кодек для
                 распространения видео и публикаций в интернете, для воспроизведения видео
                 на различных устройствах. При должном кодировании вы можете получить
@@ -340,13 +340,13 @@ const AEFromNewbies: React.FC = () => {
                   монтажная программа не понимает, как с таким файлом работать. Прежде чем
                   использовать видео из популярных площадок для монтажа - стоит их
                   перекодировать в монтажный кодек, например в{" "}
-                  <mark className="file">Apple Prores 422</mark>, чтобы не заработать себе
-                  головные боли в дальнейшем. <a href="#5.1">Подробнее...</a>
+                  <mark className="video">Apple Prores 422</mark>, чтобы не заработать
+                  себе головные боли в дальнейшем. <a href="#5.1">Подробнее...</a>
                 </AdditionDanger>
                 <AdditionInfo>
                   <mark className="word">Проблема зелёного экрана</mark> часто встречается
                   при использовании кривых исходников в{" "}
-                  <mark className="file">H.264</mark> или при использовании видеокарт от
+                  <mark className="video">H.264</mark> или при использовании видеокарт от
                   AMD. Иногда в таком случае перекодировка не требуется и достаточно
                   отключить{" "}
                   <mark className="ui">Enable hardware accelerated decoding</mark> в{" "}
@@ -1496,7 +1496,7 @@ const AEFromNewbies: React.FC = () => {
             - импортируйте кусочек вашего видео, например с помощью{" "}
             <mark className="ui">Replace with After Effects Composition</mark> и после
             редактирования экспортируйте оттуда композиции в монтажный кодек, например в{" "}
-            <mark className="file">Apple Prores 4444</mark>. Затем замените нужный кусок
+            <mark className="video">Apple Prores 4444</mark>. Затем замените нужный кусок
             на то, что вы экспортировали из <mark className="app">After Effects</mark> и
             продолжайте работу дальше в <mark className="app">Premiere Pro</mark>.
             <AdditionWarning>

@@ -100,7 +100,7 @@ const AEImport: React.FC = () => {
             <mark className="ui">VBR</mark> или <mark className="ui">CQ</mark>.
             <AdditionInfo>
               При кодировании в некоторые кодеки, в частности{" "}
-              <mark className="file">Apple ProRes</mark> этот пункт можно пропустить,
+              <mark className="video">Apple ProRes</mark> этот пункт можно пропустить,
               из-за отсутствия режимов кодирования, так как там обычно используются
               стандартные шаблоны для битрейта.
               <ul>

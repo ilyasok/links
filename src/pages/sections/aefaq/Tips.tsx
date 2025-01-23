@@ -329,8 +329,8 @@ const AETips: React.FC = () => {
         />
         <AdditionInfo>
           Для создания прокси лучше указать формат QuickTime в кодеке{" "}
-          <mark className="file">Apple Prores 422</mark> или{" "}
-          <mark className="file">Apple Prores 4444</mark>, если композиция содержит
+          <mark className="video">Apple Prores 422</mark> или{" "}
+          <mark className="video">Apple Prores 4444</mark>, если композиция содержит
           альфа-канал.
         </AdditionInfo>
         <p>

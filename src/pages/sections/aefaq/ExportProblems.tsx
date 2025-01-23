@@ -57,10 +57,10 @@ const AEExportProblems: React.FC = () => {
         <p>
           Ещё бывает такое, что некоторые кодеки и варианты экспорта любят изменять цвета
           из-за сжатия или некоторых особенностей, например{" "}
-          <mark className="file">H.264</mark>. Исправить это поведение сложновато, кроме
+          <mark className="video">H.264</mark>. Исправить это поведение сложновато, кроме
           как экспортом из <mark className="app">After Effects</mark> в другой формат,
-          например <mark className="file">Apple Prores 422</mark>. После экспорта можно
-          переконвертировать в <mark className="file">H.264</mark> через{" "}
+          например <mark className="video">Apple Prores 422</mark>. После экспорта можно
+          переконвертировать в <mark className="video">H.264</mark> через{" "}
           <mark className="app">Shutter Encoder</mark> и не потерять в цветах.
         </p>
         <AdditionWarning>.</AdditionWarning>
@@ -173,7 +173,7 @@ const AEExportProblems: React.FC = () => {
           представление цвета в настройках проекта не может отобрать всевозможные
           промежуточные оттенки цветов, присутствующие в градиенте. Также при экспорте
           некоторые видеокодеки могут сжать цвета, например{" "}
-          <mark className="file">H.264</mark>.
+          <mark className="video">H.264</mark>.
         </p>
         <YouTubeVideo
           link="h9j89L8eQQk"
@@ -279,8 +279,8 @@ const AEExportProblems: React.FC = () => {
         />
         <AdditionInfo>
           Для создания прокси лучше указать формат QuickTime в кодеке{" "}
-          <mark className="file">Apple Prores 422</mark> или{" "}
-          <mark className="file">Apple Prores 4444</mark>, если композиция содержит
+          <mark className="video">Apple Prores 422</mark> или{" "}
+          <mark className="video">Apple Prores 4444</mark>, если композиция содержит
           альфа-канал.
         </AdditionInfo>
         <p>
@@ -329,8 +329,8 @@ const AEExportProblems: React.FC = () => {
         <p>
           С такой проблемой сталкивался каждый новичок в программе в старых версиях{" "}
           <mark className="app">After Effects</mark>, когда ещё нативную поддержку кодека{" "}
-          <mark className="file">H.264</mark> удалили и долго не возвращали. В то время по
-          умолчанию стоял пресет на <mark className="file">AVI</mark> в кодеке{" "}
+          <mark className="video">H.264</mark> удалили и долго не возвращали. В то время
+          по умолчанию стоял пресет на <mark className="file">AVI</mark> в кодеке{" "}
           <mark className="file">Animation</mark>. А он славился тем, что при сравнительно
           коротких композициях выводил файлы по 10 Гб и больше. К счастью такие времена
           ушли, но некоторые старички побаиваются выводить композиции напрямую из{" "}
