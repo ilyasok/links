@@ -1,6 +1,7 @@
 import React from "react";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 import DetailsSummary from "../../../components/DetailsSummary";
+import {ImageFigure} from "../../../components/ContentFigure";
 
 const PRExportProblems: React.FC = () => {
   return (
