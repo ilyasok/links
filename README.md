@@ -62,6 +62,11 @@ import DetailsSummary from "../../../components/DetailsSummary";
 Компоненты `AdditionInfo`, `AdditionWarning` и `AdditionDanger` служат для дополнительной информации.
 
 ```typescript
+import {
+  AdditionDanger,
+  AdditionInfo,
+  AdditionWarning,
+} from "../../../components/Additions";
 import DetailsSummary from "../../../components/DetailsSummary";
 <DetailsSummary title="Вопрос">
   <p>Причина поведения определённого действия.</p>
@@ -134,6 +139,7 @@ import DetailsSummary from "../../../components/DetailsSummary";
 - Тёмная тема: класс `figure_macos-dark`
 
 ```typescript
+
 import {ImageFigure, VideoFigure} from "../../../components/ContentFigure";
 import DetailsSummary from "../../../components/DetailsSummary";
 <DetailsSummary title="Вопрос">
@@ -156,10 +162,6 @@ import DetailsSummary from "../../../components/DetailsSummary";
     videoSrc="images/aftereffects/purge_cache.mp4"
     caption="Очистка кэша и освобождение оперативной памяти"
   />
-  <AdditionWarning>
-    Если вы очистите кэш и оперативную память - предпросмотр надо будет просчитывать
-    заново.
-  </AdditionWarning>
 </DetailsSummary>
 ```
 
