@@ -271,8 +271,9 @@ const AETips: React.FC = () => {
           программу начисто, предварительно удалив предыдущие версии с помощью{" "}
           <a href="https://helpx.adobe.com/ru/creative-cloud/kb/cc-cleaner-tool-installation-problems.html">
             Adobe Creative Cloud Cleaner
-          </a>
-          .
+          </a>{" "}
+          или любой другой программы по удалению программ, например{" "}
+          <mark className="app">Revo Uninstaller</mark>.
         </AdditionDanger>
         <p>
           Прежде чем обновить программу без потери плагинов - вам нужно переименовать
