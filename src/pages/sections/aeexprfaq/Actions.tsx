@@ -8,6 +8,18 @@ const AEExprActions: React.FC = () => {
   return (
     <div className="faq-content">
       <GithubUpdateInfo filePath="src/pages/sections/aeexprfaq/Actions.tsx" />
+      <DetailsSummary title="Как привязать параметры одного слоя к другому?">
+        <p>{/* FIXME: написать!! */}</p>
+      </DetailsSummary>
+      <DetailsSummary
+        title="Как задать тряску у слоя?"
+        tag="шейк, покачивание, случайное положение, причина тряски"
+      >
+        <p>{/* FIXME: написать!! */}</p>
+      </DetailsSummary>
+      <DetailsSummary title="Как зациклить текущую анимацию, которая была создана с помощью ключевых кадров?">
+        <p>{/* FIXME: написать!! */}</p>
+      </DetailsSummary>
       <DetailsSummary title="Как мне сделать 'прыгучую' анимацию нужного параметра?">
         <p>
           {/* FIXME: про bouncy текста или положения. можно привести в пример motion tools pro где это есть */}
@@ -35,7 +47,7 @@ const AEExprActions: React.FC = () => {
       <DetailsSummary title="Как сделать так, чтобы мой счётчик не дёргался при анимации числа?">
         <p>{/* FIXME: написать про monospace шрифт через поворот */}</p>
       </DetailsSummary>
-      <DetailsSummary title="Как удалить выражения сразу в нескольких слоях?">
+      <DetailsSummary title="Как отключить выражение через Checkbox Control?">
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
     </div>

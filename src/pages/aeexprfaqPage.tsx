@@ -17,11 +17,7 @@ const AEExprBase = lazy(() => import("./sections/aeexprfaq/Base"));
 
 const AEExprLinking = lazy(() => import("./sections/aeexprfaq/Linking"));
 
-const AEExprFormulas = lazy(() => import("./sections/aeexprfaq/Formulas"));
-
 const AEExprTips = lazy(() => import("./sections/aeexprfaq/Tips"));
-
-const AEExprTechQuestion = lazy(() => import("./sections/aeexprfaq/TechQuestion"));
 
 const AEExprActions = lazy(() => import("./sections/aeexprfaq/Actions"));
 
@@ -32,16 +28,9 @@ const AEExpressionPage = () => {
     {key: "1", title: "С чего начать?", id: "start", component: AEExprStart},
     {key: "2", title: "База всех баз", id: "base", component: AEExprBase},
     {key: "3", title: "Ссылки и привязки", id: "linking", component: AEExprLinking},
-    {key: "4", title: "Формулы", id: "formulas", component: AEExprFormulas},
-    {key: "5", title: "(не)Вредные советы", id: "tips", component: AEExprTips},
-    {
-      key: "6",
-      title: "Технические вопросы",
-      id: "tech-question",
-      component: AEExprTechQuestion,
-    },
-    {key: "7", title: "Как и чем?", id: "actions", component: AEExprActions},
-    {key: "8", title: "Ошибки и предупреждения", id: "errors", component: AEExprErrors},
+    {key: "4", title: "(не)Вредные советы", id: "tips", component: AEExprTips},
+    {key: "5", title: "Как и чем?", id: "actions", component: AEExprActions},
+    {key: "6", title: "Ошибки и предупреждения", id: "errors", component: AEExprErrors},
   ];
 
   const [visibleSections, setVisibleSections] = useState<string[]>([]);
