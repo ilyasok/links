@@ -33,6 +33,19 @@ const PRInterface: React.FC = () => {
           локализации <mark className="app">Premiere Pro</mark> никуда не денутся от вас.
         </AdditionDanger>
       </DetailsSummary>
+      <DetailsSummary title="Куда пропало окно Essential Graphics?">
+        <p>
+          В <mark className="app">Premiere Pro</mark> версий 2025 и новее панель{" "}
+          <mark className="ui">Essential Graphics</mark> убрали и перенесли часть
+          функционала в новое окно <mark className="ui">Graphics Templates</mark>. Открыть
+          его можно в контекстном меню <mark className="ui">Window</mark>.
+        </p>
+        <p>
+          Из нового окна <mark className="ui">Graphics Templates</mark> вы до сих пор
+          можете импортировать <mark className="file">.mogrt</mark> файлы прямиком в ваш
+          проект и редактировать их в новом окне <mark className="ui">Properties</mark>.
+        </p>
+      </DetailsSummary>
       <DetailsSummary title="Как изменить вид отсчёта времени на таймлайне?">
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
@@ -51,9 +64,6 @@ const PRInterface: React.FC = () => {
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Куда пропала настройка Timeline в Preferences?">
-        <p>{/* FIXME: написать!! */}</p>
-      </DetailsSummary>
-      <DetailsSummary title="Куда пропал Essential Graphics?">
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Как изменить акцентный цвет интерфейса?">
