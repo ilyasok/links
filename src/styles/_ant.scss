@@ -30,3 +30,11 @@
 .ant-upload-wrapper .ant-upload-drag:not(.ant-upload-disabled):hover {
   border-color: var(--accent);
 }
+
+.ant-dropdown-menu-item {
+  outline: 1px solid transparent;
+}
+
+.ant-dropdown-menu-item:hover {
+  outline: 1px solid var(--summary_border);
+}
