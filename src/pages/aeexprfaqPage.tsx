@@ -17,8 +17,6 @@ const AEExprBase = lazy(() => import("./sections/aeexprfaq/Base"));
 
 const AEExprLinking = lazy(() => import("./sections/aeexprfaq/Linking"));
 
-const AEExprTips = lazy(() => import("./sections/aeexprfaq/Tips"));
-
 const AEExprActions = lazy(() => import("./sections/aeexprfaq/Actions"));
 
 const AEExprErrors = lazy(() => import("./sections/aeexprfaq/Errors"));
@@ -28,9 +26,8 @@ const AEExpressionPage = () => {
     {key: "1", title: "С чего начать?", id: "start", component: AEExprStart},
     {key: "2", title: "База всех баз", id: "base", component: AEExprBase},
     {key: "3", title: "Ссылки и привязки", id: "linking", component: AEExprLinking},
-    {key: "4", title: "(не)Вредные советы", id: "tips", component: AEExprTips},
-    {key: "5", title: "Как и чем?", id: "actions", component: AEExprActions},
-    {key: "6", title: "Ошибки и предупреждения", id: "errors", component: AEExprErrors},
+    {key: "4", title: "Как и чем?", id: "actions", component: AEExprActions},
+    {key: "5", title: "Ошибки и предупреждения", id: "errors", component: AEExprErrors},
   ];
 
   const [visibleSections, setVisibleSections] = useState<string[]>([]);

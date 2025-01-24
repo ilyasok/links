@@ -617,13 +617,6 @@ export const SearchInPage: React.FC = () => {
                   <button onClick={() => handleLinkClick("linking")}>
                     Ссылки и привязки
                   </button>
-                  <button onClick={() => handleLinkClick("formulas")}>Формулы</button>
-                  <button onClick={() => handleLinkClick("tips")}>
-                    (не)Вредные советы
-                  </button>
-                  <button onClick={() => handleLinkClick("tech-question")}>
-                    Технические вопросы
-                  </button>
                   <button onClick={() => handleLinkClick("actions")}>Как и чем?</button>
                   <button onClick={() => handleLinkClick("errors")}>
                     Ошибки и предупреждения
