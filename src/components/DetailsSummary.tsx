@@ -55,6 +55,16 @@ export const generateAnchorId = () => {
 const DetailsSummary: React.FC<DetailsSummaryProps> = ({title, children, tag}) => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const isEmptyContent =
+    !children ||
+    (typeof children === "string" && children.trim() === "") ||
+    (typeof children === "object" &&
+      !Array.isArray(children) &&
+      Object.keys(children).length === 0) ||
+    (Array.isArray(children) && children.length === 0) ||
+    React.Children.count(children) === 0 ||
+    React.Children.count(children) === 1;
+
   const detailsRef = useRef<HTMLDetailsElement>(null);
   useEffect(() => {
     if (detailsRef.current) {
@@ -170,7 +180,21 @@ const DetailsSummary: React.FC<DetailsSummaryProps> = ({title, children, tag}) =
       </motion.summary>
       <SpoilerContext.Provider value={isOpen}>
         <section className="faq-section">
-          {children}
+          {isEmptyContent ? (
+            <p
+              style={{
+                textAlign: "center",
+                fontWeight: "700",
+                opacity: "0.75",
+                fontSize: "0.95rem",
+                fontStyle: "italic",
+              }}
+            >
+              Когда-нибудь здесь будет ответ...
+            </p>
+          ) : (
+            children
+          )}
           {tag && (
             <div className="faq-tags">
               <span>Дополнительные теги для поиска:</span>
