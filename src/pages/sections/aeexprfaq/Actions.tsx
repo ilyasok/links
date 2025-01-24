@@ -23,7 +23,6 @@ const AEExprActions: React.FC = () => {
         </p>
       </DetailsSummary>
       <DetailsSummary title="Как сделать слайдер с значением больше миллиона?">
-        {/* FIXME: написать!! */}
         <p>
           В <mark className="app">After Effects</mark> нет возможности поставить значение
           в <mark className="plugin">Slider Control</mark> больше чем{" "}
