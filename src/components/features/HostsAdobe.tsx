@@ -30,7 +30,7 @@ const HostsAdobeModal: React.FC = () => {
       >
         <div className="modal">
           <div className="modal-title">Адреса для блокировки Adobe в hosts</div>
-          <code style={{maxHeight: "600px", overflow: "auto", marginBlockEnd: "-10px"}}>
+          <code style={{maxHeight: "200px", overflow: "auto", marginBlockEnd: "-10px"}}>
             0.0.0.0 ic.adobe.io
             <br />
             0.0.0.0 cc-api-data.adobe.io
