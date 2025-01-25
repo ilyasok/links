@@ -243,8 +243,6 @@
     border-radius: $roundness * 1.5;
     max-height: 65lvh;
     overflow-y: auto;
-    scrollbar-color: var(--summary_border) var(--content-background-color);
-    scrollbar-width: thin;
 
     mark {
       filter: saturate(150%) brightness(98%);
@@ -253,20 +251,6 @@
       background-color: var(--mark_background);
       padding: 2px 1px;
       color: var(--mark_text);
-    }
-
-    &::-webkit-scrollbar {
-      width: 8px;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      border-radius: $roundness;
-      background-color: var(--summary_background);
-    }
-
-    &::-webkit-scrollbar-track {
-      margin: 5px;
-      background: var(--content-background-color);
     }
   }
 

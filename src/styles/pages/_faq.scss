@@ -219,32 +219,6 @@
       }
     }
 
-    code {
-      display: block;
-      transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-      margin: 10px;
-      margin-block: 10px;
-      border: 1px solid hsl(225, 20%, 20%);
-      border-radius: $roundness;
-      background-color: hsl(225, 15%, 13%);
-      padding: 10px 15px;
-      color: #ffffff;
-      font-weight: 400;
-      font-size: 0.875rem;
-      line-height: 1.25;
-      font-family: "JetBrains Mono", monospace;
-      user-select: text;
-
-      &:hover {
-        opacity: 0.75;
-        cursor: pointer;
-      }
-
-      &:active {
-        opacity: 0.5;
-      }
-    }
-
     mark {
       filter: saturate(75%);
       margin-block: 2px;
@@ -384,4 +358,46 @@
 
 details > summary::-webkit-details-marker {
   display: none;
+}
+
+code {
+  display: block;
+  transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  margin: 10px;
+  margin-block: 10px;
+  border: 1px solid hsl(225, 20%, 20%);
+  border-radius: $roundness;
+  background-color: hsl(225, 15%, 13%);
+  padding: 10px 15px;
+
+  scrollbar-color: hsl(225, 20%, 20%) hsl(225, 15%, 13%);
+  scrollbar-width: thin;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.25;
+  font-family: "JetBrains Mono", monospace;
+  user-select: text;
+
+  &:hover {
+    opacity: 0.75;
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: $roundness;
+    background-color: hsl(225, 20%, 20%);
+  }
+
+  &::-webkit-scrollbar-track {
+    margin: 5px;
+    background: hsl(225, 15%, 13%);
+  }
 }
