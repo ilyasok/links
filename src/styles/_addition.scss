@@ -7,13 +7,6 @@ li > .addition-danger,
 .links > .addition-warning,
 .links > .addition-danger {
   margin-inline: 0;
-  &:first-child {
-    margin-top: 0;
-  }
-
-  &:last-child {
-    margin-bottom: 0;
-  }
 }
 
 .addition {
@@ -25,7 +18,6 @@ li > .addition-danger,
     align-items: center;
     gap: 10px;
     margin: 10px;
-    margin-block: 15px;
     border-radius: $roundness * 0.75;
     padding: 10px;
     padding-left: 15px;
