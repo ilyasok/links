@@ -88,7 +88,7 @@ const AEExpressionPage = () => {
             content="Ответы на частые вопросы о выражениях в After Effects"
           />
         </Helmet>
-        <Header title="ae(expr)faq" />
+        <Header title="aeexprfaq" />
         <motion.main
           className="main"
           initial={{x: 100, y: 0, opacity: 0}}
