@@ -105,7 +105,7 @@ const PRExport: React.FC = () => {
               <td>120-240 Мбит/с</td>
             </tr>
             <tr>
-              <td>2160p (4К)</td>
+              <td>2160p (4K)</td>
               <td>35-45 Мбит/с</td>
               <td>53-68 Мбит/с</td>
             </tr>
@@ -158,7 +158,7 @@ const PRExport: React.FC = () => {
               <td>150-300 Мбит/с</td>
             </tr>
             <tr>
-              <td>2160p (4К)</td>
+              <td>2160p (4K)</td>
               <td>44-56 Мбит/с</td>
               <td>66-85 Мбит/с</td>
             </tr>
