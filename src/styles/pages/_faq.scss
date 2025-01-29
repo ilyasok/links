@@ -366,7 +366,7 @@ code {
   margin: 10px;
   margin-block: 10px;
   border: 1px solid hsl(225, 20%, 20%);
-  border-radius: $roundness;
+  border-radius: $roundness * 0.75;
   background-color: hsl(225, 15%, 13%);
   padding: 10px 15px;
 
