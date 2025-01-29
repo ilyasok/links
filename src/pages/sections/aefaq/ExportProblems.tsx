@@ -63,7 +63,6 @@ const AEExportProblems: React.FC = () => {
           переконвертировать в <mark className="video">H.264</mark> через{" "}
           <mark className="app">Shutter Encoder</mark> и не потерять в цветах.
         </p>
-        <AdditionWarning>.</AdditionWarning>
         <p>
           Иногда при использовании исходников с мобильных телефонов, например{" "}
           <mark>iPhone 13</mark> или новее, возникают проблемы с пересветом. Это
