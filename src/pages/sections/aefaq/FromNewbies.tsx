@@ -1525,19 +1525,28 @@ const AEFromNewbies: React.FC = () => {
         </p>
         <p>
           Чтобы быстро очистить кэш предпросмотра, перейдите в{" "}
-          <mark className="ui">Edit &gt; Purge &gt; All Memory & Disk Cache</mark>. По
-          желанию вы можете создать свою комбинацию клавиш для быстрой очистки оперативной
-          памяти и дискового кэша в{" "}
-          <mark className="ui">Edit &gt; Keyboard Shortcuts</mark>, по умолчанию в{" "}
+          <mark className="ui">Edit &gt; Purge &gt; All Memory & Disk Cache</mark>. В
+          открывшемся окне нажмите на <mark className="ui">OK</mark>.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-light"
+          imgSrc="images/aftereffects/edit_purge_all-memory-and-disk-cache.png"
+          imgTitle="Очистка кэша и освобождение оперативной памяти"
+          caption="Очистка кэша и освобождение оперативной памяти"
+        />
+        <AdditionInfo>
+          При желании вы можете создать свою комбинацию клавиш для быстрой очистки
+          оперативной памяти и дискового кэша в{" "}
+          <mark className="ui">Edit &gt; Keyboard Shortcuts</mark>. По умолчанию в{" "}
           <mark className="app">After Effects</mark> предусмотрена только комбинация для
           очистки оперативной памяти: <mark className="key">Ctrl + Alt + / (Num)</mark>.
-        </p>
-        <AdditionInfo>
+        </AdditionInfo>
+        <p>
           Если у вас достаточно много оперативной памяти на вашем устройстве, то вы можете
           отключить дисковый кэш в настройках программы. Для этого перейдите в{" "}
           <mark className="ui">Edit &gt; Preferences &gt; Media & Disk Cache</mark> и
           уберите галочку с пункта <mark className="ui">Enable Disk Cache</mark>.
-        </AdditionInfo>
+        </p>
       </DetailsSummary>
       <DetailsSummary title="Почему предпросмотр проигрывается в хреновом качестве, в пикселях?">
         <p>
