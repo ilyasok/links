@@ -1541,7 +1541,7 @@ const AEFromNewbies: React.FC = () => {
       </DetailsSummary>
       <DetailsSummary title="Почему предпросмотр проигрывается в хреновом качестве, в пикселях?">
         <p>
-          Скорее всего вы забыли переключить качество предпросомтра в окне{" "}
+          Скорее всего вы забыли переключить качество предпросмотра в окне{" "}
           <mark className="ui">Preview</mark>. Для изменения качества выставьте значение{" "}
           <mark className="ui">Resolution</mark> на <mark className="ui">Full</mark> или
           на удобное вам значение.
