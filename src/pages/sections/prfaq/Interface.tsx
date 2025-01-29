@@ -51,7 +51,10 @@ const PRInterface: React.FC = () => {
       </DetailsSummary>
       <DetailsSummary title="Есть ли аналог FX Console для Premiere Pro?">
         <p>{/* FIXME: написать!! */}</p>
-      </DetailsSummary>{" "}
+      </DetailsSummary>
+      <DetailsSummary title="Как включить отображение рабочей области на таймлайне?">
+        <p>{/* FIXME: написать!! */}</p>
+      </DetailsSummary>
       <DetailsSummary title="Пропала визуализация аудиодорожек на таймлайне, как их вернуть?">
         <p>
           Это довольно частый и неприятный баг, возникающий при использовании{" "}
