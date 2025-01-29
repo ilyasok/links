@@ -42,6 +42,10 @@ li > .addition-danger,
       font-style: italic;
     }
 
+    ul {
+      margin: 0;
+    }
+
     li {
       margin-inline-start: 20px;
       margin-block: 5px;
@@ -55,6 +59,14 @@ li > .addition-danger,
 
       &::before {
         display: none;
+      }
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
       }
     }
   }
