@@ -1800,6 +1800,10 @@ const AEFromNewbies: React.FC = () => {
           <mark className="plugin">uni.unmult</mark> из пакета плагинов{" "}
           <mark className="plugin">Red Giant Universe</mark>.
         </p>
+        <YouTubeVideo
+          link="GGjIu0CZ1M4"
+          caption="Red Giant Universe Unmult"
+        />
       </DetailsSummary>
       <DetailsSummary
         title="Продублировал композицию на таймлайне, но копия зависит от оригинала. Как сделать композиции независимыми друг от друга?"
