@@ -152,13 +152,6 @@ const AEInstallProblems: React.FC = () => {
                   <AdditionInfo>
                     <ul>
                       <li>
-                        Иногда в архиве может быть уже распакованный{" "}
-                        <mark className="file">.zxp</mark> архив. Это можно понять по
-                        наличию папок <mark className="path">META-INF</mark> и{" "}
-                        <mark className="path">CSXS</mark> внутри папки с названием
-                        плагина.
-                      </li>
-                      <li>
                         <a
                           download
                           href="files/Enable Extensions Adobe.reg"
@@ -177,6 +170,25 @@ const AEInstallProblems: React.FC = () => {
                         включает debug-режим в <mark className="app">After Effects</mark>{" "}
                         для корректного открытия и работы сторонних расширений,
                         установленные из просторов интернета.
+                      </li>
+                      <li>
+                        Иногда в архиве может быть уже распакованный{" "}
+                        <mark className="file">.zxp</mark> архив. Это можно понять по
+                        наличию папок <mark className="path">META-INF</mark> и{" "}
+                        <mark className="path">CSXS</mark> внутри папки с названием
+                        расширения.
+                      </li>
+                      <li>
+                        Если расширение просит включить разрешение на запись и доступ в
+                        интернет, то перейдите в{" "}
+                        <mark className="ui">
+                          Edit &gt; Preferences &gt; Scripting & Expressions
+                        </mark>{" "}
+                        и установите чекбокс у пункта{" "}
+                        <mark className="ui">
+                          Allow Scripts to Write Files and Access Network
+                        </mark>
+                        .
                       </li>
                     </ul>
                   </AdditionInfo>
@@ -322,19 +334,31 @@ const AEInstallProblems: React.FC = () => {
                   <AdditionInfo>
                     <ul>
                       <li>
+                        Команды ниже достаточно ввести один раз, в дальнейшем при
+                        установке подобных расширений команды для терминала вводить не
+                        нужно. Эти команды включают debug-режим в{" "}
+                        <mark className="app">After Effects</mark> для корректного
+                        открытия и работы сторонних расширений, установленные из просторов
+                        интернета.
+                      </li>
+                      <li>
                         Иногда в архиве может быть уже распакованный{" "}
                         <mark className="file">.zxp</mark> архив. Это можно понять по
                         наличию папок <mark className="path">META-INF</mark> и{" "}
                         <mark className="path">CSXS</mark> внутри папки с названием
-                        плагина.
+                        расширения.
                       </li>
                       <li>
-                        Эти команды достаточно ввести один раз, в дальнейшем при установке
-                        подобных расширений команды для терминала вводить не нужно. Эти
-                        команды включают debug-режим в{" "}
-                        <mark className="app">After Effects</mark> для корректного
-                        открытия и работы сторонних расширений, установленные из просторов
-                        интернета и не содержит серьёзной лазейки для вредоносов.
+                        Если расширение просит включить разрешение на запись и доступ в
+                        интернет, то перейдите в{" "}
+                        <mark className="ui">
+                          Edit &gt; Preferences &gt; Scripting & Expressions
+                        </mark>{" "}
+                        и установите чекбокс у пункта{" "}
+                        <mark className="ui">
+                          Allow Scripts to Write Files and Access Network
+                        </mark>
+                        .
                       </li>
                     </ul>
                   </AdditionInfo>
