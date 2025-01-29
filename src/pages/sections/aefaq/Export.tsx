@@ -471,11 +471,12 @@ const AEExport: React.FC = () => {
           к нему.
         </AdditionWarning>
         <p>
-          Для того чтобы начать рендер с помощью Voukoder, вам нужно снова зайти в{" "}
-          <mark className="ui">Output Module</mark> и выбрать пункте{" "}
-          <mark className="ui">Format</mark> плагин <mark className="ui">Voukoder</mark>.
-          Чтобы перейти в настройки <mark className="ui">Voukoder</mark> нужно нажать
-          рядом кнопку <mark className="ui">Format Options</mark>.
+          Для того чтобы начать рендер с помощью <mark className="plugin">Voukoder</mark>,
+          вам нужно снова зайти в <mark className="ui">Output Module</mark> и выбрать
+          пункте <mark className="ui">Format</mark> плагин{" "}
+          <mark className="ui">Voukoder</mark>. Чтобы перейти в настройки{" "}
+          <mark className="ui">Voukoder</mark> нужно нажать рядом кнопку{" "}
+          <mark className="ui">Format Options</mark>.
         </p>
         <ImageFigure
           styleClass="figure_windows-dark"
@@ -565,9 +566,9 @@ const AEExport: React.FC = () => {
           </li>
         </ul>
         <p>
-          Дальше нам ничего не нужно настраивать, поэтому просто нажимаем{" "}
-          <mark className="ui">ОК</mark> и начинаем рендер композиции в программе как
-          обычно, с помощью кнопки <mark className="ui">Render</mark>.
+          Дальше в <mark className="plugin">Voukoder</mark> нам ничего не нужно
+          настраивать. При необходимости вы можете изменить другие параметры в окне
+          экспорта и начать экспорт с помощью кнопки <mark className="ui">Render</mark>.
         </p>
         <Divider>Выводим через AfterCodecs</Divider>
         <p>
