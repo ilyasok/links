@@ -116,7 +116,9 @@ const ChatRules = () => (
                 </ul>
                 Чтобы записать видео экрана на macOS - воспользуйтесь комбинацией клавиш{" "}
                 <a href="https://support.apple.com/ru-ru/102618">Shift + Command + 5</a>{" "}
-                или встроенной программой QuickTime Player.
+                или встроенной программой QuickTime Player. Скриншоты можно сделать с
+                помощью комбинации клавиш{" "}
+                <a href="https://support.apple.com/ru-ru/102646">Shift + Command + 3</a>.
               </AdditionInfo>
               <p>
                 При описании проблемы давайте более подробное описание ваших действий,
