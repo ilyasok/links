@@ -6,7 +6,7 @@ import {
   AdditionInfo,
   AdditionWarning,
 } from "../../../components/Additions";
-import {ImageFigure, YouTubeVideo} from "../../../components/ContentFigure";
+import {ImageFigure, VideoFigure, YouTubeVideo} from "../../../components/ContentFigure";
 import {Divider} from "antd";
 
 const PRExport: React.FC = () => {
@@ -282,10 +282,215 @@ const PRExport: React.FC = () => {
         </p>
       </DetailsSummary>
       <DetailsSummary title="Как вывести секвенцию в .mp4 и H.264/H.265?">
-        <p>{/* FIXME: написать!! */}</p>
+        <p>
+          Предположим, что вы хотите вывести качественное видео с минимальным весом в
+          кодеке
+          <mark className="video">H.264</mark> или <mark className="video">H.265</mark>, а
+          также в цветовом пространстве <mark>Rec.709</mark>. Из{" "}
+          <mark className="app">Premiere Pro</mark> можно вывести тремя способами.
+        </p>
+        <ul>
+          <li>
+            Через встроенный кодек <mark className="plugin">H.264</mark>.
+          </li>
+          <li>
+            Через сторонний плагин <mark className="plugin">Voukoder</mark>. Доступен
+            только для Windows, поддержка устройств на macOS косвенно присутствует с
+            версий Voukoder Pro 2.0 и новее, но мы его рассматривать не будем.
+          </li>
+          <li>
+            Через сторонний плагин <mark className="plugin">AfterCodecs</mark>. Доступен
+            для Windows и macOS, а также поддерживает достаточно много старых версий
+            программы.
+          </li>
+        </ul>
+        <AdditionWarning>
+          Через кодеки <mark className="video">H.264</mark> и{" "}
+          <mark className="video">H.265</mark> нельзя вывести видео с альфа-каналом, то
+          есть с прозрачностью. Для вывода видео на прозрачном фоне воспользуйтесь
+          форматом <mark className="video">Quicktime - Apple Prores 4444</mark>.
+        </AdditionWarning>
+        <p>
+          Для начала нужно разобраться, куда что тыкать. Для того чтобы перейти к началу
+          экспорта, перейдите в вкладку <mark className="ui">Export</mark> или нажмите на
+          комбинацию клавиш <mark className="key">Ctrl + M</mark>.
+        </p>
+        <p>
+          После этого вы переместитесь на полноэкранное окно настроек экспорта. В этой
+          вкладке вы можете указать название файла, путь сохранения, формат и указать в
+          вкладках более детальные настройки. Также вы можете выбрать область для
+          кодирования видео - всю секвенцию или только часть.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/premierepro/export_interface.png"
+          imgTitle="Интерфейс экспорта"
+          caption="Интерфейс экспорта"
+        />
+        <Divider>Выводим через встроенный H.264</Divider>
+        <p>
+          По умолчанию при открытии вкладки экспорта,{" "}
+          <mark className="app">Premiere Pro</mark> сам установит пресет для вывода в{" "}
+          <mark className="video">H.264</mark> с переменным битрейтом с одним проходом
+          примерно в 15 Мбит/с. Для социальных сетей таких параметров хватит спокойно.
+        </p>
+        <p>
+          Если вам нужно изменить тип битрейта и скорость передачи данных - раскройте
+          вкладку <mark className="ui">Video</mark> и измените нужные вам параметры. Из
+          доступных параметров нам доступно изменение битрейта, кадров в секунду,
+          цветового профиля, включение эффектов и переключение между Software- или
+          Hardware-кодированием. Чтобы изменять &quot;заблокированные&quot; параметры -
+          просто уберите чекбокс справа от пунктов.
+        </p>
+        <VideoFigure
+          styleClass="figure_windows-dark"
+          videoSrc="images/premierepro/export_video_settings.mp4"
+          caption="Настройки экспорта видео"
+        />
+        <p>
+          Затем просто нажмите на кнопку <mark className="ui">Export</mark> в правом
+          нижнем углу и дождитесь окончания кодирования вашей секвенции.
+        </p>
+        <Divider>Выводим через Voukoder</Divider>
+        <p>
+          Если же вас результат рендера от стандартного H.264 не устраивает, то можно
+          воспользоваться плагином <mark className="plugin">Voukoder</mark>. В этом
+          примере мы рассмотрим плагин{" "}
+          <a href="https://github.com/Vouk/voukoder/releases/tag/13.4.1">версии 13.4.1</a>
+          , не Pro версию.
+        </p>
+        <AdditionWarning>
+          Демонстрируемая версия плагина <mark className="plugin">Voukoder</mark>{" "}
+          недоступна на устройствах с macOS. Чтобы подключить плагин к программе, нужно
+          скачать и установить{" "}
+          <a href="https://github.com/Vouk/voukoder/releases/download/13.4.1/voukoder-13.4.1.msi">
+            сам Voukoder
+          </a>{" "}
+          и{" "}
+          <a href="https://github.com/Vouk/voukoder-connectors/blob/master/premiere/premiere-connector-1.13.0.msi?raw=true">
+            коннектор для Premiere Pro
+          </a>{" "}
+          к нему.
+        </AdditionWarning>
+        <p>
+          Чтобы начать рендер с помощью <mark className="plugin">Voukoder</mark>, вам
+          нужно снова перейти в вкладку <mark className="ui">Export</mark> и в пункте{" "}
+          <mark className="ui">Format</mark> выбрать <mark className="ui">Voukoder</mark>.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/premierepro/selecting_voukoder.png"
+          imgTitle="Выбираем Voukoder для рендера"
+          caption="Export"
+        />
+        <p>
+          Чтобы перейти в настройки плагина, вам нужно раскрыть вкладку{" "}
+          <mark className="ui">Voukoder</mark> и нажать на кнопку{" "}
+          <mark className="ui">Configure</mark>.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/premierepro/open_voukoder_settings.png"
+          imgTitle="Открываем настройки Voukoder"
+          caption="Export"
+        />
+        <p>
+          После открытия настроек нам нужно выбрать кодек, в который мы хотим
+          экспортировать видео. В основном для вывода видео и его корректного открытия на
+          многих современных устройствах используется кодек{" "}
+          <mark className="video">H.264</mark>. Но можно и воспользоваться{" "}
+          <mark className="video">HEVC (H.265)</mark>, если вам нужно примерно сохранить
+          качество видео с меньшим объёмом файла. Кодеки{" "}
+          <mark className="video">AV1</mark> и <mark className="video">VP9</mark> для
+          вывода из <mark className="app">After Effects</mark> используются редко, а если
+          уж и надо вывести в таком формате, то проще переконвертировать видео позже через
+          условный <a href="https://www.shutterencoder.com/">Shutter Encoder</a>. Теперь
+          поговорим и о приставках в названиях кодеков.
+        </p>
+        <AdditionInfo>
+          Варианты кодирования показаны на устройстве с связкой процессора AMD и
+          видеокарты NVIDIA. Выбор у вас может отличаться в зависимости от вашего железа.
+        </AdditionInfo>
+        <ul>
+          <p>
+            Для вариантов <mark className="video">H.264</mark> и{" "}
+            <mark className="video">H.265</mark> есть три варианта для кодирования.
+          </p>
+          <li>
+            <mark>x264</mark> или <mark>x265</mark> используется кодирования видео на
+            процессоре без дополнительного использования видеокарты. Стабильно, но не
+            всегда быстро.
+          </li>
+          <li>
+            <mark>NVIDIA NVENC</mark> используется для кодирования видео с использованием
+            видеокарты NVIDIA. Может ускорить процесс рендера, но не гарантирует 100%
+            использование видеокарты.
+          </li>
+          <li>
+            <mark>AMD AMF</mark> - тоже самое, что и предыдущий пункт, но на встроенном
+            видеочипе AMD.
+          </li>
+        </ul>
+        <ImageFigure
+          styleClass="figure_windows-light"
+          imgSrc="/images/premierepro/select_codec_in_voukoder.png"
+          imgTitle="Выбираем нужный вариант кодека в Voukoder"
+          caption="Voukoder 13.4.1"
+        />
+        <p>
+          После выбора нужного нам кодека (я выбрал{" "}
+          <mark className="video">H.264 (NVIDIA NVENC)</mark>), нужно перейти во вкладку{" "}
+          <mark className="ui">Параметры</mark>. В этой вкладке можно указать качество
+          желаемого видео. По умолчанию там уже стоит то, что нам нужно, а именно параметр
+          квантования и его фактор. <mark>CQP</mark> или <mark>CRF</mark> - это некий
+          эквивалент качества, чем меньше - тем лучше качество, но больше вес.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-light"
+          imgSrc="/images/premierepro/codec_parameter_voukoder.png"
+          imgTitle="Настраиваем качество видео в Voukoder"
+          caption="Voukoder 13.4.1"
+        />
+        <ul>
+          <li>
+            Значения <mark>23</mark> или <mark>25</mark> хватит с головой для экспорта
+            видео в YouTube, VK Видео и подобных видео площадок.
+            <AdditionInfo>
+              Учтите, что многие видео площадки всё равно будут сжимать видео по своему,
+              чтобы уместить их у себя на серверах.
+            </AdditionInfo>
+          </li>
+          <li>
+            Если вам нужно около максимальное качество, тогда укажите значение квантования{" "}
+            <mark>17</mark> или <mark>20</mark>. В таком случае вес файла заметно
+            возрастёт.
+          </li>
+          <li>
+            Если вы хотите получить видео с хорошим соотношением{" "}
+            <mark>качество/минимальный вес</mark>, тогда укажите значение <mark>30</mark>.
+            Можете поэкспериментировать с значением в большую или меньшую сторону.
+            <AdditionWarning>
+              Экстремальные значения, например <mark>50</mark>, не рекомендуется
+              использовать, так как можете получить кашу из кадров на выходе.
+            </AdditionWarning>
+          </li>
+        </ul>
+        <p>
+          Дальше в <mark className="plugin">Voukoder</mark> нам ничего не нужно
+          настраивать. При необходимости вы можете изменить другие параметры в окне
+          экспорта и начать экспорт с помощью кнопки <mark className="ui">Export</mark>.
+        </p>
+        <Divider>Выводим через AfterCodecs</Divider>
+        {/* TODO: написать!! */}
       </DetailsSummary>
       <DetailsSummary title="Как вывести секвенцию в .WebM и VP9?">
-        <p>{/* FIXME: написать!! */}</p>
+        <p>
+          Стандартными средствами - никак, но никто не запрещал выводить видео из{" "}
+          <mark className="app">Premiere Pro</mark> в любой удобный вам формат и
+          перекодировать его в <mark className="video">VP9</mark> через конвертер,
+          например <mark className="app">Shutter Encoder</mark>.
+        </p>
+        {/* TODO: написать!! */}
       </DetailsSummary>
       <DetailsSummary title="Как вывести секвенцию в .gif?">
         <p>{/* FIXME: написать!! */}</p>
