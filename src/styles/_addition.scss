@@ -92,7 +92,7 @@ li > .addition-danger,
     }
 
     mark {
-      border: 1px solid var(--addition_info-border);
+      outline: 1px solid var(--addition_info-border);
       background-color: var(--addition_info-mark);
       color: var(--addition_info-text);
 
@@ -112,7 +112,7 @@ li > .addition-danger,
     }
 
     mark {
-      border: 1px solid var(--addition_warning-border);
+      outline: 1px solid var(--addition_warning-border);
       background-color: var(--addition_warning-mark);
       color: var(--addition_warning-text);
 
@@ -132,7 +132,7 @@ li > .addition-danger,
     }
 
     mark {
-      border: 1px solid var(--addition_danger-border);
+      outline: 1px solid var(--addition_danger-border);
       background-color: var(--addition_danger-mark);
       color: var(--addition_danger-text);
 
@@ -185,7 +185,7 @@ li > .addition-danger,
   }
 
   mark {
-    border: 1px solid var(--addition_warning-border);
+    outline: 1px solid var(--addition_warning-border);
     background-color: var(--addition_warning-mark);
     color: var(--addition_warning-text);
 
