@@ -13,11 +13,11 @@
     background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1),
     box-shadow 0.5s cubic-bezier(0.075, 0.82, 0.165, 1),
     border 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-  margin-top: 10px;
+  margin-top: 12px;
   border-radius: $roundness * 1.5;
   background-color: var(--header_background);
   padding-inline: 15px;
-  padding-block: 10px;
+
   width: 95%;
   max-width: 1075px;
 
@@ -48,6 +48,7 @@
 
     .logo {
       margin-inline: 3px;
+      margin-block: 10px;
       max-width: fit-content;
       color: var(--accent);
       font-style: italic;
@@ -59,5 +60,29 @@
 
   &-right {
     gap: 15px;
+    margin-block: 0;
+  }
+}
+
+.wide-search-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  outline: 1px solid var(--summary_border);
+  border-radius: $roundness * 0.75;
+  background: var(--header_background);
+  padding: 5px;
+  color: var(--mark_text);
+  font-weight: 500;
+  font-size: 0.85rem;
+
+  svg {
+    fill: var(--accent);
+    width: 18px;
+    height: 18px;
+  }
+
+  mark {
+    margin-block: 0;
   }
 }

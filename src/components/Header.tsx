@@ -1,13 +1,15 @@
 import {HomeRounded} from "@mui/icons-material";
 import React, {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
-import {ThemeToggleButton} from "./modal/ThemeChanger";
-import {SearchButton} from "./features/SearchInPage";
+import {SearchButton, WideSearchButton} from "./features/SearchInPage";
 import {motion} from "framer-motion";
 import {MoveToTop} from "./features/MoveToTop";
+import {ThemeToggleButton} from "./modal/ThemeChanger";
 
 const Header: React.FC<{title: string}> = ({title}) => {
   const [isVisible, setIsVisible] = useState(false);
+
+  const [isWide, setIsWide] = useState(window.innerWidth > 650);
 
   const checkScrollPosition = () => {
     setIsVisible(window.scrollY > 60);
@@ -17,6 +19,17 @@ const Header: React.FC<{title: string}> = ({title}) => {
 
     return () => {
       window.removeEventListener("scroll", checkScrollPosition);
+    };
+  }, []);
+
+  useEffect(() => {
+    const resizeHandler = () => {
+      setIsWide(window.innerWidth > 650);
+    };
+    window.addEventListener("resize", resizeHandler);
+
+    return () => {
+      window.removeEventListener("resize", resizeHandler);
     };
   }, []);
 
@@ -32,7 +45,7 @@ const Header: React.FC<{title: string}> = ({title}) => {
         backdropFilter: isVisible ? "blur(15px)" : "none",
         WebkitBackdropFilter: isVisible ? "blur(15px)" : "none",
         boxShadow: isVisible ? "0 0 15px 0 var(--header_shadow)" : "none",
-        border: isVisible ? "1px solid var(--header_border)" : "1px solid transparent",
+        outline: isVisible ? "1px solid var(--header_border)" : "1px solid transparent",
       }}
     >
       <div className={`header-left ${isVisible ? "visible" : "hidden"}`}>
@@ -55,7 +68,9 @@ const Header: React.FC<{title: string}> = ({title}) => {
         {(location.pathname.includes("aefaq") ||
           location.pathname.includes("prfaq") ||
           location.pathname.includes("psfaq") ||
-          location.pathname.includes("aeexprfaq")) && <SearchButton />}
+          location.pathname.includes("aeexprfaq")) && (
+          <div>{isWide ? <WideSearchButton /> : <SearchButton />}</div>
+        )}
         <ThemeToggleButton />
       </div>
     </motion.header>
