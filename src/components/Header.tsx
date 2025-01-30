@@ -1,4 +1,4 @@
-import {HomeRounded} from "@mui/icons-material";
+import {ArrowBackRounded} from "@mui/icons-material";
 import React, {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import {SearchButton, WideSearchButton} from "./features/SearchInPage";
@@ -52,7 +52,7 @@ const Header: React.FC<{title: string}> = ({title}) => {
         {location.pathname !== "/" && (
           <div className="icon">
             <Link to="/">
-              <HomeRounded />
+              <ArrowBackRounded />
             </Link>
           </div>
         )}
