@@ -78,7 +78,7 @@ const Links = () => {
             <LinkInAppCard
               href="/prfaq"
               icon={<PRIcon />}
-              name="prfaq (В РАЗРАБОТКЕ)"
+              name="prfaq"
               description="Поясняем за монтаж и нюансы в Premiere Pro"
             />{" "}
             <LinkInAppCard
