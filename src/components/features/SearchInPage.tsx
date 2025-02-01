@@ -177,7 +177,9 @@ export const SearchInPage: React.FC = () => {
 
       const tag = detail.getAttribute("data-tags") ?? "";
 
-      const content = Array.from(detail.querySelectorAll<HTMLParagraphElement>("p"))
+      const content = Array.from(
+        detail.querySelectorAll<HTMLParagraphElement>("p, .addition-info")
+      )
         .map((el) => decodeHtmlEntities(el.textContent?.trim() ?? ""))
         .filter(Boolean)
         .join("\n");
