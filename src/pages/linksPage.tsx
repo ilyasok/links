@@ -63,7 +63,7 @@ const Links = () => {
           style={{display: "none"}}
           className="logo-container"
         >
-          <h1 className="logo-title">aechat@links</h1>
+          <h1 className="logo-title">links@aechat</h1>
           <p className="logo-slogan">Собрали полезные ссылки для вас</p>
         </div>
         <div className="links">
