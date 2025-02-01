@@ -10,8 +10,8 @@
 
   &_browser {
     &-youtube {
-      border: 1px solid hsl(0, 0%, 20%);
       box-shadow: inset 0 0 20px 0 hsl(0, 0%, 15%);
+      border: 1px solid hsl(0, 0%, 20%);
       border-radius: $roundness * 0.75;
       background: hsl(0, 0%, 5%);
       padding-bottom: 3px;
@@ -27,6 +27,7 @@
         &-header {
           display: flex;
           margin-top: 0;
+
           figcaption {
             text-wrap: nowrap;
             display: block;

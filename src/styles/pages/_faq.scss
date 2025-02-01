@@ -113,9 +113,9 @@
     .message {
       &-correct,
       &-incorrect {
+        flex: 1 1 300px;
         border-radius: $roundness;
         padding-bottom: 10px;
-        max-width: 450px;
       }
 
       &-incorrect {
@@ -132,9 +132,10 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: center;
-        gap: 25px;
+        gap: 15px;
+        margin: 10px;
       }
 
       &-left {
@@ -146,7 +147,7 @@
         margin-left: 10px;
         margin-block: 10px;
         border: 1px solid var(--mark_border);
-        border-radius: $roundness;
+        border-radius: $roundness * 0.75;
         background-color: var(--mark_background);
         padding: 10px;
         max-width: 70%;
@@ -162,7 +163,7 @@
         margin-left: auto;
         margin-block: 10px;
         border: 1px solid var(--mark_border);
-        border-radius: $roundness;
+        border-radius: $roundness * 0.75;
         background-color: var(--mark_background);
         padding: 10px;
         max-width: 70%;
@@ -200,7 +201,13 @@
       padding-block: 10px;
       line-height: 1.75;
       list-style-type: none;
+      code {
+        margin-inline: 0;
 
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
       &:not(:last-child) {
         border-bottom: 1px solid var(--content-background-border);
       }
@@ -274,7 +281,6 @@ code {
   border-radius: $roundness * 0.75;
   background-color: hsl(225, 15%, 13%);
   padding: 10px 15px;
-
   scrollbar-color: hsl(225, 20%, 20%) hsl(225, 15%, 13%);
   scrollbar-width: thin;
   color: #ffffff;
