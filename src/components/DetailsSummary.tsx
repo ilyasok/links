@@ -69,7 +69,10 @@ const DetailsSummary: React.FC<DetailsSummaryProps> = ({title, children, tag}) =
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.ctrlKey && event.altKey && event.shiftKey && event.key === "A") {
+      if (
+        (event.ctrlKey && event.altKey && event.shiftKey && event.key === "A") ||
+        (event.ctrlKey && event.altKey && event.shiftKey && event.key === "Ф")
+      ) {
         const detailsElements = document.querySelectorAll("details");
         detailsElements.forEach((details) => {
           details.setAttribute("open", "true");
