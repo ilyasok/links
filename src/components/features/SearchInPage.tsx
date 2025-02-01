@@ -397,7 +397,7 @@ export const SearchInPage: React.FC = () => {
     const div = document.createElement("div");
     div.innerHTML = text;
 
-    return div.textContent || div.innerText || "";
+    return (div.textContent ?? div.innerText) || "";
   };
 
   const highlightText = (text: string, query: string) => {
