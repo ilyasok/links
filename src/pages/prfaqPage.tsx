@@ -6,7 +6,6 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import {Helmet} from "react-helmet-async";
 import {SearchInPage, SearchProvider} from "../components/features/SearchInPage";
-import {AdditionDanger} from "../components/Additions";
 import SupportDonut from "../components/modal/SupportDonut";
 import CopyMark from "../components/features/CopyMark";
 import {CircularProgress} from "@mui/material";

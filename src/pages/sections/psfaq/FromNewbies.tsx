@@ -22,7 +22,24 @@ const PSFromNewbies: React.FC = () => {
         title="Где я могу узнать об нововведениях в обновлениях Photoshop?"
         tag="что нового, фишки, обновления, апдейт"
       >
-        <p>{/* FIXME: написать!! */}</p>
+        <p>
+          Обычно на сайте Adobe в день выхода публичной стабильной версии выкладываются
+          основные нововведения. Это сделано для того, чтобы каждый прохожий не спрашивал
+          из каждого угла <mark>&quot;А что обновилось то?&quot;</mark>. Ещё время от
+          времени Adobe выкладывает на сайт список выявленных неполадок и старается
+          приложить к ним временное решение.
+        </p>
+        <FlexibleLinks>
+          <a href="https://helpx.adobe.com/ru/photoshop/using/whats-new.html">
+            Что нового в Photoshop последних выпусков
+          </a>
+          <a href="https://helpx.adobe.com/ru/photoshop/kb/fixed-issues.html">
+            Список исправленных ошибок
+          </a>
+          <a href="https://helpx.adobe.com/ru/photoshop/kb/known-issues.html">
+            Выявленные неполадки в Photoshop
+          </a>
+        </FlexibleLinks>
       </DetailsSummary>
       <DetailsSummary title="А есть список популярных комбинаций клавиш для работы в Photoshop?">
         <p>{/* FIXME: написать!! */}</p>

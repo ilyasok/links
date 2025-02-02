@@ -490,17 +490,20 @@ const AEErrors: React.FC = () => {
           проекты для версии 18.X или 22.X, для этого нужно городить цепочку из
           установленных нескольких версий на вашем компьютере и перегонять по цепочке.
         </p>
-        <p>
-          Для конвертации файла проекта для старой версии{" "}
-          <mark className="app">After Effects</mark> вам нужно перейти в{" "}
-          <mark className="ui">File</mark>, в контекстном меню выбрать{" "}
-          <mark className="ui">Save As</mark> и выбрать минимально возможную версию для
-          конвертации.
-        </p>
-        <p style={{fontSize: "0.75rem", opacity: "0.5"}}>
-          Или просто обновите программу до более свежей версии, не мучайте себя
-          конвертациями.
-        </p>
+        <ul>
+          <li>
+            Для конвертации файла проекта для старой версии{" "}
+            <mark className="app">After Effects</mark> вам нужно перейти в{" "}
+            <mark className="ui">File</mark>, в контекстном меню выбрать{" "}
+            <mark className="ui">Save As</mark> и выбрать минимально возможную версию для
+            конвертации.
+          </li>
+          <li>
+            Или просто обновите программу до более свежей версии, не мучайте себя
+            конвертациями. Версия свежее установленного &quot;года&quot; установится
+            рядом, старая версия не перезапишется.
+          </li>
+        </ul>
       </DetailsSummary>
       <DetailsSummary title="Your disk cache folder is on a drive that does not have enough avaiable space to safely store the full amount specified in your preferences. Please make more space available or go to Media & Disk Cache preferences to change the folder or maximium disk cache size">
         <p>
@@ -733,26 +736,51 @@ const AEErrors: React.FC = () => {
       </DetailsSummary>
       <DetailsSummary title='"Analysis Solve Failed" или "Unable to solve camera for this frame" при использовании 3D Camera Tracker'>
         <p>
-          Если у вас исходник c слабым контрастом - накрутите контрастности через{" "}
-          <mark className="plugin">Curves</mark> или{" "}
-          <mark className="plugin">Brightness & Contrast</mark>, а затем повторите анализ
-          заново. Если у оператора сильно трясутся руки, попробуйте сначала применить{" "}
-          <mark className="plugin">Warp Stabilizer</mark>, а только потом уже создавать
-          3D-трекинг.
+          Представим, что вы хотите сделать 3D-трекинг с помощью встроенной функции{" "}
+          <mark className="plugin">3D Camera Tracker</mark>, но вам мешает либо первая
+          ошибка, либо вторая. Такое может выскочить по совершенно разным причинам.
         </p>
-        <p>
-          Иногда избавлению от ошибки может помочь изменение{" "}
-          <mark className="ui">Solve Method</mark> или установка галочки{" "}
-          <mark className="ui">Detailed Analysis</mark> в вкладке{" "}
-          <mark className="ui">Advanced</mark>.
-        </p>
-        <ImageFigure
-          styleClass="figure_windows-dark"
-          imgSrc="/images/aftereffects/detailed_analysis-3d_camera_tracker.png"
-          imgTitle="Включение детального анализа исходника"
-          caption="Effect Controls"
-        />
-        {/* TODO: дописать по возможности */}
+        <ul>
+          <li>
+            Если у вас исходник c слабым контрастом - накрутите контрастности через{" "}
+            <mark className="plugin">Curves</mark> или{" "}
+            <mark className="plugin">Brightness & Contrast</mark>, а затем повторите
+            анализ заново.
+          </li>
+          <li>
+            Если у оператора сильно трясутся руки, попробуйте сначала применить{" "}
+            <mark className="plugin">Warp Stabilizer</mark>, а только потом уже создавать
+            3D-трекинг.
+            <AdditionWarning>
+              Трекер может и проанализирует точки, но результат его работы может вас не
+              удовлетворить из-за качества самого исходника.
+            </AdditionWarning>
+          </li>
+          <li>
+            Если вы пытаетесь проанализировать слишком длинное видео, то попробуйте
+            обрезать по кусочкам. Вполне вероятно, что на какой-то секунде камера слишком
+            резко двигается и происходит ошибка анализа.
+          </li>
+          <li>
+            Иногда избавлению от ошибки может помочь изменение{" "}
+            <mark className="ui">Solve Method</mark> или установка галочки{" "}
+            <mark className="ui">Detailed Analysis</mark> в вкладке{" "}
+            <mark className="ui">Advanced</mark>.
+            <ImageFigure
+              styleClass="figure_windows-dark"
+              imgSrc="/images/aftereffects/detailed_analysis-3d_camera_tracker.png"
+              imgTitle="Включение детального анализа исходника"
+              caption="Effect Controls"
+              // FIXME: обрезать изображение и нарисовать указатель
+            />
+          </li>
+          <li>
+            Если вы считаете, что с вашим исходником всё в порядке, то попробуйте
+            перекодировать его в монтажный кодек и заменить в проекте. Не всегда
+            исходники, полученные из интернета, будут хорошо дружить с{" "}
+            <mark className="app">After Effects</mark>.
+          </li>
+        </ul>
       </DetailsSummary>
       <DetailsSummary title='Вылезло "System Compatibility Report" при запуске After Effects'>
         <AdditionInfo>
@@ -899,7 +927,7 @@ const AEErrors: React.FC = () => {
           Для решения этой ошибки при запуске программы - распакуйте архив{" "}
           <a
             download
-            href="images/files/D3DCompiler_47.zip"
+            href="files/D3DCompiler_47.zip"
           >
             D3DCompiler_47.zip
           </a>
@@ -965,21 +993,20 @@ const AEErrors: React.FC = () => {
           caption="Warning"
         />
         <p>
-          Для решения этой проблемы - просто доустановите эффекты и плагины из этого
-          списка, а затем перезапустите программу. В редких случаях бывает такое, что
-          эффект в зависимости от версии плагина или{" "}
-          <mark className="app">After Effects</mark> могут переименоваться. Поэтому вам
-          нужно их будет заменить вручную.
+          Для решения этой проблемы - просто установите эффекты и плагины из этого списка,
+          а затем перезапустите программу. В редких случаях бывает такое, что эффект в
+          зависимости от версии плагина или <mark className="app">After Effects</mark>{" "}
+          могут переименоваться. Поэтому вам нужно их будет заменить вручную.
         </p>
-        <AdditionInfo>
+        <p>
           Иногда многие спрашивают, что за эффекты с приставкой <mark>S_</mark> и{" "}
-          <mark>BCC</mark>? Эффекты с такой приставкой не являются встроенными и
-          поставляются компанией <mark>Boris FX</mark> в пакетах{" "}
+          <mark>BCC</mark> перед названиями. Это эффекты, которые не являются встроенными
+          и поставляются компанией <mark>Boris FX</mark> в пакетах{" "}
           <mark className="plugin">Sapphire</mark> и{" "}
-          <mark className="plugin">Continuum</mark>, их нужно установить отдельно на ваше
+          <mark className="plugin">Continuum</mark>. Их нужно установить отдельно на ваше
           устройство. Аналогично касается и остальных &quot;ненаходов&quot; от{" "}
           <mark>Red Giant</mark> и прочих компаний.
-        </AdditionInfo>
+        </p>
       </DetailsSummary>
       <DetailsSummary title="After Effects warning: The following plugins have failed to load. Please reinstall these plugins">
         <p>

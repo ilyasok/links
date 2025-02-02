@@ -1177,7 +1177,7 @@ const AEInstallProblems: React.FC = () => {
           <mark className="path">C:\Program Files\Adobe</mark> от лишних хвостов.
         </p>
       </DetailsSummary>
-      <DetailsSummary title="Код ошибки 21 при установке After Effects или 'операционная система не соответствует минимальным требованиям для этой программы установки'">
+      <DetailsSummary title='Код ошибки 21 при установке After Effects или "операционная система не соответствует минимальным требованиям для этой программы установки"'>
         <p>
           Вы пытаетесь установить <mark className="app">After Effects 2024</mark> или
           новее на Windows 10 сборки 21H2 или старее. Если у вас стоит сборка LTSC,

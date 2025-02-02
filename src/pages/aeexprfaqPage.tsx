@@ -126,10 +126,10 @@ const AEExpressionPage = () => {
               </div>
               <SupportDonut />
               <AdditionWarning>
-                Данная страница не является полноценным курсом по написанию выражений в
-                After Effects. Мнение автора и мнение читателя могут отличаться. Примеры
-                выражений выполняются в движке Javascript, его можно изменить в настройках
-                проекта.
+                Данная страница не является полноценным курсом по написанию выражений в{" "}
+                <mark className="app">After Effects</mark>. Мнение автора и мнение
+                читателя могут отличаться. Примеры выражений выполняются в движке
+                Javascript, его можно изменить в настройках проекта.
               </AdditionWarning>
               {sections.map(({key, title, component: Component, id}) =>
                 visibleSections.includes(key) ? (

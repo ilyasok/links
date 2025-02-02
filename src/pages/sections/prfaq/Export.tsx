@@ -485,11 +485,21 @@ const PRExport: React.FC = () => {
       </DetailsSummary>
       <DetailsSummary title="Как вывести секвенцию в .WebM и VP9?">
         <p>
-          Стандартными средствами - никак, но никто не запрещал выводить видео из{" "}
-          <mark className="app">Premiere Pro</mark> в любой удобный вам формат и
-          перекодировать его в <mark className="video">VP9</mark> через конвертер,
-          например <mark className="app">Shutter Encoder</mark>.
+          Нативно из <mark className="app">Premiere Pro</mark> и{" "}
+          <mark className="app">Media Encoder</mark> нельзя вывести композицию в{" "}
+          <mark className="file">.webm</mark>, поэтому мы пойдем таким путём: сначала
+          выведем композицию в <mark className="video">Apple Prores 422</mark>, если вам
+          не нужно выводить с альфа-каналом или в{" "}
+          <mark className="video">Apple Prores 4444</mark>, если вам нужно вывести с
+          альфа-каналом.
         </p>
+        <AdditionDanger>
+          Крайне не рекомендую использовать плагин{" "}
+          <a href="http://fnord.com/">WebM от fnord</a> для экспорта из{" "}
+          <mark className="app">Premiere Pro</mark> и{" "}
+          <mark className="app">Media Encoder</mark>, так как он часто выводит видео на
+          прозрачном фоне с жуткими артефактами.
+        </AdditionDanger>
         {/* TODO: написать!! */}
       </DetailsSummary>
       <DetailsSummary title="Как вывести секвенцию в .gif?">

@@ -378,9 +378,10 @@ const AEActions: React.FC = () => {
             нравится.{" "}
             <AdditionWarning>
               Эффект стабилизации может обрезать вашу картинку, для устранения этого -
-              раскройте Auto-Scale и установите приемлемое для вас значение Maximum Scale.
-              Слишком большие значения в Smoothness могут превратить вашу картинку в
-              непонятное желе. Экспериментируйте с умом!
+              раскройте <mark className="ui">Auto-Scale</mark> и установите приемлемое для
+              вас значение <mark className="ui">Maximum Scale</mark>. Слишком большие
+              значения в <mark className="ui">Smoothness</mark> могут превратить вашу
+              картинку в непонятное желе. Экспериментируйте с умом!
             </AdditionWarning>
           </li>
           <li>
@@ -434,8 +435,9 @@ const AEActions: React.FC = () => {
           <a href="files/Mocha_data_rescale_import.ffx">пресет по этой ссылке</a> от{" "}
           <a href="https://t.me/Pavelusha">@Pavelusha</a> на слой, на котором добавлен{" "}
           <mark className="plugin">Corner Pin</mark>. В применённом пресете вам нужно
-          выбрать в Source Layer тот слой, на котором тречили данные. При правильном
-          использовании ваша вставляемая картинка переместится куда надо.
+          выбрать в <mark className="ui">Source Layer</mark> тот слой, на котором тречили
+          данные. При правильном использовании ваша вставляемая картинка переместится куда
+          надо.
         </AdditionInfo>
       </DetailsSummary>
       <DetailsSummary title="Как мне сделать точки у шейпового слоя управляемыми с помощью 'нулевых слоёв'?">
@@ -634,8 +636,9 @@ const AEActions: React.FC = () => {
           caption="Распаковка нескольких прекомпозиций с помощью Un-precompose"
         />
         <AdditionWarning>
-          Имейте ввиду, что ссылки внутри эффектов (например указание слоя в Displacement
-          Map) и внутри выражений при распаковке прекомпозиций могут слететь.
+          Имейте ввиду, что ссылки внутри эффектов (например указание слоя в{" "}
+          <mark className="plugin">Displacement Map</mark>) и внутри выражений при
+          распаковке прекомпозиций могут слететь.
         </AdditionWarning>
       </DetailsSummary>
       <DetailsSummary title="Как разбить текстовый слой на отдельные слои с буквами, словами или строками?">
@@ -661,8 +664,9 @@ const AEActions: React.FC = () => {
           caption="Разделяем текстовый слой на слова с помощью DecomposeText"
         />
         <AdditionWarning>
-          Скрипт не поддерживает текст, созданный как Paragraph Text. Для этого вам нужно
-          будет его конвертировать в Point Text, выбрав инструмент Text и нажав на{" "}
+          Скрипт не поддерживает текст, созданный как <mark>Paragraph Text</mark>. Для
+          этого вам нужно будет его конвертировать в <mark>Point Text</mark>, выбрав
+          инструмент <mark className="ui">Text</mark> и нажав на{" "}
           <mark className="key">ПКМ</mark> по текстовому слою в предпросмотре. В
           открывшемся контекстном меню нужно выбрать{" "}
           <mark className="ui">Convert to Point Text</mark>.

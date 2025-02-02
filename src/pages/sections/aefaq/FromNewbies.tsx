@@ -9,6 +9,7 @@ import ContentSwitcher from "../../../components/features/OperatingSystemFilter"
 import {ImageFigure, VideoFigure, YouTubeVideo} from "../../../components/ContentFigure";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 import {FlexibleLinks} from "../../../components/FlexibleLinksFaQ";
+import {Divider} from "antd";
 
 const AEFromNewbies: React.FC = () => {
   return (
@@ -67,7 +68,7 @@ const AEFromNewbies: React.FC = () => {
             &quot;After Effects базового уровня&quot; от Никиты Чеснокова
           </a>
         </FlexibleLinks>
-        <p style={{textAlign: "center"}}>
+        <p style={{textAlign: "center", fontSize: "0.95rem", fontWeight: "700"}}>
           Надеюсь, вы найдёте что-то полезное для себя. Удачи в ваших начинаниях!
         </p>
       </DetailsSummary>
@@ -813,16 +814,8 @@ const AEFromNewbies: React.FC = () => {
           функции программы, поэтому ниже приведены популярные у многих пользователей
           комбинации.
         </p>
+        <Divider>Отображение свойств слоя</Divider>
         <ul>
-          <div
-            style={{
-              textAlign: "center",
-              fontWeight: "bold",
-              color: "var(--accent)",
-            }}
-          >
-            Отображение свойств слоя
-          </div>
           <li>
             <mark className="key">E</mark>: раскрыть добавленные эффекты у выделенного
             слоя.
@@ -888,16 +881,8 @@ const AEFromNewbies: React.FC = () => {
             </AdditionInfo>
           </li>
         </ul>
+        <Divider>Выбор инструментов</Divider>
         <ul>
-          <div
-            style={{
-              textAlign: "center",
-              fontWeight: "bold",
-              color: "var(--accent)",
-            }}
-          >
-            Выбор инструментов
-          </div>
           <li>
             <mark className="key">V</mark>: инструмент выделения объектов, стандартный
             инструмент при открытии программы.
@@ -932,16 +917,8 @@ const AEFromNewbies: React.FC = () => {
             </AdditionInfo>
           </li>
         </ul>
+        <Divider>Работа с ключевыми кадрами на таймлайне</Divider>
         <ul>
-          <div
-            style={{
-              textAlign: "center",
-              fontWeight: "bold",
-              color: "var(--accent)",
-            }}
-          >
-            Работа с ключевыми кадрами на таймлайне
-          </div>
           <li>
             <mark className="key">Shift + F2</mark> или{" "}
             <mark className="key">Ctrl + Alt + Shift + A</mark>: убрать выделение у
@@ -1002,16 +979,8 @@ const AEFromNewbies: React.FC = () => {
             выделенных ключевых кадров.
           </li>
         </ul>
+        <Divider>Работа с слоями на таймлайне</Divider>
         <ul>
-          <div
-            style={{
-              textAlign: "center",
-              fontWeight: "bold",
-              color: "var(--accent)",
-            }}
-          >
-            Работа с слоями на таймлайне
-          </div>
           <li>
             <mark className="key">I</mark>: перенести плейхед к началу выделенного слоя.
           </li>
@@ -1103,16 +1072,8 @@ const AEFromNewbies: React.FC = () => {
             <mark className="key">Shift и -</mark>: изменить режим наложения слоя.
           </li>
         </ul>
+        <Divider>Создание слоёв</Divider>
         <ul>
-          <div
-            style={{
-              textAlign: "center",
-              fontWeight: "bold",
-              color: "var(--accent)",
-            }}
-          >
-            Создание слоёв
-          </div>
           <li>
             <mark className="key">Ctrl + Y</mark>: создать{" "}
             <mark className="ui">Solid Layer</mark>.
@@ -1136,16 +1097,8 @@ const AEFromNewbies: React.FC = () => {
             <mark className="key">Ctrl + Alt + Shift + L</mark>: создать источник света.
           </li>
         </ul>
+        <Divider>Работа с таймлайном и композицией</Divider>
         <ul>
-          <div
-            style={{
-              textAlign: "center",
-              fontWeight: "bold",
-              color: "var(--accent)",
-            }}
-          >
-            Работа с таймлайном и композицией
-          </div>
           <li>
             <mark className="key">B</mark>: установить начало рабочей области для
             предпросмотра.
@@ -1186,16 +1139,8 @@ const AEFromNewbies: React.FC = () => {
             кадру.
           </li>
         </ul>
+        <Divider>Работа с окном предпросмотра</Divider>
         <ul>
-          <div
-            style={{
-              textAlign: "center",
-              fontWeight: "bold",
-              color: "var(--accent)",
-            }}
-          >
-            Работа с окном предпросмотра
-          </div>
           <li>
             <mark className="key">Ctrl + Shift + H</mark>: отображение границы и выделение
             слоёв, контролёров и путей движения объектов. Более эффективен с включенным{" "}
@@ -1243,16 +1188,8 @@ const AEFromNewbies: React.FC = () => {
             </AdditionInfo>
           </li>
         </ul>
+        <Divider>Работа с файлами в проекте</Divider>
         <ul>
-          <div
-            style={{
-              textAlign: "center",
-              fontWeight: "bold",
-              color: "var(--accent)",
-            }}
-          >
-            Работа с файлами в проекте
-          </div>
           <li>
             <mark className="key">Ctrl + I</mark>: открыть окно системное импорта файлов в
             ваш проект.
