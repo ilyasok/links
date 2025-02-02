@@ -50,7 +50,7 @@ const PSFromNewbies: React.FC = () => {
       >
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
-      <DetailsSummary title="Для чего нужно использвовать Photoshop, а для чего Illustrator?">
+      <DetailsSummary title="Для чего нужно использовать Photoshop, а для чего Illustrator?">
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
     </div>
