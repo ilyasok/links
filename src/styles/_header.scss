@@ -14,9 +14,9 @@
     box-shadow 0.5s cubic-bezier(0.075, 0.82, 0.165, 1),
     border 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   margin-top: 12px;
-  border-radius: $roundness * 1.5;
+  border-radius: $roundness;
   background-color: var(--header_background);
-  padding-inline: 15px;
+  padding-inline: 12px;
 
   width: 95%;
   max-width: 1075px;
