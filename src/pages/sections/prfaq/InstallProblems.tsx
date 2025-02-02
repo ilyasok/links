@@ -1,6 +1,10 @@
 import React from "react";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
-import {AdditionInfo, AdditionWarning} from "../../../components/Additions";
+import {
+  AdditionDanger,
+  AdditionInfo,
+  AdditionWarning,
+} from "../../../components/Additions";
 import {ImageFigure, YouTubeVideo} from "../../../components/ContentFigure";
 import DetailsSummary from "../../../components/DetailsSummary";
 import ContentSwitcher from "../../../components/features/OperatingSystemFilter";
@@ -10,7 +14,284 @@ const PRInstallProblems: React.FC = () => {
     <div className="faq-content">
       <GithubUpdateInfo filePath="src/pages/sections/prfaq/InstallProblems.tsx" />
       <DetailsSummary title="Забыли положить инструкцию для установки рядом с файлами, куда что кидать?">
-        <p>{/* FIXME: написать!! */}</p>
+        <p>
+          Обычно установка большинства плагинов универсальна, поэтому следуйте
+          рекомендациям ниже.
+        </p>
+        <AdditionWarning>
+          Прежде чем использовать <mark className="file">.prproj</mark>,{" "}
+          <mark className="file">.aep</mark> и <mark className="file">.mogrt</mark>{" "}
+          шаблоны или пакеты для <mark className="plugin">AtomX</mark>,{" "}
+          <mark className="plugin">Motion Bro</mark> или подобных расширений - убедитесь,
+          что они полностью распакованы и расположены в пути не длиннее 256 символов без
+          кириллицы!
+        </AdditionWarning>
+        <ul>
+          <li>
+            Если в архиве находится файл <mark className="file">.prproj</mark>, то такой
+            файл проект просто импортируются в ваш проект с помощью{" "}
+            <mark className="ui">File &gt; Import</mark> или{" "}
+            <mark className="key">Ctrl+I</mark> и никуда не устанавливаются.
+          </li>
+          <li>
+            Если в архиве находится файл <mark className="file">.aep</mark>, то для
+            импорта таких проектов требуется установленный{" "}
+            <mark className="app">After Effects</mark>. Их можно импортировать в ваш
+            проект с помощью <mark className="ui">File &gt; Import</mark> или{" "}
+            <mark className="key">Ctrl+I</mark>. Композиция из{" "}
+            <mark className="app">After Effects</mark> в{" "}
+            <mark className="app">Premiere Pro</mark> будет работать через{" "}
+            <mark className="plugin">Dynamic Link</mark>.
+          </li>
+          <li>
+            Если в архиве находится <mark className="file">.atom</mark>, то такие файлы
+            устанавливаются путём <mark>drag&apos;n&apos;drop</mark> в окно расширения{" "}
+            <mark className="plugin">AtomX</mark>.
+          </li>
+          <li>
+            Если в архиве находится <mark className="file">.mbr</mark>, то такие файлы
+            устанавливаются путём <mark>drag&apos;n&apos;drop</mark> в окно расширения{" "}
+            <mark className="plugin">Motion Bro</mark>.
+          </li>
+        </ul>
+        <ContentSwitcher
+          windowsContent={
+            <div>
+              <ul>
+                <li>
+                  Если в архиве находится файл <mark className="file">.mogrt</mark>, то
+                  такие шаблоны устанавливаются в панели{" "}
+                  <mark className="ui">Graphics Templates</mark> с помощью кнопки{" "}
+                  <mark className="ui">Install Motion Graphics template</mark>.
+                  <ImageFigure
+                    styleClass="figure_windows-dark"
+                    imgSrc="images/premierepro/install_mogrt.png"
+                    imgTitle="Установка mogrt-шаблонов"
+                    caption="Graphics Templates"
+                  />
+                  Также файлы <mark className="file">.mogrt</mark> можно расположить в
+                  стандартную папку локальных шаблонов, которая находится по пути{" "}
+                  <mark className="path">
+                    %AppData%/Adobe/Common/Motion Graphics Templates/
+                  </mark>{" "}
+                  и они появятся в окне <mark className="ui">Graphics Templates</mark>.
+                  <AdditionWarning>
+                    При использовании некоторых шаблонов формата{" "}
+                    <mark className="file">.mogrt</mark> может потребоваться установленный
+                    в системе <mark className="app">After Effects</mark>. Если эта
+                    программа у вас уже установлена, но{" "}
+                    <mark className="app">Premiere Pro</mark> выбивает ошибку о том, что
+                    программу нужно установить - убедитесь в том, что вы установили{" "}
+                    <mark className="app">Premiere Pro</mark> и{" "}
+                    <mark className="app">After Effects</mark> в стандартном расположении{" "}
+                    <mark className="path">C:\Program Files\Adobe\</mark>.
+                  </AdditionWarning>
+                </li>
+                <li>
+                  Если в архиве или в записи находится файл{" "}
+                  <mark className="file">.exe</mark>, то обычно в нём содержится
+                  установщик. Если в записи указано, что данный установщик является
+                  репаком - в таком случае после его установки плагин будет уже
+                  активирован, никаких лишних телодвижений после установки делать не надо.
+                  <AdditionWarning>
+                    При использовании установщиков убедитесь в том, что у вас{" "}
+                    <mark className="app">Premiere Pro</mark> установлен в стандартном
+                    расположении <mark className="path">C:\Program Files\Adobe\</mark>, не
+                    на другом месте или разделе. В противном случае устанавливаемый плагин
+                    установится в другом месте и не будет отображаться в вашем{" "}
+                    <mark className="app">Premiere Pro</mark>.
+                  </AdditionWarning>
+                </li>
+                <li>
+                  Если в архиве находится файл <mark className="file">.prm</mark> или{" "}
+                  <mark className="file">.aex</mark>, то такие плагины обычно
+                  распаковываются в общую папку плагинов:{" "}
+                  <mark className="path">
+                    C:\Program Files\Adobe\Common\Plug-ins\7.0\MediaCore
+                  </mark>
+                  .
+                  <AdditionWarning>
+                    Учтите, что не все плагины формата <mark className="file">.aex</mark>{" "}
+                    поддерживаются в <mark className="app">Premiere Pro</mark>, так как по
+                    большей части плагины такого формата были предназначены для{" "}
+                    <mark className="app">After Effects</mark> и не всегда имеет
+                    &quot;обратную совместимость&quot; с{" "}
+                    <mark className="app">Premiere Pro</mark>.
+                  </AdditionWarning>
+                </li>
+                <li>
+                  Если в архива находится файл <mark className="file">.prfpset</mark>, то
+                  такие файлы пресетов устанавливается следующим образом.
+                  <ul>
+                    <li>
+                      Откройте окно <mark className="ui">Effects & Presets</mark> и
+                      нажмите на три полоски в заголовке этого окна, а затем выберите
+                      пункт <mark className="ui">Import Presets</mark>.
+                      <AdditionInfo>
+                        При необходимости вы можете создать новую папку для ваших новых
+                        пресетов, нажав на кнопку{" "}
+                        <mark className="ui">New Presets Bin</mark> и назвать её как вашей
+                        душе удобно.
+                      </AdditionInfo>
+                      <ImageFigure
+                        styleClass="figure_windows-dark"
+                        imgSrc="images/premierepro/import_presets.png"
+                        imgTitle="Установка пресетов в Premiere Pro"
+                        caption="Premiere Pro"
+                      />
+                    </li>
+                    <li>
+                      В открывшемся окне выберите файл пресетов формата{" "}
+                      <mark className="file">.prfpset</mark>.
+                    </li>
+                    <li>
+                      После выбора файла с пресетами ваши импортированные пресеты появятся
+                      в окне <mark className="ui">Effects</mark> в папке{" "}
+                      <mark className="path">Presets</mark>.
+                      <AdditionInfo>
+                        Все ваши пресеты хранятся в одном общем файле пресетов под
+                        названием{" "}
+                        <mark className="file">
+                          Effect Presets and Custom Items.prfpset
+                        </mark>
+                        , которая находится в{" "}
+                        <mark className="path">
+                          C:\Users\%UserName%\Documents\Adobe\Premiere
+                          Pro\XX.X\Profile-XXXXXX\
+                        </mark>
+                        . Этот файл редактировать вне{" "}
+                        <mark className="app">Premiere Pro</mark> не стоит, но его можно
+                        скопировать и перенести в другое место, чтобы в случае
+                        необходимости восстановить пресеты из файла.
+                      </AdditionInfo>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  Если в архиве находится файл <mark className="file">.cube</mark>,{" "}
+                  <mark className="file">.itx</mark>, <mark className="file">.look</mark>{" "}
+                  или <mark className="file">.lut</mark>, то такие файлы распаковываются в{" "}
+                  <mark className="path">
+                    {/* TODO: исправить путь */}
+                    C:\Program Files\Adobe\Adobe Premiere Pro 20XX\Support
+                    Files\Lumetri\LUTs\Creative
+                  </mark>{" "}
+                  и затем используются с эффектом{" "}
+                  <mark className="plugin">Lumetri Color</mark> в вкладке{" "}
+                  <mark className="ui">Creative</mark>.
+                </li>
+                <li>
+                  Если в архиве находится файл <mark className="file">.zxp</mark>, то
+                  такие расширения обычно устанавливаются через{" "}
+                  <a href="https://aescripts.com/learn/zxp-installer/">
+                    ZXP Installer от aescripts
+                  </a>
+                  .
+                  <AdditionDanger>
+                    Пожалуйста, не используйте{" "}
+                    <a href="https://zxpinstaller.com/">
+                      ZXP Installer от ELEMENTS Storage Media
+                    </a>
+                    , если вы используете версии программ от Adobe, отвязанные от
+                    приложения <mark className="app">Creative Cloud</mark>. Данный{" "}
+                    <a href="https://zxpinstaller.com/">ZXP Installer</a> будет вам
+                    выдавать ошибку <strong>-193</strong> до тех пор, пока вы не
+                    установите программу <mark className="app">Creative Cloud</mark>, а он
+                    же может вам поломать уже установленные программы.
+                  </AdditionDanger>
+                  Если вы не хотите устанавливать стороннее ПО для установки{" "}
+                  <mark className="file">.zxp</mark>, то вы можете переименовать файл{" "}
+                  <mark className="file">.zxp</mark> в <mark className="file">.zip</mark>{" "}
+                  и распаковать его как обычный архив. Содержимое свежераспакованного
+                  файла нужно поместить в папку{" "}
+                  <mark className="path">
+                    C:\Program Files (x86)\Common Files\Adobe\CEP\extensions
+                  </mark>{" "}
+                  (если такой папки нет - создайте) и после этого нужно применить{" "}
+                  <a
+                    download
+                    href="files/Enable Extensions Adobe.reg"
+                  >
+                    REG-патч
+                  </a>
+                  , если вы его не применяли.
+                  <AdditionInfo>
+                    <ul>
+                      <li>
+                        <a
+                          download
+                          href="files/Enable Extensions Adobe.reg"
+                        >
+                          REG-патч
+                        </a>{" "}
+                        нужно применить лишь один раз, он универсален. В дальнейшем при
+                        установке подобных расширений файл для внесений записей в реестр
+                        системы не нужно снова открывать.{" "}
+                        <a
+                          download
+                          href="files/Enable Extensions Adobe.reg"
+                        >
+                          REG-патч
+                        </a>{" "}
+                        включает debug-режим в <mark className="app">After Effects</mark>{" "}
+                        для корректного открытия и работы сторонних расширений,
+                        установленные из просторов интернета.
+                      </li>
+                      <li>
+                        Иногда в архиве может быть уже распакованный{" "}
+                        <mark className="file">.zxp</mark> архив. Это можно понять по
+                        наличию папок <mark className="path">META-INF</mark> и{" "}
+                        <mark className="path">CSXS</mark> внутри папки с названием
+                        расширения.
+                      </li>
+                    </ul>
+                  </AdditionInfo>
+                </li>
+                <li>
+                  Если в архиве находятся шрифты формата{" "}
+                  <mark className="file">.ttf</mark> или{" "}
+                  <mark className="file">.otf</mark>, то такие шрифты не распаковываются в
+                  папку с программой. Их нужно установить в саму систему, это можно
+                  сделать тремя способами.
+                  <ul>
+                    <li>
+                      Откройте файл шрифта двойным нажатием и в открывшемся окне нажмите в
+                      левом верхнем углу кнопку <mark className="ui">Установить</mark>.
+                    </li>
+                    <li>
+                      Если у вас есть целый набор шрифтов и вы не хотите открывать каждый
+                      файл по отдельности - просто распакуйте архив с шрифтами в любую
+                      папку. После этого выделите нужные шрифты в распакованной папке,
+                      нажмите <mark className="key">ПКМ</mark> и выберите в контекстном
+                      меню пункт <mark className="ui">Установить</mark> или{" "}
+                      <mark className="ui">Установить для всех пользователей</mark>.
+                    </li>
+                    <li>
+                      Распакуйте файлы шрифтов в{" "}
+                      <mark className="path">C:\Windows\Fonts</mark>. Это позволит
+                      установить шрифты для всех пользователей системы.
+                      <AdditionInfo>
+                        Если у вас нет прав администратора, то вы можете распаковать файлы
+                        шрифтов в папку{" "}
+                        <mark className="path">
+                          %LocalAppData%\Microsoft\Windows\Fonts
+                        </mark>
+                        . В таком случае шрифты будут установлены только для вашей учётной
+                        записи.
+                      </AdditionInfo>
+                    </li>
+                  </ul>
+                  Также при необходимости вы можете воспользоваться шрифтовыми менеджерами
+                  для организации и активации нужных шрифтов только при необходимости,
+                  например <mark className="app">Corel Font Manager</mark>,{" "}
+                  <mark className="app">FontExpert</mark> или{" "}
+                  <mark className="app">FontBase</mark>.
+                </li>
+              </ul>
+            </div>
+          }
+          macContent={<div>{/* TODO: дописать */}</div>}
+        />
       </DetailsSummary>
       <DetailsSummary
         title="В Telegram-записи лежат файлы .part1, .part2 и дальше по списку. Что это такое и как такие файлы корректно распаковать?"
