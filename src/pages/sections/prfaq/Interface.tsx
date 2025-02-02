@@ -46,6 +46,9 @@ const PRInterface: React.FC = () => {
           проект и редактировать их в новом окне <mark className="ui">Properties</mark>.
         </p>
       </DetailsSummary>
+      <DetailsSummary title='Куда пропала кнопка "Set to Frame Size"?'>
+        <p>{/* FIXME: написать */}</p>
+      </DetailsSummary>
       <DetailsSummary title="Как изменить вид отсчёта времени на таймлайне?">
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
