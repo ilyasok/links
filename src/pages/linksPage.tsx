@@ -184,7 +184,7 @@ const Links = () => {
               href="https://t.me/joinchat/F1DdXtG9LephYWUy"
               icon={<ForumRounded />}
               name="AEChat"
-              description="Обсуждаем про After Effects и Premiere Pro"
+              description="Обсуждаем After Effects и Premiere Pro"
             />
             <LinkCard
               href="https://t.me/+3LF_B_VK-Nw4YzYy"
