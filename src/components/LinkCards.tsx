@@ -85,28 +85,28 @@ export const LinkInAppCard: React.FC<LinkCardProps> = ({
   const [isClicked, setIsClicked] = useState(false);
 
   return (
-    <Link to={href}>
-      <motion.div
-        className="links-button"
-        onClick={() => setIsClicked(!isClicked)}
-        whileHover={{
-          scale: 1.15,
-          rotate: isClicked ? Math.random() * 2 : -Math.random() * 2,
-          transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
-          type: "spring",
-        }}
-        whileTap={{
-          scale: 0.95,
-          rotate: isClicked ? -Math.random() * 2 : Math.random() * 2,
-          opacity: 0.5,
-        }}
-      >
+    <motion.div
+      className="links-button"
+      onClick={() => setIsClicked(!isClicked)}
+      whileHover={{
+        scale: 1.15,
+        rotate: isClicked ? Math.random() * 2 : -Math.random() * 2,
+        transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
+        type: "spring",
+      }}
+      whileTap={{
+        scale: 0.95,
+        rotate: isClicked ? -Math.random() * 2 : Math.random() * 2,
+        opacity: 0.5,
+      }}
+    >
+      <Link to={href}>
         <div className="name_container">
           <div className="icon">{icon}</div>
           <p className="name">{name}</p>
         </div>
         <p className="description">{description}</p>
-      </motion.div>
-    </Link>
+      </Link>
+    </motion.div>
   );
 };
