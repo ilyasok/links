@@ -140,6 +140,7 @@ const DetailsSummary: React.FC<DetailsSummaryProps> = ({title, children, tag}) =
         }}
         whileTap={{
           opacity: 0.75,
+          scale: 1.01,
         }}
         className="faq-summary"
       >

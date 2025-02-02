@@ -62,7 +62,7 @@
     border-bottom: solid 4px var(--summary_border);
     border-left: solid 1px var(--summary_border);
     border-radius: $roundness;
-    background-image: linear-gradient(to bottom, var(--summary_background), transparent);
+    background-image: linear-gradient(to left, var(--summary_background), transparent);
     background-color: var(--summary_background);
     padding: 10px 15px;
     color: var(--summary_text);
@@ -248,11 +248,12 @@
     justify-content: center;
     align-items: center;
     vertical-align: middle;
-    transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: opacity 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
     margin-block: 0;
-    border: 2px solid var(--button_border);
+    border: 1px solid var(--summary_border);
+    border-bottom-width: 3px;
     border-radius: $roundness;
-    background-color: var(--button_background);
+    background-color: var(--summary_background);
     padding-inline: 10px;
     padding-block: 5px;
     color: var(--summary_text);
@@ -264,6 +265,7 @@
 
     &:hover {
       opacity: 0.75;
+      background-color: var(--links_hover);
     }
   }
 }

@@ -18,6 +18,7 @@
     box-shadow: 0 5px 5px 0 var(--shadow);
     border: 1px solid var(--links_border);
     border-radius: $roundness;
+    background-image: linear-gradient(to top, var(--summary_background), transparent);
     background-color: var(--links_background);
     padding-inline: 15px;
     padding-block: 10px;
@@ -41,7 +42,7 @@
         margin-inline-end: 8px;
         width: 24px;
         height: 24px;
-        color: var(--accent);
+        color: var(--links_text);
 
         path {
           margin: auto;
@@ -49,7 +50,7 @@
       }
 
       .name {
-        color: var(--accent);
+        color: var(--links_text);
         font-weight: 700;
         font-size: 1.125rem;
         font-family: "Mulish", sans-serif;
