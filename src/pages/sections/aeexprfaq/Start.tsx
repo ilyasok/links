@@ -2,6 +2,7 @@ import React from "react";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 import DetailsSummary from "../../../components/DetailsSummary";
 import {AdditionInfo} from "../../../components/Additions";
+import {VideoFigure} from "../../../components/ContentFigure";
 
 const AEExprStart: React.FC = () => {
   return (
@@ -51,4 +52,17 @@ const AEExprStart: React.FC = () => {
     </div>
   );
 };
+    <DetailsSummary title="Как включить режим написания выражения для конкретного параметра?">
+      <p>
+        Для того, чтобы включить выражение для какого-нибудь параметра, просто нажмите на
+        иконку секундомера с зажатым <mark className="key">Alt</mark>. После активации
+        режима выражений для конкретного параметра вы сможете писать код внутри текстового
+        поля.
+      </p>
+      <VideoFigure
+        styleClass="figure_windows-dark"
+        videoSrc="images/aftereffects/enable_expressions.mp4"
+        caption="After Effects"
+      />
+    </DetailsSummary>
 export default AEExprStart;
