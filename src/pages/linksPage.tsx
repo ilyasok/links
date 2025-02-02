@@ -13,6 +13,7 @@ import {
   FormatListBulletedRounded,
   ForumRounded,
   Gif,
+  GradientRounded,
   HandymanRounded,
   MmsRounded,
   MovieFilterRounded,
@@ -208,6 +209,12 @@ const Links = () => {
               icon={<MovieRounded />}
               name="ru_montage"
               description="Обсуждаем монтаж в любой монтажной программе"
+            />
+            <LinkCard
+              href="https://t.me/ExitLight_Chat"
+              icon={<GradientRounded />}
+              name="ExitLight Community Chat"
+              description="Обсуждаем цветокоррекцию в видео"
             />
             <LinkCard
               href="https://t.me/whatthefontt"
