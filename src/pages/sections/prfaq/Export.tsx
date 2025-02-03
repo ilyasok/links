@@ -506,7 +506,55 @@ const PRExport: React.FC = () => {
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Как вывести секвенцию с альфа-каналом, то есть с прозрачностью?">
-        <p>{/* FIXME: написать!! */}</p>
+        <AdditionWarning>
+          Сразу скажу, в <mark className="video">H.264</mark> и{" "}
+          <mark className="file">.mp4</mark> нельзя вывести композицию с альфа-каналом.
+          Это можно сделать только на устройствах с macOS и при использовании кодека{" "}
+          <mark className="video">HEVC / H.265</mark>.
+        </AdditionWarning>
+        <p>
+          Прежде чем начать вывод секвенции с прозрачностью, убедитесь в том, что сама
+          прозрачность у вас существует. Без этого никак. Чтобы проверить прозрачные
+          участки в видео - нажмите на иконку гаечного ключа в окне{" "}
+          <mark className="ui">Program Monitor</mark> и выберите в меню пункт{" "}
+          <mark className="ui">Transparency Grid</mark>. Данная опция подставляет сетку в
+          виде шахматной доски для отображения прозрачных частей в секвенции.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/premierepro/toggle_transparency_grid.png"
+          imgTitle="Включение сетки для отображения прозрачных частей"
+          caption="Program Monitor"
+        />
+        <p>
+          Если всё с этим в порядке, то пора переходить во вкладку{" "}
+          <mark className="ui">Export</mark> нажав на комбинацию клавиш{" "}
+          <mark className="key">Ctrl + M</mark>. Затем выберите в{" "}
+          <mark className="ui">Format</mark> параметр{" "}
+          <mark className="ui">QuickTime</mark> и в <mark className="ui">Depth</mark>{" "}
+          выберите <mark className="ui">8-bpc + Alpha</mark> или{" "}
+          <mark className="ui">16-bpc + Alpha</mark>, если вам нужно вывести видео с
+          большей битностью.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/premierepro/export_prores4444_8bit-alpha.png"
+          imgTitle="Экспорт секвенции с альфа-каналом"
+          caption="Export"
+        />
+        <p>
+          Затем укажите путь для вывода файла и нажмите на кнопку{" "}
+          <mark className="ui">Export</mark> в левом нижнем углу. После экспорта вы
+          сможете воспользоваться этим видео в последующем монтаже видео или где-нибудь
+          ещё.
+        </p>
+        <AdditionInfo>
+          Если вы хотите посмотреть такое видео, но у вас оно не открывается стандартным
+          плеером, то вам нужно установить сторонний видеоплеер, например{" "}
+          <mark className="app">VLC</mark> или <mark className="app">MPC-HC</mark>.
+          Учтите, что не все видео-проигрыватели корректно отображают видео с
+          альфа-каналом.
+        </AdditionInfo>
       </DetailsSummary>
       <DetailsSummary title="Как сохранить свой шаблон с настройками для экспорта секвенций?">
         <p>{/* FIXME: написать!! */}</p>
