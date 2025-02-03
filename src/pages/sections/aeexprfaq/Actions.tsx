@@ -3,6 +3,7 @@ import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 import DetailsSummary from "../../../components/DetailsSummary";
 import {AdditionInfo} from "../../../components/Additions";
 import {VideoFigure} from "../../../components/ContentFigure";
+import CodeSnippet from "../../../components/features/CodeSnippet";
 
 const AEExprActions: React.FC = () => {
   return (
@@ -12,9 +13,21 @@ const AEExprActions: React.FC = () => {
         title="Как задать тряску у слоя?"
         tag="шейк, покачивание, случайное положение, причина тряски"
       >
-        <p>{/* FIXME: написать!! */}</p>
+        <p>
+          Для задания случайного покачивания слоя в{" "}
+          <mark className="app">After Effects</mark> есть встроенная функция{" "}
+          <mark className="code">wiggle()</mark>. Данная функция принимает на себя два
+          значения: частота и амплитуда.
+        </p>
+        <CodeSnippet language="javascript">{wiggleExample1}</CodeSnippet>
+        <p>
+          В функцию вместо числа можно передать переменную или ссылку на какой-нибудь
+          объект.
+        </p>
+        <CodeSnippet language="javascript">{wiggleExample2}</CodeSnippet>
+        {/* FIXME: написать!! */}
       </DetailsSummary>
-      <DetailsSummary title="Как зациклить текущую анимацию, которая была создана с помощью ключевых кадров?">
+      <DetailsSummary title="Как зациклить анимацию, которая была создана с помощью ключевых кадров?">
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Как мне сделать 'прыгучую' анимацию нужного параметра?">
@@ -50,3 +63,10 @@ const AEExprActions: React.FC = () => {
   );
 };
 export default AEExprActions;
+
+const wiggleExample1 = `wiggle(5, 10)`;
+
+const wiggleExample2 = `let x = 5;
+let y = 10;
+
+wiggle(x, y)`;
