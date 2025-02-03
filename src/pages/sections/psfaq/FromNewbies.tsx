@@ -1,6 +1,8 @@
 import React from "react";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 import DetailsSummary from "../../../components/DetailsSummary";
+import {FlexibleLinks} from "../../../components/FlexibleLinksFaQ";
+import {YouTubeVideo} from "../../../components/ContentFigure";
 
 const PSFromNewbies: React.FC = () => {
   return (
@@ -10,7 +12,42 @@ const PSFromNewbies: React.FC = () => {
         title="Первый раз установил Photoshop, с чего бы мне начать обучение?"
         tag="для новичка, первый раз, только открыл"
       >
-        <p>{/* FIXME: написать!! */}</p>
+        <p>
+          <mark className="app">Photoshop</mark> сейчас широко применяется во многих
+          сферах, включая графический дизайн, фотографию, веб-дизайн и иллюстрации. Если
+          вы ещё не определились с вектором направления работы с программой и хотите
+          просто изучить его функционал и посмотреть примеры работы в нём, то советую
+          пройти курс{" "}
+          <a href="https://www.youtube.com/playlist?list=PL_jKgaFUK_61p1yXULw7KPi6HGpyXKTWx">
+            Фотошоп с нуля
+          </a>{" "}
+          от <a href="https://www.youtube.com/@Photofoxchannel">PhotoFox</a>.
+        </p>
+        <YouTubeVideo
+          link="-IqjBmVaApg"
+          caption='Курс "Фотошоп с нуля"'
+        />
+        <p>
+          Если вы уже уверенно обрабатываете и создаёте изображения в{" "}
+          <mark className="app">Photoshop</mark>, и хотите узнать что-то новое, то
+          рекомендую заглянуть на каналы и плейлисты ниже.
+        </p>
+        <FlexibleLinks>
+          <a href="https://www.youtube.com/playlist?list=PL3ysV0s8Gs4UpuSH_wx2vchA-HzRXNcFv">
+            &quot;Уроки Photoshop для продвинутых&quot; от Study Kvo
+          </a>
+          <a href="https://www.youtube.com/playlist?list=PLrsq-o51mMFHXOE0wRrDpb0l4mj9EjTkS">
+            Фишки и лайфхаки от VideoSmile
+          </a>
+          <a href="https://www.youtube.com/@grafon/videos">GRAFON Уроки фотошопа</a>
+          <a href="https://www.youtube.com/@IntuitiveDesigns/videos">Intuitive Designs</a>
+          <a href="https://www.youtube.com/@Texturelabs/videos">Texturelabs</a>
+          <a href="https://www.youtube.com/@PANTERvision/videos">P A N T E R</a>
+          <a href="https://www.youtube.com/@thazero/videos">ThaZero</a>
+        </FlexibleLinks>
+        <p style={{textAlign: "center", fontSize: "0.95rem", fontWeight: "700"}}>
+          Надеюсь, вы найдёте что-то полезное для себя. Удачи в ваших начинаниях!
+        </p>
       </DetailsSummary>
       <DetailsSummary
         title="Не понимаю термины от других пользователей Photoshop, проясните!"
