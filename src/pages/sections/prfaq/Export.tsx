@@ -559,6 +559,12 @@ const PRExport: React.FC = () => {
       <DetailsSummary title="Как сохранить свой шаблон с настройками для экспорта секвенций?">
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
+      <DetailsSummary title="Как вывести текущий кадр предпросмотра как файл изображения?">
+        <p>{/* FIXME: написать!! */}</p>
+      </DetailsSummary>
+      <DetailsSummary title="Как вывести все кадры секвенции как отдельные файлы изображений?">
+        <p>{/* FIXME: написать!! */}</p>
+      </DetailsSummary>
       <DetailsSummary title="Как вывести только часть секвенции?">
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
