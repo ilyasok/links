@@ -46,6 +46,9 @@ const AEFromNewbies: React.FC = () => {
           <a href="https://www.youtube.com/@BenMarriott">Ben Marriott</a>
           <a href="https://www.youtube.com/@AEPlug">AEPlug</a>
           <a href="https://www.youtube.com/@JakeInMotion">Jake In Motion</a>
+          <a href="https://www.youtube.com/@SmertimbaGraphics/videos">
+            Smertimba Graphics
+          </a>
         </FlexibleLinks>
         <p>
           Также я могу порекомендовать несколько отличных курсов, как бесплатных, так и
