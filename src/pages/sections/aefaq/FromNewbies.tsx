@@ -1057,6 +1057,20 @@ const AEFromNewbies: React.FC = () => {
             <mark className="key">]</mark>: передвинуть слой к плейхеду слева.
           </li>
           <li>
+            <mark className="key">Alt + PgUp</mark>: сдвинуть слой на 1 кадр назад.
+          </li>
+          <li>
+            <mark className="key">Alt + Shift + PgUp</mark>: сдвинуть слой на 10 кадров
+            назад.
+          </li>
+          <li>
+            <mark className="key">Alt + PgDown</mark>: сдвинуть слой на 1 кадр вперёд.
+          </li>
+          <li>
+            <mark className="key">Alt + Shift + PgDown</mark>: сдвинуть слой на 10 кадров
+            вперёд.
+          </li>
+          <li>
             <mark className="key">Alt + [</mark>: обрезать или продлить слой от плейхеда.
           </li>
           <li>
