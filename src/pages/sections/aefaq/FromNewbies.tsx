@@ -811,12 +811,133 @@ const AEFromNewbies: React.FC = () => {
         title="А есть список популярных комбинаций клавиш для работы в After Effects?"
         tag="хоткеи, горячие клавиши, шорткаты, ускорение работы"
       >
-        {/* TODO: переписать комбинации по возможности */}
         <p>
           Горячие клавиши могут помочь ускорить ваш рутинный процесс нахождения нужной
           функции программы, поэтому ниже приведены популярные у многих пользователей
           комбинации.
         </p>
+        <Divider>Работа с файлами и проектом</Divider>
+        <ul>
+          <li>
+            <mark className="key">Ctrl + Alt + N</mark>: создать новый проект и закрыть
+            уже открытый.
+            <AdditionInfo>
+              Если открытый проект перед созданием нового не был сохранён, то программа
+              предложит сохранить изменения.
+            </AdditionInfo>
+          </li>
+          <li>
+            <mark className="key">Ctrl + I</mark>: открыть окно системное импорта файлов в
+            ваш проект.
+          </li>
+          <li>
+            <mark className="key">Ctrl + O</mark>: открыть окно для открытия проекта из
+            проводника.
+          </li>
+          <li>
+            <mark className="key">Ctrl + Alt + Shift + P</mark>: открыть{" "}
+            <mark className="file">.aep</mark> проект, с которым вы в последний раз
+            работали.
+          </li>
+          <li>
+            <mark className="key">Ctrl + Ali + Shift + D</mark>: открыть или выполнить
+            недавно использованный скрипт формата <mark className="file">.jsx</mark> или{" "}
+            <mark className="file">.jsxbin</mark>.
+          </li>
+        </ul>
+        <Divider>Выбор инструментов</Divider>
+        <ul>
+          <li>
+            <mark className="key">V</mark>: инструмент выделения объектов, стандартный
+            инструмент при открытии программы.
+          </li>
+          <li>
+            <mark className="key">H</mark>: инструмент руки, позволяет перемещать мышкой
+            таймлайн и предпросмотр, а также некоторые элементы интерфейса.
+            <AdditionInfo>
+              Если зажать <mark className="key">Space</mark>, то у вас временно
+              активируется инструмент руки, пока вы не отпустите клавишу.
+            </AdditionInfo>
+          </li>
+          <li>
+            <mark className="key">G</mark>: инструмент пера, позволяющий рисовать фигуру
+            или маску.
+            <AdditionInfo>
+              Если выделен не шейповый слой, то инструмент будет рисовать маску. Если
+              выделен шейповый слой - будет рисовать фигуру, изменить поведение на
+              рисование маски можно в верхней панели.
+            </AdditionInfo>
+          </li>
+          <li>
+            <mark className="key">Ctrl + T</mark>: инструмент создания и редактирования
+            текста.
+            <AdditionInfo>
+              Многократное нажатие на <mark className="key">Ctrl + T</mark> программа
+              будет переключать инструмент между горизонтальным или вертикальным
+              правописанием текста.
+            </AdditionInfo>
+          </li>
+          <li>
+            <mark className="key">Y</mark>: инструмент для выбора положения якорной точки.
+          </li>
+          <li>
+            <mark className="key">Q</mark>: инструмент для создания фигуры и масок.
+            <AdditionInfo>
+              <ul>
+                <li>
+                  Многократное нажатие на <mark className="key">Q</mark> программа будет
+                  переключать инструмент между созданием прямоугольника, прямоугольника со
+                  скругленными углами, эллипсом, многоугольником и звездой.
+                </li>
+                <li>
+                  Если выделен не шейповый слой, то инструмент будет рисовать маску. Если
+                  выделен шейповый слой - будет рисовать фигуру, изменить поведение на
+                  рисование маски можно в верхней панели.
+                </li>
+              </ul>
+            </AdditionInfo>
+          </li>
+          <li>
+            <mark className="key">Ctrl + B</mark>: инструмент кисти.
+            <AdditionInfo>
+              Многократное нажатие на <mark className="key">Ctrl + B</mark> программа
+              будет переключать инструмент между кистью, штампом или ластиком.
+            </AdditionInfo>
+          </li>
+          <li>
+            <mark className="key">Z</mark>: инструмент лупы, позволяющий увеличить
+            предпросмотр по нажатию или выделению области мышкой.
+            <AdditionInfo>
+              С модификатором <mark className="key">Alt</mark> будет выполняться
+              уменьшение предпросмотра.
+            </AdditionInfo>
+          </li>
+          <li>
+            <mark className="key">W</mark>: инструмент поворота слоя.
+          </li>
+          <li>
+            <mark className="key">Alt + W</mark>: инструмент кисти для Rotobrush или
+            уточнения краёв при ротоскопировании.
+          </li>
+          <li>
+            <mark className="key">C</mark>: инструмент камеры.
+            <AdditionInfo>
+              Многократное нажатие переключает между режимами работы с камерой.
+            </AdditionInfo>
+          </li>
+          <li>
+            <mark className="key">Y</mark>: инструмент изменения якорной точки.
+          </li>
+          <li>
+            <mark className="key">Ctrl + P</mark>: инструмент{" "}
+            <mark className="ui">Puppet Tool</mark>.{" "}
+            <AdditionInfo>
+              Многократное нажатие на <mark className="key">Ctrl + P</mark> программа
+              будет переключаться между инструментами{" "}
+              <mark className="ui">Puppet Tool</mark>.
+            </AdditionInfo>
+          </li>
+        </ul>
         <Divider>Отображение свойств слоя</Divider>
         <ul>
           <li>
@@ -881,42 +1002,6 @@ const AEFromNewbies: React.FC = () => {
             <AdditionInfo>
               Например, нажав на <mark className="key">Alt + Shift + P</mark> вы добавите
               кейфрейм для аттрибута положения.
-            </AdditionInfo>
-          </li>
-        </ul>
-        <Divider>Выбор инструментов</Divider>
-        <ul>
-          <li>
-            <mark className="key">V</mark>: инструмент выделения объектов, стандартный
-            инструмент при открытии программы.
-          </li>
-          <li>
-            <mark className="key">H</mark> или зажать <mark className="key">Space</mark>:
-            инструмент руки, позволяет перемещать мышкой таймлайн и предпросмотр, а также
-            некоторые элементы интерфейса.
-          </li>
-          <li>
-            <mark className="key">G</mark>: инструмент пера, позволяющий рисовать фигуру
-            или маску.
-            <AdditionInfo>
-              Если выделен не шейповый слой, то инструмент будет рисовать маску. Если
-              выделен шейповый слой - будет рисовать фигуру, изменить поведение на
-              рисование маски можно в верхней панели.
-            </AdditionInfo>
-          </li>
-          <li>
-            <mark className="key">Ctrl + T</mark>: инструмент создания и редактирования
-            текста.
-          </li>
-          <li>
-            <mark className="key">Y</mark>: инструмент для выбора положения якорной точки.
-          </li>
-          <li>
-            <mark className="key">Z</mark>: инструмент лупы, позволяющий увеличить
-            предпросмотр по нажатию или выделению области мышкой.
-            <AdditionInfo>
-              С модификатором <mark className="key">Alt</mark> будет выполняться
-              уменьшение предпросмотра.
             </AdditionInfo>
           </li>
         </ul>
@@ -1008,6 +1093,15 @@ const AEFromNewbies: React.FC = () => {
               Дублируя копии композиции на таймлайне, вы не сделаете их независимыми.
               Дублируйте нужные композиции в окне <mark className="ui">Project</mark>.
             </AdditionWarning>
+          </li>
+          <li>
+            <mark className="key">Ctrl + Shift + E</mark>: удалить все эффекты у
+            выделенных слоёв.
+          </li>
+          <li>
+            <mark className="key">Ctrl + Alt + Shift + F</mark>: применить недавно
+            использованный пресет формата <mark className="file">.ffx</mark> на выделенный
+            слой.
           </li>
           <li>
             <mark className="key">Ctrl + Shift + D</mark>: разделить выделенный слой на
@@ -1113,6 +1207,9 @@ const AEFromNewbies: React.FC = () => {
           <li>
             <mark className="key">Ctrl + Alt + Shift + L</mark>: создать источник света.
           </li>
+          <li>
+            <mark className="key">Ctrl + N</mark>: открыть окно создания новой композиции.
+          </li>
         </ul>
         <Divider>Работа с таймлайном и композицией</Divider>
         <ul>
@@ -1125,8 +1222,48 @@ const AEFromNewbies: React.FC = () => {
             предпросмотра.
           </li>
           <li>
+            <mark className="key">Shift + Home</mark>: переместить плейхед к началу
+            рабочей области.
+          </li>
+          <li>
+            <mark className="key">Shift + End</mark>: переместить плейхед к концу рабочей
+            области.
+          </li>
+          <li>
+            <mark className="key">Home</mark> или{" "}
+            <mark className="key">Ctrl + Alt + стрелка влево</mark>: переместить плейхед к
+            началу композиции.
+          </li>
+          <li>
+            <mark className="key">End</mark> или{" "}
+            <mark className="key">Ctrl + Alt + стрелка вправо</mark>: переместить плейхед
+            к концу композиции.
+          </li>
+          <li>
+            <mark className="key">PgUp</mark> или{" "}
+            <mark className="key">Ctrl + стрелка влево</mark>: перейти на 1 кадр назад.
+          </li>
+          <li>
+            <mark className="key">PgDown</mark> или{" "}
+            <mark className="key">Ctrl + стрелка вправо</mark>: перейти на 1 кадр вперёд.
+          </li>
+          <li>
+            <mark className="key">Shift + PgUp</mark> или{" "}
+            <mark className="key">Ctrl + Shift + стрелка влево</mark>: перейти на 10
+            кадров назад.
+          </li>
+          <li>
+            <mark className="key">Shift + PgDown</mark> или{" "}
+            <mark className="key">Ctrl + Shift + стрелка вправо</mark>: перейти на 10
+            кадров вперёд.
+          </li>
+          <li>
             <mark className="key">Ctrl + K</mark>: открыть настройки композиции. В нём вы
             можете изменить FPS, разрешение, длину композиции и другие параметры.
+          </li>
+          <li>
+            <mark className="key">Ctrl + Alt + Shift + K</mark>: открыть окно{" "}
+            <mark className="ui">Project Settings</mark>.
           </li>
           <li>
             <mark className="key">Ctrl + R</mark>: включить отображение линейки.
@@ -1205,28 +1342,28 @@ const AEFromNewbies: React.FC = () => {
             </AdditionInfo>
           </li>
         </ul>
-        <Divider>Работа с файлами в проекте</Divider>
+        <Divider>Прочее</Divider>
         <ul>
           <li>
-            <mark className="key">Ctrl + I</mark>: открыть окно системное импорта файлов в
-            ваш проект.
+            <mark className="key">Ctrl + Alt + ;</mark>: открыть окно настроек программы.
           </li>
           <li>
-            <mark className="key">Ctrl + Alt + Shift + P</mark>: открыть{" "}
-            <mark className="file">.aep</mark> проект, с которым вы в последний раз
-            работали.
+            <mark className="key">Ctrl + Alt + &apos;</mark>: открыть окно настроек
+            комбинаций клавиш.
           </li>
           <li>
-            <mark className="key">Ctrl + Ali + Shift + D</mark>: открыть или выполнить
-            недавно использованный скрипт формата <mark className="file">.jsx</mark> или{" "}
-            <mark className="file">.jsxbin</mark>.
-          </li>
-          <li>
-            <mark className="key">Ctrl + Alt + Shift + F</mark>: применить недавно
-            использованный пресет формата <mark className="file">.ffx</mark> на выделенный
-            слой.
+            <mark className="key">Alt + Shift + J</mark>: открыть окно для перемещения
+            плейхеда к нужному отрезку времени.
           </li>
         </ul>
+        <AdditionInfo>
+          Более подробный список комбинаций клавиш вы можете прочесть{" "}
+          <a href="https://helpx.adobe.com/ru/after-effects/using/keyboard-shortcuts-reference.html">
+            на официальном сайте Adobe
+          </a>
+          . Всего шорткатов достаточно много, но по моему мнению, те что указаны тут -
+          чаще всего используют в повседневе.
+        </AdditionInfo>
       </DetailsSummary>
       <DetailsSummary
         title="Где я могу узнать об нововведениях в обновлениях After Effects?"
