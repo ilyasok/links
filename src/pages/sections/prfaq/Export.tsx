@@ -481,7 +481,78 @@ const PRExport: React.FC = () => {
           экспорта и начать экспорт с помощью кнопки <mark className="ui">Export</mark>.
         </p>
         <Divider>Выводим через AfterCodecs</Divider>
-        {/* TODO: написать!! */}
+        <p>
+          Теперь поговорим и про <mark className="plugin">AfterCodecs</mark>. Для начала
+          экспорта через <mark className="plugin">AfterCodecs</mark> нам нужно снова
+          вернуться во вкладку <mark className="ui">Export</mark> и выбрать в пункте{" "}
+          <mark className="ui">Format</mark> значение{" "}
+          <mark className="ui">AfterCodecs</mark>.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/premierepro/selecting_aftercodecs.png"
+          imgTitle="Выбор AfterCodecs"
+          caption="Export"
+        />
+        <p>
+          Чтобы перейти в настройки <mark className="plugin">AfterCodecs</mark> -
+          раскройте вкладку <mark className="ui">Video Settings</mark> и нажмите на кнопку{" "}
+          <mark className="ui">AfterCodecs Settings</mark>.
+        </p>
+        <AdditionInfo>
+          По умолчанию в <mark className="plugin">AfterCodecs</mark> стоит контейнер{" "}
+          <mark className="file">MOV</mark>. Так как мы в этом пункте выводим видео в{" "}
+          <mark className="file">.mp4</mark>, то и указать нужно соответствующий контейнер
+          для вывода.
+        </AdditionInfo>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/premierepro/change_format_open_aftercodecs_settings.png"
+          imgTitle="Изменение контейнера и открытие настроек AfterCodecs"
+          caption="Export"
+        />
+        <p>
+          В открывшемся окне мы снова видим кучу непонятных параметров. Здесь нам нужно
+          указать качество и скорость кодирования видео.
+        </p>
+        <ul>
+          <li>
+            В пункте <mark className="ui">Tradeoff</mark> мы можем указать три варианта на
+            что ориентироваться при кодировании: на процент качества (похож на метод
+            квантования CQP), на желаемый битрейт или на желаемый размер файла (не
+            рекомендуется при повседневном использовании).
+          </li>
+          <li>
+            Значение для скорости кодирования <mark className="ui">Speed</mark> можно
+            поставить <mark>2</mark> или <mark>4</mark>.
+          </li>
+          <li>
+            В разделе <mark className="ui">Colors</mark> можно изменить битность и
+            цветовой диапазон. Обычно там значения меняют редко.
+          </li>
+          <li>
+            В <mark className="ui">Audio</mark> лучше указать значение <mark>512</mark>,
+            вместо <mark>Auto</mark>, чтобы вывести звук в аудио без сильной потери
+            качества.
+          </li>
+          <AdditionWarning>
+            Параметры <mark className="ui">Tuning</mark>,{" "}
+            <mark className="ui">H.264 Profiles</mark>, <mark className="ui">GOP</mark>,{" "}
+            <mark className="ui">Audio Bitrate</mark>, <mark className="ui">VR Meta</mark>{" "}
+            и <mark className="ui">Fast Start</mark> лучше не менять без острой
+            необходимости!
+          </AdditionWarning>
+        </ul>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/premierepro/aftercodecs_settings.png"
+          imgTitle="Настройки AfterCodecs"
+          caption="AfterCodecs 1.11.5 for Premiere Pro"
+        />
+        <p>
+          После завершения настроек мы нажимаем <mark className="ui">OK</mark> и начинаем
+          рендер как обычно, через кнопку <mark className="ui">Export</mark>.
+        </p>
       </DetailsSummary>
       <DetailsSummary title="Как вывести секвенцию в .WebM и VP9?">
         <p>
