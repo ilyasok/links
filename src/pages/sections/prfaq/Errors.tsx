@@ -222,7 +222,7 @@ const PRErrors: React.FC = () => {
               </p>
               <ImageFigure
                 styleClass="figure_macos-dark"
-                imgSrc="/images/network_radio_silence.png"
+                imgSrc="images/network_radio_silence.png"
                 imgTitle="Блокируем доступ в интернет программам на примере Premiere Pro"
                 caption="Radio Silence"
               />
@@ -235,7 +235,7 @@ const PRErrors: React.FC = () => {
               </p>
               <ImageFigure
                 styleClass="figure_macos-dark"
-                imgSrc="/images/firewall_radio_silence.png"
+                imgSrc="images/firewall_radio_silence.png"
                 imgTitle="Окно Firewall после блокировки доступа в интернет программам"
                 caption="Radio Silence"
               />

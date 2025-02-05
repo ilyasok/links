@@ -387,7 +387,7 @@ const AEExport: React.FC = () => {
         </p>
         <ImageFigure
           styleClass="figure_windows-dark"
-          imgSrc="/images/aftereffects/render_queue.png"
+          imgSrc="images/aftereffects/render_queue.png"
           imgTitle="Интерфейс очереди просчёта"
           caption="Render Queue"
         />
@@ -417,7 +417,7 @@ const AEExport: React.FC = () => {
         </p>
         <ImageFigure
           styleClass="figure_windows-dark"
-          imgSrc="/images/aftereffects/output_module_format_options.png"
+          imgSrc="images/aftereffects/output_module_format_options.png"
           imgTitle="Окно Output Module"
           caption="Output Module Settings"
         />
@@ -429,7 +429,7 @@ const AEExport: React.FC = () => {
         </p>
         <ImageFigure
           styleClass="figure_windows-dark"
-          imgSrc="/images/aftereffects/h264_options.png"
+          imgSrc="images/aftereffects/h264_options.png"
           imgTitle="Окно настроек H.264"
           caption="H.264 Options"
         />
@@ -445,7 +445,7 @@ const AEExport: React.FC = () => {
         </p>
         <ImageFigure
           styleClass="figure_windows-dark"
-          imgSrc="/images/aftereffects/start_render_button.png"
+          imgSrc="images/aftereffects/start_render_button.png"
           imgTitle="Кнопка начала рендера"
           caption="Render Queue"
         />
@@ -480,7 +480,7 @@ const AEExport: React.FC = () => {
         </p>
         <ImageFigure
           styleClass="figure_windows-dark"
-          imgSrc="/images/aftereffects/selecting_voukoder.png"
+          imgSrc="images/aftereffects/selecting_voukoder.png"
           imgTitle="Выбираем Voukoder из списка форматов"
           caption="Output Module Settings"
         />
@@ -523,7 +523,7 @@ const AEExport: React.FC = () => {
         </ul>
         <ImageFigure
           styleClass="figure_windows-light"
-          imgSrc="/images/aftereffects/select_codec_in_voukoder.png"
+          imgSrc="images/aftereffects/select_codec_in_voukoder.png"
           imgTitle="Выбираем нужный вариант кодека в Voukoder"
           caption="Voukoder 13.4.1"
         />
@@ -537,7 +537,7 @@ const AEExport: React.FC = () => {
         </p>
         <ImageFigure
           styleClass="figure_windows-light"
-          imgSrc="/images/aftereffects/codec_parameter_voukoder.png"
+          imgSrc="images/aftereffects/codec_parameter_voukoder.png"
           imgTitle="Настраиваем качество видео в Voukoder"
           caption="Voukoder 13.4.1"
         />
@@ -580,7 +580,7 @@ const AEExport: React.FC = () => {
         </p>
         <ImageFigure
           styleClass="figure_windows-dark"
-          imgSrc="/images/aftereffects/selecting_aftercodecs.png"
+          imgSrc="images/aftereffects/selecting_aftercodecs.png"
           imgTitle="Выбираем AfterCodecs из списка форматов"
           caption="Output Module Settings"
         />
@@ -618,7 +618,7 @@ const AEExport: React.FC = () => {
         </ul>
         <ImageFigure
           styleClass="figure_windows-dark"
-          imgSrc="/images/aftereffects/aftercodecs_settings.png"
+          imgSrc="images/aftereffects/aftercodecs_settings.png"
           imgTitle="Настройки AfterCodecs"
           caption="AfterCodecs 1.11.5 for After Effects"
         />
@@ -1028,7 +1028,7 @@ const AEExport: React.FC = () => {
         </AdditionInfo>
         <ImageFigure
           styleClass="figure_windows-dark"
-          imgSrc="/images/aftereffects/render_queue.png"
+          imgSrc="images/aftereffects/render_queue.png"
           imgTitle="Интерфейс очереди просчёта"
           caption="Render Queue"
         />

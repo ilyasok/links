@@ -575,7 +575,7 @@ const AEImport: React.FC = () => {
         </p>
         <ImageFigure
           styleClass="figure_windows-dark"
-          imgSrc="/images/download_tgs_from_telegram.png"
+          imgSrc="images/download_tgs_from_telegram.png"
           imgTitle="Сохранить стикер как .tgs"
           caption="Telegram"
         />
@@ -613,7 +613,7 @@ const AEImport: React.FC = () => {
         </p>
         <ImageFigure
           styleClass="figure_windows-dark"
-          imgSrc="/images/aftereffects/bodymovin_import_json.png"
+          imgSrc="images/aftereffects/bodymovin_import_json.png"
           imgTitle="Импортируем .json в After Effects через Bodymovin"
           caption="Bodymovin"
         />

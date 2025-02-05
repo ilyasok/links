@@ -827,6 +827,9 @@ const AEFromNewbies: React.FC = () => {
             </AdditionInfo>
           </li>
           <li>
+            <mark className="key">Ctrl + N</mark>: открыть окно создания новой композиции.
+          </li>
+          <li>
             <mark className="key">Ctrl + I</mark>: открыть окно системное импорта файлов в
             ваш проект.
           </li>
@@ -843,6 +846,22 @@ const AEFromNewbies: React.FC = () => {
             <mark className="key">Ctrl + Ali + Shift + D</mark>: открыть или выполнить
             недавно использованный скрипт формата <mark className="file">.jsx</mark> или{" "}
             <mark className="file">.jsxbin</mark>.
+          </li>
+          <li>
+            <mark className="key">Ctrl + S</mark>: сохранить проект.
+          </li>
+          <li>
+            <mark className="key">Ctrl + Shift + S</mark>: сохранить файл отдельным
+            файлом.
+          </li>
+          <li>
+            <mark className="key">Ctrl + Alt + Shift + S</mark>: сохранить проект с тем же
+            названием с добавлением числа по иерархии.
+            <AdditionInfo>
+              Если вы 25 раз выполните эту комбинацию клавиш, то у вас создадутся 25
+              файлов с разными числами по возрастанию в папке, где был изначально создан
+              проект.
+            </AdditionInfo>
           </li>
         </ul>
         <Divider>Выбор инструментов</Divider>
@@ -1206,9 +1225,6 @@ const AEFromNewbies: React.FC = () => {
           </li>
           <li>
             <mark className="key">Ctrl + Alt + Shift + L</mark>: создать источник света.
-          </li>
-          <li>
-            <mark className="key">Ctrl + N</mark>: открыть окно создания новой композиции.
           </li>
         </ul>
         <Divider>Работа с таймлайном и композицией</Divider>
@@ -1953,7 +1969,7 @@ const AEFromNewbies: React.FC = () => {
         </p>
         <VideoFigure
           styleClass="figure_windows-dark"
-          videoSrc="/images/aftereffects/invert_layer_numeration.mp4"
+          videoSrc="images/aftereffects/invert_layer_numeration.mp4"
           caption="Переворачиваем очерёдность слоёв"
         />
       </DetailsSummary>
@@ -1965,7 +1981,7 @@ const AEFromNewbies: React.FC = () => {
         </p>
         <VideoFigure
           styleClass="figure_windows-dark"
-          videoSrc="/images/aftereffects/move_layers_around_playhead.mp4"
+          videoSrc="images/aftereffects/move_layers_around_playhead.mp4"
           caption="Перемещаем слои по времени вокруг временной метки"
         />
       </DetailsSummary>
@@ -1989,7 +2005,7 @@ const AEFromNewbies: React.FC = () => {
         </p>
         <VideoFigure
           styleClass="figure_windows-dark"
-          videoSrc="/images/aftereffects/change_start_timecode.mp4"
+          videoSrc="images/aftereffects/change_start_timecode.mp4"
           caption="Composition Settings"
         />
       </DetailsSummary>
@@ -2006,7 +2022,7 @@ const AEFromNewbies: React.FC = () => {
         </AdditionInfo>
         <ImageFigure
           styleClass="figure_windows-dark"
-          imgSrc="/images/aftereffects/view_layer_bounds.png"
+          imgSrc="images/aftereffects/view_layer_bounds.png"
           imgTitle="Включение отображение границ масок и слоёв"
           caption="Composition"
         />
@@ -2016,7 +2032,7 @@ const AEFromNewbies: React.FC = () => {
         </p>
         <ImageFigure
           styleClass="figure_windows-dark"
-          imgSrc="/images/aftereffects/render_track_points.png"
+          imgSrc="images/aftereffects/render_track_points.png"
           imgTitle="Включение точек трекинга"
           caption="Effects Controls"
         />
@@ -2034,7 +2050,7 @@ const AEFromNewbies: React.FC = () => {
         </p>
         <VideoFigure
           styleClass="figure_windows-dark"
-          videoSrc="/images/aftereffects/create_paragraph_text.mp4"
+          videoSrc="images/aftereffects/create_paragraph_text.mp4"
           caption="Создание Paragraph Text"
         />
         <p>
@@ -2103,7 +2119,7 @@ const AEFromNewbies: React.FC = () => {
         </p>
         <ImageFigure
           styleClass="figure_windows-dark"
-          imgSrc="/images/aftereffects/guide_layer_example.png"
+          imgSrc="images/aftereffects/guide_layer_example.png"
           imgTitle="Пример использования Guide Layer"
           caption="Timeline"
         />
@@ -2145,7 +2161,7 @@ const AEFromNewbies: React.FC = () => {
         </p>
         <VideoFigure
           styleClass="figure_windows-dark"
-          videoSrc="/images/aftereffects/font-reset_bug.mp4"
+          videoSrc="images/aftereffects/font-reset_bug.mp4"
           caption="Проблема кривого начертания на примере Cascadia Mono"
         />
         <AdditionWarning>
@@ -2211,7 +2227,7 @@ const AEFromNewbies: React.FC = () => {
         </p>
         <ImageFigure
           styleClass="figure_windows-dark"
-          imgSrc="/images/aftereffects/linking_masks_for_saber.png"
+          imgSrc="images/aftereffects/linking_masks_for_saber.png"
           imgTitle="Соединяем маски для Saber"
           caption="Timeline"
         />

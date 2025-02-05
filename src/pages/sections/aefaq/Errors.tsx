@@ -360,7 +360,7 @@ const AEErrors: React.FC = () => {
               </p>
               <ImageFigure
                 styleClass="figure_macos-dark"
-                imgSrc="/images/network_radio_silence.png"
+                imgSrc="images/network_radio_silence.png"
                 imgTitle="Блокируем доступ в интернет программам на примере Premiere Pro"
                 caption="Radio Silence"
               />
@@ -373,7 +373,7 @@ const AEErrors: React.FC = () => {
               </p>
               <ImageFigure
                 styleClass="figure_macos-dark"
-                imgSrc="/images/firewall_radio_silence.png"
+                imgSrc="images/firewall_radio_silence.png"
                 imgTitle="Окно Firewall после блокировки доступа в интернет программам"
                 caption="Radio Silence"
               />
@@ -768,7 +768,7 @@ const AEErrors: React.FC = () => {
             <mark className="ui">Advanced</mark>.
             <ImageFigure
               styleClass="figure_windows-dark"
-              imgSrc="/images/aftereffects/detailed_analysis-3d_camera_tracker.png"
+              imgSrc="images/aftereffects/detailed_analysis-3d_camera_tracker.png"
               imgTitle="Включение детального анализа исходника"
               caption="Effect Controls"
               // FIXME: обрезать изображение и нарисовать указатель

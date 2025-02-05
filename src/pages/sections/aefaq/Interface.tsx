@@ -22,7 +22,7 @@ const AEInterface: React.FC = () => {
         </p>
         <ImageFigure
           styleClass="figure_windows-dark"
-          imgSrc="/images/aftereffects/view_layer_bounds.png"
+          imgSrc="images/aftereffects/view_layer_bounds.png"
           imgTitle="Включение отображение границ масок и слоёв"
           caption="Composition"
         />
@@ -34,7 +34,7 @@ const AEInterface: React.FC = () => {
         </p>
         <ImageFigure
           styleClass="figure_windows-dark"
-          imgSrc="/images/aftereffects/view_options.png"
+          imgSrc="images/aftereffects/view_options.png"
           imgTitle="Настройка отображения параметров слоя"
           caption="View Options"
         />
@@ -50,7 +50,7 @@ const AEInterface: React.FC = () => {
         </p>
         <ImageFigure
           styleClass="figure_windows-dark"
-          imgSrc="/images/aftereffects/change_motion_path_range.png"
+          imgSrc="images/aftereffects/change_motion_path_range.png"
           imgTitle="Изменение области времени отображения пути движения"
           caption="Preferences"
         />
@@ -184,7 +184,7 @@ const AEInterface: React.FC = () => {
         </p>
         <ImageFigure
           styleClass="figure_windows-dark"
-          imgSrc="/images/aftereffects/migrate_previous_version_preferences.png"
+          imgSrc="images/aftereffects/migrate_previous_version_preferences.png"
           imgTitle="Переносим настройки из старых версий программы"
           caption="Preferences"
         />
@@ -236,7 +236,7 @@ const AEInterface: React.FC = () => {
         </p>
         <ImageFigure
           styleClass="figure_windows-dark"
-          imgSrc="/images/aftereffects/toggle_auto-open_panel.png"
+          imgSrc="images/aftereffects/toggle_auto-open_panel.png"
           imgTitle="Отключение автоматического открытия окна свойств"
           caption="After Effects"
         />
@@ -559,7 +559,7 @@ const AEInterface: React.FC = () => {
         </AdditionInfo>
         <ImageFigure
           styleClass="figure_windows-dark"
-          imgSrc="/images/aftereffects/console_theme_colorizing.png"
+          imgSrc="images/aftereffects/console_theme_colorizing.png"
           imgTitle="Включение возможности изменения акцента интерфейса"
           caption="Console"
         />
@@ -622,7 +622,7 @@ const AEInterface: React.FC = () => {
         </p>
         <ImageFigure
           styleClass="figure_windows-light"
-          imgSrc="/images/aftereffects/resource_hacker_open_file.png"
+          imgSrc="images/aftereffects/resource_hacker_open_file.png"
           imgTitle="Открываем файл в Resource Hacker"
           caption="Resource Hacker"
         />

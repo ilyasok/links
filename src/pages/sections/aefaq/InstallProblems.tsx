@@ -179,8 +179,8 @@ const AEInstallProblems: React.FC = () => {
                         расширения.
                       </li>
                       <li>
-                        Если расширение просит включить разрешение на запись и доступ в
-                        интернет, то перейдите в{" "}
+                        Если расширение просит включить разрешение на запись файлов и
+                        доступ в интернет, то перейдите в{" "}
                         <mark className="ui">
                           Edit &gt; Preferences &gt; Scripting & Expressions
                         </mark>{" "}
@@ -349,8 +349,8 @@ const AEInstallProblems: React.FC = () => {
                         расширения.
                       </li>
                       <li>
-                        Если расширение просит включить разрешение на запись и доступ в
-                        интернет, то перейдите в{" "}
+                        Если расширение просит включить разрешение на запись файлов и
+                        доступ в интернет, то перейдите в{" "}
                         <mark className="ui">
                           Edit &gt; Preferences &gt; Scripting & Expressions
                         </mark>{" "}
@@ -1230,7 +1230,7 @@ const AEInstallProblems: React.FC = () => {
         </p>
         <ImageFigure
           styleClass="figure_windows-dark"
-          imgSrc="/images/aftereffects/startup_repair_options.png"
+          imgSrc="images/aftereffects/startup_repair_options.png"
           imgTitle="Окно для решения проблем при запуске программы"
           caption="After Effects"
         />

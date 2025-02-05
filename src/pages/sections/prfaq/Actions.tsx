@@ -472,7 +472,7 @@ const PRActions: React.FC = () => {
         </p>
         <ImageFigure
           styleClass="figure_windows-dark"
-          imgSrc="/images/stemroller_interface.png"
+          imgSrc="images/stemroller_interface.png"
           imgTitle="Главная страница StemRoller"
           caption="StemRoller"
         />

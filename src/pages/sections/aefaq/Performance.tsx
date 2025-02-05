@@ -137,7 +137,7 @@ const AEPerformance: React.FC = () => {
         </AdditionInfo>
         <ImageFigure
           styleClass="figure_windows-dark"
-          imgSrc="/images/aftereffects/view_render_time.png"
+          imgSrc="images/aftereffects/view_render_time.png"
           imgTitle="Смотрим время рендера слоя"
           caption="Timeline"
         />
@@ -166,7 +166,7 @@ const AEPerformance: React.FC = () => {
         </p>
         <ImageFigure
           styleClass="figure_windows-dark"
-          imgSrc="/images/aftereffects/mfr_settings.png"
+          imgSrc="images/aftereffects/mfr_settings.png"
           imgTitle="Настройка ограничения процессора при многокадровом рендере"
           caption="Preferences"
         />
@@ -278,7 +278,7 @@ const AEPerformance: React.FC = () => {
         </p>
         <ImageFigure
           styleClass="figure_windows-light"
-          imgSrc="/images/aftereffects/disable_idle_cache.png"
+          imgSrc="images/aftereffects/disable_idle_cache.png"
           imgTitle="Отключение автоматического кэширования предпросмотра при бездействии"
           caption="After Effects"
         />
@@ -296,7 +296,7 @@ const AEPerformance: React.FC = () => {
         </AdditionInfo>
         <ImageFigure
           styleClass="figure_windows-dark"
-          imgSrc="/images/aftereffects/change_time_idle_cache.png"
+          imgSrc="images/aftereffects/change_time_idle_cache.png"
           imgTitle="Изменение времени для автоматического кэширования при бездействии"
           caption="Preferences"
         />
@@ -320,7 +320,7 @@ const AEPerformance: React.FC = () => {
         </p>
         <ImageFigure
           styleClass="figure_windows-dark"
-          imgSrc="/images/aftereffects/project_manager_mercury.png"
+          imgSrc="images/aftereffects/project_manager_mercury.png"
           imgTitle="Переключение типа рендера"
           caption="Project Manager"
         />
@@ -383,7 +383,7 @@ const AEPerformance: React.FC = () => {
         </p>
         <ImageFigure
           styleClass="figure_windows-dark"
-          imgSrc="/images/aftereffects/preview_caching.png"
+          imgSrc="images/aftereffects/preview_caching.png"
           imgTitle="Включение кэширования предпросмотра"
           caption="Preview"
         />
@@ -410,7 +410,7 @@ const AEPerformance: React.FC = () => {
         </p>
         <ImageFigure
           styleClass="figure_windows-dark"
-          imgSrc="/images/aftereffects/preview_change_fps.png"
+          imgSrc="images/aftereffects/preview_change_fps.png"
           imgTitle="Изменение частоты кадров предпросмотра"
           caption="Preview"
         />
@@ -437,7 +437,7 @@ const AEPerformance: React.FC = () => {
         </p>
         <ImageFigure
           styleClass="figure_windows-dark"
-          imgSrc="/images/aftereffects/audio_hardware_settings.png"
+          imgSrc="images/aftereffects/audio_hardware_settings.png"
           imgTitle="Настройки звукового выхода"
           caption="Preferences"
         />

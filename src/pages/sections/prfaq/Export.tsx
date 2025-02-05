@@ -433,7 +433,7 @@ const PRExport: React.FC = () => {
         </ul>
         <ImageFigure
           styleClass="figure_windows-light"
-          imgSrc="/images/premierepro/select_codec_in_voukoder.png"
+          imgSrc="images/premierepro/select_codec_in_voukoder.png"
           imgTitle="Выбираем нужный вариант кодека в Voukoder"
           caption="Voukoder 13.4.1"
         />
@@ -447,7 +447,7 @@ const PRExport: React.FC = () => {
         </p>
         <ImageFigure
           styleClass="figure_windows-light"
-          imgSrc="/images/premierepro/codec_parameter_voukoder.png"
+          imgSrc="images/premierepro/codec_parameter_voukoder.png"
           imgTitle="Настраиваем качество видео в Voukoder"
           caption="Voukoder 13.4.1"
         />
