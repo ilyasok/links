@@ -179,7 +179,18 @@ const PRFromNewbies: React.FC = () => {
         />
       </DetailsSummary>
       <DetailsSummary title="Как вернуть звуковую или видео дорожку на таймлайн?">
-        <p>{/* FIXME: написать!! */}</p>
+        <p>
+          Для возвращения недостающей части у вашего исходника вам нужно выделить клип, а
+          затем нажать на кнопку <mark className="key">F</mark>. Затем уберите{" "}
+          <mark className="ui">Source patching for inserts and overwrites</mark> в той
+          дорожке, в котором вы потеряли видео или аудио. После этого нажмите на{" "}
+          <mark className="key">.</mark> или <mark className="key">Ю</mark>.
+        </p>
+        <VideoFigure
+          styleClass="figure_macos-dark"
+          videoSrc="images/premierepro/restore_missing.mp4"
+          caption="Видео из Telegram-канала @nano_tutorials"
+        />
       </DetailsSummary>
       <DetailsSummary title="Хочу перевести голос в субтитры, но загрузка падает в бесконечность. Почему функция транскрибации не работает?">
         <p>
