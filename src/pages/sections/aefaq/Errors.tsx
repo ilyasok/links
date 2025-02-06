@@ -609,7 +609,7 @@ const AEErrors: React.FC = () => {
             <mark className="app">Cinema 4D 2023.X.X</mark>.
           </li>
           <li>
-            <mark className="app">After Effects 22.x и выше</mark> требует{" "}
+            <mark className="app">After Effects 22.x - 23.0</mark> требует{" "}
             <mark className="app">Cinema 4D 25.X.X</mark>.
           </li>
           <li>
