@@ -396,6 +396,11 @@ const Links = () => {
               name="Работники Кино Pro"
             />
             <LinkCardNoDescription
+              href="https://t.me/cgfreelance"
+              icon={<WorkRounded />}
+              name="CG Freelance"
+            />
+            <LinkCardNoDescription
               href="https://t.me/video_academy"
               icon={<WorkRounded />}
               name="VA Видео для бизнеса"
