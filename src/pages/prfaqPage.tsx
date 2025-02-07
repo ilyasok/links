@@ -149,8 +149,8 @@ const PRFaQ = () => {
                       title: <Link to="/prfaq">FAQ по Adobe Premiere Pro</Link>,
                       menu: {
                         items: [
-                          {title: <Link to="/aefaq">FAQ по After Effects</Link>},
-                          {title: <Link to="/psfaq">FAQ по Photoshop</Link>},
+                          {title: <Link to="/aefaq">FAQ по Adobe After Effects</Link>},
+                          {title: <Link to="/psfaq">FAQ по Adobe Photoshop</Link>},
                         ],
                       },
                     },
