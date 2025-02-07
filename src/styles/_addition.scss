@@ -51,14 +51,22 @@ li > .addition-danger,
       margin-block: 5px;
       padding-inline-start: 2px;
       padding-block: 0;
-      list-style-type: decimal;
 
       &:not(:last-child) {
-        border-bottom: none;
+        border-bottom-style: 1px solid;
+        padding-bottom: 10px;
       }
 
       &::before {
-        display: none;
+        display: inline-block;
+        position: absolute;
+        top: 6px;
+        bottom: 6px;
+        left: -12px;
+        opacity: 50%;
+        border-radius: $roundness;
+        width: 2px;
+        content: "";
       }
 
       &:first-child {
@@ -91,6 +99,16 @@ li > .addition-danger,
       color: var(--addition_info-text);
     }
 
+    li {
+      &::before {
+        background-color: var(--addition_info-text);
+      }
+
+      &:not(:last-child) {
+        border-bottom-color: var(--addition_info-mark);
+      }
+    }
+
     mark {
       outline: 1px solid var(--addition_info-border);
       background-color: var(--addition_info-mark);
@@ -111,6 +129,16 @@ li > .addition-danger,
       color: var(--addition_warning-text);
     }
 
+    li {
+      &::before {
+        background-color: var(--addition_warning-text);
+      }
+
+      &:not(:last-child) {
+        border-bottom-color: var(--addition_warning-mark);
+      }
+    }
+
     mark {
       outline: 1px solid var(--addition_warning-border);
       background-color: var(--addition_warning-mark);
@@ -129,6 +157,16 @@ li > .addition-danger,
 
     a {
       color: var(--addition_danger-text);
+    }
+
+    li {
+      &::before {
+        background-color: var(--addition_danger-text);
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid var(--addition_warning-mark);
+      }
     }
 
     mark {
