@@ -47,14 +47,14 @@ li > .addition-danger,
     }
 
     li {
+      position: relative;
       margin-inline-start: 20px;
       margin-block: 5px;
       padding-inline-start: 2px;
-      padding-block: 0;
+      padding-block: 4px;
 
       &:not(:last-child) {
-        border-bottom-style: 1px solid;
-        padding-bottom: 10px;
+        border-bottom: 1px solid;
       }
 
       &::before {
