@@ -22,7 +22,7 @@ export const LinkCard: React.FC<LinkCardProps> = ({href, icon, name, description
       className="links-button"
       onClick={() => setIsClicked(!isClicked)}
       whileHover={{
-        scale: 1.15,
+        scale: 1.05,
         rotate: isClicked ? Math.random() * 2 : -Math.random() * 2,
         transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
         type: "spring",
@@ -56,7 +56,7 @@ export const LinkCardNoDescription: React.FC<LinkCardPropsNoDescription> = ({
       className="links-button"
       onClick={() => setIsClicked(!isClicked)}
       whileHover={{
-        scale: 1.15,
+        scale: 1.05,
         rotate: isClicked ? Math.random() * 2 : -Math.random() * 2,
         transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
         type: "spring",
@@ -89,7 +89,7 @@ export const LinkInAppCard: React.FC<LinkCardProps> = ({
       className="links-button"
       onClick={() => setIsClicked(!isClicked)}
       whileHover={{
-        scale: 1.15,
+        scale: 1.05,
         rotate: isClicked ? Math.random() * 2 : -Math.random() * 2,
         transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
         type: "spring",
