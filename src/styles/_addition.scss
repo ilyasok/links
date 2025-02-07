@@ -165,7 +165,7 @@ li > .addition-danger,
       }
 
       &:not(:last-child) {
-        border-bottom: 1px solid var(--addition_warning-mark);
+        border-bottom: 1px solid var(--addition_danger-mark);
       }
     }
 
