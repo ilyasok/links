@@ -172,13 +172,17 @@ const PRInstallProblems: React.FC = () => {
                   <mark className="file">.itx</mark>, <mark className="file">.look</mark>{" "}
                   или <mark className="file">.lut</mark>, то такие файлы распаковываются в{" "}
                   <mark className="path">
-                    {/* TODO: исправить путь */}
                     C:\Program Files\Adobe\Adobe Premiere Pro 20XX\Support
                     Files\Lumetri\LUTs\Creative
-                  </mark>{" "}
-                  и затем используются с эффектом{" "}
+                  </mark>
+                  , а затем используются в окне
                   <mark className="plugin">Lumetri Color</mark> в вкладке{" "}
                   <mark className="ui">Creative</mark>.
+                  <AdditionInfo>
+                    Чтобы открыть окно для цветокоррекции через Lumetri, то перейдите в{" "}
+                    <mark className="ui">Window</mark> и выберите{" "}
+                    <mark className="ui">Lumetri Color</mark>.
+                  </AdditionInfo>
                 </li>
                 <li>
                   Если в архиве находится файл <mark className="file">.zxp</mark>, то
