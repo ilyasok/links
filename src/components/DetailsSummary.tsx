@@ -49,6 +49,19 @@ export const generateAnchorId = () => {
     });
   });
 
+  if (window.location.hash) {
+    const anchorId = window.location.hash.slice(1);
+
+    const existingAnchor = document.getElementById(anchorId);
+
+    if (!existingAnchor && /^\d+\.\d+$/.test(anchorId)) {
+      message.error(
+        "Не удалось найти пункт, который был указан в ссылке. Скорее всего он был перемещён в другое место или удалён"
+      );
+      history.replaceState(null, "", window.location.pathname + window.location.search);
+    }
+  }
+
   return generatedAnchor;
 };
 
