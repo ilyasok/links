@@ -1,6 +1,10 @@
 import React from "react";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
-import {AdditionInfo, AdditionWarning} from "../../../components/Additions";
+import {
+  AdditionDanger,
+  AdditionInfo,
+  AdditionWarning,
+} from "../../../components/Additions";
 import {YouTubeVideo} from "../../../components/ContentFigure";
 import DetailsSummary from "../../../components/DetailsSummary";
 import ContentSwitcher from "../../../components/features/OperatingSystemFilter";
@@ -149,7 +153,180 @@ const PRTips: React.FC = () => {
         title="Какие плагины и инструменты мне стоит поставить в первую очередь для программы?"
         tag="рекомендация, топ, борисфх, твикстор, рсмб, юниверс, мбл, mbl"
       >
-        <p>{/* TODO: добавить список */}</p>
+        <AdditionWarning>
+          Сразу хочу{" "}
+          <b>
+            <u>предупредить</u>
+          </b>
+          : пожалуйста, не надо скачивать и устанавливать в программу все плагины мира
+          подряд. Для начала разберитесь с тем, что вам действительно нужно.
+        </AdditionWarning>
+        <p>
+          Сторонние плагины и расширения в какой-то степени могут ускорить и
+          автоматизировать вашу рутинную работу с кадрами и шотами. Ниже приведу список
+          популярных плагинов.
+        </p>
+        <Divider>Для совместимости с чужими проектами</Divider>
+        <ul>
+          <li>
+            <mark className="plugin">Boris FX Sapphire</mark> и{" "}
+            <mark className="plugin">Boris FX Continuum</mark> - сборники эффектов и
+            различных переходов.
+          </li>
+          <li>
+            <mark className="plugin">Magic Bullet Suite</mark>,{" "}
+            <mark className="plugin">VFX Suite</mark> и{" "}
+            <mark className="plugin">Universe</mark> - ещё один сборник различных эффектов
+            и переходов.
+          </li>
+          <li>
+            <mark className="plugin">Boris FX Mocha Pro</mark> - плагин для планарного
+            трекинга различных объектов.
+          </li>
+          <li>
+            <mark className="plugin">Film Impact Premium Transitions</mark> и{" "}
+            <mark className="plugin">Film Impact Premium Effects</mark> - сборник
+            различных эффектов и переходов.
+          </li>
+          <li>
+            <mark className="plugin">FXHome Ignite Pro</mark> - плагин для добавления
+            визуальных эффектов и переходов.
+          </li>
+          <li>
+            <mark className="plugin">Twixtor</mark> и <mark className="plugin">RSMB</mark>{" "}
+            - плагины для плавного замедления клипа и добавления размытия в движении.
+          </li>
+        </ul>
+        <Divider>Полезные инструменты</Divider>
+        <li>
+          <mark className="plugin">Excalibur</mark> - панель для быстрого применения
+          различных переходов, эффектов и выполнения различных действий. Вызывается по
+          умолчанию через комбинацию клавиш <mark className="key">Alt + Space</mark>, но
+          можно переназначить на другую комбинацию в настройках плагина. Данный плагин
+          считается аналогом <mark className="plugin">FX Console</mark> из{" "}
+          <mark className="app">After Effects</mark> для{" "}
+          <mark className="app">Premiere Pro</mark>.
+        </li>
+        <li>
+          <mark className="plugin">AtomX</mark>, <mark className="plugin">MotionBro</mark>
+          , <mark className="plugin">Premiere Composer</mark> и похожие плагины с
+          различными паками помогут ускорить работу за счёт быстрого применения
+          разнообразных эффектов и переходов.
+          <AdditionWarning>
+            Учтите, что при применении некоторых переходов у вас может снизиться
+            производительность проекта.
+          </AdditionWarning>
+        </li>
+        <li>
+          <mark className="app">Nobe OmniScope</mark> - программа, подключаемая к{" "}
+          <mark className="app">Premiere Pro</mark> для отображения спектрограммы вашего
+          видео. Похож на <mark className="plugin">Lumetri Scopes</mark>, только лучше.
+        </li>
+        <Divider>Синхронизация дорожек c разных камер</Divider>
+        <ul>
+          <li>
+            <mark className="app">PluralEyes</mark> - программа от Red Giant для
+            синхронизации всех аудио и видео, снятые с разных камер.
+            <AdditionWarning>
+              Для данной программы поддержка прекращена. Программой пользоваться можно, но
+              обновляться она уже не будет.{" "}
+              <a href="https://support.maxon.net/hc/en-us/articles/7389361453340-PluralEyes-Limited-Maintenance-Mode">
+                Подробнее...
+              </a>
+            </AdditionWarning>
+          </li>
+          <li>
+            <mark className="app">Syncaila</mark> или же{" "}
+            <mark className="app">Синкайла</mark> - отечественный продукт для
+            синхронизации многокамерной съёмки. Доступна пробная версия на 20 дней, по
+            истечении которого будет доступна синхронизация только 20 клипов на двух
+            дорожках.
+            <AdditionInfo>
+              Приобрести полную версию <mark className="app">Syncaila</mark> можно на{" "}
+              <a href="https://syncaila.com/ru#section-p7">официальном сайте</a>.
+            </AdditionInfo>
+          </li>
+        </ul>
+        <Divider>Создание субтитров</Divider>
+        <ul>
+          <li>
+            <mark className="app">Subtitle Edit</mark> - сторонняя программа для
+            редактирования и генерации субтитров из звука с помощью технологий{" "}
+            <mark>Whisper</mark> и <mark>Vosk/Kaldi</mark>.
+          </li>
+          <li>
+            <mark className="plugin">Submachine</mark> - плагин для создания анимированных
+            субтитров, как в &quot;тиктоках&quot; и &quot;рилсах&quot;. Перед
+            использованием плагина лучше уделить 20 минут и{" "}
+            <a href="https://youtu.be/xYidiPvc_LY">
+              посмотреть официальное обучающее видео по его использованию
+            </a>
+            .
+            <AdditionDanger>
+              Данный плагин на <mark className="app">Premiere Pro</mark> версий{" "}
+              <mark>24.2</mark> и <mark>24.2.1</mark> работает кривовато. Рекомендуется
+              обновить программу до последней версии или откатиться до <mark>24.1</mark>.
+            </AdditionDanger>
+          </li>
+          <li>
+            <mark className="plugin">Captioneer</mark> - аналог предыдущего в списке
+            плагина, с помощью него тоже можно создавать анимированные субтитры и
+            применять на них стили из <mark className="file">.mogrt</mark> файлов.
+          </li>
+        </ul>
+        <Divider>Обработка звука</Divider>
+        <AdditionInfo>
+          <mark className="app">Premiere Pro</mark> поддерживает любые VST3-плагины,
+          поэтому вы можете своими любимыми эффектами для обработки звука, если вы
+          работали ранее в DAW-программах и хотите перенести эффекты оттуда.
+        </AdditionInfo>
+        <ul>
+          <li>
+            <mark className="plugin">iZotope RX</mark>,{" "}
+            <mark className="plugin">iZotope Nectar</mark> и{" "}
+            <mark className="plugin">iZotope Ozone</mark> - плагины для обработки звука,
+            восстановления голоса и мастеринга.
+          </li>
+          <li>
+            <mark className="plugin">FabFilter Bundle</mark> - сборник различных плагинов
+            для обработки звука.
+          </li>
+          <li>
+            <mark className="plugin">Antares Auto-Tune</mark> - знаменитый плагин для
+            коррекции голоса.
+          </li>
+        </ul>
+        <Divider>Ретушь</Divider>
+        <ul>
+          <li>
+            <mark className="plugin">BeautyBox</mark> - плагин для ретуширования и
+            сглаживания кожи у человека на видео с сохранением естественного вида.
+          </li>
+        </ul>
+        <Divider>Цветокоррекция и шумоподавление</Divider>
+        <ul>
+          <li>
+            <mark className="plugin">FilmConvert</mark> - плагин для применения различных
+            фильтров для имитации плёнки.
+          </li>
+          <li>
+            <mark className="plugin">Magic Bullet Looks</mark> - плагин для применения
+            художественной цветокоррекции.
+          </li>
+          <li>
+            <mark className="plugin">Neat Video</mark> - плагин для шумоподавления и
+            уменьшения мерцания на видео.
+          </li>
+        </ul>
+        <Divider>Остальное</Divider>
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </DetailsSummary>
+      </DetailsSummary>
+      </DetailsSummary>
       </DetailsSummary>
     </div>
   );
