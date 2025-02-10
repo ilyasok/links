@@ -811,6 +811,7 @@ const AEFromNewbies: React.FC = () => {
         title="А есть список популярных комбинаций клавиш для работы в After Effects?"
         tag="хоткеи, горячие клавиши, шорткаты, ускорение работы"
       >
+        {/* FIXME: по возможности дописать ещё и переверстать под таблицу */}
         <p>
           Горячие клавиши могут помочь ускорить ваш рутинный процесс нахождения нужной
           функции программы, поэтому ниже приведены популярные у многих пользователей
@@ -1467,10 +1468,11 @@ const AEFromNewbies: React.FC = () => {
                 caption="Включение вида Debug Database View"
               />
               <p>
-                Затем в строке поиска нам нужно писать{" "}
-                <mark className="copy">ApplicationLanguage</mark>. В строке с одноимённым
-                параметром пишем <mark className="copy">en_US</mark>. После ввода значения
-                - перезапускаем <mark className="app">After Effects</mark>.
+                Затем в строке поиска нам нужно написать{" "}
+                <mark className="copy">ApplicationLanguage</mark> или найти этот пункт
+                вручную. В строке с одноимённым параметром пишем{" "}
+                <mark className="copy">en_US</mark>. После ввода значения - перезапускаем{" "}
+                <mark className="app">After Effects</mark>.
               </p>
               <ImageFigure
                 styleClass="figure_windows-dark"
@@ -1825,7 +1827,7 @@ const AEFromNewbies: React.FC = () => {
           caption="Используем корректирующие слои в After Effects"
         />
       </DetailsSummary>
-      <DetailsSummary title="Почему у меня отсутствует звук в предпросмотре?">
+      <DetailsSummary title="Почему у меня отсутствует звук при проигрывании предпросмотра?">
         <p>
           Если вы недавно меняли аудиовыход, например подключили беспроводные наушники или
           внешний монитор с колонками, то вполне вероятно что у вас сбились настройки
@@ -1834,6 +1836,12 @@ const AEFromNewbies: React.FC = () => {
           <mark className="ui">Edit &gt; Preferences &gt; Audio Hardware</mark> и указать
           в пункте <mark className="ui">Default Output</mark> нужный вам аудиовыход.
         </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/aftereffects/set_audio_output.png"
+          imgTitle="Установка аудиовыхода"
+          caption="Preferences"
+        />
         <p>
           Если вы проигрываете видео не в реальном времени и звук отсутствует (даже если
           он вам и нужен запинающийся и растянутый), то возможно вы в настройках{" "}
@@ -1841,6 +1849,12 @@ const AEFromNewbies: React.FC = () => {
           <mark className="ui">Mute Audio When Preview Is Not Real-time</mark> в{" "}
           <mark className="ui">Edit &gt; Preferences &gt; Previews</mark>.
         </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/aftereffects/mute_audio_when_preview_is_not_real-time.png"
+          imgTitle="Выключение Mute Audio When Preview Is Not Real-time"
+          caption="Preferences"
+        />
         <p>
           Если советы выше не помогли - проверьте окно <mark className="ui">Preview</mark>
           , включен ли там вывод звука? Если нет, то включите и проиграйте предпросмотр
