@@ -263,9 +263,29 @@ const PRFromNewbies: React.FC = () => {
           функцию транскрибации речи в текст.
         </AdditionDanger>
       </DetailsSummary>
-      <DetailsSummary title="Почему пропал звук при проигрывании предпросмотра?">
-        <p>{/* FIXME: написать!! */}</p>
-      </DetailsSummary>{" "}
+      <DetailsSummary title="Почему у меня отсутствует звук при проигрывании предпросмотра?">
+        <p>
+          Если вы недавно меняли аудиовыход, например подключили беспроводные наушники или
+          внешний монитор с колонками, то вполне вероятно что у вас сбились настройки
+          звука. Вам следует проверить настройки аудиовыхода в настройках программы, для
+          этого нужно перейти в{" "}
+          <mark className="ui">Edit &gt; Preferences &gt; Audio Hardware</mark> и указать
+          в пункте <mark className="ui">Default Output</mark> нужный вам аудиовыход.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/premierepro/set_audio_output.png"
+          imgTitle="Установка аудиовыхода"
+          caption="Preferences"
+        />
+        <AdditionInfo>
+          Иногда в некоторых случаях необходимо будет в пункте{" "}
+          <mark className="ui">Default Input</mark> указать{" "}
+          <mark className="ui">No Input</mark>, так как иногда микрофоны, внезапно, могут
+          мешать нормальному предпросмотру в <mark className="app">Premiere Pro</mark>.
+        </AdditionInfo>
+        {/* TODO: дописать ещё возможные варианты */}
+      </DetailsSummary>
     </div>
   );
 };
