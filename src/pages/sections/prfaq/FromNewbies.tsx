@@ -1,8 +1,12 @@
 import React from "react";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 import DetailsSummary from "../../../components/DetailsSummary";
-import {VideoFigure, YouTubeVideo} from "../../../components/ContentFigure";
-import {AdditionDanger, AdditionInfo} from "../../../components/Additions";
+import {ImageFigure, VideoFigure, YouTubeVideo} from "../../../components/ContentFigure";
+import {
+  AdditionDanger,
+  AdditionInfo,
+  AdditionWarning,
+} from "../../../components/Additions";
 import {FlexibleLinks} from "../../../components/FlexibleLinksFaQ";
 
 const PRFromNewbies: React.FC = () => {
@@ -107,7 +111,52 @@ const PRFromNewbies: React.FC = () => {
         title="Зачем мне с каждого угла советуют поставить английский язык программы и как мне это сделать?"
         tag="изменить язык, смена языка, установка английской версии"
       >
-        <p>{/* FIXME: написать!! */}</p>
+        <p>
+          В <mark className="app">Premiere Pro</mark>, аналогично как и с{" "}
+          <mark className="app">After Effects</mark>, вы можете наткнуться на различные
+          баги и приколы при использовании сторонних шаблонов,{" "}
+          <mark className="file">.mogrt</mark> или пресетов. Создатели подобного рода
+          контента не рассчитывают на то, что вы будете использовать другую локализацию{" "}
+          <mark className="app">Premiere Pro</mark>, отличную от английского.
+        </p>
+        <p>
+          Для быстрой смены языка программы вам нужно открыть консоль с помощью комбинации
+          клавиш <mark className="key">Ctrl + F12</mark> и переключиться на режим
+          отображения <mark className="ui">Debug Database View</mark>.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/premierepro/console_debug-database-view.png"
+          imgTitle="Включение вида Debug Database View"
+          caption="Включение вида Debug Database View"
+        />
+        <p>
+          Затем в строке поиска нам нужно написать{" "}
+          <mark className="copy">ApplicationLanguage</mark> или найти этот пункт вручную.
+          В строке с одноимённым параметром пишем <mark className="copy">en_US</mark>.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/premierepro/set_language_console.png"
+          imgTitle="Установка английского языка в консоли"
+          caption="Установка английского языка в консоли"
+        />
+        <p>
+          После ввода значения - перезагрузите программу и вы сможете насладиться
+          англоязычным интерфейсом программы.
+        </p>{" "}
+        <AdditionInfo>
+          Чтобы вернуть язык, который был установлен по умолчанию - достаточно убрать
+          значение из этого параметра и снова перезапустить{" "}
+          <mark className="app">Premiere Pro</mark>.
+        </AdditionInfo>
+        <AdditionDanger>
+          После таких способов смены языка названия стандартных пресетов и рабочих
+          областей могут остаться на русском языке. Их можно будет переименовать вручную
+          или удалить, а затем поставить поверх дистрибутив{" "}
+          <mark className="app">Premiere Pro</mark> с указанием английского языка в
+          установщике. Ну или просто переустановите программу сразу на английском языке.
+        </AdditionDanger>
       </DetailsSummary>
       <DetailsSummary
         title="Что такое Nest, как их создать и распаковывать?"
