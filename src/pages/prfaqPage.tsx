@@ -10,6 +10,7 @@ import SupportDonut from "../components/modal/SupportDonut";
 import CopyMark from "../components/features/CopyMark";
 import {CircularProgress} from "@mui/material";
 import {generateAnchorId} from "../components/DetailsSummary";
+import {AdditionDanger} from "../components/Additions";
 
 const PRActions = lazy(() => import("./sections/prfaq/Actions"));
 
@@ -158,6 +159,11 @@ const PRFaQ = () => {
                 />
               </div>
               <SupportDonut />
+              <AdditionDanger>
+                На данный момент не все секции перенесены. Если вам нужен доступ к старой
+                версии сайта, перейдите на{" "}
+                <a href="legacy/prfaq.html">aechat.ru/legacy/prfaq</a>.
+              </AdditionDanger>
               {sections.map(({key, title, component: Component, id}) =>
                 visibleSections.includes(key) ? (
                   <div
