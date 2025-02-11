@@ -1,15 +1,15 @@
 @use "@/styles/mixins" as *;
 
 table {
+  box-sizing: border-box;
+  margin: 10px;
   border-collapse: collapse;
   background-color: var(--table_background);
-  font-size: 0.875rem;
   width: calc(100% - 20px);
-  margin: 10px;
-  box-sizing: border-box;
+  font-size: 0.875rem;
 }
 
-@media (max-width: 350px) {
+@media (max-width: 400px) {
   table {
     word-wrap: break-word;
     word-break: break-all;
