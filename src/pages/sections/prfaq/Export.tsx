@@ -571,7 +571,81 @@ const PRExport: React.FC = () => {
           <mark className="app">Media Encoder</mark>, так как он часто выводит видео на
           прозрачном фоне с жуткими артефактами.
         </AdditionDanger>
-        {/* TODO: написать!! */}
+        <p>
+          Для начала нам нужно вывести секвенцию как обычно, через{" "}
+          <mark className="video">Apple Prores 4444</mark>, если вы хотите видео с
+          альфа-каналом или в <mark className="video">Apple Prores 422</mark>, если вы
+          хотите видео без альфа-канала. Ну или вообще вывести в ваш любимый формат, так
+          как полученное видео мы всё равно будем конвертировать. Чтобы это сделать, нам
+          нужно перейти в вкладку <mark className="ui">Export</mark> с помощью комбинации
+          клавиш <mark className="key">Ctrl + M</mark>.
+        </p>
+        <p>
+          После перехода во вкладку экспорта выбираем в пункте{" "}
+          <mark className="ui">Format</mark> значение{" "}
+          <mark className="plugin">QuickTime</mark>. Затем раскройте вкладку{" "}
+          <mark className="ui">Video</mark> и в пункте{" "}
+          <mark className="ui">Video Codec</mark> укажите нужный кодек в зависимости от
+          ваших требований.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/premierepro/export_prores4444_8bit-alpha.png"
+          imgTitle="Выводим видео в Apple Prores"
+          caption="Export"
+        />
+        <AdditionWarning>
+          Не забудьте поставить в <mark className="ui">Depth</mark> параметр{" "}
+          <mark className="ui">8-bpc + alpha</mark> или{" "}
+          <mark className="ui">16-bpc + alpha</mark>, если вы собираетесь выводить видео с
+          альфа-каналом.
+        </AdditionWarning>
+        <p>
+          Затем не забудьте указать путь, куда вы хотите вывести видео и нажмите на кнопку{" "}
+          <mark className="ui">Export</mark> в правом нижнем углу.
+        </p>
+        <p>
+          После успешного экспорта открываем <mark className="app">Shutter Encoder</mark>{" "}
+          и вставляем в него выведенное видео из{" "}
+          <mark className="app">Premiere Pro</mark>. В пункте{" "}
+          <mark className="ui">Choose Function</mark> выбираем{" "}
+          <mark className="video">VP9</mark>.
+        </p>
+        <AdditionInfo>
+          Если у вас не установлен <mark className="app">Shutter Encoder</mark>, то его
+          можно скачать <a href="https://www.shutterencoder.com/">по этой ссылке</a>.
+        </AdditionInfo>
+        <ImageFigure
+          styleClass="figure_macos-dark"
+          imgSrc="images/select_vp9_shutter_encoder.png"
+          imgTitle="Выбор VP9 в Shutter Encoder"
+          caption="Shutter Encoder"
+        />
+        <p>
+          Затем включаем в дополнительных опциях{" "}
+          <mark className="ui">Enable alpha channel</mark>, если вы хотите вывести видео с
+          альфа-каналом.
+        </p>
+        <ImageFigure
+          styleClass="figure_macos-dark"
+          imgSrc="images/enable_alpha_shutter_encoder.png"
+          imgTitle="Включение альфа-канала в Shutter Encoder"
+          caption="Shutter Encoder"
+        />
+        <p>
+          В программе можно также выставить путь для файла (по умолчанию видео кодируется
+          в папку, где был исходник) и остальные параметры, если вам это нужно. После
+          настроек нажимаем на кнопку <mark className="ui">Start function</mark> или на
+          комбинацию клавиш <mark className="key">Ctrl + Enter</mark>.
+        </p>
+        <p>
+          После экспорта вы получите видео в кодеке <mark className="video">VP9</mark> и
+          контейнере <mark className="file">.webm</mark>, которое можно использовать в
+          веб-проектах или где-нибудь ещё. Учтите: поддержка{" "}
+          <mark className="video">WebM</mark> на прозрачном фоне в{" "}
+          <mark className="app">Safari</mark> для устройств на iOS и macOS отсутствует,
+          там будет отображаться чёрный фон вместо прозрачности.
+        </p>
       </DetailsSummary>
       <DetailsSummary title="Как вывести секвенцию в .gif?">
         <p>{/* FIXME: написать!! */}</p>
