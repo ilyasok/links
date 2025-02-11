@@ -606,9 +606,8 @@ const PRExport: React.FC = () => {
         </p>
         <p>
           После успешного экспорта открываем <mark className="app">Shutter Encoder</mark>{" "}
-          и вставляем в него выведенное видео из{" "}
-          <mark className="app">Premiere Pro</mark>. В пункте{" "}
-          <mark className="ui">Choose Function</mark> выбираем{" "}
+          и вставляем в него выведенное видео из <mark className="app">Premiere Pro</mark>
+          . В пункте <mark className="ui">Choose Function</mark> выбираем{" "}
           <mark className="video">VP9</mark>.
         </p>
         <AdditionInfo>
@@ -641,11 +640,13 @@ const PRExport: React.FC = () => {
         <p>
           После экспорта вы получите видео в кодеке <mark className="video">VP9</mark> и
           контейнере <mark className="file">.webm</mark>, которое можно использовать в
-          веб-проектах или где-нибудь ещё. Учтите: поддержка{" "}
-          <mark className="video">WebM</mark> на прозрачном фоне в{" "}
-          <mark className="app">Safari</mark> для устройств на iOS и macOS отсутствует,
-          там будет отображаться чёрный фон вместо прозрачности.
+          веб-проектах или где-нибудь ещё.
         </p>
+        <AdditionWarning>
+          Имейте ввиду, что поддержка <mark className="video">WebM</mark> на прозрачном
+          фоне в <mark className="app">Safari</mark> для устройств на iOS и macOS
+          отсутствует, там будет отображаться чёрный фон вместо прозрачности.
+        </AdditionWarning>
       </DetailsSummary>
       <DetailsSummary title="Как вывести секвенцию в .gif?">
         <p>{/* FIXME: написать!! */}</p>

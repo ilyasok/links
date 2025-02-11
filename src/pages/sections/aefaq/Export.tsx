@@ -667,11 +667,14 @@ const AEExport: React.FC = () => {
         <p>
           Затем не забудьте указать путь, куда вы хотите вывести видео, и нажмите на{" "}
           <mark className="ui">Render</mark> или на клавишу{" "}
-          <mark className="key">Enter</mark>. Затем открываем{" "}
-          <mark className="app">Shutter Encoder</mark> и вставляем в него выведенное видео
-          из <mark className="app">After Effects</mark>. В пункте{" "}
+          <mark className="key">Enter</mark>.
+        </p>
+        <p>
+          После успешного экспорта открываем <mark className="app">Shutter Encoder</mark>{" "}
+          и вставляем в него выведенное видео из{" "}
+          <mark className="app">After Effects</mark>. В пункте{" "}
           <mark className="ui">Choose Function</mark> выбираем{" "}
-          <mark className="video">VP9</mark>
+          <mark className="video">VP9</mark>.
         </p>
         <AdditionInfo>
           Если у вас не установлен <mark className="app">Shutter Encoder</mark>, то его
@@ -703,11 +706,13 @@ const AEExport: React.FC = () => {
         <p>
           После экспорта вы получите видео в кодеке <mark className="video">VP9</mark> и
           контейнере <mark className="file">.webm</mark>, которое можно использовать в
-          веб-проектах или где-нибудь ещё. Учтите: поддержка{" "}
-          <mark className="video">WebM</mark> на прозрачном фоне в{" "}
-          <mark className="app">Safari</mark> для устройств на iOS и macOS отсутствует,
-          там будет отображаться чёрный фон вместо прозрачности.
+          веб-проектах или где-нибудь ещё.
         </p>
+        <AdditionWarning>
+          Имейте ввиду, что поддержка <mark className="video">WebM</mark> на прозрачном
+          фоне в <mark className="app">Safari</mark> для устройств на iOS и macOS
+          отсутствует, там будет отображаться чёрный фон вместо прозрачности.
+        </AdditionWarning>
       </DetailsSummary>
       <DetailsSummary title="Как вывести композицию в .gif?">
         <p>
@@ -743,8 +748,8 @@ const AEExport: React.FC = () => {
           нюансов.
           <ul>
             <li>
-              Данный формат не поддерживает полупрозрачность: только два цвета
-              <mark>#FFFFFF</mark> и <mark>#000000</mark> для альфа-канала.
+              Данный формат не поддерживает полупрозрачность, только два цвета для
+              альфа-канала: <mark>#FFFFFF</mark> и <mark>#000000</mark>.
             </li>
             <li>
               <mark className="image">GIF</mark> вмещает в себя только 256 цветов, поэтому
