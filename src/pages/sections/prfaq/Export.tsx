@@ -703,7 +703,32 @@ const PRExport: React.FC = () => {
         </AdditionInfo>
       </DetailsSummary>
       <DetailsSummary title="Как сохранить свой шаблон с настройками для экспорта секвенций?">
-        <p>{/* FIXME: написать!! */}</p>
+        <p>
+          Вы, наверное, не раз замечали параметр <mark className="ui">Preset</mark> в окне
+          экспорта и задумывались, можно ли добавить свои? Да, в{" "}
+          <mark className="app">Premiere Pro</mark> можно добавить свои надстройки, чтобы
+          в дальнейшем не перенастраивать экспорт.
+        </p>
+        <p>
+          Для этого перейдите во вкладку <mark className="ui">Export</mark> и начните там
+          настраивать экспорт под себя. После того, как вы закончили - нажмите на три
+          точки рядом с пунктом <mark className="ui">Preset</mark> и в контекстном меню
+          нажмите на <mark className="ui">Save Preset</mark>. В открывшемся меню введите
+          название вашего будущего пресета и нажмите на <mark className="ui">OK</mark>.
+        </p>
+        <VideoFigure
+          styleClass="figure_windows-dark"
+          videoSrc="images/premierepro/create_custom_preset.mp4"
+          caption="Export"
+        />
+        <p>
+          После этого вы сможете воспользоваться своими заготовленными настройками
+          экспорта в дальнейшем. Чтобы удалить, импортировать пресеты или сохранить их
+          отдельным файлом, воспользуйтесь окном{" "}
+          <mark className="ui">Preset Manager</mark>, которая открывается через три точки
+          у <mark className="ui">Preset</mark> и выбрать там{" "}
+          <mark className="ui">More Presets</mark>.
+        </p>
       </DetailsSummary>
       <DetailsSummary title="Как вывести текущий кадр предпросмотра как файл изображения?">
         <p>{/* FIXME: написать!! */}</p>
