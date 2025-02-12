@@ -715,7 +715,108 @@ const PRExport: React.FC = () => {
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Я сделал работу в Premiere Pro, но мне нужно передать .prproj файл вместе с исходниками другому человеку. Возможно ли это сделать без танцев с бубном?">
-        <p>{/* FIXME: написать!! */}</p>
+        <p>
+          Да, возможно. Это можно сделать через{" "}
+          <mark className="ui">Project Manager</mark>, который находится в пункте{" "}
+          <mark className="ui">File</mark> контекстного меню.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/premierepro/file_project_manager.png"
+          imgTitle="Открытие Project Manager"
+          caption="Premiere Pro"
+        />
+        <p>
+          После открытия окна <mark className="ui">Project Manager</mark> вы можете
+          увидеть список ваших секвенций. В этом списке вы можете выбрать все секвенции
+          для экспорта или оставить только нужные. Также не забудьте указать нужный путь
+          до файла, нажав на кнопку <mark className="ui">Browse</mark> в пункте{" "}
+          <mark className="ui">Destination Path</mark>. В разделе{" "}
+          <mark className="ui">Options</mark> вы можете указать, сохранять ли файлы
+          предпросмотра или неиспользуемые исходники и прочие параметры.
+        </p>
+        <p>
+          Чтобы начать сохранение проекта вместе с исходниками, достаточно нажать на{" "}
+          <mark className="ui">OK</mark> в правом нижнем углу и дождаться окончания
+          операции. Убедитесь в том, что у вас стоит пункт{" "}
+          <mark className="ui">Collect Files and Copy to New Location</mark>.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/premierepro/project_manager.png"
+          imgTitle="Окно Project Manager"
+          caption="Project Manager"
+        />
+        <ContentSwitcher
+          windowsContent={
+            <div>
+              <p>
+                После окончания сборки файлов, перейдите в папку, куда вы сохранили проект
+                и создайте архив с помощью{" "}
+                <a href="https://www.rarlab.com/download.htm">WinRAR</a> или{" "}
+                <a href="https://www.7-zip.org/">7-Zip</a>. Если площадка или социальная
+                сеть, в которой вы пытаетесь поделиться архивом, вставляет палки в колёса
+                в виде ограничений на размер файла - вы сможете разделить архив на
+                определённый размер файла перед его созданием и отправить его другому
+                человеку по кусочкам.
+              </p>
+              <YouTubeVideo
+                link="6KumGS0EyUQ"
+                caption="Как разбить архив на части и собрать его"
+              />
+              <p>
+                После создания архива, отправьте его другому человеку любым удобным для
+                вас способом.
+              </p>
+            </div>
+          }
+          macContent={
+            <div>
+              <p>
+                После окончания сборки файлов, перейдите в папку, куда вы сохранили проект
+                и создайте архив с помощью <a href="https://www.keka.io/ru/">keka</a>.
+                Если площадка или социальная сеть, в которой вы пытаетесь поделиться
+                архивом, вставляет палки в колёса в виде ограничений на размер файла - вы
+                сможете разделить архив на определённый размер файла перед его созданием и
+                отправить его другому человеку по кусочкам.
+              </p>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "center",
+                  flexWrap: "wrap",
+                  alignItems: "center",
+                }}
+              >
+                <ImageFigure
+                  styleClass="figure_macos-light"
+                  imgSrc="https://github.com/aonez/Keka/raw/master/Wiki/Images/Animated/main-window-format.gif"
+                  imgTitle="Выбор формата архива"
+                  caption="Выбор формата архива"
+                />
+                <ImageFigure
+                  styleClass="figure_macos-light"
+                  imgSrc="https://github.com/aonez/Keka/raw/master/Wiki/Images/Animated/main-window-split.gif"
+                  imgTitle="Выбор размера разделения архива"
+                  caption="Выбор размера разделения архива"
+                />
+              </div>
+              <p>
+                После создания архива, отправьте его другому человеку любым удобным для
+                вас способом.
+              </p>
+              <AdditionInfo>
+                Подробнее о создании архивов через{" "}
+                <a href="https://www.keka.io/ru/">keka</a> вы можете прочесть на{" "}
+                <a href="https://github.com/aonez/Keka/wiki/Compressing-with-Keka">
+                  этой странице
+                </a>
+                .
+              </AdditionInfo>
+            </div>
+          }
+        />
       </DetailsSummary>
     </div>
   );
