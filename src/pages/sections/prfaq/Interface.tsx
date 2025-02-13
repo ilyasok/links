@@ -70,7 +70,20 @@ const PRInterface: React.FC = () => {
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
       <DetailsSummary title="Куда пропала настройка Timeline в Preferences?">
-        <p>{/* FIXME: написать!! */}</p>
+        <p>
+          В настройках раздел <mark className="ui">Timeline</mark> может отсутствовать на
+          некоторых &quot;народных&quot; версиях <mark className="app">Premiere Pro</mark>{" "}
+          и его можно вернуть простым способом - входом в аккаунт Adobe.
+        </p>
+        <AdditionInfo>
+          После входа в аккаунт Adobe псевдо-лицензия не слетит, не переживайте.
+        </AdditionInfo>
+        <p>
+          Для входа в аккаунт перейдите в <mark className="ui">Help</mark> и выберите
+          пункт <mark className="ui">Sign In</mark>. Затем в появившемся окне проведите
+          процедуру входа в аккаунт, а затем попробуйте открыть настройки снова и
+          убедитесь в том, что там появился раздел <mark className="ui">Timeline</mark>.
+        </p>
       </DetailsSummary>
       <DetailsSummary title="Как изменить акцентный цвет интерфейса?">
         <p>{/* FIXME: написать!! */}</p>
