@@ -14,11 +14,25 @@ const PSInstallProblems: React.FC = () => {
     <div className="faq-content">
       <GithubUpdateInfo filePath="src/pages/sections/psfaq/InstallProblems.tsx" />
       <DetailsSummary title="Забыли положить инструкцию для установки рядом с файлами, куда что кидать?">
+        <p>
+          Обычно установка большинства файлов в <mark className="app">Photoshop</mark>{" "}
+          универсальна, поэтому следуйте рекомендациям ниже.
+        </p>
         <ul>
           <li>
-            Если у вас есть плагин формата <mark className="ui">.ccx</mark>, то вам нужно
-            переименовать этот файл в <mark className="ui">.zip</mark> и распаковать его.
-            Папку с распакованным содержимым вам нужно переместить в{" "}
+            Если в архиве находится файл <mark className="file">.atn</mark>, то для
+            установки вам нужно открыть окно <mark className="ui">Actions</mark> с помощью
+            комбинации клавиш <mark className="key">Alt + F9</mark>, нажать на три полоски
+            в углу открывшегося окна и выбрать пункт{" "}
+            <mark className="ui">Load Actions</mark>. Далее вам предложат выбрать нужный
+            файл. После выбора файла действий оно у вас отобразится в окне{" "}
+            <mark className="ui">Actions</mark> и вы сможете применять их в своих
+            проектах.
+          </li>
+          <li>
+            Если в архиве находится файл формата <mark className="ui">.ccx</mark>, то вам
+            нужно переименовать этот файл в <mark className="ui">.zip</mark> и распаковать
+            его. Папку с распакованным содержимым вам нужно переместить в{" "}
             <mark className="path">
               C:\Program Files\Adobe\Adobe Photoshop 20XX\Plug-ins
             </mark>
