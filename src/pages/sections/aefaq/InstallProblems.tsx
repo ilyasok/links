@@ -1175,7 +1175,7 @@ const AEInstallProblems: React.FC = () => {
           <mark className="file">.exe</mark>, <mark className="file">.msi</mark> и
           подобных установочных файлов.
         </p>
-      </DetailsSummary>{" "}
+      </DetailsSummary>
       <DetailsSummary title="Код ошибки 1 или 501 при установке After Effects">
         <p>
           У вас было криво установлено в системе приложение{" "}
@@ -1256,7 +1256,7 @@ const AEInstallProblems: React.FC = () => {
           Для сброса всех настроек нужно нажать на прекрасную кнопочку{" "}
           <mark className="ui">Reset Preferences</mark>. Диалога подтверждения удаления
           настроек не будет, поэтому заранее сохраните ваши настройки. Обычно они
-          находятся в <mark className="path">%APPDATA%\Adobe\After Effects\XX.X</mark>.
+          находятся в <mark className="path">%AppData%\Adobe\After Effects\XX.X</mark>.
         </p>
         <p>
           Если вы все ещё сталкиваетесь с какими-то трудностями при работе с программой -
