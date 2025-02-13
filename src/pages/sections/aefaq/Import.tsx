@@ -478,7 +478,7 @@ const AEImport: React.FC = () => {
         </AdditionWarning>
       </DetailsSummary>
       <DetailsSummary
-        title="Прислали исходники в формате .heic, .heif или .hevc, но выбивает ошибку. Как их мне импортировать в проект?"
+        title="Прислали исходники в формате .heic, .heif или .hevc, но выбивает ошибку. Как их мне открыть и импортировать в проект?"
         tag="исходники видео фото с айфона"
       >
         <AdditionInfo>
@@ -487,9 +487,11 @@ const AEImport: React.FC = () => {
         </AdditionInfo>
         <AdditionDanger>
           <mark className="app">After Effects</mark> даже после установки кодеков HEVC не
-          сможет импортировать видеофайлы формата <mark className="file">.hevc</mark>,
-          перекодируйте их через <mark className="app">Shutter Encoder</mark> в другой
-          кодек.
+          сможет импортировать видеофайлы формата <mark className="file">.hevc</mark>.
+          Такие файлы нужно перекодировать через{" "}
+          <mark className="app">Shutter Encoder</mark> в другой кодек или попробуйте
+          установить <a href="https://www.autokroma.com/Influx">Autokroma Influx</a> для
+          импорта файлов неподдерживаемых форматов в ваш проект.
         </AdditionDanger>
         <p>
           Некоторые пользователи, использующие <mark className="app">After Effects</mark>{" "}

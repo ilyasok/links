@@ -1,7 +1,11 @@
 import React from "react";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 import DetailsSummary from "../../../components/DetailsSummary";
-import {AdditionInfo, AdditionWarning} from "../../../components/Additions";
+import {
+  AdditionDanger,
+  AdditionInfo,
+  AdditionWarning,
+} from "../../../components/Additions";
 import {Divider} from "antd";
 import {ImageFigure, VideoFigure} from "../../../components/ContentFigure";
 
@@ -203,8 +207,70 @@ const PRImport: React.FC = () => {
           <mark className="app">Shutter Encoder</mark>.
         </AdditionWarning>
       </DetailsSummary>
-      <DetailsSummary title="Прислали исходники в формате .heic, .heif или .hevc. Как мне импортировать?">
-        <p>{/* FIXME: написать!! */}</p>
+      <DetailsSummary title="Прислали исходники в формате .heic, .heif или .hevc. Как мне их открыть и импортировать в проект?">
+        <AdditionDanger>
+          <mark className="app">Premiere Pro</mark>, к сожалению, даже после установки
+          кодеков HEVC и HEIF/HEIC не сможет импортировать видеофайлы формата{" "}
+          <mark className="file">.hevc</mark>. Такие файлы нужно перекодировать через{" "}
+          <mark className="app">Shutter Encoder</mark> в другой кодек или попробуйте
+          установить <a href="https://www.autokroma.com/Influx">Autokroma Influx</a> для
+          импорта файлов неподдерживаемых форматов в ваш проект.
+        </AdditionDanger>
+        <p>
+          Некоторые пользователи операционных систем Windows 10 и 11 могут столкнуться с
+          проблемой открытия таких файлов, так как у них не установлены кодеки для работы
+          с данными форматами изображений и видео. Казалось бы, достаточно их установить с{" "}
+          <mark className="app">Microsoft Store</mark>, но увы. Один из кодеков платный, а
+          другой - устанавливается неочевидно.
+        </p>
+        <p>
+          Для того чтобы корректно открыть такие изображения и видео, вам нужно установить
+          нужные кодеки. Для начала загрузки кодеков нужно посетить{" "}
+          <a href="https://store.rg-adguard.net/">
+            онлайн-генератор ссылок из Microsoft Store
+          </a>
+          , а затем вставить ссылку в сервис, взяв их чуть ниже.
+        </p>
+        <ul>
+          <li>
+            Для скачивания кодека <mark className="video">HEVC</mark>.
+            <code>https://apps.microsoft.com/9n4wgh0z6vhq</code>
+          </li>
+          <li>
+            Для скачивания кодека <mark className="video">HEIF/HEIC</mark>.
+            <code>https://apps.microsoft.com/9pmmsr1cgpwg</code>
+          </li>
+        </ul>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/link_generator_msstore.png"
+          imgTitle="Генератор ссылок из Microsoft Store"
+          caption="Браузер"
+        />
+        <p>
+          После вставки ссылки и нажатия на кнопку <mark className="ui">OK</mark>, нажмите
+          на файл с форматом <mark className="file">.appxbundle</mark> для его скачивания.
+        </p>
+        <AdditionWarning>
+          Если браузер жалуется, мол вы скачиваете редкий файл или некий вирус, то
+          проигнорируйте это и продолжите скачивание дальше.
+        </AdditionWarning>
+        <p>
+          Чтобы установить пакеты с расширением <mark className="file">.appxbundle</mark>,
+          достаточно их открыть двойным кликом. Если вам предлагают открыть файл с помощью{" "}
+          <mark className="app">Обработчика команд Windows</mark> или{" "}
+          <mark className="app">Установщика приложений</mark>, то выберите то, что вам
+          душе угодно. Я же предпочту установку через{" "}
+          <mark className="app">Обработчик команд Windows</mark>.
+        </p>
+        <p>
+          После успешной установки кодеков вы теперь сможете открыть файлы форматов{" "}
+          <mark className="file">.heif</mark>, <mark className="file">.heic</mark> и{" "}
+          <mark className="file">.hevc</mark> в различных видеоплеерах и просмотрщиков
+          фото, например в <mark className="app">MPC-HC</mark> и{" "}
+          <mark className="app">FastStone Image Viewer</mark>, а также конвертировать
+          такие файлы через <mark className="app">Shutter Encoder</mark>.
+        </p>
       </DetailsSummary>
       <DetailsSummary title="Как импортировать композиции из After Effects в секвенцию Premiere Pro?">
         <p>{/* FIXME: написать!! */}</p>
