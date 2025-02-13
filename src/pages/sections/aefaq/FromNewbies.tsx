@@ -1951,7 +1951,7 @@ const AEFromNewbies: React.FC = () => {
         </p>
         <VideoFigure
           styleClass="figure_windows-dark"
-          videoSrc={"/images/aftereffects/duplicate_composition.mp4"}
+          videoSrc={"images/aftereffects/duplicate_composition.mp4"}
           caption="Правильное клонирование композиции"
         />
         <p>
@@ -2074,7 +2074,7 @@ const AEFromNewbies: React.FC = () => {
         </p>
         <VideoFigure
           styleClass="figure_windows-dark"
-          videoSrc={"/images/aftereffects/convert_to_paragraph_text.mp4"}
+          videoSrc={"images/aftereffects/convert_to_paragraph_text.mp4"}
           caption="Конвертация текстового слоя в Paragraph Text"
         />
       </DetailsSummary>
