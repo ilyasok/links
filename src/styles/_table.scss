@@ -12,11 +12,17 @@ table {
 @media (max-width: 400px) {
   table {
     word-wrap: break-word;
-    word-break: break-all;
 
     td,
     th {
-      padding: 5px 3px;
+      padding: 4px 2px;
+      font-size: 0.75rem;
+
+      .addition-info,
+      .addition-warning,
+      .addition-danger {
+        font-size: 0.75rem;
+      }
     }
   }
 }
@@ -27,6 +33,13 @@ th {
   outline: 1px solid var(--table_background-border);
   padding: 5px 10px;
   text-align: center;
+
+  .addition-info,
+  .addition-warning,
+  .addition-danger {
+    margin-inline: auto;
+    font-size: 0.875rem;
+  }
 }
 
 .table-colored-title {
