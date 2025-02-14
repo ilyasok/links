@@ -1,253 +1,279 @@
 import React, {useState} from "react";
 import {Modal} from "antd";
 import {motion} from "framer-motion";
-import {CoffeeRounded, SupportRounded} from "@mui/icons-material";
+import {CloseRounded, CoffeeRounded, EditRounded} from "@mui/icons-material";
 import {AdditionInfo} from "../Additions";
 
 const SupportDonut: React.FC = () => {
-  const [isModalOpen1, setIsModalOpen1] = useState(false);
+  const [isDonateModalOpen, setIsDonateModalOpen] = useState(false);
 
-  const [isModalOpen2, setIsModalOpen2] = useState(false);
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
 
-  const [isModalOpen3, setIsModalOpen3] = useState(false);
+  const [isSberModalOpen, setIsSberModalOpen] = useState(false);
 
-  const [isModalOpen4, setIsModalOpen4] = useState(false);
+  const [isYoomoneyModalOpen, setIsYoomoneyModalOpen] = useState(false);
 
-  const showModal1 = () => {
-    setIsModalOpen1(true);
+  const showDonateModal = () => {
+    setIsDonateModalOpen(true);
   };
 
-  const showModal2 = () => {
-    setIsModalOpen2(true);
+  const showEditModal = () => {
+    setIsEditModalOpen(true);
   };
 
-  const handleCancel1 = () => {
-    setIsModalOpen1(false);
+  const handleCloseDonateModal = () => {
+    setIsDonateModalOpen(false);
   };
 
-  const handleCancel2 = () => {
-    setIsModalOpen2(false);
+  const handleCloseEditModal = () => {
+    setIsEditModalOpen(false);
+  };
+
+  const handleCloseSberModal = () => {
+    setIsSberModalOpen(false);
+  };
+
+  const handleCloseYoomoneyModal = () => {
+    setIsYoomoneyModalOpen(false);
   };
 
   return (
     <>
       <div className="support">
         <motion.button
-          className="modal-button in-page"
-          onClick={showModal2}
+          className="modal-page-button"
+          onClick={showEditModal}
           style={{
             padding: "10px",
-            fontSize: "0.8125rem",
             filter: "saturate(0.5)",
           }}
           whileHover={{
             scale: 1.075,
             transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
           }}
-          whileTap={{scale: 0.9, opacity: 0.5}}
+          whileTap={{scale: 0.95, opacity: 0.5}}
         >
-          <SupportRounded />
-          Сообщить о проблеме
+          <EditRounded />
+          Помочь с редактированием страницы
         </motion.button>
         <motion.button
-          className="modal-button in-page"
+          className="modal-page-button"
           style={{
             padding: "10px",
-            fontSize: "0.8125rem",
             filter: "saturate(1.25)",
           }}
           whileHover={{
             scale: 1.075,
             transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
           }}
-          whileTap={{scale: 0.9, opacity: 0.5}}
-          onClick={showModal1}
+          whileTap={{scale: 0.95, opacity: 0.5}}
+          onClick={showDonateModal}
         >
           <CoffeeRounded />
           Поддержать сайт
         </motion.button>
       </div>
       <Modal
-        open={isModalOpen1}
+        open={isDonateModalOpen}
         closeIcon={null}
         centered
-        onCancel={handleCancel1}
+        onCancel={handleCloseDonateModal}
         footer={null}
       >
         <div className="modal">
-          <div className="modal-title">Поддержать проект</div>
-          <p>
-            Если вам понравился этот сайт и вы хотели бы, чтобы я продолжил развивать его,
-            то вы можете поддержать меня любой суммой и любым удобным вам способом.
-          </p>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: "10px",
-              marginBlockEnd: "10px",
-              marginInline: "10px",
-            }}
-          >
-            <motion.button
-              className="sber"
-              onClick={() => setIsModalOpen3(true)}
-              whileHover={{
-                scale: 0.975,
-                transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
-              }}
-              whileTap={{scale: 0.9, opacity: 0.5}}
+          <div className="modal-header">
+            <div className="modal-header-title">Поддержать проект</div>
+            <button
+              className="modal-header-close"
+              onClick={handleCloseDonateModal}
             >
-              Сбербанк
-            </motion.button>
-            <Modal
-              open={isModalOpen3}
-              closeIcon={null}
-              centered
-              className="support-modal"
-              onCancel={() => setIsModalOpen3(false)}
-              footer={null}
-            >
-              <div className="modal">
-                <div className="modal-title">Поддержать на Сбербанк</div>
-                <p>
-                  Вы можете перевести из любого банка по номеру банковской карты любую
-                  сумму.
-                </p>
-                <motion.mark
-                  whileHover={{
-                    scale: 0.975,
-                    transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
-                  }}
-                  whileTap={{scale: 0.9, opacity: 0.5}}
-                  className="sber"
-                >
-                  2202202357342488
-                </motion.mark>
-                <p
-                  style={{
-                    textAlign: "center",
-                    fontSize: "0.6875rem",
-                    opacity: "0.75",
-                    marginBlockEnd: "10px",
-                  }}
-                >
-                  Нажмите на номер карты, чтобы скопировать его в буфер обмена
-                  <br />
-                  Получатель: Михаил Денисович Ф.
-                </p>
-              </div>
-            </Modal>
-            <motion.button
-              className="yoomoney"
-              onClick={() => setIsModalOpen4(true)}
-              whileHover={{
-                scale: 0.975,
-                transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
-              }}
-              whileTap={{scale: 0.9, opacity: 0.5}}
-            >
-              ЮMoney
-            </motion.button>
-            <Modal
-              open={isModalOpen4}
-              closeIcon={null}
-              centered
-              className="support-modal"
-              onCancel={() => setIsModalOpen4(false)}
-              footer={null}
-            >
-              <div className="modal">
-                <div className="modal-title">Поддержать на ЮMoney</div>
-                <p>Для пополнения кошелька вам нужно проделать несколько действий:</p>
-                <ul>
-                  <li>Зайдите в приложение своего банка.</li>
-                  <li>
-                    Откройте раздел &quot;Платежи&quot; и найдите в категориях
-                    &quot;Электронные кошельки&quot; или &quot;Финансы&quot; пункт
-                    &quot;ЮMoney&quot;. Ну или в поиске введите &quot;ЮMoney&quot;.
-                  </li>
-                  <li>
-                    Нажмите на номер кошелька снизу, он скопируется в буфер обмена.
-                    Вставьте этот номер в поле &quot;Номер кошелька&quot; приложения банка
-                    и введите любую сумму, а затем подтвердите перевод.
+              <CloseRounded />
+            </button>
+          </div>
+          <div className="modal-content">
+            <p>
+              Если вам понравился этот сайт и вы хотели бы, чтобы я продолжил развивать
+              его, то вы можете поддержать меня любой суммой и любым удобным вам способом.
+            </p>
+            <div className="flexible-links">
+              <motion.button
+                className="sber"
+                onClick={() => setIsSberModalOpen(true)}
+                whileHover={{
+                  scale: 0.975,
+                  transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
+                }}
+                whileTap={{scale: 0.95, opacity: 0.5}}
+              >
+                Сбербанк
+              </motion.button>
+              <Modal
+                open={isSberModalOpen}
+                closeIcon={null}
+                centered
+                className="support-modal"
+                onCancel={handleCloseSberModal}
+                footer={null}
+              >
+                <div className="modal">
+                  <div className="modal-header">
+                    <div className="modal-header-title">Поддержать на Сбербанк</div>
+                    <button
+                      className="modal-header-close"
+                      onClick={handleCloseSberModal}
+                    >
+                      <CloseRounded />
+                    </button>
+                  </div>
+                  <div className="modal-content">
+                    <p>
+                      Вы можете перевести из любого банка по номеру банковской карты любую
+                      сумму.
+                    </p>
                     <motion.mark
                       whileHover={{
                         scale: 0.975,
                         transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
                       }}
-                      whileTap={{scale: 0.9, opacity: 0.5}}
-                      className="yoomoney"
+                      whileTap={{scale: 0.95, opacity: 0.5}}
+                      className="sber"
+                      style={{marginInline: "10px"}}
                     >
-                      410016763684808
+                      2202202357342488
                     </motion.mark>
                     <p
                       style={{
                         textAlign: "center",
-                        fontSize: "0.625rem",
+                        fontSize: "0.6875rem",
                         opacity: "0.75",
-                        marginTop: "-5px",
+                        marginBlockEnd: "10px",
                       }}
                     >
-                      Нажмите, чтобы скопировать
+                      Нажмите на номер карты, чтобы скопировать его в буфер обмена
+                      <br />
+                      Получатель: Михаил Денисович Ф.
                     </p>
-                    <p style={{fontSize: "0.75rem", opacity: "0.75"}}>
-                      Или пополните баланс автору с помощью{" "}
-                      <a
-                        style={{
-                          color: "var(--accent)",
-                          fontWeight: 700,
-                          textDecoration: "underline",
-                        }}
-                        href="https://yoomoney.ru/to/410016763684808"
-                      >
-                        этой ссылки
-                      </a>
-                      .
-                    </p>
-                  </li>
-                </ul>
-              </div>
-            </Modal>
+                  </div>
+                </div>
+              </Modal>
+              <motion.button
+                className="yoomoney"
+                onClick={() => setIsYoomoneyModalOpen(true)}
+                whileHover={{
+                  scale: 0.975,
+                  transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
+                }}
+                whileTap={{scale: 0.95, opacity: 0.5}}
+              >
+                ЮMoney
+              </motion.button>
+              <Modal
+                open={isYoomoneyModalOpen}
+                closeIcon={null}
+                centered
+                className="support-modal"
+                onCancel={handleCloseYoomoneyModal}
+                footer={null}
+              >
+                <div className="modal">
+                  <div className="modal-header">
+                    <div className="modal-header-title">Поддержать на ЮMoney</div>
+                    <button
+                      className="modal-header-close"
+                      onClick={handleCloseYoomoneyModal}
+                    >
+                      <CloseRounded />
+                    </button>
+                  </div>
+                  <div className="modal-content">
+                    <p>Для пополнения кошелька вам нужно проделать несколько действий:</p>
+                    <ul>
+                      <li>Зайдите в приложение своего банка.</li>
+                      <li>
+                        Откройте раздел &quot;Платежи&quot; и найдите в категориях
+                        &quot;Электронные кошельки&quot; или &quot;Финансы&quot; пункт
+                        &quot;ЮMoney&quot;. Ну или в поиске введите &quot;ЮMoney&quot;.
+                      </li>
+                      <li>
+                        Нажмите на номер кошелька снизу, он скопируется в буфер обмена.
+                        Вставьте этот номер в поле &quot;Номер кошелька&quot; приложения
+                        банка и введите любую сумму, а затем подтвердите перевод.
+                        <motion.mark
+                          whileHover={{
+                            scale: 0.975,
+                            transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
+                          }}
+                          whileTap={{scale: 0.95, opacity: 0.5}}
+                          className="yoomoney"
+                        >
+                          410016763684808
+                        </motion.mark>
+                        <p
+                          style={{
+                            textAlign: "center",
+                            fontSize: "0.625rem",
+                            opacity: "0.75",
+                            marginTop: "-5px",
+                          }}
+                        >
+                          Нажмите, чтобы скопировать
+                        </p>
+                        <p style={{fontSize: "0.75rem", opacity: "0.75"}}>
+                          Или пополните баланс автору с помощью{" "}
+                          <a
+                            style={{
+                              color: "var(--accent)",
+                              fontWeight: 700,
+                              textDecoration: "underline",
+                            }}
+                            href="https://yoomoney.ru/to/410016763684808"
+                          >
+                            этой ссылки
+                          </a>
+                          .
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </Modal>
+            </div>
           </div>
         </div>
       </Modal>
       <Modal
-        open={isModalOpen2}
+        open={isEditModalOpen}
         closeIcon={null}
         centered
-        onCancel={handleCancel2}
+        onCancel={handleCloseEditModal}
         footer={null}
       >
         <div className="modal">
-          <div className="modal-title">Сообщить о проблеме</div>
-          <p>
-            Вы можете предложить улучшить материал или сообщить о каком-то баге или
-            странном поведении сайта. Для этого напишите мне на почту и я постараюсь
-            учесть ваши предложения.
-          </p>
-          <motion.a
-            whileHover={{
-              scale: 0.975,
-              transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
-            }}
-            whileTap={{scale: 0.9, opacity: 0.5}}
-            style={{textDecoration: "none", fontSize: "1.125rem", textAlign: "center"}}
-            className="modal-button"
-            href={`mailto:me@m1sh3r.ru?subject=Пишу по поводу ${location.pathname.replace(/\/$/, "")} (${navigator.userAgent.replace(/ /g, " ")})`}
-          >
-            Написать на почту
-          </motion.a>
-          <p className="modal-message">
-            Нажимая на кнопку, вы соглашаетесь с тем, что вы передаёте данные о user-agent
-            браузера. Эти данные можно удалить в заголовке при отправке письма, но лучше
-            оставить, если вы сообщаете о каком-то баге.
-          </p>
-          <AdditionInfo>
-            Разделы с частыми вопросами находятся в разработке и иногда обновляются,
-            поэтому могут быть неточности в действиях, выводах и тексте. Мнение автора и
-            мнение читателя могут отличаться.
-          </AdditionInfo>
+          <div className="modal-header">
+            <div className="modal-header-title">Помочь с редактированием страницы</div>
+            <button
+              className="modal-header-close"
+              onClick={handleCloseEditModal}
+            >
+              <CloseRounded />
+            </button>
+          </div>
+          <div className="modal-content">
+            {/* FIXME: перефразировать */}
+            <p>
+              Если вы имеете опыт работы с Git и GitHub, а также у вас есть желание
+              поправить какой-либо кусочек текста, то вы можете{" "}
+              <a href="https://github.com/aechat/links/fork">
+                создать форк репозитория сайта
+              </a>{" "}
+              и отправить мне Pull Request, чтобы ваши изменения появились тут.
+            </p>
+            <AdditionInfo>
+              Разделы с частыми вопросами находятся в разработке и иногда обновляются,
+              поэтому могут быть неточности в действиях, выводах и тексте. Мнение автора и
+              мнение читателя могут отличаться.
+            </AdditionInfo>
+          </div>
         </div>
       </Modal>
     </>

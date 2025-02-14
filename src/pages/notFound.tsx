@@ -102,11 +102,12 @@ const NotFound = () => {
           >
             <motion.div
               className="error-modal-button"
+              style={{margin: "10px"}}
               whileHover={{
                 scale: 0.95,
                 transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
               }}
-              whileTap={{scale: 0.9, opacity: 0.5}}
+              whileTap={{scale: 0.95, opacity: 0.5}}
             >
               На главную
             </motion.div>

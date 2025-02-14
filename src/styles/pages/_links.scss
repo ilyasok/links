@@ -11,37 +11,44 @@
   &-button {
     display: flex;
     flex-grow: 1;
-    flex-basis: 300px;
+    flex-basis: 275px;
     flex-direction: column;
-    justify-content: center;
     align-items: flex-start;
     transition: background-color 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    outline: 1px solid var(--content-background-border);
     box-shadow: 0 5px 5px 0 var(--shadow);
-    border: 1px solid var(--links_border);
     border-radius: $roundness;
-    background-image: linear-gradient(to top, var(--summary_background), transparent);
-    background-color: var(--links_background);
-    padding-inline: 15px;
-    padding-block: 10px;
-
+    background-color: var(--content-background-color);
+    background-image: linear-gradient(
+      to top,
+      var(--content-background-color),
+      transparent
+    );
     &:hover {
       z-index: 25;
       cursor: pointer;
       background-color: var(--links_hover);
+      outline-color: var(--links_border);
     }
 
     .name_container {
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      max-width: fit-content;
-      max-height: fit-content;
+      outline: 1px solid var(--links_border);
+      z-index: 5;
+      border-radius: $roundness;
+      background-image: linear-gradient(to top, var(--summary_background), transparent);
+      background-color: var(--links_background);
+      padding-inline: 10px;
+      padding-block: 5px;
+      width: 100%;
 
       .icon {
         flex-shrink: 0;
-        vertical-align: middle;
-        margin-inline-end: 8px;
-        width: 24px;
-        height: 24px;
+        margin-inline-start: 8px;
+        width: 22px;
+        height: 22px;
         color: var(--links_text);
 
         path {
@@ -50,18 +57,20 @@
       }
 
       .name {
+        margin: 3px;
         color: var(--links_text);
         font-weight: 700;
-        font-size: 1.125rem;
-        font-family: "Mulish", sans-serif;
+        font-size: 1.15rem;
+        font-family: "Onest", sans-serif;
       }
     }
 
     .description {
-      text-wrap: balance;
+      // text-wrap: balance;
       opacity: 80%;
-      margin-block-start: 5px;
-      font-size: 0.875rem;
+      padding: 10px;
+      font-weight: 400;
+      font-size: 0.9rem;
     }
   }
 

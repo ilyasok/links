@@ -22,7 +22,9 @@
 }
 
 .ant-modal .ant-modal-content {
-  border: 1px solid var(--content-background-border);
+  background: none;
+  border: none;
+  box-shadow: none;
   border-radius: $roundness * 1.5;
   padding: 0;
 }

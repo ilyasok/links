@@ -1,15 +1,11 @@
 @use "@/styles/mixins" as *;
 
 .support {
-  display: flex;
-  justify-content: flex-end;
-  margin-block: 10px;
-
   &-title {
     font-weight: 700;
     font-size: 1.75rem;
     line-height: 1.25;
-    font-family: "Mulish", sans-serif;
+    font-family: "Onest", sans-serif;
   }
 
   &-modal {

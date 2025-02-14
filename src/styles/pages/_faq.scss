@@ -20,7 +20,7 @@
     color: var(--summary_text);
     font-weight: 800;
     font-size: 1.625rem;
-    font-family: "Mulish", sans-serif;
+    font-family: "Onest", sans-serif;
     text-transform: uppercase;
 
     h1 {
@@ -43,7 +43,12 @@
 
     mark {
       font-weight: 700;
-      font-size: 0.6875rem;
+      font-size: 0.7rem;
+
+      &.tag::before {
+        width: 11px;
+        height: 11px;
+      }
     }
   }
 
@@ -56,7 +61,7 @@
     filter: drop-shadow(0 3px 5px var(--shadow));
     transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     cursor: pointer;
-    margin-block: 10px;
+    margin-block: 8px;
     border: solid 1px var(--summary_border);
     border-bottom-width: 4px;
     border-radius: $roundness;
@@ -64,10 +69,10 @@
     background-color: var(--summary_background);
     padding: 10px 15px;
     color: var(--summary_text);
-    font-weight: 800;
-    font-size: 1.25rem;
-    line-height: 1.25;
-    font-family: "Mulish", sans-serif;
+    font-weight: 700;
+    font-size: 1.275rem;
+    line-height: 1.3;
+    font-family: "Onest", sans-serif;
     text-transform: uppercase;
 
     h3 {
@@ -179,7 +184,7 @@
       text-decoration: underline;
 
       &:hover {
-        opacity: 0.5;
+        opacity: 0.65;
       }
 
       &:visited {
@@ -199,6 +204,7 @@
       padding-block: 10px;
       line-height: 1.75;
       list-style-type: none;
+
       code {
         margin-inline: 0;
 
@@ -206,6 +212,7 @@
           margin-bottom: 0;
         }
       }
+
       &:not(:last-child) {
         border-bottom: 1px solid var(--content-background-border);
       }
@@ -246,10 +253,9 @@
     justify-content: center;
     align-items: center;
     vertical-align: middle;
-    transition: opacity 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     margin-block: 0;
-    border: 1px solid var(--summary_border);
-    border-bottom-width: 3px;
+    border: 2px solid var(--summary_border);
     border-radius: $roundness;
     background-color: var(--summary_background);
     padding-inline: 10px;
@@ -258,12 +264,12 @@
     font-weight: 700;
     font-size: 1rem;
     line-height: 1.5;
+    font-family: "Onest", serif;
     text-align: center;
     text-decoration: none;
 
     &:hover {
-      opacity: 0.75;
-      background-color: var(--links_hover);
+      opacity: 0.65;
     }
   }
 }
@@ -316,12 +322,15 @@ code {
 
 mark {
   filter: saturate(75%);
+  margin-inline: 1px;
   margin-block: 2px;
   outline: 1px solid var(--mark_border);
   border-radius: $roundness * 0.5;
   background-color: var(--mark_background);
   padding: 2px 4px;
   color: var(--mark_text);
+  font-weight: 600;
+  font-size: 0.95em;
 
   &.file,
   &.key,
@@ -346,14 +355,14 @@ mark {
 
     &::before {
       display: inline-block;
-      vertical-align: middle;
-      margin-inline-end: 4px;
-      margin-block: auto;
+      vertical-align: sub;
+      margin-inline-end: 3px;
+      margin-block: 1px;
       background-size: contain;
       background-repeat: no-repeat;
       background-color: var(--mark_text);
-      width: 14px;
-      height: 14px;
+      width: 15px;
+      height: 15px;
       content: "";
     }
   }

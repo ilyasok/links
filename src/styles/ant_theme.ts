@@ -28,7 +28,6 @@ const themeConfig = {
       colorTextLightSolid: "var(--text-color)",
     },
     Modal: {
-      contentBg: "var(--content-background-color)",
       titleColor: "var(--text-color)",
       headerBg: "transparent",
     },

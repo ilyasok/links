@@ -6,16 +6,39 @@
   flex-direction: column;
   gap: 10px;
 
-  &-title {
+  &-header {
     text-wrap: balance;
-    margin-top: 10px;
-    margin-inline: 15px;
-    color: var(--accent);
-    font-weight: 800;
-    font-size: 1.625rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    filter: drop-shadow(0 3px 5px var(--shadow));
+    border: 1px solid var(--summary_border);
+    border-radius: $roundness;
+    background-color: var(--summary_background);
+    padding-inline: 15px;
+    padding-inline-end: 10px;
+    padding-block: 10px;
     line-height: 1.25;
-    font-family: "Mulish", sans-serif;
+    font-family: "Onest", sans-serif;
     text-transform: uppercase;
+
+    &-title {
+      color: var(--summary_text);
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+
+    &-close {
+      color: var(--summary_text);
+    }
+  }
+
+  &-content {
+    filter: drop-shadow(0 3px 5px var(--shadow));
+    outline: 1px solid var(--content-background-border);
+    border-radius: $roundness;
+    background-color: var(--content-background-color);
   }
 
   mark {
@@ -39,12 +62,21 @@
   }
 
   .sber {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition:
       opacity,
       background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    outline: none;
     border: solid 2px var(--sber-border);
+    border-radius: $roundness * 0.75;
     background-color: var(--sber-background);
+    padding: 10px 20px;
     color: var(--sber-text) !important;
+    font-weight: 700;
+    font-size: 0.95rem;
 
     &:hover {
       background-color: var(--sber-hover);
@@ -52,12 +84,20 @@
   }
 
   .yoomoney {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition:
       opacity,
       background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    outline: none;
     border: solid 2px var(--yoomoney-border);
+    border-radius: $roundness * 0.75;
     background-color: var(--yoomoney-background);
+    padding: 10px 20px;
     color: var(--yoomoney-text) !important;
+    font-weight: 700;
+    font-size: 0.95rem;
 
     &:hover {
       background-color: var(--yoomoney-hover);
@@ -65,7 +105,8 @@
   }
 
   p {
-    margin-inline: 15px;
+    padding-inline: 15px;
+    padding-block: 10px;
     font-size: 0.95rem;
   }
 
@@ -73,6 +114,10 @@
     color: var(--accent);
     font-weight: 700;
     text-decoration: underline;
+  }
+
+  ul {
+    margin-block: 10px;
   }
 
   li {
@@ -106,13 +151,11 @@
 
   &-message {
     opacity: 0.5;
-    margin-inline: 5px;
-    font-weight: 500;
-    font-size: 0.8125rem !important;
+    font-weight: 600;
+    font-size: 0.9em !important;
   }
 
-  &-button,
-  button {
+  &-page-button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -122,15 +165,30 @@
     border-radius: $roundness;
     background-color: var(--links_background);
     padding: 10px 20px;
-    color: var(--accent) !important;
+    width: calc(100% - 20px);
+    color: var(--summary_text);
+    font-weight: 700;
+    font-size: 0.9rem;
+    font-family: "Onest", sans-serif;
+  }
+
+  &-open-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 auto;
+    border: 2px solid var(--links_border);
+    border-radius: $roundness;
+    background-color: var(--links_background);
+    padding: 10px 20px;
+    width: calc(100% - 20px);
+    color: var(--summary_text);
     font-weight: 700;
     font-size: 0.95rem;
+    font-family: "Onest", sans-serif;
     text-align: center;
   }
-}
-
-.in-page {
-  border: 1px solid var(--links_border) !important;
 }
 
 // *: стили для ошибок
@@ -157,16 +215,13 @@
   }
 
   &-modal {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
     filter: drop-shadow(0 3px 5px var(--shadow));
     margin-inline: 20px;
     box-shadow: 0 3px 15px var(--shadow);
     border: 1px solid var(--content-background-border);
     border-radius: $roundness;
     background-color: var(--content-background-color);
-    padding: 15px;
+    // padding: 15px;
     max-width: 385px;
     text-align: left;
 
@@ -177,13 +232,14 @@
       font-weight: 800;
       font-size: 2rem;
       line-height: 1.25;
-      font-family: "Mulish", sans-serif;
+      font-family: "Onest", sans-serif;
       text-transform: uppercase;
     }
 
     p {
       text-wrap: balance;
       margin-inline: 5px;
+      padding: 8px 10px;
     }
 
     &-message {
@@ -195,13 +251,15 @@
 
     &-button,
     button {
+      flex-grow: 1;
       cursor: pointer;
       border: 2px solid var(--links_border);
-      border-radius: $roundness;
+      border-radius: $roundness * 0.75;
       background-color: var(--links_background);
       padding: 10px 20px;
       color: var(--accent) !important;
       font-weight: 700;
+      font-family: "Onest", serif;
       text-align: center;
     }
 
@@ -220,9 +278,19 @@
 // *: стили для поиска
 .search {
   &-input {
+    filter: drop-shadow(0 3px 5px var(--shadow));
+    border: 1px solid var(--summary_border);
+    border-radius: $roundness;
+    background-color: var(--summary_background);
     padding-inline-start: 16px;
     padding-block: 8px;
     width: 100%;
+    color: var(--summary_text);
+    font-weight: 600;
+
+    &::placeholder {
+      opacity: 1;
+    }
 
     &-wrapper {
       display: flex;
@@ -230,11 +298,21 @@
       flex-wrap: nowrap;
       justify-content: space-between;
       gap: 10px;
-      margin: 15px;
-      margin-block-end: 0;
-      outline: 1px solid var(--content-background-border);
+    }
+
+    &-close,
+    &-clear {
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+      filter: drop-shadow(0 3px 5px var(--shadow));
+      outline: 1px solid var(--summary_border);
       border-radius: $roundness;
-      padding-inline-end: 16px;
+      background-color: var(--summary_background);
+      padding: 10px;
+      width: 40px;
+      height: 40px;
+      color: var(--summary_text);
     }
   }
 
@@ -287,7 +365,7 @@
     font-weight: 800;
     font-size: 1.25rem;
     line-height: 1.25;
-    font-family: "Mulish", sans-serif;
+    font-family: "Onest", sans-serif;
     text-transform: uppercase;
   }
 
@@ -341,7 +419,7 @@
       text-wrap: wrap;
       flex: 1 0 165px;
       transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-      border: 1px solid var(--summary_border);
+      border: 2px solid var(--summary_border);
       border-radius: $roundness;
       background-color: var(--summary_background);
       padding-inline: 10px;
@@ -349,19 +427,21 @@
       color: var(--summary_text);
       font-weight: 700;
       font-size: 0.9rem;
+      font-family: "Onest", serif;
       text-align: center;
       text-decoration: none;
 
       &:hover {
-        opacity: 0.75;
+        opacity: 0.65;
       }
     }
   }
 
   &-modal-title {
     opacity: 0.75;
-    margin-inline: 20px;
-    margin-block: 15px;
+    margin-top: 15px;
+    padding-inline: 15px;
+    padding-block: 10px;
     font-weight: 700;
     font-size: 0.85rem;
   }
@@ -392,12 +472,12 @@
   }
 }
 
-// *: стили для донатов
+// *: стили для смены темы
+
 .support {
   display: flex;
   justify-content: flex-end;
   gap: 8px;
-  margin-inline: 10px;
   margin-block: 15px;
 
   svg {
@@ -406,22 +486,26 @@
   }
 }
 
-// *: стили для смены темы
 .theme {
   &-slider {
     display: flex;
+    flex-grow: 1;
     flex-shrink: 0;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 10px;
-    margin-inline: 15px;
     margin-block: 10px;
+    line-height: 1.35;
+
+    button {
+      flex-shrink: 0;
+      margin-inline-end: 10px;
+    }
   }
 
   &-title {
     opacity: 0.75;
     margin-inline: 15px;
-    margin-block-start: 10px;
     font-weight: 600;
     font-size: 0.9rem;
     text-align: center;
@@ -433,7 +517,6 @@
     justify-content: space-between;
     gap: 10px;
     margin-inline: 10px;
-    margin-block: 20px;
   }
 
   &-button {
@@ -443,7 +526,6 @@
     align-items: center;
     gap: 10px;
     border: 1px solid var(--links_border);
-    border-bottom-width: 3px;
     border-radius: $roundness;
     background-color: var(--links_background);
     padding: 10px;
@@ -454,8 +536,8 @@
 
     svg {
       fill: var(--text-color);
-      width: 24px;
-      height: 24px;
+      width: 22px;
+      height: 22px;
     }
 
     &-selected {

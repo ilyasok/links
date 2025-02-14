@@ -71,19 +71,20 @@
 .wide-search-button {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
   outline: 1px solid var(--summary_border);
   border-radius: $roundness * 0.75;
   background: var(--header_background);
   padding: 5px;
   color: var(--mark_text);
-  font-weight: 500;
-  font-size: 0.85rem;
+  font-weight: 300;
+  font-size: 0.835rem;
 
   svg {
     fill: var(--accent);
-    width: 18px;
-    height: 18px;
+    padding-inline-start: 2px;
+    width: 17px;
+    height: 17px;
   }
 
   mark {

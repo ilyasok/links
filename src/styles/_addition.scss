@@ -38,8 +38,9 @@ li > .addition-danger,
     }
 
     mark {
-      filter: saturate(125%);
-      font-style: italic;
+      outline: none;
+      padding-inline: 5px;
+      padding-block: 3px;
     }
 
     ul {
@@ -110,7 +111,6 @@ li > .addition-danger,
     }
 
     mark {
-      outline: 1px solid var(--addition_info-border);
       background-color: var(--addition_info-mark);
       color: var(--addition_info-text);
 
@@ -140,7 +140,6 @@ li > .addition-danger,
     }
 
     mark {
-      outline: 1px solid var(--addition_warning-border);
       background-color: var(--addition_warning-mark);
       color: var(--addition_warning-text);
 
@@ -170,7 +169,6 @@ li > .addition-danger,
     }
 
     mark {
-      outline: 1px solid var(--addition_danger-border);
       background-color: var(--addition_danger-mark);
       color: var(--addition_danger-text);
 
@@ -184,31 +182,30 @@ li > .addition-danger,
 .change_os {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   gap: 10px;
-  filter: saturate(0.5) contrast(1.2) opacity(0.9);
+  filter: saturate(0.5);
   margin: 10px;
   margin-block: 15px;
-  outline: 1px solid var(--addition_warning-border);
+  outline: 1px solid var(--summary_border);
   border-radius: $roundness;
-  background-color: var(--addition_warning);
+  background-color: var(--summary_background);
   padding: 10px 15px;
-  color: var(--addition_warning-text);
+  color: var(--summary_text);
   font-size: 0.9375rem;
   line-height: 1.5;
 
   button {
+    opacity: 0.5;
     transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    margin-inline: 5px;
-    outline: 1px solid var(--addition_warning-border);
+    outline: 1px solid var(--summary_border);
     border-radius: $roundness * 0.5;
-    background-color: var(--addition_warning-mark);
     padding: 5px 8px;
-    color: var(--addition_warning-text);
-    font-weight: 700;
+    color: var(--summary_text);
+    font-weight: 600;
     line-height: 1.25;
     text-align: center;
-
     &:hover {
       opacity: 0.8;
     }

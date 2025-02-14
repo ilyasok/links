@@ -50,13 +50,13 @@ const ErrorFallback = ({error}: {error: Error}) => (
   <div className="error-container">
     <p className="error-backtitle">Ошибка</p>
     <div className="error-modal">
-      <p className="error-modal-title">Что-то упало</p>
+      <p className="error-modal-title">Что-то сломалось</p>
       <p>
         Скорее всего это произошло из-за обновления файлов на сервере. Попробуйте обновить
         страницу, чтобы загрузить актуальные данные.
       </p>
       <p className="error-modal-message">Ошибка: &quot;{error.message}&quot;</p>
-      <div style={{display: "flex", gap: "10px"}}>
+      <div style={{display: "flex", gap: "10px", margin: "10px"}}>
         <motion.button
           onClick={() => {
             window.location.reload();
@@ -67,7 +67,7 @@ const ErrorFallback = ({error}: {error: Error}) => (
             scale: 0.955,
             transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
           }}
-          whileTap={{scale: 0.9, opacity: 0.5}}
+          whileTap={{scale: 0.95, opacity: 0.5}}
         >
           На главную
         </motion.button>
@@ -78,20 +78,11 @@ const ErrorFallback = ({error}: {error: Error}) => (
             scale: 0.95,
             transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
           }}
-          whileTap={{scale: 0.9, opacity: 0.5}}
+          whileTap={{scale: 0.95, opacity: 0.5}}
         >
           Обновить страницу
         </motion.button>
       </div>
-      <p className="error-modal-send-report">
-        Если вы всё ещё сталкиваетесь с трудностями при открытии страницы -{" "}
-        <a
-          href={`mailto:me@m1sh3r.ru?subject=Выбило%20ошибку%20%22${error.message}%22%20на%20странице%20${location.pathname.replace(/\/$/, "")}%20(${navigator.userAgent.replace(/ /g, "%20")})&body=%0A%0A`}
-        >
-          напишите об этом на почту
-        </a>
-        , указав браузер и операционную систему.
-      </p>
     </div>
   </div>
 );

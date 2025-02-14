@@ -1,7 +1,6 @@
 import {Modal} from "antd";
 import React from "react";
-import {FlexibleLinks} from "./FlexibleLinksFaQ";
-import {GitHub, Mail} from "@mui/icons-material";
+import {CloseRounded, GitHub, Mail} from "@mui/icons-material";
 interface FooterProps {
   title: string;
   initialYear: number;
@@ -42,30 +41,41 @@ const Footer: React.FC<FooterProps> = ({title, initialYear}) => {
         centered
       >
         <div className="modal">
-          <div className="modal-title">О сайте</div>
-          <p>
-            Привет, я <a href="https://t.me/m1sh3r">Мишер</a>, создатель этой страницы.
-            Идея сайта заключалась в том, чтобы минимизировать надоедливые вопросы по
-            программам Adobe и направить людей на альтернативные чаты, если возникли
-            вопросы по другим программам. <i>Надеюсь, что с этой задачей я справился.</i>
-          </p>
-          <p>
-            Контент на сайте наполнялся благодаря команде администраторов и участников{" "}
-            <a href="https://t.me/joinchat/F1DdXtG9LephYWUy">AEChat</a>.
-          </p>
-          <p className="modal-message">
-            При копировании контента, пожалуйста, ссылайтесь на первоисточник, мы
-            старались не просто так. В каждом пункте можно скопировать ссылку, нажав на
-            кнопку справа.
-          </p>
-          <FlexibleLinks>
-            <a href="mailto:me@m1sh3r.ru">
-              <Mail />
-            </a>
-            <a href="https://github.com/aechat/links">
-              <GitHub />
-            </a>
-          </FlexibleLinks>
+          <div className="modal-header">
+            <div className="modal-header-title">О сайте</div>
+            <button
+              className="modal-header-close"
+              onClick={handleCancel}
+            >
+              <CloseRounded />
+            </button>
+          </div>
+          <div className="modal-content">
+            <p>
+              Привет, я <a href="https://t.me/m1sh3r">Мишер</a>, создатель этой страницы.
+              Идея сайта заключалась в том, чтобы минимизировать надоедливые вопросы по
+              программам Adobe и направить людей на альтернативные чаты, если возникли
+              вопросы по другим программам.{" "}
+              <i>Надеюсь, что с этой задачей я справился.</i>
+            </p>
+            <p>
+              Контент на сайте наполнялся благодаря команде администраторов и участников{" "}
+              <a href="https://t.me/joinchat/F1DdXtG9LephYWUy">AEChat</a>.
+            </p>
+            <p className="modal-message">
+              При копировании контента, пожалуйста, ссылайтесь на первоисточник, мы
+              старались не просто так. В каждом пункте можно скопировать ссылку, нажав на
+              кнопку справа.
+            </p>
+            <div className="flexible-links">
+              <a href="mailto:me@m1sh3r.ru">
+                <Mail />
+              </a>
+              <a href="https://github.com/aechat/links">
+                <GitHub />
+              </a>
+            </div>
+          </div>
         </div>
       </Modal>
     </footer>

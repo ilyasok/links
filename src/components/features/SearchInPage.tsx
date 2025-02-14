@@ -1,4 +1,4 @@
-import {BackspaceRounded, Search} from "@mui/icons-material";
+import {BackspaceOutlined, CloseRounded, Search} from "@mui/icons-material";
 import {Modal, Tooltip, message} from "antd";
 import {motion} from "framer-motion";
 import React, {
@@ -536,174 +536,187 @@ export const SearchInPage: React.FC = () => {
                 setQuery("");
                 setResults([]);
               }}
-              className="search-clear-button"
+              className="search-input-clear"
               style={{cursor: "pointer"}}
             >
               <Tooltip title="Очистить">
-                <BackspaceRounded
-                  opacity={0.5}
-                  fontSize="small"
-                />
+                <BackspaceOutlined fontSize="small" />
               </Tooltip>
             </button>
           )}
+          <button
+            className="search-input-close"
+            onClick={closeModal}
+          >
+            <CloseRounded />
+          </button>
         </div>
-        {query.trim() === "" ? (
-          <p className="search-modal-title">Навигация по категориям:</p>
-        ) : (
-          <p className="search-modal-title">Результаты поиска:</p>
-        )}
-        <div className="search-results">
-          {query.trim() === "" && (
-            <div>
-              {location.pathname === "/aefaq" && (
-                <div className="search-category">
-                  <button onClick={() => handleLinkClick("where-find")}>
-                    Ищем полезности
-                  </button>
-                  <button onClick={() => handleLinkClick("install-problems")}>
-                    Проблемы с установкой
-                  </button>
-                  <button onClick={() => handleLinkClick("from-newbies")}>
-                    Вопросы от новичков
-                  </button>
-                  <button onClick={() => handleLinkClick("tips")}>
-                    (не)Вредные советы
-                  </button>
-                  <button onClick={() => handleLinkClick("import")}>Импорт</button>
-                  <button onClick={() => handleLinkClick("interface")}>Интерфейс</button>
-                  <button onClick={() => handleLinkClick("performance")}>
-                    Производительность
-                  </button>
-                  <button onClick={() => handleLinkClick("actions")}>Как и чем?</button>
-                  <button onClick={() => handleLinkClick("errors")}>
-                    Ошибки и предупреждения
-                  </button>
-                  <button onClick={() => handleLinkClick("export")}>Экспорт</button>
-                  <button onClick={() => handleLinkClick("export-problems")}>
-                    Проблемы при экспорте
-                  </button>
-                </div>
-              )}
-              {location.pathname === "/prfaq" && (
-                <div className="search-category">
-                  <button onClick={() => handleLinkClick("where-find")}>
-                    Ищем полезности
-                  </button>
-                  <button onClick={() => handleLinkClick("install-problems")}>
-                    Проблемы с установкой
-                  </button>
-                  <button onClick={() => handleLinkClick("from-newbies")}>
-                    Вопросы от новичков
-                  </button>
-                  <button onClick={() => handleLinkClick("tips")}>
-                    (не)Вредные советы
-                  </button>
-                  <button onClick={() => handleLinkClick("import")}>Импорт</button>
-                  <button onClick={() => handleLinkClick("interface")}>Интерфейс</button>
-                  <button onClick={() => handleLinkClick("performance")}>
-                    Производительность
-                  </button>
-                  <button onClick={() => handleLinkClick("actions")}>Как и чем?</button>
-                  <button onClick={() => handleLinkClick("errors")}>
-                    Ошибки и предупреждения
-                  </button>
-                  <button onClick={() => handleLinkClick("export")}>Экспорт</button>
-                  <button onClick={() => handleLinkClick("export-problems")}>
-                    Проблемы при экспорте
-                  </button>
-                </div>
-              )}
-              {location.pathname === "/psfaq" && (
-                <div className="search-category">
-                  <button onClick={() => handleLinkClick("where-find")}>
-                    Ищем полезности
-                  </button>
-                  <button onClick={() => handleLinkClick("install-problems")}>
-                    Проблемы с установкой
-                  </button>
-                  <button onClick={() => handleLinkClick("from-newbies")}>
-                    Вопросы от новичков
-                  </button>
-                  <button onClick={() => handleLinkClick("import")}>Импорт</button>
-                  <button onClick={() => handleLinkClick("interface")}>Интерфейс</button>
-                  <button onClick={() => handleLinkClick("performance")}>
-                    Производительность
-                  </button>
-                  <button onClick={() => handleLinkClick("actions")}>Как и чем?</button>
-                  <button onClick={() => handleLinkClick("errors")}>
-                    Ошибки и предупреждения
-                  </button>
-                  <button onClick={() => handleLinkClick("export")}>Экспорт</button>
-                  <button onClick={() => handleLinkClick("export-problems")}>
-                    Проблемы при экспорте
-                  </button>
-                </div>
-              )}
-              {location.pathname === "/aeexprfaq" && (
-                <div className="search-category">
-                  <button onClick={() => handleLinkClick("start")}>С чего начать?</button>
-                  <button onClick={() => handleLinkClick("base")}>База всех баз</button>
-                  <button onClick={() => handleLinkClick("linking")}>
-                    Ссылки и привязки
-                  </button>
-                  <button onClick={() => handleLinkClick("actions")}>Как и чем?</button>
-                  <button onClick={() => handleLinkClick("errors")}>
-                    Ошибки и предупреждения
-                  </button>
-                </div>
-              )}
-            </div>
+        <div className="modal-content">
+          {query.trim() === "" ? (
+            <p className="search-modal-title">Навигация по категориям:</p>
+          ) : (
+            <p className="search-modal-title">Результаты поиска:</p>
           )}
-          {results.length > 0 &&
-            results.map(({title, content, id, tag}, index) => (
-              <div key={id}>
-                <motion.button
-                  ref={(el) => {
-                    resultRefs.current[index] = el;
-                  }}
-                  tabIndex={0}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleLinkClick(id);
-                  }}
-                  className={`search-link ${index === selectedResultIndex ? "search-selected" : ""}`}
-                  initial={{scale: 1}}
-                  animate={{
-                    scale: index === selectedResultIndex ? 1 : 0.98,
-                  }}
-                  transition={{duration: 0.5, ease: [0.075, 0.82, 0.165, 1]}}
-                >
-                  <div
-                    className={`search-header ${index === selectedResultIndex ? "search-selected" : ""}`}
-                  >
-                    <p className="search-title">{title.replace(/^[+-]+/, "").trim()}</p>
-                    {tag && tag.trim() !== "" && (
-                      <div className="search-tags">
-                        {tag.split(", ").map((t, index) => (
-                          <mark key={index}>{t}</mark>
-                        ))}
-                      </div>
-                    )}
+          <div className="search-results">
+            {query.trim() === "" && (
+              <div>
+                {location.pathname === "/aefaq" && (
+                  <div className="search-category">
+                    <button onClick={() => handleLinkClick("where-find")}>
+                      Ищем полезности
+                    </button>
+                    <button onClick={() => handleLinkClick("install-problems")}>
+                      Проблемы с установкой
+                    </button>
+                    <button onClick={() => handleLinkClick("from-newbies")}>
+                      Вопросы от новичков
+                    </button>
+                    <button onClick={() => handleLinkClick("tips")}>
+                      (не)Вредные советы
+                    </button>
+                    <button onClick={() => handleLinkClick("import")}>Импорт</button>
+                    <button onClick={() => handleLinkClick("interface")}>
+                      Интерфейс
+                    </button>
+                    <button onClick={() => handleLinkClick("performance")}>
+                      Производительность
+                    </button>
+                    <button onClick={() => handleLinkClick("actions")}>Как и чем?</button>
+                    <button onClick={() => handleLinkClick("errors")}>
+                      Ошибки и предупреждения
+                    </button>
+                    <button onClick={() => handleLinkClick("export")}>Экспорт</button>
+                    <button onClick={() => handleLinkClick("export-problems")}>
+                      Проблемы при экспорте
+                    </button>
                   </div>
-                  <p
-                    className="search-content"
-                    dangerouslySetInnerHTML={{__html: content}}
-                  />
-                </motion.button>
+                )}
+                {location.pathname === "/prfaq" && (
+                  <div className="search-category">
+                    <button onClick={() => handleLinkClick("where-find")}>
+                      Ищем полезности
+                    </button>
+                    <button onClick={() => handleLinkClick("install-problems")}>
+                      Проблемы с установкой
+                    </button>
+                    <button onClick={() => handleLinkClick("from-newbies")}>
+                      Вопросы от новичков
+                    </button>
+                    <button onClick={() => handleLinkClick("tips")}>
+                      (не)Вредные советы
+                    </button>
+                    <button onClick={() => handleLinkClick("import")}>Импорт</button>
+                    <button onClick={() => handleLinkClick("interface")}>
+                      Интерфейс
+                    </button>
+                    <button onClick={() => handleLinkClick("performance")}>
+                      Производительность
+                    </button>
+                    <button onClick={() => handleLinkClick("actions")}>Как и чем?</button>
+                    <button onClick={() => handleLinkClick("errors")}>
+                      Ошибки и предупреждения
+                    </button>
+                    <button onClick={() => handleLinkClick("export")}>Экспорт</button>
+                    <button onClick={() => handleLinkClick("export-problems")}>
+                      Проблемы при экспорте
+                    </button>
+                  </div>
+                )}
+                {location.pathname === "/psfaq" && (
+                  <div className="search-category">
+                    <button onClick={() => handleLinkClick("where-find")}>
+                      Ищем полезности
+                    </button>
+                    <button onClick={() => handleLinkClick("install-problems")}>
+                      Проблемы с установкой
+                    </button>
+                    <button onClick={() => handleLinkClick("from-newbies")}>
+                      Вопросы от новичков
+                    </button>
+                    <button onClick={() => handleLinkClick("import")}>Импорт</button>
+                    <button onClick={() => handleLinkClick("interface")}>
+                      Интерфейс
+                    </button>
+                    <button onClick={() => handleLinkClick("performance")}>
+                      Производительность
+                    </button>
+                    <button onClick={() => handleLinkClick("actions")}>Как и чем?</button>
+                    <button onClick={() => handleLinkClick("errors")}>
+                      Ошибки и предупреждения
+                    </button>
+                    <button onClick={() => handleLinkClick("export")}>Экспорт</button>
+                    <button onClick={() => handleLinkClick("export-problems")}>
+                      Проблемы при экспорте
+                    </button>
+                  </div>
+                )}
+                {location.pathname === "/aeexprfaq" && (
+                  <div className="search-category">
+                    <button onClick={() => handleLinkClick("start")}>
+                      С чего начать?
+                    </button>
+                    <button onClick={() => handleLinkClick("base")}>База всех баз</button>
+                    <button onClick={() => handleLinkClick("linking")}>
+                      Ссылки и привязки
+                    </button>
+                    <button onClick={() => handleLinkClick("actions")}>Как и чем?</button>
+                    <button onClick={() => handleLinkClick("errors")}>
+                      Ошибки и предупреждения
+                    </button>
+                  </div>
+                )}
               </div>
-            ))}
-          {query.trim() !== "" && results.length === 0 && (
-            <p className="search-no-results">
-              Ничего не нашлось, попробуйте изменить ваш запрос.
-            </p>
-          )}
-          {!isPageLoaded && (
-            <p style={{textAlign: "center", fontSize: "1rem", margin: "20px"}}>
-              Страница ещё загружается, а поиск всё ещё недоступен. Пожалуйста,
-              подождите...
-            </p>
-          )}
+            )}
+            {results.length > 0 &&
+              results.map(({title, content, id, tag}, index) => (
+                <div key={id}>
+                  <motion.button
+                    ref={(el) => {
+                      resultRefs.current[index] = el;
+                    }}
+                    tabIndex={0}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleLinkClick(id);
+                    }}
+                    className={`search-link ${index === selectedResultIndex ? "search-selected" : ""}`}
+                    initial={{scale: 1}}
+                    animate={{
+                      scale: index === selectedResultIndex ? 1 : 0.98,
+                    }}
+                    transition={{duration: 0.5, ease: [0.075, 0.82, 0.165, 1]}}
+                  >
+                    <div
+                      className={`search-header ${index === selectedResultIndex ? "search-selected" : ""}`}
+                    >
+                      <p className="search-title">{title.replace(/^[+-]+/, "").trim()}</p>
+                      {tag && tag.trim() !== "" && (
+                        <div className="search-tags">
+                          {tag.split(", ").map((t, index) => (
+                            <mark key={index}>{t}</mark>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                    <p
+                      className="search-content"
+                      dangerouslySetInnerHTML={{__html: content}}
+                    />
+                  </motion.button>
+                </div>
+              ))}
+            {query.trim() !== "" && results.length === 0 && (
+              <p className="search-no-results">
+                Ничего не нашлось, попробуйте изменить ваш запрос.
+              </p>
+            )}
+            {!isPageLoaded && (
+              <p style={{textAlign: "center", fontSize: "1rem", margin: "20px"}}>
+                Страница ещё загружается, а поиск всё ещё недоступен. Пожалуйста,
+                подождите...
+              </p>
+            )}
+          </div>
         </div>
       </div>
     </Modal>

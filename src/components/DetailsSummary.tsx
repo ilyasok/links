@@ -148,12 +148,10 @@ const DetailsSummary: React.FC<DetailsSummaryProps> = ({title, children, tag}) =
     >
       <motion.summary
         whileHover={{
-          scale: 1.025,
           transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
         }}
         whileTap={{
           opacity: 0.75,
-          scale: 1.01,
         }}
         className="faq-summary"
       >

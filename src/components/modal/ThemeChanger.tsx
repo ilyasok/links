@@ -1,6 +1,7 @@
 import React, {createContext, useContext, useEffect, useMemo, useState} from "react";
 import {Modal, Slider, Tooltip} from "antd";
 import {
+  CloseRounded,
   DarkModeRounded,
   FormatColorFillOutlined,
   HideSourceRounded,
@@ -129,102 +130,126 @@ const ThemeModal: React.FC<ThemeModalProps> = ({isModalOpen, closeModal}) => {
       onCancel={closeModal}
       width={450}
     >
-      <p className="modal-title">Оформление</p>
-      <p className="theme-title">Тема сайта:</p>
-      <div className="theme-selector">
-        <motion.button
-          whileHover={{
-            scale: 1.075,
-            transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
-          }}
-          whileTap={{scale: 0.9, opacity: 0.5}}
-          className={
-            theme === "light" ? "theme-button theme-button-selected" : "theme-button"
-          }
-          onClick={() => setTheme("light")}
-        >
-          <LightModeRounded />
-          Светлая
-        </motion.button>
-        <motion.button
-          whileHover={{
-            scale: 1.075,
-            transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
-          }}
-          whileTap={{scale: 0.9, opacity: 0.5}}
-          className={
-            theme === "dark" ? "theme-button theme-button-selected" : "theme-button"
-          }
-          onClick={() => setTheme("dark")}
-        >
-          <DarkModeRounded />
-          Тёмная
-        </motion.button>
-        <motion.button
-          whileHover={{
-            scale: 1.075,
-            transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
-          }}
-          whileTap={{scale: 0.9, opacity: 0.5}}
-          className={
-            theme === "system" ? "theme-button theme-button-selected" : "theme-button"
-          }
-          onClick={() => setTheme("system")}
-        >
-          <HideSourceRounded />
-          Системная
-        </motion.button>
-      </div>
-      <p className="theme-title">Оттенок акцентного цвета:</p>
-      <div className="theme-slider">
-        <Slider
-          min={0}
-          max={360}
-          value={accentHue}
-          onChange={(value) => setAccentHue(value)}
-          style={{flex: "1 1 auto", width: "100%"}}
-        />
-        <Tooltip title="Сбросить оттенок">
+      <div className="modal">
+        <div className="modal-header">
+          <div className="modal-header-title">Оформление</div>
           <button
-            onClick={() => setAccentHue(210)}
+            className="modal-header-close"
+            onClick={closeModal}
+          >
+            <CloseRounded />
+          </button>
+        </div>
+        <div className="modal-content">
+          <div
             style={{
-              width: "28px",
-              height: "28px",
-              backgroundColor: "transparent",
-              border: "none",
-              padding: 0,
-              cursor: "pointer",
+              marginBlock: "10px",
+              display: "flex",
+              maxHeight: "100%",
+              alignItems: "center",
+              justifyContent: "space-between",
+              gap: "10px",
             }}
           >
-            <RestartAlt />
-          </button>
-        </Tooltip>
-      </div>
-      <p className="theme-title">Насыщенность акцентного цвета:</p>
-      <div className="theme-slider">
-        <Slider
-          min={0}
-          max={1.25}
-          step={0.025}
-          value={saturateRatio}
-          onChange={(value) => setSaturateRatio(value)}
-          style={{flex: "1 1 auto", width: "100%"}}
-        />
-        <Tooltip title="Сбросить насыщенность">
-          <button
-            onClick={() => setSaturateRatio(1)}
-            style={{
-              width: "28px",
-              height: "28px",
-              backgroundColor: "transparent",
-              border: "none",
-              padding: 0,
-              cursor: "pointer",
-            }}
-          >
-            <RestartAlt />
-          </button>
-        </Tooltip>
+            <div className="theme-title">Тема сайта:</div>
+            <div className="theme-selector">
+              <motion.button
+                whileHover={{
+                  scale: 1.075,
+                  transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
+                }}
+                whileTap={{scale: 0.95, opacity: 0.5}}
+                className={
+                  theme === "light"
+                    ? "theme-button theme-button-selected"
+                    : "theme-button"
+                }
+                onClick={() => setTheme("light")}
+              >
+                <LightModeRounded />
+              </motion.button>
+              <motion.button
+                whileHover={{
+                  scale: 1.075,
+                  transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
+                }}
+                whileTap={{scale: 0.95, opacity: 0.5}}
+                className={
+                  theme === "dark" ? "theme-button theme-button-selected" : "theme-button"
+                }
+                onClick={() => setTheme("dark")}
+              >
+                <DarkModeRounded />
+              </motion.button>
+              <motion.button
+                whileHover={{
+                  scale: 1.075,
+                  transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
+                }}
+                whileTap={{scale: 0.95, opacity: 0.5}}
+                className={
+                  theme === "system"
+                    ? "theme-button theme-button-selected"
+                    : "theme-button"
+                }
+                onClick={() => setTheme("system")}
+              >
+                <HideSourceRounded />
+              </motion.button>
+            </div>
+          </div>
+          <div className="theme-slider">
+            <div className="theme-title">Оттенок:</div>
+            <Slider
+              min={0}
+              max={360}
+              value={accentHue}
+              onChange={(value) => setAccentHue(value)}
+              style={{flex: "1 1 auto", width: "100%"}}
+            />
+            <Tooltip title="Сбросить оттенок">
+              <button
+                onClick={() => setAccentHue(210)}
+                style={{
+                  width: "28px",
+                  height: "28px",
+                  backgroundColor: "transparent",
+                  border: "none",
+                  padding: 0,
+                  cursor: "pointer",
+                }}
+              >
+                <RestartAlt />
+              </button>
+            </Tooltip>
+          </div>
+          <div className="theme-slider">
+            <div className="theme-title">Насыщенность:</div>
+            <Slider
+              min={0}
+              max={1.25}
+              step={0.025}
+              value={saturateRatio}
+              onChange={(value) => setSaturateRatio(value)}
+              style={{flex: "1 1 auto", width: "100%"}}
+            />
+            <Tooltip title="Сбросить насыщенность">
+              <button
+                onClick={() => setSaturateRatio(1)}
+                style={{
+                  width: "28px",
+                  height: "28px",
+                  backgroundColor: "transparent",
+                  border: "none",
+                  padding: 0,
+                  cursor: "pointer",
+                }}
+              >
+                <RestartAlt />
+              </button>
+            </Tooltip>
+          </div>
+        </div>
       </div>
     </Modal>
   );
