@@ -79,119 +79,6 @@
   font-display: swap;
 }
 
-// *: static Mulish
-@font-face {
-  font-style: normal;
-  font-weight: 200;
-  src: url("/src/fonts/ttf/Mulish/static/Mulish-ExtraLight.ttf") format("truetype");
-  font-family: "Mulish";
-}
-
-@font-face {
-  font-style: normal;
-  font-weight: 300;
-  src: url("/src/fonts/ttf/Mulish/static/Mulish-Light.ttf") format("truetype");
-  font-family: "Mulish";
-}
-
-@font-face {
-  font-style: normal;
-  font-weight: 400;
-  src: url("/src/fonts/ttf/Mulish/static/Mulish-Regular.ttf") format("truetype");
-  font-family: "Mulish";
-}
-
-@font-face {
-  font-style: normal;
-  font-weight: 500;
-  src: url("/src/fonts/ttf/Mulish/static/Mulish-Medium.ttf") format("truetype");
-  font-family: "Mulish";
-}
-
-@font-face {
-  font-style: normal;
-  font-weight: 600;
-  src: url("/src/fonts/ttf/Mulish/static/Mulish-SemiBold.ttf") format("truetype");
-  font-family: "Mulish";
-}
-
-@font-face {
-  font-style: normal;
-  font-weight: 700;
-  src: url("/src/fonts/ttf/Mulish/static/Mulish-Bold.ttf") format("truetype");
-  font-family: "Mulish";
-}
-
-@font-face {
-  font-style: normal;
-  font-weight: 800;
-  src: url("/src/fonts/ttf/Mulish/static/Mulish-ExtraBold.ttf") format("truetype");
-  font-family: "Mulish";
-}
-
-@font-face {
-  font-style: normal;
-  font-weight: 900;
-  src: url("/src/fonts/ttf/Mulish/static/Mulish-Black.ttf") format("truetype");
-  font-family: "Mulish";
-}
-
-@font-face {
-  font-style: italic;
-  font-weight: 200;
-  src: url("/src/fonts/ttf/Mulish/static/Mulish-ExtraLightItalic.ttf") format("truetype");
-  font-family: "Mulish";
-}
-
-@font-face {
-  font-style: italic;
-  font-weight: 300;
-  src: url("/src/fonts/ttf/Mulish/static/Mulish-LightItalic.ttf") format("truetype");
-  font-family: "Mulish";
-}
-
-@font-face {
-  font-style: italic;
-  font-weight: 400;
-  src: url("/src/fonts/ttf/Mulish/static/Mulish-Italic.ttf") format("truetype");
-  font-family: "Mulish";
-}
-
-@font-face {
-  font-style: italic;
-  font-weight: 500;
-  src: url("/src/fonts/ttf/Mulish/static/Mulish-MediumItalic.ttf") format("truetype");
-  font-family: "Mulish";
-}
-
-@font-face {
-  font-style: italic;
-  font-weight: 600;
-  src: url("/src/fonts/ttf/Mulish/static/Mulish-SemiBoldItalic.ttf") format("truetype");
-  font-family: "Mulish";
-}
-
-@font-face {
-  font-style: italic;
-  font-weight: 700;
-  src: url("/src/fonts/ttf/Mulish/static/Mulish-BoldItalic.ttf") format("truetype");
-  font-family: "Mulish";
-}
-
-@font-face {
-  font-style: italic;
-  font-weight: 800;
-  src: url("/src/fonts/ttf/Mulish/static/Mulish-ExtraBoldItalic.ttf") format("truetype");
-  font-family: "Mulish";
-}
-
-@font-face {
-  font-style: italic;
-  font-weight: 900;
-  src: url("/src/fonts/ttf/Mulish/static/Mulish-BlackItalic.ttf") format("truetype");
-  font-family: "Mulish";
-}
-
 // *: static Jetbrains Mono
 @font-face {
   font-style: normal;
@@ -353,4 +240,138 @@
   font-weight: 400;
   src: url("/src/fonts/ttf/Segoe UI/Segoe UI.ttf") format("truetype");
   font-family: "Segoe UI";
+}
+
+// *: static Onest
+
+@font-face {
+  font-style: normal;
+  font-weight: 900;
+  src: url("/src/fonts/ttf/Onest/static/Onest-Black.ttf") format("truetype");
+  font-family: "Onest";
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  src: url("/src/fonts/ttf/Onest/static/Onest-Bold.ttf") format("truetype");
+  font-family: "Onest";
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 800;
+  src: url("/src/fonts/ttf/Onest/static/Onest-ExtraBold.ttf") format("truetype");
+  font-family: "Onest";
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 200;
+  src: url("/src/fonts/ttf/Onest/static/Onest-ExtraLight.ttf") format("truetype");
+  font-family: "Onest";
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 300;
+  src: url("/src/fonts/ttf/Onest/static/Onest-Light.ttf") format("truetype");
+  font-family: "Onest";
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  src: url("/src/fonts/ttf/Onest/static/Onest-Medium.ttf") format("truetype");
+  font-family: "Onest";
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  src: url("/src/fonts/ttf/Onest/static/Onest-Regular.ttf") format("truetype");
+  font-family: "Onest";
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 600;
+  src: url("/src/fonts/ttf/Onest/static/Onest-SemiBold.ttf") format("truetype");
+  font-family: "Onest";
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 100;
+  src: url("/src/fonts/ttf/Onest/static/Onest-Thin.ttf") format("truetype");
+  font-family: "Onest";
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 100 900;
+  src: url("/src/fonts/ttf/Onest/Onest-VariableFont_wght.ttf")
+    format("truetype-variations");
+  font-family: "Onest";
+}
+
+// *: Static Manrope
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  src: url("/src/fonts/ttf/Manrope/static/Manrope-Bold.ttf") format("truetype");
+  font-family: "Manrope";
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 800;
+  src: url("/src/fonts/ttf/Manrope/static/Manrope-ExtraBold.ttf") format("truetype");
+  font-family: "Manrope";
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 200;
+  src: url("/src/fonts/ttf/Manrope/static/Manrope-ExtraLight.ttf") format("truetype");
+  font-family: "Manrope";
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 300;
+  src: url("/src/fonts/ttf/Manrope/static/Manrope-Light.ttf") format("truetype");
+  font-family: "Manrope";
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  src: url("/src/fonts/ttf/Manrope/static/Manrope-Medium.ttf") format("truetype");
+  font-family: "Manrope";
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  src: url("/src/fonts/ttf/Manrope/static/Manrope-Regular.ttf") format("truetype");
+  font-family: "Manrope";
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 600;
+  src: url("/src/fonts/ttf/Manrope/static/Manrope-SemiBold.ttf") format("truetype");
+  font-family: "Manrope";
+}
+
+// *: Variable Manrope
+
+@font-face {
+  font-style: normal;
+  font-weight: 100 900;
+  src: url("/src/fonts/ttf/Manrope/Manrope-VariableFont_wght.ttf")
+    format("truetype-variations");
+  font-family: "Manrope";
 }
