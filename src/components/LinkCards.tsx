@@ -15,25 +15,29 @@ interface LinkCardPropsNoDescription {
 // *: компонент для анимированной ссылки, которая принимает на себя ссылку идущая за пределы приложения, иконку, имя и описание
 export const LinkCard: React.FC<LinkCardProps> = ({href, icon, name, description}) => {
   return (
-    <motion.a
-      href={href}
+    <motion.div
       className="links-button"
       whileHover={{
         scale: 1.025,
-        transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
-        type: "spring",
+        transition: {
+          duration: 0.5,
+          ease: [0.075, 0.82, 0.165, 1],
+          type: "spring",
+        },
       }}
       whileTap={{
         scale: 0.975,
         opacity: 0.5,
       }}
     >
-      <div className="name_container">
-        <p className="name">{name}</p>
-        <span className="icon">{icon}</span>
-      </div>
-      <p className="description">{description}</p>
-    </motion.a>
+      <a href={href}>
+        <div className="name_container">
+          <p className="name">{name}</p>
+          <span className="icon">{icon}</span>
+        </div>
+        <p className="description">{description}</p>
+      </a>
+    </motion.div>
   );
 };
 
@@ -44,24 +48,28 @@ export const LinkCardNoDescription: React.FC<LinkCardPropsNoDescription> = ({
   name,
 }) => {
   return (
-    <motion.a
-      href={href}
+    <motion.div
       className="links-button"
       whileHover={{
         scale: 1.025,
-        transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
-        type: "spring",
+        transition: {
+          duration: 0.5,
+          ease: [0.075, 0.82, 0.165, 1],
+          type: "spring",
+        },
       }}
       whileTap={{
         scale: 0.975,
         opacity: 0.5,
       }}
     >
-      <div className="name_container">
-        <p className="name">{name}</p>
-        <div className="icon">{icon}</div>
-      </div>
-    </motion.a>
+      <a href={href}>
+        <div className="name_container">
+          <p className="name">{name}</p>
+          <span className="icon">{icon}</span>
+        </div>
+      </a>
+    </motion.div>
   );
 };
 
@@ -77,8 +85,11 @@ export const LinkInAppCard: React.FC<LinkCardProps> = ({
       className="links-button"
       whileHover={{
         scale: 1.025,
-        transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
-        type: "spring",
+        transition: {
+          duration: 0.5,
+          ease: [0.075, 0.82, 0.165, 1],
+          type: "spring",
+        },
       }}
       whileTap={{
         scale: 0.975,
@@ -88,7 +99,7 @@ export const LinkInAppCard: React.FC<LinkCardProps> = ({
       <Link to={href}>
         <div className="name_container">
           <p className="name">{name}</p>
-          <div className="icon">{icon}</div>
+          <span className="icon">{icon}</span>
         </div>
         <p className="description">{description}</p>
       </Link>

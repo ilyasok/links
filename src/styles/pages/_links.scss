@@ -10,39 +10,43 @@
 
   &-button {
     display: flex;
-    flex-grow: 1;
-    flex-basis: 275px;
+    flex: 1 1 275px;
     flex-direction: column;
     align-items: flex-start;
     transition: background-color 1s cubic-bezier(0.075, 0.82, 0.165, 1);
     outline: 1px solid var(--content-background-border);
     box-shadow: 0 5px 5px 0 var(--shadow);
     border-radius: $roundness;
-    background-color: var(--content-background-color);
     background-image: linear-gradient(
       to top,
       var(--content-background-color),
       transparent
     );
+    background-color: var(--content-background-color);
+
+    a {
+      width: 100%;
+    }
+
     &:hover {
       z-index: 25;
       cursor: pointer;
-      background-color: var(--links_hover);
       outline-color: var(--links_border);
+      background-color: var(--links_hover);
     }
 
     .name_container {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      box-sizing: border-box;
+      margin: 5px;
       outline: 1px solid var(--links_border);
-      z-index: 5;
-      border-radius: $roundness;
+      border-radius: $roundness * 0.75;
       background-image: linear-gradient(to top, var(--summary_background), transparent);
       background-color: var(--links_background);
       padding-inline: 10px;
       padding-block: 5px;
-      width: 100%;
 
       .icon {
         flex-shrink: 0;
@@ -66,11 +70,14 @@
     }
 
     .description {
-      // text-wrap: balance;
-      opacity: 80%;
-      padding: 10px;
+      text-wrap: balance;
+      opacity: 0.75;
+      padding-inline: 12px;
+      padding-block-start: 5px;
+      padding-block-end: 12px;
+      width: 100%;
       font-weight: 400;
-      font-size: 0.9rem;
+      font-size: 0.875rem;
     }
   }
 
