@@ -231,6 +231,19 @@
       }
     }
 
+    li > ul {
+      margin-block: 5px;
+    }
+
+    li > ul > li {
+      padding-inline: 20px;
+      padding-inline-end: 0;
+
+      &::before {
+        left: 6px;
+      }
+    }
+
     & {
       border-radius: $roundness;
       line-height: 1.75;
