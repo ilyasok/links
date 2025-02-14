@@ -50,11 +50,11 @@ const Header: React.FC<{title: string}> = ({title}) => {
     >
       <div className={`header-left ${isVisible ? "visible" : "hidden"}`}>
         {location.pathname !== "/" && (
-          <div className="icon">
+          <span className="icon">
             <Link to="/">
               <ArrowBackRounded />
             </Link>
-          </div>
+          </span>
         )}
         <div className="logo">
           {title}
