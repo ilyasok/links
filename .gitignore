@@ -32,13 +32,6 @@ eslint.config.js
 yarn.lock
 qodana.yaml
 TODO.md
-eslint.config.js
-vite.config.ts
-.eslintrc.cjs
-.eslintrc
-tsconfig.json
-tsconfig.node.json
-dist
 .vs
 src/main.css
 public/legacy/css/styles.css
