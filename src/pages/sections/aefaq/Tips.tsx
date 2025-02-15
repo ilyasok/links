@@ -8,7 +8,6 @@ import {
 } from "../../../components/Additions";
 import ContentSwitcher from "../../../components/features/OperatingSystemFilter";
 import {VideoFigure, YouTubeVideo} from "../../../components/ContentFigure";
-import {FlexibleLinks} from "../../../components/FlexibleLinksFaQ";
 import {Divider} from "antd";
 
 const AETips: React.FC = () => {
@@ -41,7 +40,7 @@ const AETips: React.FC = () => {
           У каждого сервиса свой срок хранения истории файлов, уточняйте это в вашем
           тарифном плане.
         </AdditionWarning>
-        <FlexibleLinks>
+        <div className="flexible-links">
           <a href="https://yandex.ru/support/yandex-360/customers/disk/desktop/windows/ru/version-control">
             История изменения файла в Яндекс.Диск
           </a>
@@ -57,7 +56,7 @@ const AETips: React.FC = () => {
           <a href="https://support.microsoft.com/ru-ru/office/%D0%B2%D0%BE%D1%81%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BF%D1%80%D0%B5%D0%B4%D1%8B%D0%B4%D1%83%D1%89%D0%B5%D0%B9-%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D0%B8-%D1%84%D0%B0%D0%B9%D0%BB%D0%B0-%D1%85%D1%80%D0%B0%D0%BD%D1%8F%D1%89%D0%B5%D0%B3%D0%BE%D1%81%D1%8F-%D0%B2-onedrive-159cad6d-d76e-4981-88ef-de6e96c93893">
             Восстановление предыдущей версии файла в OneDrive
           </a>
-        </FlexibleLinks>
+        </div>
         <AdditionInfo>
           Если вы используете другое облачное хранилище - найдите информацию об истории
           файлов в вашем сервисе самостоятельно в сети Интернет.
@@ -522,7 +521,7 @@ const AETips: React.FC = () => {
           <mark className="app">After Effects</mark> вы всегда можете посмотреть на
           официальном сайте Adobe.
         </p>
-        <FlexibleLinks>
+        <div className="flexible-links">
           <a href="https://helpx.adobe.com/ru/after-effects/using/whats-new.html">
             Что нового в After Effects последних выпусков
           </a>
@@ -532,7 +531,7 @@ const AETips: React.FC = () => {
           <a href="https://helpx.adobe.com/ru/after-effects/kb/known-issues-after-effects.html">
             Выявленные неполадки в After Effects
           </a>
-        </FlexibleLinks>
+        </div>
         <AdditionInfo>
           <b>
             Пожалуйста, не забывайте своевременно обновлять сторонние плагины и

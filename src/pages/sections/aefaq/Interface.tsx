@@ -556,6 +556,8 @@ const AEInterface: React.FC = () => {
         <code>debug.set Enable_Theme_Colorizing=true</code>
         <AdditionInfo>
           Режимы отображения консоли можно изменить нажав на три полоски в заголовке окна.
+          Также этот пункт можно найти и в режиме отображения{" "}
+          <mark className="ui">Debug Database View</mark>.
         </AdditionInfo>
         <ImageFigure
           styleClass="figure_windows-dark"

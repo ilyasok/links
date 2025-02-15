@@ -6,7 +6,6 @@ import {
   AdditionInfo,
   AdditionWarning,
 } from "../../../components/Additions";
-import {FlexibleLinks} from "../../../components/FlexibleLinksFaQ";
 import {ImageFigure} from "../../../components/ContentFigure";
 
 const PRWhereFind: React.FC = () => {
@@ -44,8 +43,11 @@ const PRWhereFind: React.FC = () => {
           </li>
         </ul>
         <AdditionWarning>
-          Контент, предоставленный по ссылкам выше, не должен использоваться в
-          коммерческих целях!
+          Контент, предоставленный по ссылкам выше,{" "}
+          <b>
+            <u>не должен использоваться</u>
+          </b>{" "}
+          в коммерческих целях!
         </AdditionWarning>
         <ul>
           <li>
@@ -68,7 +70,7 @@ const PRWhereFind: React.FC = () => {
           <a href="https://t.me/+Qd9xu7A4TeIwNzY6">склада стройматериалов (Windows)</a> не
           забывайте убирать галочку с пункта &quot;Реклама&quot; и отключать антивирус
           перед установкой, иначе можете наткнуться на проблему{" "}
-          <mark>helper.exe не найден</mark>.
+          <mark className="ui">helper.exe не найден</mark>.
         </AdditionWarning>
         <AdditionDanger>
           Устанавливая содержимое на ваше устройство из каналов{" "}
@@ -143,7 +145,7 @@ const PRWhereFind: React.FC = () => {
           ознакомиться с условиями использования на каждом конкретном ресурсе. Ниже
           перечислены популярные источники видео.
         </p>
-        <FlexibleLinks>
+        <div className="flexible-links">
           <a
             href="https://www.pexels.com/videos/"
             title="Pexels"
@@ -240,7 +242,7 @@ const PRWhereFind: React.FC = () => {
           >
             Абстрактные фоны на YouTube
           </a>
-        </FlexibleLinks>
+        </div>
         <AdditionWarning>
           Некоторые ресурсы могут быть заблокированы на территории РФ или других стран,
           используйте VPN для доступа на данные ресурсы.
@@ -253,7 +255,7 @@ const PRWhereFind: React.FC = () => {
           хватает ассортимента из канала, то ниже предоставлен список сайтов, откуда вы
           можете достать бесплатные звуковые эффекты.
         </p>
-        <FlexibleLinks>
+        <div className="flexible-links">
           <a
             href="https://www.audiomicro.com/free-sound-effects"
             title="Audiomicro"
@@ -296,7 +298,7 @@ const PRWhereFind: React.FC = () => {
           >
             freesound
           </a>
-        </FlexibleLinks>
+        </div>
         <AdditionWarning>
           Перед использованием звуков в коммерческих целях - обязательно прочтите условия
           использования и лицензии, чтобы не попасть в неприятную ситуацию.

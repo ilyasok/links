@@ -8,7 +8,6 @@ import {
 import ContentSwitcher from "../../../components/features/OperatingSystemFilter";
 import {ImageFigure, VideoFigure, YouTubeVideo} from "../../../components/ContentFigure";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
-import {FlexibleLinks} from "../../../components/FlexibleLinksFaQ";
 import {Divider} from "antd";
 
 const AEFromNewbies: React.FC = () => {
@@ -41,7 +40,7 @@ const AEFromNewbies: React.FC = () => {
           советую изучить каналы на YouTube из списка ниже, которые помогут вам прокачать
           свои навыки.
         </p>
-        <FlexibleLinks>
+        <div className="flexible-links">
           <a href="https://www.youtube.com/@TutoView">Tutorial View+</a>
           <a href="https://www.youtube.com/@BenMarriott">Ben Marriott</a>
           <a href="https://www.youtube.com/@AEPlug">AEPlug</a>
@@ -49,12 +48,12 @@ const AEFromNewbies: React.FC = () => {
           <a href="https://www.youtube.com/@SmertimbaGraphics/videos">
             Smertimba Graphics
           </a>
-        </FlexibleLinks>
+        </div>
         <p>
           Также я могу порекомендовать несколько отличных курсов, как бесплатных, так и
           платных.
         </p>
-        <FlexibleLinks>
+        <div className="flexible-links">
           <a href="https://cloudlessons.ru/v/410/">
             &quot;Супер After Effects&quot; от VideoSmile
           </a>
@@ -70,7 +69,7 @@ const AEFromNewbies: React.FC = () => {
           <a href="https://www.profileschool.ru/category/video/course_adobe_after_effects_base">
             &quot;After Effects базового уровня&quot; от Никиты Чеснокова
           </a>
-        </FlexibleLinks>
+        </div>
         <p style={{textAlign: "center", fontSize: "0.95rem", fontWeight: "700"}}>
           Надеюсь, вы найдёте что-то полезное для себя. Удачи в ваших начинаниях!
         </p>
@@ -93,10 +92,9 @@ const AEFromNewbies: React.FC = () => {
             <mark className="word">Adjustment Layer</mark>. Этот слой позволяет
             накладывать эффекты на другие слои, находящиеся ниже него в иерархии на
             таймлайне. Чтобы создать такой слой в программе, просто нажмите комбинацию
-            клавиш
-            <mark className="key">Ctrl + Alt + Y</mark>. Это очень удобно, если вы хотите
-            применить эффект ко всей композиции, поверх всех слоёв. Например, это может
-            быть полезно для цветокоррекции или добавления различных искажений.
+            клавиш <mark className="key">Ctrl + Alt + Y</mark>. Это очень удобно, если вы
+            хотите применить эффект ко всей композиции, поверх всех слоёв. Например, это
+            может быть полезно для цветокоррекции или добавления различных искажений.
           </li>
           <li>
             <mark className="word">Альфа-канал</mark> - это четвёртый канал в цветовой
@@ -105,14 +103,14 @@ const AEFromNewbies: React.FC = () => {
             <mark className="file">PNG</mark> поддерживает множество уровней прозрачности,
             позволяя создавать изображения с плавными переходами от полностью прозрачного
             до полностью непрозрачного. В отличие от этого,{" "}
-            <mark className="file">GIF</mark>
-            поддерживает только бинарную прозрачность, что означает, что изображение может
-            быть либо полностью прозрачным, либо полностью непрозрачным, без плавных
-            затуханий. Если вы хотите сохранить видео с прозрачностью, вам подойдут
-            форматы <mark className="file">MOV</mark>, <mark className="file">AVI</mark>{" "}
-            или <mark className="file">WEBM</mark>. Однако, будьте осторожны с{" "}
-            <mark className="file">MP4</mark>: он не поддерживает альфа-канал, за
-            исключением некоторых пользователей macOS, но это уже другая история.
+            <mark className="file">GIF</mark> поддерживает только бинарную прозрачность,
+            что означает, что изображение может быть либо полностью прозрачным, либо
+            полностью непрозрачным, без плавных затуханий. Если вы хотите сохранить видео
+            с прозрачностью, вам подойдут форматы <mark className="file">MOV</mark>,{" "}
+            <mark className="file">AVI</mark> или <mark className="file">WEBM</mark>.
+            Однако, будьте осторожны с <mark className="file">MP4</mark>: он не
+            поддерживает альфа-канал, за исключением некоторых пользователей macOS, но это
+            уже другая история.
             <AdditionInfo>
               Если хотите узнать больше об альфа-канале, то{" "}
               <a href="https://ru.wikipedia.org/wiki/%D0%90%D0%BB%D1%8C%D1%84%D0%B0-%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB">
@@ -271,15 +269,7 @@ const AEFromNewbies: React.FC = () => {
             <mark className="word">не монтажные (delivery) кодеки</mark>. Видео с не
             монтажными кодеками для монтажа вашего видео использовать не рекомендуется.
             <ul>
-              <div
-                style={{
-                  textAlign: "center",
-                  fontWeight: "bold",
-                  color: "var(--accent)",
-                }}
-              >
-                Монтажные кодеки
-              </div>
+              <Divider>Монтажные кодеки</Divider>
               <li>
                 <mark className="video">Apple Prores</mark> - высококачественный кодек,
                 который широко используется в качестве формата получения, производства и
@@ -316,15 +306,7 @@ const AEFromNewbies: React.FC = () => {
               </li>
             </ul>
             <ul>
-              <div
-                style={{
-                  textAlign: "center",
-                  fontWeight: "bold",
-                  color: "var(--accent)",
-                }}
-              >
-                Не монтажные (delivery) кодеки
-              </div>
+              <Divider>Не монтажные (delivery) кодеки</Divider>
               <li>
                 <mark className="video">H.264</mark>, <mark className="video">H.265</mark>{" "}
                 или <mark className="file">HEVC</mark> - популярный кодек для
@@ -1804,7 +1786,7 @@ const AEFromNewbies: React.FC = () => {
           времени Adobe выкладывает на сайт список выявленных неполадок и старается
           приложить к ним временное решение.
         </p>
-        <FlexibleLinks>
+        <div className="flexible-links">
           <a href="https://helpx.adobe.com/ru/after-effects/using/whats-new.html">
             Что нового в After Effects последних выпусков
           </a>
@@ -1814,7 +1796,7 @@ const AEFromNewbies: React.FC = () => {
           <a href="https://helpx.adobe.com/ru/after-effects/kb/known-issues-after-effects.html">
             Выявленные неполадки в After Effects
           </a>
-        </FlexibleLinks>
+        </div>
         <p>
           Мы советуем время от времени обновлять{" "}
           <mark className="app">After Effects</mark>, а также сторонние плагины, чтобы

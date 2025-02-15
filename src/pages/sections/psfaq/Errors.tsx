@@ -144,6 +144,25 @@ const PSErrors: React.FC = () => (
         }
       />
     </DetailsSummary>
+    <DetailsSummary title='"Приложение Adobe Creative Cloud, необходимое для устранения проблемы отсутствует или повреждено..."?'>
+      <p>
+        Вы зачем-то установили приложение <mark className="app">Creative Cloud</mark>{" "}
+        рядом с пиратскими программами, у которых вырезан модуль{" "}
+        <mark className="app">Creative Cloud</mark>. А потом само приложение{" "}
+        <mark className="app">Creative Cloud</mark> удалили, оставив за собой
+        нежелательные хвосты.
+      </p>
+      <p>
+        Решение довольно простое - снесите приложения и поставьте их заново, чтобы лишние
+        зависимости программ от <mark className="app">Creative Cloud</mark> почистились.
+        Да, вы не ослышались. Для очистки системы от некоторых или всех программ от Adobe
+        можно воспользоваться консольной утилитой{" "}
+        <a href="https://helpx.adobe.com/ru/creative-cloud/kb/cc-cleaner-tool-installation-problems.html">
+          Adobe Creative Cloud Cleaner
+        </a>
+        .
+      </p>
+    </DetailsSummary>
   </div>
 );
 

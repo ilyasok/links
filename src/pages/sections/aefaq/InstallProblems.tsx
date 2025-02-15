@@ -1045,7 +1045,7 @@ const AEInstallProblems: React.FC = () => {
             Adobe Creative Cloud Cleaner Tool
           </a>{" "}
           или с помощью любой другой программы для удаления программ, например{" "}
-          <mark className="app">Revo Uninstaller</mark>. .
+          <mark className="app">Revo Uninstaller</mark>.
         </AdditionDanger>
         <p>
           Предположим, что ваша система уже чиста от Adobe или вы только-только

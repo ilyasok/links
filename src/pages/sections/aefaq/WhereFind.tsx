@@ -5,7 +5,6 @@ import {
   AdditionWarning,
 } from "../../../components/Additions";
 import DetailsSummary from "../../../components/DetailsSummary";
-import {FlexibleLinks} from "../../../components/FlexibleLinksFaQ";
 import {ImageFigure} from "../../../components/ContentFigure";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 
@@ -42,8 +41,11 @@ const AEWhereFind: React.FC = () => {
           </li>
         </ul>
         <AdditionWarning>
-          Контент, предоставленный по ссылкам выше, не должен использоваться в
-          коммерческих целях!
+          Контент, предоставленный по ссылкам выше,{" "}
+          <b>
+            <u>не должен использоваться</u>
+          </b>{" "}
+          в коммерческих целях!
         </AdditionWarning>
         <ul>
           <li>
@@ -66,7 +68,7 @@ const AEWhereFind: React.FC = () => {
           <a href="https://t.me/+Qd9xu7A4TeIwNzY6">склада стройматериалов (Windows)</a> не
           забывайте убирать галочку с пункта &quot;Реклама&quot; и отключать антивирус
           перед установкой, иначе можете наткнуться на проблему{" "}
-          <mark>helper.exe не найден</mark>.
+          <mark className="ui">helper.exe не найден</mark>.
         </AdditionWarning>
         <AdditionDanger>
           Устанавливая содержимое на ваше устройство из каналов{" "}
@@ -140,7 +142,7 @@ const AEWhereFind: React.FC = () => {
           ознакомиться с условиями использования на каждом конкретном ресурсе. Ниже
           перечислены популярные источники видео.
         </p>
-        <FlexibleLinks>
+        <div className="flexible-links">
           <a
             href="https://www.pexels.com/videos/"
             title="Pexels"
@@ -237,7 +239,7 @@ const AEWhereFind: React.FC = () => {
           >
             Абстрактные фоны на YouTube
           </a>
-        </FlexibleLinks>
+        </div>
         <AdditionWarning>
           Некоторые ресурсы могут быть заблокированы на территории РФ или других стран,
           используйте VPN для доступа на данные ресурсы.
@@ -270,7 +272,7 @@ const AEWhereFind: React.FC = () => {
           , то ниже предоставлен список различных сайтов с бесплатными графическими
           материалами.
         </p>
-        <FlexibleLinks>
+        <div className="flexible-links">
           <a
             href="https://unsplash.com/"
             title="Unsplash"
@@ -313,7 +315,7 @@ const AEWhereFind: React.FC = () => {
           >
             Adobe Stock
           </a>
-        </FlexibleLinks>
+        </div>
         <AdditionWarning>
           Перед использованием графики в коммерческих целях - обязательно прочтите условия
           использования и лицензии, чтобы не попасть в неприятную ситуацию.
@@ -326,7 +328,7 @@ const AEWhereFind: React.FC = () => {
           хватает ассортимента из канала, то ниже предоставлен список сайтов, откуда вы
           можете достать бесплатные звуковые эффекты.
         </p>
-        <FlexibleLinks>
+        <div className="flexible-links">
           <a
             href="https://www.audiomicro.com/free-sound-effects"
             title="Audiomicro"
@@ -369,7 +371,7 @@ const AEWhereFind: React.FC = () => {
           >
             freesound
           </a>
-        </FlexibleLinks>
+        </div>
         <AdditionWarning>
           Перед использованием звуков в коммерческих целях - обязательно прочтите условия
           использования и лицензии, чтобы не попасть в неприятную ситуацию.

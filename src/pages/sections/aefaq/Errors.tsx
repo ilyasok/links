@@ -1031,17 +1031,17 @@ const AEErrors: React.FC = () => {
         <p>
           Вы зачем-то установили приложение <mark className="app">Creative Cloud</mark>{" "}
           рядом с пиратскими программами, у которых вырезан модуль{" "}
-          <mark className="app">creative Cloud</mark>. А потом само приложение{" "}
+          <mark className="app">Creative Cloud</mark>. А потом само приложение{" "}
           <mark className="app">Creative Cloud</mark> удалили, оставив за собой
           нежелательные хвосты.
         </p>
         <p>
           Решение довольно простое - снесите приложения и поставьте их заново, чтобы
-          лишние зависимости программм от <mark className="app">Creative Cloud</mark>{" "}
+          лишние зависимости программ от <mark className="app">Creative Cloud</mark>{" "}
           почистились. Да, вы не ослышались. Для очистки системы от некоторых или всех
           программ от Adobe можно воспользоваться консольной утилитой{" "}
           <a href="https://helpx.adobe.com/ru/creative-cloud/kb/cc-cleaner-tool-installation-problems.html">
-            Adobe Creative Cloud Clenaer
+            Adobe Creative Cloud Cleaner
           </a>
           .
         </p>

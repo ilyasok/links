@@ -640,7 +640,7 @@ const AEExport: React.FC = () => {
         </p>
         <AdditionDanger>
           Крайне не рекомендую использовать плагин{" "}
-          <a href="http://fnord.com/">WebM от fnord</a> для экспорта из{" "}
+          <a href="https://fnord.com/">WebM от fnord</a> для экспорта из{" "}
           <mark className="app">Media Encoder</mark>, так как он часто выводит видео на
           прозрачном фоне с жуткими артефактами.
         </AdditionDanger>

@@ -1,7 +1,6 @@
 import React from "react";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 import DetailsSummary from "../../../components/DetailsSummary";
-import {FlexibleLinks} from "../../../components/FlexibleLinksFaQ";
 import {YouTubeVideo} from "../../../components/ContentFigure";
 
 const PSFromNewbies: React.FC = () => {
@@ -32,7 +31,7 @@ const PSFromNewbies: React.FC = () => {
           <mark className="app">Photoshop</mark>, и хотите узнать что-то новое, то
           рекомендую заглянуть на каналы и плейлисты ниже.
         </p>
-        <FlexibleLinks>
+        <div className="flexible-links">
           <a href="https://www.youtube.com/playlist?list=PL3ysV0s8Gs4UpuSH_wx2vchA-HzRXNcFv">
             &quot;Уроки Photoshop для продвинутых&quot; от Study Kvo
           </a>
@@ -44,7 +43,7 @@ const PSFromNewbies: React.FC = () => {
           <a href="https://www.youtube.com/@Texturelabs/videos">Texturelabs</a>
           <a href="https://www.youtube.com/@PANTERvision/videos">P A N T E R</a>
           <a href="https://www.youtube.com/@thazero/videos">ThaZero</a>
-        </FlexibleLinks>
+        </div>
         <p style={{textAlign: "center", fontSize: "0.95rem", fontWeight: "700"}}>
           Надеюсь, вы найдёте что-то полезное для себя. Удачи в ваших начинаниях!
         </p>
@@ -66,7 +65,7 @@ const PSFromNewbies: React.FC = () => {
           времени Adobe выкладывает на сайт список выявленных неполадок и старается
           приложить к ним временное решение.
         </p>
-        <FlexibleLinks>
+        <div className="flexible-links">
           <a href="https://helpx.adobe.com/ru/photoshop/using/whats-new.html">
             Что нового в Photoshop последних выпусков
           </a>
@@ -76,7 +75,7 @@ const PSFromNewbies: React.FC = () => {
           <a href="https://helpx.adobe.com/ru/photoshop/kb/known-issues.html">
             Выявленные неполадки в Photoshop
           </a>
-        </FlexibleLinks>
+        </div>
       </DetailsSummary>
       <DetailsSummary title="А есть список популярных комбинаций клавиш для работы в Photoshop?">
         <p>{/* FIXME: написать!! */}</p>
