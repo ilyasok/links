@@ -1,7 +1,11 @@
 import React from "react";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 import DetailsSummary from "../../../components/DetailsSummary";
-import {AdditionDanger} from "../../../components/Additions";
+import {
+  AdditionDanger,
+  AdditionInfo,
+  AdditionWarning,
+} from "../../../components/Additions";
 import {ImageFigure} from "../../../components/ContentFigure";
 
 const PRInterface: React.FC = () => {
@@ -47,16 +51,53 @@ const PRInterface: React.FC = () => {
         </p>
       </DetailsSummary>
       <DetailsSummary title='Куда пропала кнопка "Set to Frame Size"?'>
-        <p>{/* FIXME: написать */}</p>
+        <p>
+          В <mark className="app">Premiere Pro</mark> версии 2025 эту функцию убрали,
+          заменив на <mark className="ui">Fill Frame</mark>.
+        </p>
+        {/* TODO: дописать */}
       </DetailsSummary>
       <DetailsSummary title="Как изменить вид отсчёта времени на таймлайне?">
-        <p>{/* FIXME: написать!! */}</p>
+        <p>
+          По умолчанию в <mark className="app">Premiere Pro</mark> текущее время
+          отображается в формате <mark>ЧЧ:ММ:СС:Кадр</mark>, но иногда хочется поменять
+          вариант отображения на что-то другое.
+        </p>
+        <p>
+          Для изменения формата отображения текущего времени, нажмите на{" "}
+          <mark className="key">ПКМ</mark> по отображению текущего времени и выберите
+          нужный вам тип вывода.
+        </p>
+        {/* TODO: приложить скриншот */}
+        <p>
+          Если вы хотите передвинуть временную метку меньше чем на кадр, чтобы подрезать
+          аудио, то вам нужно включить режим отображения аудио-времени. Для этого нажмите
+          на три полоски в заголовке окна с таймлайном и нажмите на
+          <mark className="ui">Show Audio Units</mark>. Убрать можно аналогичным образом.
+        </p>
+        {/* TODO: приложить скриншот */}
       </DetailsSummary>
-      <DetailsSummary title="Есть ли аналог FX Console для Premiere Pro?">
-        <p>{/* FIXME: написать!! */}</p>
-      </DetailsSummary>
-      <DetailsSummary title="Как включить отображение рабочей области на таймлайне?">
-        <p>{/* FIXME: написать!! */}</p>
+      <DetailsSummary
+        title="Есть ли аналог FX Console для Premiere Pro?"
+        tag="панель эффектов, фх консоль, экскалибур"
+      >
+        <p>
+          Да, есть, и называется{" "}
+          <a href="https://knightsoftheeditingtable.com/excalibur">Excalibur</a>. С
+          помощью него можно применять различные эффекты, пресеты и переходы с помощью
+          всплывающего меню, а также выполнять некоторые команды.
+        </p>
+        <ImageFigure
+          styleClass="figure_macos-light"
+          imgSrc="https://images.squarespace-cdn.com/content/v1/5d090703bfcf6300017faaa8/1605797292871-IKNJ3QIJPGK2TFMMBIIY/web_01_fx.gif?format=750w"
+          imgTitle="Демонстрация работы Excalibur"
+          caption="Premiere Pro"
+        />
+        <AdditionInfo>
+          По умолчанию для открытия всплывающего окна указана комбинация клавиш{" "}
+          <mark className="key">Alt + Space</mark>. Комбинацию клавиш можно поменять в
+          настройках плагина.
+        </AdditionInfo>
       </DetailsSummary>
       <DetailsSummary title="Пропала визуализация аудиодорожек на таймлайне, как их вернуть?">
         <p>
@@ -64,10 +105,31 @@ const PRInterface: React.FC = () => {
           <mark className="app">Premiere Pro</mark>. Обычно это лечится очисткой кэша{" "}
           <mark className="file">.peak</mark> файлов.
         </p>
-        {/* FIXME: написать!! */}
-      </DetailsSummary>{" "}
+        <p>
+          Для очистки кэша и файлов предпросмотра перейдите в{" "}
+          <mark className="ui">Edit &gt; Preferences &gt; Media Cache</mark> и нажмите на{" "}
+          <mark className="ui">Delete</mark> возле пункта{" "}
+          <mark className="ui">Remove Media Cache Files</mark>. Или очистите кэш вручную в{" "}
+          <mark className="path">%Temp%</mark> и папке проекта.
+        </p>
+        <p>
+          После очистки кэша предпросмотр аудио-файлов должен появиться автоматически.
+          Если это не происходит - попробуйте принудительно отрендерить кэш с помощью{" "}
+          <mark className="ui">Sequence &gt; Render Audio</mark>.
+        </p>
+        {/* TODO: приложить скриншот */}
+      </DetailsSummary>
       <DetailsSummary title="Как отключить выделение объекта на таймлайне при перемещении временной метки?">
-        <p>{/* FIXME: написать!! */}</p>
+        <p>
+          Его можно отключить, убрав галочку с{" "}
+          <mark className="ui">Select Follow Playhead</mark> в{" "}
+          <mark className="ui">Sequence</mark>.
+        </p>
+        {/* TODO: показать скриншот */}
+        <AdditionInfo>
+          Выделение клипов зависит от выбранных дорожек с помощью{" "}
+          <mark className="ui">Track Targeting</mark>.
+        </AdditionInfo>
       </DetailsSummary>
       <DetailsSummary title="Куда пропала настройка Timeline в Preferences?">
         <p>
@@ -85,11 +147,43 @@ const PRInterface: React.FC = () => {
           убедитесь в том, что там появился раздел <mark className="ui">Timeline</mark>.
         </p>
       </DetailsSummary>
-      <DetailsSummary title="Как изменить акцентный цвет интерфейса?">
-        <p>{/* FIXME: написать!! */}</p>
-      </DetailsSummary>
-      <DetailsSummary title="Как вернуть старый интерфейс окна экспорта?">
-        <p>{/* FIXME: написать!! */}</p>
+      <DetailsSummary title="Как изменить акцентный цвет интерфейса программы?">
+        <AdditionDanger>
+          Для <mark className="app">Premiere Pro</mark> версий 25.X данная инструкция
+          неактуальна, после включения пункта в консоли - в настройках ничего не будет.
+        </AdditionDanger>
+        <p>
+          Вы, наверное, не раз натыкались на различные скриншоты, где у пользователей
+          изменён цветовой акцент в интерфейсе программы. В версиях от 2017 до 2024 можно
+          включить возможность изменения акцента через консоль. Для этого нажмите на
+          комбинацию клавиш <mark className="key">Ctrl + F12</mark>. Затем введите команду
+          ниже в консоль в режиме <mark className="ui">Console View</mark> и нажмите на{" "}
+          <mark className="key">Enter</mark>.
+        </p>
+        <code>debug.set Enable_Theme_Colorizing=true</code>
+        <AdditionInfo>
+          Режимы отображения консоли можно изменить нажав на три полоски в заголовке окна.
+          Также этот пункт можно найти и в режиме отображения{" "}
+          <mark className="ui">Debug Database View</mark>.
+        </AdditionInfo>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/premierepro/console_theme_colorizing.png"
+          imgTitle="Включение возможности изменения акцента интерфейса"
+          caption="Console"
+        />
+        <p>В настройках...</p>
+        {/* TODO: показать пункт и скриншот в настройках */}
+        <p>
+          В открывшейся цветовой палитре вы можете указать любой цвет, какой захотите.
+          Желательно выбрать тот цвет, который будет хорошо выделяться на фоне остального
+          интерфейса.
+        </p>
+        <AdditionWarning>
+          Не рекомендую ставить тёмные, а также слишком насыщенные оттенки, ибо вы можете
+          плохо различать некоторые элементы интерфейса.
+        </AdditionWarning>
+        {/* TODO: показать цветовую палитру при настройке */}
       </DetailsSummary>
     </div>
   );
