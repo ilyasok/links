@@ -763,6 +763,7 @@ const AEExport: React.FC = () => {
             </li>
           </ul>
         </AdditionWarning>
+        <Divider>Выводим через GifGun</Divider>
         <p>
           Предположим, что вы уже установили расширение{" "}
           <mark className="plugin">GifGun</mark>. Он должен появиться в{" "}
@@ -787,6 +788,7 @@ const AEExport: React.FC = () => {
           imgTitle="Настройки расширения GifGun"
           caption="GifGun"
         />
+        <Divider>Выводим через Media Encoder</Divider>
         <p>
           <mark className="image">GIF</mark> можно ещё получить с помощью{" "}
           <mark className="app">Media Encoder</mark>. Хоть мы и отговариваем от его
@@ -840,6 +842,7 @@ const AEExport: React.FC = () => {
           imgTitle="Начинаем экспорт через Media Encoder"
           caption="Media Encoder"
         />
+        <Divider>Конвертируем через Ezgif</Divider>
         <p>
           Если вы не хотите возиться с экспортом или у вас уже есть готовое видео, которое
           надо лишь перегнать в формат <mark className="image">GIF</mark>, то советую
