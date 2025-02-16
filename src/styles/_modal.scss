@@ -342,8 +342,10 @@
 
   &-header {
     display: flex;
+    position: relative;
     flex-direction: column;
     gap: 8px;
+    z-index: 1000;
     transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     cursor: pointer;
     border-top: solid 1px var(--summary_border);
@@ -361,21 +363,25 @@
   }
 
   &-title {
+    position: relative;
     color: var(--summary_text);
     font-weight: 800;
-    font-size: 1.25rem;
+    font-size: 1.175rem;
     line-height: 1.25;
     font-family: "Onest", sans-serif;
     text-transform: uppercase;
   }
 
   &-content {
-    margin-block-start: 10px;
+    margin-block-start: -10px;
     border: solid 1px var(--content-background-border);
-    border-radius: $roundness;
+    border-top: none;
+    border-bottom-right-radius: $roundness;
+    border-bottom-left-radius: $roundness;
     background-color: var(--content-background-color);
     padding-inline: 10px;
     padding-block: 8px;
+    padding-block-start: 16px;
     overflow: hidden;
     font-size: 0.9375rem;
   }
