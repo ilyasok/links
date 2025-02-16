@@ -145,7 +145,6 @@ const PRFaQ = () => {
                 <h1>prfaq</h1>
                 <Breadcrumb
                   items={[
-                    {title: <Link to="/">Главная</Link>},
                     {
                       title: <Link to="/prfaq">FAQ по Adobe Premiere Pro</Link>,
                       menu: {

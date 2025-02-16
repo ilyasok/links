@@ -9,7 +9,6 @@ import {Helmet} from "react-helmet-async";
 
 const ChatRules = () => {
   const {hash} = useLocation();
-
   React.useEffect(() => {
     if (hash) {
       const element = document.querySelector(hash);
@@ -68,16 +67,13 @@ const ChatRules = () => {
               <Breadcrumb
                 items={[
                   {
-                    title: <Link to="/">Главная</Link>,
-                  },
-                  {
                     title: <Link to="/rules">Правила AEChat и DWChat</Link>,
                   },
                 ]}
               />
             </div>
             <h2
-              className="faq-title"
+              className="faq-section-title"
               id="about"
             >
               О чате и принципах
@@ -169,7 +165,7 @@ const ChatRules = () => {
               </div>
             </section>
             <h2
-              className="faq-title"
+              className="faq-section-title"
               id="work"
             >
               О вакансиях и резюме
@@ -288,7 +284,7 @@ const ChatRules = () => {
               </div>
             </section>
             <h2
-              className="faq-title"
+              className="faq-section-title"
               id="admins"
             >
               Администраторы чата никому и ничего не обязаны!
@@ -340,7 +336,7 @@ const ChatRules = () => {
                 </AdditionInfo>
               </div>
             </section>
-            <h2 className="faq-title">Не гадим в чате и не злимся на других</h2>
+            <h2 className="faq-section-title">Не гадим в чате и не злимся на других</h2>
             <section className="faq-section">
               <div className="faq-content">
                 <p>
@@ -358,7 +354,7 @@ const ChatRules = () => {
               </div>
             </section>
             <h2
-              className="faq-title"
+              className="faq-section-title"
               id="nometa"
             >
               Ребята, давайте жить без мета-вопросов!
@@ -467,7 +463,7 @@ const ChatRules = () => {
                 </AdditionWarning>
               </div>
             </section>
-            <h2 className="faq-title">
+            <h2 className="faq-section-title">
               Никакой порнухи, политики, сомнительного и шокирующего контента
             </h2>
             <section className="faq-section">
@@ -484,7 +480,9 @@ const ChatRules = () => {
                 </AdditionWarning>
               </div>
             </section>
-            <h2 className="faq-title">Никаких барыг, попрошаек и рекламодателей</h2>
+            <h2 className="faq-section-title">
+              Никаких барыг, попрошаек и рекламодателей
+            </h2>
             <section className="faq-section">
               <div className="faq-content">
                 <p>

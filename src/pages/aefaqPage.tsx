@@ -145,9 +145,6 @@ const AEFaQ = () => {
                 <Breadcrumb
                   items={[
                     {
-                      title: <Link to="/">Главная</Link>,
-                    },
-                    {
                       title: <Link to="/aefaq">FaQ по Adobe After Effects</Link>,
                       menu: {
                         items: [

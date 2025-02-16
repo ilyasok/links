@@ -147,7 +147,6 @@ const PSFaQ = () => {
                 <h1>psfaq</h1>
                 <Breadcrumb
                   items={[
-                    {title: <Link to="/">Главная</Link>},
                     {
                       title: <Link to="/psfaq">FAQ по Adobe Photoshop</Link>,
                       menu: {
