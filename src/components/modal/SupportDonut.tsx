@@ -44,7 +44,6 @@ const SupportDonut: React.FC = () => {
           className="modal-page-button"
           onClick={showEditModal}
           style={{
-            padding: "10px",
             filter: "saturate(0.5)",
           }}
           whileHover={{
@@ -59,7 +58,6 @@ const SupportDonut: React.FC = () => {
         <motion.button
           className="modal-page-button"
           style={{
-            padding: "10px",
             filter: "saturate(1.25)",
           }}
           whileHover={{

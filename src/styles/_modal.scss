@@ -157,6 +157,7 @@
 
   &-page-button {
     display: flex;
+    flex: 1 1 250px;
     justify-content: center;
     align-items: center;
     gap: 8px;
@@ -165,7 +166,6 @@
     border-radius: $roundness;
     background-color: var(--links_background);
     padding: 10px 20px;
-    width: calc(100% - 20px);
     color: var(--summary_text);
     font-weight: 700;
     font-size: 0.9rem;
@@ -476,6 +476,7 @@
 
 .support {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
   gap: 8px;
   margin-block: 15px;
