@@ -97,9 +97,12 @@
 
   &-section {
     margin-block: 15px;
+    margin-block-start: -25px;
     border: solid 1px var(--content-background-border);
-    border-radius: $roundness;
+    border-bottom-right-radius: $roundness;
+    border-bottom-left-radius: $roundness;
     background-color: var(--content-background-color);
+    padding-block-start: 15px;
   }
 
   &-content {
