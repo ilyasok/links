@@ -38,9 +38,10 @@
     .name_container {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: stretch;
       box-sizing: border-box;
-      margin: 5px;
+      vertical-align: middle;
+      position: relative;
       outline: 1px solid var(--links_border);
       border-radius: $roundness * 0.75;
       background-image: linear-gradient(to top, var(--summary_background), transparent);
@@ -51,12 +52,13 @@
       .icon {
         flex-shrink: 0;
         margin-inline-start: 8px;
-        width: 22px;
-        height: 22px;
+        margin-block: 3px;
+        width: min(calc(18px + (20 - 18) * ((100vw - 320px) / (768 - 320))), 20px);
+        height: min(calc(18px + (20 - 18) * ((100vw - 320px) / (768 - 320))), 20px);
         color: var(--links_text);
 
         path {
-          margin: auto;
+          margin-block: auto;
         }
       }
 
@@ -64,7 +66,7 @@
         margin: 3px;
         color: var(--links_text);
         font-weight: 700;
-        font-size: 1.15rem;
+        font-size: 1.1rem;
         font-family: "Onest", sans-serif;
       }
     }
@@ -73,8 +75,7 @@
       text-wrap: balance;
       opacity: 0.75;
       padding-inline: 12px;
-      padding-block-start: 5px;
-      padding-block-end: 12px;
+      padding-block: 8px;
       width: 100%;
       font-weight: 400;
       font-size: 0.875rem;

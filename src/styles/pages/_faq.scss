@@ -378,8 +378,8 @@ mark {
       background-size: contain;
       background-repeat: no-repeat;
       background-color: var(--mark_text);
-      width: clamp(13px, 15px - 2 * (100vw - 320px) / (768 - 320), 15px);
-      height: clamp(13px, 15px - 2 * (100vw - 320px) / (768 - 320), 15px);
+      width: min(calc(13px + (15 - 13) * ((100vw - 320px) / (768 - 320))), 15px);
+      height: min(calc(13px + (15 - 13) * ((100vw - 320px) / (768 - 320))), 15px);
       content: "";
     }
   }

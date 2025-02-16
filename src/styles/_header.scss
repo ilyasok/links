@@ -22,8 +22,8 @@
 
   svg {
     fill: var(--accent);
-    width: clamp(18px, 20px - 2 * (100vw - 320px) / (768 - 320), 20px);
-    height: clamp(18px, 20px - 2 * (100vw - 320px) / (768 - 320), 20px);
+    width: min(calc(18px + (20 - 18) * ((100vw - 320px) / (768 - 320))), 20px);
+    height: min(calc(18px + (20 - 18) * ((100vw - 320px) / (768 - 320))), 20px);
   }
 
   &-left,
