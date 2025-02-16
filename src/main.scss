@@ -85,7 +85,6 @@ html {
   display: none;
 }
 
-.no-javascript,
 .not-found {
   display: flex;
   justify-content: center;
@@ -158,21 +157,6 @@ html {
 
   .to-main {
     background-color: var(--accent);
-    color: #fff;
-  }
-
-  .chrome {
-    background-color: #ceead6;
-    color: #188038;
-  }
-
-  .firefox {
-    background-color: #25003e;
-    color: #fff;
-  }
-
-  .yandex {
-    background-color: #f7604a;
     color: #fff;
   }
 }
