@@ -69,7 +69,7 @@ const AEPerformance: React.FC = () => {
           <li>
             Если вы скачали видео в формате <mark className="file">.mp4</mark> из
             интернета, то вам необходимо переконвертировать его в срочном порядке в
-            монтажный кодек, например <mark className="video">Apple ProRes 422</mark> или{" "}
+            монтажный кодек, например <mark className="video">Apple Prores 422</mark> или{" "}
             <mark className="video">DNxHR</mark> через{" "}
             <mark className="app">Media Encoder</mark> или{" "}
             <mark className="app">Shutter Encoder</mark>. Это делать нужно каждый раз,

@@ -300,7 +300,7 @@ const AEFromNewbies: React.FC = () => {
                 <mark className="video">DNxHD</mark> или{" "}
                 <mark className="video">DNxHR</mark> - монтажные кодеки от Avid, были
                 создан с акцентом на меньший вес после создания такого файла. По своей
-                сути похожи как <mark className="video">Apple ProRes</mark>.
+                сути похожи как <mark className="video">Apple Prores</mark>.
               </li>
               <li>
                 <mark className="video">GoPro Cineform</mark> - также популярен в
@@ -354,11 +354,13 @@ const AEFromNewbies: React.FC = () => {
               </li>
               <li>
                 <mark className="video">VP9</mark> и <mark className="video">AV1</mark> -
-                кодеки от Google в контейнере <mark className="file">WebM</mark> с
+                кодеки от Google в контейнере <mark className="file">.webm</mark> с
                 возможностью вывода с альфа-каналом. Видео с таким кодеком обычно
                 используются для размещения на веб-страницах. За счёт своих алгоритмов
-                сжатия видео с кодеком VP9 или AV1 имеют гораздо меньший вес по сравнению
-                с видео в кодеке H.264 или H.265.{" "}
+                сжатия видео с кодеком <mark className="video">VP9</mark> или{" "}
+                <mark className="video">AV1</mark> имеют гораздо меньший вес по сравнению
+                с видео в кодеке <mark className="video">H.264</mark> или{" "}
+                <mark className="video">H.265</mark>.
                 <AdditionInfo>
                   Из <mark className="app">After Effects</mark> файлы с таким кодеком
                   нативно вывести не получится, для этого перегнать ваше видео через

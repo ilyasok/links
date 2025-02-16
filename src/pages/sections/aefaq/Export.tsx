@@ -717,11 +717,11 @@ const AEExport: React.FC = () => {
       <DetailsSummary title="Как вывести композицию в .gif?">
         <p>
           В базовой комплектации <mark className="app">After Effects</mark> вывести
-          композицию в формат <mark className="image">GIF</mark> не получится, но никто не
+          композицию в формат <mark className="image">Gif</mark> не получится, но никто не
           запрещал воспользоваться альтернативными способами.
         </p>
         <AdditionInfo>
-          Если вы собираетесь выводить композицию в <mark className="image">GIF</mark> для
+          Если вы собираетесь выводить композицию в <mark className="image">Gif</mark> для
           веб-страницы, то советую лучше вывести в формат{" "}
           <mark className="image">WebM</mark>. Он лучше подходит для получения
           качественного изображения с маленьким размером.
@@ -744,7 +744,7 @@ const AEExport: React.FC = () => {
           </li>
         </ul>
         <AdditionWarning>
-          У формата <mark className="image">GIF</mark> есть множество ограничений и
+          У формата <mark className="image">Gif</mark> есть множество ограничений и
           нюансов.
           <ul>
             <li>
@@ -752,7 +752,7 @@ const AEExport: React.FC = () => {
               альфа-канала: <mark>#FFFFFF</mark> и <mark>#000000</mark>.
             </li>
             <li>
-              <mark className="image">GIF</mark> вмещает в себя только 256 цветов, поэтому
+              <mark className="image">Gif</mark> вмещает в себя только 256 цветов, поэтому
               забудьте о плавных градиентах и качественном цвете.
             </li>
             <li>
@@ -790,7 +790,7 @@ const AEExport: React.FC = () => {
         />
         <Divider>Выводим через Media Encoder</Divider>
         <p>
-          <mark className="image">GIF</mark> можно ещё получить с помощью{" "}
+          <mark className="image">Gif</mark> можно ещё получить с помощью{" "}
           <mark className="app">Media Encoder</mark>. Хоть мы и отговариваем от его
           использования, но в выборе различных форматов для экспорта он занимает более
           выигрышную позицию по сравнению с выводом напрямую из{" "}
@@ -811,7 +811,7 @@ const AEExport: React.FC = () => {
         </AdditionInfo>
         <p>
           После открытия <mark className="app">Media Encoder</mark> укажите формат{" "}
-          <mark className="image">GIF</mark> в очереди экспорта. Там же вы можете указать
+          <mark className="image">Gif</mark> в очереди экспорта. Там же вы можете указать
           пресет и путь к выходному файлу.
         </p>
         <ImageFigure
@@ -834,7 +834,7 @@ const AEExport: React.FC = () => {
         <p>
           После настройки просто нажмите на кнопку <mark className="ui">OK</mark> и
           нажмите на зелёную стрелочку для начала экспорта. После этого в месте, куда вы
-          указали путь, появится файл формата <mark className="image">GIF</mark>.
+          указали путь, появится файл формата <mark className="image">Gif</mark>.
         </p>{" "}
         <ImageFigure
           styleClass="figure_windows-light"
@@ -845,9 +845,9 @@ const AEExport: React.FC = () => {
         <Divider>Конвертируем через Ezgif</Divider>
         <p>
           Если вы не хотите возиться с экспортом или у вас уже есть готовое видео, которое
-          надо лишь перегнать в формат <mark className="image">GIF</mark>, то советую
+          надо лишь перегнать в формат <mark className="image">Gif</mark>, то советую
           онлайн-сервис <a href="https://ezgif.com/video-to-gif">Ezgif</a>. При
-          конвертации через этот сервис вы получите <mark className="image">GIF</mark> с
+          конвертации через этот сервис вы получите <mark className="image">Gif</mark> с
           отличным соотношением качества и размера файла.
         </p>
         <p>
@@ -879,7 +879,7 @@ const AEExport: React.FC = () => {
         />
         <p>
           Далее после успешной конвертации вы получите ваше видео в формате{" "}
-          <mark className="image">GIF</mark> чуть ниже, в разделе{" "}
+          <mark className="image">Gif</mark> чуть ниже, в разделе{" "}
           <mark className="ui">Output GIF Animation</mark>, которое можно сохранить по
           нажатию <mark className="key">ПКМ</mark> &gt;{" "}
           <mark className="ui">Сохранить изображение как...</mark>.
@@ -890,7 +890,7 @@ const AEExport: React.FC = () => {
           Сразу скажу, в <mark className="video">H.264</mark> и{" "}
           <mark className="file">.mp4</mark> нельзя вывести композицию с альфа-каналом.
           Это можно сделать только на устройствах с macOS и при использовании кодека{" "}
-          <mark className="video">HEVC / H.265</mark>.
+          <mark className="video">H.265 (HEVC)</mark>.
         </AdditionWarning>
         <p>
           Прежде чем начать выводить композицию с альфа-каналом, убедитесь в том, что в
@@ -913,7 +913,7 @@ const AEExport: React.FC = () => {
           <mark className="ui">Format</mark> параметр{" "}
           <mark className="plugin">Quicktime</mark>. Потом откройте{" "}
           <mark className="ui">Format Options</mark> и выберите там параметр{" "}
-          <mark className="video">Apple ProRes 4444</mark> или{" "}
+          <mark className="video">Apple Prores 4444</mark> или{" "}
           <mark className="video">GoPro Cineform</mark> в разделе Video Codec. Затем не
           забудьте указать в <mark className="ui">Channels</mark> параметр{" "}
           <mark className="ui">RGB + Alpha</mark>, чтобы вывести видео с прозрачностью.

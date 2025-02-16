@@ -48,7 +48,7 @@ const AEErrors: React.FC = () => {
             Если вы используете исходники из интернета, в частности из видео площадок -
             перекодируйте их через программу{" "}
             <a href="https://www.shutterencoder.com/">Shutter Encoder</a> в{" "}
-            <mark className="file">ProRes 422</mark> или повторно в{" "}
+            <mark className="video">Apple Prores 422</mark> или повторно в{" "}
             <mark className="video">H.264</mark>. Таким образом вы ещё можете оградить
             себя от различных багов во время использования подобных исходников.
           </li>
@@ -385,8 +385,8 @@ const AEErrors: React.FC = () => {
         <p>
           Такой баг встречался на некоторых версиях драйверов для видеокарт NVIDIA с 55X
           до 56X. Для решения этой проблемы достаточно обновить драйвера на видеокарту или
-          перекодировать видео в <mark className="file">Prores 422</mark> через любой
-          удобный вам конвертер видео файлов, например{" "}
+          перекодировать видео в <mark className="video">Apple Prores 422</mark> через
+          любой удобный вам конвертер видео файлов, например{" "}
           <a href="https://www.shutterencoder.com/">Shutter Encoder</a>.
         </p>
       </DetailsSummary>
