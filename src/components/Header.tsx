@@ -48,8 +48,8 @@ const Header: React.FC<{title: string}> = ({title}) => {
         outline: isVisible ? "1px solid var(--header_border)" : "1px solid transparent",
       }}
     >
-      <div className={`header-left ${isVisible ? "visible" : "hidden"}`}>
-        {location.pathname !== "/" && (
+      <div className="header-left">
+        {location.pathname === "/" ? null : (
           <span className="icon">
             <Link to="/">
               <ArrowBackRounded />
