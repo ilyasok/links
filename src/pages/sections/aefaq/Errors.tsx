@@ -537,7 +537,7 @@ const AEErrors: React.FC = () => {
         </p>
       </DetailsSummary>
       <DetailsSummary title="After Effects error: Disk Cache folder doesn't exist (or isn't a directory), so it will be reset to the system temporary directory. Please check your settings in Media and Disk Cache Preferences">
-        <AdditionInfo>Не является критичной ошибкой.</AdditionInfo>
+        <AdditionInfo>Не является критической ошибкой.</AdditionInfo>
         <p>
           Данная ошибка указывает на то, что настройки кэша в программе ссылаются на
           несуществующий раздел. Обычно это происходит при переносе настроек программы из
