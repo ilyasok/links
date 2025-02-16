@@ -53,7 +53,7 @@ const GithubUpdateInfo: React.FC<GithubUpdateInfoProps> = ({filePath}) => {
         `Обновлено ${formattedDate}, ${formattedClock}: <a href="${commitUrl}" target="_blank">${commitMessage}</a>`
       );
     } catch (err) {
-      setError(`${err}, информация о свежести временно недоступна`);
+      setError(`Информация о свежести временно недоступна: ${err}`);
     }
   };
   useEffect(() => {
@@ -65,10 +65,11 @@ const GithubUpdateInfo: React.FC<GithubUpdateInfoProps> = ({filePath}) => {
         style={{
           color: "red",
           fontSize: "0.75rem",
-          opacity: "0.75",
+          opacity: "0.5",
           textAlign: "right",
           textWrap: "balance",
           whiteSpace: "pre-wrap",
+          hyphens: "none",
           lineHeight: "1.25",
           marginBlockEnd: "20px",
         }}
@@ -85,7 +86,7 @@ const GithubUpdateInfo: React.FC<GithubUpdateInfoProps> = ({filePath}) => {
         fontSize: "0.75rem",
         opacity: "0.5",
         textAlign: "right",
-        textWrap: "balance",
+        hyphens: "none",
         whiteSpace: "pre-wrap",
         lineHeight: "1.25",
         marginBlockEnd: "20px",
