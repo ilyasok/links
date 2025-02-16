@@ -21,11 +21,19 @@
   background: var(--content-background-color);
 }
 
+.ant-modal {
+  top: 8px;
+
+  @media (min-width: 768px) {
+    top: 64px;
+  }
+}
+
 .ant-modal .ant-modal-content {
-  background: none;
-  border: none;
   box-shadow: none;
-  border-radius: $roundness * 1.5;
+  border: none;
+  border-radius: none;
+  background: none;
   padding: 0;
 }
 
