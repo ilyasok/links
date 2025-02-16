@@ -45,8 +45,16 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   scrollbar-width: none;
   font-weight: 350;
-  font-size: 16px;
+  font-size: 14px;
   font-family: "Inter", sans-serif;
+
+  @media (min-width: 320px) {
+    font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (768 - 320)));
+  }
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+  }
 }
 
 .main {

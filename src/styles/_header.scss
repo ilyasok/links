@@ -17,14 +17,13 @@
   border-radius: $roundness;
   background-color: var(--header_background);
   padding-inline: 12px;
-
   width: 95%;
   max-width: 1075px;
 
   svg {
     fill: var(--accent);
-    width: 20px;
-    height: 20px;
+    width: clamp(18px, 20px - 2 * (100vw - 320px) / (768 - 320), 20px);
+    height: clamp(18px, 20px - 2 * (100vw - 320px) / (768 - 320), 20px);
   }
 
   &-left,
@@ -57,7 +56,7 @@
       color: var(--accent);
       font-style: italic;
       font-weight: 750;
-      font-size: clamp(16px, 12vw, 20px);
+      font-size: 1.25rem;
       font-family: "JetBrains Mono", monospace;
     }
   }
