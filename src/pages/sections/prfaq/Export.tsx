@@ -807,10 +807,8 @@ const PRExport: React.FC = () => {
               </p>
               <div
                 style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "center",
-                  flexWrap: "wrap",
+                  display: "grid",
+                  gridTemplateColumns: "repeat(auto-fit, minmax(275px, 1fr))",
                   alignItems: "center",
                 }}
               >

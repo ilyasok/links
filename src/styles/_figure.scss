@@ -3,20 +3,19 @@
 .figure {
   &_container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
+    margin-block: 10px;
   }
 
   &_browser {
     &-youtube {
+      margin-inline: auto;
       box-shadow: inset 0 0 20px 0 hsl(0, 0%, 15%);
       border: 1px solid hsl(0, 0%, 20%);
       border-radius: $roundness * 0.75;
       background: hsl(0, 0%, 5%);
       padding-bottom: 3px;
       padding-inline: 3px;
-      width: 100%;
+      width: calc(100% - 20px);
 
       iframe {
         outline: 1px solid hsl(0, 0%, 15%);
@@ -52,10 +51,11 @@
   &_windows {
     &-light,
     &-dark {
+      margin-inline: auto;
       border-radius: $roundness * 0.75;
       padding-bottom: 3px;
       padding-inline: 3px;
-      max-width: 100vw;
+      max-width: calc(100% - 20px);
       max-height: max-content;
 
       .window {
@@ -68,6 +68,7 @@
           padding-left: 8px;
 
           figcaption {
+            flex: 1 10 auto;
             overflow: hidden;
             font-weight: 400;
             font-size: 0.8rem;
@@ -90,6 +91,7 @@
           .minimize,
           .maximize,
           .close {
+            flex-shrink: 0;
             cursor: pointer;
             border-radius: 5px;
             padding: 5px;
@@ -153,28 +155,28 @@
       border-radius: $roundness * 0.75;
       padding-bottom: 3px;
       padding-inline: 3px;
-      max-width: 100vw;
+      max-width: calc(100% - 20px);
       max-height: max-content;
-
-      figcaption {
-        margin-right: 55px;
-        padding-inline: 15px;
-        width: 100%;
-        overflow: hidden;
-        font-weight: 700;
-        font-size: 0.875rem;
-        font-family: "Helvetica", sans-serif;
-        text-align: center;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
 
       .window {
         &-header {
           display: flex;
           flex-direction: row;
+          justify-content: space-between;
           align-items: center;
           padding: 5px 10px;
+
+          figcaption {
+            flex: 1 10 auto;
+            margin-inline-start: 12px;
+            overflow: hidden;
+            font-weight: 700;
+            font-size: 0.8rem;
+            font-family: "Helvetica", sans-serif;
+            text-align: center;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
         }
 
         &-controls {
@@ -185,6 +187,7 @@
           .minimize,
           .maximize,
           .close {
+            flex-shrink: 0;
             transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
             cursor: pointer;
             border-radius: 100%;

@@ -897,7 +897,8 @@ const AEErrors: React.FC = () => {
         <code>bcdedit /set xsavedisable 0</code>
         <AdditionInfo>
           Чтобы снова отключить AVX2, введите команду{" "}
-          <mark>bcdedit /set xsavedisable 1</mark> и снова перезагрузите устройство.
+          <mark className="code">bcdedit /set xsavedisable 1</mark> и снова перезагрузите
+          устройство.
         </AdditionInfo>
       </DetailsSummary>
       <DetailsSummary title="Ошибка про отсутствие MSVCP140.dll, api-ms-win-crt-runtime-l1-1-0.dll или аналогичные">
