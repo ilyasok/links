@@ -4,6 +4,7 @@ import {
   ArchitectureRounded,
   AssistantRounded,
   BlockRounded,
+  BurstModeRounded,
   BusinessCenterRounded,
   CarRepairRounded,
   DesktopWindowsRounded,
@@ -12,7 +13,6 @@ import {
   Download,
   FormatListBulletedRounded,
   ForumRounded,
-  Gif,
   GradientRounded,
   HandymanRounded,
   MmsRounded,
@@ -150,7 +150,7 @@ const Links = () => {
             />
             <LinkCard
               href="https://ezgif.com/"
-              icon={<Gif />}
+              icon={<BurstModeRounded />}
               name="Ezgif"
               description="Популярный онлайн-конвертер видеофайлов в GIF"
             />
