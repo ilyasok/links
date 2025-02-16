@@ -199,15 +199,16 @@ export const SearchInPage: React.FC = () => {
             .slice(1)
             .map((row) => {
               const cells = Array.from(row.querySelectorAll("td, th"))
+                .filter(
+                  (cell) => !cell.hasAttribute("colspan") && !cell.hasAttribute("rowspan")
+                )
                 .map((cell) => decodeHtmlEntities(cell.textContent?.trim() ?? ""))
                 .filter((cellContent) => !cellContent.toLowerCase().includes("видео"))
                 .join("</td><td>");
 
               return `<tr><td>${cells}</td></tr>`;
             })
-            .filter((row) =>
-              searchWords.every((word) => row.toLowerCase().includes(word))
-            )
+            .filter((row) => searchWords.some((word) => row.toLowerCase().includes(word)))
             .join("\n");
 
           return bodyRows
