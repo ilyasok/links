@@ -811,37 +811,29 @@ const AEExport: React.FC = () => {
         </AdditionInfo>
         <p>
           После открытия <mark className="app">Media Encoder</mark> укажите формат{" "}
-          <mark className="image">Gif</mark> в очереди экспорта. Там же вы можете указать
-          пресет и путь к выходному файлу.
+          <mark className="image">Animated GIF</mark> в очереди экспорта. Там же вы можете
+          указать пресет и путь к выходному файлу. Для детальной настройки вы можете
+          открыть <mark className="ui">Export Settings</mark>, нажав по названию
+          стандартного пресета. Там же вы можете указать разрешение, FPS и другие
+          параметры.
         </p>
         <ImageFigure
           styleClass="figure_windows-light"
-          imgSrc="images/aftereffects/selecting_gif_media_encoder.png"
+          imgSrc="images/aftereffects/selecting_animated_gif_media_encoder.png"
           imgTitle="Выбираем формат GIF для экспорта через Media Encoder"
           caption="Media Encoder"
         />
-        <p>
-          Для детальной настройки вы можете открыть{" "}
-          <mark className="ui">Export Settings</mark>, нажав по названию стандартного
-          пресета. Там же вы можете указать разрешение, FPS и другие параметры.
-        </p>
-        <ImageFigure
-          styleClass="figure_windows-light"
-          imgSrc="images/aftereffects/export_settings_media_encoder.png"
-          imgTitle="Настройки экспорта через Media Encoder"
-          caption="Export Settings"
-        />
+        <AdditionWarning>
+          Если вы выберете в качестве формата пункт <mark className="ui">GIF</mark> без
+          слова <mark>Animated</mark>, то вы получите только кадры отдельными
+          изображениями формата <mark className="file">.gif</mark> и забьёте себе папку
+          для сохранения.
+        </AdditionWarning>
         <p>
           После настройки просто нажмите на кнопку <mark className="ui">OK</mark> и
-          нажмите на зелёную стрелочку для начала экспорта. После этого в месте, куда вы
+          нажмите на зелёную иконку для начала экспорта. После этого в месте, куда вы
           указали путь, появится файл формата <mark className="image">Gif</mark>.
-        </p>{" "}
-        <ImageFigure
-          styleClass="figure_windows-light"
-          imgSrc="images/aftereffects/start_export_media_encoder.png"
-          imgTitle="Начинаем экспорт через Media Encoder"
-          caption="Media Encoder"
-        />
+        </p>
         <Divider>Конвертируем через Ezgif</Divider>
         <p>
           Если вы не хотите возиться с экспортом или у вас уже есть готовое видео, которое
