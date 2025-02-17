@@ -7,7 +7,7 @@ import {
   AdditionInfo,
   AdditionWarning,
 } from "../../../components/Additions";
-import {FlexibleLinks} from "../../../components/FlexibleLinksFaQ";
+import {Divider} from "antd";
 
 const PRFromNewbies: React.FC = () => {
   return (
@@ -52,7 +52,7 @@ const PRFromNewbies: React.FC = () => {
           Если вы уже уверенно монтируете в <mark className="app">Premiere Pro</mark>, и
           хотите узнать что-то новое, то рекомендую заглянуть на каналы ниже.
         </p>
-        <FlexibleLinks>
+        <div className="flexible-links">
           <a href="https://www.youtube.com/@khs_yt">Хохлов Сабатовский</a>
           <a href="https://www.youtube.com/@egorlistopadov">Егор Листопадов</a>
           <a href="https://www.youtube.com/@Profileschool/videos">Profileschool</a>
@@ -61,7 +61,7 @@ const PRFromNewbies: React.FC = () => {
             Дмитрий Колотильщиков
           </a>
           <a href="https://www.youtube.com/@VIDEODIM/videos">Как монтировать видео</a>
-        </FlexibleLinks>
+        </div>
         <p style={{textAlign: "center", fontSize: "0.95rem", fontWeight: "700"}}>
           Надеюсь, вы найдёте что-то полезное для себя. Удачи в ваших начинаниях!
         </p>
@@ -70,14 +70,678 @@ const PRFromNewbies: React.FC = () => {
         title="Не понимаю термины от других пользователей Premiere Pro, проясните!"
         tag="сленг, жаргон, сокращения, словосочетания, говор"
       >
-        <p>{/* FIXME: написать!! по аналогии как с терминами в аефаке */}</p>
+        <p></p>
+        {/* FIXME: написать!! по аналогии как с терминами в аефаке */}
       </DetailsSummary>
       <DetailsSummary
         title="А есть список популярных комбинаций клавиш для работы в Premiere Pro?"
         tag="хоткеи, горячие клавиши, шорткаты, ускорение работы"
       >
-        <p></p>
-        {/* TODO: написать!! */}
+        <p>
+          Шорткаты могут помочь ускорить ваш рутинный процесс нахождения нужной функции
+          программы, поэтому ниже приведены популярные у многих пользователей комбинации.
+        </p>
+        <AdditionWarning>
+          Горячие клавиши могут меняться в зависимости от версии программы. То, что
+          назначено у вас, вы можете увидеть с помощью окна настроек комбинаций клавиш,
+          которая находится в <mark className="ui">Edit &gt; Keyboard Shortcuts</mark> и
+          открывается с помощью <mark className="key">Ctrl + Alt + K</mark>. Более
+          подробный список комбинаций клавиш вы можете прочесть{" "}
+          <a href="https://helpx.adobe.com/ru/premiere-pro/using/keyboard-shortcuts.html">
+            на официальном сайте Adobe
+          </a>
+          .
+        </AdditionWarning>
+        <AdditionInfo>
+          В таблице приведены комбинации для устройств на Windows. На macOS{" "}
+          <mark className="key">Ctrl</mark> равен <mark className="key">Command</mark>, а{" "}
+          <mark className="key">Alt</mark> равен <mark className="key">Option</mark>.
+        </AdditionInfo>
+        <Divider>Выбор инструментов</Divider>
+        <table>
+          <thead>
+            <tr className="table-colored-title">
+              <th>Действие</th>
+              <th style={{minWidth: "40%"}}>Комбинация</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Инструмент выделения</td>
+              <td>
+                <mark className="key">V</mark>
+              </td>
+            </tr>
+            <tr>
+              <td>Инструмент Track Select Backward Tool</td>
+              <td>
+                <mark className="key">Shift + A</mark>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <ul>
+          <li>
+            <mark className="key">Shift + A</mark>: инструмент Track Select Backward Tool.
+          </li>
+          <li>
+            <mark className="key">A</mark>: инструмент Track Select Forward Tool.
+          </li>
+          <li>
+            <mark className="key">B</mark>: инструмент ripple edit tool
+          </li>
+          <li>
+            <mark className="key">N</mark>: инструмнт Rolling Edit Tool.
+          </li>
+          <li>
+            <mark className="key">R</mark>: инструмент Rate Stretch Tool.
+          </li>
+          <li>
+            <mark className="key">C</mark>: инструмент razor tool
+          </li>
+          <li>
+            <mark className="key">Y</mark>: инструмент slip tool
+          </li>
+          <li>
+            <mark className="key">U</mark>: инструмент slide tool
+          </li>
+          <li>
+            <mark className="key">P</mark>: инструмент pen tool
+          </li>
+          <li>
+            <mark className="key">H</mark>: инструмент руки, позволяет перемещать мышкой
+            таймлайн и предпросмотр, а также некоторые элементы интерфейса.
+          </li>
+          <li>
+            <mark className="key">Z</mark>: инструмент zoom tool
+          </li>
+          <li>
+            <mark className="key">T</mark>: инструмент type tool
+          </li>
+        </ul>
+        <Divider>Работа с файлами и проектом (file)</Divider>
+        <ul>
+          <li>
+            <mark className="key">Ctrl + Alt + N</mark>: создать новый проект.
+          </li>
+          <li>
+            <mark className="key">Ctrl + N</mark>: создать новую секвенцию.
+          </li>
+          <li>
+            <mark className="key">Ctrl + /</mark>: создать новую папку в окне{" "}
+            <mark className="ui">Project</mark>.
+          </li>
+          <li>
+            <mark className="key">Ctrl + O</mark>: открыть файл проекта.
+          </li>
+          <li>
+            <mark className="key">Ctrl + W</mark>: закрыть окно интерфейса.
+          </li>
+          <li>
+            <mark className="key">Ctrl + Shift + W</mark>: закрыть проект из таймлайна.
+          </li>
+          <li>
+            <mark className="key">Ctrl + S</mark>: сохранить проект.
+          </li>
+          <li>
+            <mark className="key">Ctrl + Shift + S</mark>: сохранить проект как другой
+            формат.
+          </li>
+          <li>
+            <mark className="key">Ctrl + Alt + S</mark>: сохранить проект как копию.
+          </li>
+          <li>
+            <mark className="key">Ctrl + I</mark>: открыть окно{" "}
+            <mark className="ui">Import</mark> для импорта различных файлов в ваш проект.
+          </li>
+          <li>
+            <mark className="key">Ctrl + M</mark>: перейти во вкладку{" "}
+            <mark className="ui">Export</mark> для экспорта секвенции.
+          </li>
+          <li>
+            <mark className="key">Alt + Shift + M</mark>: отправить секвенцию в{" "}
+            <mark className="app">Adobe Media Encoder</mark> для дальнейшего экспорта.
+          </li>
+          <li>
+            <mark className="key">Ctrl + Shift + H</mark>: открыть окно свойств для
+            выделенного файла.
+          </li>
+          <li>
+            <mark className="key">Ctrl + Q</mark>: закрыть{" "}
+            <mark className="app">Premiere Pro</mark>.
+          </li>
+          <Divider>edit</Divider>
+          <li>
+            <mark className="key">Ctrl + Z</mark>: отменить какое-либо действие.
+          </li>
+          <li>
+            <mark className="key">Ctrl + Shift + Z</mark>: вернуть ранее отменённое
+            действие.
+          </li>
+          <li>
+            <mark className="key">Ctrl + X</mark>: вырезать выделенное и расположить к
+            себе в буфер обмена.
+          </li>
+          <li>
+            <mark className="key">Ctrl + C</mark>: скопировать выделенное в буфер обмена.
+          </li>
+          <li>
+            <mark className="key">Ctrl + V</mark>: вставить из буфера обмена.
+          </li>
+          <li>
+            <mark className="key">Ctrl + Shift + V</mark>: вставить из буфера обмена
+            вставкой.
+          </li>
+          <li>
+            <mark className="key">Ctrl + Alt + V</mark>: вставить скопированные аттрибуты
+            клипа.
+          </li>
+          <li>
+            <mark className="key">Delete</mark>: удалить выделенное.
+          </li>
+          <li>
+            <mark className="key">Shift + Delete</mark>: ripple delete
+          </li>
+          <li>
+            <mark className="key">Ctrl + Shift + /</mark>: продублировать выделенное.
+          </li>
+          <li>
+            <mark className="key">Ctrl + A</mark>: выделить все.
+          </li>
+          <li>
+            <mark className="key">Ctrl + Shift + A</mark>: убрать выделение.
+          </li>
+          <li>
+            <mark className="key">Ctrl + F</mark>: найти.
+          </li>
+          <li>
+            <mark className="key">Ctrl + E</mark>: открыть файл Edit original
+          </li>
+          <li>
+            <mark className="key">Ctrl + Alt + K</mark>: открыть окно настроек комбинаций
+            клавиш.
+          </li>
+          <Divider>клипы (clip)</Divider>
+          <li>
+            <mark className="key">Ctrl + U</mark>: создать субклип make subclip
+          </li>
+          <li>
+            <mark className="key">Shift + G</mark>: открыть окно модификации аудиоканалов
+            у выделенного клипа.
+          </li>
+          <li>
+            <mark className="key">G</mark>: audio gain
+          </li>
+          <li>
+            <mark className="key">Ctrl + R</mark>: открыть окно редактирования скорости и
+            его интерполяции для выделенного клипа.
+          </li>
+          <li>
+            <mark className="key">, (Б)</mark>: вставить клип.
+          </li>
+          <li>
+            <mark className="key">. (Ю)</mark>: перезаписать клип на таймлайне.
+          </li>
+          <li>
+            <mark className="key">Ctrl + L</mark>: связать нужные клипы друг с другом.
+          </li>
+          <li>
+            <mark className="key">Ctrl + G</mark>: сгрупиировать клипы
+          </li>
+          <li>
+            <mark className="key">Ctrl + Shift + G</mark>: разгрупировать клипы
+          </li>
+          <Divider>секвенция (sequence)</Divider>
+          <li>
+            <mark className="key">Enter</mark>: начать пререндер части секвенции, где
+            имеется красная полоска.
+          </li>
+          <li>
+            <mark className="key">F</mark>: match frame
+          </li>
+          <li>
+            <mark className="key">Shift + R</mark>: reverse match frame
+          </li>
+          <li>
+            <mark className="key">E</mark>: extend selected edit to playhead
+          </li>
+          <li>
+            <mark className="key">Ctrl + D</mark>: применить видеопереход
+          </li>
+          <li>
+            <mark className="key">Ctrl + Shift + D</mark>: применить аудиопереход.
+          </li>
+          <li>
+            <mark className="key">Shift + D</mark>: Apply Default Transitions to
+            Selections
+          </li>
+          <li>
+            <mark className="key">; (Ж)</mark>: lift
+          </li>
+          <li>
+            <mark className="key">&apos; (Э)</mark>: Extract
+          </li>
+          <li>
+            <mark className="key">-</mark>: уменьшить таймлайн
+          </li>
+          <li>
+            <mark className="key">=</mark>: увеличить таймлайн
+          </li>
+          <li>
+            <mark className="key">Shift + ; (Ж)</mark>: перейти к следующему gap в
+            секвенции.
+          </li>
+          <li>
+            <mark className="key">Ctrl + Shift + ; (Ж)</mark>: перейти к предыдущему gap в
+            секвенции.
+          </li>
+          <li>
+            <mark className="key">S</mark>: включить или выключить магнит в таймлайне
+          </li>
+          <Divider>маркеры</Divider>
+          <li>
+            <mark className="key">I</mark>: пометить начало рабочей области.
+          </li>
+          <li>
+            <mark className="key">O</mark>: пометить конец рабочей области.
+          </li>
+          <li>
+            <mark className="key">X</mark>: пометить рабочую область от начала и до конца
+            выделенного клипа.
+          </li>
+          <li>
+            <mark className="key">/</mark>: пометить рабочую область в пределах выделенных
+            клипов.
+          </li>
+          <li>
+            <mark className="key">Shift + I</mark>: переместить плейхед в начало рабочей
+            области.
+          </li>
+          <li>
+            <mark className="key">Shift + O</mark>: переместить плейхед в конец рабочей
+            области.
+          </li>
+          <li>
+            <mark className="key">Ctrl + Shift + X</mark>: убрать выделение начала и конца
+            рабочей области.
+          </li>
+          <li>
+            <mark className="key">M</mark>: добавить маркер.
+          </li>
+          <li>
+            <mark className="key">Shift + M</mark>: перейти к следующему маркеру от
+            плейхеда.
+          </li>
+          <li>
+            <mark className="key">Ctrl + Shift + M</mark>: перейти к предыдущему маркеру
+            от плейхеда.
+          </li>
+          <li>
+            <mark className="key">Ctrl + Alt + M</mark>: удалить выделенные маркеры
+            <AdditionWarning>
+              Дополнительно зажав <mark className="key">Shift</mark> вы удалите все
+              маркеры у секвенции.
+            </AdditionWarning>
+          </li>
+          <Divider>графика (graphics and titles)</Divider>
+          <li>
+            <mark className="key">Ctrl + T</mark>: создать новый слой с текстом.
+          </li>
+          <li>
+            <mark className="key">Ctrl + Alt + R</mark>: создать новый слой с квадратом.
+          </li>
+          <li>
+            <mark className="key">Ctrl + Alt + E</mark>: создать новый слой с эллипсом.
+          </li>
+          <li>
+            <mark className="key">Ctrl + Alt + ]</mark>: выделить следующий слой от
+            плейхеда.
+          </li>
+          <li>
+            <mark className="key">Ctrl + Alt + [</mark>: выделить предыдущий слой от
+            плейхеда.
+          </li>
+          <Divider>window окна</Divider>
+          <li>
+            <mark className="key">Shift + 1</mark>: открыть окно{" "}
+            <mark className="ui">Project</mark>.
+          </li>
+          <li>
+            <mark className="key">Shift + 2</mark>: открыть окно{" "}
+            <mark className="ui">Source Monitor</mark>
+          </li>
+          <li>
+            <mark className="key">Shift + 3</mark>: открыть окно{" "}
+            <mark className="ui">Timeline</mark>.
+          </li>
+          <li>
+            <mark className="key">Shift + 4</mark>: открыть окно{" "}
+            <mark className="ui">Program Monitor</mark>.
+          </li>
+          <li>
+            <mark className="key">Shift + 5</mark>: открыть окно{" "}
+            <mark className="ui">Effect Controls</mark>.
+          </li>
+          <li>
+            <mark className="key">Shift + 6</mark>: открыть окно{" "}
+            <mark className="ui">Audio Track Mixer</mark>.
+          </li>
+          <li>
+            <mark className="key">Shift + 7</mark>: открыть окно{" "}
+            <mark className="ui">Effects</mark>.
+          </li>
+          <li>
+            <mark className="key">Shift + 8</mark>: открыть окно{" "}
+            <mark className="ui">Media Browser</mark>.
+          </li>
+          <li>
+            <mark className="key">Shift + 9</mark>:{" "}
+            <mark className="ui">Audio Clip Mixer</mark>.
+          </li>
+          <li>
+            <mark className="key">Alt + Shift + 0</mark>: сбросить рабочее пространство до
+            последнего сохранённого состояния.
+            <AdditionInfo>
+              Чтобы сохранить ваше рабочее пространство, нужно...
+              {/* FIXME: */}
+            </AdditionInfo>
+          </li>
+          <li>
+            <mark className="key">Ctrl + Alt + A</mark>: добавить дорожку с Captions.
+          </li>
+          <li>
+            <mark className="key">Ctrl + Alt + C</mark>: добавить новый сегмент субтитров
+            в таймлайне.
+          </li>
+          <li>
+            <mark className="key">Ctrl + Shift + C</mark>: сделать выравнивание текста по
+            центру.
+          </li>
+          <li>
+            <mark className="key">Ctrl + Shift + E</mark>: начать экспорт текущего кадра.
+          </li>
+          <li>
+            <mark className="key">W</mark>: разрезать клип после плейхеда.
+          </li>
+          <li>
+            <mark className="key">Q</mark>: разрезать клип до плейхеда.
+          </li>
+          <li>
+            <mark className="key">Shift + W</mark>: extend next edit to playhead
+          </li>
+          <li>
+            <mark className="key">Shift + Q</mark>: extend previous edit to playhead.
+          </li>
+          <li>
+            <mark className="key">Ctrl + Alt + W</mark>: trim next edit to playhead
+          </li>
+          <li>
+            <mark className="key">Ctrl + Alt + Q</mark>: trim previous edit to playhead
+          </li>
+          <li>
+            <mark className="key">`</mark>, <mark className="key">~</mark> или{" "}
+            <mark className="key">Ё</mark>: раскрыть окно, под которым расположен курсор,
+            на весь экран.
+          </li>
+          <li>
+            <mark className="key">Ctrl + Shift + Space</mark>: проиграть предпросмотр в
+            пределах рабочей области.
+          </li>
+          <li>
+            <mark className="key">Space</mark>: начать проигрывание предпросмотра.
+          </li>
+          <li>
+            <mark className="key">D</mark>: выделить текущий клип под плейхедом.
+          </li>
+          <li>
+            <mark className="key">J</mark>: проиграть предпросмотр назад. shuttle left
+            <AdditionInfo>
+              Многократное нажатие ускореяет проигрывание, с модификатором{" "}
+              <mark className="key">Shift</mark>, наоборот, замедляет.
+            </AdditionInfo>
+          </li>
+          <li>
+            <mark className="key">L</mark>: проиграть предпросмотр вперёд. shuttle right
+            <AdditionInfo>
+              Многократное нажатие ускореяет проигрывание, с модификатором{" "}
+              <mark className="key">Shift</mark>, наоборот, замедляет.
+            </AdditionInfo>
+          </li>
+          <li>
+            <mark className="key">K</mark>: остановить shuttle
+          </li>
+          <li>
+            <mark className="key">Стрелка влево</mark>
+          </li>
+          : перейти на предыдущий кадр.
+          <li>
+            <mark className="key">Стрелка вправо</mark>: перейти на следующий кадр.
+          </li>
+          <li>
+            <mark className="key"></mark>
+          </li>
+          <li>
+            <mark className="key"></mark>
+          </li>
+          <li>
+            <mark className="key"></mark>
+          </li>
+          <li>
+            <mark className="key"></mark>
+          </li>
+          <li>
+            <mark className="key"></mark>
+          </li>
+          <li>
+            <mark className="key"></mark>
+          </li>
+          <li>
+            <mark className="key"></mark>
+          </li>
+          <li>
+            <mark className="key"></mark>
+          </li>
+          <li>
+            <mark className="key"></mark>
+          </li>
+        </ul>
+        {/* FIXME: по возможности дописать ещё и переверстать под таблицу */}
       </DetailsSummary>
       <DetailsSummary
         title="Где я могу узнать об нововведениях в обновлениях Premiere Pro?"
@@ -90,7 +754,7 @@ const PRFromNewbies: React.FC = () => {
           времени Adobe выкладывает на сайт список выявленных неполадок и старается
           приложить к ним временное решение.
         </p>
-        <FlexibleLinks>
+        <div className="flexible-links">
           <a href="https://helpx.adobe.com/ru/premiere-pro/using/whats-new.html">
             Что нового в Premiere Pro последних выпусков
           </a>
@@ -100,7 +764,7 @@ const PRFromNewbies: React.FC = () => {
           <a href="https://helpx.adobe.com/ru/premiere-pro/kb/known-issues.html">
             Выявленные неполадки в Premiere Pro
           </a>
-        </FlexibleLinks>
+        </div>
         <p>
           Мы советуем время от времени обновлять <mark className="app">Premiere Pro</mark>
           , а также сторонние плагины, чтобы исключить возможные проблемы при дальнейшем
@@ -289,5 +953,4 @@ const PRFromNewbies: React.FC = () => {
     </div>
   );
 };
-
 export default PRFromNewbies;

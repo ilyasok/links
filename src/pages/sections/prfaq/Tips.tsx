@@ -8,7 +8,6 @@ import {
 import {YouTubeVideo} from "../../../components/ContentFigure";
 import DetailsSummary from "../../../components/DetailsSummary";
 import ContentSwitcher from "../../../components/features/OperatingSystemFilter";
-import {FlexibleLinks} from "../../../components/FlexibleLinksFaQ";
 import {Divider} from "antd";
 
 const PRTips: React.FC = () => {
@@ -38,7 +37,7 @@ const PRTips: React.FC = () => {
           У каждого сервиса свой срок хранения истории файлов, уточняйте это в вашем
           тарифном плане.
         </AdditionWarning>
-        <FlexibleLinks>
+        <div className="flexible-links">
           <a href="https://yandex.ru/support/yandex-360/customers/disk/desktop/windows/ru/version-control">
             История изменения файла в Яндекс.Диск
           </a>
@@ -54,7 +53,7 @@ const PRTips: React.FC = () => {
           <a href="https://support.microsoft.com/ru-ru/office/%D0%B2%D0%BE%D1%81%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BF%D1%80%D0%B5%D0%B4%D1%8B%D0%B4%D1%83%D1%89%D0%B5%D0%B9-%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D0%B8-%D1%84%D0%B0%D0%B9%D0%BB%D0%B0-%D1%85%D1%80%D0%B0%D0%BD%D1%8F%D1%89%D0%B5%D0%B3%D0%BE%D1%81%D1%8F-%D0%B2-onedrive-159cad6d-d76e-4981-88ef-de6e96c93893">
             Восстановление предыдущей версии файла в OneDrive
           </a>
-        </FlexibleLinks>
+        </div>
         <AdditionInfo>
           Если вы используете другое облачное хранилище - найдите информацию об истории
           файлов в вашем сервисе самостоятельно в сети Интернет.
@@ -325,8 +324,60 @@ const PRTips: React.FC = () => {
           <li></li>
         </ul>
       </DetailsSummary>
+      <DetailsSummary
+        title="Как сократить время повторного экспорта, если заказчик попросил внести небольшие правки?"
+        tag="previews, ускорение времени рендера, уменьшение перепросчёта, пререндер, prerender"
+      >
+        <p>
+          Если вы хотите сократить время рендера при небольших правках от заказчика, то вы
+          можете вывести видео из <mark className="app">Premiere Pro</mark> с файлами от
+          пре-рендера.
+        </p>
+        <p>
+          Для начала нужно подготовить проект под его использование: нужно открыть
+          настройки секвенции, перейдя в
+          <mark className="ui">Sequence &gt; Sequence Settings</mark> и в разделе
+          <mark className="ui">Video Previews</mark> указать нужный нам кодек для
+          пре-рендера. В нашем случае мы укажем{" "}
+          <mark className="video">Apple Prores 422</mark>, но вы можете выбрать любой
+          другой.
+        </p>
+        {/* FIXME: написать про файлы previews!! */}
+        {/* 
+        <figure>
+          <img
+            loading="lazy"
+            src="source/sequence_settings_video_previews_premiere_pro.png"
+            alt="Настройка кодека для Video Preview"
+            title="Настройка кодека для Video Preview"
+          />
+          <figcaption>Настройка кодека для Video Preview</figcaption>
+        </figure>
+        <div className="warning">
+          Выбор кодека в Video Previews должен совпадать с выбором кодека для финального
+          рендера, чтобы эта фишка сработала. Если вы выбрали, например, кодек
+          <mark className="video">Apple Prores 4444</mark> для Video Previews, то для
+          финального рендера вы должны также выбрать
+          <mark className="video">Apple Prores 4444</mark>. Если вы забыли, какой кодек вы
+          выбрали для Video Previews, то выберите пресет
+          <mark className="ui">Match Sequence Preview Settings</mark>. Данный пресет будет
+          работать, если вы сделали пре-рендер хотя бы одного клипа или участка таймлайна.
+          <figure>
+            <img
+              loading="lazy"
+              src="source/match_sequence_preview_settings_premierepro.png"
+              alt="Пресет Match Sequence Preview Settings"
+              title="Пресет Match Sequence Preview Settings"
+            />
+            <figcaption>Пресет Match Sequence Preview Settings</figcaption>
+          </figure>
+        </div> */}
       </DetailsSummary>
+      <DetailsSummary title="Какой компьютер или ноутбук стоит взять для работы в Premiere Pro?">
+        <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
+      <DetailsSummary title="Какая версия Premiere Pro наиболее стабильная, наименее лагучая и какую мне лучше всего поставить?">
+        <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
     </div>
   );

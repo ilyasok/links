@@ -126,7 +126,7 @@ const PRImport: React.FC = () => {
             <mark className="ui">CQ</mark>.
             <AdditionInfo>
               При кодировании в некоторые кодеки, например,{" "}
-              <mark className="video">Apple ProRes</mark>, этот пункт можно пропустить,
+              <mark className="video">Apple Prores</mark>, этот пункт можно пропустить,
               так как там обычно используются стандартные шаблоны для битрейта.
               <ul>
                 <li>

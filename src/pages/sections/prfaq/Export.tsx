@@ -8,6 +8,7 @@ import {
 } from "../../../components/Additions";
 import {ImageFigure, VideoFigure, YouTubeVideo} from "../../../components/ContentFigure";
 import {Divider} from "antd";
+import ContentSwitcher from "../../../components/features/OperatingSystemFilter";
 
 const PRExport: React.FC = () => {
   return (
@@ -501,7 +502,7 @@ const PRExport: React.FC = () => {
         </p>
         <AdditionInfo>
           По умолчанию в <mark className="plugin">AfterCodecs</mark> стоит контейнер{" "}
-          <mark className="file">MOV</mark>. Так как мы в этом пункте выводим видео в{" "}
+          <mark className="file">.mov</mark>. Так как мы в этом пункте выводим видео в{" "}
           <mark className="file">.mp4</mark>, то и указать нужно соответствующий контейнер
           для вывода.
         </AdditionInfo>
@@ -566,7 +567,7 @@ const PRExport: React.FC = () => {
         </p>
         <AdditionDanger>
           Крайне не рекомендую использовать плагин{" "}
-          <a href="http://fnord.com/">WebM от fnord</a> для экспорта из{" "}
+          <a href="https://fnord.com/">WebM от fnord</a> для экспорта из{" "}
           <mark className="app">Premiere Pro</mark> и{" "}
           <mark className="app">Media Encoder</mark>, так как он часто выводит видео на
           прозрачном фоне с жуткими артефактами.
@@ -649,14 +650,62 @@ const PRExport: React.FC = () => {
         </AdditionWarning>
       </DetailsSummary>
       <DetailsSummary title="Как вывести секвенцию в .gif?">
-        <p>{/* FIXME: написать!! */}</p>
+        <p>
+          Из <mark className="app">Premiere Pro</mark> вывести ваш ролик в формат{" "}
+          <mark className="image">Gif</mark> можно тремя способами.
+        </p>
+        <AdditionInfo>
+          Если вы собираетесь выводить секвенцию в <mark className="image">Gif</mark> для
+          веб-страницы, то советую лучше вывести в формат{" "}
+          <mark className="image">WebM</mark>. Он лучше подходит для получения
+          качественного изображения с маленьким размером.
+        </AdditionInfo>
+        <ul>
+          <li>
+            Вывести <mark className="file">.gif</mark> напрямую из{" "}
+            <mark className="app">Premiere Pro</mark>, указав формат{" "}
+            <mark className="ui">Gif</mark> во вкладке <mark className="ui">Export</mark>.
+          </li>
+          <li>
+            Либо вывести <mark className="file">.gif</mark> через{" "}
+            <del style={{opacity: 0.5}}>упаси боже</del>{" "}
+            <mark className="plugin">Media Encoder</mark>.
+          </li>
+          <li>
+            С помощью конвертации вашего видео через онлайн-сервис{" "}
+            <a href="https://ezgif.com/video-to-gif">Ezgif</a>. Он даёт самый адекватный
+            результат по соотношению <mark>качество/размер файла</mark>.
+          </li>
+        </ul>
+        <AdditionWarning>
+          У формата <mark className="image">Gif</mark> есть множество ограничений и
+          нюансов.
+          <ul>
+            <li>
+              Данный формат не поддерживает полупрозрачность, только два цвета для
+              альфа-канала: <mark>#FFFFFF</mark> и <mark>#000000</mark>.
+            </li>
+            <li>
+              <mark className="image">Gif</mark> вмещает в себя только 256 цветов, поэтому
+              забудьте о плавных градиентах и качественном цвете.
+            </li>
+            <li>
+              Полученный файл может быть огромным по весу, если указать большое разрешение
+              или FPS. Максимально рекомендуемо использовать разрешение{" "}
+              <mark>1024x576</mark> и <mark>15 FPS</mark> для секвенций с соотношением
+              сторон <mark>16:9</mark>.
+            </li>
+          </ul>
+        </AdditionWarning>
+
+        {/* TODO: дописать!! */}
       </DetailsSummary>
       <DetailsSummary title="Как вывести секвенцию с альфа-каналом, то есть с прозрачностью?">
         <AdditionWarning>
           Сразу скажу, в <mark className="video">H.264</mark> и{" "}
           <mark className="file">.mp4</mark> нельзя вывести композицию с альфа-каналом.
           Это можно сделать только на устройствах с macOS и при использовании кодека{" "}
-          <mark className="video">HEVC / H.265</mark>.
+          <mark className="video">H.265 (HEVC)</mark>.
         </AdditionWarning>
         <p>
           Прежде чем начать вывод секвенции с прозрачностью, убедитесь в том, что сама
@@ -731,13 +780,24 @@ const PRExport: React.FC = () => {
         </p>
       </DetailsSummary>
       <DetailsSummary title="Как вывести текущий кадр предпросмотра как файл изображения?">
-        <p>{/* FIXME: написать!! */}</p>
+        <p></p>
+        {/* FIXME: написать!! */}
       </DetailsSummary>
       <DetailsSummary title="Как вывести все кадры секвенции как отдельные файлы изображений?">
         <p>{/* FIXME: написать!! */}</p>
       </DetailsSummary>
-      <DetailsSummary title="Как вывести только часть секвенции?">
-        <p>{/* FIXME: написать!! */}</p>
+      <DetailsSummary title="Как вывести только часть моей секвенции?">
+        <p>
+          Прежде чем начать экспорт части секвенции, вам нужно поставить точки входа на
+          таймлайна с помощью кнопок <mark className="key">I</mark> и{" "}
+          <mark className="key">O</mark>. Это позволит вам создать область, в пределах
+          которой нам нужно начать экспорт.
+        </p>
+        <AdditionInfo>
+          Чтобы очистить рабочую область, нажмите на комбинацию клавиш{" "}
+          <mark className="key">Ctrl + Shift + X</mark>.
+        </AdditionInfo>
+        {/* FIXME: написать!! */}
       </DetailsSummary>
       <DetailsSummary title="Я сделал работу в Premiere Pro, но мне нужно передать .prproj файл вместе с исходниками другому человеку. Возможно ли это сделать без танцев с бубном?">
         <p>
