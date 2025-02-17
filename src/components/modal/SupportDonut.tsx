@@ -239,6 +239,7 @@ const SupportDonut: React.FC = () => {
       <Modal
         open={isEditModalOpen}
         closeIcon={null}
+        centered
         onCancel={handleCloseEditModal}
         footer={null}
       >
@@ -253,19 +254,30 @@ const SupportDonut: React.FC = () => {
             </button>
           </div>
           <div className="modal-content">
-            {/* FIXME: перефразировать */}
             <p>
-              Если вы имеете опыт работы с Git и GitHub, а также у вас есть желание
-              поправить какой-либо кусочек текста, то вы можете{" "}
+              Если вы хотите помочь с наполнением данной страницы и вы имеете
+              какой-никакой опыт работы с <a href="https://git-scm.com/">Git</a> и{" "}
+              <a href="https://github.com/git-guides">GitHub</a>, то вы можете{" "}
               <a href="https://github.com/aechat/links/fork">
-                создать форк репозитория сайта
+                создать форк проекта сайта
               </a>{" "}
-              и отправить мне Pull Request, чтобы ваши изменения появились тут.
+              и внести свои изменения с помощью{" "}
+              <a href="https://arduinoplus.ru/git-course/chuzhoi-repozitorii/">
+                Pull Request
+              </a>
+              .
+            </p>
+            <p>
+              Файлы контента внутри секций находятся по пути{" "}
+              <mark className="path">src/pages/sections</mark>, где лежат файлы формата{" "}
+              <mark className="file">.tsx</mark>. Более подробно о форматировании и редактировании указано в
+              файле{" "}
+              <a href="https://github.com/aechat/links/blob/main/README.md">README.md</a>.
             </p>
             <AdditionInfo>
               Разделы с частыми вопросами находятся в разработке и иногда обновляются,
-              поэтому могут быть неточности в действиях, выводах и тексте. Мнение автора и
-              мнение читателя могут отличаться.
+              поэтому могут быть неточности в действиях, выводах и тексте. Мнение авторов
+              и мнение читателя могут отличаться.
             </AdditionInfo>
           </div>
         </div>
