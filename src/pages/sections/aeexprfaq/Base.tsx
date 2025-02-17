@@ -1,7 +1,11 @@
 import React from "react";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 import DetailsSummary from "../../../components/DetailsSummary";
-import CodeSnippet from "../../../components/features/CodeSnippet";
+import CodeSnippet, {
+  constExample,
+  variablesExample,
+  variablesNameExample,
+} from "../../../components/features/CodeSnippet";
 import {AdditionInfo, AdditionWarning} from "../../../components/Additions";
 
 const AEExprBase: React.FC = () => {
@@ -52,6 +56,15 @@ const AEExprBase: React.FC = () => {
         </p>
         <CodeSnippet language="javascript">{constExample}</CodeSnippet>
         {/* TODO: написать!! */}
+      </DetailsSummary>
+      <DetailsSummary title="Как вывести результат выражения?">
+        <p>
+          Обычно в языке выражений в <mark className="app">After Effects</mark> результат
+          определяется последней выполненной строкой. Здесь нельзя задать какое-либо
+          значение в любом месте кода с помощью <mark className="code">return</mark> или
+          чего-то подобного.
+        </p>
+        {/* FIXME: написать и показать примеры */}
       </DetailsSummary>
       <DetailsSummary title="Как правильно называть переменные?">
         <p>
@@ -135,24 +148,3 @@ const AEExprBase: React.FC = () => {
   );
 };
 export default AEExprBase;
-
-const variablesExample = `speed = 100 // является переменной, но она не явно задана. могут быть проблемы с обращением к нему
-var angle = 45 // присваиваем число для переменной
-let carBrand = "Ford" // присваиваем строку для переменной
-var isEnabled = True // присваиваем булево значение для переменной
-`;
-
-const constExample = `const pi = 3.1415926535 // неизменяемое значение числа Пи
-const gravity = 9.81 // неизменяемое значение ускорения свободного падения на Земле`;
-
-const variablesNameExample = `// ПРАВИЛЬНО
-var Name = "Misha"
-var SurName = "Lebedev"
-var FullName = Name + " " + SurName // результат складывания двух переменных
-var accentColor = hexToRgb("9a99ff")
-
-
-// НЕПРАВИЛЬНО
-var 1Person = 1 // ошибка, так как имя переменной начинается с цифры
-var const = True // ошибка, так как имя переменной является зарезервированное слово const
-`;
