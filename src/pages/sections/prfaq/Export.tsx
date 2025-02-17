@@ -895,8 +895,27 @@ const PRExport: React.FC = () => {
         </p>
       </DetailsSummary>
       <DetailsSummary title="Как вывести текущий кадр предпросмотра как файл изображения?">
-        <p></p>
-        {/* FIXME: написать!! */}
+        <p>
+          Для экспорта текущего кадра предпросмотра достаточно нажать на комбинацию клавиш{" "}
+          <mark className="key">Ctrl + Shift + E</mark> или нажать на иконку фотоаппарата
+          в <mark className="ui">Program Monitor</mark>.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/premierepro/export_frame_program_monitor.png"
+          imgTitle="Экспорт текущего кадра в окне Program Monitor"
+          caption="Program Monitor"
+        />
+        <p>
+          Затем в открывшемся окне выберите формат и путь для сохранения изображения, а
+          потом нажмите на <mark className="ui">OK</mark>.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/premierepro/export_frame.png"
+          imgTitle="Экспорт текущего кадра"
+          caption="Export Frame"
+        />
       </DetailsSummary>
       <DetailsSummary title="Как вывести все кадры секвенции как отдельные файлы изображений?">
         <p>{/* FIXME: написать!! */}</p>
