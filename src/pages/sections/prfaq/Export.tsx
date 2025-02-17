@@ -664,7 +664,8 @@ const PRExport: React.FC = () => {
           <li>
             Вывести <mark className="file">.gif</mark> напрямую из{" "}
             <mark className="app">Premiere Pro</mark>, указав формат{" "}
-            <mark className="ui">Gif</mark> во вкладке <mark className="ui">Export</mark>.
+            <mark className="ui">Animated GIF</mark> во вкладке{" "}
+            <mark className="ui">Export</mark>.
           </li>
           <li>
             Либо вывести <mark className="file">.gif</mark> через{" "}
@@ -697,8 +698,122 @@ const PRExport: React.FC = () => {
             </li>
           </ul>
         </AdditionWarning>
-
-        {/* TODO: дописать!! */}
+        <Divider>Выводим из Premiere Pro</Divider>
+        <p>
+          Для начала экспорта <mark className="image">Gif</mark> напрямую из{" "}
+          <mark className="app">Premiere Pro</mark> вам нужно перейти во вкладку{" "}
+          <mark className="ui">Export</mark> с помощью комбинации клавиш{" "}
+          <mark className="key">Ctrl + M</mark>. Затем выберите в графе{" "}
+          <mark className="ui">Format</mark> пункт{" "}
+          <mark className="ui">Animated GIF</mark> и не забудьте указать путь для вывода
+          файла.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/premierepro/selecting_animated_gif.png"
+          imgTitle="Выбор формата Animated GIF"
+          caption="Export"
+        />
+        <AdditionWarning>
+          Если вы выберете в качестве формата пункт <mark className="ui">GIF</mark> без
+          слова <mark>Animated</mark>, то вы получите только кадры отдельными
+          изображениями формата <mark className="file">.gif</mark> и забьёте себе папку
+          для сохранения.
+        </AdditionWarning>
+        <p>
+          После завершения настроек - просто нажмите на кнопку{" "}
+          <mark className="ui">Export</mark> в правом нижнем углу экрана и вы получите в
+          нужном месте нужный файл.
+        </p>
+        <Divider>Выводим из Media Encoder</Divider>
+        <p>
+          <mark className="image">Gif</mark> можно ещё получить с помощью{" "}
+          <mark className="app">Media Encoder</mark>. Хоть мы и отговариваем от его
+          использования, но если вам нужно вывести много изображений формата{" "}
+          <mark className="image">Gif</mark>, то он подойдет лучше.
+        </p>
+        <p>
+          Для того чтобы начать экспорт через <mark className="app">Media Encoder</mark>,
+          перейдите в <mark className="ui">File &gt; Export</mark> и нажмите на{" "}
+          <mark className="ui">Add to Adobe Media Encoder Queue</mark> или нажмите на
+          комбинацию клавиш <mark className="key">Alt + Shift + M</mark> и подождите,
+          когда откроется вторая программа.
+        </p>
+        <AdditionInfo>
+          Секвенция из <mark className="app">Premiere Pro</mark> корректно отправится в{" "}
+          <mark className="app">Media Encoder</mark> только в том случае, если у вас
+          установлен одинаковый год программ и на стандартном расположении программ. В
+          противном случае вам выбьют ошибку о том, что{" "}
+          <mark className="app">Media Encoder</mark> не установлен.
+        </AdditionInfo>
+        <p>
+          После открытия <mark className="app">Media Encoder</mark> укажите формат{" "}
+          <mark className="image">Animated GIF</mark> в очереди экспорта. Там же вы можете
+          указать пресет и путь к выходному файлу. Для детальной настройки вы можете
+          открыть <mark className="ui">Export Settings</mark>, нажав по названию
+          стандартного пресета. Там же вы можете указать разрешение, FPS и другие
+          параметры.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-light"
+          imgSrc="images/premierepro/selecting_animated_gif_media_encoder.png"
+          imgTitle="Выбираем формат GIF для экспорта через Media Encoder"
+          caption="Media Encoder"
+        />
+        <AdditionWarning>
+          Если вы выберете в качестве формата пункт <mark className="ui">GIF</mark> без
+          слова <mark>Animated</mark>, то вы получите только кадры отдельными
+          изображениями формата <mark className="file">.gif</mark> и забьёте себе папку
+          для сохранения.
+        </AdditionWarning>
+        <p>
+          После настройки просто нажмите на кнопку <mark className="ui">OK</mark> и
+          нажмите на зелёную иконку для начала экспорта. После этого в месте, куда вы
+          указали путь, появится файл формата <mark className="image">Gif</mark>.
+        </p>
+        <Divider>Конвертируем через Ezgif</Divider>
+        <p>
+          Если вы не хотите возиться с экспортом или у вас уже есть готовое видео, которое
+          надо лишь перегнать в формат <mark className="image">Gif</mark>, то советую
+          онлайн-сервис <a href="https://ezgif.com/video-to-gif">Ezgif</a>. При
+          конвертации через этот сервис вы получите <mark className="image">Gif</mark> с
+          отличным соотношением качества и размера файла.
+        </p>
+        <p>
+          Для начала конвертации просто загрузите ваше видео в сервис, а затем нажмите на
+          кнопку <mark className="ui">Upload Video</mark>.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-light"
+          imgSrc="images/ezgif_main.png"
+          imgTitle="Главная страница Ezgif"
+          caption="Ezgif"
+        />
+        <AdditionWarning>
+          Максимальный размер файла, который можно загрузить в сервис, не должен превышать
+          <mark>200 Мб</mark>. Максимальная длина не должна превышать 60 секунд для
+          конвертации в <mark>5 FPS</mark>
+          или 15 секунд для конвертации в <mark>20 FPS</mark>.
+        </AdditionWarning>
+        <p>
+          После загрузки видео вы сможете настроить FPS и нужное разрешение. Выбор из
+          настроек мягко говоря не очень широкий, но для простой конвертации хватает. Если
+          вы настроили всё, что вам нужно, то просто нажмите на кнопку{" "}
+          <mark className="ui">Convert to GIF!</mark>.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-light"
+          imgSrc="images/ezgif_settings.png"
+          imgTitle="Настройки конвертации в Ezgif"
+          caption="Ezgif"
+        />
+        <p>
+          Далее после успешной конвертации вы получите ваше видео в формате{" "}
+          <mark className="image">Gif</mark> чуть ниже, в разделе{" "}
+          <mark className="ui">Output GIF Animation</mark>, которое можно сохранить по
+          нажатию <mark className="key">ПКМ</mark> &gt;{" "}
+          <mark className="ui">Сохранить изображение как...</mark>.
+        </p>
       </DetailsSummary>
       <DetailsSummary title="Как вывести секвенцию с альфа-каналом, то есть с прозрачностью?">
         <AdditionWarning>
