@@ -1,6 +1,3 @@
 {
-  "recommendations": [
-    "usernamehw.errorlens",
-    "esbenp.prettier-vscode"
-  ]
+  "recommendations": ["usernamehw.errorlens", "esbenp.prettier-vscode"]
 }
