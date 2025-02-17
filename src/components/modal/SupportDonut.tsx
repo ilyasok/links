@@ -270,8 +270,8 @@ const SupportDonut: React.FC = () => {
             <p>
               Файлы контента внутри секций находятся по пути{" "}
               <mark className="path">src/pages/sections</mark>, где лежат файлы формата{" "}
-              <mark className="file">.tsx</mark>. Более подробно о форматировании и редактировании указано в
-              файле{" "}
+              <mark className="file">.tsx</mark>. Более подробно о форматировании и
+              редактировании указано в файле{" "}
               <a href="https://github.com/aechat/links/blob/main/README.md">README.md</a>.
             </p>
             <AdditionInfo>
