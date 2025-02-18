@@ -13,11 +13,12 @@
     background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1),
     box-shadow 0.5s cubic-bezier(0.075, 0.82, 0.165, 1),
     border 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-  margin-top: 12px;
-  border-radius: $roundness;
+  border-bottom-right-radius: $roundness * 1.5;
+  border-bottom-left-radius: $roundness * 1.5;
   background-color: var(--header_background);
-  padding-inline: 12px;
-  width: 95%;
+  padding-inline: 15px;
+  padding-block: 3px;
+  width: 100%;
   max-width: 1075px;
 
   svg {
