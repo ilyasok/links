@@ -12,7 +12,7 @@ const Header: React.FC<{title: string}> = ({title}) => {
   const [isWide, setIsWide] = useState(window.innerWidth > 650);
 
   const checkScrollPosition = () => {
-    setIsVisible(window.scrollY > 60);
+    setIsVisible(window.scrollY > 25);
   };
   useEffect(() => {
     window.addEventListener("scroll", checkScrollPosition);
