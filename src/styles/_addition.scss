@@ -5,7 +5,10 @@ li > .addition-warning,
 li > .addition-danger,
 .links > .addition-info,
 .links > .addition-warning,
-.links > .addition-danger {
+.links > .addition-danger,
+.faq-container > .addition-info,
+.faq-container > .addition-warning,
+.faq-container > .addition-danger {
   margin-inline: 0;
 }
 

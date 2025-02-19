@@ -3,7 +3,7 @@
 .faq {
   &-container {
     margin-inline: auto;
-    width: 97.5%;
+    width: calc(100% - 10px);
     max-width: 1000px;
 
     &-flex {
