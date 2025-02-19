@@ -186,38 +186,62 @@ export const SearchInPage: React.FC<{sections: Array<{id: string; title: string}
         .filter(Boolean)
         .join("\n");
 
-      const tableContent = Array.from(detail.querySelectorAll<HTMLTableElement>("table"))
-        .map((table) => {
-          const rows = Array.from(table.querySelectorAll("tr"));
+      const tableGroups: Record<string, string[]> = {};
+      Array.from(detail.querySelectorAll<HTMLTableElement>("table")).forEach((table) => {
+        const headers = Array.from(table.querySelectorAll("th"))
+          .map((th) => decodeHtmlEntities(th.textContent?.trim() ?? ""))
+          .filter((header) => !header.toLowerCase().includes("описание"));
 
-          const headerRow = rows[0];
+        const headerKey = headers.join("|");
 
-          const headerCells = Array.from(headerRow.querySelectorAll("td, th"))
-            .map((cell) => decodeHtmlEntities(cell.textContent?.trim() ?? ""))
-            .filter((cellContent) => !cellContent.toLowerCase().includes("описание"))
-            .join("</th><th>");
+        const allRows = Array.from(table.querySelectorAll("tr"));
 
-          const bodyRows = rows
-            .slice(1)
-            .map((row) => {
-              const cells = Array.from(row.querySelectorAll("td, th"))
-                .filter(
-                  (cell) => !cell.hasAttribute("colspan") && !cell.hasAttribute("rowspan")
-                )
-                .map((cell) => decodeHtmlEntities(cell.textContent?.trim() ?? ""))
-                .filter((cellContent) => !cellContent.toLowerCase().includes("видео"))
-                .join("</td><td>");
+        const excludedColumns = Array.from(table.querySelectorAll("th"))
+          .map((th, index) =>
+            th.textContent?.toLowerCase().includes("описание") ? index : -1
+          )
+          .filter((index) => index !== -1);
 
-              return `<tr><td>${cells}</td></tr>`;
-            })
-            .filter((row) => searchWords.some((word) => row.toLowerCase().includes(word)))
-            .join("\n");
+        const processedRows = allRows
+          .map((row) => {
+            const cells = Array.from(row.querySelectorAll("td, th"))
+              .filter(
+                (cell) => !cell.hasAttribute("colspan") && !cell.hasAttribute("rowspan")
+              )
+              .filter((cell, cellIndex) => !excludedColumns.includes(cellIndex))
+              .map((cell) => {
+                const content = decodeHtmlEntities(cell.innerHTML.trim());
 
-          return bodyRows
-            ? `<table><thead><tr><th>${headerCells}</th></tr></thead><tbody>${bodyRows}</tbody></table>`
-            : "";
+                return `<${cell.tagName.toLowerCase()}>${content}</${cell.tagName.toLowerCase()}>`;
+              })
+              .join("");
+
+            const hasMatch = searchWords.some((word) =>
+              row.textContent?.toLowerCase().includes(word.toLowerCase())
+            );
+
+            return hasMatch ? `<tr>${cells}</tr>` : null;
+          })
+          .filter(Boolean);
+        if (processedRows.length > 0) {
+          if (!tableGroups[headerKey]) {
+            tableGroups[headerKey] = [];
+          }
+          tableGroups[headerKey].push(...processedRows);
+        }
+      });
+
+      const tableContent = Object.entries(tableGroups)
+        .map(([headerKey, rows]) => {
+          const headers = headerKey.split("|").filter(Boolean);
+
+          const headerRow =
+            headers.length > 0
+              ? `<tr>${headers.map((h) => `<th>${h}</th>`).join("")}</tr>`
+              : "";
+
+          return `<table>${headerRow}${rows.join("")}</table>`;
         })
-        .filter(Boolean)
         .join("\n");
 
       const listItems = Array.from(detail.querySelectorAll<HTMLLIElement>("li"))
