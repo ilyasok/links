@@ -1,11 +1,7 @@
 import React from "react";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
 import DetailsSummary from "../../../components/DetailsSummary";
-import CodeSnippet, {
-  constExample,
-  variablesExample,
-  variablesNameExample,
-} from "../../../components/features/CodeSnippet";
+import CodeSnippet from "../../../components/features/CodeSnippet";
 import {AdditionInfo, AdditionWarning} from "../../../components/Additions";
 
 const AEExprBase: React.FC = () => {
@@ -47,14 +43,18 @@ const AEExprBase: React.FC = () => {
           Чтобы задать переменную - достаточно придумать ей название, поставить знак равно
           и указать его значение.
         </p>
-        <CodeSnippet language="javascript">{variablesExample}</CodeSnippet>
+        <CodeSnippet language="javascript">{`speed = 100 // является переменной, но она не явно задана
+var angle = 45
+let carBrand = "Ford"
+var isEnabled = true`}</CodeSnippet>
         <p>
           Чтобы задать константу, или же неизменяемую переменную - нужно перед названием
           переменной задать тип данных <mark>const</mark>. Это позволит языку выражений
           понять, что данное значение перезаписывать не следует и будет выводить ошибку
           при попытке его перезаписи.
         </p>
-        <CodeSnippet language="javascript">{constExample}</CodeSnippet>
+        <CodeSnippet language="javascript">{`const pi = 3.1415926535
+const gravity = 9.81`}</CodeSnippet>
         {/* TODO: написать!! */}
       </DetailsSummary>
       <DetailsSummary title="Как вывести результат выражения?">
@@ -82,7 +82,13 @@ const AEExprBase: React.FC = () => {
           </b>{" "}
           названия встроенных функций и типов данных.
         </p>
-        <CodeSnippet language="javascript">{variablesNameExample}</CodeSnippet>
+        <CodeSnippet language="javascript">{`// ПРАВИЛЬНО
+var Name = "Misha"
+var SurName = "Lebedev"
+
+// НЕПРАВИЛЬНО
+var 1Person = 1
+var const = true`}</CodeSnippet>
         <p>
           По стилю написания названий переменных ограничений нет, но лучше уж следовать
           стандартной методике написания, по типу CamelCase или Snake_Case. Это позволит

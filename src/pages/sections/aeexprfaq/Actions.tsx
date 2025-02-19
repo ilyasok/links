@@ -19,12 +19,15 @@ const AEExprActions: React.FC = () => {
           <mark className="code">wiggle()</mark>. Данная функция принимает на себя два
           значения: частота и амплитуда.
         </p>
-        <CodeSnippet language="javascript">{wiggleExample1}</CodeSnippet>
+        <CodeSnippet language="javascript">{`wiggle(5, 10)`}</CodeSnippet>
         <p>
           В функцию вместо числа можно передать переменную или ссылку на какой-нибудь
           объект.
         </p>
-        <CodeSnippet language="javascript">{wiggleExample2}</CodeSnippet>
+        <CodeSnippet language="javascript">{`let x = 5;
+let y = 10;
+
+wiggle(x, y)`}</CodeSnippet>
         {/* FIXME: написать!! */}
       </DetailsSummary>
       <DetailsSummary title="Как зациклить анимацию, которая была создана с помощью ключевых кадров?">
@@ -63,10 +66,3 @@ const AEExprActions: React.FC = () => {
   );
 };
 export default AEExprActions;
-
-const wiggleExample1 = `wiggle(5, 10)`;
-
-const wiggleExample2 = `let x = 5;
-let y = 10;
-
-wiggle(x, y)`;

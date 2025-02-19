@@ -26,25 +26,3 @@ const CodeSnippet: React.FC<CodeSnippetProps> = ({language, children}) => {
   );
 };
 export default CodeSnippet;
-
-export const variablesExample = `
-speed = 100 // является переменной, но она не явно задана
-var angle = 45
-let carBrand = "Ford"
-var isEnabled = true
-`;
-
-export const constExample = `
-const pi = 3.1415926535
-const gravity = 9.81
-`;
-
-export const variablesNameExample = `
-// ПРАВИЛЬНО
-var Name = "Misha"
-var SurName = "Lebedev"
-
-// НЕПРАВИЛЬНО
-var 1Person = 1
-var const = true
-`;
