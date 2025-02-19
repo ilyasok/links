@@ -822,7 +822,7 @@ const AEFromNewbies: React.FC = () => {
         <Divider>Работа с файлами и проектом</Divider>
         <table>
           <thead>
-            <tr className="table-colored-title">
+            <tr>
               <th>Действие</th>
               <th style={{minWidth: "40%"}}>Комбинация</th>
             </tr>
@@ -907,7 +907,7 @@ const AEFromNewbies: React.FC = () => {
         <Divider>Выбор инструментов</Divider>
         <table>
           <thead>
-            <tr className="table-colored-title">
+            <tr>
               <th>Действие</th>
               <th style={{minWidth: "40%"}}>Комбинация</th>
             </tr>
@@ -1065,7 +1065,7 @@ const AEFromNewbies: React.FC = () => {
         <Divider>Отображение свойств слоя</Divider>
         <table>
           <thead>
-            <tr className="table-colored-title">
+            <tr>
               <th>Действие</th>
               <th style={{minWidth: "40%"}}>Комбинация</th>
             </tr>
@@ -1178,7 +1178,7 @@ const AEFromNewbies: React.FC = () => {
         <Divider>Работа с ключевыми кадрами на таймлайне</Divider>
         <table>
           <thead>
-            <tr className="table-colored-title">
+            <tr>
               <th>Действие</th>
               <th style={{minWidth: "40%"}}>Комбинация</th>
             </tr>
@@ -1295,7 +1295,7 @@ const AEFromNewbies: React.FC = () => {
         <Divider>Работа с слоями на таймлайне</Divider>
         <table>
           <thead>
-            <tr className="table-colored-title">
+            <tr>
               <th>Действие</th>
               <th style={{minWidth: "40%"}}>Комбинация</th>
             </tr>
@@ -1497,7 +1497,7 @@ const AEFromNewbies: React.FC = () => {
         <Divider>Создание слоёв</Divider>
         <table>
           <thead>
-            <tr className="table-colored-title">
+            <tr>
               <th>Действие</th>
               <th style={{minWidth: "40%"}}>Комбинация</th>
             </tr>
@@ -1544,7 +1544,7 @@ const AEFromNewbies: React.FC = () => {
         <Divider>Работа с таймлайном и композицией</Divider>
         <table>
           <thead>
-            <tr className="table-colored-title">
+            <tr>
               <th>Действие</th>
               <th style={{minWidth: "40%"}}>Комбинация</th>
             </tr>
@@ -1676,7 +1676,7 @@ const AEFromNewbies: React.FC = () => {
         <Divider>Работа с окном предпросмотра</Divider>
         <table>
           <thead>
-            <tr className="table-colored-title">
+            <tr>
               <th>Действие</th>
               <th style={{minWidth: "40%"}}>Комбинация</th>
             </tr>
@@ -1756,7 +1756,7 @@ const AEFromNewbies: React.FC = () => {
         <Divider>Прочее</Divider>
         <table>
           <thead>
-            <tr className="table-colored-title">
+            <tr>
               <th>Действие</th>
               <th style={{minWidth: "40%"}}>Комбинация</th>
             </tr>
