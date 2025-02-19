@@ -258,7 +258,7 @@ const PSFaQ = () => {
             </div>
           </div>
         </motion.main>
-        <SearchInPage />
+        <SearchInPage sections={sections} />
       </SearchProvider>
     </div>
   );

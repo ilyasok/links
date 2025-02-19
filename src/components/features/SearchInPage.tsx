@@ -121,7 +121,9 @@ export const WideSearchButton: React.FC = () => {
   );
 };
 
-export const SearchInPage: React.FC = () => {
+export const SearchInPage: React.FC<{sections: Array<{id: string; title: string}>}> = ({
+  sections,
+}) => {
   const {isOpen, closeModal, isPageLoaded} = useSearch();
 
   const [query, setQuery] = useState("");
@@ -560,112 +562,15 @@ export const SearchInPage: React.FC = () => {
           )}
           <div className="search-results">
             {query.trim() === "" && (
-              <div>
-                {location.pathname === "/aefaq" && (
-                  <div className="search-category">
-                    <button onClick={() => handleLinkClick("where-find")}>
-                      Ищем полезности
-                    </button>
-                    <button onClick={() => handleLinkClick("install-problems")}>
-                      Проблемы с установкой
-                    </button>
-                    <button onClick={() => handleLinkClick("from-newbies")}>
-                      Вопросы от новичков
-                    </button>
-                    <button onClick={() => handleLinkClick("tips")}>
-                      (не)Вредные советы
-                    </button>
-                    <button onClick={() => handleLinkClick("import")}>Импорт</button>
-                    <button onClick={() => handleLinkClick("interface")}>
-                      Интерфейс
-                    </button>
-                    <button onClick={() => handleLinkClick("performance")}>
-                      Производительность
-                    </button>
-                    <button onClick={() => handleLinkClick("actions")}>Как и чем?</button>
-                    <button onClick={() => handleLinkClick("errors")}>
-                      Ошибки и предупреждения
-                    </button>
-                    <button onClick={() => handleLinkClick("export")}>Экспорт</button>
-                    <button onClick={() => handleLinkClick("export-problems")}>
-                      Проблемы при экспорте
-                    </button>
-                  </div>
-                )}
-                {location.pathname === "/prfaq" && (
-                  <div className="search-category">
-                    <button onClick={() => handleLinkClick("where-find")}>
-                      Ищем полезности
-                    </button>
-                    <button onClick={() => handleLinkClick("install-problems")}>
-                      Проблемы с установкой
-                    </button>
-                    <button onClick={() => handleLinkClick("from-newbies")}>
-                      Вопросы от новичков
-                    </button>
-                    <button onClick={() => handleLinkClick("tips")}>
-                      (не)Вредные советы
-                    </button>
-                    <button onClick={() => handleLinkClick("import")}>Импорт</button>
-                    <button onClick={() => handleLinkClick("interface")}>
-                      Интерфейс
-                    </button>
-                    <button onClick={() => handleLinkClick("performance")}>
-                      Производительность
-                    </button>
-                    <button onClick={() => handleLinkClick("actions")}>Как и чем?</button>
-                    <button onClick={() => handleLinkClick("errors")}>
-                      Ошибки и предупреждения
-                    </button>
-                    <button onClick={() => handleLinkClick("export")}>Экспорт</button>
-                    <button onClick={() => handleLinkClick("export-problems")}>
-                      Проблемы при экспорте
-                    </button>
-                  </div>
-                )}
-                {location.pathname === "/psfaq" && (
-                  <div className="search-category">
-                    <button onClick={() => handleLinkClick("where-find")}>
-                      Ищем полезности
-                    </button>
-                    <button onClick={() => handleLinkClick("install-problems")}>
-                      Проблемы с установкой
-                    </button>
-                    <button onClick={() => handleLinkClick("from-newbies")}>
-                      Вопросы от новичков
-                    </button>
-                    <button onClick={() => handleLinkClick("import")}>Импорт</button>
-                    <button onClick={() => handleLinkClick("interface")}>
-                      Интерфейс
-                    </button>
-                    <button onClick={() => handleLinkClick("performance")}>
-                      Производительность
-                    </button>
-                    <button onClick={() => handleLinkClick("actions")}>Как и чем?</button>
-                    <button onClick={() => handleLinkClick("errors")}>
-                      Ошибки и предупреждения
-                    </button>
-                    <button onClick={() => handleLinkClick("export")}>Экспорт</button>
-                    <button onClick={() => handleLinkClick("export-problems")}>
-                      Проблемы при экспорте
-                    </button>
-                  </div>
-                )}
-                {location.pathname === "/aeexprfaq" && (
-                  <div className="search-category">
-                    <button onClick={() => handleLinkClick("start")}>
-                      С чего начать?
-                    </button>
-                    <button onClick={() => handleLinkClick("base")}>База всех баз</button>
-                    <button onClick={() => handleLinkClick("linking")}>
-                      Ссылки и привязки
-                    </button>
-                    <button onClick={() => handleLinkClick("actions")}>Как и чем?</button>
-                    <button onClick={() => handleLinkClick("errors")}>
-                      Ошибки и предупреждения
-                    </button>
-                  </div>
-                )}
+              <div className="search-category">
+                {sections.map((section) => (
+                  <button
+                    key={section.id}
+                    onClick={() => handleLinkClick(section.id)}
+                  >
+                    {section.title}
+                  </button>
+                ))}
               </div>
             )}
             {results.length > 0 &&
