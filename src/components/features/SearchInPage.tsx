@@ -222,7 +222,7 @@ export const SearchInPage: React.FC<{sections: Array<{id: string; title: string}
 
             return hasMatch ? clonedRow.outerHTML : null;
           })
-          .filter(Boolean);
+          .filter((row): row is string => row !== null);
         if (processedRows.length > 0) {
           if (!tableGroups[headerKey]) {
             tableGroups[headerKey] = [];
