@@ -204,23 +204,23 @@ export const SearchInPage: React.FC<{sections: Array<{id: string; title: string}
 
         const processedRows = allRows
           .map((row) => {
-            const cells = Array.from(row.querySelectorAll("td, th"))
-              .filter(
-                (cell) => !cell.hasAttribute("colspan") && !cell.hasAttribute("rowspan")
-              )
-              .filter((cell, cellIndex) => !excludedColumns.includes(cellIndex))
-              .map((cell) => {
-                const content = decodeHtmlEntities(cell.innerHTML.trim());
+            const clonedRow = row.cloneNode(true) as HTMLTableRowElement;
+            Array.from(clonedRow.cells).forEach((cell, index) => {
+              if (excludedColumns.includes(index)) {
+                cell.remove();
+              }
+            });
+            if (clonedRow.cells.length === 0) {
+              return null;
+            }
 
-                return `<${cell.tagName.toLowerCase()}>${content}</${cell.tagName.toLowerCase()}>`;
-              })
-              .join("");
+            const rowHTML = clonedRow.innerHTML.toLowerCase();
 
-            const hasMatch = searchWords.some((word) =>
-              row.textContent?.toLowerCase().includes(word.toLowerCase())
+            const hasMatch = searchWords.every((word) =>
+              rowHTML.includes(word.toLowerCase())
             );
 
-            return hasMatch ? `<tr>${cells}</tr>` : null;
+            return hasMatch ? clonedRow.outerHTML : null;
           })
           .filter(Boolean);
         if (processedRows.length > 0) {
@@ -237,12 +237,12 @@ export const SearchInPage: React.FC<{sections: Array<{id: string; title: string}
 
           const headerRow =
             headers.length > 0
-              ? `<tr>${headers.map((h) => `<th>${h}</th>`).join("")}</tr>`
+              ? `<thead><tr>${headers.map((h) => `<th>${h}</th>`).join("")}</tr></thead>`
               : "";
 
           return `<table>${headerRow}${rows.join("")}</table>`;
         })
-        .join("\n");
+        .join("");
 
       const listItems = Array.from(detail.querySelectorAll<HTMLLIElement>("li"))
         .map((el) => {
@@ -328,18 +328,9 @@ export const SearchInPage: React.FC<{sections: Array<{id: string; title: string}
     const detailsData = extractDetailsData(searchWords);
 
     const filtered = detailsData.filter(({title, content, tag}) => {
-      const titleLower = title.toLowerCase();
+      const searchText = `${title} ${content} ${tag}`.toLowerCase();
 
-      const contentLower = content?.toLowerCase() || "";
-
-      const tagLower = tag?.toLowerCase() ?? "";
-
-      return searchWords.every(
-        (word) =>
-          titleLower.includes(word) ||
-          contentLower.includes(word) ||
-          tagLower.includes(word)
-      );
+      return searchWords.every((word) => searchText.includes(word));
     });
 
     const highlightedResults = filtered
@@ -628,7 +619,7 @@ export const SearchInPage: React.FC<{sections: Array<{id: string; title: string}
                         </div>
                       )}
                     </div>
-                    <p
+                    <div
                       className="search-content"
                       dangerouslySetInnerHTML={{__html: content}}
                     />
