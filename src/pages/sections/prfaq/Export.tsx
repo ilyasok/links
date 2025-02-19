@@ -918,20 +918,92 @@ const PRExport: React.FC = () => {
         />
       </DetailsSummary>
       <DetailsSummary title="Как вывести все кадры секвенции как отдельные файлы изображений?">
-        <p>{/* FIXME: написать!! */}</p>
+        <p>
+          Если вы хотите вывести все кадры из секвенции в отдельные файлы, то вам
+          достаточно выбрать в качестве способа вывода <mark className="image">JPG</mark>,{" "}
+          <mark className="image">PNG</mark>, <mark className="image">TIFF</mark> или
+          любой другой формат изображений.
+        </p>
+        <p>
+          Для начала как всегда нам нужно перейти во вкладку{" "}
+          <mark className="ui">Export</mark> и выбрать в пункте{" "}
+          <mark className="ui">Format</mark> нужный нам тип файла.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/premierepro/select_png_export.png"
+          imgTitle="Выбираем формат изображений"
+          caption="Export"
+        />
+        <AdditionInfo>
+          Если вы хотите вывести кадры с прозрачностью - не забудьте указать параметр{" "}
+          <mark className="ui">Include Alpha Channel</mark>.
+        </AdditionInfo>
+        <p>
+          Затем{" "}
+          <b>
+            <u>не забудьте</u>
+          </b>{" "}
+          создать новую пустую папку, куда вы хотите экспортировать все кадры и указать её
+          в качестве пути для вывода. <mark className="app">Premiere Pro</mark> не создаёт
+          автоматически подпапку для секвенции изображений, как это делает{" "}
+          <mark className="app">After Effects</mark>.
+        </p>
+        <p>
+          После этого просто нажимаем на кнопку <mark className="ui">Export</mark>. Вот и
+          всё, все кадры из вашей секвенции сохранятся в нужную папку.
+        </p>
       </DetailsSummary>
       <DetailsSummary title="Как вывести только часть моей секвенции?">
         <p>
           Прежде чем начать экспорт части секвенции, вам нужно поставить точки входа на
-          таймлайна с помощью кнопок <mark className="key">I</mark> и{" "}
+          таймлайне с помощью кнопок <mark className="key">I</mark> и{" "}
           <mark className="key">O</mark>. Это позволит вам создать область, в пределах
-          которой нам нужно начать экспорт.
+          которой мы можем начать экспорт.
         </p>
         <AdditionInfo>
           Чтобы очистить рабочую область, нажмите на комбинацию клавиш{" "}
           <mark className="key">Ctrl + Shift + X</mark>.
         </AdditionInfo>
-        {/* FIXME: написать!! */}
+        <p>
+          Затем нам нужно перейти во вкладку <mark className="ui">Export</mark> и в пункте{" "}
+          <mark className="ui">Range</mark> под окном предпросмотра указать область
+          рендера секвенции. Нам предлагают четыре варианта на выбор.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/premierepro/select_export_range.png"
+          imgTitle="Выбираем область экспорта"
+          caption="Export"
+        />
+        <ul>
+          <li>
+            <mark className="ui">Entire Source</mark> позволяет вывести секвенцию по всей
+            его длине. В данной ситуации нам это не подходит.
+          </li>
+          <li>
+            <mark className="ui">Source In/Out</mark> позволяет вывести секвенцию по
+            меткам начала и конца, или же входа и выхода, отмеченная с помощью кнопок{" "}
+            <mark className="key">I</mark> и <mark className="key">O</mark>. То, что там
+            нужно.
+          </li>
+          <li>
+            <mark className="ui">Work Area</mark> позволяет вывести секвенцию по размеру
+            рабочей области. По умолчанию рабочая область скрыта и его можно активировать,
+            нажав на три полоски в заголовке таймлайна и выбрать{" "}
+            <mark className="ui">Work Area Bar</mark>. В данной ситуации тоже может
+            подойти, но он менее удобен.
+          </li>
+          <li>
+            <mark className="ui">Custom</mark> позволяет вывести секвенцию по длине,
+            указанным под окном предпросмотра в вкладке <mark className="ui">Export</mark>
+            . Подходит, если вы не хотите ставить метки In/Out на вашем таймлайне.
+          </li>
+        </ul>
+        <p>
+          После настройки области экспорта - не забудьте настроить остальные параметры
+          экспорта под ваши нужны и нажать на кнопку <mark className="ui">Export</mark>.
+        </p>
       </DetailsSummary>
       <DetailsSummary title="Я сделал работу в Premiere Pro, но мне нужно передать .prproj файл вместе с исходниками другому человеку. Возможно ли это сделать без танцев с бубном?">
         <p>
@@ -940,7 +1012,7 @@ const PRExport: React.FC = () => {
           <mark className="ui">File</mark> контекстного меню.
         </p>
         <ImageFigure
-          styleClass="figure_windows-dark"
+          styleClass="figure_windows-light"
           imgSrc="images/premierepro/file_project_manager.png"
           imgTitle="Открытие Project Manager"
           caption="Premiere Pro"
