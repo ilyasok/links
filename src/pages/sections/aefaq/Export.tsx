@@ -84,14 +84,9 @@ const AEExport: React.FC = () => {
             нет, но лучше соблюдать таблицу битрейтов из официального сайта YouTube.
           </li>
         </ul>
+        <Divider>Таблица рекомендуемого битрейта при использовании SDR</Divider>
         <table>
           <thead>
-            <th
-              colSpan={3}
-              style={{textAlign: "center", fontWeight: "bold", color: "var(--accent)"}}
-            >
-              Таблица рекомендуемого битрейта при использовании HDR
-            </th>
             <tr>
               <th>Разрешение</th>
               <th>Битрейт (24, 25, 30 FPS)</th>
@@ -136,15 +131,9 @@ const AEExport: React.FC = () => {
             </tr>
           </tbody>
         </table>
+        <Divider>Таблица рекомендуемого битрейта при использовании HDR</Divider>
         <table>
           <thead>
-            {" "}
-            <th
-              colSpan={3}
-              style={{textAlign: "center", fontWeight: "bold", color: "var(--accent)"}}
-            >
-              Таблица рекомендуемого битрейта при использовании SDR
-            </th>
             <tr>
               <th>Разрешение</th>
               <th>Битрейт (24, 25, 30 FPS)</th>
