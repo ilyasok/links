@@ -100,7 +100,7 @@ const PRFromNewbies: React.FC = () => {
         <Divider>Выбор инструментов</Divider>
         <table>
           <thead>
-            <tr className="table-colored-title">
+            <tr>
               <th>Действие</th>
               <th style={{minWidth: "40%"}}>Комбинация</th>
             </tr>
