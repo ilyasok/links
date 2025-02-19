@@ -1058,6 +1058,55 @@ const AEExport: React.FC = () => {
           композиции сохранятся в нужную папку.
         </p>
       </DetailsSummary>
+      <DetailsSummary title="Как вывести только часть моей композиции? Можно ли сделать так, чтобы композиция всегда экспортировалась по всей длине вне зависимости от указанной рабочей области?">
+        <p>
+          По умолчанию <mark className="app">After Effects</mark> выводит композицию
+          длиной, соответствующей вашей рабочей области, которую вы указали с помощью
+          комбинаций клавиш <mark className="key">B</mark> и{" "}
+          <mark className="key">N</mark> или соответствующими маркерами на таймлайне.
+        </p>
+        <p>
+          Если же вы хотите сделать так, чтобы композиция всегда экспортировалась по всей
+          длине композиции, то вам нужно создать свой пресет для{" "}
+          <mark className="ui">Render Settings</mark> и сделать его при необходимости
+          стандартным. Для этого нажмите на иконку стрелочки возле пункта{" "}
+          <mark className="ui">Render Settings</mark> и выберите пункт{" "}
+          <mark className="ui">Make Template</mark>.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/aftereffects/make_template_render_settings.png"
+          imgTitle="Создание шаблона для Render Settings"
+          caption="Render Queue"
+        />
+        <p>
+          В открывшемся окне у нас уже будет создан пресет под названием{" "}
+          <mark>Untitled</mark>, название которого можно заменить на какое угодно. Чтобы
+          установить новый пресет в качестве стандартного - укажите его в разделе{" "}
+          <mark className="ui">Defaults</mark> для нужного типа файла.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/aftereffects/render_settings_templates.png"
+          imgTitle="Создание шаблона для Render Settings"
+          caption="Render Queue"
+        />
+        <p>
+          Для редактирования нового шаблона нужно нажать на{" "}
+          <mark className="ui">Edit</mark>, которое открывает уже привычное нам окно{" "}
+          <mark className="key">Render Settings</mark>. Окно редактирования шаблона
+          настроек буквально ничем не отличается от обычной настройки параметров рендера.
+          В этом окне в пункте <mark className="ui">Time Span</mark> нужно установить
+          значение <mark className="ui">Length of Comp</mark> вместо{" "}
+          <mark className="ui">Work Area Only</mark>.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/aftereffects/change_render_time_span.png"
+          imgTitle="Изменение области рендера композиции"
+          caption="Render Queue"
+        />
+      </DetailsSummary>
       <DetailsSummary title="Как вывести композицию файлом с отображением всех границ и путей движения?">
         <p>
           Для этого существует сторонний плагин <mark className="plugin">Cyclops</mark>. С
