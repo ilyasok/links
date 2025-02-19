@@ -7,6 +7,7 @@ import {
 import DetailsSummary from "../../../components/DetailsSummary";
 import {ImageFigure} from "../../../components/ContentFigure";
 import GithubUpdateInfo from "../../../components/features/GithubUpdateInfo";
+import {Divider} from "antd";
 
 const AEWhereFind: React.FC = () => {
   return (
@@ -480,12 +481,13 @@ const AEWhereFind: React.FC = () => {
           Таблицы теперь индексируются в поиске, для этого нажмите иконку лупы в шапке
           страницы или нажмите на <mark className="key">Ctrl + F</mark>.
         </AdditionInfo>
+        <Divider>Эффекты для работы с 3D-каналами (3D Channel Effects)</Divider>
         <table>
           <thead>
             <tr>
               <th>Эффект на русском</th>
               <th>Эффект на английском</th>
-              <th>
+              <th style={{width: "15%"}}>
                 Описание эффекта
                 <br />
                 от Jake In Motion
@@ -495,14 +497,6 @@ const AEWhereFind: React.FC = () => {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td
-                colSpan={3}
-                className="table-colored-title"
-              >
-                Эффекты для работы с 3D-каналами (3D Channel Effects)
-              </td>
-            </tr>
             <tr>
               <td>Извлечение 3D-канала</td>
               <td>3D Channel Extract</td>
@@ -599,14 +593,24 @@ const AEWhereFind: React.FC = () => {
                 </a>
               </td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Эффекты для работы с аудио (Audio)</Divider>
+        <table>
+          <thead>
             <tr>
-              <td
-                colSpan={3}
-                className="table-colored-title"
-              >
-                Эффекты для работы с аудио (Audio)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
+              <th style={{width: "15%"}}>
+                Описание эффекта
+                <br />
+                от Jake In Motion
+                <br />
+                на YouTube
+              </th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Назад</td>
               <td>Backwards</td>
@@ -727,14 +731,24 @@ const AEWhereFind: React.FC = () => {
                 </a>
               </td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Эффекты для размытия и резкости (Blur &amp; Sharpen)</Divider>
+        <table>
+          <thead>
             <tr>
-              <td
-                colSpan={3}
-                className="table-colored-title"
-              >
-                Эффекты для размытия и резкости (Blur &amp; Sharpen)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
+              <th style={{width: "15%"}}>
+                Описание эффекта
+                <br />
+                от Jake In Motion
+                <br />
+                на YouTube
+              </th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Двухстороннее размытие</td>
               <td>Bilateral Blur</td>
@@ -927,14 +941,24 @@ const AEWhereFind: React.FC = () => {
                 </a>
               </td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Эффекты для работы с цветовыми каналами (Channel)</Divider>
+        <table>
+          <thead>
             <tr>
-              <td
-                colSpan={3}
-                className="table-colored-title"
-              >
-                Эффекты для работы с цветовыми каналами (Channel)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
+              <th style={{width: "15%"}}>
+                Описание эффекта
+                <br />
+                от Jake In Motion
+                <br />
+                на YouTube
+              </th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Арифметический</td>
               <td>Arithmetic</td>
@@ -1091,14 +1115,24 @@ const AEWhereFind: React.FC = () => {
                 </a>
               </td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Эффекты для коррекции цвета (Color Correction)</Divider>
+        <table>
+          <thead>
             <tr>
-              <td
-                colSpan={3}
-                className="table-colored-title"
-              >
-                Эффекты для коррекции цвета (Color Correction)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
+              <th style={{width: "15%"}}>
+                Описание эффекта
+                <br />
+                от Jake In Motion
+                <br />
+                на YouTube
+              </th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Автоматическая коррекция цвета</td>
               <td>Auto Color</td>
@@ -1519,14 +1553,24 @@ const AEWhereFind: React.FC = () => {
                 </a>
               </td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Эффекты для искажения (Distort)</Divider>
+        <table>
+          <thead>
             <tr>
-              <td
-                colSpan={3}
-                className="table-colored-title"
-              >
-                Эффекты для искажения (Distort)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
+              <th style={{width: "15%"}}>
+                Описание эффекта
+                <br />
+                от Jake In Motion
+                <br />
+                на YouTube
+              </th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Деформация по Безье</td>
               <td>Bezier Warp</td>
@@ -1971,14 +2015,24 @@ const AEWhereFind: React.FC = () => {
                 </a>
               </td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Эффекты для контроля выражений (Expression Controls)</Divider>
+        <table>
+          <thead>
             <tr>
-              <td
-                colSpan={3}
-                className="table-colored-title"
-              >
-                Эффекты для контроля выражений (Expression Controls)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
+              <th style={{width: "15%"}}>
+                Описание эффекта
+                <br />
+                от Jake In Motion
+                <br />
+                на YouTube
+              </th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Элемент управления 3D-точками</td>
               <td>3D Point Control</td>
@@ -2019,14 +2073,24 @@ const AEWhereFind: React.FC = () => {
               <td>Элемент управления &quot;Ползунок&quot;</td>
               <td>Slider Control</td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Генераторы изображения (Generate)</Divider>
+        <table>
+          <thead>
             <tr>
-              <td
-                colSpan={3}
-                className="table-colored-title"
-              >
-                Генераторы изображения (Generate)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
+              <th style={{width: "15%"}}>
+                Описание эффекта
+                <br />
+                от Jake In Motion
+                <br />
+                на YouTube
+              </th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>4-цветный градиент</td>
               <td>4-Color Gradient</td>
@@ -2339,14 +2403,24 @@ const AEWhereFind: React.FC = () => {
                 </a>
               </td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Эффекты для VR-видео (Immersive Video)</Divider>
+        <table>
+          <thead>
             <tr>
-              <td
-                colSpan={3}
-                className="table-colored-title"
-              >
-                Эффекты для VR-видео (Immersive Video)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
+              <th style={{width: "15%"}}>
+                Описание эффекта
+                <br />
+                от Jake In Motion
+                <br />
+                на YouTube
+              </th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Размытие VR</td>
               <td>VR Blur</td>
@@ -2491,14 +2565,24 @@ const AEWhereFind: React.FC = () => {
                 </a>
               </td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Эффекты для кеинга (Keying)</Divider>
+        <table>
+          <thead>
             <tr>
-              <td
-                colSpan={3}
-                className="table-colored-title"
-              >
-                Эффекты для кеинга (Keying)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
+              <th style={{width: "15%"}}>
+                Описание эффекта
+                <br />
+                от Jake In Motion
+                <br />
+                на YouTube
+              </th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Расширенное подавление рассеяния</td>
               <td>Advanced Spill Suppressor</td>
@@ -2619,14 +2703,24 @@ const AEWhereFind: React.FC = () => {
                 </a>
               </td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Эффекты для изменения подложек (Matte)</Divider>
+        <table>
+          <thead>
             <tr>
-              <td
-                colSpan={3}
-                className="table-colored-title"
-              >
-                Эффекты для изменения подложек (Matte)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
+              <th style={{width: "15%"}}>
+                Описание эффекта
+                <br />
+                от Jake In Motion
+                <br />
+                на YouTube
+              </th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Подавление подложки</td>
               <td>Matte Choker</td>
@@ -2687,14 +2781,24 @@ const AEWhereFind: React.FC = () => {
                 </a>
               </td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Эффекты для генерации шума и зерна (Noise &amp; Grain)</Divider>
+        <table>
+          <thead>
             <tr>
-              <td
-                colSpan={3}
-                className="table-colored-title"
-              >
-                Эффекты для генерации шума и зерна (Noise &amp; Grain)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
+              <th style={{width: "15%"}}>
+                Описание эффекта
+                <br />
+                от Jake In Motion
+                <br />
+                на YouTube
+              </th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Добавить зернистость</td>
               <td>Add Grain</td>
@@ -2831,14 +2935,24 @@ const AEWhereFind: React.FC = () => {
                 </a>
               </td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Устаревшие эффекты (Obsolete или Legacy)</Divider>
+        <table>
+          <thead>
             <tr>
-              <td
-                colSpan={3}
-                className="table-colored-title"
-              >
-                Устаревшие эффекты (Obsolete или Legacy)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
+              <th style={{width: "15%"}}>
+                Описание эффекта
+                <br />
+                от Jake In Motion
+                <br />
+                на YouTube
+              </th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Базовый 3D</td>
               <td>Basic 3D</td>
@@ -2947,14 +3061,24 @@ const AEWhereFind: React.FC = () => {
                 </a>
               </td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Эффекты для перспективы (Perspective)</Divider>
+        <table>
+          <thead>
             <tr>
-              <td
-                colSpan={3}
-                className="table-colored-title"
-              >
-                Эффекты для перспективы (Perspective)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
+              <th style={{width: "15%"}}>
+                Описание эффекта
+                <br />
+                от Jake In Motion
+                <br />
+                на YouTube
+              </th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Функция 3D Camera Tracker</td>
               <td>3D Camera Tracker</td>
@@ -3075,14 +3199,24 @@ const AEWhereFind: React.FC = () => {
                 </a>
               </td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Эффекты для имитации чего-либо (Simulation)</Divider>
+        <table>
+          <thead>
             <tr>
-              <td
-                colSpan={3}
-                className="table-colored-title"
-              >
-                Эффекты для имитации чего-либо (Simulation)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
+              <th style={{width: "15%"}}>
+                Описание эффекта
+                <br />
+                от Jake In Motion
+                <br />
+                на YouTube
+              </th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Танец карт</td>
               <td>Card Dance</td>
@@ -3299,14 +3433,24 @@ const AEWhereFind: React.FC = () => {
                 </a>
               </td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Эффекты для стилизации (Stylize)</Divider>
+        <table>
+          <thead>
             <tr>
-              <td
-                colSpan={3}
-                className="table-colored-title"
-              >
-                Эффекты для стилизации (Stylize)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
+              <th style={{width: "15%"}}>
+                Описание эффекта
+                <br />
+                от Jake In Motion
+                <br />
+                на YouTube
+              </th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Мазки кисти</td>
               <td>Brush Strokes</td>
@@ -3607,14 +3751,24 @@ const AEWhereFind: React.FC = () => {
                 </a>
               </td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Эффекты для генерации текста (Text)</Divider>
+        <table>
+          <thead>
             <tr>
-              <td
-                colSpan={3}
-                className="table-colored-title"
-              >
-                Эффекты для генерации текста (Text)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
+              <th style={{width: "15%"}}>
+                Описание эффекта
+                <br />
+                от Jake In Motion
+                <br />
+                на YouTube
+              </th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Нумерация</td>
               <td>Numbers</td>
@@ -3639,14 +3793,24 @@ const AEWhereFind: React.FC = () => {
                 </a>
               </td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Эффекты для манипуляции временем (Time)</Divider>
+        <table>
+          <thead>
             <tr>
-              <td
-                colSpan={3}
-                className="table-colored-title"
-              >
-                Эффекты для манипуляции временем (Time)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
+              <th style={{width: "15%"}}>
+                Описание эффекта
+                <br />
+                от Jake In Motion
+                <br />
+                на YouTube
+              </th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Эффект СС «Принудительное размытие в движении»</td>
               <td>CC Force Motion Blur</td>
@@ -3743,14 +3907,24 @@ const AEWhereFind: React.FC = () => {
                 </a>
               </td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Эффекты для создания переходов (Transition)</Divider>
+        <table>
+          <thead>
             <tr>
-              <td
-                colSpan={3}
-                className="table-colored-title"
-              >
-                Эффекты для создания переходов (Transition)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
+              <th style={{width: "15%"}}>
+                Описание эффекта
+                <br />
+                от Jake In Motion
+                <br />
+                на YouTube
+              </th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Растворение блоков</td>
               <td>Block Dissolve</td>
@@ -3955,14 +4129,24 @@ const AEWhereFind: React.FC = () => {
                 </a>
               </td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Технические эффекты (Utility)</Divider>
+        <table>
+          <thead>
             <tr>
-              <td
-                colSpan={3}
-                className="table-colored-title"
-              >
-                Технические эффекты (Utility)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
+              <th style={{width: "15%"}}>
+                Описание эффекта
+                <br />
+                от Jake In Motion
+                <br />
+                на YouTube
+              </th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Применить цвета LUT</td>
               <td>Apply Color LUT</td>
