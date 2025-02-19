@@ -7,6 +7,7 @@ import {
   AdditionWarning,
 } from "../../../components/Additions";
 import {ImageFigure} from "../../../components/ContentFigure";
+import {Divider} from "antd";
 
 const PRWhereFind: React.FC = () => {
   return (
@@ -407,6 +408,7 @@ const PRWhereFind: React.FC = () => {
           Таблицы теперь индексируются в поиске, для этого нажмите иконку лупы в шапке
           страницы или нажмите на <mark className="key">Ctrl + F</mark>.
         </AdditionInfo>
+        <Divider>Аудиоэффекты (Audio Effects)</Divider>
         <table className="table">
           <thead>
             <tr>
@@ -415,15 +417,6 @@ const PRWhereFind: React.FC = () => {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td
-                colSpan={2}
-                className="table-colored-title"
-                style={{filter: "saturate(0.25)"}}
-              >
-                Аудиоэффекты (Audio Effects)
-              </td>
-            </tr>
             <tr>
               <td>Баланс</td>
               <td>Balance</td>
@@ -444,14 +437,17 @@ const PRWhereFind: React.FC = () => {
               <td>Панорамирование - Ambisonics</td>
               <td>Panner - Ambisonics</td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Амплитуда и сжатие (Amplitude and Compression)</Divider>
+        <table className="table">
+          <thead>
             <tr>
-              <td
-                colSpan={2}
-                className="table-colored-title"
-              >
-                Амплитуда и сжатие (Amplitude and Compression)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>-</td>
               <td>DeEsser</td>
@@ -492,14 +488,17 @@ const PRWhereFind: React.FC = () => {
               <td>Усилить</td>
               <td>Amplify</td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Задержка и эхо (Delay and Echo)</Divider>
+        <table className="table">
+          <thead>
             <tr>
-              <td
-                colSpan={2}
-                className="table-colored-title"
-              >
-                Задержка и эхо (Delay and Echo)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Аналоговая задержка</td>
               <td>Analog Delay</td>
@@ -512,14 +511,17 @@ const PRWhereFind: React.FC = () => {
               <td>Многократное эхо</td>
               <td>Multitap Delay</td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Фильтр и эквалайзер (Filter and EQ)</Divider>
+        <table className="table">
+          <thead>
             <tr>
-              <td
-                colSpan={2}
-                className="table-colored-title"
-              >
-                Фильтр и эквалайзер (Filter and EQ)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Бас</td>
               <td>Bass</td>
@@ -576,14 +578,17 @@ const PRWhereFind: React.FC = () => {
               <td>Фильтр низких частот</td>
               <td>Highpass</td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Модуляция (Modulation)</Divider>
+        <table className="table">
+          <thead>
             <tr>
-              <td
-                colSpan={2}
-                className="table-colored-title"
-              >
-                Модуляция (Modulation)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>-</td>
               <td>Phaser</td>
@@ -596,14 +601,17 @@ const PRWhereFind: React.FC = () => {
               <td>Хор/флэнжер</td>
               <td>Chorus/Flanger</td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Снижение шума/восстановление (Noise Reduction/Restoration)</Divider>
+        <table className="table">
+          <thead>
             <tr>
-              <td
-                colSpan={2}
-                className="table-colored-title"
-              >
-                Снижение шума/восстановление (Noise Reduction/Restoration)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>-</td>
               <td>DeHummer</td>
@@ -620,14 +628,17 @@ const PRWhereFind: React.FC = () => {
               <td>Уменьшение шума</td>
               <td>DeNoise</td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Реверберация (Reverb)</Divider>
+        <table className="table">
+          <thead>
             <tr>
-              <td
-                colSpan={2}
-                className="table-colored-title"
-              >
-                Реверберация (Reverb)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Реверберация витка</td>
               <td>Convolution Reverb</td>
@@ -640,14 +651,17 @@ const PRWhereFind: React.FC = () => {
               <td>Студийная реверберация</td>
               <td>Studio Reverb</td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Особый (Special)</Divider>
+        <table className="table">
+          <thead>
             <tr>
-              <td
-                colSpan={2}
-                className="table-colored-title"
-              >
-                Особый (Special)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>-</td>
               <td>Loudness Radar</td>
@@ -688,47 +702,48 @@ const PRWhereFind: React.FC = () => {
               <td>Расширитель вокала</td>
               <td>Vocal Enhancer</td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Стереоизображения (Stereo Imagery)</Divider>
+        <table className="table">
+          <thead>
             <tr>
-              <td
-                colSpan={2}
-                className="table-colored-title"
-              >
-                Стереоизображения (Stereo Imagery)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Расширение стерео</td>
               <td>Stereo Expander</td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Время и тональность (Time and Pitch)</Divider>
+        <table className="table">
+          <thead>
             <tr>
-              <td
-                colSpan={2}
-                className="table-colored-title"
-              >
-                Время и тональность (Time and Pitch)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Изменение высоты звука</td>
               <td>Pitch Shifter</td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Аудиопереходы (Audio Transitions)</Divider>
+        <Divider>Перекрытие звуков (Crossfade)</Divider>
+        <table className="table">
+          <thead>
             <tr>
-              <td
-                colSpan={2}
-                className="table-colored-title"
-                style={{filter: "saturate(0.5)"}}
-              >
-                Аудиопереходы (Audio Transitions)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
             </tr>
-            <tr>
-              <td
-                colSpan={2}
-                className="table-colored-title"
-              >
-                Перекрытие звуков (Crossfade)
-              </td>
-            </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Постоянная мощность</td>
               <td>Constant Power</td>
@@ -741,23 +756,18 @@ const PRWhereFind: React.FC = () => {
               <td>Экспоненциальное затухание</td>
               <td>Exponential Fade</td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Видеоэффекты (Video Effects)</Divider>
+        <Divider>Видео (Video)</Divider>
+        <table className="table">
+          <thead>
             <tr>
-              <td
-                colSpan={2}
-                className="table-colored-title"
-                style={{filter: "saturate(0.5)"}}
-              >
-                Видеоэффекты (Video Effects)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
             </tr>
-            <tr>
-              <td
-                colSpan={2}
-                className="table-colored-title"
-              >
-                Видео (Video)
-              </td>
-            </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Метаданные и вставка временного кода</td>
               <td>Metadata & Timecode Burn-in</td>
@@ -770,14 +780,17 @@ const PRWhereFind: React.FC = () => {
               <td>Согласование SDR</td>
               <td>SDR Conform</td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Видео с погружением (Immersive Video)</Divider>
+        <table className="table">
+          <thead>
             <tr>
-              <td
-                colSpan={2}
-                className="table-colored-title"
-              >
-                Видео с погружением (Immersive Video)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Градиенты цвета VR</td>
               <td>VR Color Gradients</td>
@@ -822,14 +835,17 @@ const PRWhereFind: React.FC = () => {
               <td>Цифровой сбой VR</td>
               <td>VR Digital Glitch</td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Время (Time)</Divider>
+        <table className="table">
+          <thead>
             <tr>
-              <td
-                colSpan={2}
-                className="table-colored-title"
-              >
-                Время (Time)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Время постеризации</td>
               <td>Posterize Time</td>
@@ -838,14 +854,17 @@ const PRWhereFind: React.FC = () => {
               <td>Эхо</td>
               <td>Echo</td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Генерировать (Generate)</Divider>
+        <table className="table">
+          <thead>
             <tr>
-              <td
-                colSpan={2}
-                className="table-colored-title"
-              >
-                Генерировать (Generate)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>4-цветный градиент</td>
               <td>4-Color Gradient</td>
@@ -862,14 +881,17 @@ const PRWhereFind: React.FC = () => {
               <td>Молния</td>
               <td>Lightning</td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Изменить (Adjust)</Divider>
+        <table className="table">
+          <thead>
             <tr>
-              <td
-                colSpan={2}
-                className="table-colored-title"
-              >
-                Изменить (Adjust)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>-</td>
               <td>ProcAmp</td>
@@ -886,14 +908,17 @@ const PRWhereFind: React.FC = () => {
               <td>Эффекты освещения</td>
               <td>Lighting Effects</td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Искажение</Divider>
+        <table className="table">
+          <thead>
             <tr>
-              <td
-                colSpan={2}
-                className="table-colored-title"
-              >
-                Искажение
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Вихревое смещение</td>
               <td>Turbulent Displace</td>
@@ -938,26 +963,32 @@ const PRWhereFind: React.FC = () => {
               <td>Устранение эффекта плавающего затвора</td>
               <td>Rolling Shutter Repair</td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Канал (Channel)</Divider>
+        <table className="table">
+          <thead>
             <tr>
-              <td
-                colSpan={2}
-                className="table-colored-title"
-              >
-                Канал (Channel)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Обратить</td>
               <td>Invert</td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Контроль изображения (Image Correction)</Divider>
+        <table className="table">
+          <thead>
             <tr>
-              <td
-                colSpan={2}
-                className="table-colored-title"
-              >
-                Контроль изображения (Image Correction)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Гамма-коррекция</td>
               <td>Gamma Correction</td>
@@ -974,14 +1005,17 @@ const PRWhereFind: React.FC = () => {
               <td>Черное и белое</td>
               <td>Black & White</td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Коррекция цвета (Color Correction)</Divider>
+        <table className="table">
+          <thead>
             <tr>
-              <td
-                colSpan={2}
-                className="table-colored-title"
-              >
-                Коррекция цвета (Color Correction)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>-</td>
               <td>ASC CDL</td>
@@ -1006,14 +1040,17 @@ const PRWhereFind: React.FC = () => {
               <td>Цветовой баланс</td>
               <td>Color Balance</td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Переход (Transition)</Divider>
+        <table className="table">
+          <thead>
             <tr>
-              <td
-                colSpan={2}
-                className="table-colored-title"
-              >
-                Переход (Transition)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Градиентное вытеснение</td>
               <td>Gradient Wipe</td>
@@ -1026,14 +1063,17 @@ const PRWhereFind: React.FC = () => {
               <td>Растворение блоков</td>
               <td>Block Dissolve</td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Перспектива (Perspective)</Divider>
+        <table className="table">
+          <thead>
             <tr>
-              <td
-                colSpan={2}
-                className="table-colored-title"
-              >
-                Перспектива (Perspective)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Базовый 3D</td>
               <td>Basic 3D</td>
@@ -1042,14 +1082,17 @@ const PRWhereFind: React.FC = () => {
               <td>Тень</td>
               <td>Drop Shadow</td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Преобразовать (Transform)</Divider>
+        <table className="table">
+          <thead>
             <tr>
-              <td
-                colSpan={2}
-                className="table-colored-title"
-              >
-                Преобразовать (Transform)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Автоматическое центрирование</td>
               <td>Auto Reframe</td>
@@ -1074,14 +1117,17 @@ const PRWhereFind: React.FC = () => {
               <td>Растушевка границ</td>
               <td>Edge Feather</td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Прозрачное наложение (Keying)</Divider>
+        <table className="table">
+          <thead>
             <tr>
-              <td
-                colSpan={2}
-                className="table-colored-title"
-              >
-                Прозрачное наложение (Keying)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Изменение альфа-канала</td>
               <td>Alpha Adjust</td>
@@ -1102,14 +1148,17 @@ const PRWhereFind: React.FC = () => {
               <td>Цветовой ключ</td>
               <td>Color Key</td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Размытие и резкость (Blur & Sharpen)</Divider>
+        <table className="table">
+          <thead>
             <tr>
-              <td
-                colSpan={2}
-                className="table-colored-title"
-              >
-                Размытие и резкость (Blur & Sharpen)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Контурная резкость</td>
               <td>Unsharp Mask</td>
@@ -1134,14 +1183,17 @@ const PRWhereFind: React.FC = () => {
               <td>Уменьшить мерцание в чересстрочной развертке</td>
               <td>Reduce Interlace Flicker</td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Стилизация (Stylize)</Divider>
+        <table className="table">
+          <thead>
             <tr>
-              <td
-                colSpan={2}
-                className="table-colored-title"
-              >
-                Стилизация (Stylize)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Выделение краев</td>
               <td>Find Edges</td>
@@ -1178,14 +1230,17 @@ const PRWhereFind: React.FC = () => {
               <td>Шерховатые края</td>
               <td>Roughen Edges</td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Утилита (Utility)</Divider>
+        <table className="table">
+          <thead>
             <tr>
-              <td
-                colSpan={2}
-                className="table-colored-title"
-              >
-                Утилита (Utility)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>-</td>
               <td>ToneMapper</td>
@@ -1194,35 +1249,33 @@ const PRWhereFind: React.FC = () => {
               <td>Конвертер Cineon</td>
               <td>Cineon Converter</td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Шум и зерно (Noise & Grain)</Divider>
+        <table className="table">
+          <thead>
             <tr>
-              <td
-                colSpan={2}
-                className="table-colored-title"
-              >
-                Шум и зерно (Noise & Grain)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Шум</td>
               <td>Noise</td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Видеопереходы (Video Transitions)</Divider>
+        <Divider>Видео с погружением (Immersive Video)</Divider>
+        <table className="table">
+          <thead>
             <tr>
-              <td
-                colSpan={2}
-                className="table-colored-title"
-                style={{filter: "saturate(0.25)"}}
-              >
-                Видеопереходы (Video Transitions)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
             </tr>
-            <tr>
-              <td
-                colSpan={2}
-                className="table-colored-title"
-              >
-                Видео с погружением (Immersive Video)
-              </td>
-            </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Вытеснение диафрагмы VR</td>
               <td>VR Iris Wipe</td>
@@ -1255,14 +1308,17 @@ const PRWhereFind: React.FC = () => {
               <td>Утечки цветности VR</td>
               <td>VR Chroma Leaks</td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Вытеснение (Wipe)</Divider>
+        <table className="table">
+          <thead>
             <tr>
-              <td
-                colSpan={2}
-                className="table-colored-title"
-              >
-                Вытеснение (Wipe)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>-</td>
               <td>Barn Doors</td>
@@ -1327,14 +1383,17 @@ const PRWhereFind: React.FC = () => {
               <td>Шахматная доска</td>
               <td>CheckerBoard</td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Диафрагма (Iris)</Divider>
+        <table className="table">
+          <thead>
             <tr>
-              <td
-                colSpan={2}
-                className="table-colored-title"
-              >
-                Диафрагма (Iris)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Диафрагма в виде квадрата</td>
               <td>Iris Box</td>
@@ -1351,14 +1410,17 @@ const PRWhereFind: React.FC = () => {
               <td>Диафрагма в виде ромба</td>
               <td>Iris Diamond</td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Листание страницы (Page Peel)</Divider>
+        <table className="table">
+          <thead>
             <tr>
-              <td
-                colSpan={2}
-                className="table-colored-title"
-              >
-                Листание страницы (Page Peel)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Листание страницы</td>
               <td>Page Peel</td>
@@ -1367,26 +1429,32 @@ const PRWhereFind: React.FC = () => {
               <td>Переворачивание страницы</td>
               <td>Page Turn</td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Масштаб (Zoom)</Divider>
+        <table className="table">
+          <thead>
             <tr>
-              <td
-                colSpan={2}
-                className="table-colored-title"
-              >
-                Масштаб (Zoom)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Взаимное масштабирование</td>
               <td>Cross Zoom</td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Растворение (Dissolve)</Divider>
+        <table className="table">
+          <thead>
             <tr>
-              <td
-                colSpan={2}
-                className="table-colored-title"
-              >
-                Растворение (Dissolve)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Аддитивный наплыв</td>
               <td>Additive Dissolve</td>
@@ -1415,14 +1483,17 @@ const PRWhereFind: React.FC = () => {
               <td>Растворение пленки</td>
               <td>Film Dissolve</td>
             </tr>
+          </tbody>
+        </table>
+        <Divider>Скольжение (Slide)</Divider>
+        <table className="table">
+          <thead>
             <tr>
-              <td
-                colSpan={2}
-                className="table-colored-title"
-              >
-                Скольжение (Slide)
-              </td>
+              <th>Эффект на русском</th>
+              <th>Эффект на английском</th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>-</td>
               <td>Center Split</td>
