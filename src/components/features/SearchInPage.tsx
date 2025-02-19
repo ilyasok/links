@@ -328,9 +328,18 @@ export const SearchInPage: React.FC<{sections: Array<{id: string; title: string}
     const detailsData = extractDetailsData(searchWords);
 
     const filtered = detailsData.filter(({title, content, tag}) => {
-      const searchText = `${title} ${content} ${tag}`.toLowerCase();
+      const titleLower = title.toLowerCase();
 
-      return searchWords.every((word) => searchText.includes(word));
+      const contentLower = content?.toLowerCase() || "";
+
+      const tagLower = tag?.toLowerCase() ?? "";
+
+      return searchWords.every(
+        (word) =>
+          titleLower.includes(word) ||
+          contentLower.includes(word) ||
+          tagLower.includes(word)
+      );
     });
 
     const highlightedResults = filtered
