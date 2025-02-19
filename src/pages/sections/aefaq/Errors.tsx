@@ -489,7 +489,7 @@ const AEErrors: React.FC = () => {
           <a href="https://t.me/+Qd9xu7A4TeIwNzY6">склад стройматериалов</a>.
         </AdditionInfo>
       </DetailsSummary>
-      <DetailsSummary title="File is damaged или Unable to import file (НАЗВАНИЕ_ФАЙЛА.XYZ) as project (bad format or not readable)">
+      <DetailsSummary title='"File is damaged", "Unable to import file (НАЗВАНИЕ_ФАЙЛА.XYZ) as project (bad format or not readable)" или "Error with file'>
         <p>
           Если вы открыли проект, прекрасно работавший вчера, но вдруг сегодня он перестал
           открываться, то поздравляю. Возможно, вы экстренно завершили процесс с
@@ -519,6 +519,16 @@ const AEErrors: React.FC = () => {
           <mark className="ui">Edit &gt; Preferences &gt; Auto-Save</mark> и укажите
           значение <mark className="ui">Save every</mark> от 1 до 3 минут.
         </AdditionInfo>
+        <p>
+          В редких случаях файл может оказаться не битым, но не может спокойно открыться,
+          если свободного места на дисковом разделе крайне мало. Так как операционная
+          система Windows не всегда предупреждает о малом объёме свободной дисковой памяти
+          на разделах, пользователь мог упустить такую мелочь и может столкнуться с
+          невозможностью открытия проекта в <mark className="app">After Effects</mark>.
+          Для решения - достаточно почистить систему от накопившегося мусора, хотя бы
+          удалив файлы из папки <mark className="path">%Temp%</mark> и повторить попытку
+          открытия проекта снова.
+        </p>
       </DetailsSummary>
       <DetailsSummary title="This project must be converted from version XX.X.X (Windows/macOS). The original file will be unchanged">
         <AdditionInfo>Данное окно является предупреждением, а не ошибкой.</AdditionInfo>
