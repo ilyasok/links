@@ -344,9 +344,30 @@ const Links = () => {
               </li>
               <li>
                 Если вы работаете на какой-либо бирже, по типу{" "}
-                <a href="https://kwork.ru/">Kwork</a>,{" "}
-                <a href="https://www.fiverr.com/">Fiverr</a>,{" "}
-                <a href="https://www.fl.ru/">FL</a> или аналогичной -{" "}
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://kwork.ru/"
+                >
+                  Kwork
+                </a>
+                ,{" "}
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://www.fiverr.com/"
+                >
+                  Fiverr
+                </a>
+                ,{" "}
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://www.fl.ru/"
+                >
+                  FL
+                </a>{" "}
+                или аналогичной -{" "}
                 <b>
                   <u>не покидайте диалог</u>
                 </b>{" "}

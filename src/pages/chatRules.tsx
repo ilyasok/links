@@ -82,22 +82,68 @@ const ChatRules = () => {
               <div className="faq-content">
                 <AdditionDanger>
                   Предупреждение для иноязычных пользователей: In{" "}
-                  <a href="https://t.me/joinchat/F1DdXtG9LephYWUy">AEChat</a> and{" "}
-                  <a href="https://t.me/+3LF_B_VK-Nw4YzYy">DWChat</a> we communicate
-                  exclusively in Russian. If you don&apos;t know Russian, we recommend
-                  using an <a href="https://translate.google.com">online-translator</a> or
-                  looking for a chat in a language that you understand.
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://t.me/joinchat/F1DdXtG9LephYWUy"
+                  >
+                    AEChat
+                  </a>{" "}
+                  and{" "}
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://t.me/+3LF_B_VK-Nw4YzYy"
+                  >
+                    DWChat
+                  </a>{" "}
+                  we communicate exclusively in Russian. If you don&apos;t know Russian,
+                  we recommend using an{" "}
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://translate.google.com"
+                  >
+                    online-translator
+                  </a>{" "}
+                  or looking for a chat in a language that you understand.
                 </AdditionDanger>
                 <p>
                   В наших чатах{" "}
-                  <a href="https://t.me/joinchat/F1DdXtG9LephYWUy">AEChat</a> и{" "}
-                  <a href="https://t.me/+3LF_B_VK-Nw4YzYy">DWChat</a> вы можете обсудить
-                  любые вопросы касающиеся тематики чата. В{" "}
-                  <a href="https://t.me/joinchat/F1DdXtG9LephYWUy">AEChat</a> мы обычно
-                  обсуждаем <mark className="app">After Effects</mark>,{" "}
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://t.me/joinchat/F1DdXtG9LephYWUy"
+                  >
+                    AEChat
+                  </a>{" "}
+                  и{" "}
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://t.me/+3LF_B_VK-Nw4YzYy"
+                  >
+                    DWChat
+                  </a>{" "}
+                  вы можете обсудить любые вопросы касающиеся тематики чата. В{" "}
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://t.me/joinchat/F1DdXtG9LephYWUy"
+                  >
+                    AEChat
+                  </a>{" "}
+                  мы обычно обсуждаем <mark className="app">After Effects</mark>,{" "}
                   <mark className="app">Premiere Pro</mark> и плагины для этих программ. А
-                  в <a href="https://t.me/+3LF_B_VK-Nw4YzYy">DWChat</a> мы обсуждаем{" "}
-                  <mark className="app">Photoshop</mark>,{" "}
+                  в{" "}
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://t.me/+3LF_B_VK-Nw4YzYy"
+                  >
+                    DWChat
+                  </a>{" "}
+                  мы обсуждаем <mark className="app">Photoshop</mark>,{" "}
                   <mark className="app">Illustrator</mark>,{" "}
                   <mark className="app">Figma</mark> и прочие дизайнерские программы.
                 </p>
@@ -115,39 +161,94 @@ const ChatRules = () => {
                   <b>
                     <u>убедитесь в том, что ответ на ваш вопрос уже имеется</u>
                   </b>{" "}
-                  в чате или в <a href="/aefaq">aefaq</a>, <a href="/prfaq">prfaq</a> или{" "}
-                  <a href="/psfaq">psfaq</a>.
+                  в чате или в{" "}
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="/aefaq"
+                  >
+                    aefaq
+                  </a>
+                  ,{" "}
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="/prfaq"
+                  >
+                    prfaq
+                  </a>{" "}
+                  или{" "}
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="/psfaq"
+                  >
+                    psfaq
+                  </a>
+                  .
                 </p>
                 <AdditionInfo>
                   Для записи экрана и скриншотов на Windows подойдут следующие программы:{" "}
                   <ul>
                     <li>
-                      <a href="https://github.com/ShareX/ShareX/releases">ShareX</a> -
-                      популярная программа для создания скриншотов или записи экрана на
+                      <a
+                        target="_blank"
+                        rel="noreferrer"
+                        href="https://github.com/ShareX/ShareX/releases"
+                      >
+                        ShareX
+                      </a>{" "}
+                      - популярная программа для создания скриншотов или записи экрана на
                       Windows.
                     </li>
                     <li>
-                      <a href="https://www.ntwind.com/software/wincam.html">WinCam</a> -
-                      легковесная программа для записи экрана на Windows.
+                      <a
+                        target="_blank"
+                        rel="noreferrer"
+                        href="https://www.ntwind.com/software/wincam.html"
+                      >
+                        WinCam
+                      </a>{" "}
+                      - легковесная программа для записи экрана на Windows.
                     </li>
                     <li>
-                      <a href="https://www.nvidia.com/ru-ru/software/nvidia-app/">
+                      <a
+                        target="_blank"
+                        rel="noreferrer"
+                        href="https://www.nvidia.com/ru-ru/software/nvidia-app/"
+                      >
                         NVIDIA App
                       </a>{" "}
                       - программа для пользователей видеокарт NVIDIA.
                     </li>
                     <li>
-                      <a href="https://www.amd.com/en/products/software/adrenalin.html">
+                      <a
+                        target="_blank"
+                        rel="noreferrer"
+                        href="https://www.amd.com/en/products/software/adrenalin.html"
+                      >
                         AMD Software: Adrenalin Edition
                       </a>{" "}
                       - аналогичная программа для пользователей видеокарт AMD.
                     </li>
                   </ul>
                   Чтобы записать видео экрана на macOS - воспользуйтесь комбинацией клавиш{" "}
-                  <a href="https://support.apple.com/ru-ru/102618">Shift + Command + 5</a>{" "}
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://support.apple.com/ru-ru/102618"
+                  >
+                    Shift + Command + 5
+                  </a>{" "}
                   или встроенной программой QuickTime Player. Скриншоты можно сделать с
                   помощью комбинации клавиш{" "}
-                  <a href="https://support.apple.com/ru-ru/102646">Shift + Command + 3</a>
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://support.apple.com/ru-ru/102646"
+                  >
+                    Shift + Command + 3
+                  </a>
                   .
                 </AdditionInfo>
                 <p>

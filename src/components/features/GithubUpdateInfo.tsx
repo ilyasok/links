@@ -50,7 +50,7 @@ const GithubUpdateInfo: React.FC<GithubUpdateInfoProps> = ({filePath}) => {
 
       const commitUrl = commits[0].html_url;
       setCommitInfo(
-        `Обновлено ${formattedDate}, ${formattedClock}: <a href="${commitUrl}" target="_blank">${commitMessage}</a>`
+        `Обновлено ${formattedDate}, ${formattedClock}: <a target="_blank" rel="noreferrer" href="${commitUrl}" target="_blank">${commitMessage}</a>`
       );
     } catch (err) {
       setError(`Информация о свежести временно недоступна: ${err}`);

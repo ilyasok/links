@@ -2483,7 +2483,14 @@ const HostsAdobeModal: React.FC = () => {
             <AdditionInfo>
               Нажмите на адреса, чтобы скопировать их в буфер обмена. Самые свежие адреса
               для блокировки в hosts находятся{" "}
-              <a href="https://a.dove.isdumb.one/list.txt">по этой ссылке</a>.
+              <a
+                href="https://a.dove.isdumb.one/list.txt"
+                target="_blank"
+                rel="noreferrer"
+              >
+                по этой ссылке
+              </a>
+              .
             </AdditionInfo>
           </div>
         </div>

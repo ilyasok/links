@@ -256,13 +256,36 @@ const SupportDonut: React.FC = () => {
           <div className="modal-content">
             <p>
               Если вы хотите помочь с наполнением данной страницы и вы имеете
-              какой-никакой опыт работы с <a href="https://git-scm.com/">Git</a> и{" "}
-              <a href="https://github.com/git-guides">GitHub</a>, то вы можете{" "}
-              <a href="https://github.com/aechat/links/fork">
+              какой-никакой опыт работы с{" "}
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://git-scm.com/"
+              >
+                Git
+              </a>{" "}
+              и{" "}
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/git-guides"
+              >
+                GitHub
+              </a>
+              , то вы можете{" "}
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/aechat/links/fork"
+              >
                 создать форк проекта сайта
               </a>{" "}
               и внести свои изменения с помощью{" "}
-              <a href="https://arduinoplus.ru/git-course/chuzhoi-repozitorii/">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://arduinoplus.ru/git-course/chuzhoi-repozitorii/"
+              >
                 Pull Request
               </a>
               .
@@ -272,7 +295,14 @@ const SupportDonut: React.FC = () => {
               <mark className="path">src/pages/sections</mark>, где лежат файлы формата{" "}
               <mark className="file">.tsx</mark>. Более подробно о форматировании и
               редактировании указано в файле{" "}
-              <a href="https://github.com/aechat/links/blob/main/README.md">README.md</a>.
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/aechat/links/blob/main/README.md"
+              >
+                README.md
+              </a>
+              .
             </p>
             <AdditionInfo>
               Разделы с частыми вопросами находятся в разработке и иногда обновляются,

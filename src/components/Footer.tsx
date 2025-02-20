@@ -52,15 +52,29 @@ const Footer: React.FC<FooterProps> = ({title, initialYear}) => {
           </div>
           <div className="modal-content">
             <p>
-              Привет, я <a href="https://t.me/m1sh3r">Мишер</a>, создатель этой страницы.
-              Идея сайта заключалась в том, чтобы минимизировать надоедливые вопросы по
-              программам Adobe и направить людей на альтернативные чаты, если возникли
-              вопросы по другим программам.{" "}
+              Привет, я{" "}
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://t.me/m1sh3r"
+              >
+                Мишер
+              </a>
+              , создатель этой страницы. Идея сайта заключалась в том, чтобы
+              минимизировать надоедливые вопросы по программам Adobe и направить людей на
+              альтернативные чаты, если возникли вопросы по другим программам.{" "}
               <i>Надеюсь, что с этой задачей я справился.</i>
             </p>
             <p>
               Контент на сайте наполнялся благодаря команде администраторов и участников{" "}
-              <a href="https://t.me/joinchat/F1DdXtG9LephYWUy">AEChat</a>.
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://t.me/joinchat/F1DdXtG9LephYWUy"
+              >
+                AEChat
+              </a>
+              .
             </p>
             <p className="modal-message">
               При копировании контента, пожалуйста, ссылайтесь на первоисточник, мы
@@ -68,10 +82,18 @@ const Footer: React.FC<FooterProps> = ({title, initialYear}) => {
               кнопку справа.
             </p>
             <div className="flexible-links">
-              <a href="mailto:me@m1sh3r.ru">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="mailto:me@m1sh3r.ru"
+              >
                 <Mail />
               </a>
-              <a href="https://github.com/aechat/links">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/aechat/links"
+              >
                 <GitHub />
               </a>
             </div>
