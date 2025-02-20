@@ -37,11 +37,11 @@
 
     .name_container {
       display: flex;
+      position: relative;
       justify-content: space-between;
       align-items: stretch;
-      box-sizing: border-box;
       vertical-align: middle;
-      position: relative;
+      box-sizing: border-box;
       outline: 1px solid var(--links_border);
       border-radius: $roundness * 0.75;
       background-image: linear-gradient(to top, var(--summary_background), transparent);
@@ -66,7 +66,7 @@
         margin: 3px;
         color: var(--links_text);
         font-weight: 700;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         font-family: "Onest", sans-serif;
       }
     }
@@ -78,7 +78,7 @@
       padding-block: 8px;
       width: 100%;
       font-weight: 400;
-      font-size: 0.875rem;
+      font-size: 0.95rem;
     }
   }
 
