@@ -69,6 +69,8 @@ const DetailsSummary: React.FC<DetailsSummaryProps> = ({title, children, tag}) =
   const [isOpen, setIsOpen] = useState(false);
 
   const detailsRef = useRef<HTMLDetailsElement>(null);
+
+  const sectionRef = useRef<HTMLElement>(null);
   useEffect(() => {
     if (detailsRef.current) {
       const observer = new MutationObserver(() => {
@@ -100,6 +102,20 @@ const DetailsSummary: React.FC<DetailsSummaryProps> = ({title, children, tag}) =
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, []);
+  useEffect(() => {
+    if (sectionRef.current) {
+      const links = sectionRef.current.querySelectorAll("a");
+      links.forEach((link) => {
+        if (!link.hasAttribute("target")) {
+          link.setAttribute("target", "_blank");
+        }
+
+        if (link.host !== window.location.host) {
+          link.setAttribute("rel", "noopener noreferrer");
+        }
+      });
+    }
+  }, [children]);
 
   const handleToggle = (event: React.SyntheticEvent) => {
     const details = event.currentTarget as HTMLDetailsElement;
@@ -184,7 +200,10 @@ const DetailsSummary: React.FC<DetailsSummaryProps> = ({title, children, tag}) =
         </Tooltip>
       </motion.summary>
       <SpoilerContext.Provider value={isOpen}>
-        <section className="faq-section">
+        <section
+          className="faq-section"
+          ref={sectionRef}
+        >
           {children}
           {tag && (
             <div className="faq-tags">
