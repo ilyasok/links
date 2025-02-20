@@ -48,12 +48,10 @@ export const generateAnchorId = () => {
       }
     });
   });
-
   if (window.location.hash) {
     const anchorId = window.location.hash.slice(1);
 
     const existingAnchor = document.getElementById(anchorId);
-
     if (!existingAnchor && /^\d+\.\d+$/.test(anchorId)) {
       message.error(
         "Не удалось найти пункт, который был указан в ссылке. Скорее всего он был перемещён в другое место или удалён"
@@ -81,7 +79,6 @@ const DetailsSummary: React.FC<DetailsSummaryProps> = ({title, children, tag}) =
       return () => observer.disconnect();
     }
   }, []);
-
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (
@@ -95,7 +92,6 @@ const DetailsSummary: React.FC<DetailsSummaryProps> = ({title, children, tag}) =
         message.success("Вжух, и все спойлеры раскрылись!");
       }
     };
-
     window.addEventListener("keydown", handleKeyDown);
 
     return () => {
@@ -119,20 +115,16 @@ const DetailsSummary: React.FC<DetailsSummaryProps> = ({title, children, tag}) =
 
   const handleToggle = (event: React.SyntheticEvent) => {
     const details = event.currentTarget as HTMLDetailsElement;
-    if (details.open) {
-      setTimeout(() => {
-        if (window.location.hash) {
-          history.replaceState(
-            null,
-            "",
-            window.location.pathname + window.location.search
-          );
-        }
-      }, 5000);
-    }
 
-    if (details.hasAttribute("data-anchor-processed")) {
-      details.removeAttribute("data-anchor-processed");
+    const summaryId = detailsRef.current?.querySelector(".faq-summary")?.id;
+    if (details.open && summaryId) {
+      history.replaceState(
+        null,
+        "",
+        window.location.pathname + window.location.search + `#${summaryId}`
+      );
+    } else if (window.location.hash) {
+      history.replaceState(null, "", window.location.pathname + window.location.search);
     }
   };
 
