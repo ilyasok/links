@@ -7,7 +7,7 @@ export const MoveToTop = () => {
       top: 0,
       behavior: "smooth",
     });
-    window.history.replaceState({}, '', window.location.pathname);
+    window.history.replaceState({}, "", window.location.pathname);
   };
 
   return (
@@ -16,4 +16,3 @@ export const MoveToTop = () => {
     </button>
   );
 };
-
