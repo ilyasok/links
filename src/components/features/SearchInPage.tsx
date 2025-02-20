@@ -474,6 +474,9 @@ export const SearchInPage: React.FC<{sections: Array<{id: string; title: string}
       window.pageYOffset -
       headerHeight -
       padding;
+
+    window.history.pushState({}, "", `#${id}`);
+
     window.scrollTo({
       top: y,
       behavior: "smooth",
