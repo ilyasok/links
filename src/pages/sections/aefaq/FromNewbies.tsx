@@ -2276,6 +2276,36 @@ const AEFromNewbies: React.FC = () => {
           caption="Preview"
         />
       </DetailsSummary>
+      <DetailsSummary title="Что за решётка у слоя на таймлайне и для чего нужен Guides Layer?">
+        <p>
+          <mark>Guide Layer</mark> - это как слой-комментарий, который виден только в
+          предпросмотре и не будет рендериться при финальном экспорте. Его можно
+          использовать для технических оверлеев, например для отображения границ
+          перекрытий интерфейса TikTok, YouTube Shorts или для послания другому монтажёру,
+          чтобы он исправил что-то в дальнейшем.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/aftereffects/guide_layer_example.png"
+          imgTitle="Пример использования Guide Layer"
+          caption="Timeline"
+        />
+        <p>
+          <mark>Guide Layer</mark> можно включить как для текстовых слоёв, так и для
+          композиций, изображений или видео.
+        </p>
+      </DetailsSummary>
+      <DetailsSummary title="Делал проект, но я его изначально не сохранял. Вдруг After Effects вылетел. Возможно ли восстановить проект?">
+        <p>
+          Нет, примите мои соболезнования. В следующий раз перед началом работы - сразу
+          сохраняйте файл проекта и периодически прожимайте{" "}
+          <mark className="key">Ctrl + S</mark>.
+        </p>
+        <p>
+          <mark className="app">After Effects</mark> не создаёт авто-сохранения или
+          какие-нибудь файлы проекта, если изначально проект не был сохранён.
+        </p>
+      </DetailsSummary>
       <DetailsSummary title="Применяю эффект, например Glow, но он обрезается по границе слоя. Как расширить действие эффекта?">
         <p>
           Некоторые эффекты могут работать только в пределах размера слоя, вследствие чего
@@ -2531,36 +2561,6 @@ const AEFromNewbies: React.FC = () => {
           </a>
           .
         </AdditionInfo>
-      </DetailsSummary>
-      <DetailsSummary title="Что за решётка у слоя на таймлайне и для чего нужен Guides Layer?">
-        <p>
-          <mark>Guide Layer</mark> - это как слой-комментарий, который виден только в
-          предпросмотре и не будет рендериться при финальном экспорте. Его можно
-          использовать для технических оверлеев, например для отображения границ
-          перекрытий интерфейса TikTok, YouTube Shorts или для послания другому монтажёру,
-          чтобы он исправил что-то в дальнейшем.
-        </p>
-        <ImageFigure
-          styleClass="figure_windows-dark"
-          imgSrc="images/aftereffects/guide_layer_example.png"
-          imgTitle="Пример использования Guide Layer"
-          caption="Timeline"
-        />
-        <p>
-          <mark>Guide Layer</mark> можно включить как для текстовых слоёв, так и для
-          композиций, изображений или видео.
-        </p>
-      </DetailsSummary>
-      <DetailsSummary title="Делал проект, но я его изначально не сохранял. Вдруг After Effects вылетел. Возможно ли восстановить проект?">
-        <p>
-          Нет, примите мои соболезнования. В следующий раз перед началом работы - сразу
-          сохраняйте файл проекта и периодически прожимайте{" "}
-          <mark className="key">Ctrl + S</mark>.
-        </p>
-        <p>
-          <mark className="app">After Effects</mark> не создаёт авто-сохранения или
-          какие-нибудь файлы проекта, если изначально проект не был сохранён.
-        </p>
       </DetailsSummary>
       <DetailsSummary title="Почему After Effects иногда сам меняет начертание шрифта?">
         <p>
