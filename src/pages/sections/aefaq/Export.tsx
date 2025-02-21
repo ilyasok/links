@@ -616,6 +616,11 @@ const AEExport: React.FC = () => {
           рендер как обычно, через кнопку <mark className="ui">Render</mark> или{" "}
           <mark className="key">Enter</mark>.
         </p>
+        <AdditionInfo>
+          Более подробную информацию о рекомендуемом пайплайне ввода и вывода вы можете
+          узнать в Telegram-посте{" "}
+          <a href="https://t.me/montage_tutors/2">Montage Tutors</a>.
+        </AdditionInfo>
       </DetailsSummary>
       <DetailsSummary title="Как вывести композицию в .webm и VP9?">
         <p>

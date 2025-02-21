@@ -37,7 +37,7 @@ const AEImport: React.FC = () => {
         <AdditionInfo>
           Желательно для лучшего отображения информации в{" "}
           <mark className="app">MediaInfo</mark> использовать вид{" "}
-          <mark className="ui">Tree</mark>.
+          <mark className="ui">Tree</mark> или его консольную версию.
         </AdditionInfo>
         <p>
           В <mark className="app">MediaInfo</mark> можно узнать многое о ваших исходниках.
@@ -169,6 +169,11 @@ const AEImport: React.FC = () => {
           Вот и всё, удачной работы с проектом! И да, лучше перекодировать, чем
           недокодировать и мучаться с возможными багами кривых исходников.
         </p>
+        <AdditionInfo>
+          Более подробную информацию о рекомендуемом пайплайне ввода и вывода вы можете
+          узнать в Telegram-посте{" "}
+          <a href="https://t.me/montage_tutors/2">Montage Tutors</a>.
+        </AdditionInfo>
       </DetailsSummary>
       <DetailsSummary
         title="Почему у меня появляются различные артефакты при использовании исходников в кодеке H.264"
