@@ -624,7 +624,7 @@ const AEExport: React.FC = () => {
       </DetailsSummary>
       <DetailsSummary title="Как вывести композицию в .webm и VP9?">
         <p>
-          Нативно из <mark className="app">After Effects</mark> и{" "}
+          Стандартными средствами из <mark className="app">After Effects</mark> и{" "}
           <mark className="app">Media Encoder</mark> нельзя вывести композицию в{" "}
           <mark className="file">.webm</mark>, поэтому мы пойдем таким путём: сначала
           выведем композицию в <mark className="video">Apple Prores 422</mark>, если вам

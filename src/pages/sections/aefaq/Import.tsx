@@ -425,23 +425,28 @@ const AEImport: React.FC = () => {
         tag="3д, элемент 3д, блендер, объемные модели"
       >
         <p>
-          Нативно в <mark className="app">After Effects</mark> в старых версиях программы
-          нельзя было импортировать 3D-объекты встроенными методами. Поэтому дедам
-          приходилось использовать сторонние плагины, например{" "}
-          <mark className="plugin">VideoCopilot Element 3D</mark>. С помощью него можно
-          импортировать 3D модели форматов <mark className="file">.obj</mark>,{" "}
+          Станадртными средствами в старых версиях программы{" "}
+          <mark className="app">After Effects</mark> нельзя было импортировать 3D-объекты
+          без танцев с бубнами. Поэтому раньше приходилось использовать сторонние плагины,
+          например <mark className="plugin">VideoCopilot Element 3D</mark>. С помощью него
+          можно импортировать 3D-модели форматов <mark className="file">.obj</mark>,{" "}
           <mark className="file">.fbx</mark> и проекты из{" "}
           <mark className="app">Cinema 4D</mark>.
         </p>
+        <AdditionInfo>
+          При импорте моделей формата <mark className="file">.c4d</mark> требуется
+          установленный полноценнный <mark className="app">Maxon Cinema 4D</mark>, если он
+          вырезан в вашей сборке <mark className="app">After Effects</mark>.
+        </AdditionInfo>
         <YouTubeVideo
           link="Co9V2u0ZZO8"
           caption="Базовый курс по возможностям Element 3D"
         />
         <p>
-          Потом позднее, в <mark className="app">After Effects</mark> версий 2024 и новее
-          завезли новый физический движок для рендера{" "}
+          Потом позднее, в <mark className="app">After Effects</mark> версий{" "}
+          <mark>2024</mark> и новее завезли новый физический движок для рендера{" "}
           <mark className="plugin">Advanced 3D</mark>, где заодно добавили нативный импорт
-          3D моделей. Поддержка форматов, правда, не впечатляет, как и функции
+          3D-моделей. Поддержка форматов, правда, не впечатляет, как и функции
           взаимодействия с ними.
         </p>
         <YouTubeVideo
