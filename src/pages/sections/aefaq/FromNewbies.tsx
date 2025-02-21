@@ -248,6 +248,15 @@ const AEFromNewbies: React.FC = () => {
             <mark className="word">Если мне не изменяет память</mark>.
           </li>
           <li>
+            <mark className="word">КТТС</mark> - сокращение от выражения{" "}
+            <mark className="word">Как только, так сразу</mark>.
+          </li>
+          <li>
+            <mark className="word">ASAP</mark> или <mark className="word">АСАП</mark> -
+            сокращение от выражения <mark className="word">As soon as possible</mark>, что
+            в переводе означает <mark className="word">Как можно скорее</mark>.
+          </li>
+          <li>
             <mark className="word">Инфлюкс</mark> - сторонний плагин{" "}
             <mark className="plugin">Autokroma Influx</mark>, позволяющий импортировать в{" "}
             <mark className="app">After Effects</mark> неподдерживаемые типы файлов,
