@@ -3,7 +3,7 @@ import {motion} from "framer-motion";
 import Header from "../components/Header";
 import {Breadcrumb, Divider} from "antd";
 import {Link} from "react-router-dom";
-import {AdditionWarning} from "../components/Additions";
+import {AdditionDanger, AdditionWarning} from "../components/Additions";
 import Footer from "../components/Footer";
 import {SearchInPage, SearchProvider} from "../components/features/SearchInPage";
 import SupportDonut from "../components/modal/SupportDonut";
@@ -122,6 +122,10 @@ const AEExpressionPage = () => {
                 />
               </div>
               <SupportDonut />
+              <AdditionDanger>
+                На текущий момент данная страница ещё не полностью готова. В пунктах могут
+                быть ошибки или непроверенная информация касательно работы выражений.
+              </AdditionDanger>
               <AdditionWarning>
                 Данная страница не является полноценным курсом по написанию выражений в{" "}
                 <mark className="app">After Effects</mark>. Мнение автора и мнение
