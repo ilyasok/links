@@ -489,7 +489,7 @@ const AEErrors: React.FC = () => {
           <a href="https://t.me/+Qd9xu7A4TeIwNzY6">склад стройматериалов</a>.
         </AdditionInfo>
       </DetailsSummary>
-      <DetailsSummary title='"File is damaged", "Unable to import file (НАЗВАНИЕ_ФАЙЛА.XYZ) as project (bad format or not readable)" или "Error with file'>
+      <DetailsSummary title='"File is damaged", "Unable to import file (НАЗВАНИЕ_ФАЙЛА.XYZ) as project (bad format or not readable)" или "Error with file"'>
         <p>
           Если вы открыли проект, прекрасно работавший вчера, но вдруг сегодня он перестал
           открываться, то поздравляю. Возможно, вы экстренно завершили процесс с
