@@ -275,12 +275,6 @@ const AEInterface: React.FC = () => {
         />
       </DetailsSummary>
       <DetailsSummary
-        title="Как я могу сохранить пресет применённых эффектов на слое и как мне их передать другому человеку?"
-        tag="preset, ffx"
-      >
-        <p>{/* FIXME: написать */}</p>
-      </DetailsSummary>
-      <DetailsSummary
         title="Как изменить вид отсчёта времени на таймлайне?"
         tag="другой вид, альтернативный таймкод"
       >
