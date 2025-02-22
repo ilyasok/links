@@ -2347,6 +2347,25 @@ const AEFromNewbies: React.FC = () => {
           <mark className="plugin">Grow Bounds</mark>.
         </AdditionWarning>
       </DetailsSummary>
+      <DetailsSummary title="Применил Saber, но он обрезается в пределах слоя. Grow Bounds не помогает. Как расширить эффект?">
+        <p>
+          Это происходит из-за того, что эффект работает только в пределах размера слоя. А
+          вы зачем-то применили этот эффект на слой, размер которого отличается от размера
+          композиции.
+        </p>
+        <p>
+          Вам нужно создать Solid и применить <mark className="plugin">Saber</mark> на
+          него. А затем нужно синхронизировать маски: из слоя, из которого вы хотели
+          изначально сделать обводку маской нужно прилинковать маску в Solid, на котором
+          применён <mark className="plugin">Saber</mark> нужного размера.
+        </p>
+        <ImageFigure
+          styleClass="figure_windows-dark"
+          imgSrc="images/aftereffects/linking_masks_for_saber.png"
+          imgTitle="Соединяем маски для Saber"
+          caption="Timeline"
+        />
+      </DetailsSummary>
       <DetailsSummary title="Не могу изменить параметры наложения у 3D-слоёв. Что делать?">
         <p>
           Скорее всего у вас включен режим <mark className="plugin">Advanced 3D</mark> или{" "}
@@ -2385,6 +2404,24 @@ const AEFromNewbies: React.FC = () => {
           link="GGjIu0CZ1M4"
           caption="Red Giant Universe Unmult"
         />
+      </DetailsSummary>
+      <DetailsSummary title="Как сделать прозрачный фон у слоя с эффектом Saber?">
+        <p>
+          Для этого в настройках эффекта <mark className="plugin">Saber</mark> раскройте
+          пункт <mark className="ui">Render Settings</mark>. В этом же подпункте найдите
+          пункт <mark className="ui">Composite Settings</mark> и установите значение{" "}
+          <mark className="ui">Transparent</mark>.
+        </p>
+        <ImageFigure
+          imgSrc="images/aftereffects/transparent_saber.png"
+          styleClass="figure_windows-dark"
+          imgTitle="Включение прозрачности в Saber"
+          caption="Включение прозрачности в Saber"
+        />
+        <p>
+          Теперь слой с <mark className="plugin">Saber</mark> будет прозрачный и вы
+          сможете применять его поверх своей композиции.
+        </p>
       </DetailsSummary>
       <DetailsSummary
         title="Продублировал композицию на таймлайне, но копия зависит от оригинала. Как сделать композиции независимыми друг от друга?"
@@ -2629,43 +2666,6 @@ const AEFromNewbies: React.FC = () => {
             заказчиком о смене шрифта в проекте, если это возможно.
           </li>
         </ul>
-      </DetailsSummary>
-      <DetailsSummary title="Как сделать прозрачный фон у слоя с эффектом Saber?">
-        <p>
-          Для этого в настройках эффекта <mark className="plugin">Saber</mark> раскройте
-          пункт <mark className="ui">Render Settings</mark>. В этом же подпункте найдите
-          пункт <mark className="ui">Composite Settings</mark> и установите значение{" "}
-          <mark className="ui">Transparent</mark>.
-        </p>
-        <ImageFigure
-          imgSrc="images/aftereffects/transparent_saber.png"
-          styleClass="figure_windows-dark"
-          imgTitle="Включение прозрачности в Saber"
-          caption="Включение прозрачности в Saber"
-        />
-        <p>
-          Теперь слой с <mark className="plugin">Saber</mark> будет прозрачный и вы
-          сможете применять его поверх своей композиции.
-        </p>
-      </DetailsSummary>
-      <DetailsSummary title="Применил Saber, но он обрезается в пределах слоя. Grow Bounds не помогает. Как расширить эффект?">
-        <p>
-          Это происходит из-за того, что эффект работает только в пределах размера слоя. А
-          вы зачем-то применили этот эффект на слой, размер которого отличается от размера
-          композиции.
-        </p>
-        <p>
-          Вам нужно создать Solid и применить <mark className="plugin">Saber</mark> на
-          него. А затем нужно синхронизировать маски: из слоя, из которого вы хотели
-          изначально сделать обводку маской нужно прилинковать маску в Solid, на котором
-          применён <mark className="plugin">Saber</mark> нужного размера.
-        </p>
-        <ImageFigure
-          styleClass="figure_windows-dark"
-          imgSrc="images/aftereffects/linking_masks_for_saber.png"
-          imgTitle="Соединяем маски для Saber"
-          caption="Timeline"
-        />
       </DetailsSummary>
     </div>
   );
