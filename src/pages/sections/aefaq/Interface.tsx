@@ -322,7 +322,7 @@ const AEInterface: React.FC = () => {
         </p>
         <VideoFigure
           styleClass="figure_windows-dark"
-          videoSrc="https://private-user-images.githubusercontent.com/56075863/246931354-811d3433-8170-491e-a2c7-bca56bbf998d.webm?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mzg3Nzg5ODcsIm5iZiI6MTczODc3ODY4NywicGF0aCI6Ii81NjA3NTg2My8yNDY5MzEzNTQtODExZDM0MzMtODE3MC00OTFlLWEyYzctYmNhNTZiYmY5OThkLndlYm0_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMjA1JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDIwNVQxODA0NDdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1lY2FkOGRlZjUyNmEyMTY5MDYyNWVlZmU4NDY5M2NlYTZmZWM2NmQ0MGQ4YzliNWI5ZDk4MWJiN2IxOWZkZjM5JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.fsOdojLraC-MUNhu8sJN7DcNuYjTrdKY4Ad2DGZXS3A"
+          videoSrc="images/ae-zoom_demonstration.webm"
           caption="Демонстрация плагина ae-zoom"
         />
         <ContentSwitcher
