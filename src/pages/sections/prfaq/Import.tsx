@@ -274,7 +274,62 @@ const PRImport: React.FC = () => {
         </p>
       </DetailsSummary>
       <DetailsSummary title="Как импортировать композиции из After Effects в секвенцию Premiere Pro?">
-        <p>{/* FIXME: написать!! */}</p>
+        <AdditionWarning>
+          Прежде чем начать импорт композиций из{" "}
+          <mark className="app">After Effects</mark> - убедитесь что обе программы
+          установлены на стандартном расположении и их версии являются
+          &quot;одногодками&quot;. При использовании разных версий программ у вас могут
+          быть проблемы с подсоединением файлов и{" "}
+          <mark className="plugin">Dynamic Link</mark>.
+        </AdditionWarning>
+        <p>
+          Для того, чтобы импортировать композиции из{" "}
+          <mark className="app">After Effects</mark> в{" "}
+          <mark className="app">Premiere Pro</mark> через{" "}
+          <mark className="plugin">Dynamic Link</mark> - достаточно открыть окно импорта
+          через комбинацию клавиш <mark className="key">Ctrl + I</mark> и указать там
+          нужный <mark className="file">.aep</mark> файл.
+        </p>
+        <p>
+          После выбора нужного <mark className="file">.aep</mark> файла - у вас откроется
+          окно, в котором <mark className="app">Premiere Pro</mark> подключится к{" "}
+          <mark className="app">After Effects</mark> и через некоторое время выдаст вам
+          список композиций. Вы можете выбрать одну или несколько композиций для импорта.
+        </p>
+        {/* TODO: приложить скриншот */}
+        <p>
+          После успешного импорта вы можете расположить композиции из{" "}
+          <mark className="app">After Effects</mark> прямо на таймлайн в{" "}
+          <mark className="app">Premiere Pro</mark>.
+        </p>
+        <AdditionInfo>
+          Чтобы закэшировать предпросмотр в местах, где расположены композиции из{" "}
+          <mark className="app">After Effects</mark> - перейдите в{" "}
+          <mark className="ui">Sequence</mark> и выберите{" "}
+          <mark className="ui">Render In to Out</mark>. Рекомендую поставить свою
+          комбинацию клавиш для этого действия.
+        </AdditionInfo>
+        <AdditionWarning>
+          <ul>
+            <li>
+              Версии приложений от <mark>Adobe</mark>, активированные через{" "}
+              <mark className="app">GenP</mark> могут некорректно работать друг с другом
+              через <mark className="plugin">Dynamic Link</mark>. При возникновении
+              проблем с работой <mark className="plugin">Dynamic Link</mark> -
+              переустановите программы на репаки от <mark>KpoJluK</mark> или{" "}
+              <mark>m0nkrus</mark>.
+            </li>
+            <li>
+              Не рекомендуется использовать слишком много композиций, импортированные
+              через <mark className="plugin">Dynamic Link</mark>. Таким образом вы можете
+              ухудшить производительность вашего проекта и заработать себе проблемы при
+              экспорте секвенции. Если вы не планируете редактировать нужные композиции в
+              дальнейшем - рекомендую отрендерить их в{" "}
+              <mark className="app">After Effects</mark> и заменить их в секвенции{" "}
+              <mark className="app">Premiere Pro</mark>.
+            </li>
+          </ul>
+        </AdditionWarning>
       </DetailsSummary>
       <DetailsSummary title="Откуда-то появились на предпросмотре чёрные полосы, что это может быть?">
         <p>
