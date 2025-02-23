@@ -1,7 +1,6 @@
 import {motion} from "framer-motion";
 import React, {useEffect, useRef, useState} from "react";
 import {Helmet} from "react-helmet-async";
-import {Link} from "react-router-dom";
 interface Subtitle {
   start: number;
   end: number;
@@ -77,10 +76,6 @@ const NotFound = () => {
     };
   }, [subtitles, currentSubtitle]);
 
-  const handleLinkClick = (event: React.MouseEvent) => {
-    event.stopPropagation();
-  };
-
   return (
     <motion.main
       className="not-found error"
@@ -93,16 +88,22 @@ const NotFound = () => {
         <title>notfound@aechat</title>
       </Helmet>
       <div className="error-container">
-        <p className="error-backtitle">{currentSubtitle}</p>
-        <div className="error-modal">
-          <p className="error-modal-title">Страница не найдена</p>
-          <Link
-            to="/"
-            onClick={handleLinkClick}
-          >
-            <motion.div
-              className="error-modal-button"
-              style={{margin: "10px"}}
+        <div className="error-backtitle">{currentSubtitle}</div>
+        <div
+          className="modal"
+          style={{maxWidth: "250px", margin: "15px"}}
+        >
+          <div className="modal-header">
+            <div className="modal-header-title">Страница не найдена</div>
+          </div>
+          <div className="modal-content">
+            <motion.button
+              style={{marginBlock: "10px"}}
+              onClick={() => {
+                window.location.reload();
+                window.location.href = "/";
+              }}
+              className="modal-open-button"
               whileHover={{
                 scale: 0.95,
                 transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
@@ -110,8 +111,8 @@ const NotFound = () => {
               whileTap={{scale: 0.95, opacity: 0.5}}
             >
               На главную
-            </motion.div>
-          </Link>
+            </motion.button>
+          </div>
         </div>
       </div>
     </motion.main>

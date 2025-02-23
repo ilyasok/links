@@ -48,40 +48,47 @@ const trackPageView = (path: string) => {
 
 const ErrorFallback = ({error}: {error: Error}) => (
   <div className="error-container">
-    <p className="error-backtitle">Ошибка</p>
-    <div className="error-modal">
-      <p className="error-modal-title">Что-то сломалось</p>
-      <p>
-        Скорее всего это произошло из-за обновления файлов на сервере. Попробуйте обновить
-        страницу, чтобы загрузить актуальные данные.
-      </p>
-      <p className="error-modal-message">Ошибка: &quot;{error.message}&quot;</p>
-      <div style={{display: "flex", gap: "10px", margin: "10px"}}>
-        <motion.button
-          onClick={() => {
-            window.location.reload();
-            window.location.href = "/";
-          }}
-          className="error-modal-button"
-          whileHover={{
-            scale: 0.955,
-            transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
-          }}
-          whileTap={{scale: 0.95, opacity: 0.5}}
-        >
-          На главную
-        </motion.button>
-        <motion.button
-          onClick={() => window.location.reload()}
-          className="error-modal-button"
-          whileHover={{
-            scale: 0.95,
-            transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
-          }}
-          whileTap={{scale: 0.95, opacity: 0.5}}
-        >
-          Обновить страницу
-        </motion.button>
+    <div className="error-backtitle">Ошибка</div>
+    <div
+      className="modal"
+      style={{maxWidth: "450px", margin: "15px"}}
+    >
+      <div className="modal-header">
+        <div className="modal-header-title">Произошла ошибка на стороне клиента</div>
+      </div>
+      <div className="modal-content">
+        <p>
+          Возможно это произошло из-за обновления файлов на сервере. Попробуйте обновить
+          страницу, чтобы загрузить актуальные данные.
+        </p>
+        <p className="modal-message">Что вызвало ошибку: {error.message}</p>
+        <div style={{display: "flex", gap: "10px", margin: "10px"}}>
+          <motion.button
+            onClick={() => {
+              window.location.reload();
+              window.location.href = "/";
+            }}
+            className="modal-open-button"
+            whileHover={{
+              scale: 0.95,
+              transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
+            }}
+            whileTap={{scale: 0.95, opacity: 0.5}}
+          >
+            На главную
+          </motion.button>
+          <motion.button
+            onClick={() => window.location.reload()}
+            className="modal-open-button"
+            whileHover={{
+              scale: 0.95,
+              transition: {duration: 0.5, ease: [0.075, 0.82, 0.165, 1]},
+            }}
+            whileTap={{scale: 0.95, opacity: 0.5}}
+          >
+            Обновить страницу
+          </motion.button>
+        </div>
       </div>
     </div>
   </div>
