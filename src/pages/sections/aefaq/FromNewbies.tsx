@@ -2254,9 +2254,10 @@ const AEFromNewbies: React.FC = () => {
       </DetailsSummary>
       <DetailsSummary title="Что такое Null Object и как с ним работать?">
         <p>
-          <mark>Нулевой слой</mark> или же <mark>Null Object</mark> - это невидимый
-          манипулятор для объектов, слоёв или параметров эффекта. Он часто применяется для
-          создания &quot;рига&quot;, то есть для создания зависимости между управляющими и
+          <mark className="word">Нулевой слой</mark> или же{" "}
+          <mark className="word">Null Object</mark> - это невидимый манипулятор для
+          объектов, слоёв или параметров эффекта. Он часто применяется для создания
+          &quot;рига&quot;, то есть для создания зависимости между управляющими и
           управляемыми элементами.
         </p>
         <p>
@@ -2276,9 +2277,10 @@ const AEFromNewbies: React.FC = () => {
       </DetailsSummary>
       <DetailsSummary title="Что такое Adjustment Layer и для чего он нужен?">
         <p>
-          <mark>Корректирующий слой</mark> или же <mark>Adjustment Layer</mark> - довольно
-          мощный инструмент. С помощью него можно сделать цветокоррекцию, заставить
-          трястись весь экран или просто добавить искажения от линзы.
+          <mark className="word">Корректирующий слой</mark> или же{" "}
+          <mark className="word">Adjustment Layer</mark> - довольно мощный инструмент. С
+          помощью него можно сделать цветокоррекцию, заставить трястись весь экран или
+          просто добавить искажения от линзы.
         </p>
         <YouTubeVideo
           link="rgMKGFWWqjA"
@@ -2286,15 +2288,55 @@ const AEFromNewbies: React.FC = () => {
         />
       </DetailsSummary>
       <DetailsSummary title="Зачем нужен Solid Layer и для чего на него применяют эффекты?">
-        <p>{/* FIXME: написать */}</p>
+        <p>
+          <mark className="word">Solid Layer</mark> - слой с однотонным цветом, чаще всего
+          чёрного цвета. Обычно он создаётся по размеру композиции и может служить для
+          различных целей.
+        </p>
+        <AdditionInfo>
+          <ul>
+            <li>
+              Чтобы создать <mark className="word">Solid Layer</mark> - нажмите на
+              комбинацию клавиш <mark className="key">Ctrl + Y</mark>.
+            </li>
+            <li>
+              Чтобы настроить размер, цвет и другие параметры такого слоя - нажмите на
+              комбинацию клавиш <mark className="key">Ctrl + Shift + Y</mark>.
+            </li>
+          </ul>
+        </AdditionInfo>
+        <p>
+          <mark className="word">Solid Layer</mark> может использоваться как инициализатор
+          различных эффектов, созданные для 3D-пространства, например{" "}
+          <mark className="plugin">Element 3D</mark>,{" "}
+          <mark className="plugin">Trapcode Form</mark> или{" "}
+          <mark className="plugin">CC Particle World</mark>. Для перемещения в
+          пространстве 3D-эффектов обычно используется камера или настройка положения в
+          настройках эффекта.
+        </p>
+        <p>
+          <mark className="word">Solid Layer</mark> также может служить обычным однотонным
+          фоном. Это бывает полезно, когда некоторые эффекты могут не работать корректно с
+          прозрачностью, например переходы из <mark className="plugin">AtomX</mark> или{" "}
+          <mark className="ui">Motion Bro</mark>.
+        </p>
+        <YouTubeVideo
+          link="MCJxSEj2BL4"
+          caption="Solid Layers - Explained"
+        />
+        <AdditionWarning>
+          Однотонный слой, на котором применены эффекты, работающие в 3D-пространстве,
+          должен оставаться как 2D-слой, иначе вы получите непонятные искажения
+          перспективы. Также не стоит двигать такой слой без острой необходимости.
+        </AdditionWarning>
       </DetailsSummary>
       <DetailsSummary title="Что за решётка у слоя на таймлайне и для чего нужен Guides Layer?">
         <p>
-          <mark>Guide Layer</mark> - это как слой-комментарий, который виден только в
-          предпросмотре и не будет рендериться при финальном экспорте. Его можно
+          <mark className="word">Guide Layer</mark> работает как слой-комментарий, который
+          виден только в предпросмотре и не рендерится в финальном экспорте. Его можно
           использовать для технических оверлеев, например для отображения границ
-          перекрытий интерфейса TikTok, YouTube Shorts или для послания другому монтажёру,
-          чтобы он исправил что-то в дальнейшем.
+          перекрытий интерфейса <mark>TikTok</mark>, <mark>YouTube Shorts</mark> или для
+          послания другому монтажёру, чтобы он исправил что-то в дальнейшем.
         </p>
         <ImageFigure
           styleClass="figure_windows-dark"
@@ -2303,8 +2345,8 @@ const AEFromNewbies: React.FC = () => {
           caption="Timeline"
         />
         <p>
-          <mark>Guide Layer</mark> можно включить как для текстовых слоёв, так и для
-          композиций, изображений или видео.
+          <mark className="word">Guide Layer</mark> можно включить как для текстовых
+          слоёв, так и для композиций, изображений или видео.
         </p>
       </DetailsSummary>
       <DetailsSummary title="Делал проект, но я его изначально не сохранял. Вдруг After Effects вылетел. Возможно ли восстановить проект?">
