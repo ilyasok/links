@@ -786,7 +786,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>CC Перекрестное размытие</td>
+              <td>-</td>
               <td>CC Cross Blur</td>
               <td>
                 <a
@@ -798,7 +798,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>CC Радиальное размытие</td>
+              <td>-</td>
               <td>CC Radial Blur</td>
               <td>
                 <a
@@ -810,7 +810,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>CC Быстрое радиальное размытие</td>
+              <td>-</td>
               <td>CC Radial Fast Blur</td>
               <td>
                 <a
@@ -822,7 +822,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>CC Векторное размытие</td>
+              <td>-</td>
               <td>CC Vector Blur</td>
               <td>
                 <a
@@ -996,7 +996,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>CC Композит</td>
+              <td>-</td>
               <td>CC Composite</td>
               <td>
                 <a
@@ -1206,7 +1206,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>CC Нейтрализатор цвета</td>
+              <td>-</td>
               <td>CC Color Neutralizer</td>
               <td>
                 <a
@@ -1218,7 +1218,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>CC Смещение цвета</td>
+              <td>-</td>
               <td>CC Color Offset</td>
               <td>
                 <a
@@ -1230,7 +1230,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>Ядро CC</td>
+              <td>-</td>
               <td>СС Kernel</td>
               <td>
                 <a
@@ -1242,7 +1242,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>CC Тонер</td>
+              <td>-</td>
               <td>CC Toner</td>
               <td>
                 <a
@@ -1596,7 +1596,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>Изгиб CC</td>
+              <td>-</td>
               <td>CC Bend It</td>
               <td>
                 <a
@@ -1632,7 +1632,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>Потоковое движение CC</td>
+              <td>-</td>
               <td>CC Flo Motion</td>
               <td>
                 <a
@@ -1656,7 +1656,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>CC Объектив</td>
+              <td>-</td>
               <td>CC Lens</td>
               <td>
                 <a
@@ -1668,7 +1668,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>Переворот страницы CC</td>
+              <td>-</td>
               <td>CC Page Turn</td>
               <td>
                 <a
@@ -1680,7 +1680,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>Множественная привязка CC</td>
+              <td>-</td>
               <td>CC Power Pin</td>
               <td>
                 <a
@@ -1692,7 +1692,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>Волновая пульсация CC</td>
+              <td>-</td>
               <td>CC Ripple Pulse</td>
               <td>
                 <a
@@ -1716,7 +1716,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>CC Мазок</td>
+              <td>-</td>
               <td>CC Smear</td>
               <td>
                 <a
@@ -1728,7 +1728,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>CC Сплит</td>
+              <td>-</td>
               <td>CC Split</td>
               <td>
                 <a
@@ -1740,7 +1740,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>CC Разбиение 2</td>
+              <td>-</td>
               <td>CC Split 2</td>
               <td>
                 <a
@@ -2152,7 +2152,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>Клеевой пистолет CC</td>
+              <td>-</td>
               <td>CC Glue Gun</td>
               <td>
                 <a
@@ -2164,7 +2164,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>Выброс света 2.5 CC</td>
+              <td>-</td>
               <td>CC Light Burst 2.5</td>
               <td>
                 <a
@@ -2176,7 +2176,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>Световые лучи CC</td>
+              <td>-</td>
               <td>CC Light Rays</td>
               <td>
                 <a
@@ -2188,7 +2188,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>Поворот цвета CC</td>
+              <td>-</td>
               <td>CC Light Sweep</td>
               <td>
                 <a
@@ -2200,7 +2200,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>CC Нити</td>
+              <td>-</td>
               <td>CC Threads</td>
               <td>
                 <a
@@ -2596,7 +2596,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>Простое удаление каркаса CC</td>
+              <td>-</td>
               <td>CC Simple Wire Removal</td>
               <td>
                 <a
@@ -3128,7 +3128,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>CC Цилиндр</td>
+              <td>-</td>
               <td>CC Cylinder</td>
               <td>
                 <a
@@ -3140,7 +3140,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>CC Окружающая среда</td>
+              <td>-</td>
               <td>CC Environment</td>
               <td>
                 <a
@@ -3152,7 +3152,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>CC Сфера</td>
+              <td>-</td>
               <td>CC Sphere</td>
               <td>
                 <a
@@ -3164,7 +3164,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>CC Прожектор</td>
+              <td>-</td>
               <td>CC Spotlight</td>
               <td>
                 <a
@@ -3242,7 +3242,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>Действие шара CC</td>
+              <td>-</td>
               <td>CC Ball Action</td>
               <td>
                 <a
@@ -3254,7 +3254,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>CC Пузыри</td>
+              <td>-</td>
               <td>CC Bubbles</td>
               <td>
                 <a
@@ -3278,7 +3278,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>CC Волосы</td>
+              <td>-</td>
               <td>CC Hair</td>
               <td>
                 <a
@@ -3290,7 +3290,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>Эффект Mr. Mercury CC</td>
+              <td>-</td>
               <td>CC Mr. Mercury</td>
               <td>
                 <a
@@ -3302,7 +3302,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>Системы частиц CC II</td>
+              <td>-</td>
               <td>CC Particle Systems II</td>
               <td>
                 <a
@@ -3314,7 +3314,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>CC Particle World</td>
+              <td>-</td>
               <td>CC Particle World</td>
               <td>
                 <a
@@ -3326,7 +3326,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>Эффект пикселов Полли CC</td>
+              <td>-</td>
               <td>CC Pixel Polly</td>
               <td>
                 <a
@@ -3338,7 +3338,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>CC Осадки</td>
+              <td>-</td>
               <td>CC Rainfall</td>
               <td>
                 <a
@@ -3350,7 +3350,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>CC Рассеяние</td>
+              <td>-</td>
               <td>CC Scatterize</td>
               <td>
                 <a
@@ -3362,7 +3362,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>CC Снегопад</td>
+              <td>-</td>
               <td>CC Snowfall</td>
               <td>
                 <a
@@ -3374,7 +3374,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>Эффект звездной вспышки</td>
+              <td>-</td>
               <td>CC Star Burst</td>
               <td>
                 <a
@@ -3476,7 +3476,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>Загрузка блока CC</td>
+              <td>-</td>
               <td>CC Block Load</td>
               <td>
                 <a
@@ -3488,7 +3488,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>CC Burn Film</td>
+              <td>-</td>
               <td>CC Burn Film</td>
               <td>
                 <a
@@ -3500,7 +3500,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>CC Стекло</td>
+              <td>-</td>
               <td>CC Glass</td>
               <td>
                 <a
@@ -3536,7 +3536,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>Эффект Mr. Smotthie CC</td>
+              <td>-</td>
               <td>CC Mr. Shoothie</td>
               <td>
                 <a
@@ -3548,7 +3548,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>CC Пластик</td>
+              <td>-</td>
               <td>CC Plastic</td>
               <td>
                 <a
@@ -3572,7 +3572,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>Порог CC</td>
+              <td>-</td>
               <td>CC Threshold</td>
               <td>
                 <a
@@ -3584,7 +3584,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>Эффект порогового значения RGB CC</td>
+              <td>-</td>
               <td>CC Threshold RGB</td>
               <td>
                 <a
@@ -3596,7 +3596,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>CC Виньетка</td>
+              <td>-</td>
               <td>CC Vignette</td>
               <td>
                 <a
@@ -3812,7 +3812,7 @@ const AEWhereFind: React.FC = () => {
           </thead>
           <tbody>
             <tr>
-              <td>Эффект СС «Принудительное размытие в движении»</td>
+              <td>-</td>
               <td>CC Force Motion Blur</td>
               <td>
                 <a
@@ -3824,7 +3824,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>Эффект CC Wide Time</td>
+              <td>-</td>
               <td>CC Wide Time</td>
               <td>
                 <a
@@ -3950,7 +3950,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>Эффект витражного вытеснения CC</td>
+              <td>-</td>
               <td>CC Glass Wipe</td>
               <td>
                 <a
@@ -3962,7 +3962,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>Эффект вытеснения сетки CC</td>
+              <td>-</td>
               <td>CC Grid Wipe</td>
               <td>
                 <a
@@ -3974,7 +3974,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>Эффект вытеснения изображения CC</td>
+              <td>-</td>
               <td>CC Image Wipe</td>
               <td>
                 <a
@@ -3998,7 +3998,7 @@ const AEWhereFind: React.FC = () => {
               </td>
             </tr>
             <tr>
-              <td>Эффект Light Wipe CC</td>
+              <td>-</td>
               <td>CC Light Wipe</td>
               <td>
                 <a
