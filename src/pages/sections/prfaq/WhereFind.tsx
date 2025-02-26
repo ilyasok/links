@@ -404,10 +404,6 @@ const PRWhereFind: React.FC = () => {
           который обозначен на английском языке. В таких случаях можно обратиться к
           таблице перевода.
         </p>
-        <AdditionInfo>
-          Таблицы теперь индексируются в поиске, для этого нажмите иконку лупы в шапке
-          страницы или нажмите на <mark className="key">Ctrl + F</mark>.
-        </AdditionInfo>
         <Divider>Аудиоэффекты (Audio Effects)</Divider>
         <table className="table">
           <thead>
