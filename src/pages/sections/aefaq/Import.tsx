@@ -228,6 +228,65 @@ const AEImport: React.FC = () => {
           imgTitle="Отключение аппаратного декодирования в настройках"
           caption="Preferences"
         />
+        <p>
+          Если вы напрочь отказываетесь от перекодирования по каким-то причинам, то вы
+          можете попробовать использовать принудительное декодирование файлов через{" "}
+          сторонний плагин <mark className="plugin">Autokroma Influx</mark>. Он может
+          помочь уменьшить вероятность различных глюков и багов исходников, скачанных из
+          интернета. Для этого в настройках плагина{" "}
+          <mark className="plugin">Autokroma Influx</mark> укажите в пункте{" "}
+          <mark className="ui">Formats</mark> параметр{" "}
+          <mark className="ui">Force Influx to override all Adobe importers</mark>. Таким
+          образом вы переопределите принудительно для всех поддерживаемых форматов файлов
+          декодирование через <mark className="plugin">Autokroma Influx</mark>.
+        </p>
+        <AdditionInfo>
+          <ul>
+            <li>
+              Чтобы открыть настройки <mark className="plugin">Autokroma Influx</mark> -
+              откройте <mark className="file">Influx.exe</mark>, находящийся по пути{" "}
+              <mark className="path">
+                C:\Program Files\Adobe\Common\Plug-ins\7.0\MediaCore\Autokroma Influx
+              </mark>
+              .
+            </li>
+            <li>
+              Список поддерживаемых <mark className="plugin">Autokroma Influx</mark>{" "}
+              форматов указано{" "}
+              <a href="https://www.autokroma.com/Influx/Main_Features">
+                на официальном сайте
+              </a>
+              .
+            </li>
+          </ul>
+        </AdditionInfo>
+        <AdditionDanger>
+          <b>
+            <u>
+              Принудительное переопределение декодирование через{" "}
+              <mark className="plugin">Autokroma Influx</mark> вы проделываете на свой
+              страх и риск!
+            </u>
+          </b>
+          Стабильность работы и хорошая производительность вашего проекта не
+          гарантируется, она может улучшиться или наоборот, ухудшиться. Если возникают
+          проблемы с проектом, то верните значение в <mark className="ui">Formats</mark>{" "}
+          обратно на{" "}
+          <mark className="ui">
+            Use Influx for new formats, codecs and as a fallback (Default)
+          </mark>
+          и перекодируйте ваши исходники в монтажный кодек.
+        </AdditionDanger>
+        <p>
+          Если вы не хотите переопределять стандартный импортёр, то вы можете
+          переименовать файлы нужных исходников, добавив в конце полного названия файла{" "}
+          <mark className="code">.influx</mark>. То есть, если у вас имеется файл с
+          названием <mark className="file">IMG_1294.mp4</mark>, то вы можете переименовать
+          его в <mark className="file">IMG_1294.mp4.influx</mark>. Таким образом такой
+          файл будет импортирован принудительно через{" "}
+          <mark className="plugin">Autokroma Influx</mark> вне зависимости от настройки{" "}
+          <mark className="ui">Formats</mark>.
+        </p>
       </DetailsSummary>
       <DetailsSummary
         title="Почему я не могу импортировать .psd по слоям? After Effects не мне предлагает выбор типа импорта!"
