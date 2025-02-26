@@ -210,8 +210,8 @@ const AEFromNewbies: React.FC = () => {
             <AdditionInfo>
               Если вы нажмёте на <mark className="ui">Continuously Rasterize</mark> у слоя
               - при увеличении предпросмотра вы никогда не добьётесь &quot;векторного
-              предпросмотра&quot;. Это происходит потому что{" "}
-              <mark className="app">After Effects</mark> всегда растеризует предпросмотр в
+              предпросмотра&quot;. Это происходит потому, что{" "}
+              <mark className="app">After Effects</mark> всегда растрирует предпросмотр в
               соответствии с заданным в настройках разрешением композиции.
             </AdditionInfo>
           </li>
@@ -708,8 +708,8 @@ const AEFromNewbies: React.FC = () => {
             <AdditionInfo>
               При включенной опции <mark className="ui">Continuously Rasterize</mark> у
               слоя - при увеличении предпросмотра вы никогда не добьётесь &quot;векторного
-              предпросмотра&quot;. Это происходит потому что{" "}
-              <mark className="app">After Effects</mark> всегда растеризует предпросмотр в
+              предпросмотра&quot;. Это происходит потому, что{" "}
+              <mark className="app">After Effects</mark> всегда растрирует предпросмотр в
               соответствии с заданным в настройках разрешением композиции.
             </AdditionInfo>
           </li>
