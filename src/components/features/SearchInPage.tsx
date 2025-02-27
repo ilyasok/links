@@ -583,7 +583,20 @@ export const SearchInPage: React.FC<{sections: Array<{id: string; title: string}
         </div>
         <div className="modal-content">
           {query.trim() === "" ? (
-            <p className="search-modal-title">Навигация по категориям:</p>
+            <div
+              style={{
+                display: "flex",
+                flexWrap: "nowrap",
+                alignItems: "center",
+                justifyContent: "space-between",
+              }}
+            >
+              <p className="search-modal-title">Навигация по категориям:</p>
+              <p className="search-modal-tip">
+                Для открытия браузерного окна поиска по странице - нажмите на{" "}
+                <mark className="key">F3</mark>
+              </p>
+            </div>
           ) : (
             <p className="search-modal-title">Результаты поиска:</p>
           )}
