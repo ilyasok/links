@@ -184,13 +184,13 @@
   }
 
   &-backtitle {
-    font-family: "Onest", sans-serif;
     position: absolute;
     opacity: 0.1;
     pointer-events: none;
     font-style: italic;
     font-weight: 900;
     font-size: 384px;
+    font-family: "Onest", sans-serif;
     text-transform: uppercase;
     white-space: nowrap;
   }
@@ -211,6 +211,7 @@
 
     &::placeholder {
       opacity: 1;
+      font-size: 0.875rem;
     }
 
     &-wrapper {
@@ -219,6 +220,7 @@
       flex-wrap: nowrap;
       justify-content: space-between;
       gap: 10px;
+      margin-bottom: 10px;
     }
 
     &-close,
@@ -366,11 +368,22 @@
 
   &-modal-title {
     opacity: 0.75;
-    margin-top: 15px;
     padding-inline: 15px;
-    padding-block: 10px;
-    font-weight: 700;
+    padding-block: 15px;
+    font-weight: 600;
     font-size: 0.85rem;
+    line-height: 1.25;
+  }
+
+  &-modal-tip {
+    text-wrap: balance;
+    opacity: 0.5;
+    padding-inline: 15px;
+    padding-block: 12px;
+    max-width: 400px;
+    font-size: 0.75rem;
+    line-height: 1.25;
+    text-align: right;
   }
 
   &-tags {
@@ -383,7 +396,7 @@
     opacity: 1;
     margin: 0;
     width: 100%;
-    font-size: 13px;
+    font-size: 0.8125rem;
 
     mark {
       text-wrap: wrap;

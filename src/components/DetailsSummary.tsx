@@ -199,7 +199,7 @@ const DetailsSummary: React.FC<DetailsSummaryProps> = ({title, children, tag}) =
           {children}
           {tag && (
             <div className="faq-tags">
-              <span>Дополнительные теги для поиска:</span>
+              <span>Теги для поиска:</span>
               {tag.split(", ").map((t, index) => (
                 <mark
                   className="tag"

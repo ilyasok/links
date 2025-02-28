@@ -561,7 +561,7 @@ const PRInstallProblems: React.FC = () => {
             <mark className="app">Media Encoder</mark> и{" "}
             <mark className="app">After Effects</mark> вряд ли подключатся к{" "}
             <mark className="app">Premiere Pro</mark>, если они установлены на разных
-            директориях.
+            директориях или не на стандартном месте.
           </li>
         </ul>
         <p>
